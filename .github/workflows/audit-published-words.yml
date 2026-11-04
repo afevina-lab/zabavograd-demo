@@ -1,0 +1,27 @@
+name: Inspect published image references
+
+on:
+  push:
+    paths:
+      - '.github/workflows/audit-published-words.yml'
+      - 'scripts/audit-published-words.cjs'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Inspect deployed gh-pages library
+        run: |
+          git fetch origin gh-pages
+          git show origin/gh-pages:library.json > /tmp/gh-pages-library.json
+          node scripts/audit-published-words.cjs /tmp/gh-pages-library.json
