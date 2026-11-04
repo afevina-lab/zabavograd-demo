@@ -1,6 +1,10 @@
 name: Link and rename all 181 published images
 
 on:
+  push:
+    paths:
+      - '.github/workflows/semantic-published-images.yml'
+      - 'scripts/semantic-published-images.py'
   workflow_dispatch:
 
 permissions:
