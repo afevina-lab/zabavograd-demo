@@ -1,0 +1,32 @@
+name: Verify autonomous public game
+on:
+  push:
+    branches: [main, gh-pages]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout checker from main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: source
+      - name: Checkout published branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: site
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check static public site
+        run: node source/scripts/check-offline-release.cjs site
+      - name: Check public source snapshot
+        run: |
+          if test -e source/library.json; then
+            node -e "const a=require('./source/library.json'); if(!Array.isArray(a)||!a.length) process.exit(1)"
+          fi
