@@ -10,6 +10,7 @@ const words=JSON.parse(read('library.json'));
 assert(Array.isArray(words)&&words.length>0,'Missing game library');
 const ids=new Set(words.map(w=>w.id));
 assert(ids.size===words.length,'Duplicate public library IDs');
+const semanticIds=new Set(words.flatMap(w=>w.lemmaId?[w.id,w.lemmaId]:[w.id]));
 const assets=path.join(root,'assets');
 function jsFiles(dir){if(!fs.existsSync(dir))return [];return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?jsFiles(path.join(dir,e.name)):e.isFile()&&e.name.endsWith('.js')?[path.join(dir,e.name)]:[]);}
 const forbidden=/https?:\/\/(?:www\.)?(?:wikidata\.org|ruwordnet\.ru|framebank[^/'" ]*|api\.openai\.com)[^\s"'<>]*/gi;
@@ -30,7 +31,7 @@ if(fs.existsSync(graphFile)){
  for(const r of graph.relations){
   assert(typeof r.id==='string'&&r.id,'Missing relation ID');
   assert(!seen.has(r.id),'Duplicated relation ID');seen.add(r.id);
-  assert(ids.has(r.subject_id)&&ids.has(r.object_id),'Unknown public sense ID in semantic graph');
+  assert(semanticIds.has(r.subject_id)&&semanticIds.has(r.object_id),'Unknown public sense ID in semantic graph');
   assert(r.subject_id!==r.object_id,'Self relation in semantic graph');
   assert(typeof r.type==='string'&&typeof r.inverse_type==='string','Missing typed directions');
   assert(['zabavograd_editorial','wikidata'].includes(r.provenance?.source),'Unreviewed source in game');
