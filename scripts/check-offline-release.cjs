@@ -40,4 +40,21 @@ if(fs.existsSync(graphFile)){
  }
  graphCount=graph.relations.length;
 }
-console.log(JSON.stringify({ok:true,public_words:words.length,semantic_relations:graphCount,js_files_checked:jsFiles(assets).length,external_linguistic_runtime_dependencies:false},null,2));
+let frameCount=0;
+const grammarFile=path.join(root,'grammar-frames.json');
+if(fs.existsSync(grammarFile)){
+ const grammar=JSON.parse(fs.readFileSync(grammarFile,'utf8'));
+ assert.equal(grammar.schema,'speech_frames_game_v1');
+ assert(Array.isArray(grammar.frames),'Missing grammar frames');
+ for(const frame of grammar.frames){
+  assert(semanticIds.has(frame.verb_id),'Unknown verb ID in public grammar frame');
+  assert(Array.isArray(frame.roles)&&frame.roles.length,'Missing grammar roles');
+  for(const role of frame.roles){
+   assert(['nom','gen','dat','acc','ins','prep','none'].includes(role.case),'Invalid published case');
+   assert(Array.isArray(role.allowed_entry_ids)&&role.allowed_entry_ids.every(id=>semanticIds.has(id)),'Unpublished role participant ID');
+  }
+  assert(!JSON.stringify(frame).includes('source_record_id'),'External corpus record leaked into public grammar');
+ }
+ frameCount=grammar.frames.length;
+}
+console.log(JSON.stringify({ok:true,public_words:words.length,semantic_relations:graphCount,grammar_frames:frameCount,js_files_checked:jsFiles(assets).length,external_linguistic_runtime_dependencies:false},null,2));
