@@ -1,0 +1,71 @@
+name: Publish 100 nouns to public Zabavograd
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/nouns-20261109.json'
+      - 'scripts/publish-nouns-20261109.py'
+      - '.github/workflows/publish-nouns-20261109.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: publish-nouns-20261109
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Generate and publish static library on main and gh-pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main gh-pages
+          git show origin/gh-pages:library.json > /tmp/zabavograd-base.json
+          python3 scripts/publish-nouns-20261109.py /tmp/zabavograd-base.json /tmp/zabavograd-main.json /tmp/zabavograd-pages.json
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git switch -C publish-nouns-main origin/main
+            cp /tmp/zabavograd-main.json library.json
+            python3 - <<'PY'
+          from pathlib import Path
+          p=Path('README.md')
+          s=p.read_text(encoding='utf-8')
+          s=s.replace('**1288 карточек**','**1413 карточек**')
+          if '## Пополнение существительными — 9 ноября 2026' not in s:
+              s += '\n## Пополнение существительными — 9 ноября 2026\n\nДобавлено 100 существительных с весами и тематической классификацией. Подробный список: [100 существительных](docs/NOUNS_20261109.md). Иллюстрации и звукобуквенные разборы для новых слов ожидают проверки. При публикации сохранены 25 ранее размещённых в gh-pages карточек с изображениями.\n'
+          p.write_text(s,encoding='utf-8')
+          PY
+            git add library.json README.md
+            if git diff --cached --quiet; then
+              echo 'main already up to date'
+              break
+            fi
+            git commit -m 'Synchronize 1413 published words and add 100 categorized nouns'
+            if git push origin HEAD:main; then
+              break
+            elif test "$attempt" = 3; then
+              exit 1
+            fi
+          done
+          for attempt in 1 2 3; do
+            git fetch origin gh-pages
+            git switch -C publish-nouns-pages origin/gh-pages
+            cp /tmp/zabavograd-pages.json library.json
+            git add library.json
+            if git diff --cached --quiet; then
+              echo 'gh-pages already up to date'
+              break
+            fi
+            git commit -m 'Publish 100 categorized nouns in live game library'
+            if git push origin HEAD:gh-pages; then
+              break
+            elif test "$attempt" = 3; then
+              exit 1
+            fi
+          done
