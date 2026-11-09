@@ -166010,5 +166010,6348 @@
     "phoneticStatus": "pending",
     "kind": "word",
     "scope": "general"
+  },
+  {
+    "id": "ru-noun-20261109-0061",
+    "label": "суп",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Готовые блюда"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Готовые блюда",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "с": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "у": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "п": [
+        {
+          "index": 2,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0062",
+    "label": "каша",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Готовые блюда"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Готовые блюда",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "к": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ],
+      "ш": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-001",
+    "label": "пельмени",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Готовые блюда"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Готовые блюда",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "е": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "ь": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "м": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 7,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0064",
+    "label": "омлет",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Готовые блюда"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Готовые блюда",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "о": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "м": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-002",
+    "label": "запеканка",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Готовые блюда"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Готовые блюда",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "з": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 5,
+          "position": "середина"
+        },
+        {
+          "index": 8,
+          "position": "конец"
+        }
+      ],
+      "п": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 4,
+          "position": "середина"
+        },
+        {
+          "index": 7,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0066",
+    "label": "котлета",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Готовые блюда"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Готовые блюда",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "к": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 2,
+          "position": "середина"
+        },
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-003",
+    "label": "блин",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Готовые блюда"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Готовые блюда",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "б": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "л": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0063",
+    "label": "салат",
+    "meaning": "готовое блюдо из нарезанных продуктов",
+    "categories": [
+      "Еда и напитки/Готовые блюда"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Готовые блюда",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "с": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-004",
+    "label": "макароны",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Готовые блюда"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Готовые блюда",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "м": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "р": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "ы": [
+        {
+          "index": 7,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0065",
+    "label": "пюре",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Готовые блюда"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Готовые блюда",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "ю": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "р": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0055",
+    "label": "вода",
+    "meaning": "питьевая вода",
+    "categories": [
+      "Еда и напитки/Напитки"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Напитки",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "в": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "д": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0057",
+    "label": "сок",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Напитки"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Напитки",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "с": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 2,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0058",
+    "label": "чай",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Напитки"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Напитки",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "ч": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "й": [
+        {
+          "index": 2,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-005",
+    "label": "кофе",
+    "meaning": "напиток из кофейных зёрен",
+    "categories": [
+      "Еда и напитки/Напитки"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Напитки",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 20,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "к": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "ф": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0059",
+    "label": "компот",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Напитки"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Напитки",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "к": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "м": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "п": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-006",
+    "label": "кисель",
+    "meaning": "сладкий кисель как напиток",
+    "categories": [
+      "Еда и напитки/Напитки"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Напитки",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "к": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "и": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "с": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "ь": [
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-007",
+    "label": "лимонад",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Напитки"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Напитки",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "л": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "и": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "м": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "д": [
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0060",
+    "label": "какао",
+    "meaning": "напиток из какао-порошка",
+    "categories": [
+      "Еда и напитки/Напитки"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Напитки",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "к": [
+        {
+          "index": 0,
+          "position": "начало"
+        },
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-008",
+    "label": "хлеб",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Выпечка"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Выпечка",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "х": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "л": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "б": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-009",
+    "label": "булочка",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Выпечка"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Выпечка",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "б": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "у": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "ч": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-010",
+    "label": "батон",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Выпечка"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Выпечка",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "б": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-011",
+    "label": "печенье",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Выпечка"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Выпечка",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "е": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 3,
+          "position": "середина"
+        },
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ],
+      "ч": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "ь": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-012",
+    "label": "пряник",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Выпечка"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Выпечка",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "р": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "я": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-013",
+    "label": "вафля",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Выпечка"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Выпечка",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "в": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "ф": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "я": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-014",
+    "label": "кекс",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Выпечка"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Выпечка",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "к": [
+        {
+          "index": 0,
+          "position": "начало"
+        },
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "с": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-015",
+    "label": "шоколад",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Сладости"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Сладости",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "ш": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "д": [
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-016",
+    "label": "конфета",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Сладости"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Сладости",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "к": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "ф": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-017",
+    "label": "варенье",
+    "meaning": null,
+    "categories": [
+      "Еда и напитки/Сладости"
+    ],
+    "phonemes": null,
+    "topic": "Еда и напитки/Сладости",
+    "subcategory": null,
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "в": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "р": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 3,
+          "position": "середина"
+        },
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ],
+      "н": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "ь": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0032",
+    "label": "кубик",
+    "meaning": null,
+    "categories": [
+      "Игры, творчество и увлечения/Игрушки"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Игрушки",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "к": [
+        {
+          "index": 0,
+          "position": "начало"
+        },
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ],
+      "у": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "б": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0033",
+    "label": "пирамидка",
+    "meaning": null,
+    "categories": [
+      "Игры, творчество и увлечения/Игрушки"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Игрушки",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "и": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "р": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 3,
+          "position": "середина"
+        },
+        {
+          "index": 8,
+          "position": "конец"
+        }
+      ],
+      "м": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "д": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 7,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0039",
+    "label": "матрёшка",
+    "meaning": null,
+    "categories": [
+      "Игры, творчество и увлечения/Игрушки"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Игрушки",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "м": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 7,
+          "position": "конец"
+        }
+      ],
+      "т": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "р": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "ё": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "ш": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0035",
+    "label": "юла",
+    "meaning": null,
+    "categories": [
+      "Игры, творчество и увлечения/Игрушки"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Игрушки",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "ю": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "л": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 2,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0037",
+    "label": "неваляшка",
+    "meaning": null,
+    "categories": [
+      "Игры, творчество и увлечения/Игрушки"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Игрушки",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 30,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "н": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "е": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "в": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 3,
+          "position": "середина"
+        },
+        {
+          "index": 8,
+          "position": "конец"
+        }
+      ],
+      "л": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "я": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "ш": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 7,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0034",
+    "label": "погремушка",
+    "meaning": null,
+    "categories": [
+      "Игры, творчество и увлечения/Игрушки"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Игрушки",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "г": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "р": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "м": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "у": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "ш": [
+        {
+          "index": 7,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 8,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 9,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0040",
+    "label": "пазл",
+    "meaning": "разрезная картинка-головоломка",
+    "categories": [
+      "Игры, творчество и увлечения/Игрушки"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Игрушки",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "з": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0036",
+    "label": "мозаика",
+    "meaning": "детская игра с цветными деталями",
+    "categories": [
+      "Игры, творчество и увлечения/Игрушки"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Игрушки",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "м": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "з": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 3,
+          "position": "середина"
+        },
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ],
+      "и": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-018",
+    "label": "лото",
+    "meaning": "настольная игра лото",
+    "categories": [
+      "Игры, творчество и увлечения/Настольные игры"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Настольные игры",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "л": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ],
+      "т": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-019",
+    "label": "домино",
+    "meaning": "настольная игра домино",
+    "categories": [
+      "Игры, творчество и увлечения/Настольные игры"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Настольные игры",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "д": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ],
+      "м": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0043",
+    "label": "обруч",
+    "meaning": "гимнастический обруч",
+    "categories": [
+      "Игры, творчество и увлечения/Спортивный инвентарь"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Спортивный инвентарь",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "о": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "б": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "р": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "у": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "ч": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-020",
+    "label": "санки",
+    "meaning": null,
+    "categories": [
+      "Игры, творчество и увлечения/Спортивный инвентарь"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Спортивный инвентарь",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "с": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-021",
+    "label": "лыжи",
+    "meaning": null,
+    "categories": [
+      "Игры, творчество и увлечения/Спортивный инвентарь"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Спортивный инвентарь",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "л": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "ы": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "ж": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-022",
+    "label": "коньки",
+    "meaning": null,
+    "categories": [
+      "Игры, творчество и увлечения/Спортивный инвентарь"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Спортивный инвентарь",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "к": [
+        {
+          "index": 0,
+          "position": "начало"
+        },
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "ь": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0047",
+    "label": "клюшка",
+    "meaning": "клюшка для игры в хоккей",
+    "categories": [
+      "Игры, творчество и увлечения/Спортивный инвентарь"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Спортивный инвентарь",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 30,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "к": [
+        {
+          "index": 0,
+          "position": "начало"
+        },
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "ю": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "ш": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-023",
+    "label": "гантель",
+    "meaning": null,
+    "categories": [
+      "Игры, творчество и увлечения/Спортивный инвентарь"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Спортивный инвентарь",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 30,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "г": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "ь": [
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0046",
+    "label": "шлем",
+    "meaning": "защитный спортивный шлем",
+    "categories": [
+      "Игры, творчество и увлечения/Спортивный инвентарь",
+      "Человек/Одежда, обувь и аксессуары/Аксессуары"
+    ],
+    "phonemes": null,
+    "topic": "Игры, творчество и увлечения",
+    "subcategory": "Спортивный инвентарь",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "ш": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "л": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "м": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0003",
+    "label": "брюки",
+    "meaning": null,
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonemes": null,
+    "topic": "Человек/Одежда, обувь и аксессуары",
+    "subcategory": "Одежда",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "б": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "р": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "ю": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0002",
+    "label": "юбка",
+    "meaning": null,
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonemes": null,
+    "topic": "Человек/Одежда, обувь и аксессуары",
+    "subcategory": "Одежда",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "ю": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "б": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0012",
+    "label": "кепка",
+    "meaning": null,
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonemes": null,
+    "topic": "Человек/Одежда, обувь и аксессуары",
+    "subcategory": "Одежда",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "к": [
+        {
+          "index": 0,
+          "position": "начало"
+        },
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "п": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0021",
+    "label": "валенок",
+    "meaning": null,
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Обувь"
+    ],
+    "phonemes": null,
+    "topic": "Человек/Одежда, обувь и аксессуары",
+    "subcategory": "Обувь",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 30,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "в": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0008",
+    "label": "пальто",
+    "meaning": null,
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonemes": null,
+    "topic": "Человек/Одежда, обувь и аксессуары",
+    "subcategory": "Одежда",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "ь": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0014",
+    "label": "пижама",
+    "meaning": null,
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonemes": null,
+    "topic": "Человек/Одежда, обувь и аксессуары",
+    "subcategory": "Одежда",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "и": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "ж": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 3,
+          "position": "середина"
+        },
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ],
+      "м": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-024",
+    "label": "дождевик",
+    "meaning": null,
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonemes": null,
+    "topic": "Человек/Одежда, обувь и аксессуары",
+    "subcategory": "Одежда",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "д": [
+        {
+          "index": 0,
+          "position": "начало"
+        },
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "ж": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "в": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 7,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0024",
+    "label": "ремень",
+    "meaning": null,
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Аксессуары"
+    ],
+    "phonemes": null,
+    "topic": "Человек/Одежда, обувь и аксессуары",
+    "subcategory": "Аксессуары",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "р": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "е": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "м": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "ь": [
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0027",
+    "label": "галстук",
+    "meaning": "галстук как аксессуар одежды",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Аксессуары"
+    ],
+    "phonemes": null,
+    "topic": "Человек/Одежда, обувь и аксессуары",
+    "subcategory": "Аксессуары",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 30,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "г": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "с": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "у": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0009",
+    "label": "плащ",
+    "meaning": null,
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonemes": null,
+    "topic": "Человек/Одежда, обувь и аксессуары",
+    "subcategory": "Одежда",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 30,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "л": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "щ": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0080",
+    "label": "мост",
+    "meaning": "сооружение для перехода через препятствие",
+    "categories": [
+      "Общество и окружающая среда/Город и село/Улицы и общественные пространства"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Город и село/Улицы и общественные пространства",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "м": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "с": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0082",
+    "label": "остановка",
+    "meaning": "место остановки общественного транспорта",
+    "categories": [
+      "Общество и окружающая среда/Город и село/Улицы и общественные пространства"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Город и село/Улицы и общественные пространства",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "о": [
+        {
+          "index": 0,
+          "position": "начало"
+        },
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "с": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 3,
+          "position": "середина"
+        },
+        {
+          "index": 8,
+          "position": "конец"
+        }
+      ],
+      "н": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "в": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 7,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0085",
+    "label": "магазин",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Город и село/Здания и учреждения"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Город и село/Здания и учреждения",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "м": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "г": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "з": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0087",
+    "label": "больница",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Город и село/Здания и учреждения"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Город и село/Здания и учреждения",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "б": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "ь": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "ц": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 7,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0086",
+    "label": "аптека",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Город и село/Здания и учреждения"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Город и село/Здания и учреждения",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "а": [
+        {
+          "index": 0,
+          "position": "начало"
+        },
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ],
+      "п": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0088",
+    "label": "библиотека",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Город и село/Здания и учреждения"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Город и село/Здания и учреждения",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "б": [
+        {
+          "index": 0,
+          "position": "начало"
+        },
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 7,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 8,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 9,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-025",
+    "label": "школа",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Город и село"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Город и село",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "ш": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "к": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-026",
+    "label": "детский сад",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Город и село"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Город и село",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "д": [
+        {
+          "index": 0,
+          "position": "начало"
+        },
+        {
+          "index": 9,
+          "position": "конец"
+        }
+      ],
+      "е": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "с": [
+        {
+          "index": 3,
+          "position": "середина"
+        },
+        {
+          "index": 7,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "й": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 8,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-027",
+    "label": "музей",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Город и село"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Город и село",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "м": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "у": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "з": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "й": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0084",
+    "label": "парк",
+    "meaning": "городской парк",
+    "categories": [
+      "Общество и окружающая среда/Город и село/Улицы и общественные пространства"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Город и село/Улицы и общественные пространства",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "р": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-028",
+    "label": "фонтан",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Город и село"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Город и село",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "ф": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 2,
+          "position": "середина"
+        },
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ],
+      "т": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-029",
+    "label": "снег",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Погодные явления"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Погодные явления",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "с": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "н": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "г": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-030",
+    "label": "дождь",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Погодные явления"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Погодные явления",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "д": [
+        {
+          "index": 0,
+          "position": "начало"
+        },
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "ж": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "ь": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-031",
+    "label": "туман",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Погодные явления"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Погодные явления",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "т": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "у": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "м": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-032",
+    "label": "лужа",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Погодные явления"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Погодные явления",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "л": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "у": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "ж": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-033",
+    "label": "метель",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Погодные явления"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Погодные явления",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "м": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "е": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "ь": [
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-034",
+    "label": "туча",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Погодные явления"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Погодные явления",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "т": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "у": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "ч": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-035",
+    "label": "лёд",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Погодные явления"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Погодные явления",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "л": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "ё": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "д": [
+        {
+          "index": 2,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-036",
+    "label": "молния",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Погодные явления"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Погодные явления",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "м": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "я": [
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-037",
+    "label": "сосулька",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Погодные явления"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Погодные явления",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "с": [
+        {
+          "index": 0,
+          "position": "начало"
+        },
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "у": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "ь": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 7,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-038",
+    "label": "снежинка",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Погодные явления"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Погодные явления",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "с": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "н": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "ж": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 7,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0094",
+    "label": "река",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Природные объекты"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Природные объекты",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "р": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "е": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0096",
+    "label": "море",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Природные объекты"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Природные объекты",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "м": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "р": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-039",
+    "label": "океан",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Природные объекты"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Природные объекты",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "о": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "к": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0091",
+    "label": "лес",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Природные объекты"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Природные объекты",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "л": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "е": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "с": [
+        {
+          "index": 2,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0092",
+    "label": "поле",
+    "meaning": "открытое природное пространство",
+    "categories": [
+      "Природа и окружающий мир/Природные объекты"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Природные объекты",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0093",
+    "label": "луг",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Природные объекты"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Природные объекты",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "л": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "у": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "г": [
+        {
+          "index": 2,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0099",
+    "label": "болото",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Природные объекты"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Природные объекты",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 30,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "б": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 3,
+          "position": "середина"
+        },
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ],
+      "л": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0098",
+    "label": "водопад",
+    "meaning": null,
+    "categories": [
+      "Природа и окружающий мир/Природные объекты"
+    ],
+    "phonemes": null,
+    "topic": "Природа и окружающий мир",
+    "subcategory": "Природные объекты",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 50,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "в": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "д": [
+        {
+          "index": 2,
+          "position": "середина"
+        },
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ],
+      "п": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-040",
+    "label": "книга",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Учёба и образование/Школьные принадлежности",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "к": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "н": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "г": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-041",
+    "label": "пенал",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Учёба и образование/Школьные принадлежности",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "е": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-042",
+    "label": "ластик",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Учёба и образование/Школьные принадлежности",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "л": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "с": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-043",
+    "label": "альбом",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Учёба и образование/Школьные принадлежности",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "а": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "л": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "ь": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "б": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "м": [
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-044",
+    "label": "пластилин",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Учёба и образование/Школьные принадлежности",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "л": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "с": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 5,
+          "position": "середина"
+        },
+        {
+          "index": 7,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 8,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-045",
+    "label": "мел",
+    "meaning": "мел для письма и рисования",
+    "categories": [
+      "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Учёба и образование/Школьные принадлежности",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "м": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "е": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 2,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-046",
+    "label": "клей",
+    "meaning": "клей для бумаги и творчества",
+    "categories": [
+      "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Учёба и образование/Школьные принадлежности",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "к": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "л": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "й": [
+        {
+          "index": 3,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-047",
+    "label": "бумага",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Учёба и образование/Школьные принадлежности",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "б": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "у": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "м": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "а": [
+        {
+          "index": 3,
+          "position": "середина"
+        },
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ],
+      "г": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0068",
+    "label": "автобус",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Общественный транспорт"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Транспорт и специальная техника/Общественный транспорт",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "а": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "в": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "б": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "у": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "с": [
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0069",
+    "label": "поезд",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Железнодорожный транспорт"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Транспорт и специальная техника/Железнодорожный транспорт",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "п": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "е": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "з": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "д": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-048",
+    "label": "самолёт",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Воздушный транспорт"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Транспорт и специальная техника/Воздушный транспорт",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "с": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "м": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "ё": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0072",
+    "label": "мотоцикл",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Личный транспорт"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Транспорт и специальная техника/Личный транспорт",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "м": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "о": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "ц": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 7,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0070",
+    "label": "велосипед",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Личный транспорт"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Транспорт и специальная техника/Личный транспорт",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "в": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "е": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 7,
+          "position": "середина"
+        }
+      ],
+      "л": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "с": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "п": [
+        {
+          "index": 6,
+          "position": "середина"
+        }
+      ],
+      "д": [
+        {
+          "index": 8,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0073",
+    "label": "такси",
+    "meaning": "автомобиль для перевозки пассажиров по заказу",
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Общественный транспорт"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Транспорт и специальная техника/Общественный транспорт",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "т": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "с": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 4,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-20261109-0071",
+    "label": "самокат",
+    "meaning": null,
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Личный транспорт"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Транспорт и специальная техника/Личный транспорт",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 70,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "с": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 5,
+          "position": "середина"
+        }
+      ],
+      "м": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "о": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "к": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ],
+      "т": [
+        {
+          "index": 6,
+          "position": "конец"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
+  },
+  {
+    "id": "ru-noun-extra-20261109-049",
+    "label": "машина",
+    "meaning": "легковой автомобиль; не игрушечная машинка",
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Личный транспорт"
+    ],
+    "phonemes": null,
+    "topic": "Общество и окружающая среда",
+    "subcategory": "Транспорт и специальная техника/Личный транспорт",
+    "position": "",
+    "type": null,
+    "opposition": [],
+    "weight": 100,
+    "taskWeights": null,
+    "generalization": null,
+    "kindOf": [],
+    "genusAncestors": [],
+    "images": null,
+    "variants": [],
+    "soundTokens": [],
+    "sounds": {},
+    "letters": {
+      "м": [
+        {
+          "index": 0,
+          "position": "начало"
+        }
+      ],
+      "а": [
+        {
+          "index": 1,
+          "position": "середина"
+        },
+        {
+          "index": 5,
+          "position": "конец"
+        }
+      ],
+      "ш": [
+        {
+          "index": 2,
+          "position": "середина"
+        }
+      ],
+      "и": [
+        {
+          "index": 3,
+          "position": "середина"
+        }
+      ],
+      "н": [
+        {
+          "index": 4,
+          "position": "середина"
+        }
+      ]
+    },
+    "phoneticStatus": "pending",
+    "kind": "word",
+    "scope": "general",
+    "partOfSpeech": "noun",
+    "lexicalEligibleByDefault": true
   }
 ]
