@@ -38,6 +38,25 @@ if(fs.existsSync(graphFile)){
   if(r.provenance.source==='wikidata')assert.equal(r.provenance.license,'CC0');
   assert(!['suggested','candidate_needs_review'].includes(r.status),'Draft relation leaked');
  }
+ if(graph.by_entry){
+  assert(typeof graph.by_entry==='object'&&!Array.isArray(graph.by_entry),'Invalid two-way index');
+  const relationIds=new Set([...graph.relations,...graph.families].map(x=>x.id));
+  for(const [id,items] of Object.entries(graph.by_entry)){
+   assert(semanticIds.has(id),'Unpublished source in graph index '+id);
+   assert(Array.isArray(items),'Invalid graph index list');
+   for(const item of items){
+    assert(semanticIds.has(item.target_id),'Unpublished target in graph index');
+    assert(relationIds.has(item.relation_id),'Unknown relation in graph index');
+   }
+  }
+  for(const rel of graph.relations){
+   const outgoing=(graph.by_entry[rel.subject_id]||[]).some(x=>
+     x.relation_id===rel.id&&x.target_id===rel.object_id&&x.type===rel.type&&x.direction==='forward');
+   const incoming=(graph.by_entry[rel.object_id]||[]).some(x=>
+     x.relation_id===rel.id&&x.target_id===rel.subject_id&&x.type===rel.inverse_type&&x.direction==='inverse');
+   assert(outgoing&&incoming,'Missing bidirectional semantic relation '+rel.id);
+  }
+ }
  graphCount=graph.relations.length;
 }
 let frameCount=0;
