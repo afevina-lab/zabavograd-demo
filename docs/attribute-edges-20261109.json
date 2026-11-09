@@ -1,0 +1,890 @@
+{
+  "schema": "zabavograd_curated_attribute_edges_v1",
+  "source": "private canonical V2+attribute-source, independent editorial",
+  "expected_added_words": 181,
+  "expected_curated_edges": 98,
+  "edges": [
+    {
+      "id": "semantic-attribute-20261109-001",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-001",
+      "object_id": "ru-attr-20261109-002",
+      "subject_lemma": "белый",
+      "object_lemma": "чёрный",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-002",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-014",
+      "object_id": "ru-attr-20261109-015",
+      "subject_lemma": "светлый",
+      "object_lemma": "тёмный",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-003",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-016",
+      "object_id": "ru-attr-20261109-017",
+      "subject_lemma": "большой",
+      "object_lemma": "маленький",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-004",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-018",
+      "object_id": "ru-attr-20261109-019",
+      "subject_lemma": "огромный",
+      "object_lemma": "крошечный",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-005",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-020",
+      "object_id": "ru-attr-20261109-021",
+      "subject_lemma": "высокий",
+      "object_lemma": "низкий",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-006",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-022",
+      "object_id": "ru-attr-20261109-023",
+      "subject_lemma": "длинный",
+      "object_lemma": "короткий",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-007",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-024",
+      "object_id": "ru-attr-20261109-025",
+      "subject_lemma": "широкий",
+      "object_lemma": "узкий",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-008",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-026",
+      "object_id": "ru-attr-20261109-027",
+      "subject_lemma": "толстый",
+      "object_lemma": "тонкий",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-009",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-028",
+      "object_id": "ru-attr-20261109-029",
+      "subject_lemma": "крупный",
+      "object_lemma": "мелкий",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-010",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-035",
+      "object_id": "ru-attr-20261109-036",
+      "subject_lemma": "прямой",
+      "object_lemma": "кривой",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-011",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-038",
+      "object_id": "ru-attr-20261109-039",
+      "subject_lemma": "горячий",
+      "object_lemma": "холодный",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-012",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-040",
+      "object_id": "ru-attr-20261109-041",
+      "subject_lemma": "тёплый",
+      "object_lemma": "прохладный",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-013",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-048",
+      "object_id": "ru-attr-20261109-049",
+      "subject_lemma": "вкусный",
+      "object_lemma": "невкусный",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-014",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-057",
+      "object_id": "ru-attr-20261109-058",
+      "subject_lemma": "здоровый",
+      "object_lemma": "больной",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-015",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-059",
+      "object_id": "ru-attr-20261109-060",
+      "subject_lemma": "открытый",
+      "object_lemma": "закрытый",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-016",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-063",
+      "object_id": "ru-attr-20261109-064",
+      "subject_lemma": "спелый",
+      "object_lemma": "неспелый",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-017",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-065",
+      "object_id": "ru-attr-20261109-066",
+      "subject_lemma": "добрый",
+      "object_lemma": "злой",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-018",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-067",
+      "object_id": "ru-attr-20261109-068",
+      "subject_lemma": "весёлый",
+      "object_lemma": "грустный",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-019",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-069",
+      "object_id": "ru-attr-20261109-070",
+      "subject_lemma": "смелый",
+      "object_lemma": "трусливый",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-020",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-072",
+      "object_id": "ru-attr-20261109-073",
+      "subject_lemma": "шумный",
+      "object_lemma": "тихий",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-021",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-080",
+      "object_id": "ru-attr-20261109-081",
+      "subject_lemma": "ранний",
+      "object_lemma": "поздний",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-022",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-096",
+      "object_id": "ru-attr-20261109-097",
+      "subject_lemma": "одинаковый",
+      "object_lemma": "разный",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-023",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-098",
+      "object_id": "ru-attr-20261109-099",
+      "subject_lemma": "быстрый",
+      "object_lemma": "медленный",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-024",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-103",
+      "object_id": "ru-attr-20261109-104",
+      "subject_lemma": "сильный",
+      "object_lemma": "слабый",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-025",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-107",
+      "object_id": "ru-attr-20261109-108",
+      "subject_lemma": "правильный",
+      "object_lemma": "неправильный",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-026",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-109",
+      "object_id": "ru-attr-20261109-110",
+      "subject_lemma": "хороший",
+      "object_lemma": "плохой",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-027",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-101",
+      "object_id": "ru-attr-20261109-076",
+      "subject_lemma": "аккуратный",
+      "object_lemma": "небрежный",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-028",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-113",
+      "object_id": "ru-attr-20261109-114",
+      "subject_lemma": "быстро",
+      "object_lemma": "медленно",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-029",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-115",
+      "object_id": "ru-attr-20261109-116",
+      "subject_lemma": "громко",
+      "object_lemma": "тихо",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-030",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-117",
+      "object_id": "ru-attr-20261109-118",
+      "subject_lemma": "аккуратно",
+      "object_lemma": "небрежно",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-031",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-126",
+      "object_id": "ru-attr-20261109-127",
+      "subject_lemma": "правильно",
+      "object_lemma": "неправильно",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-032",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-128",
+      "object_id": "ru-attr-20261109-129",
+      "subject_lemma": "хорошо",
+      "object_lemma": "плохо",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-033",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-130",
+      "object_id": "ru-attr-20261109-131",
+      "subject_lemma": "вместе",
+      "object_lemma": "отдельно",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-034",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-132",
+      "object_id": "ru-attr-20261109-133",
+      "subject_lemma": "легко",
+      "object_lemma": "трудно",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-035",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-136",
+      "object_id": "ru-attr-20261109-137",
+      "subject_lemma": "вверху",
+      "object_lemma": "внизу",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-036",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-138",
+      "object_id": "ru-attr-20261109-139",
+      "subject_lemma": "слева",
+      "object_lemma": "справа",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-037",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-140",
+      "object_id": "ru-attr-20261109-141",
+      "subject_lemma": "впереди",
+      "object_lemma": "сзади",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-038",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-143",
+      "object_id": "ru-attr-20261109-144",
+      "subject_lemma": "далеко",
+      "object_lemma": "близко",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-039",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-145",
+      "object_id": "ru-attr-20261109-146",
+      "subject_lemma": "внутри",
+      "object_lemma": "снаружи",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-040",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-156",
+      "object_id": "ru-attr-20261109-157",
+      "subject_lemma": "раньше",
+      "object_lemma": "позже",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-041",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-165",
+      "object_id": "ru-attr-20261109-164",
+      "subject_lemma": "часто",
+      "object_lemma": "редко",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-042",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-174",
+      "object_id": "ru-attr-20261109-175",
+      "subject_lemma": "сильно",
+      "object_lemma": "слабо",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-043",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-152",
+      "object_id": "ru-attr-20261109-153",
+      "subject_lemma": "высоко",
+      "object_lemma": "низко",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-044",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-178",
+      "object_id": "ru-attr-20261109-179",
+      "subject_lemma": "тепло",
+      "object_lemma": "холодно",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-045",
+      "type": "antonym",
+      "subject_id": "ru-attr-20261109-180",
+      "object_id": "ru-attr-20261109-181",
+      "subject_lemma": "жарко",
+      "object_lemma": "прохладно",
+      "inverse_type": "antonym"
+    },
+    {
+      "id": "semantic-attribute-20261109-046",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-098",
+      "object_id": "ru-attr-20261109-113",
+      "subject_lemma": "быстрый",
+      "object_lemma": "быстро",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-047",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-099",
+      "object_id": "ru-attr-20261109-114",
+      "subject_lemma": "медленный",
+      "object_lemma": "медленно",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-048",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-100",
+      "object_id": "ru-attr-20261109-115",
+      "subject_lemma": "громкий",
+      "object_lemma": "громко",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-049",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-073",
+      "object_id": "ru-attr-20261109-116",
+      "subject_lemma": "тихий",
+      "object_lemma": "тихо",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-050",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-101",
+      "object_id": "ru-attr-20261109-117",
+      "subject_lemma": "аккуратный",
+      "object_lemma": "аккуратно",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-051",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-102",
+      "object_id": "ru-attr-20261109-119",
+      "subject_lemma": "осторожный",
+      "object_lemma": "осторожно",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-052",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-069",
+      "object_id": "ru-attr-20261109-120",
+      "subject_lemma": "смелый",
+      "object_lemma": "смело",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-053",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-067",
+      "object_id": "ru-attr-20261109-121",
+      "subject_lemma": "весёлый",
+      "object_lemma": "весело",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-054",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-068",
+      "object_id": "ru-attr-20261109-122",
+      "subject_lemma": "грустный",
+      "object_lemma": "грустно",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-055",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-071",
+      "object_id": "ru-attr-20261109-123",
+      "subject_lemma": "спокойный",
+      "object_lemma": "спокойно",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-056",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-106",
+      "object_id": "ru-attr-20261109-125",
+      "subject_lemma": "ловкий",
+      "object_lemma": "ловко",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-057",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-107",
+      "object_id": "ru-attr-20261109-126",
+      "subject_lemma": "правильный",
+      "object_lemma": "правильно",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-058",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-108",
+      "object_id": "ru-attr-20261109-127",
+      "subject_lemma": "неправильный",
+      "object_lemma": "неправильно",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-059",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-109",
+      "object_id": "ru-attr-20261109-128",
+      "subject_lemma": "хороший",
+      "object_lemma": "хорошо",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-060",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-110",
+      "object_id": "ru-attr-20261109-129",
+      "subject_lemma": "плохой",
+      "object_lemma": "плохо",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-061",
+      "type": "same_root",
+      "subject_id": "ru-sem-20261105-138dd54",
+      "object_id": "ru-attr-20261109-132",
+      "subject_lemma": "лёгкий",
+      "object_lemma": "легко",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-062",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-105",
+      "object_id": "ru-attr-20261109-133",
+      "subject_lemma": "трудный",
+      "object_lemma": "трудно",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-063",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-103",
+      "object_id": "ru-attr-20261109-174",
+      "subject_lemma": "сильный",
+      "object_lemma": "сильно",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-064",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-104",
+      "object_id": "ru-attr-20261109-175",
+      "subject_lemma": "слабый",
+      "object_lemma": "слабо",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-065",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-112",
+      "object_id": "ru-attr-20261109-135",
+      "subject_lemma": "красивый",
+      "object_lemma": "красиво",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-066",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-020",
+      "object_id": "ru-attr-20261109-152",
+      "subject_lemma": "высокий",
+      "object_lemma": "высоко",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-067",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-021",
+      "object_id": "ru-attr-20261109-153",
+      "subject_lemma": "низкий",
+      "object_lemma": "низко",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-068",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-040",
+      "object_id": "ru-attr-20261109-178",
+      "subject_lemma": "тёплый",
+      "object_lemma": "тепло",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-069",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-039",
+      "object_id": "ru-attr-20261109-179",
+      "subject_lemma": "холодный",
+      "object_lemma": "холодно",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-070",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-042",
+      "object_id": "ru-attr-20261109-180",
+      "subject_lemma": "жаркий",
+      "object_lemma": "жарко",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-071",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-041",
+      "object_id": "ru-attr-20261109-181",
+      "subject_lemma": "прохладный",
+      "object_lemma": "прохладно",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-072",
+      "type": "same_root",
+      "subject_id": "ru-attr-20261109-111",
+      "object_id": "ru-attr-20261109-171",
+      "subject_lemma": "долгий",
+      "object_lemma": "долго",
+      "inverse_type": "same_root"
+    },
+    {
+      "id": "semantic-attribute-20261109-073",
+      "type": "typically_has_property",
+      "subject_id": "ru-noun-extra-20261109-029",
+      "object_id": "ru-attr-20261109-001",
+      "subject_lemma": "снег",
+      "object_lemma": "белый",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-074",
+      "type": "typically_has_property",
+      "subject_id": "ru-r-084",
+      "object_id": "ru-attr-20261109-005",
+      "subject_lemma": "трава",
+      "object_lemma": "зелёный",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-075",
+      "type": "typically_has_property",
+      "subject_id": "ru-plant-20261104-d0bbd0b8d0bcd0bed0bd",
+      "object_id": "ru-attr-20261109-006",
+      "subject_lemma": "лимон",
+      "object_lemma": "жёлтый",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-076",
+      "type": "typically_has_property",
+      "subject_id": "ru-plant-20261104-d0bbd0b8d0bcd0bed0bd",
+      "object_id": "ru-attr-20261109-045",
+      "subject_lemma": "лимон",
+      "object_lemma": "кислый",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-077",
+      "type": "typically_has_property",
+      "subject_id": "ru-r-055",
+      "object_id": "ru-r-add-d0bad180d0b0d181d0bdd18bd0b9",
+      "subject_lemma": "помидор",
+      "object_lemma": "красный",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-078",
+      "type": "typically_has_property",
+      "subject_id": "ru-plant-20261104-d0bed0b3d183d180d0b5d186",
+      "object_id": "ru-attr-20261109-005",
+      "subject_lemma": "огурец",
+      "object_lemma": "зелёный",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-079",
+      "type": "typically_has_property",
+      "subject_id": "ru-r-046",
+      "object_id": "ru-r-add-d0bed180d0b0d0bdd0b6d0b5d0b2d18bd0b9",
+      "subject_lemma": "морковь",
+      "object_lemma": "оранжевый",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-080",
+      "type": "typically_has_property",
+      "subject_id": "ru-plant-20261104-d0b1d0b0d0bad0bbd0b0d0b6d0b0d0bd",
+      "object_id": "ru-attr-20261109-007",
+      "subject_lemma": "баклажан",
+      "object_lemma": "фиолетовый",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-081",
+      "type": "typically_has_property",
+      "subject_id": "ru-plant-20261104-d0b1d0b0d0bdd0b0d0bd",
+      "object_id": "ru-attr-20261109-006",
+      "subject_lemma": "банан",
+      "object_lemma": "жёлтый",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-082",
+      "type": "typically_has_property",
+      "subject_id": "ru-noun-20261109-0056",
+      "object_id": "ru-attr-20261109-001",
+      "subject_lemma": "молоко",
+      "object_lemma": "белый",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-083",
+      "type": "typically_has_property",
+      "subject_id": "ru-r-add-d181d0b0d185d0b0d180",
+      "object_id": "ru-attr-20261109-044",
+      "subject_lemma": "сахар",
+      "object_lemma": "сладкий",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-084",
+      "type": "typically_has_property",
+      "subject_id": "ru-r-047",
+      "object_id": "ru-attr-20261109-039",
+      "subject_lemma": "мороженое",
+      "object_lemma": "холодный",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-085",
+      "type": "typically_has_property",
+      "subject_id": "ru-noun-extra-20261109-035",
+      "object_id": "ru-attr-20261109-039",
+      "subject_lemma": "лёд",
+      "object_lemma": "холодный",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-086",
+      "type": "typically_has_property",
+      "subject_id": "ru-noun-20261109-0100",
+      "object_id": "ru-sem-20261105-9c5ea90d",
+      "subject_lemma": "камень",
+      "object_lemma": "твёрдый",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-087",
+      "type": "typically_has_property",
+      "subject_id": "lex-v2-d191d0b6",
+      "object_id": "ru-attr-20261109-052",
+      "subject_lemma": "ёж",
+      "object_lemma": "колючий",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-088",
+      "type": "typically_has_property",
+      "subject_id": "ru-plant-20261104-d0bad0b0d0bad182d183d181",
+      "object_id": "ru-attr-20261109-052",
+      "subject_lemma": "кактус",
+      "object_lemma": "колючий",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-089",
+      "type": "typically_has_property",
+      "subject_id": "ru-home-20261105-cdcc6283",
+      "object_id": "ru-sem-20261105-f1de7375",
+      "subject_lemma": "подушка",
+      "object_lemma": "мягкий",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-090",
+      "type": "typically_has_property",
+      "subject_id": "ru-noun-20261109-0031",
+      "object_id": "ru-attr-20261109-030",
+      "subject_lemma": "мяч",
+      "object_lemma": "круглый",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-091",
+      "type": "typically_has_property",
+      "subject_id": "ru-home-20261105-a7f282c0",
+      "object_id": "ru-sem-20261105-f84f7551",
+      "subject_lemma": "нож",
+      "object_lemma": "острый",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-092",
+      "type": "typically_has_property",
+      "subject_id": "ru-r-001",
+      "object_id": "ru-attr-20261109-030",
+      "subject_lemma": "арбуз",
+      "object_lemma": "круглый",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-093",
+      "type": "typically_has_property",
+      "subject_id": "ru-plant-20261104-d0bad0bbd183d0b1d0bdd0b8d0bad0b0",
+      "object_id": "ru-r-add-d0bad180d0b0d181d0bdd18bd0b9",
+      "subject_lemma": "клубника",
+      "object_lemma": "красный",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-094",
+      "type": "typically_has_property",
+      "subject_id": "ru-r-019",
+      "object_id": "ru-attr-20261109-020",
+      "subject_lemma": "жираф",
+      "object_lemma": "высокий",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-095",
+      "type": "typically_has_property",
+      "subject_id": "lex-v2-d181d0bbd0bed0bd",
+      "object_id": "ru-attr-20261109-016",
+      "subject_lemma": "слон",
+      "object_lemma": "большой",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-096",
+      "type": "typically_has_property",
+      "subject_id": "ru-plant-20261104-d0b0d0bfd0b5d0bbd18cd181d0b8d0bd",
+      "object_id": "ru-r-add-d0bed180d0b0d0bdd0b6d0b5d0b2d18bd0b9",
+      "subject_lemma": "апельсин",
+      "object_lemma": "оранжевый",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-097",
+      "type": "typically_has_property",
+      "subject_id": "ru-plant-20261104-d0bcd0b0d0bdd0b4d0b0d180d0b8d0bd",
+      "object_id": "ru-r-add-d0bed180d0b0d0bdd0b6d0b5d0b2d18bd0b9",
+      "subject_lemma": "мандарин",
+      "object_lemma": "оранжевый",
+      "inverse_type": "typical_property_of"
+    },
+    {
+      "id": "semantic-attribute-20261109-098",
+      "type": "typically_has_property",
+      "subject_id": "lex-v2-d0bad0bed188d0bad0b0",
+      "object_id": "ru-attr-20261109-054",
+      "subject_lemma": "кошка",
+      "object_lemma": "пушистый",
+      "inverse_type": "typical_property_of"
+    }
+  ]
+}
