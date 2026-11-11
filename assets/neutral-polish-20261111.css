@@ -143,7 +143,11 @@
 /* Small and intentional motion. Never enlarge the entire board on a match.
    JS release patch removes .cards.animate(), CSS animates only matched cards. */
 .app.neutral .card:not(.found){
-  animation:neutral-deal-in .58s cubic-bezier(.22,.7,.3,1) both!important;
+  /* Keep the staggered animationDelay set inline by the game. */
+  animation-name:neutral-deal-in!important;
+  animation-duration:.58s!important;
+  animation-timing-function:cubic-bezier(.22,.7,.3,1)!important;
+  animation-fill-mode:both!important;
 }
 @keyframes neutral-deal-in{
   from{opacity:0;transform:translateY(12px)}
