@@ -247,3 +247,8 @@
 @media (prefers-reduced-motion:reduce){
  .app.space .victory-stars>span,.app.neutral .victory-stars>span{animation:none!important;opacity:1!important}
 }
+
+/* Result overlay should not hide delayed award stars for almost three seconds. */
+.app.space .overlay .victory-stars>span,.app.neutral .overlay .victory-stars>span{animation-delay:.18s!important}
+.app.space .overlay .victory-stars>span:nth-child(2),.app.neutral .overlay .victory-stars>span:nth-child(2){animation-delay:.32s!important}
+.app.space .overlay .victory-stars>span:nth-child(3),.app.neutral .overlay .victory-stars>span:nth-child(3){animation-delay:.46s!important}
