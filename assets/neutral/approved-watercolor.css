@@ -1,0 +1,45 @@
+
+/* Approved watercolor artwork. Layout and card numbers are inherited unchanged. */
+.app.neutral .stage::before{background-image:url("./approved-paper-4k.webp")!important}
+.app.neutral{--zg-ink:#304b60;--zg-line:#8fa9b7;--zg-fill:#e0edf1;--zg-paper:#fff9ec}
+.app.neutral .card .card-front,.app.neutral .card.found .card-front,
+.app.neutral .card .card-back{
+ border:0!important;border-image:none!important;box-shadow:none!important;
+ background-color:transparent!important;background-repeat:no-repeat!important;
+ background-position:center!important;background-size:100% 100%!important;
+}
+.app.neutral .card .card-front,.app.neutral .card.found .card-front{background-image:url("./approved-front.png")!important}
+.app.neutral .card .card-back{background-image:url("./approved-back.png")!important}
+.app.neutral .play-toolbar,.app.neutral .stage-footer{
+ background:#547f9d url("./approved-ui.png") 50% 1.6%/100% 1600% no-repeat!important;
+ color:#fffaf0!important;
+}
+.app.neutral .play-toolbar .counters,.app.neutral .play-toolbar .counters b,.app.neutral .play-toolbar .lesson-tag{color:#fffaf0!important}
+.app.neutral .settings-frame,.app.neutral .settings-shade .settings-frame .settings,.app.neutral .modal.gui-panel,.app.neutral .overlay>div{
+ background:#fff9ef url("./approved-paper-4k.webp") center/cover!important;
+ border:2px solid #91a9b8!important;box-shadow:inset 0 0 0 4px #fffaf0,0 6px 16px #304b6020!important;
+}
+.app.neutral .settings button:not(.link),.app.neutral .primary,.app.neutral .secondary,.app.neutral .icon-button,.app.neutral .pair-options button{
+ background:#dcecf3 url("./approved-back.png") center/100% 100% no-repeat!important;
+ border:1px solid #7899ae!important;box-shadow:inset 0 1px 0 #ffffffaa,0 2px 3px #304b6030!important;
+ color:#304b60!important;
+}
+.app.neutral .settings button.selected,.app.neutral .pair-options button.selected{outline:2px solid #476f8b;outline-offset:2px}
+.app.neutral select,.app.neutral input:not([type=checkbox]):not([type=radio]){
+ background:#fff8e9 url("./approved-paper-4k.webp") center/cover!important;color:#304b60!important;border:1px solid #91a9b8!important;border-radius:9px;
+}
+.app.neutral input[type=checkbox],.app.neutral input[type=radio],.app.neutral input[type=range]{accent-color:#608eaa}
+.app.space .victory-star,.app.neutral .victory-star{
+ background: url("./approved-stars.png") left center/300% 100% no-repeat!important;
+ filter:drop-shadow(0 0 8px #ffd56c88)!important;
+ animation:zg-award-glow 2.8s ease-in-out infinite;
+}
+.app.space .victory-star-empty,.app.neutral .victory-star-empty{background-position:right center!important;filter:none!important;animation:none!important}
+.app.space .victory-star .garden-icon,.app.neutral .victory-star .garden-icon{display:none!important}
+@keyframes zg-award-glow{0%,100%{filter:drop-shadow(0 0 3px #f8cb6540)}50%{filter:drop-shadow(0 0 12px #f8cb65aa)}}
+.app.space .card.found,.app.neutral .card.found{animation-duration:1.8s!important;animation-delay:0s!important}
+.app.space .card.found::after,.app.neutral .card.found::after{animation-duration:1.8s!important;animation-delay:0s!important}
+@media(prefers-reduced-motion:reduce){
+ .app.space .victory-star,.app.neutral .victory-star{animation:none!important}
+ .app.space .card.found,.app.neutral .card.found{opacity:0!important}
+}
