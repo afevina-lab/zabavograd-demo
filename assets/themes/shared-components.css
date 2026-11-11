@@ -96,3 +96,27 @@
  background:#eef3f2!important;color:#304b60!important;border-color:#c7d9df!important;
 }
 .app.neutral .sound-rule label,.app.neutral .sound-group label{color:#304b60!important}
+
+/* Approved cosmic watercolor assets and shared finishing details. */
+.app.space{--theme-ink:#49416c;--theme-line:#a69bc7;--theme-paper:#faf9fc;--theme-soft:#d8cee9;--theme-card-back:url("./space/back.webp");--theme-card-front:url("./space/front.webp")}
+.app.space .card .card-back,.app.space .card .card-front,.app.space .card.found .card-front{
+ border:0!important;border-image:none!important;box-shadow:none!important;background:transparent var(--theme-card-back) center/100% 100% no-repeat!important;border-radius:18%!important;
+}
+.app.space .card .card-front,.app.space .card.found .card-front{background-image:var(--theme-card-front)!important}
+.app.space .play-toolbar{background:#645b98 url("./space/header.webp") center/100% 100% no-repeat!important}
+.app.game-active .play-toolbar{position:relative;left:50%;transform:translateX(-50%);width:100vw!important;max-width:100vw!important;border-radius:0!important;border-left:0!important;border-right:0!important}
+.app .picture-face small{background:transparent!important;padding:0!important;bottom:-8px!important;font-size:clamp(13px,1.45vw,20px)!important;font-weight:650}
+.app.space .picture-face{inset:13%!important}
+.app .card:hover:not(:disabled){outline:none!important}
+.app .card:hover:not(:disabled) .card-back{filter:drop-shadow(0 0 5px #e5d5ff)!important}
+.app .card.mismatch:not(.found){animation:zg-mismatch-sway .8s .55s ease-in-out both!important}
+.app.space .card.mismatch:not(.found),.app.neutral .card.mismatch:not(.found){animation:zg-mismatch-sway .8s .55s ease-in-out both!important}
+.app.space .modal,.app.space .overlay>div,.app.space .settings-frame{
+ background:#faf9fc!important;border:2px solid #9b8cb8!important;border-radius:20px!important;box-shadow:inset 0 0 0 4px #ede7f5,0 8px 24px #17102e40!important;
+}
+.app.space .modal button:not(.link),.app.space .overlay button:not(.link){background:#d8cee9!important;color:#49416c!important;border:1px solid #a69bc7!important;box-shadow:inset 0 1px 0 #fff9,0 2px 4px #29203b20!important}
+.app.space .sort-card{background:transparent var(--theme-card-front) center/100% 100% no-repeat!important;border:0!important;padding:16px!important;border-radius:18%!important}
+.app .victory-star{animation:award-contour-glow 2s ease-in-out infinite!important}
+@keyframes award-contour-glow{0%,100%{filter:drop-shadow(0 0 4px #ffcf6655)}50%{filter:drop-shadow(0 0 15px #ffce54cc)}}
+.app .hint-button .garden-icon,.app .home-button .garden-icon{background-color:currentColor!important}
+@media(prefers-reduced-motion:reduce){.app .victory-star,.app.space .card.mismatch:not(.found),.app.neutral .card.mismatch:not(.found){animation:none!important}}
