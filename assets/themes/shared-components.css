@@ -176,3 +176,6 @@
 .app.forest .victory-star .garden-icon{display:none!important}
 .app.forest .overlay .victory-stars>span{display:inline-flex!important;visibility:visible!important}
 @media(prefers-reduced-motion:reduce){.app.forest .card.found{animation:none!important;opacity:0!important}}
+
+.app.neutral .play-toolbar{background:#547f9d url("./neutral-header.webp") center/100% 100% no-repeat!important}
+.app:is(.neutral,.space,.forest) .overlay>div{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%2379674e' opacity='.06' filter='url(%23n)' d='M0 0h160v160H0z'/%3E%3C/svg%3E")!important}
