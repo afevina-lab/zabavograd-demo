@@ -117,3 +117,133 @@
  .app.space .card.found::after,.app.neutral .card.found::after{display:none!important}
  .app.space .stage::before,.app.space .space-scenery .nebula,.app.space .space-scenery .glow-star{animation:none!important}
 }
+
+/* Second-pass fixes: face orientation, disabled desaturation, celebration, cascade. */
+.app.space .card,.app.neutral .card,
+.app.space .card:disabled,.app.neutral .card:disabled{
+ opacity:1!important;filter:none!important;
+ -webkit-filter:none!important;
+}
+.app.space .card .card-inner,.app.neutral .card .card-inner{
+ transform-style:preserve-3d!important;
+ -webkit-transform-style:preserve-3d!important;
+}
+.app.space .card.flipped .card-inner,.app.neutral .card.flipped .card-inner,
+.app.space .card.found .card-inner,.app.neutral .card.found .card-inner{
+ transform:rotateY(180deg)!important;
+ -webkit-transform:rotateY(180deg)!important;
+}
+.app.space .card .card-front,.app.neutral .card .card-front,
+.app.space .card.found .card-front,.app.neutral .card.found .card-front{
+ transform:rotateY(180deg)!important;
+ -webkit-transform:rotateY(180deg)!important;
+ backface-visibility:hidden!important;
+ -webkit-backface-visibility:hidden!important;
+ filter:none!important;
+ opacity:1;
+}
+.app.space .card .card-back,.app.neutral .card .card-back{
+ transform:none!important;
+ backface-visibility:hidden!important;-webkit-backface-visibility:hidden!important;
+ filter:none!important;
+}
+.app.space .card.found .card-back,.app.neutral .card.found .card-back{display:flex!important}
+.app.space .card.found .card-inner,.app.neutral .card.found .card-inner{
+ transform-style:preserve-3d!important;animation:none!important;filter:none!important;
+}
+/* Matched images must not be desaturated or mirrored through disabled button filters. */
+.app.space .card:disabled .picture-face,.app.neutral .card:disabled .picture-face,
+.app.space .card:disabled img,.app.neutral .card:disabled img{filter:none!important;opacity:1!important}
+.app.space .card:not(.found):active,.app.neutral .card:not(.found):active{filter:none!important}
+/* Longer, identical watercolor pops for both cards. No enlargement of individual cards. */
+.app.space .card.found,.app.neutral .card.found{animation-duration:1.35s!important;animation-timing-function:ease-in-out!important}
+.app.space .card.found::after,.app.neutral .card.found::after{animation-duration:1.35s!important;animation-timing-function:ease-in-out!important}
+.app.space .card.found .card-front,.app.neutral .card.found .card-front{background-color:var(--zg-paper)!important}
+/* Winning stars use a masked icon: assign explicit foreground, size and visibility. */
+.app.space .victory-stars,.app.neutral .victory-stars{
+ display:flex!important;visibility:visible!important;opacity:1!important;
+ gap:14px!important;align-items:center!important;justify-content:center!important;
+}
+.app.space .victory-stars>span,.app.neutral .victory-stars>span{
+ display:inline-flex!important;opacity:1;visibility:visible!important;
+ animation:award-star 1.15s cubic-bezier(.2,.8,.3,1.2) both!important;
+}
+.app.space .victory-star,.app.neutral .victory-star{
+ display:inline-flex!important;width:clamp(54px,8vw,78px)!important;height:clamp(54px,8vw,78px)!important;
+ color:#edb945!important;filter:drop-shadow(0 0 10px #e5af4b66);
+}
+.app.space .victory-star .garden-icon,.app.neutral .victory-star .garden-icon{
+ display:inline-block!important;width:100%!important;height:100%!important;
+ background-color:currentColor!important;color:inherit!important;opacity:1!important;
+}
+.app.neutral .sky-celebrate .sky-star{display:block!important;opacity:.6!important}
+.app.space .sky-celebrate .sky-star,.app.neutral .sky-celebrate .sky-star{
+ visibility:visible!important;
+}
+.app.space .sky-celebrate .procedural-star,.app.neutral .sky-celebrate .procedural-star{
+ animation:celebration-glow 3s ease-in-out 2!important;
+}
+.app.space .victory-star-empty,.app.neutral .victory-star-empty{color:#b5abb9!important;filter:none!important}
+/* Finish removing stale gradient/nine-slice styles from all interactive screens. */
+.app.space .settings button:not(.link),.app.neutral .settings button:not(.link),
+.app.space .modal button:not(.link),.app.neutral .modal button:not(.link),
+.app.space .overlay button:not(.link),.app.neutral .overlay button:not(.link),
+.app.space .themes button,.app.neutral .themes button,
+.app.space .settings-frame button:not(.link),.app.neutral .settings-frame button:not(.link),
+.app.space .preview-banner button,.app.neutral .preview-banner button{
+ background:var(--zg-paper)!important;background-image:none!important;
+ border-image:none!important;border:1px solid var(--zg-line)!important;
+ border-radius:12px!important;color:var(--zg-ink)!important;
+ box-shadow:0 2px 5px var(--zg-shadow)!important;text-shadow:none!important;
+}
+.app.space .settings button.selected,.app.neutral .settings button.selected,
+.app.space .themes button.selected,.app.neutral .themes button.selected,
+.app.space .settings button:checked,.app.neutral .settings button:checked{
+ background:var(--zg-fill)!important;background-image:none!important;
+}
+.app.space .play-toolbar,.app.neutral .play-toolbar,
+.app.space .stage-footer,.app.neutral .stage-footer{
+ background:var(--zg-fill)!important;background-image:none!important;
+ color:var(--zg-ink)!important;
+}
+.app.space .settings-frame,.app.neutral .settings-frame,
+.app.space .settings-shade .settings-frame .settings,.app.neutral .settings-shade .settings-frame .settings,
+.app.space .modal.gui-panel,.app.neutral .modal.gui-panel{
+ background:var(--zg-paper)!important;background-image:none!important;
+ border:2px solid var(--zg-line)!important;border-image:none!important;
+ border-radius:var(--zg-radius)!important;color:var(--zg-ink)!important;
+}
+.app.space .settings,.app.neutral .settings,
+.app.space .modal,.app.neutral .modal,
+.app.space .gui-panel,.app.neutral .gui-panel{
+ --ui-text:var(--zg-ink);--ui-deep:var(--zg-ink);
+}
+.app.space .settings h2,.app.neutral .settings h2,
+.app.space .overlay h2,.app.neutral .overlay h2,
+.app.space .gui-panel h2,.app.neutral .gui-panel h2,
+.app.space .modal h2,.app.neutral .modal h2,
+.app.space .overlay p,.app.neutral .overlay p,
+.app.space .gui-panel p,.app.neutral .gui-panel p,
+.app.space .modal p,.app.neutral .modal p,
+.app.space .overlay .eyebrow,.app.neutral .overlay .eyebrow,
+.app.space .overlay .link,.app.neutral .overlay .link{
+ color:var(--zg-ink)!important;opacity:1!important;
+}
+.app.space .settings details>summary,.app.neutral .settings details>summary,
+.app.space .pair-options,.app.neutral .pair-options,
+.app.space .letter-choice,.app.neutral .letter-choice,
+.app.space .settings .types label,.app.neutral .settings .types label{
+ color:var(--zg-ink)!important;background:var(--zg-fill)!important;
+ background-image:none!important;
+}
+.app.space .settings select,.app.neutral .settings select,
+.app.space .modal input,.app.neutral .modal input{
+ background:var(--zg-paper)!important;background-image:none!important;
+ color:var(--zg-ink)!important;border-color:var(--zg-line)!important;
+}
+.app.space .icon-button:disabled,.app.neutral .icon-button:disabled{
+ filter:none!important;opacity:.5!important;
+}
+@media (prefers-reduced-motion:reduce){
+ .app.space .victory-stars>span,.app.neutral .victory-stars>span{animation:none!important;opacity:1!important}
+}
