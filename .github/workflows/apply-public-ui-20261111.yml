@@ -4,7 +4,10 @@ on:
     branches: [gh-pages]
     paths:
       - 'release/ui-20261111/**'
+      - 'release/neutral-polish-20261111.css'
       - 'scripts/install-public-ui-20261111.cjs'
+      - 'scripts/generate-neutral-background-20261111.py'
+      - 'scripts/polish-neutral-ui-20261111.cjs'
       - '.github/workflows/apply-public-ui-20261111.yml'
   workflow_dispatch:
 permissions:
@@ -20,15 +23,44 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Verify and install UI without changing the public word library
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify and install the original release without touching words
         run: node scripts/install-public-ui-20261111.cjs
+      - name: Install deterministic paper generator dependencies
+        run: python -m pip install --disable-pip-version-check pillow numpy
+      - name: Render 2560x1440 neutral paper texture
+        run: python scripts/generate-neutral-background-20261111.py
+      - name: Apply the tested neutral theme and seamless animation overrides
+        run: node scripts/polish-neutral-ui-20261111.cjs
+      - name: Validate the public game shell and new asset
+        run: |
+          python - <<'PY'
+          from PIL import Image
+          img=Image.open('assets/neutral/background-paper-2560.webp')
+          assert img.size==(2560,1440), img.size
+          print('Neutral background verified:',img.size)
+          PY
+          node --check assets/zabavograd-ui-20261111.js
+          node - <<'NODE'
+          const fs=require('node:fs'),assert=require('node:assert/strict');
+          const css=fs.readFileSync('assets/neutral-polish-20261111.css','utf8');
+          const js=fs.readFileSync('assets/zabavograd-ui-20261111.js','utf8');
+          const html=fs.readFileSync('index.html','utf8');
+          assert(css.includes('border-image:none!important'));
+          assert(!js.includes('scale(1.08)'));
+          assert(html.includes('neutral-polish-20261111.css'));
+          assert(html.includes('neutral-2'));
+          console.log('Published UI static checks passed');
+          NODE
       - name: Commit only the published game shell and visual resources
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A index.html assets/
           if ! git diff --cached --quiet; then
-            git commit -m 'Publish blue and lavender watercolor GUI, fullscreen layout and neutral motion'
+            git commit -m 'Publish neutral 2560px paper, seamless cards and corrected animations'
             git push origin HEAD:gh-pages
           else
             echo 'Published game shell is already current'
