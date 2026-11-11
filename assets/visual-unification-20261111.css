@@ -61,7 +61,6 @@
 .app.space .card .card-front,.app.neutral .card .card-front{background-color:var(--zg-paper)!important}
 .app.space .card .card-back:before,.app.space .card .card-back:after,
 .app.neutral .card .card-back:before,.app.neutral .card .card-back:after{content:none!important;display:none!important}
-.app.space .card .card-back>span,.app.neutral .card .card-back>span{font-size:inherit;}
 /* No per-card scaling. Both matched surfaces use identical timing. */
 .app.space .card.found,.app.neutral .card.found{
  animation:zg-watercolor-pop .82s linear both!important;
