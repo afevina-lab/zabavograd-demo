@@ -120,3 +120,45 @@
 @keyframes award-contour-glow{0%,100%{filter:drop-shadow(0 0 4px #ffcf6655)}50%{filter:drop-shadow(0 0 15px #ffce54cc)}}
 .app .hint-button .garden-icon,.app .home-button .garden-icon{background-color:currentColor!important}
 @media(prefers-reduced-motion:reduce){.app .victory-star,.app.space .card.mismatch:not(.found),.app.neutral .card.mismatch:not(.found){animation:none!important}}
+
+/* Final theme components: these rules override legacy screen-specific skins. */
+.app.forest{--theme-ink:#354c29;--theme-line:#789356;--theme-paper:#fffced;--theme-soft:#b9ce90;--theme-card-back:url("./forest/back.webp");--theme-card-front:url("./forest/front.webp");--zg-ink:#354c29;--zg-line:#789356;--zg-paper:#fffced;--zg-fill:#b9ce90}
+.app.forest .stage{background:#dbe7b0 url("./forest/forest_background.webp") center/cover no-repeat!important}
+.app.forest .stage::before{content:none!important;display:none!important}
+.app.forest .stage::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;background:url("./forest/forest_fern.webp") left bottom/15% auto no-repeat,url("./forest/forest_bush.webp") right bottom/18% auto no-repeat,url("./forest/forest_flower_patch.webp") center bottom/30% auto no-repeat;animation:forest-breeze 9s ease-in-out infinite alternate}
+.app.forest .cards,.app.forest .sorting-content{position:relative;z-index:2}
+.app.forest .play-toolbar{background:#739447 url("./forest/header.webp") center/100% 100% no-repeat!important;color:#fffced!important}
+.app.forest .card .card-back,.app.forest .card .card-front{background:transparent var(--theme-card-back) center/100% 100% no-repeat!important;border:0!important;border-image:none!important;border-radius:18%!important;box-shadow:none!important;color:#354c29!important}
+.app.forest .card .card-front{background-image:var(--theme-card-front)!important}
+.app.forest .sort-card{background:transparent var(--theme-card-front) center/100% 100% no-repeat!important;border:0!important;border-radius:18%!important;padding:16px!important;color:#354c29}
+.app.forest .sort-bin{background:#fffceddd!important;border:2px solid #789356!important;border-radius:18px!important}
+.app.forest .picture-face{inset:13%!important}
+@keyframes forest-breeze{from{transform:rotate(-.3deg) translateY(2px)}to{transform:rotate(.3deg) translateY(0)}}
+.app.game-active .play-toolbar{box-sizing:border-box!important;position:fixed!important;inset:0 0 auto 0!important;left:0!important;right:0!important;transform:none!important;width:100%!important;max-width:none!important;border-radius:0!important;z-index:25!important}
+.app.game-active .play-area{padding-top:60px!important}
+.app.game-active .stage{max-width:100%!important}
+.app .home-button .garden-icon{mask-image:url("/zabavograd-demo/assets/icons-new/house.svg")!important;-webkit-mask-image:url("/zabavograd-demo/assets/icons-new/house.svg")!important}
+.app .hint-button .garden-icon{mask-image:url("/zabavograd-demo/assets/icons-new/question-mark.svg")!important;-webkit-mask-image:url("/zabavograd-demo/assets/icons-new/question-mark.svg")!important}
+.app.space .play-toolbar .icon-button,.app.forest .play-toolbar .icon-button{background:transparent var(--theme-card-back) center/100% 100% no-repeat!important;border:0!important;border-radius:18%!important;box-shadow:none!important;color:var(--theme-ink)!important}
+.app .card,.app .card:hover,.app .card:focus,.app .card:focus-visible{outline:none!important;box-shadow:none!important}
+.app .card:hover:not(:disabled) .card-back,.app .card:focus-visible .card-back{box-shadow:inset 0 0 0 2px #fff1baaa,inset 0 0 12px #fff0bbaa!important;filter:drop-shadow(0 0 3px #ffe7aa88)!important}
+.app .card .card-back,.app .card .card-front{border-radius:18%!important}
+.app.neutral .picture-face.with-caption,.app.space .picture-face.with-caption,.app.forest .picture-face.with-caption{inset:13% 13% 10%!important;padding-bottom:24px!important}
+.app.neutral .picture-face.with-caption small,.app.space .picture-face.with-caption small,.app.forest .picture-face.with-caption small{bottom:0!important;left:0!important;right:0!important;background:none!important;border:0!important;box-shadow:none!important;font-size:clamp(14px,1.5vw,21px)!important;line-height:1.2}
+.app.neutral .card.mismatch:not(.found),.app.space .card.mismatch:not(.found),.app.forest .card.mismatch:not(.found){animation:zg-mismatch-sway .62s .55s ease-in-out both!important}
+.app .overlay.result{display:flex!important;align-items:center!important;justify-content:center!important;padding:70px 18px 20px!important;box-sizing:border-box!important}
+.app:is(.neutral,.space,.forest) .overlay.result>div,.app:is(.neutral,.space,.forest) .overlay>div,.app:is(.neutral,.space,.forest) .modal.gui-panel{
+ position:relative!important;box-sizing:border-box!important;width:min(570px,calc(100% - 24px))!important;max-width:570px!important;margin:auto!important;padding:52px 30px 34px!important;
+ background:var(--theme-paper,#fffced)!important;color:var(--theme-ink,#304b60)!important;border:3px solid var(--theme-line,#92acb9)!important;border-radius:24px!important;
+ box-shadow:inset 0 0 0 4px #fffdf0,inset 0 0 0 6px var(--theme-line,#92acb9),0 12px 32px #17233230!important;
+}
+.app .overlay.result button.primary,.app .overlay.result button.secondary,.app .overlay button:not(.link),.app .modal button:not(.link){
+ background:var(--theme-soft,#e5edf0)!important;color:var(--theme-ink,#304b60)!important;border:2px solid var(--theme-line,#92acb9)!important;border-radius:12px!important;box-shadow:inset 0 1px 0 #fff9,0 3px 5px #22334420!important;
+}
+.app .overlay .award{position:absolute!important;bottom:calc(100% - 14px)!important;left:0!important;right:0!important}
+.app .overlay .victory-stars>span{animation:theme-star-flight 1.2s cubic-bezier(.18,.8,.3,1.15) both!important}
+.app .victory-star{animation:award-contour-glow 1.6s ease-in-out infinite!important}
+@media(max-width:640px){.app.game-active .play-area{padding-top:60px!important}.app .overlay.result>div{padding:48px 20px 24px!important}.app.forest .stage::after{background-size:20% auto,22% auto,40% auto}}
+@media(prefers-reduced-motion:reduce){.app.forest .stage::after,.app .overlay .victory-stars>span,.app .victory-star,.app.forest .card.mismatch:not(.found){animation:none!important}}
+
+.app.forest .stage::after{background-image:url("./forest/forest_fern.webp"),url("./forest/forest_bush.webp"),url("./forest/forest_flower_patch.webp"),url("./forest/forest_leaf_birch.webp"),url("./forest/forest_leaf_oak.webp");background-position:left bottom,right bottom,center bottom,12% 8%,88% 14%;background-size:15% auto,18% auto,30% auto,22px auto,26px auto;background-repeat:no-repeat;}
