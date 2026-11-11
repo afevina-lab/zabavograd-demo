@@ -1,0 +1,120 @@
+/* Zabavograd visual unification + synchronized watercolor match, 2026-11-11.
+   Theme colors vary; geometry, stroke logic and motion stay identical. */
+.app.space,.app.neutral{
+ --zg-radius:clamp(11px,1.3vw,18px);
+ --zg-stroke:2px;
+ --zg-paper:#faf8f2;
+ --zg-ink:#443b60;
+ --zg-line:#aea0c0;
+ --zg-fill:#e8e0ef;
+ --zg-shadow:#30254925;
+}
+.app.neutral{--zg-ink:#5b5048;--zg-line:#c6b9aa;--zg-fill:#f1eadd;--zg-shadow:#51443821;--zg-paper:#fffaf0}
+.app.space{--zg-ink:#4b416d;--zg-line:#a99fc4;--zg-fill:#e4dcf1;--zg-paper:#faf7f0}
+.app.space .play-toolbar,.app.neutral .play-toolbar{
+ background:var(--zg-fill)!important;color:var(--zg-ink)!important;
+ border:0!important;border-bottom:var(--zg-stroke) solid var(--zg-line)!important;
+ border-image:none!important;border-radius:0!important;
+ box-shadow:0 2px 9px var(--zg-shadow)!important;
+}
+.app.space .play-toolbar .counters,.app.space .play-toolbar .counters b,
+.app.space .play-toolbar .lesson-tag,.app.neutral .play-toolbar .counters,
+.app.neutral .play-toolbar .counters b,.app.neutral .play-toolbar .lesson-tag{
+ color:var(--zg-ink)!important;
+}
+.app.space .icon-button,.app.neutral .icon-button,
+.app.space .pair-options button,.app.neutral .pair-options button,
+.app.space .material-head button,.app.neutral .material-head button,
+.app.space .primary,.app.neutral .primary,
+.app.space .secondary,.app.neutral .secondary{
+ background:var(--zg-paper)!important;background-image:none!important;
+ border:1px solid var(--zg-line)!important;border-image:none!important;
+ border-radius:12px!important;color:var(--zg-ink)!important;
+ text-shadow:none!important;box-shadow:0 2px 5px var(--zg-shadow)!important;
+}
+.app.space .icon-button:hover:not(:disabled),.app.neutral .icon-button:hover:not(:disabled),
+.app.space .primary:hover:not(:disabled),.app.neutral .primary:hover:not(:disabled),
+.app.space .secondary:hover:not(:disabled),.app.neutral .secondary:hover:not(:disabled){
+ background:var(--zg-fill)!important;filter:none!important;
+}
+.app.space .pair-options button.selected,.app.neutral .pair-options button.selected{
+ background:var(--zg-fill)!important;border-color:var(--zg-ink)!important;
+ box-shadow:inset 0 0 0 1px var(--zg-line)!important;
+}
+.app.space .modal,.app.neutral .modal,
+.app.space .settings-shade .settings,.app.neutral .settings-shade .settings,
+.app.space .overlay>div,.app.neutral .overlay>div{
+ background:var(--zg-paper)!important;color:var(--zg-ink)!important;
+ border:var(--zg-stroke) solid var(--zg-line)!important;border-image:none!important;
+ border-radius:var(--zg-radius)!important;box-shadow:0 8px 30px var(--zg-shadow)!important;
+}
+.app.space .card .card-back,.app.space .card .card-front,
+.app.neutral .card .card-back,.app.neutral .card .card-front{
+ border-image:none!important;border:var(--zg-stroke) solid var(--zg-line)!important;
+ border-radius:var(--zg-radius)!important;
+ background-image:none!important;
+ box-shadow:inset 0 0 0 4px var(--zg-paper),0 3px 0 var(--zg-line),0 6px 12px var(--zg-shadow)!important;
+ filter:none!important;
+}
+.app.space .card .card-back{background-color:#b9aed6!important;color:#493875!important}
+.app.neutral .card .card-back{background-color:#e7ded2!important;color:#695c55!important}
+.app.space .card .card-front,.app.neutral .card .card-front{background-color:var(--zg-paper)!important}
+.app.space .card .card-back:before,.app.space .card .card-back:after,
+.app.neutral .card .card-back:before,.app.neutral .card .card-back:after{content:none!important;display:none!important}
+.app.space .card .card-back>span,.app.neutral .card .card-back>span{font-size:inherit;}
+/* No per-card scaling. Both matched surfaces use identical timing. */
+.app.space .card.found,.app.neutral .card.found{
+ animation:zg-watercolor-pop .82s linear both!important;
+ transform:none!important;filter:none!important;pointer-events:none!important;
+}
+.app.space .card.found>.card-inner,.app.neutral .card.found>.card-inner{
+ animation:none!important;filter:none!important;transform:rotateY(180deg)!important;
+}
+.app.space .card.found::after,.app.neutral .card.found::after{
+ content:"";position:absolute;inset:-4%;border:0!important;
+ border-radius:30%;pointer-events:none;z-index:4;
+ background:radial-gradient(ellipse at 37% 40%,#ffffff98 0%,#d4e9ef75 28%,transparent 59%),
+            radial-gradient(ellipse at 66% 62%,#dac7e77b 0%,transparent 61%);
+ filter:blur(7px);animation:zg-watercolor-mist .82s linear both!important;
+}
+.app.space .pair-sparkles,.app.neutral .pair-sparkles{display:none!important}
+@keyframes zg-watercolor-pop{
+ 0%,37%{opacity:1}49%{opacity:1}64%{opacity:.74}78%{opacity:.23}100%{opacity:0}
+}
+@keyframes zg-watercolor-mist{
+ 0%,30%{opacity:0;transform:scale(.88)}
+ 44%{opacity:.16;transform:scale(.94)}
+ 59%{opacity:.7;transform:scale(1.02)}
+ 78%{opacity:.35;transform:scale(1.12)}
+ 100%{opacity:0;transform:scale(1.2)}
+}
+/* Restore independent space illustration layers, avoiding the old global hide rule. */
+.app.space .stage::before,.app.space:fullscreen .stage::before{
+ content:""!important;display:block!important;
+ position:absolute!important;top:2%!important;right:1.5%!important;left:auto!important;
+ width:clamp(160px,19vw,360px)!important;height:clamp(135px,17vw,310px)!important;
+ background:url("/zabavograd-demo/assets/space/planet.webp") center/contain no-repeat!important;
+ opacity:.86!important;z-index:1!important;pointer-events:none!important;
+ animation:zg-ringed-drift 19s ease-in-out infinite alternate!important;
+ filter:none!important;
+}
+.app.space .space-scenery .nebula{
+ display:block!important;opacity:.24!important;width:clamp(300px,43vw,750px)!important;
+ transform-origin:center!important;animation:zg-nebula-breathe 65s ease-in-out infinite alternate!important;
+}
+.app.space .space-scenery .nebula.blue{animation-delay:-26s!important;opacity:.18!important}
+.app.space .space-scenery .blue-planet{
+ width:clamp(350px,48vw,850px)!important;max-width:none!important;
+}
+.app.space .space-scenery .glow-star{display:block!important;opacity:.05;animation:zg-star-glint 11s ease-in-out infinite!important}
+.app.space .space-scenery .glow-star:nth-of-type(even){animation-delay:-5s!important}
+@keyframes zg-ringed-drift{from{transform:translate3d(0,0,0) rotate(-3deg)}to{transform:translate3d(-12px,14px,0) rotate(3deg)}}
+@keyframes zg-nebula-breathe{0%{transform:translate(-2%,1%) scale(1.04,.84) rotate(-3deg)}50%{transform:translate(1%,-1%) scale(.9,1.1) rotate(2deg)}100%{transform:translate(-1%,1%) scale(1.12,.94) rotate(-2deg)}}
+@keyframes zg-star-glint{0%,42%,82%,100%{opacity:.04;filter:none}52%{opacity:.43;filter:drop-shadow(0 0 8px #fff7de)}64%{opacity:.13;filter:none}}
+/* Preserve the approved neutral illustration and its native color. */
+.app.neutral .stage::before{background-image:url("/zabavograd-demo/assets/neutral/background-paper-2560.webp")!important;animation:none!important;filter:none!important}
+@media(prefers-reduced-motion:reduce){
+ .app.space .card.found,.app.neutral .card.found{animation:none!important;opacity:0!important}
+ .app.space .card.found::after,.app.neutral .card.found::after{display:none!important}
+ .app.space .stage::before,.app.space .space-scenery .nebula,.app.space .space-scenery .glow-star{animation:none!important}
+}
