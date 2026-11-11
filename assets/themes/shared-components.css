@@ -162,3 +162,17 @@
 @media(prefers-reduced-motion:reduce){.app.forest .stage::after,.app .overlay .victory-stars>span,.app .victory-star,.app.forest .card.mismatch:not(.found){animation:none!important}}
 
 .app.forest .stage::after{background-image:url("./forest/forest_fern.webp"),url("./forest/forest_bush.webp"),url("./forest/forest_flower_patch.webp"),url("./forest/forest_leaf_birch.webp"),url("./forest/forest_leaf_oak.webp");background-position:left bottom,right bottom,center bottom,12% 8%,88% 14%;background-size:15% auto,18% auto,30% auto,22px auto,26px auto;background-repeat:no-repeat;}
+
+/* Forest must share the same found-state and award geometry as the other games. */
+.app.forest .card.found{animation:zg-watercolor-pop 1.8s ease-in-out both!important;pointer-events:none!important;filter:none!important}
+.app.forest .card.found .card-inner{transform:rotateY(180deg)!important;filter:none!important}
+.app.forest .card .card-front{transform:rotateY(180deg)!important;backface-visibility:hidden!important}
+.app.forest .card .card-back{backface-visibility:hidden!important}
+.app.forest .card.found::after{content:"";position:absolute;inset:0;border-radius:18%;background:radial-gradient(ellipse,#dcebb7aa,transparent 68%);pointer-events:none;animation:zg-watercolor-mist 1.8s ease-in-out both}
+.app.forest .overlay h2,.app.forest .overlay p,.app.forest .overlay .link,.app.forest .modal h2,.app.forest .modal p{color:#354c29!important;opacity:1!important}
+.app.forest .victory-stars{display:flex!important;align-items:center!important;justify-content:center!important;gap:14px!important;opacity:1!important}
+.app.forest .victory-star{display:inline-flex!important;width:72px!important;height:72px!important;background:url("../neutral/approved-stars.webp") left center/300% 100% no-repeat!important}
+.app.forest .victory-star-empty{background-position:right center!important}
+.app.forest .victory-star .garden-icon{display:none!important}
+.app.forest .overlay .victory-stars>span{display:inline-flex!important;visibility:visible!important}
+@media(prefers-reduced-motion:reduce){.app.forest .card.found{animation:none!important;opacity:0!important}}
