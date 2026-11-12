@@ -27,6 +27,10 @@ test('Every theme has one complete, validated visual configuration',()=>{
    assert.equal(vars['--zg-card-front-image'],'none');
   }
  }
+ assert.equal(THEMES.neutral.scene.background,'assets/neutral/approved-paper-4k.webp');
+ assert.equal(THEMES.neutral.cards.back,'assets/neutral/approved-back.webp');
+ assert.equal(THEMES.neutral.cards.front,'assets/neutral/approved-front.webp');
+ assert.equal(THEMES.space.scene.background,'assets/space/background.webp');
  assert.equal(THEMES.forest.scene.background,'assets/themes/forest/forest_background.webp');
  assert.equal(THEMES.forest.cards.back,'assets/themes/forest/back.webp');
  assert.equal(THEMES.forest.cards.front,'assets/themes/forest/front.webp');
@@ -46,5 +50,5 @@ test('BASE_URL and audio are independent of game templates',()=>{
  assert.equal(soundFile('space','flip'),'flip-space.wav');
  assert.equal(soundFile('neutral','flip'),'flip.ogg');
  assert.equal(soundFile('forest','win'),'win.wav');
- assert(MOTION.matchMs>0&&MOTION.layoutMs>0);
+ assert(MOTION.matchMs>=1500&&MOTION.resultMs>MOTION.matchMs&&MOTION.layoutMs>0);
 });

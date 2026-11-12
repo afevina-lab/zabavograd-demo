@@ -2,7 +2,6 @@
 /** Enforce the current visual architecture. Run after extracting the UI pack. */
 const fs=require('node:fs');
 const path=require('node:path');
-const crypto=require('node:crypto');
 const assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
@@ -13,7 +12,11 @@ async function run(){
  assert(!/\.(?:space|neutral|forest)(?![\w-])/.test(layout),'Theme-specific legacy layout rules must be removed');
  assert(!/border-image-slice:\s*72/.test(layout),'Obsolete watercolor nine-slice card borders forbidden');
  assert(!/\/assets\/ui\/square\.png/.test(layout),'Obsolete icon sprite forbidden');
- assert(controls.includes('var(--skin-panel)'),'Universal watercolor controls must be separate');
+ assert(controls.includes('var(--skin-square)'),'Universal watercolor controls must be separate');
+ assert(!/saturate\s*\(/.test(layout+read('src/design-system/motion.css')),'Animations must never desaturate');
+ assert(read('src/design-system/theme.css').includes('border-image:none!important'),'Full-bleed toolbar is required');
+ assert(read('src/design-system/motion.css').includes('zg-pigment-bloom'),'Synchronized watercolor pop is required');
+ assert(read('src/main.tsx').includes('zg-caption-toggle')&&read('src/Sorting.tsx').includes('zg-caption-toggle'),'Shared caption controls missing');
  assert.equal(read('src/style.css').trim(),`/* Shared source order: layout, theme surfaces, control skins, motion. */
 @import './styles/layout.css';
 @import './design-system/theme.css';
