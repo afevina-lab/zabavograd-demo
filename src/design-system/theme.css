@@ -1,0 +1,93 @@
+/* Current visual surface. Theme-specific values come ONLY from themes.ts. */
+.app[data-theme]{background:var(--zg-page);color:var(--ui-text)}
+.app[data-theme] .stage{
+  background:var(--zg-stage-fill)!important;background-image:none!important;position:relative;isolation:isolate
+}
+.app[data-theme] .stage::before{
+  content:''!important;display:block!important;position:absolute!important;
+  inset:0!important;width:100%!important;height:100%!important;
+  z-index:0!important;pointer-events:none!important;opacity:1!important;
+  background:var(--zg-stage-image) center/cover no-repeat!important;
+  transform:scale(1.1111);transform-origin:center!important;
+  animation:none!important;filter:none!important
+}
+.app[data-theme][data-scene-motion="drift"] .stage::before{
+  animation:zg-background-drift 120s cubic-bezier(.45,0,.55,1) infinite!important
+}
+@keyframes zg-background-drift{
+  0%,100%{transform:translate3d(0,0,0) scale(1.1111)}
+  25%{transform:translate3d(0,-1.5%,0) scale(1.1111)}
+  50%{transform:translate3d(1.5%,-.5%,0) scale(1.1111)}
+  75%{transform:translate3d(.4%,1.5%,0) scale(1.1111)}
+}
+.app[data-theme] .stage::after{content:none!important;display:none!important}
+.app[data-theme] .sorting-content{color:var(--zg-stage-text)!important}
+/* Whole-card WebP instead of 9-slice: no seams during flipping/scaling. */
+.app[data-theme] .card .card-back,
+.app[data-theme] .card .card-front,
+.app[data-theme] .card.found .card-front{
+  border:0!important;border-image:none!important;border-radius:18px!important;
+  box-shadow:none!important;background-color:transparent!important;
+  background-position:center!important;background-size:100% 100%!important;
+  background-repeat:no-repeat!important;color:var(--ui-deep)!important;
+  filter:drop-shadow(0 4px 5px #172a4050)!important
+}
+.app[data-theme][data-card-style="watercolor"] .card .card-back{
+  background-image:var(--zg-card-back-image)!important
+}
+.app[data-theme][data-card-style="watercolor"] .card .card-front,
+.app[data-theme][data-card-style="watercolor"] .card.found .card-front{
+  background-image:var(--zg-card-front-image)!important
+}
+.app[data-theme][data-card-style="procedural"] .card .card-back{
+  background:linear-gradient(140deg,var(--ui-pale),var(--ui-accent))!important;
+  border:3px solid var(--ui-outline)!important;
+  box-shadow:inset 0 0 0 6px #fff9ef99,0 5px 9px #1a372a44!important
+}
+.app[data-theme][data-card-style="procedural"] .card .card-front,
+.app[data-theme][data-card-style="procedural"] .card.found .card-front{
+  background:var(--ui-paper)!important;border:3px solid var(--ui-outline)!important
+}
+.app[data-theme] .card .card-back::after,.app[data-theme] .card .card-back::before{
+  display:none!important;content:none!important
+}
+.app[data-theme] .card .card-back>span{color:var(--ui-deep)!important}
+.app[data-theme] .card:hover:not(:disabled) .card-back{
+  filter:brightness(1.04) drop-shadow(0 0 8px var(--ui-accent))!important
+}
+.app[data-theme] .play-toolbar{border-image-source:var(--skin-panel)!important}
+.app[data-theme][data-toolbar-art="illustrated"] .play-toolbar{
+  background:var(--zg-toolbar-image) center/100% 100% no-repeat!important;
+  border:0!important;border-image:none!important;
+  color:var(--ui-deep)!important;
+}
+@media(prefers-reduced-motion:reduce){
+  .app[data-theme] .stage::before{animation:none!important;transform:scale(1.1111)!important}
+}
+
+/* Sorting uses the same surface palette and interactions as memory. */
+.app[data-theme] .sort-card,
+.app[data-theme] .sorted-cards .sort-card{
+ background:var(--ui-paper)!important;
+ border:2px solid var(--ui-outline)!important;color:var(--ui-text)!important;
+ box-shadow:0 4px 0 var(--ui-deep)!important;border-radius:16px
+}
+.app[data-theme] .sort-card:hover:not(:disabled){
+ box-shadow:0 6px 14px var(--ui-accent)!important
+}
+.app[data-theme] .sort-bin{
+ background:color-mix(in srgb,var(--ui-accent) 18%,var(--ui-paper))!important;
+ border-color:var(--ui-outline)!important;color:var(--ui-text)!important
+}
+.app[data-theme] .bin-target{
+ background:var(--ui-paper)!important;color:var(--ui-text)!important;
+ border:1px solid var(--ui-outline)!important
+}
+.app[data-theme] .sort-bin.drop-hover{
+ box-shadow:0 0 0 3px var(--ui-outline),0 0 22px var(--ui-accent)!important
+}
+
+/* All scene layers have one geometry contract and never intercept input. */
+.app[data-theme] .zg-scene-layers{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.app[data-theme] .zg-scene-sprite{position:absolute;display:block;height:auto;max-width:none;object-fit:contain;pointer-events:none;user-select:none}
+.app[data-theme] .card:disabled{opacity:1!important}
