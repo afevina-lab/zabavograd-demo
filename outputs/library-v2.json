@@ -269,6 +269,13 @@
       "shared_ids": 1569,
       "imported_published_webp_links": 111,
       "private_source_redacted_local_paths": 117
+    },
+    "public_value_reconciliation_20261112": {
+      "exact_meaning_aliases": 12,
+      "original_public_ids_retained": 25,
+      "images_added_to_editorial_values": 12,
+      "dog_bone_meaning_kept_separate": true,
+      "rule": "Exact lemma, sense and kind only; other homographs need explicit approval."
     }
   },
   "weight_migration": {
@@ -201586,7 +201593,7 @@
         "senses": [
           {
             "id": "ru-r-039-water",
-            "word_id": "ru-r-039",
+            "word_id": "ru-new-20261102-0320",
             "label": "кран",
             "meaning": "водопроводный кран",
             "topic": null,
@@ -298974,7 +298981,26 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0001-published-alias-ru-new-20261108-0ca50229c2",
+            "word_id": "ru-noun-20261109-0001",
+            "label": "платье",
+            "meaning": "платье",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "webp-20261108-43f-43b-430-442-44c-435",
+                "src": "/assets/words/платье.webp",
+                "label": "платье",
+                "format": "webp",
+                "source": "published_release_20261112",
+                "source_alias_id": "ru-new-20261108-0ca50229c2"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -299339,7 +299365,26 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0005-published-alias-ru-new-20261108-6ce7e80f4f",
+            "word_id": "ru-noun-20261109-0005",
+            "label": "футболка",
+            "meaning": "футболка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "webp-20261108-444-443-442-431-43e-43b-43a-430",
+                "src": "/assets/words/футболка.webp",
+                "label": "футболка",
+                "format": "webp",
+                "source": "published_release_20261112",
+                "source_alias_id": "ru-new-20261108-6ce7e80f4f"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -299438,7 +299483,26 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0006-published-alias-ru-new-20261108-04e7f5b890",
+            "word_id": "ru-noun-20261109-0006",
+            "label": "майка",
+            "meaning": "майка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "webp-20261108-43c-430-439-43a-430",
+                "src": "/assets/words/майка.webp",
+                "label": "майка",
+                "format": "webp",
+                "source": "published_release_20261112",
+                "source_alias_id": "ru-new-20261108-04e7f5b890"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -299927,7 +299991,26 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0011-published-alias-ru-new-20261108-70c372449f",
+            "word_id": "ru-noun-20261109-0011",
+            "label": "шапка",
+            "meaning": "шапка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "webp-20261108-448-430-43f-43a-430",
+                "src": "/assets/words/шапка.webp",
+                "label": "шапка",
+                "format": "webp",
+                "source": "published_release_20261112",
+                "source_alias_id": "ru-new-20261108-70c372449f"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -300425,7 +300508,26 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0016-published-alias-ru-new-20261108-7f2d7d1d30",
+            "word_id": "ru-noun-20261109-0016",
+            "label": "ботинок",
+            "meaning": "ботинок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "webp-20261108-431-43e-442-438-43d-43e-43a",
+                "src": "/assets/words/ботинок.webp",
+                "label": "ботинок",
+                "format": "webp",
+                "source": "published_release_20261112",
+                "source_alias_id": "ru-new-20261108-7f2d7d1d30"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -300523,7 +300625,26 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0017-published-alias-ru-new-20261108-c17d585bac",
+            "word_id": "ru-noun-20261109-0017",
+            "label": "сапог",
+            "meaning": "сапог",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "webp-20261108-441-430-43f-43e-433",
+                "src": "/assets/words/сапог.webp",
+                "label": "сапог",
+                "format": "webp",
+                "source": "published_release_20261112",
+                "source_alias_id": "ru-new-20261108-c17d585bac"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -301104,7 +301225,26 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0023-published-alias-ru-new-20261108-d34a9acbe5",
+            "word_id": "ru-noun-20261109-0023",
+            "label": "варежка",
+            "meaning": "варежка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "webp-20261108-432-430-440-435-436-43a-430",
+                "src": "/assets/words/варежка.webp",
+                "label": "варежка",
+                "format": "webp",
+                "source": "published_release_20261112",
+                "source_alias_id": "ru-new-20261108-d34a9acbe5"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -301679,7 +301819,26 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0029-published-alias-ru-new-20261108-370345bb3c",
+            "word_id": "ru-noun-20261109-0029",
+            "label": "носок",
+            "meaning": "носок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "webp-20261108-43d-43e-441-43e-43a",
+                "src": "/assets/words/носок.webp",
+                "label": "носок",
+                "format": "webp",
+                "source": "published_release_20261112",
+                "source_alias_id": "ru-new-20261108-370345bb3c"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "pending_automatic_analysis",
@@ -301777,7 +301936,26 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0030-published-alias-ru-new-20261108-2bac6d3523",
+            "word_id": "ru-noun-20261109-0030",
+            "label": "кукла",
+            "meaning": "кукла",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "webp-20261108-43a-443-43a-43b-430",
+                "src": "/assets/words/кукла.webp",
+                "label": "кукла",
+                "format": "webp",
+                "source": "published_release_20261112",
+                "source_alias_id": "ru-new-20261108-2bac6d3523"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -301877,7 +302055,26 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0031-published-alias-ru-new-20261108-84653d88d9",
+            "word_id": "ru-noun-20261109-0031",
+            "label": "мяч",
+            "meaning": "мяч",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "webp-20261108-43c-44f-447",
+                "src": "/assets/words/мяч.webp",
+                "label": "мяч",
+                "format": "webp",
+                "source": "published_release_20261112",
+                "source_alias_id": "ru-new-20261108-84653d88d9"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -304310,7 +304507,26 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0056-published-alias-ru-new-20261108-b8f6c0f802",
+            "word_id": "ru-noun-20261109-0056",
+            "label": "молоко",
+            "meaning": "молоко",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "webp-20261108-43c-43e-43b-43e-43a-43e",
+                "src": "/assets/words/молоко.webp",
+                "label": "молоко",
+                "format": "webp",
+                "source": "published_release_20261112",
+                "source_alias_id": "ru-new-20261108-b8f6c0f802"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -306377,7 +306593,26 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0077-published-alias-ru-new-20261108-c7f4dd595f",
+            "word_id": "ru-noun-20261109-0077",
+            "label": "лодка",
+            "meaning": "лодка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "webp-20261108-43b-43e-434-43a-430",
+                "src": "/assets/words/лодка.webp",
+                "label": "лодка",
+                "format": "webp",
+                "source": "published_release_20261112",
+                "source_alias_id": "ru-new-20261108-c7f4dd595f"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -326115,7 +326350,8 @@
       "legacy_source": null,
       "editorial": {
         "source": "zabavograd-demo/library.json",
-        "note": "Самостоятельное публичное значение перенесено 12.11.2026."
+        "note": "Самостоятельное публичное значение перенесено 12.11.2026.",
+        "alias_explanation": "Совпадающее значение; исходный публичный ID и WebP сохранены; для автоматической выдачи используется редакторская карточка."
       },
       "lexical_eligible_by_default": true,
       "public_release_snapshot": {
@@ -326149,7 +326385,8 @@
         "phoneticStatus": "pending",
         "kind": "word",
         "scope": "general"
-      }
+      },
+      "same_lexical_meaning_as": "ru-noun-20261109-0016"
     },
     {
       "id": "ru-new-20261108-d34a9acbe5",
@@ -326214,7 +326451,8 @@
       "legacy_source": null,
       "editorial": {
         "source": "zabavograd-demo/library.json",
-        "note": "Самостоятельное публичное значение перенесено 12.11.2026."
+        "note": "Самостоятельное публичное значение перенесено 12.11.2026.",
+        "alias_explanation": "Совпадающее значение; исходный публичный ID и WebP сохранены; для автоматической выдачи используется редакторская карточка."
       },
       "lexical_eligible_by_default": true,
       "public_release_snapshot": {
@@ -326248,7 +326486,8 @@
         "phoneticStatus": "pending",
         "kind": "word",
         "scope": "general"
-      }
+      },
+      "same_lexical_meaning_as": "ru-noun-20261109-0023"
     },
     {
       "id": "ru-new-20261108-42569368f9",
@@ -326709,7 +326948,8 @@
       "legacy_source": null,
       "editorial": {
         "source": "zabavograd-demo/library.json",
-        "note": "Самостоятельное публичное значение перенесено 12.11.2026."
+        "note": "Самостоятельное публичное значение перенесено 12.11.2026.",
+        "alias_explanation": "Совпадающее значение; исходный публичный ID и WebP сохранены; для автоматической выдачи используется редакторская карточка."
       },
       "lexical_eligible_by_default": true,
       "public_release_snapshot": {
@@ -326743,7 +326983,8 @@
         "phoneticStatus": "pending",
         "kind": "word",
         "scope": "general"
-      }
+      },
+      "same_lexical_meaning_as": "ru-noun-20261109-0030"
     },
     {
       "id": "ru-new-20261108-114d668efa",
@@ -326907,7 +327148,8 @@
       "legacy_source": null,
       "editorial": {
         "source": "zabavograd-demo/library.json",
-        "note": "Самостоятельное публичное значение перенесено 12.11.2026."
+        "note": "Самостоятельное публичное значение перенесено 12.11.2026.",
+        "alias_explanation": "Совпадающее значение; исходный публичный ID и WebP сохранены; для автоматической выдачи используется редакторская карточка."
       },
       "lexical_eligible_by_default": true,
       "public_release_snapshot": {
@@ -326941,7 +327183,8 @@
         "phoneticStatus": "pending",
         "kind": "word",
         "scope": "general"
-      }
+      },
+      "same_lexical_meaning_as": "ru-noun-20261109-0077"
     },
     {
       "id": "ru-new-20261108-04e7f5b890",
@@ -327006,7 +327249,8 @@
       "legacy_source": null,
       "editorial": {
         "source": "zabavograd-demo/library.json",
-        "note": "Самостоятельное публичное значение перенесено 12.11.2026."
+        "note": "Самостоятельное публичное значение перенесено 12.11.2026.",
+        "alias_explanation": "Совпадающее значение; исходный публичный ID и WebP сохранены; для автоматической выдачи используется редакторская карточка."
       },
       "lexical_eligible_by_default": true,
       "public_release_snapshot": {
@@ -327040,7 +327284,8 @@
         "phoneticStatus": "pending",
         "kind": "word",
         "scope": "general"
-      }
+      },
+      "same_lexical_meaning_as": "ru-noun-20261109-0006"
     },
     {
       "id": "ru-new-20261108-b8f6c0f802",
@@ -327105,7 +327350,8 @@
       "legacy_source": null,
       "editorial": {
         "source": "zabavograd-demo/library.json",
-        "note": "Самостоятельное публичное значение перенесено 12.11.2026."
+        "note": "Самостоятельное публичное значение перенесено 12.11.2026.",
+        "alias_explanation": "Совпадающее значение; исходный публичный ID и WebP сохранены; для автоматической выдачи используется редакторская карточка."
       },
       "lexical_eligible_by_default": true,
       "public_release_snapshot": {
@@ -327139,7 +327385,8 @@
         "phoneticStatus": "pending",
         "kind": "word",
         "scope": "general"
-      }
+      },
+      "same_lexical_meaning_as": "ru-noun-20261109-0056"
     },
     {
       "id": "ru-new-20261108-84653d88d9",
@@ -327204,7 +327451,8 @@
       "legacy_source": null,
       "editorial": {
         "source": "zabavograd-demo/library.json",
-        "note": "Самостоятельное публичное значение перенесено 12.11.2026."
+        "note": "Самостоятельное публичное значение перенесено 12.11.2026.",
+        "alias_explanation": "Совпадающее значение; исходный публичный ID и WebP сохранены; для автоматической выдачи используется редакторская карточка."
       },
       "lexical_eligible_by_default": true,
       "public_release_snapshot": {
@@ -327238,7 +327486,8 @@
         "phoneticStatus": "pending",
         "kind": "word",
         "scope": "general"
-      }
+      },
+      "same_lexical_meaning_as": "ru-noun-20261109-0031"
     },
     {
       "id": "ru-new-20261108-370345bb3c",
@@ -327303,7 +327552,8 @@
       "legacy_source": null,
       "editorial": {
         "source": "zabavograd-demo/library.json",
-        "note": "Самостоятельное публичное значение перенесено 12.11.2026."
+        "note": "Самостоятельное публичное значение перенесено 12.11.2026.",
+        "alias_explanation": "Совпадающее значение; исходный публичный ID и WebP сохранены; для автоматической выдачи используется редакторская карточка."
       },
       "lexical_eligible_by_default": true,
       "public_release_snapshot": {
@@ -327337,7 +327587,8 @@
         "phoneticStatus": "pending",
         "kind": "word",
         "scope": "general"
-      }
+      },
+      "same_lexical_meaning_as": "ru-noun-20261109-0029"
     },
     {
       "id": "ru-new-20261108-97b71638c2",
@@ -327600,7 +327851,8 @@
       "legacy_source": null,
       "editorial": {
         "source": "zabavograd-demo/library.json",
-        "note": "Самостоятельное публичное значение перенесено 12.11.2026."
+        "note": "Самостоятельное публичное значение перенесено 12.11.2026.",
+        "alias_explanation": "Совпадающее значение; исходный публичный ID и WebP сохранены; для автоматической выдачи используется редакторская карточка."
       },
       "lexical_eligible_by_default": true,
       "public_release_snapshot": {
@@ -327634,7 +327886,8 @@
         "phoneticStatus": "pending",
         "kind": "word",
         "scope": "general"
-      }
+      },
+      "same_lexical_meaning_as": "ru-noun-20261109-0001"
     },
     {
       "id": "ru-new-20261108-c17d585bac",
@@ -327699,7 +327952,8 @@
       "legacy_source": null,
       "editorial": {
         "source": "zabavograd-demo/library.json",
-        "note": "Самостоятельное публичное значение перенесено 12.11.2026."
+        "note": "Самостоятельное публичное значение перенесено 12.11.2026.",
+        "alias_explanation": "Совпадающее значение; исходный публичный ID и WebP сохранены; для автоматической выдачи используется редакторская карточка."
       },
       "lexical_eligible_by_default": true,
       "public_release_snapshot": {
@@ -327733,7 +327987,8 @@
         "phoneticStatus": "pending",
         "kind": "word",
         "scope": "general"
-      }
+      },
+      "same_lexical_meaning_as": "ru-noun-20261109-0017"
     },
     {
       "id": "ru-new-20261108-abd179e79d",
@@ -327897,7 +328152,8 @@
       "legacy_source": null,
       "editorial": {
         "source": "zabavograd-demo/library.json",
-        "note": "Самостоятельное публичное значение перенесено 12.11.2026."
+        "note": "Самостоятельное публичное значение перенесено 12.11.2026.",
+        "alias_explanation": "Совпадающее значение; исходный публичный ID и WebP сохранены; для автоматической выдачи используется редакторская карточка."
       },
       "lexical_eligible_by_default": true,
       "public_release_snapshot": {
@@ -327931,7 +328187,8 @@
         "phoneticStatus": "pending",
         "kind": "word",
         "scope": "general"
-      }
+      },
+      "same_lexical_meaning_as": "ru-noun-20261109-0005"
     },
     {
       "id": "ru-new-20261108-70c372449f",
@@ -327996,7 +328253,8 @@
       "legacy_source": null,
       "editorial": {
         "source": "zabavograd-demo/library.json",
-        "note": "Самостоятельное публичное значение перенесено 12.11.2026."
+        "note": "Самостоятельное публичное значение перенесено 12.11.2026.",
+        "alias_explanation": "Совпадающее значение; исходный публичный ID и WebP сохранены; для автоматической выдачи используется редакторская карточка."
       },
       "lexical_eligible_by_default": true,
       "public_release_snapshot": {
@@ -328030,7 +328288,8 @@
         "phoneticStatus": "pending",
         "kind": "word",
         "scope": "general"
-      }
+      },
+      "same_lexical_meaning_as": "ru-noun-20261109-0011"
     },
     {
       "id": "ru-new-20261108-53796f6d09",

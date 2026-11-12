@@ -2671,5 +2671,12 @@
     "kind": []
   },
   "decision": "On shared IDs editor V2 is authoritative for categories/weights; historic public values are held in this audit; all published WebP URLs are retained.",
-  "safety": "Only released static graph edges reach games; 55 suggested grammar frames stay in review; absolute private filesystem paths removed."
+  "safety": "Only released static graph edges reach games; 55 suggested grammar frames stay in review; absolute private filesystem paths removed.",
+  "value_reconciliation": {
+    "exact_same_meaning_aliases": 12,
+    "published_ids_retained_as_source_records": 25,
+    "original_published_image_links_retained": true,
+    "canonical_editorial_cards_receiving_images": 12,
+    "distinct_bone_meanings_not_merged": true
+  }
 }
