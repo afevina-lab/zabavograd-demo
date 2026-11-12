@@ -17,7 +17,7 @@ export function Icon({name}:{name:string}){
 export function ScoreStars({value}:{value:number}){
  const score=Math.max(0,Math.min(3,Math.round(value)));
  return <span className="victory-stars">{[0,1,2].map(i=>
-  <span key={i} style={{animationDelay:String(MOTION.awardDelayMs+i*MOTION.awardStaggerMs)+'ms'}}>
+  <span key={i} style={{animationDelay:String(MOTION.awardDelayMs+i*MOTION.awardStaggerMs)+'ms','--zg-star-launch-x':`${(1-i)*96}px`} as React.CSSProperties}>
    <span className={'victory-star'+(i<score?'':' victory-star-empty')}><Icon name="Star"/></span>
   </span>)}</span>;
 }

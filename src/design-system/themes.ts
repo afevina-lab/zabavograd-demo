@@ -16,8 +16,8 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
  neutral:{
   label:'Нейтральное',
   palette:{accent:'#77b0d6',deep:'#285174',pale:'#e4f2fa',outline:'#5d86a5',text:'#243d59',paper:'#fbf5e9',page:'#f8f1e8',stageText:'#5b5059'},
-  skin:'blue',toolbarArt:null,scene:{background:'assets/neutral/background-v2.webp',fill:'#f9f2e7',motion:'drift',sprites:[],effects:{stars:0,comets:0}},
-  cards:{kind:'watercolor',back:'assets/neutral/card-back-v2.webp',front:'assets/neutral/card-front-v2.webp'},sounds:{}
+  skin:'blue',toolbarArt:null,scene:{background:'assets/neutral/approved-paper-4k.webp',fill:'#f9f2e7',motion:'drift',sprites:[],effects:{stars:0,comets:0}},
+  cards:{kind:'watercolor',back:'assets/neutral/approved-back.webp',front:'assets/neutral/approved-front.webp'},sounds:{}
  },
  forest:{
   label:'Лес',
@@ -38,12 +38,12 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
  space:{
   label:'Космос',
   palette:{accent:'#ae97e1',deep:'#625095',pale:'#ebe5ff',outline:'#8a76c2',text:'#2e2855',paper:'#fbf5e9',page:'#1c2340',stageText:'#fff5e8'},
-  skin:'lavender',toolbarArt:null,scene:{background:'assets/space/background.png',fill:'#1c2340',motion:'static',
+  skin:'lavender',toolbarArt:null,scene:{background:'assets/space/background.webp',fill:'#1c2340',motion:'static',
  sprites:[
-  {id:'planet-blue',src:'assets/space/planet-blue.png',motion:'float',width:'170px',left:'-35px',bottom:'1%',opacity:.8,durationMs:24000},
-  {id:'purple-nebula',src:'assets/space/nebula-purple.png',motion:'breathe',width:'45%',left:'0%',top:'0%',opacity:.16,durationMs:28000},
-  {id:'blue-nebula',src:'assets/space/nebula-blue.png',motion:'breathe',width:'45%',right:'0%',bottom:'0%',opacity:.16,durationMs:34000},
-  ...Array.from({length:7},(_,i)=>({id:'star-'+i,src:'assets/space/star.png',motion:'twinkle' as const,width:'42px',left:(8+i*13)+'%',top:(15+(i*23)%70)+'%',opacity:.2,durationMs:14000,delayMs:i*2000}))
+  {id:'planet-blue',src:'assets/space/planet-blue.webp',motion:'float',width:'170px',left:'-35px',bottom:'1%',opacity:.8,durationMs:24000},
+  {id:'purple-nebula',src:'assets/space/nebula-purple.webp',motion:'breathe',width:'45%',left:'0%',top:'0%',opacity:.16,durationMs:28000},
+  {id:'blue-nebula',src:'assets/space/nebula-blue.webp',motion:'breathe',width:'45%',right:'0%',bottom:'0%',opacity:.16,durationMs:34000},
+  ...Array.from({length:7},(_,i)=>({id:'star-'+i,src:'assets/space/star.webp',motion:'twinkle' as const,width:'42px',left:(8+i*13)+'%',top:(15+(i*23)%70)+'%',opacity:.2,durationMs:14000,delayMs:i*2000}))
  ],effects:{stars:30,comets:2}
 },
   cards:{kind:'watercolor',back:'assets/space/card-back-v2.webp',front:'assets/space/card-front-v2.webp'},sounds:{flip:'flip-space.wav',match:'match-space.wav'}
