@@ -1,0 +1,3474 @@
+{
+  "schema_version": 1,
+  "source_archive": "zabavograd_62_approved_assets.zip",
+  "senses": [
+    {
+      "id": "ru-r-001-sense",
+      "word_id": "ru-r-001",
+      "label": "арбуз",
+      "meaning": "арбуз",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-01",
+          "src": "/assets/words/arbuz-tselyy.webp",
+          "label": "арбуз (целый)",
+          "sha256": "3844a9af26d0e9be14474cdcaa6b48f88a2aa13ffac564151a457601e2f75a48",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "whole",
+          "review_note": null,
+          "master_png_src": "/assets/words/arbuz-tselyy.png",
+          "master_png_sha256": "a846061943976d74544581126aa7bd69e19cbf33555bf2c06e5a2da1be245ed0",
+          "format": "webp"
+        },
+        {
+          "id": "approved-02",
+          "src": "/assets/words/arbuz-dolka.webp",
+          "label": "арбуз (долька)",
+          "sha256": "483879959627c9d4ff84f7c03aec5df7c9a1e1c231ccae52d7f77f9312e7d3d0",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "slice",
+          "review_note": null,
+          "master_png_src": "/assets/words/arbuz-dolka.png",
+          "master_png_sha256": "62172fe4ec6de8623c0ab7718d9f52e2ef8d841c77f316b25ffc3c18cb314682",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-003-sense",
+      "word_id": "ru-r-003",
+      "label": "барабан",
+      "meaning": "барабан",
+      "topic": "Музыкальные инструменты",
+      "subcategory": "Ударные",
+      "variants": [
+        {
+          "id": "approved-03",
+          "src": "/assets/words/baraban.webp",
+          "label": "барабан",
+          "sha256": "81436a5fd0559b2023d1d4830fcf76f130c71dc43c6c24c6f02dcf2adbaffb00",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/baraban.png",
+          "master_png_sha256": "21de4ac7164e3001ccf33b0fa9b8435f78d98d481609bec653c5135aeb2a0809",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-006-sense",
+      "word_id": "ru-r-006",
+      "label": "ведро",
+      "meaning": "ведро",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-04",
+          "src": "/assets/words/vedro.webp",
+          "label": "ведро",
+          "sha256": "b1a3e5b9ab9abc36116fb99ed89d05eef765c89e86c6c80748bcdcdd29fefb7a",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/vedro.png",
+          "master_png_sha256": "9a39b8ef091cdfa9f0d2b750d6619a3da346af35f9b1b405dda893100bf17865",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-008-sense",
+      "word_id": "ru-r-008",
+      "label": "виноград",
+      "meaning": "виноград",
+      "topic": "Ягоды",
+      "subcategory": "Садовые",
+      "variants": [
+        {
+          "id": "approved-05",
+          "src": "/assets/words/vinograd.webp",
+          "label": "виноград",
+          "sha256": "643e701acf2afb1d6a0f2655415330a8702651a4574216166d0f203388c22e45",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/vinograd.png",
+          "master_png_sha256": "f3a173ed904074fa67a9aeb0a635bd9fe2af6bd6057ea0ac0170f9f901fc81b6",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-extra-008-sense",
+      "word_id": "ru-r-extra-008",
+      "label": "воробей",
+      "meaning": "воробей",
+      "topic": "Птицы",
+      "subcategory": "Неперелётные",
+      "variants": [
+        {
+          "id": "approved-06",
+          "src": "/assets/words/vorobey.webp",
+          "label": "воробей",
+          "sha256": "7ed38c7afb979878d4dc291fab7f39adcc91595ce839ad11f8ffcc6e53f9f5b4",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/vorobey.png",
+          "master_png_sha256": "db44259ca8add64eedc9ad456fd0f43d53d8c650a3b959660184edb3a1723a8d",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-extra-006-sense",
+      "word_id": "ru-r-extra-006",
+      "label": "ворона",
+      "meaning": "ворона",
+      "topic": "Птицы",
+      "subcategory": "Неперелётные",
+      "variants": [
+        {
+          "id": "approved-07",
+          "src": "/assets/words/vorona.webp",
+          "label": "ворона",
+          "sha256": "9eed7e09cc0be72f092c74839ee0aec65fe8efe1422fe63eb50ac399c34f6ac1",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/vorona.png",
+          "master_png_sha256": "ef5c36980b86b8c4088cc91f5908d5b086e6eebce64e0b3f01e8c342941546ec",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-010-sense",
+      "word_id": "ru-r-010",
+      "label": "врач",
+      "meaning": "врач",
+      "topic": "Профессии",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-08",
+          "src": "/assets/words/vrach.webp",
+          "label": "врач",
+          "sha256": "428161088473a1ae49d6f39da9cf564449819008743e55d64afc1cbe86941b8d",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/vrach.png",
+          "master_png_sha256": "a52d2eb304e92c7ed7f117a0068212b65bd85bac7f362c5fb3e0169c0eac0bd0",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-013-sense",
+      "word_id": "ru-r-013",
+      "label": "гора",
+      "meaning": "гора",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-09",
+          "src": "/assets/words/gora.webp",
+          "label": "гора",
+          "sha256": "2189fc19e5ff0caa089c192b7ea02711750201685b359d605d9c99abf1546d6d",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/gora.png",
+          "master_png_sha256": "6e86c8f9453d404629b52f335e36df800bfe6a07812462dc5421d9773cb84dde",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-014-sense",
+      "word_id": "ru-r-014",
+      "label": "горка",
+      "meaning": "детская горка на площадке",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-10",
+          "src": "/assets/words/gorka.webp",
+          "label": "горка",
+          "sha256": "82a417cdc62a5efe965142d347bd90db31d9c5b12deff3d3de8fb4328fbd0d7e",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/gorka.png",
+          "master_png_sha256": "c2aee7ee7e044420546351ed9cf43904de5e3c2c9361bde010a5bbf5299e9eb9",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-015-sense",
+      "word_id": "ru-r-015",
+      "label": "горох",
+      "meaning": "горох",
+      "topic": "Овощи",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-11",
+          "src": "/assets/words/gorokh.webp",
+          "label": "горох",
+          "sha256": "6997fb05f2e4d9a6a815afc0aeaddef8e5ec633de311759221a6da2569f64ecf",
+          "width": 1312,
+          "height": 1199,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/gorokh.png",
+          "master_png_sha256": "d08954fdc7c25077da2e494863e911df20f8cf7482f804b5629097ef4686a879",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0b3d180d183d0b7d0bed0b2d0b8d0ba-sense",
+      "word_id": "ru-r-add-d0b3d180d183d0b7d0bed0b2d0b8d0ba",
+      "label": "грузовик",
+      "meaning": "грузовик",
+      "topic": "Транспорт",
+      "subcategory": "Грузовой",
+      "variants": [
+        {
+          "id": "approved-12",
+          "src": "/assets/words/gruzovik.webp",
+          "label": "грузовик",
+          "sha256": "1589b31a17bbff8fc8d7a2cc8e955a65e3050081699e0d35aed1bc5fafe9e4c4",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/gruzovik.png",
+          "master_png_sha256": "060df59b49dd28b0a4f70e6427649e29c5b36e20ddf74d3ef189cde5e3f660f4",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-016-sense",
+      "word_id": "ru-r-016",
+      "label": "груша",
+      "meaning": "груша",
+      "topic": "Фрукты",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-13",
+          "src": "/assets/words/grusha.webp",
+          "label": "груша",
+          "sha256": "04963238fed5c4f88a6606d4ce525716560cbb0b98090048f5ebaa3c5a2d93f1",
+          "width": 1312,
+          "height": 1199,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/grusha.png",
+          "master_png_sha256": "304d695adc93e132bc1f73f1065ff8a74b43a325d7caa261024d5b51ba641b8a",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-017-sense",
+      "word_id": "ru-r-017",
+      "label": "дорога",
+      "meaning": "дорога",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-14",
+          "src": "/assets/words/doroga.webp",
+          "label": "дорога",
+          "sha256": "8e3f0328544dc8fc6026151f0ea5803203f1d0836a562bd45e9c78dc01e86eb6",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/doroga.png",
+          "master_png_sha256": "ba3b226c5584d94166e716a57f18e0d8c71474f11f3921bc76b012ebfb91521e",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-019-sense",
+      "word_id": "ru-r-019",
+      "label": "жираф",
+      "meaning": "жираф",
+      "topic": "Животные",
+      "subcategory": "Жарких стран",
+      "variants": [
+        {
+          "id": "approved-15",
+          "src": "/assets/words/zhiraf.webp",
+          "label": "жираф",
+          "sha256": "6e7bed8fb9ad5636e59ffec514d093f7f55597ced0d84381a5274f9c9444047a",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/zhiraf.png",
+          "master_png_sha256": "99d6122daaab0ab41f264ccae2c37bf7969e141ba3b16b6a649cefae511a0c32",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-020-sense",
+      "word_id": "ru-r-020",
+      "label": "забор",
+      "meaning": "забор",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-16",
+          "src": "/assets/words/zabor.webp",
+          "label": "забор",
+          "sha256": "073fe93e1b8ac30577c4ce9be45432a3b766c4974c5e20c6639c9bb15bcaba2a",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/zabor.png",
+          "master_png_sha256": "064c114ae7fcd679c332d680360e476d2a330d763b50fd37e8f16cc76121ff52",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-021-sense",
+      "word_id": "ru-r-021",
+      "label": "зебра",
+      "meaning": "зебра",
+      "topic": "Животные",
+      "subcategory": "Жарких стран",
+      "variants": [
+        {
+          "id": "approved-17",
+          "src": "/assets/words/zebra.webp",
+          "label": "зебра",
+          "sha256": "689508b31e638f59f323029293d5bdab301c20435b738a587a1d69d89f42a05f",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/zebra.png",
+          "master_png_sha256": "64c56ff20cad3d9ca1d275d1d151e413c5b38918fed47852fd8899fe041772e5",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-025-sense",
+      "word_id": "ru-r-025",
+      "label": "карандаш",
+      "meaning": "карандаш",
+      "topic": "Школьные принадлежности",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-18",
+          "src": "/assets/words/karandash.webp",
+          "label": "карандаш",
+          "sha256": "0e87c429efddd7b39d69bea1e79991531ed38ccc6f3cafbc67c68d032dc073eb",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/karandash.png",
+          "master_png_sha256": "beffd31662f59fc33300c0e3844f37de4b886f84cf35a947d8d557d18b93535b",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-027-sense",
+      "word_id": "ru-r-027",
+      "label": "картошка",
+      "meaning": "картошка",
+      "topic": "Овощи",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-19",
+          "src": "/assets/words/kartoshka.webp",
+          "label": "картошка",
+          "sha256": "24d835f3d8588ba327b5cd1e56fd30cedc122f3b565221553a053223d482b0c3",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/kartoshka.png",
+          "master_png_sha256": "bbc0e605f431ec99d2b2656714b7e68c684f66a5ca53706d6b9fc54ee8d73da0",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-extra-014-sense",
+      "word_id": "ru-r-extra-014",
+      "label": "ковёр",
+      "meaning": "ковёр",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20",
+          "src": "/assets/words/kovyor.webp",
+          "label": "ковёр",
+          "sha256": "86d7996dc7bc1102507164063e3fe0d6c00e3dc4e45f86499392d211a5f258f1",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/kovyor.png",
+          "master_png_sha256": "3705cf157c48835d5496619dd2c88c609a448b2a1435f42ccd06cce1707ef6e9",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-030-sense",
+      "word_id": "ru-r-030",
+      "label": "комар",
+      "meaning": "комар",
+      "topic": "Насекомые",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-21",
+          "src": "/assets/words/komar.webp",
+          "label": "комар",
+          "sha256": "d515b022ff534acabe296cfa49c0c6da15bd7ea05e0757a37f69eeb8800d525a",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/komar.png",
+          "master_png_sha256": "147de15ac339160b365d795b44023f74eed7670cb9ef256c40beafede3144620",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-031-sense",
+      "word_id": "ru-r-031",
+      "label": "компьютер",
+      "meaning": "компьютер",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-22",
+          "src": "/assets/words/kompyuter.webp",
+          "label": "компьютер",
+          "sha256": "256ddf5e743cb5bfdbb711ddf175b4767f8f08e767ed7d93bddfde03d2cbba4a",
+          "width": 1536,
+          "height": 1024,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/kompyuter.png",
+          "master_png_sha256": "132fc0c656b26c59400aa26b8cc8d966278c337c859601c4510680e945d811a6",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-032-sense",
+      "word_id": "ru-r-032",
+      "label": "корзина",
+      "meaning": "корзина",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-23",
+          "src": "/assets/words/korzina.webp",
+          "label": "корзина",
+          "sha256": "6b9505991e6722e73e23b0b8d4800dad75fa6d857c75aff7f3325ea58dccef68",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/korzina.png",
+          "master_png_sha256": "49ecfc1dfd6ace1ee347cbed9f6625c5a70f24114ebee317a7272ac81e01a22a",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-033-sense",
+      "word_id": "ru-r-033",
+      "label": "коробка",
+      "meaning": "коробка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-24",
+          "src": "/assets/words/korobka.webp",
+          "label": "коробка",
+          "sha256": "56dd698c56fb8555e68a3956c2753acb22c24868aa5d01ef1d897814aa6efdc7",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/korobka.png",
+          "master_png_sha256": "ee5a115856ffe7f2f7098cbe5d25697a487466379b7d629eef8ba8ec5a74c008",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-034-sense",
+      "word_id": "ru-r-034",
+      "label": "корова",
+      "meaning": "корова",
+      "topic": "Животные",
+      "subcategory": "Домашние",
+      "variants": [
+        {
+          "id": "approved-25",
+          "src": "/assets/words/korova.webp",
+          "label": "корова",
+          "sha256": "a37746ad052fe7f3900b7b3582335e07a54de054b445809e2e58bc90334027a5",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/korova.png",
+          "master_png_sha256": "cd89c479aec5628d062707564c27587f6f6675b57e633a46b624377fbe7fafbf",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-036-sense",
+      "word_id": "ru-r-036",
+      "label": "корона",
+      "meaning": "корона",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-26",
+          "src": "/assets/words/korona.webp",
+          "label": "корона",
+          "sha256": "2e1ff8d10824e272c6b4ae52e1ed2f96db6119d6afab0601a402fd620986a18a",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/korona.png",
+          "master_png_sha256": "b694637d350136dd784849699fdf3adda2f84108b8bdb112c60ce03710d5edbb",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-038-sense",
+      "word_id": "ru-r-038",
+      "label": "краб",
+      "meaning": "краб",
+      "topic": "Подводные жители",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-27",
+          "src": "/assets/words/krab.webp",
+          "label": "краб",
+          "sha256": "2028f8ba4b61242437f8131b7878944b25b703fc70ff7f52288febe5fabe2d50",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/krab.png",
+          "master_png_sha256": "b634f6829457cb5ba4947c57830b33d4949f0e63a9bcc174a6a3920332aa32d1",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-039-water",
+      "word_id": "ru-new-20261102-0320",
+      "label": "кран",
+      "meaning": "водопроводный кран",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-28",
+          "src": "/assets/words/kran-vodoprovodnyy.webp",
+          "label": "кран (водопроводный)",
+          "sha256": "4c611682a655b0a4e536824b3c5bf3be794e294cfb24fa19c22d018e107da367",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/kran-vodoprovodnyy.png",
+          "master_png_sha256": "1d59536b6f7ac216061016d98595bc8bc7425b0887b4048a329147fe40de4d75",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-039-construction",
+      "word_id": "ru-r-039",
+      "label": "кран",
+      "meaning": "строительный кран",
+      "topic": "Транспорт",
+      "subcategory": "Специальный",
+      "variants": [
+        {
+          "id": "approved-28b",
+          "src": "/assets/words/kran-stroitelnyy.webp",
+          "label": "кран (строительный)",
+          "sha256": "b77c09daea9ad5ca58773f48fe466550b179d72d61568211b2814a58fe3d21cb",
+          "width": 1312,
+          "height": 1199,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/kran-stroitelnyy.png",
+          "master_png_sha256": "25a8f343225cf6a8d24668e8c7deb8872e486723e11020433a7b61e2ca58003a",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-040-sense",
+      "word_id": "ru-r-040",
+      "label": "краски",
+      "meaning": "краски",
+      "topic": "Школьные принадлежности",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-29",
+          "src": "/assets/words/kraski.webp",
+          "label": "краски",
+          "sha256": "b5390410eed66d976567ddb77736092bdf148453213e86288fda994778ebc026",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/kraski.png",
+          "master_png_sha256": "ed38a3876e36d1f7a70249895a41f55c48634c534aa37b305f65fcefadc87334",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0bad180d0bed0b2d0b0d182d18c-sense",
+      "word_id": "ru-r-add-d0bad180d0bed0b2d0b0d182d18c",
+      "label": "кровать",
+      "meaning": "кровать",
+      "topic": "Мебель",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-30",
+          "src": "/assets/words/krovat.webp",
+          "label": "кровать",
+          "sha256": "be3f715d783659860a6a0c7fa8446f3e8563ba5479a325509398c47f647b9317",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/krovat.png",
+          "master_png_sha256": "3bb85787239cb713186f035683cedcfed03ec259a6a5ac391115ccdd4aad6913",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-041-sense",
+      "word_id": "ru-r-041",
+      "label": "кролик",
+      "meaning": "кролик",
+      "topic": "Животные",
+      "subcategory": "Домашние",
+      "variants": [
+        {
+          "id": "approved-31",
+          "src": "/assets/words/krolik.webp",
+          "label": "кролик",
+          "sha256": "46a442708d7b5a454741253ef613955062340758d1eb6adbf9405e5740474e9c",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/krolik.png",
+          "master_png_sha256": "c8e4b7b18f2a6f166a19031ce79e7eeb9f5268e3e4ddf2a7d5e115f837c622e7",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-extra-003-sense",
+      "word_id": "ru-r-extra-003",
+      "label": "крот",
+      "meaning": "крот",
+      "topic": "Животные",
+      "subcategory": "Лесные",
+      "variants": [
+        {
+          "id": "approved-32",
+          "src": "/assets/words/krot.webp",
+          "label": "крот",
+          "sha256": "f515a5b37d733312f7b6c97de1896569fbae13bc92ee4a526a70712793c52589",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/krot.png",
+          "master_png_sha256": "92dcee1f54306d2b84d2e88b6ab25cda94c12731f55fcea276151d60cb8256f5",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-043-sense",
+      "word_id": "ru-r-043",
+      "label": "кружка",
+      "meaning": "кружка",
+      "topic": "Посуда",
+      "subcategory": "Чайная",
+      "variants": [
+        {
+          "id": "approved-33",
+          "src": "/assets/words/kruzhka.webp",
+          "label": "кружка",
+          "sha256": "142ef2a7e1f759d1b863e8a9a6c0d37893ab6d9a5bf08196ca1447b7d2b00558",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/kruzhka.png",
+          "master_png_sha256": "21580af0813cd79dd4813f102bc37787a93b3cc2e929bc757d137e28784cd0a5",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-044-sense",
+      "word_id": "ru-r-044",
+      "label": "кукуруза",
+      "meaning": "кукуруза",
+      "topic": "Овощи",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-34",
+          "src": "/assets/words/kukuruza.webp",
+          "label": "кукуруза",
+          "sha256": "8262303e9bbc47ade7e509f1f59325a2fdf73578f18f383de44634af6c6833c3",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/kukuruza.png",
+          "master_png_sha256": "0b7216158a4b6ef18de52ca40b21e6b7565fa8e6afa0ab18b4bf1fa26aad36a5",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-045-sense",
+      "word_id": "ru-r-045",
+      "label": "куртка",
+      "meaning": "куртка",
+      "topic": "Одежда",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-35",
+          "src": "/assets/words/kurtka.webp",
+          "label": "куртка",
+          "sha256": "d9dbf267a89efa0372e8bf3cd8fe993ddd7fe089036369f9da6a0fd628883fb5",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/kurtka.png",
+          "master_png_sha256": "389d0f9be0a5f48d1ef88b2832d9a5c5cd9d52bcb8cbb14bc89a1098c4d79e19",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-046-sense",
+      "word_id": "ru-r-046",
+      "label": "морковь",
+      "meaning": "морковь",
+      "topic": "Овощи",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-36",
+          "src": "/assets/words/morkov.webp",
+          "label": "морковь",
+          "sha256": "a10e99e5a9a18b4eb69e6fde0d559d99489045ebe5c6251afdc2b93e887dfb44",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/morkov.png",
+          "master_png_sha256": "0d8d50d46850b0486e3ab84fce3b713f007b6dfebb79fa34bd6419b4a005afba",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-047-sense",
+      "word_id": "ru-r-047",
+      "label": "мороженое",
+      "meaning": "мороженое",
+      "topic": "Продукты",
+      "subcategory": "Сладости",
+      "variants": [
+        {
+          "id": "approved-37",
+          "src": "/assets/words/morozhenoe.webp",
+          "label": "мороженое",
+          "sha256": "fdba43960017b6157a132e168f63a9fd9eda2170b416a278770c3474f6fe600b",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/morozhenoe.png",
+          "master_png_sha256": "2ff504fd1d3775b51f23463092318a24c8d10ed37b5b7fe8c55abe9c29aaa68b",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-048-sense",
+      "word_id": "ru-r-048",
+      "label": "муравей",
+      "meaning": "муравей",
+      "topic": "Насекомые",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-38",
+          "src": "/assets/words/muravey.webp",
+          "label": "муравей",
+          "sha256": "2c19c55a563d1a27127258756930970cb26af16e54ac040fec8e2edbae0be8d0",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/muravey.png",
+          "master_png_sha256": "87c7210024271ed61c02256ae0b7cdde3b2e9e820c663578072994035772ea84",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-extra-001-sense",
+      "word_id": "ru-r-extra-001",
+      "label": "мухомор",
+      "meaning": "мухомор",
+      "topic": "Грибы",
+      "subcategory": "Ядовитые",
+      "variants": [
+        {
+          "id": "approved-39",
+          "src": "/assets/words/mukhomor.webp",
+          "label": "мухомор",
+          "sha256": "425cad1f5dc469e3265faf2a8e1f4d19d04fa012d7c567c87ee85f5a0da2a0ce",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/mukhomor.png",
+          "master_png_sha256": "c1aaaef2f74e18cebaae62cee1a73a6994a542721e2d6984ba7b98c12a9b2a85",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-051-sense",
+      "word_id": "ru-r-051",
+      "label": "озеро",
+      "meaning": "озеро",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-40",
+          "src": "/assets/words/ozero.webp",
+          "label": "озеро",
+          "sha256": "0e04904c812647540b6919ad49d0dbdfc48cea803af61f858fea1e0d242fe123",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/ozero.png",
+          "master_png_sha256": "7b498491891c8b16e9dc063e42b5002d02fb06be7b4e4dc7de2e97954a63df23",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-052-sense",
+      "word_id": "ru-r-052",
+      "label": "персик",
+      "meaning": "персик",
+      "topic": "Фрукты",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-41",
+          "src": "/assets/words/persik.webp",
+          "label": "персик",
+          "sha256": "5f9cc39f2772b0865c338559e086f480c592f25fcfb6082859228da6d9c18d97",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/persik.png",
+          "master_png_sha256": "137ebc1bfc3b0a9af54b1242f652385fd25247d67199817c1708190f2af37778",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0bfd0b8d180d0bed0b3-sense",
+      "word_id": "ru-r-add-d0bfd0b8d180d0bed0b3",
+      "label": "пирог",
+      "meaning": "пирог",
+      "topic": "Продукты",
+      "subcategory": "Выпечка",
+      "variants": [
+        {
+          "id": "approved-42",
+          "src": "/assets/words/pirog.webp",
+          "label": "пирог",
+          "sha256": "6abb4aaffa1f4a9efb9b847fe5b1e1a1c38c6a1f606c05d82cc539da57abb4fa",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/pirog.png",
+          "master_png_sha256": "60aa4e16012fb0cae136cd55709acb788c312e54a8d7967d355fb7bd0b5cc431",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-053-sense",
+      "word_id": "ru-r-053",
+      "label": "повар",
+      "meaning": "повар",
+      "topic": "Профессии",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-43",
+          "src": "/assets/words/povar.webp",
+          "label": "повар",
+          "sha256": "dbe282457bc555a6eac232502c6eb6be143da344cb964385f15816fc49be6de9",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/povar.png",
+          "master_png_sha256": "09b532f88f486e545cdd7339f9d47d9242b19623f5a32e759c79a7143b2c3960",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-054-sense",
+      "word_id": "ru-r-054",
+      "label": "подарок",
+      "meaning": "подарок",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-44",
+          "src": "/assets/words/podarok.webp",
+          "label": "подарок",
+          "sha256": "c8b8027ca0f68ffecb66195552e1e02c707b36fb570517f25e9c11fd26af6a08",
+          "width": 1536,
+          "height": 1024,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/podarok.png",
+          "master_png_sha256": "88dc1c2dfee37a7139f9c41195c3f6c58346b104df63d295c7411e836ba1952d",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-055-sense",
+      "word_id": "ru-r-055",
+      "label": "помидор",
+      "meaning": "помидор",
+      "topic": "Овощи",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-45",
+          "src": "/assets/words/pomidor.webp",
+          "label": "помидор",
+          "sha256": "92422f3def96fb591fd7c069d2228444d5eff8ed6622286aa29f2a3edbbeecb1",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/pomidor.png",
+          "master_png_sha256": "a3addaf540874157c781572036fccb3a8fa9d820acf6969d38acbaed90592d14",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-058-sense",
+      "word_id": "ru-r-058",
+      "label": "радуга",
+      "meaning": "радуга",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-46",
+          "src": "/assets/words/raduga.webp",
+          "label": "радуга",
+          "sha256": "135bff1f37fadb9cd9dd8d032f51af0dd9a80af2fd89fd0f71d88eeb07773de4",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/raduga.png",
+          "master_png_sha256": "d46df542d4a2135ec688ca81d2117b3224ce3f8a6145f296993dc804be498ab1",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-059-sense",
+      "word_id": "ru-r-059",
+      "label": "рак",
+      "meaning": "рак",
+      "topic": "Подводные жители",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-47",
+          "src": "/assets/words/rak.webp",
+          "label": "рак",
+          "sha256": "d5108891443507cae039addd61912951765b42f70bda9960275c025ddc793a93",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/rak.png",
+          "master_png_sha256": "5e3944b7089306f3c2842c56654f51be12640d291d7f45470f6f160c2dbc9d5e",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-060-sense",
+      "word_id": "ru-r-060",
+      "label": "ракета",
+      "meaning": "ракета",
+      "topic": "Космос",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-48",
+          "src": "/assets/words/raketa.webp",
+          "label": "ракета",
+          "sha256": "c39edcde8f1a905824cc380507c24eb3dc631c959eab756a745d3b4fb11c033a",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/raketa.png",
+          "master_png_sha256": "ebef4f521509383132f8a5bde7b8cd547d5a2fab4375bd0ce04f5bf05f03a0ff",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-062-sense",
+      "word_id": "ru-r-062",
+      "label": "ракушка",
+      "meaning": "ракушка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-49",
+          "src": "/assets/words/rakushka.webp",
+          "label": "ракушка",
+          "sha256": "68e31ec1c4b9db6592533e081a9dc9576d0db60d9314b42cf6b43d8facd1fe13",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/rakushka.png",
+          "master_png_sha256": "7fedcba26f1d7d1f8d26426c069105e9d84c7b057d6564650d7631cf1be65a2e",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-064-sense",
+      "word_id": "ru-r-064",
+      "label": "расчёска",
+      "meaning": "расчёска",
+      "topic": "Предметы гигиены",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-50",
+          "src": "/assets/words/raschyoska.webp",
+          "label": "расчёска",
+          "sha256": "b81a18b7260e5d071f21a3681984179b9cd56d5d27fdf692e70e0ce755801ac5",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/raschyoska.png",
+          "master_png_sha256": "e228b0c8891ffd7fe11488c0edf864d3ff776dae1adf6d8e7162e2de8d728c3b",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-065-sense",
+      "word_id": "ru-r-065",
+      "label": "робот",
+      "meaning": "робот",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-51",
+          "src": "/assets/words/robot.webp",
+          "label": "робот",
+          "sha256": "4109a6a367e9d465b869028cb1c683c31c3e8f73b874157a22c7c0aa76ff0cd2",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/robot.png",
+          "master_png_sha256": "4776a14e311590969f026266ee2bf00be53954ae40658f6c3f88b813c53aa058",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-066-sense",
+      "word_id": "ru-r-066",
+      "label": "роза",
+      "meaning": "роза",
+      "topic": "Цветы",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-52",
+          "src": "/assets/words/roza.webp",
+          "label": "роза",
+          "sha256": "99b8da14145a7def2091b9337876c9fc6177f7290e3eb46751bf065a382b4ef1",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/roza.png",
+          "master_png_sha256": "20d384e202c3e63c2857440166ae70c8aa12f330559428a59944846924db8d95",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d180d0bed0bcd0b0d188d0bad0b0-sense",
+      "word_id": "ru-r-add-d180d0bed0bcd0b0d188d0bad0b0",
+      "label": "ромашка",
+      "meaning": "ромашка",
+      "topic": "Цветы",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-53",
+          "src": "/assets/words/romashka.webp",
+          "label": "ромашка",
+          "sha256": "76ae9b9774c3cf459448c76aa4c456c18118e0f7a875c406a926beec4416808f",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/romashka.png",
+          "master_png_sha256": "48ff79b469ad951e3f4d010be8df8065e34fb2120abff254508a407c0bcfc7d3",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-067-sense",
+      "word_id": "ru-r-067",
+      "label": "рубашка",
+      "meaning": "рубашка",
+      "topic": "Одежда",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-54",
+          "src": "/assets/words/rubashka.webp",
+          "label": "рубашка",
+          "sha256": "0d7f8628e17c2c8ef70fee6ceed5982ed0b0c1584fcca9b7baad731c7d364189",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": "В описании архива отмечена остаточная полупрозрачная подложка; требуется визуальная проверка.",
+          "master_png_src": "/assets/words/rubashka.png",
+          "master_png_sha256": "07f7aa26669678b52aabff86d3a242177392a64c5d0c1e42e381c1311ad1154a",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-068-sense",
+      "word_id": "ru-r-068",
+      "label": "рука",
+      "meaning": "рука",
+      "topic": "Части тела",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-55",
+          "src": "/assets/words/ruka.webp",
+          "label": "рука",
+          "sha256": "8d72371f419b5252a3620b9f5c6933ef86101f7c9c98d228c5740d73df1fdd18",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/ruka.png",
+          "master_png_sha256": "e95b22bbbea4641e7cb44ccea9952d04bf3c236832084a86704ccd030120fcf2",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-069-sense",
+      "word_id": "ru-r-069",
+      "label": "руль",
+      "meaning": "руль",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-56",
+          "src": "/assets/words/rul.webp",
+          "label": "руль",
+          "sha256": "abbf2e0deea1d15730f495d8d1a2ea95036095f8a193355e4ecc61e41e77c18d",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/rul.png",
+          "master_png_sha256": "40b1bc3339ded54db46f9b1c7e92afdb23baa6ccf220472d789dcf899cb88b7b",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-071-sense",
+      "word_id": "ru-r-071",
+      "label": "рыба",
+      "meaning": "рыба",
+      "topic": "Рыбы",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-57",
+          "src": "/assets/words/ryba.webp",
+          "label": "рыба",
+          "sha256": "f7d0f65f535631c2cc67b8bf99da24dd5f6591d920324207a80aa921a10b5f60",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/ryba.png",
+          "master_png_sha256": "c16304c15fc483ff4de346c56b4979483719d2423c6f2ca72122c61141814c19",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-075-sense",
+      "word_id": "ru-r-075",
+      "label": "светофор",
+      "meaning": "светофор",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-58",
+          "src": "/assets/words/svetofor.webp",
+          "label": "светофор",
+          "sha256": "b13716ac595a8e7c961a76368ef3a159335680cb23ced99d2ea53e13a86ba394",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/svetofor.png",
+          "master_png_sha256": "25ed6b2a20e125e98e99d48ea2a75c4a12d2ce55fbde4bed1021a5809296fd0f",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-076-sense",
+      "word_id": "ru-r-076",
+      "label": "свитер",
+      "meaning": "свитер",
+      "topic": "Одежда",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-59",
+          "src": "/assets/words/sviter.webp",
+          "label": "свитер",
+          "sha256": "804352f39d729293824cdc41c5464b87ff1b26f86dbe3b806620a5f16a8d4dfc",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/sviter.png",
+          "master_png_sha256": "0444972f20bc17952016080aa7b11583cb416ecc90735e87aa287de73a01b608",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-077-sense",
+      "word_id": "ru-r-077",
+      "label": "сковорода",
+      "meaning": "сковорода",
+      "topic": "Посуда",
+      "subcategory": "Для приготовления",
+      "variants": [
+        {
+          "id": "approved-60",
+          "src": "/assets/words/skovoroda.webp",
+          "label": "сковорода",
+          "sha256": "015cf9a09730c7dcbd1ba796aadf8ba75fcc5d34de2f12e47a770a86a7dd6a14",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/skovoroda.png",
+          "master_png_sha256": "f852f4a2f55b298fd21a3e8384a0878144fb84d6cfe2038a3ac636f79ad87bca",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-079-sense",
+      "word_id": "ru-r-079",
+      "label": "сыр",
+      "meaning": "сыр",
+      "topic": "Продукты",
+      "subcategory": "Молочные",
+      "variants": [
+        {
+          "id": "approved-61",
+          "src": "/assets/words/syr.webp",
+          "label": "сыр",
+          "sha256": "f33ddcdc2078eb87ef152d910d57293d6a8626e46a9a01157fbf554514e3c28b",
+          "width": 1254,
+          "height": 1254,
+          "depiction": "default",
+          "review_note": null,
+          "master_png_src": "/assets/words/syr.png",
+          "master_png_sha256": "e58a6206033e04b72496266d5bbe1186d90e39fd85b5c6c0b80a70a410fd870f",
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-070-sense",
+      "word_id": "ru-r-070",
+      "label": "ручка",
+      "meaning": "письменная ручка",
+      "topic": "Школьные принадлежности",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-062_ruchka.png",
+          "src": "/assets/words/ruchka.webp",
+          "master_png_src": "/assets/words/ruchka.png",
+          "sha256": "0b324502a479efe9b1ee147899d16a5ea46b3e71cd3b0159e40f39a90296c6c0",
+          "format": "webp",
+          "master_png_sha256": "cccc46c0f9900f33422ec60db1a0b979820dd7a0f0ef746dbdbf161665802033"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-080-sense",
+      "word_id": "ru-r-080",
+      "label": "телевизор",
+      "meaning": "телевизор",
+      "topic": "Бытовая техника",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-063_televizor.png",
+          "src": "/assets/words/televizor.webp",
+          "master_png_src": "/assets/words/televizor.png",
+          "sha256": "2840a159cfb301fd9b668d5a6583563447ecda995944303afed804648790b861",
+          "format": "webp",
+          "master_png_sha256": "a0c25e1b493bc8700e6b43c5cfe20f1166bbf1388c8c7ae3b4adf085de8f06fe"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-081-sense",
+      "word_id": "ru-r-081",
+      "label": "тигр",
+      "meaning": "тигр",
+      "topic": "Животные",
+      "subcategory": "Жарких стран",
+      "variants": [
+        {
+          "id": "pack02-064_tigr.png",
+          "src": "/assets/words/tigr.webp",
+          "master_png_src": "/assets/words/tigr.png",
+          "sha256": "629b44a6f804b5a3deff20c5448b8236191836e616e7cd6f2810a12a96abd504",
+          "format": "webp",
+          "master_png_sha256": "0a9e81e9feec9b1c54d892bfb8b4b685b3615af87d75bd6b36e70f9464b2f03b"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-083-sense",
+      "word_id": "ru-r-083",
+      "label": "торт",
+      "meaning": "торт",
+      "topic": "Продукты",
+      "subcategory": "Сладости",
+      "variants": [
+        {
+          "id": "pack02-065_tort.png",
+          "src": "/assets/words/tort.webp",
+          "master_png_src": "/assets/words/tort.png",
+          "sha256": "e73a9f4af8ba3199ecd2cde009f36900fe832e6eb91d5c098c30c8d3cecffce4",
+          "format": "webp",
+          "master_png_sha256": "0697b2d28708a4e7424d18609e4d9bf40af72b94d2d3b75cb402bde6aa6c6253"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-084-sense",
+      "word_id": "ru-r-084",
+      "label": "трава",
+      "meaning": "трава",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-066_trava.png",
+          "src": "/assets/words/trava.webp",
+          "master_png_src": "/assets/words/trava.png",
+          "sha256": "ec856c9a74d5c4c5675d5029e42ddc75e00eff0d8e15ef9824b6067552b32260",
+          "format": "webp",
+          "master_png_sha256": "87b341fa170e0047f5bc48f27880c294694268a02364f307cd024adf27eda433"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-085-sense",
+      "word_id": "ru-r-085",
+      "label": "трактор",
+      "meaning": "трактор",
+      "topic": "Транспорт",
+      "subcategory": "Специальный",
+      "variants": [
+        {
+          "id": "pack02-067_traktor.png",
+          "src": "/assets/words/traktor.webp",
+          "master_png_src": "/assets/words/traktor.png",
+          "sha256": "c21672cb172efdca8b30fa3d83b4b3099eadfa22f7e1170bff85d4d239e6cae2",
+          "format": "webp",
+          "master_png_sha256": "b94c9edc2347a65de5d5794fc750ab2585a3c928826c54b8fa596ef156cb2412"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-086-sense",
+      "word_id": "ru-r-086",
+      "label": "трамвай",
+      "meaning": "трамвай",
+      "topic": "Транспорт",
+      "subcategory": "Общественный",
+      "variants": [
+        {
+          "id": "pack02-068_tramvay.png",
+          "src": "/assets/words/tramvay.webp",
+          "master_png_src": "/assets/words/tramvay.png",
+          "sha256": "0b49f42315619ac200f555235c93c3a2ab4a2a35bf6a26a3082909d3b0a8e883",
+          "format": "webp",
+          "master_png_sha256": "7bcfe4dfe9b972c4ac91bad874f9421f478d02449122c30762d6c4d0a222d2d7"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-009-sense",
+      "word_id": "ru-r-009",
+      "label": "шар",
+      "meaning": "воздушный шар для полёта",
+      "topic": "Транспорт",
+      "subcategory": "Воздушный",
+      "variants": [
+        {
+          "id": "pack02-069_shar.png",
+          "src": "/assets/words/shar-vozdushnyy.webp",
+          "master_png_src": "/assets/words/shar-vozdushnyy.png",
+          "sha256": "289c867a6f7221ba721efa9ca5ecb9bb07af2e4a5a13c47bb0a14b5a850a24cd",
+          "format": "webp",
+          "master_png_sha256": "5d59db73e4c2a1e0873722b94d95505bba8efaaa4624131b10d73a371016d4dd"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-094-sense",
+      "word_id": "ru-r-094",
+      "label": "шарф",
+      "meaning": "шарф",
+      "topic": "Одежда",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-070_sharf.png",
+          "src": "/assets/words/sharf.webp",
+          "master_png_src": "/assets/words/sharf.png",
+          "sha256": "e58d3d6ed762f1eb053ba3e60e7ec42c4be3a52f63da764875cd50433cd4e82c",
+          "format": "webp",
+          "master_png_sha256": "4e11e6d74ce2f28f50c999e6053adf989c2a6c3f3eaa16636e9eecface6acfa9"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d188d0bed180d182d18b-sense",
+      "word_id": "ru-r-add-d188d0bed180d182d18b",
+      "label": "шорты",
+      "meaning": "шорты",
+      "topic": "Одежда",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-071_shorty.png",
+          "src": "/assets/words/shorty.webp",
+          "master_png_src": "/assets/words/shorty.png",
+          "sha256": "3c947977b5941185e3efbb9eb65ac0001047e0f86840b70391e356c92dc29af8",
+          "format": "webp",
+          "master_png_sha256": "df313c819025b8754fb404b371372995b8362ffc033446bc272392a96c63e495"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-extra-002-sense",
+      "word_id": "ru-r-extra-002",
+      "label": "бобёр",
+      "meaning": "бобёр",
+      "topic": "Животные",
+      "subcategory": "Лесные",
+      "variants": [
+        {
+          "id": "pack02-073_bober.png",
+          "src": "/assets/words/bober.webp",
+          "master_png_src": "/assets/words/bober.png",
+          "sha256": "1222622c14d03bcb8308cd6a68acef86485426f4d3da1be6acb6cd04a540f44d",
+          "format": "webp",
+          "master_png_sha256": "73eeac9189ffe7cddb8259d5e686c9d6ffa1d43d203ea67b4eb3b1304249a9d9"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0b1d0bed180d0bed0b4d0b0-sense",
+      "word_id": "ru-r-add-d0b1d0bed180d0bed0b4d0b0",
+      "label": "борода",
+      "meaning": "борода",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-074_boroda.png",
+          "src": "/assets/words/boroda.webp",
+          "master_png_src": "/assets/words/boroda.png",
+          "sha256": "1079cd976acedade4efaa2ba986a1a469bcd2c281af911ba288e7ae45702081f",
+          "format": "webp",
+          "master_png_sha256": "ede37066b8ec6085328ef709c5c7ef63db8a8b95dc6dd7b9c1286fe86988aa1a"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0b1d180d0b0d181d0bbd0b5d182-sense",
+      "word_id": "ru-r-add-d0b1d180d0b0d181d0bbd0b5d182",
+      "label": "браслет",
+      "meaning": "браслет",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-075_braslet.png",
+          "src": "/assets/words/braslet.webp",
+          "master_png_src": "/assets/words/braslet.png",
+          "sha256": "0f9714af70f1b8513dd9eacebff1c74c7fc2cecc7f4c05cf3ae017b647e0fdbe",
+          "format": "webp",
+          "master_png_sha256": "12457aea31cae35ac972de5ac4e5883c7318c4994722ca389cd0f4deaf23a741"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-007-sense",
+      "word_id": "ru-r-007",
+      "label": "веер",
+      "meaning": "веер",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-076_veer.png",
+          "src": "/assets/words/veer.webp",
+          "master_png_src": "/assets/words/veer.png",
+          "sha256": "b13edfaee1adf41d3e97b2fbd33849423ba14904130d1daa013afde773d4b025",
+          "format": "webp",
+          "master_png_sha256": "891c0f3aec07dc0e0ce49ccf0263e0345baef09abbebb0d2a7caaf33cb6f9d83"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0b2d0bed0b4d0bed180d0bed181d0bbd0b8-sense",
+      "word_id": "ru-r-add-d0b2d0bed0b4d0bed180d0bed181d0bbd0b8",
+      "label": "водоросли",
+      "meaning": "водоросли",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-077_vodorosli.png",
+          "src": "/assets/words/vodorosli.webp",
+          "master_png_src": "/assets/words/vodorosli.png",
+          "sha256": "0971693cf6c481abf33d30cf805ef02948807da2928fc0eb02258ca3e5f0e568",
+          "format": "webp",
+          "master_png_sha256": "fa3357b7f71bbb5583762c565becae1bffdd74b3e98e45e514aa46ab74000d1a"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-extra-016-sense",
+      "word_id": "ru-r-extra-016",
+      "label": "ворота",
+      "meaning": "ворота",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-078_vorota.png",
+          "src": "/assets/words/vorota.webp",
+          "master_png_src": "/assets/words/vorota.png",
+          "sha256": "2106579b09ac971d943e4dbc2b7c0df403f0216eca65c1f70a91117a60fc8d2f",
+          "format": "webp",
+          "master_png_sha256": "f17cc9b2acf5068ae3d271e938906d66405a03c8723ca927e5ccf0bca2805f69"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-011-sense",
+      "word_id": "ru-r-011",
+      "label": "гамбургер",
+      "meaning": "гамбургер",
+      "topic": "Продукты",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-079_gamburger.png",
+          "src": "/assets/words/gamburger.webp",
+          "master_png_src": "/assets/words/gamburger.png",
+          "sha256": "8352e480a10a075fde613a91908e231a66ba1c8ac929b021ad5b0623b7129831",
+          "format": "webp",
+          "master_png_sha256": "73ac1deeee8a06c1bc5ed9d4651f232105e6aa44f7fea21d917e6dbb9b9d27f5"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0b3d0b8d180d0bbd18fd0bdd0b4d0b0-sense",
+      "word_id": "ru-r-add-d0b3d0b8d180d0bbd18fd0bdd0b4d0b0",
+      "label": "гирлянда",
+      "meaning": "гирлянда",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-080_girlyanda.png",
+          "src": "/assets/words/girlyanda.webp",
+          "master_png_src": "/assets/words/girlyanda.png",
+          "sha256": "900f35c980206fc9274bca882ed37e71036a55e084c901b0b3af6b315a146fe0",
+          "format": "webp",
+          "master_png_sha256": "9b5988b32af7aa129c2e8a918cd3ac9673ae28d1114b9c70828ba65b17876208"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-012-sense",
+      "word_id": "ru-r-012",
+      "label": "гитара",
+      "meaning": "гитара",
+      "topic": "Музыкальные инструменты",
+      "subcategory": "Струнные",
+      "variants": [
+        {
+          "id": "pack02-081_gitara.png",
+          "src": "/assets/words/gitara.webp",
+          "master_png_src": "/assets/words/gitara.png",
+          "sha256": "e020bbb21ea7e45da9a2932787bc5bcce3dcd74b427b3900e22c82c8e4e5e920",
+          "format": "webp",
+          "master_png_sha256": "77539f83e9ebfcca8f96ba37cd63b03aa2a7ad28fbc4d1070a360cae8749ca56"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-extra-030-sense",
+      "word_id": "ru-r-extra-030",
+      "label": "горшок",
+      "meaning": "горшок",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-082_gorshok.png",
+          "src": "/assets/words/gorshok.webp",
+          "master_png_src": "/assets/words/gorshok.png",
+          "sha256": "8253424d4ac4f8b103eca43d0c7b738b1d9cdd446c1561647368b3d0360aecad",
+          "format": "webp",
+          "master_png_sha256": "bee6a72b30da9ec35c33229d9fa057d70fb10d3ac5773e83be87ef6a77c212d0"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-extra-026-sense",
+      "word_id": "ru-r-extra-026",
+      "label": "гранат",
+      "meaning": "гранат",
+      "topic": "Фрукты",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-083_granat.png",
+          "src": "/assets/words/granat.webp",
+          "master_png_src": "/assets/words/granat.png",
+          "sha256": "a029712e6af3712f5afade3351117f284529425ec550c885f1c652889c171940",
+          "format": "webp",
+          "master_png_sha256": "07ecc96d4ef11344db1b31e11cfa8b6412737d9560ca8b2ee265f3ad6c3cc57b"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-extra-031-sense",
+      "word_id": "ru-r-extra-031",
+      "label": "дракон",
+      "meaning": "дракон",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-084_drakon.png",
+          "src": "/assets/words/drakon.webp",
+          "master_png_src": "/assets/words/drakon.png",
+          "sha256": "0fc1169de2dbfeeb9714bf29956b1bee635d5c88f51cd70d73b9303bfd3fec98",
+          "format": "webp",
+          "master_png_sha256": "3536c2ff86e867971a5257a5ab3b34f89ca0b4e260f8253cb285011f997a4d81"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0b4d180d0bed0b2d0b0-sense",
+      "word_id": "ru-r-add-d0b4d180d0bed0b2d0b0",
+      "label": "дрова",
+      "meaning": "дрова",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-085_drova.png",
+          "src": "/assets/words/drova.webp",
+          "master_png_src": "/assets/words/drova.png",
+          "sha256": "18486b646153249a1c89e6ae8770557246b80ce5ae6460910a0f26774b2e1578",
+          "format": "webp",
+          "master_png_sha256": "a3854b612c13a5eb871ffa3d1a7fa75ac5017cd51ff1eb41b764c7095e2bc366"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-018-sense",
+      "word_id": "ru-r-018",
+      "label": "единорог",
+      "meaning": "единорог",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-086_edinorog.png",
+          "src": "/assets/words/edinorog.webp",
+          "master_png_src": "/assets/words/edinorog.png",
+          "sha256": "b1e0f6f68395d4f0f83e41c6668372b66658a8718ed2a06196e89d17020c51de",
+          "format": "webp",
+          "master_png_sha256": "3e4d0f4bb290de18e5e3a86aa6316152947a612d5fea2f81e900cb8365613d51"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0b6d183d180d0bdd0b0d0bb-sense",
+      "word_id": "ru-r-add-d0b6d183d180d0bdd0b0d0bb",
+      "label": "журнал",
+      "meaning": "журнал",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-087_zhurnal.png",
+          "src": "/assets/words/zhurnal.webp",
+          "master_png_src": "/assets/words/zhurnal.png",
+          "sha256": "47533f6d1223aac4d5193724c2c92cf11c0dd3de798f096da1e3fd9516b16b51",
+          "format": "webp",
+          "master_png_sha256": "b9b6e1e88282028eaaed3d8853a41a3b268ecb452981e39448cbb3240db7a103"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-022-sense",
+      "word_id": "ru-r-022",
+      "label": "зефир",
+      "meaning": "зефир",
+      "topic": "Продукты",
+      "subcategory": "Сладости",
+      "variants": [
+        {
+          "id": "pack02-088_zefir.png",
+          "src": "/assets/words/zefir.webp",
+          "master_png_src": "/assets/words/zefir.png",
+          "sha256": "3f39f7e0d6ffbced649fc96733ed687165e614714c10d93e6f77ac37f97bebe8",
+          "format": "webp",
+          "master_png_sha256": "1d2960e4012727f10474461d368fe5626f95078027767dde401627beaa506341"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0b8d0b3d180d0b0-sense",
+      "word_id": "ru-r-add-d0b8d0b3d180d0b0",
+      "label": "игра",
+      "meaning": "игра",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-089_igra.png",
+          "src": "/assets/words/igra.webp",
+          "master_png_src": "/assets/words/igra.png",
+          "sha256": "667c148116f3f1e52312e0c9370a470b4ed46ddc6ea4242cc3090a989fe29716",
+          "format": "webp",
+          "master_png_sha256": "4aefa9838185ff0041ea53edb6db4c9e2790435465c8aeeaff4c20012c6e7632"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-024-sense",
+      "word_id": "ru-r-024",
+      "label": "йогурт",
+      "meaning": "йогурт",
+      "topic": "Продукты",
+      "subcategory": "Молочные",
+      "variants": [
+        {
+          "id": "pack02-090_yogurt.png",
+          "src": "/assets/words/yogurt.webp",
+          "master_png_src": "/assets/words/yogurt.png",
+          "sha256": "23b97e95d59a586b569e849f805a3a8541ebc98a1bc5b49fa4ac2acc34b113e1",
+          "format": "webp",
+          "master_png_sha256": "aea5d91a51ae5abfc65ee66540d2e788a94dc7d3e5f822b0789143534224c891"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0bad0b0d180d182d0b8d0bdd0b0-sense",
+      "word_id": "ru-r-add-d0bad0b0d180d182d0b8d0bdd0b0",
+      "label": "картина",
+      "meaning": "картина",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-091_kartina.png",
+          "src": "/assets/words/kartina.webp",
+          "master_png_src": "/assets/words/kartina.png",
+          "sha256": "722ecd6e52908fb267ff3dfb43fb37ec1a71c20ac6f9d5327ac35ce9591901da",
+          "format": "webp",
+          "master_png_sha256": "f8f26b9274286d12aea6918dd3f845f1481dc81eb0819ac74a63c75bfac38019"
+        }
+      ]
+    },
+    {
+      "id": "pack03-092_karusel",
+      "word_id": "ru-r-extra-032",
+      "label": "карусель",
+      "meaning": "карусель",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-092_karusel",
+          "src": "/assets/words/karusel.webp",
+          "sha256": "35f4f2081bb50764bb72122d9b548a000e9692841d000a78f37553f933c3e250",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-093_kenguru",
+      "word_id": "ru-r-028",
+      "label": "кенгуру",
+      "meaning": "кенгуру",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-093_kenguru",
+          "src": "/assets/words/kenguru.webp",
+          "sha256": "af8ab6a64fec1e7f4744b9eb5366f43cb317d4682082fc31dbee1962d958670f",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-094_korabl",
+      "word_id": "ru-r-add-d0bad0bed180d0b0d0b1d0bbd18c",
+      "label": "корабль",
+      "meaning": "корабль",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-094_korabl",
+          "src": "/assets/words/korabl.webp",
+          "sha256": "362e88a749a7aea0b12fddae58c815655fa5f62e122efab1710863d0e52b8769",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-095_koroleva",
+      "word_id": "ru-r-035",
+      "label": "королева",
+      "meaning": "королева",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-095_koroleva",
+          "src": "/assets/words/koroleva.webp",
+          "sha256": "64eea59d8d99f30ca9dbac44cf3451afc17301b99280e0d3f5996394673511a1",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-096_kostyor",
+      "word_id": "ru-r-037",
+      "label": "костёр",
+      "meaning": "костёр",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-096_kostyor",
+          "src": "/assets/words/kostyor.webp",
+          "sha256": "69d1969d5db33a9c096391e3c3b5099aa26cffe72af9d60d8236a99e7a57d477",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-097_krug",
+      "word_id": "ru-r-extra-018",
+      "label": "круг",
+      "meaning": "круг",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-097_krug",
+          "src": "/assets/words/krug.webp",
+          "sha256": "788803f180f7408790864c11d06b3adea0dd82b50e57efdaa8a9d66c26644e6b",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-098_krysha",
+      "word_id": "ru-r-extra-027",
+      "label": "крыша",
+      "meaning": "крыша",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-098_krysha",
+          "src": "/assets/words/krysha.webp",
+          "sha256": "47c49cf917748fbb96e1b4f766bada31a21ba89f484c9cf7be9d6e52e1503970",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-099_matros",
+      "word_id": "ru-r-add-d0bcd0b0d182d180d0bed181",
+      "label": "матрос",
+      "meaning": "матрос",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-099_matros",
+          "src": "/assets/words/matros.webp",
+          "sha256": "d57508b07065080e1f0a25c28b99fa829e368846b2c342172b3b4c1702bd76e9",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-100_metro",
+      "word_id": "ru-r-add-d0bcd0b5d182d180d0be",
+      "label": "метро",
+      "meaning": "метро",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-100_metro",
+          "src": "/assets/words/metro.webp",
+          "sha256": "bc37b70891424524291dc6a2899c3eefc91f84f0efa3a3fe4add5b065d050d4b",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-101_monstr",
+      "word_id": "ru-r-add-d0bcd0bed0bdd181d182d180",
+      "label": "монстр",
+      "meaning": "монстр",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-101_monstr",
+          "src": "/assets/words/monstr.webp",
+          "sha256": "d6e78ab3c878a5fc53d82cb6df55bbb019150c6e82c659fc01416450b1515878",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-102_nora",
+      "word_id": "ru-r-extra-005",
+      "label": "нора",
+      "meaning": "нора",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-102_nora",
+          "src": "/assets/words/nora.webp",
+          "sha256": "341c1ba972f9e3d1131ee8c4ccaccc1573bd9d9480d99c164038f6adcc2ffd20",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-103_nosorog",
+      "word_id": "ru-r-049",
+      "label": "носорог",
+      "meaning": "носорог",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-103_nosorog",
+          "src": "/assets/words/nosorog.webp",
+          "sha256": "d70eed7e8a87fed5c0cea3e343a4bf1c19b35c0c3bdc9f0b16bf311dd8bbd26e",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-104_ogorod",
+      "word_id": "ru-r-050",
+      "label": "огород",
+      "meaning": "огород",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-104_ogorod",
+          "src": "/assets/words/ogorod.webp",
+          "sha256": "1d57730170d8228e839d346dc2304ffb2289c78744aa6db0b911d902b19c37f2",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-105_par",
+      "word_id": "ru-r-add-d0bfd0b0d180",
+      "label": "пар",
+      "meaning": "пар",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-105_par",
+          "src": "/assets/words/par.webp",
+          "sha256": "3491617abd752144d30fbd345705d5ac83ce6b0724d4487c679c6c3dccafe9cd",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-106_parovoz",
+      "word_id": "ru-r-extra-011",
+      "label": "паровоз",
+      "meaning": "паровоз",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-106_parovoz",
+          "src": "/assets/words/parovoz.webp",
+          "sha256": "24736b90267be715bbda8a91b071d172d1a6455b6bdacce5ad5176ed80189b54",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-107_parus",
+      "word_id": "ru-r-extra-010",
+      "label": "парус",
+      "meaning": "парус",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-107_parus",
+          "src": "/assets/words/parus.webp",
+          "sha256": "cace73f6357009ad43c6cd69819e8c7e15b6ef49baee39bddc6f1bd8ad2a6230",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-108_pero",
+      "word_id": "ru-r-extra-033",
+      "label": "перо",
+      "meaning": "перо",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-108_pero",
+          "src": "/assets/words/pero.webp",
+          "sha256": "e8ecad456a211a3dfa1cf038ee30fd69984a973ff0aa0e2abb2b3e3ea1e8a050",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-109_peshchera",
+      "word_id": "ru-r-add-d0bfd0b5d189d0b5d180d0b0",
+      "label": "пещера",
+      "meaning": "пещера",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-109_peshchera",
+          "src": "/assets/words/peshchera.webp",
+          "sha256": "322c6e3c86fd34f1a19b609b41767941cb14cf70fe9c3cd5e767f2c6103f5e7f",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-110_pirat",
+      "word_id": "ru-r-add-d0bfd0b8d180d0b0d182",
+      "label": "пират",
+      "meaning": "пират",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-110_pirat",
+          "src": "/assets/words/pirat.webp",
+          "sha256": "3c2031987001f45de0dbcd74760283302e91742ab4f066081b0515c074fa395e",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-111_pirozhnoe",
+      "word_id": "ru-r-add-d0bfd0b8d180d0bed0b6d0bdd0bed0b5",
+      "label": "пирожное",
+      "meaning": "пирожное",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-111_pirozhnoe",
+          "src": "/assets/words/pirozhnoe.webp",
+          "sha256": "a5dad13f1547a4aabfc0ab5549ef47fa581228e5a827d5ef6d8eedab40871d80",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-112_pirozhok",
+      "word_id": "ru-r-add-d0bfd0b8d180d0bed0b6d0bed0ba",
+      "label": "пирожок",
+      "meaning": "пирожок",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-112_pirozhok",
+          "src": "/assets/words/pirozhok.webp",
+          "sha256": "637d1d32d2d0c618ff36a83e8b9d52bb24c3131ad95000cd867044253266752c",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-113_portfel",
+      "word_id": "ru-r-056",
+      "label": "портфель",
+      "meaning": "портфель",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-113_portfel",
+          "src": "/assets/words/portfel.webp",
+          "sha256": "b8c9fe0926d71b8ea0f4c6421c03fbf0aa111b5f5ee2c6b56628f6089128fa18",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-114_produkty",
+      "word_id": "ru-r-add-d0bfd180d0bed0b4d183d0bad182d18b",
+      "label": "продукты",
+      "meaning": "обобщённая группа продуктов питания",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-114_produkty",
+          "src": "/assets/words/produkty.webp",
+          "sha256": "a0311c372cada3ef4b3a06b5acc2995742725e07787ce93ba7d2e1f6d2aac2e9",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-115_prorub",
+      "word_id": "ru-r-add-d0bfd180d0bed180d183d0b1d18c",
+      "label": "прорубь",
+      "meaning": "прорубь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-115_prorub",
+          "src": "/assets/words/prorub.webp",
+          "sha256": "a98a127e753ab4cf7fc35663b868d7c4de594f5c0aa15c4bb073ce6a3d019ca4",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-116_prud",
+      "word_id": "ru-r-extra-020",
+      "label": "пруд",
+      "meaning": "пруд",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-116_prud",
+          "src": "/assets/words/prud.webp",
+          "sha256": "be755c26c3326c59a99966b9b8e1541aa23945703b5801a35aa5f3ff6338da23",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-117_radio",
+      "word_id": "ru-r-057",
+      "label": "радио",
+      "meaning": "радио",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-117_radio",
+          "src": "/assets/words/radio.webp",
+          "sha256": "4d16717e765cd116b6dd3dd507805bd9e7c26639906a892796b102e5c8edf2c9",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-118_raketka",
+      "word_id": "ru-r-add-d180d0b0d0bad0b5d182d0bad0b0",
+      "label": "ракетка",
+      "meaning": "ракетка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-118_raketka",
+          "src": "/assets/words/raketka.webp",
+          "sha256": "ba445eb59044d0bd3edf74eca7fbf51d232f569989090f496414762bc50301a6",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-119_rakovina",
+      "word_id": "ru-r-061",
+      "label": "раковина",
+      "meaning": "умывальник",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-119_rakovina",
+          "src": "/assets/words/rakovina.webp",
+          "sha256": "13737611a5c401d0070998b10ecb8bd9a70e981441100f953a2b99a7887d30ef",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-120_rama",
+      "word_id": "ru-r-extra-004",
+      "label": "рама",
+      "meaning": "рама",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-120_rama",
+          "src": "/assets/words/rama.webp",
+          "sha256": "dc48b678e93c382908d0ab491a8ca299b147869f434a04ba6c9c6990ad58ce15",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-121_ranets",
+      "word_id": "ru-r-063",
+      "label": "ранец",
+      "meaning": "ранец",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-121_ranets",
+          "src": "/assets/words/ranets.webp",
+          "sha256": "eee369cef460324745b5ee5b23906a9e2fd658f74f7073d8e04e4cd57c4dc90e",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-122_ryukzak",
+      "word_id": "ru-images-20261105-122_ryukzak",
+      "label": "рюкзак",
+      "meaning": "рюкзак",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-122_ryukzak",
+          "src": "/assets/words/ryukzak.webp",
+          "sha256": "198c01636a05886f09f7ba2d2798815f7a87d2a170b2ba1a48050a1f1b50e6d2",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-123_ratsiya",
+      "word_id": "ru-r-add-d180d0b0d186d0b8d18f",
+      "label": "рация",
+      "meaning": "рация",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-123_ratsiya",
+          "src": "/assets/words/ratsiya.webp",
+          "sha256": "0b3cced0b8bb4943a05fd65f1f8e800edf0a30c2697d4ed1c05f541be40c94c4",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-124_rogalik",
+      "word_id": "ru-r-add-d180d0bed0b3d0b0d0bbd0b8d0ba",
+      "label": "рогалик",
+      "meaning": "рогалик",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-124_rogalik",
+          "src": "/assets/words/rogalik.webp",
+          "sha256": "63c46e55c8ab826d838a227c6fb7c39f5da565330d8788a15c58d610d824b0d1",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-125_rogatka",
+      "word_id": "ru-r-add-d180d0bed0b3d0b0d182d0bad0b0",
+      "label": "рогатка",
+      "meaning": "рогатка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-125_rogatka",
+          "src": "/assets/words/rogatka.webp",
+          "sha256": "a105daba0e95acc6619995e6755cf1e90d9930e963e33bcc97115d0bbe3583cc",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-126_roll",
+      "word_id": "ru-r-add-d180d0bed0bbd0bb",
+      "label": "ролл",
+      "meaning": "порционный ролл азиатской кухни",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-126_roll",
+          "src": "/assets/words/roll.webp",
+          "sha256": "e2b71e36bbf4556d85c24ab229186f2607c6b814ec80590164a09f672e97e13a",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-127_romb",
+      "word_id": "ru-r-add-d180d0bed0bcd0b1",
+      "label": "ромб",
+      "meaning": "ромб",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-127_romb",
+          "src": "/assets/words/romb.webp",
+          "sha256": "1aa713e5eb82a4c94b97f6774a18a360f984f8518e6c468dd8e09de444642075",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-128_rosa",
+      "word_id": "ru-r-add-d180d0bed181d0b0",
+      "label": "роса",
+      "meaning": "роса",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-128_rosa",
+          "src": "/assets/words/rosa.webp",
+          "sha256": "217eb622cde096581768050f5b839be026b9299db75bf30b0d84ac0082fe0bfd",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-129_rot",
+      "word_id": "ru-r-extra-025",
+      "label": "рот",
+      "meaning": "рот",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-129_rot",
+          "src": "/assets/words/rot.webp",
+          "sha256": "de5309919588ffd1c8438b32f83d8747c4b2572f9bb97dd4745b439dd16e7fd2",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-130_royal",
+      "word_id": "ru-r-add-d180d0bed18fd0bbd18c",
+      "label": "рояль",
+      "meaning": "рояль",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-130_royal",
+          "src": "/assets/words/royal.webp",
+          "sha256": "00864aa16879b344d7774caf060ecfe860684afe782980ce0fc8211720c19ecc",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-131_rubin",
+      "word_id": "ru-r-extra-029",
+      "label": "рубин",
+      "meaning": "рубин",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-131_rubin",
+          "src": "/assets/words/rubin.webp",
+          "sha256": "f6855e176dd8c0598cb03b95e9cd54f561dd4882e4f946538475fe62e70b656d",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-132_rulet",
+      "word_id": "ru-r-add-d180d183d0bbd0b5d182",
+      "label": "рулет",
+      "meaning": "выпечка в виде рулета",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-132_rulet",
+          "src": "/assets/words/rulet.webp",
+          "sha256": "f240e7cf8638f638029ebabbad7a232de41ab29f69861c3bc0536e18fc12e7c9",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-133_kruassan",
+      "word_id": "ru-images-20261105-133_kruassan",
+      "label": "круассан",
+      "meaning": "круассан",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-133_kruassan",
+          "src": "/assets/words/kruassan.webp",
+          "sha256": "c28681f6f4e966c521a73c9b09596110cffb63879abbe94fc1fbbe9fa0147d35",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-134_rusalka",
+      "word_id": "ru-r-add-d180d183d181d0b0d0bbd0bad0b0",
+      "label": "русалка",
+      "meaning": "русалка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-134_rusalka",
+          "src": "/assets/words/rusalka.webp",
+          "sha256": "bbd88061313c7cc0461ec0d4e45610b27edc9ca14c075fb407fa472cc8fc6f38",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-135_ruchey",
+      "word_id": "ru-r-extra-028",
+      "label": "ручей",
+      "meaning": "ручей",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-135_ruchey",
+          "src": "/assets/words/ruchey.webp",
+          "sha256": "35f290f4027838006737a5b6e5ff223dc7018b1ab7414674d10c774b379534d8",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-136_rybak",
+      "word_id": "ru-r-extra-022",
+      "label": "рыбак",
+      "meaning": "рыбак",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-136_rybak",
+          "src": "/assets/words/rybak.webp",
+          "sha256": "b12b512d1c0878fe812b83a03aa517b519f73ac33e2a18690a36a2cca1a73885",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-137_rynok",
+      "word_id": "ru-r-add-d180d18bd0bdd0bed0ba",
+      "label": "рынок",
+      "meaning": "рынок",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-137_rynok",
+          "src": "/assets/words/rynok.webp",
+          "sha256": "48a87b2629845671a2daef45e03f9d64c30513d48548832705d9dfe8225dddc1",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-138_rys",
+      "word_id": "ru-r-073",
+      "label": "рысь",
+      "meaning": "рысь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-138_rys",
+          "src": "/assets/words/rys.webp",
+          "sha256": "7a637c5b5575a1b433635e81861765e9a50fddd9bddb4f635e6cf994fdcbd9b2",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-139_rytsar",
+      "word_id": "ru-r-add-d180d18bd186d0b0d180d18c",
+      "label": "рыцарь",
+      "meaning": "рыцарь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-139_rytsar",
+          "src": "/assets/words/rytsar.webp",
+          "sha256": "6d80e3ed33525c1ab1dc8f501ed674fcbc0970f042a54d5516edf1c0cb81cbb0",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-140_samovar",
+      "word_id": "ru-r-074",
+      "label": "самовар",
+      "meaning": "самовар",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-140_samovar",
+          "src": "/assets/words/samovar.webp",
+          "sha256": "b6bb37019426d46dcb96d90392dd1b8ebb49e0bd512062f642fc6a57fd7aeb68",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-141_sakhar",
+      "word_id": "ru-r-add-d181d0b0d185d0b0d180",
+      "label": "сахар",
+      "meaning": "сахар",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-141_sakhar",
+          "src": "/assets/words/sakhar.webp",
+          "sha256": "e1f2d5905b7b2f32eb55887245ec9d4d6a1fbd308f360929252f1b0fd404b208",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-142_serdtse",
+      "word_id": "ru-r-add-d181d0b5d180d0b4d186d0b5",
+      "label": "сердце",
+      "meaning": "сердце",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-142_serdtse",
+          "src": "/assets/words/serdtse.webp",
+          "sha256": "e26f6bc42369bfd5d1a517959f11726310bbb0fddb5db819a11a85510fbb22ae",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-143_start",
+      "word_id": "ru-r-add-d181d182d0b0d180d182",
+      "label": "старт",
+      "meaning": "старт",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-143_start",
+          "src": "/assets/words/start.webp",
+          "sha256": "759f6a3c700b206515850bca3bf0e7b2d3ce24569a4f5f8c8c6d32ccdf19b59d",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-144_straus",
+      "word_id": "ru-r-078",
+      "label": "страус",
+      "meaning": "страус",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-144_straus",
+          "src": "/assets/words/straus.webp",
+          "sha256": "4c93a56a4b0aee987e83e83d06bffd3fcd78180d2c16888baf1ccfdd0208d573",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-145_stroyka",
+      "word_id": "ru-r-add-d181d182d180d0bed0b9d0bad0b0",
+      "label": "стройка",
+      "meaning": "стройка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-145_stroyka",
+          "src": "/assets/words/stroyka.webp",
+          "sha256": "0bea65c837f4c1cbef25bedfda8119a612d904bfb1d0bb9eff75f61e9d97044c",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-146_teatr",
+      "word_id": "ru-r-add-d182d0b5d0b0d182d180",
+      "label": "театр",
+      "meaning": "театр",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-146_teatr",
+          "src": "/assets/words/teatr.webp",
+          "sha256": "ebe1fab9c9ecc554595c95eb02b32910d0f505aaef3b92f49f4c310468bfb9ca",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-147_tetrad",
+      "word_id": "ru-r-add-d182d0b5d182d180d0b0d0b4d18c",
+      "label": "тетрадь",
+      "meaning": "тетрадь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-147_tetrad",
+          "src": "/assets/words/tetrad.webp",
+          "sha256": "2ce431e0472016f1187240f22a34851355f9664302c3e4084b1e130b86755b03",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-148_topor",
+      "word_id": "ru-r-082",
+      "label": "топор",
+      "meaning": "топор",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-148_topor",
+          "src": "/assets/words/topor.webp",
+          "sha256": "5116ec4738cec33f29ecd2ed73548cb083840fee067c9f6efde4972efef6d231",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-149_tron",
+      "word_id": "ru-r-087",
+      "label": "трон",
+      "meaning": "трон",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-149_tron",
+          "src": "/assets/words/tron.webp",
+          "sha256": "3ae9b7acbc9e266ce08a2beebd015020ab48671fe67c49cb51c1dc1a22fc1abf",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-150_tropinka",
+      "word_id": "ru-r-088",
+      "label": "тропинка",
+      "meaning": "тропинка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-150_tropinka",
+          "src": "/assets/words/tropinka.webp",
+          "sha256": "f9087bdcdfeeb364c7ef280fee918e9dc8bfdfa13881480168cfd9183830843d",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-151_trost",
+      "word_id": "ru-r-089",
+      "label": "трость",
+      "meaning": "трость",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-151_trost",
+          "src": "/assets/words/trost.webp",
+          "sha256": "3a248501cacc40181b04ecbc3b8c27538978e0a88cfad7395b8e597145f54337",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-152_truba_vodoprovodnaya",
+      "word_id": "ru-images-20261105-152_truba_vodoprovodnaya",
+      "label": "труба",
+      "meaning": "водопроводная труба",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-152_truba_vodoprovodnaya",
+          "src": "/assets/words/truba-vodoprovodnaya.webp",
+          "sha256": "c60d35ff2d2fe4317aa14bb9e1aa57a7f1fccbc7376eb6c0f6092b92dd433348",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-153_truba_muzykalnaya",
+      "word_id": "ru-r-090",
+      "label": "труба",
+      "meaning": "духовой музыкальный инструмент",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-153_truba_muzykalnaya",
+          "src": "/assets/words/truba-muzykalnaya.webp",
+          "sha256": "6d9767c1e532f358501039da5a99379263775246febee7d2dec4a291cdd0a20b",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-154_turnik",
+      "word_id": "ru-r-add-d182d183d180d0bdd0b8d0ba",
+      "label": "турник",
+      "meaning": "турник",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-154_turnik",
+          "src": "/assets/words/turnik.webp",
+          "sha256": "18993f01a9a1c1b87f589d357a1cfec999e4c821bf8ee0cdc067409c2328de3e",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-155_loshad",
+      "word_id": "lex-v2-d0bbd0bed188d0b0d0b4d18c",
+      "label": "лошадь",
+      "meaning": "лошадь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-155_loshad",
+          "src": "/assets/words/loshad.webp",
+          "sha256": "b301d3ad76e1c904a6c713d402bdba720419855e5950f8cbe8db7dc0e45f89fe",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-156_lama",
+      "word_id": "ru-images-20261105-156_lama",
+      "label": "лама",
+      "meaning": "лама",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-156_lama",
+          "src": "/assets/words/lama.webp",
+          "sha256": "b5fdc92ed33b85950a6760097bd81ecd443fb0f9bb8abf9f24269654052de096",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-157_svinya",
+      "word_id": "lex-v2-d181d0b2d0b8d0bdd18cd18f",
+      "label": "свинья",
+      "meaning": "свинья",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-157_svinya",
+          "src": "/assets/words/svinya.webp",
+          "sha256": "07587756532fa73d7cf742e5e968118bd45bd81a1078bbe8a2be2d0b7414e2ce",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-158_lampa",
+      "word_id": "ru-images-20261105-158_lampa",
+      "label": "лампа",
+      "meaning": "лампа",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-158_lampa",
+          "src": "/assets/words/lampa.webp",
+          "sha256": "7fb5677e70eeb4e26838268e85a7501e439610e1c226b52c30aec4d330b4a99c",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-159_lastochka",
+      "word_id": "lex-v2-d0bbd0b0d181d182d0bed187d0bad0b0",
+      "label": "ласточка",
+      "meaning": "ласточка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-159_lastochka",
+          "src": "/assets/words/lastochka.webp",
+          "sha256": "acde90ce131d96b15fb16fbf2b9d4f286ad722eeba2d1564c79b5e4679e1399b",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-160_los",
+      "word_id": "lex-v2-d0bbd0bed181d18c",
+      "label": "лось",
+      "meaning": "лось",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-160_los",
+          "src": "/assets/words/los.webp",
+          "sha256": "da5745ff9f33f16e4e639a3acd4313b7857080e947fdfe59638b2f7c0035f28e",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-161_koza",
+      "word_id": "lex-v2-d0bad0bed0b7d0b0",
+      "label": "коза",
+      "meaning": "коза",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-161_koza",
+          "src": "/assets/words/koza.webp",
+          "sha256": "5b25425dc55bdf10746ea084ad2dfcef72d3fb1461b1e052067dfb52b258910a",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-162_sobaka",
+      "word_id": "lex-v2-d181d0bed0b1d0b0d0bad0b0",
+      "label": "собака",
+      "meaning": "собака",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-162_sobaka",
+          "src": "/assets/words/sobaka.webp",
+          "sha256": "72731e823a3c810d0a699622b413df7effa34e0f797d8146a8931378ba4d6024",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-163_kot",
+      "word_id": "lex-v2-d0bad0bed182",
+      "label": "кот",
+      "meaning": "кот",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-163_kot",
+          "src": "/assets/words/kot.webp",
+          "sha256": "511346682fb7bae13268b2eaa9b98306187c1994882969dc8831fece69e99c9f",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-164_lebed",
+      "word_id": "lex-v2-d0bbd0b5d0b1d0b5d0b4d18c",
+      "label": "лебедь",
+      "meaning": "лебедь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-164_lebed",
+          "src": "/assets/words/lebed.webp",
+          "sha256": "36d1cbae23ebc7f53dc36216dcf008e9ae2f51f1b9fc9c968218fbf193ec5e19",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-165_lyagushka",
+      "word_id": "lex-v2-d0bbd18fd0b3d183d188d0bad0b0",
+      "label": "лягушка",
+      "meaning": "лягушка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-165_lyagushka",
+          "src": "/assets/words/lyagushka.webp",
+          "sha256": "149e223af04089a166e46e04cafcad5c7e9ff4ad05c9a2483f5c19640872f603",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-166_zhaba",
+      "word_id": "lex-v2-d0b6d0b0d0b1d0b0",
+      "label": "жаба",
+      "meaning": "жаба",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-166_zhaba",
+          "src": "/assets/words/zhaba.webp",
+          "sha256": "976eac551228d4a896d44690b3cb0b370441ae7c8aeb9b46808a0a578650da10",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-167_babochka",
+      "word_id": "lex-v2-d0b1d0b0d0b1d0bed187d0bad0b0",
+      "label": "бабочка",
+      "meaning": "бабочка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-167_babochka",
+          "src": "/assets/words/babochka.webp",
+          "sha256": "7722b7496acec20356caa822dfd7aded449fddedb078a560979a5b1192367088",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-168_kuznechik",
+      "word_id": "lex-v2-d0bad183d0b7d0bdd0b5d187d0b8d0ba",
+      "label": "кузнечик",
+      "meaning": "кузнечик",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-168_kuznechik",
+          "src": "/assets/words/kuznechik.webp",
+          "sha256": "3ddcb775a5a124d4928f593cc9a78aa72bdaf53c582844fb48897e4e9b4c89a0",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-169_lisa",
+      "word_id": "lex-v2-d0bbd0b8d181d0b0",
+      "label": "лиса",
+      "meaning": "лиса",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-169_lisa",
+          "src": "/assets/words/lisa.webp",
+          "sha256": "ec37559b6edfd85802fa8e647a6c659d2f5edf0d31b0ceb4560bacc345d9c0a2",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-170_slon",
+      "word_id": "lex-v2-d181d0bbd0bed0bd",
+      "label": "слон",
+      "meaning": "слон",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-170_slon",
+          "src": "/assets/words/slon.webp",
+          "sha256": "9288ee77621f7bae8d8b98ccb1f7fa869aed1cc3350c4b147016642d84c0d49b",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-171_uzor",
+      "word_id": "ru-r-091",
+      "label": "узор",
+      "meaning": "узор",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-171_uzor",
+          "src": "/assets/words/uzor.webp",
+          "sha256": "93a0cf176b38cfb08ab7223d1f8af59f0d52d3ce9c1f30315f244ed7f4c26fa2",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-172_utro",
+      "word_id": "ru-r-add-d183d182d180d0be",
+      "label": "утро",
+      "meaning": "утро",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-172_utro",
+          "src": "/assets/words/utro.webp",
+          "sha256": "0dc4a8f7d3662fd81035ce47908f7e6637aa2ffd2d7219903d99ee5ea08ac4c2",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-173_khram",
+      "word_id": "ru-r-add-d185d180d0b0d0bc",
+      "label": "храм",
+      "meaning": "храм",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-173_khram",
+          "src": "/assets/words/khram.webp",
+          "sha256": "34290ae1a0e360a826a1eadd1dd1ad28bf306ff2300ddfbc0df62dbb21bafed3",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-174_tserkov",
+      "word_id": "ru-r-add-d186d0b5d180d0bad0bed0b2d18c",
+      "label": "церковь",
+      "meaning": "церковь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-174_tserkov",
+          "src": "/assets/words/tserkov.webp",
+          "sha256": "da8c138403f6c34cf9d32142d4882b7f332c46fe1f229ba7cc88aaa33997c423",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-175_tsirk",
+      "word_id": "ru-r-add-d186d0b8d180d0ba",
+      "label": "цирк",
+      "meaning": "цирк",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-175_tsirk",
+          "src": "/assets/words/tsirk.webp",
+          "sha256": "61dc82db810fa36939ad8663c0991d5729c61a81752c8a593def7360c6747a1f",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-176_chervyak",
+      "word_id": "ru-r-092",
+      "label": "червяк",
+      "meaning": "червяк",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-176_chervyak",
+          "src": "/assets/words/chervyak.webp",
+          "sha256": "c06a7da340feaf5de5c29038562bbb51f2ade5c34db402dea6430bf50fe04060",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-177_chernika",
+      "word_id": "ru-r-093",
+      "label": "черника",
+      "meaning": "черника",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-177_chernika",
+          "src": "/assets/words/chernika.webp",
+          "sha256": "1c1564c3e805004b8aca6a4ef5c18c908833aff49ce0de94ad75285fb1ae82b5",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-178_arfa",
+      "word_id": "ru-r-002",
+      "label": "арфа",
+      "meaning": "арфа",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-178_arfa",
+          "src": "/assets/words/arfa.webp",
+          "sha256": "ac25960bef1b14136716506fdd29c6d57d8087e495128c4b1d4986e5317d8dff",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-179_barsuk",
+      "word_id": "ru-r-add-d0b1d0b0d180d181d183d0ba",
+      "label": "барсук",
+      "meaning": "барсук",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-179_barsuk",
+          "src": "/assets/words/barsuk.webp",
+          "sha256": "1ff4c682b097227dcc8a0aafecb163c5057f7ecb605daeaf184ba1cde6a81131",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-180_borshch",
+      "word_id": "ru-r-add-d0b1d0bed180d189",
+      "label": "борщ",
+      "meaning": "борщ",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-180_borshch",
+          "src": "/assets/words/borshch.webp",
+          "sha256": "8862081a36cc8976f131950c341efe78a2aa933e5f9a21fd7cc5046c8ccb9f2d",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "pack03-181_shatyor",
+      "word_id": "ru-images-20261105-181_shatyor",
+      "label": "шатёр",
+      "meaning": "шатёр",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "optimized-181_shatyor",
+          "src": "/assets/words/shatyor.webp",
+          "sha256": "9f7851cda510208914097bbe518069d9ce250d65b65ee089f3cfad0c50cde54e",
+          "format": "webp",
+          "review_note": null
+        }
+      ]
+    }
+  ]
+}
