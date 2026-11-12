@@ -1,0 +1,68 @@
+name: Consolidate editorial V2 into the public repository
+on:
+  push:
+    branches:
+      - migration/unify-library-20261112
+    paths:
+      - '.github/workflows/consolidation-20261112.yml'
+      - 'scripts/consolidate-repositories-20261112.cjs'
+      - '.migration/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  consolidate-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Detect one-time source shards
+        id: state
+        shell: bash
+        run: |
+          if test -f .migration/source/part-00.txt; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Install dependencies
+        if: steps.state.outputs.ready == 'true'
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Consolidate and regenerate reviewed game exports
+        if: steps.state.outputs.ready == 'true'
+        run: node scripts/consolidate-repositories-20261112.cjs
+      - name: Validate full editorial dictionary and image registry
+        if: steps.state.outputs.ready == 'true'
+        run: node scripts/check-library-v2.cjs
+      - name: Refresh editor preview
+        if: steps.state.outputs.ready == 'true'
+        run: node scripts/build-library-v2-view.cjs
+      - name: Test gameplay and semantic rules
+        if: steps.state.outputs.ready == 'true'
+        run: npm test
+      - name: Verify visual system
+        if: steps.state.outputs.ready == 'true'
+        run: npm run check:design-system
+      - name: Build published game
+        if: steps.state.outputs.ready == 'true'
+        run: npm run build
+      - name: Validate offline game data in built site
+        if: steps.state.outputs.ready == 'true'
+        run: node scripts/check-offline-release.cjs dist
+      - name: Commit verified consolidated source and delete temporary shards
+        if: steps.state.outputs.ready == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- .migration outputs/library-v2.json outputs/library-v2-auto-analysis.json outputs/image-library.json outputs/Библиотека.html editorial/review/speech-frame-candidates.json docs/consolidation-audit-20261112.json library.json semantic-graph.json public/library.json public/semantic-graph.json public/grammar-frames.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Complete verified consolidation: 1,899 senses, 1,444 semantic links"
+            git push origin HEAD:migration/unify-library-20261112
+          fi
