@@ -170,3 +170,18 @@
 .app[data-theme] .victory-star .garden-icon{width:100%;height:100%;background-color:currentColor!important}
 .app[data-theme] .victory-star-empty{color:var(--ui-outline);opacity:.45}
 .app[data-theme] .victory-stars>span:nth-child(2){margin-top:-9px}
+
+/* Keep long dynamically generated sorting-category lists from swallowing the scene.
+   The full unabridged label remains in the DOM and in the native title tooltip. */
+.app[data-theme] .bin-target h3{
+  font-size:clamp(14px,1.35vw,19px)!important;
+  line-height:1.28!important;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3;
+  line-clamp:3;
+  overflow:hidden;
+  overflow-wrap:anywhere;
+  max-height:calc(1.28em * 3);
+  color:var(--ui-deep)!important;
+}
