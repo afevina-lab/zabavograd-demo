@@ -103,7 +103,8 @@ jobs:
           rm -f _published/assets/zabavograd-ui-20261111.js
           rm -f _published/assets/neutral/approved-watercolor.css
           rm -f _published/assets/themes/shared-components.css
-          rm -rf _published/release
+          # Legacy source-side CSS/JS patch generators are no longer used by the public build.
+          rm -rf _published/release _published/scripts
           rsync -a dist/ _published/
           test -s _published/library.json
           test -s _published/semantic-graph.json
