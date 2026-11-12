@@ -1,0 +1,111 @@
+/* One movement language for every theme and game. Timings come from motion.ts. */
+.app[data-theme] .card:not(.found){
+  animation-name:zg-deal!important;
+  animation-duration:var(--zg-deal-duration)!important;
+  animation-timing-function:cubic-bezier(.2,.7,.2,1)!important;
+  animation-fill-mode:both!important;
+  animation-delay:var(--zg-deal-delay,0ms)!important
+}
+.app[data-theme] .card-inner{
+  transition:transform var(--zg-flip-duration) cubic-bezier(.2,.7,.2,1)!important
+}
+.app[data-theme] .card.mismatch .card-inner{
+  animation:zg-mismatch var(--zg-mismatch-duration) ease-in-out!important
+}
+.app[data-theme] .card.found{
+  animation:zg-match var(--zg-match-duration) cubic-bezier(.28,.7,.4,1) both!important;
+  pointer-events:none
+}
+.app[data-theme] .card.found>.card-inner{
+  animation:none!important;opacity:1!important;filter:none!important;transform:rotateY(180deg)!important
+}
+.app[data-theme] .card.found .card-front{
+  transform:rotateY(180deg)!important;backface-visibility:hidden!important
+}
+.app[data-theme] .pair-sparkles{display:none!important}
+/* Never modify color saturation during interaction feedback. */
+.app[data-theme] .card.found,.app[data-theme] .card.found *{filter:none!important}
+.app[data-theme] .result{animation:zg-result var(--zg-result-duration) ease-out both!important}
+@keyframes zg-deal{
+  0%{opacity:0;transform:translateY(45px) scale(.9)}
+  75%{opacity:1;transform:translateY(-3px) scale(1.01)}
+  100%{opacity:1;transform:none}
+}
+@keyframes zg-mismatch{
+  0%,100%{transform:rotateY(180deg) rotate(0)}
+  25%{transform:rotateY(180deg) rotate(-3deg)}
+  65%{transform:rotateY(180deg) rotate(3deg)}
+}
+/* Two matched cards receive the same state in one React commit, so both phases are synchronized. */
+@keyframes zg-match{
+  0%,14%{opacity:1;transform:scale(1)}
+  40%,58%{opacity:1;transform:scale(1.22)}
+  69%{opacity:1;transform:scale(1.37)}
+  82%{opacity:.7;transform:scale(1.43)}
+  100%{opacity:0;transform:scale(1.5)}
+}
+.app[data-theme] .card.found{z-index:4;transform-origin:center;will-change:transform,opacity}
+.app[data-theme] .card.found::after{
+ content:'';position:absolute;z-index:5;pointer-events:none;
+ inset:-22%;border-radius:43% 57% 52% 48% / 54% 47% 53% 46%;
+ background:
+   radial-gradient(ellipse at 30% 46%,color-mix(in srgb,var(--ui-accent) 60%,#fff) 0 20%,transparent 60%),
+   radial-gradient(ellipse at 71% 57%,color-mix(in srgb,var(--ui-outline) 55%,#fff) 0 18%,transparent 61%),
+   radial-gradient(ellipse at 51% 24%,color-mix(in srgb,var(--ui-pale) 72%,#fff) 0 20%,transparent 60%);
+ animation:zg-pigment-bloom var(--zg-match-duration) ease-out both!important;
+ filter:blur(1px);
+}
+@keyframes zg-pigment-bloom{
+ 0%,51%{opacity:0;transform:scale(.2) rotate(-12deg)}
+ 66%{opacity:.94;transform:scale(.74) rotate(4deg)}
+ 80%{opacity:.85;transform:scale(1.28) rotate(11deg)}
+ 100%{opacity:0;transform:scale(1.7) rotate(15deg)}
+}
+/* Award stars launch together from the centre, then settle one by one. */
+.app[data-theme] .victory-stars{display:flex;align-items:center;justify-content:center;gap:14px}
+.app[data-theme] .victory-stars>span{
+ display:inline-flex;animation:zg-award-fly 1050ms cubic-bezier(.16,.85,.27,1.15) both!important
+}
+@keyframes zg-award-fly{
+ 0%{opacity:0;transform:translate(var(--zg-star-launch-x,0px),75px) scale(.12) rotate(-40deg)}
+ 62%{opacity:1;transform:translate(0,-16px) scale(1.17) rotate(10deg)}
+ 83%{opacity:1;transform:translate(0,4px) scale(.94) rotate(-3deg)}
+ 100%{opacity:1;transform:translate(0,0) scale(1) rotate(0)}
+}
+
+@keyframes zg-result{0%,75%{opacity:0;pointer-events:none}100%{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  .app[data-theme] .card:not(.found),.app[data-theme] .card.found,
+  .app[data-theme] .card.mismatch .card-inner,.app[data-theme] .result{animation:none!important}
+  .app[data-theme] .card.found{opacity:0!important}
+  .app[data-theme] .card-inner{transition:none!important}
+  .app[data-theme] .card.found::after{display:none!important}
+  .app[data-theme] .victory-stars>span{animation:none!important}
+}
+
+/* Sorting uses shared timing tokens instead of local hardcoded intervals. */
+.app[data-theme] .sort-wrong,
+.app[data-theme] .sort-card.verdict-bad{
+ animation:zg-sort-wobble var(--zg-sort-wrong-duration) linear!important
+}
+@keyframes zg-sort-wobble{
+ 0%,100%{transform:none}
+ 20%,60%{transform:translateX(-5px) rotate(-2deg)}
+ 40%,80%{transform:translateX(5px) rotate(2deg)}
+}
+@media(prefers-reduced-motion:reduce){
+ .app[data-theme] .sort-wrong,.app[data-theme] .sort-card.verdict-bad{animation:none!important}
+}
+
+/* Theme-agnostic scenery presets; only names and coordinates live in the registry. */
+.app[data-theme] .zg-scene-sprite[data-zg-motion="float"]{animation:zg-sprite-float var(--zg-sprite-duration,22000ms) ease-in-out var(--zg-sprite-delay,0ms) infinite}
+.app[data-theme] .zg-scene-sprite[data-zg-motion="breathe"]{animation:zg-sprite-breathe var(--zg-sprite-duration,28000ms) ease-in-out var(--zg-sprite-delay,0ms) infinite}
+.app[data-theme] .zg-scene-sprite[data-zg-motion="twinkle"]{animation:zg-sprite-twinkle var(--zg-sprite-duration,14000ms) ease-in-out var(--zg-sprite-delay,0ms) infinite}
+.app[data-theme] .zg-scene-sprite[data-zg-motion="sway"]{animation:zg-sprite-sway var(--zg-sprite-duration,10000ms) ease-in-out var(--zg-sprite-delay,0ms) infinite;transform-origin:50% 90%}
+.app[data-theme] .zg-scene-sprite[data-zg-motion="fall"]{animation:zg-sprite-fall var(--zg-sprite-duration,13000ms) linear var(--zg-sprite-delay,0ms) infinite}
+@keyframes zg-sprite-float{0%,100%{transform:translateY(0)}50%{transform:translateY(12px)}}
+@keyframes zg-sprite-breathe{0%,100%{transform:scale(1);opacity:.75}50%{transform:scale(1.04);opacity:1}}
+@keyframes zg-sprite-twinkle{0%,100%{filter:brightness(.7);transform:scale(.85)}50%{filter:brightness(1.4);transform:scale(1.12)}}
+@keyframes zg-sprite-sway{0%,100%{transform:rotate(-1.45deg)}50%{transform:rotate(1.6deg)}}
+@keyframes zg-sprite-fall{0%{transform:translate(0,-8vh) rotate(-15deg);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translate(90px,105vh) rotate(100deg);opacity:0}}
+@media(prefers-reduced-motion:reduce){.app[data-theme] .zg-scene-sprite{animation:none!important}}

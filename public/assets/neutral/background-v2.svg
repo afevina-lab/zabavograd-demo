@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<defs>
+<radialGradient id="paper"><stop offset="0" stop-color="#fff8eb"/><stop offset=".7" stop-color="#f9f1e5"/><stop offset="1" stop-color="#f5eddf"/></radialGradient>
+<radialGradient id="blue"><stop stop-color="#a9c5d5" stop-opacity=".51"/><stop offset=".6" stop-color="#b4d0dc" stop-opacity=".22"/><stop offset="1" stop-color="#d5e6e8" stop-opacity="0"/></radialGradient>
+<radialGradient id="sand"><stop stop-color="#edbf86" stop-opacity=".46"/><stop offset=".65" stop-color="#f5d5a7" stop-opacity=".18"/><stop offset="1" stop-color="#f6dfc0" stop-opacity="0"/></radialGradient>
+<filter id="watercolor"><feTurbulence type="fractalNoise" baseFrequency=".006 .008" numOctaves="4" seed="9" result="grain"/><feColorMatrix in="grain" type="saturate" values="0" result="mono"/><feComponentTransfer in="mono"><feFuncA type="linear" slope=".16"/></feComponentTransfer></filter>
+<filter id="wash"><feGaussianBlur stdDeviation="70"/></filter>
+</defs>
+<rect width="1920" height="1080" fill="url(#paper)"/>
+<g filter="url(#wash)"><ellipse cx="95" cy="85" rx="540" ry="250" fill="url(#blue)"/><ellipse cx="1790" cy="90" rx="380" ry="350" fill="url(#sand)"/><ellipse cx="105" cy="1000" rx="480" ry="325" fill="url(#sand)"/><ellipse cx="1810" cy="910" rx="540" ry="350" fill="url(#blue)"/></g>
+<rect width="1920" height="1080" fill="#e6d7be" filter="url(#watercolor)" opacity=".5"/>
+</svg>

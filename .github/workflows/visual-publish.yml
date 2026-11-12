@@ -1,0 +1,119 @@
+name: Verify and publish public visual UI
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'scripts/prepare-card-skins.py'
+      - 'scripts/check-design-system.cjs'
+      - 'scripts/verify-ui-browser.mjs'
+      - 'scripts/sync-runtime.cjs'
+      - 'tests/**'
+      - 'public/**'
+      - 'package.json'
+      - 'index.html'
+      - '.github/workflows/visual-publish.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'scripts/prepare-card-skins.py'
+      - 'scripts/check-design-system.cjs'
+      - 'scripts/verify-ui-browser.mjs'
+      - 'tests/**'
+      - 'public/**'
+      - 'package.json'
+      - 'index.html'
+      - '.github/workflows/visual-publish.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-ui-release
+  cancel-in-progress: false
+
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout public visual source
+        uses: actions/checkout@v4
+      - name: Node for Vite and TS
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Python for transparent card contours
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install tools
+        run: |
+          npm install --no-package-lock --ignore-scripts
+          python -m pip install --disable-pip-version-check pillow
+      - name: Test gameplay and theme registry
+        run: |
+          npm test
+          npm run check:design-system
+      - name: Build local-base UI and check image alpha
+        run: |
+          npm run build
+          python scripts/prepare-card-skins.py dist
+      - name: Browser smoke test across games, themes, sizes
+        run: node scripts/verify-ui-browser.mjs
+      - name: Browser screenshots and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-ui-visual-smoke
+          path: ui-smoke/
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Checkout published gh-pages separately
+        if: github.event_name != 'pull_request'
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: _published
+      - name: Build public-base UI from this very same source
+        if: github.event_name != 'pull_request'
+        run: |
+          ./node_modules/.bin/vite build --base /zabavograd-demo/
+          python scripts/prepare-card-skins.py dist
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('dist/index.html')
+          html=p.read_text()
+          html=html.replace('</head>','<meta name="zabavograd-ui-release" content="${{ github.sha }}"></head>')
+          p.write_text(html)
+          PY
+      - name: Replace only generated public UI and delete obsolete patches
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          find _published/assets -maxdepth 1 -type f \( -name 'index-*.js' -o -name 'index-*.css' \) -delete
+          rm -f _published/assets/match-camera-20261111.js
+          rm -f _published/assets/neutral-polish-20261111.css
+          rm -f _published/assets/visual-unification-20261111.css
+          rm -f _published/assets/zabavograd-ui-20261111.css
+          rm -f _published/assets/zabavograd-ui-20261111.js
+          rm -f _published/assets/neutral/approved-watercolor.css
+          rm -f _published/assets/themes/shared-components.css
+          rm -rf _published/release
+          rsync -a dist/ _published/
+          test -s _published/library.json
+          test -s _published/semantic-graph.json
+          test -s _published/home.html
+          test -f _published/assets/themes/forest/front.webp
+          test -f _published/assets/neutral/approved-paper-4k.webp
+          git -C _published config user.name 'github-actions[bot]'
+          git -C _published config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C _published add -A
+          if ! git -C _published diff --cached --quiet; then
+            git -C _published commit -m "Publish public visual source ${{ github.sha }}"
+            git -C _published push origin HEAD:gh-pages
+          fi
