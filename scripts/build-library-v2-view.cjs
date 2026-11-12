@@ -58,7 +58,7 @@ const html=[
 '<h1>Библиотека слов</h1>',
 '<p class="sub">Единый редакторский черновик: все слова, значения и темы. Здесь предпросмотр — изменения вносите в исходный JSON через GitHub.</p>',
 '<p><a href="Проверка-смысловых-связей.html">Проверка и утверждение смысловых связей</a> (отдельный редактор для локальных JSON)</p>',
-'<p><a href="https://github.dev/afevina-lab/zabavograd/blob/main/outputs/library-v2.json" target="_blank" rel="noopener noreferrer">Открыть библиотеку для редактирования на GitHub</a> · <a href="https://github.com/afevina-lab/zabavograd/tree/main/outputs" target="_blank" rel="noopener noreferrer">Папка outputs</a></p>',
+'<p><a href="https://github.dev/afevina-lab/zabavograd-demo/blob/main/outputs/library-v2.json" target="_blank" rel="noopener noreferrer">Открыть библиотеку для редактирования на GitHub</a> · <a href="https://github.com/afevina-lab/zabavograd-demo/tree/main/outputs" target="_blank" rel="noopener noreferrer">Папка outputs</a></p>',
 '<div class="banner"><strong>Черновой предпросмотр.</strong> После сохранения изменений в основном JSON GitHub Actions обновляет этот HTML. Перенос черновика в публичную игру — отдельное решение, не действие этого предпросмотра. Веса: <strong>100 / 70 / 50 / 30 / 20 / 10</strong>; ноль исключает из автоматической выдачи. Предложенные веса требуют редакторского просмотра.</div>',
 '<div class="stats" id="stats"></div>',
 '<div class="controls"><input id="q" placeholder="Поиск слова, значения, категории или примечания" aria-label="Поиск">',
