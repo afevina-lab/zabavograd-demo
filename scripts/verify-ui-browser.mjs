@@ -67,7 +67,7 @@ try{
       const el=s=>document.querySelector(s);
       const rect=s=>{let e=el(s);if(!e)return null;let r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom,right:r.right}};
       const app=el('.app'),stage=el('.stage'),card=el('.card .card-back'),toolbar=el('.play-toolbar'),btn=el('.icon-button');
-      return {theme:'${theme}',viewport:[innerWidth,innerHeight],htmlScroll:[document.documentElement.scrollWidth,document.documentElement.scrollHeight],app:rect('.app'),stage:rect('.stage'),toolbar:rect('.play-toolbar'),cards:el('.cards')?.children.length,cardBackground:card?getComputedStyle(card).backgroundImage:'',stageBackground:getComputedStyle(stage).backgroundImage,pan:getComputedStyle(stage,'::before').animationName,panImage:getComputedStyle(stage,'::before').backgroundImage,toolbarSkin:getComputedStyle(toolbar).borderImageSource,toolbarBackground:getComputedStyle(toolbar).backgroundImage,homeHref:el('.zg-home')?.getAttribute('href'),captionButton:!!el('.zg-caption-toggle'),spriteCount:document.querySelectorAll('.zg-scene-sprite').length,columns:Number(el('.cards')?.style.getPropertyValue('--columns')),cardBounds:[...el('.cards').children].map(c=>{const x=c.getBoundingClientRect();return {left:x.left,right:x.right,top:x.top,bottom:x.bottom}}),btnSkin:getComputedStyle(btn).borderImageSource,iconMask:getComputedStyle(btn?.querySelector('.garden-icon')).maskImage};
+      return {theme:'${theme}',viewport:[innerWidth,innerHeight],htmlScroll:[document.documentElement.scrollWidth,document.documentElement.scrollHeight],app:rect('.app'),stage:rect('.stage'),toolbar:rect('.play-toolbar'),cards:el('.cards')?.children.length,cardBackground:card?getComputedStyle(card).backgroundImage:'',stageBackground:getComputedStyle(stage).backgroundImage,pan:getComputedStyle(el('.zg-scene-camera'),'::before').animationName,panImage:getComputedStyle(el('.zg-scene-camera'),'::before').backgroundImage,toolbarSkin:getComputedStyle(toolbar).borderImageSource,toolbarBackground:getComputedStyle(toolbar).backgroundImage,homeHref:el('.zg-home')?.getAttribute('href'),captionButton:!!el('.zg-caption-toggle'),spriteCount:document.querySelectorAll('.zg-scene-sprite').length,columns:Number(el('.cards')?.style.getPropertyValue('--columns')),cardBounds:[...el('.cards').children].map(c=>{const x=c.getBoundingClientRect();return {left:x.left,right:x.right,top:x.top,bottom:x.bottom}}),btnSkin:getComputedStyle(btn).borderImageSource,iconMask:getComputedStyle(btn?.querySelector('.garden-icon')).maskImage};
     })()`);
     assert.equal(r.theme,theme);
     assert.equal(r.cards,14);
@@ -212,11 +212,18 @@ try{
         return a.map(e=>({animation:getComputedStyle(e).animationName,start:e.getAnimations().find(z=>z.animationName==='zg-match')?.startTime,bloom:getComputedStyle(e,'::after').animationName}));
       })()`);
       assert(feedback.every(x=>x.animation==='zg-match'&&x.bloom==='zg-pigment-bloom'),JSON.stringify(feedback));
+      const zoom=await evaluate(`(()=>{const e=document.querySelector('.zg-scene-camera');return {name:getComputedStyle(e).animationName,pan:e.style.getPropertyValue('--zg-camera-pan-x'),background:getComputedStyle(e,'::before').backgroundImage}})()`);
+      assert(zoom.name==='zg-camera-zoom'&&zoom.pan.endsWith('px')&&zoom.background.includes('forest_background.webp'),'Whole illustrated scene must zoom to pair: '+JSON.stringify(zoom));
+      if(indexes===pairs.values().next().value){await sleep(570);const scale=await evaluate("new DOMMatrixReadOnly(getComputedStyle(document.querySelector('.zg-scene-camera')).transform).a");assert(scale>1.06,'Camera must visibly zoom toward matching cards: '+scale);await screenshot('forest-approved-camera-zoom-1280x800');}
       if(feedback.every(x=>typeof x.start==='number'))assert(Math.abs(feedback[0].start-feedback[1].start)<80,'Found pair must zoom synchronously');
     }
     await until("!!document.querySelector('.result .victory-stars')");
     assert.equal(await evaluate("document.querySelectorAll('.result .victory-stars>span').length"),3);
     assert.equal(await evaluate("getComputedStyle(document.querySelector('.result .victory-stars>span')).animationName"),'zg-award-fly');
+    const reward=await evaluate(`(()=>{const stars=[...document.querySelectorAll('.result .victory-stars>span')];return stars.map(e=>({delay:parseFloat(getComputedStyle(e).animationDelay),art:getComputedStyle(e.querySelector('.victory-star')).backgroundImage,position:getComputedStyle(e.querySelector('.victory-star')).backgroundPositionX}))})()`);
+    assert(reward.every(x=>x.art.includes('approved-stars.webp')),'Result must use existing watercolor artwork: '+JSON.stringify(reward));
+    assert(reward[0].delay<reward[1].delay&&reward[1].delay<reward[2].delay,'Stars must launch with staggered delays: '+JSON.stringify(reward));
+    assert(reward[0].position!==reward[1].position,'Centre award must use the shining star artwork: '+JSON.stringify(reward));
     await sleep(3600);
     const finalCards=await evaluate("[...document.querySelectorAll('.cards .card.found')].map(e=>({opacity:+getComputedStyle(e).opacity,animation:getComputedStyle(e).animationName}))");
     assert(finalCards.length===6&&finalCards.every(x=>x.opacity<.01&&x.animation==='zg-match'),
