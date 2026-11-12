@@ -1,0 +1,95 @@
+name: Verify and publish canonical Zabavograd library
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'outputs/library-v2.json'
+      - 'outputs/image-library.json'
+      - 'outputs/library-v2-auto-analysis.json'
+      - 'scripts/export-library.cjs'
+      - 'scripts/semantic-review.cjs'
+      - 'scripts/sound-index.cjs'
+      - 'scripts/check-library-v2.cjs'
+      - 'scripts/verify-consolidated-library.cjs'
+      - 'scripts/sync-runtime.cjs'
+      - 'tests/**'
+      - 'package.json'
+      - '.github/workflows/publish-canonical-library.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'outputs/library-v2.json'
+      - 'outputs/image-library.json'
+      - 'outputs/library-v2-auto-analysis.json'
+      - 'scripts/export-library.cjs'
+      - 'scripts/semantic-review.cjs'
+      - 'scripts/sound-index.cjs'
+      - 'scripts/check-library-v2.cjs'
+      - 'scripts/verify-consolidated-library.cjs'
+      - 'scripts/sync-runtime.cjs'
+      - 'tests/**'
+      - 'package.json'
+      - '.github/workflows/publish-canonical-library.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-ui-release
+  cancel-in-progress: false
+
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install public project dependencies
+        run: npm install --ignore-scripts --no-audit --no-fund --no-package-lock
+      - name: Verify canonical editorial source, IDs, images, relations and frames
+        run: |
+          npm run check:library
+          node scripts/verify-consolidated-library.cjs
+      - name: Regenerate game library, semantic graph and editorial preview
+        run: npm run library:refresh
+      - name: Test existing games and visual design
+        run: |
+          npm test
+          npm run check:design-system
+      - name: Build the autonomous public site
+        run: |
+          npm run build
+          node scripts/check-offline-release.cjs dist
+      - name: Publish static game data to existing gh-pages site without changing its UI
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add library.json semantic-graph.json public/semantic-graph.json public/grammar-frames.json outputs/Библиотека.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'Rebuild static game library and graph from canonical V2'
+            git push origin HEAD:main
+          fi
+          git fetch origin gh-pages
+          git worktree add --detach _published origin/gh-pages
+          cp public/library.json _published/library.json
+          cp public/semantic-graph.json _published/semantic-graph.json
+          cp public/grammar-frames.json _published/grammar-frames.json
+          test -s _published/home.html
+          test -s _published/assets/index.html || test -n "$(find _published/assets -maxdepth 1 -name 'index-*.js' -print -quit)"
+          git -C _published config user.name 'github-actions[bot]'
+          git -C _published config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C _published add library.json semantic-graph.json grammar-frames.json
+          if ! git -C _published diff --cached --quiet; then
+            git -C _published commit -m 'Publish verified 1-source library and semantic graph'
+            git -C _published push origin HEAD:gh-pages
+          fi
+          node scripts/check-offline-release.cjs _published
