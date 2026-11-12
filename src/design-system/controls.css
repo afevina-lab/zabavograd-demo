@@ -1,8 +1,5 @@
 /* Single set of watercolor control skins for all games. All assets resolve via theme tokens. */
-.app .play-toolbar{
- background:none!important;box-shadow:none!important;border:1px solid transparent!important;border-radius:0!important;
- border-image-source:var(--skin-panel)!important;border-image-slice:20 22 fill!important;border-image-width:17px 22px!important;border-image-repeat:stretch!important;
-}
+/* Full-bleed toolbar is owned by theme.css; there is no decorative nine-slice frame here. */
 .app .primary,.app .secondary,.app .settings .start,.app .modal .primary,.app .overlay .primary{
  background:none!important;box-shadow:none!important;border:1px solid transparent!important;border-radius:0!important;
  border-image-source:var(--skin-large)!important;border-image-slice:48 fill!important;border-image-width:14px 18px!important;border-image-repeat:stretch!important;

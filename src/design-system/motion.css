@@ -23,6 +23,8 @@
   transform:rotateY(180deg)!important;backface-visibility:hidden!important
 }
 .app[data-theme] .pair-sparkles{display:none!important}
+/* Never modify color saturation during interaction feedback. */
+.app[data-theme] .card.found,.app[data-theme] .card.found *{filter:none!important}
 .app[data-theme] .result{animation:zg-result var(--zg-result-duration) ease-out both!important}
 @keyframes zg-deal{
   0%{opacity:0;transform:translateY(45px) scale(.9)}
@@ -34,18 +36,51 @@
   25%{transform:rotateY(180deg) rotate(-3deg)}
   65%{transform:rotateY(180deg) rotate(3deg)}
 }
+/* Two matched cards receive the same state in one React commit, so both phases are synchronized. */
 @keyframes zg-match{
-  0%,35%{opacity:1;transform:scale(1)}
-  58%{opacity:1;transform:scale(1.16)}
-  78%{opacity:.9;transform:scale(.9)}
-  100%{opacity:0;transform:scale(.05)}
+  0%,14%{opacity:1;transform:scale(1)}
+  40%,58%{opacity:1;transform:scale(1.22)}
+  69%{opacity:1;transform:scale(1.37)}
+  82%{opacity:.7;transform:scale(1.43)}
+  100%{opacity:0;transform:scale(1.5)}
 }
+.app[data-theme] .card.found{z-index:4;transform-origin:center;will-change:transform,opacity}
+.app[data-theme] .card.found::after{
+ content:'';position:absolute;z-index:5;pointer-events:none;
+ inset:-22%;border-radius:43% 57% 52% 48% / 54% 47% 53% 46%;
+ background:
+   radial-gradient(ellipse at 30% 46%,color-mix(in srgb,var(--ui-accent) 60%,#fff) 0 20%,transparent 60%),
+   radial-gradient(ellipse at 71% 57%,color-mix(in srgb,var(--ui-outline) 55%,#fff) 0 18%,transparent 61%),
+   radial-gradient(ellipse at 51% 24%,color-mix(in srgb,var(--ui-pale) 72%,#fff) 0 20%,transparent 60%);
+ animation:zg-pigment-bloom var(--zg-match-duration) ease-out both!important;
+ filter:blur(1px);
+}
+@keyframes zg-pigment-bloom{
+ 0%,51%{opacity:0;transform:scale(.2) rotate(-12deg)}
+ 66%{opacity:.94;transform:scale(.74) rotate(4deg)}
+ 80%{opacity:.85;transform:scale(1.28) rotate(11deg)}
+ 100%{opacity:0;transform:scale(1.7) rotate(15deg)}
+}
+/* Award stars launch together from the centre, then settle one by one. */
+.app[data-theme] .victory-stars{display:flex;align-items:center;justify-content:center;gap:14px}
+.app[data-theme] .victory-stars>span{
+ display:inline-flex;animation:zg-award-fly 1050ms cubic-bezier(.16,.85,.27,1.15) both!important
+}
+@keyframes zg-award-fly{
+ 0%{opacity:0;transform:translate(var(--zg-star-launch-x,0px),75px) scale(.12) rotate(-40deg)}
+ 62%{opacity:1;transform:translate(0,-16px) scale(1.17) rotate(10deg)}
+ 83%{opacity:1;transform:translate(0,4px) scale(.94) rotate(-3deg)}
+ 100%{opacity:1;transform:translate(0,0) scale(1) rotate(0)}
+}
+
 @keyframes zg-result{0%,75%{opacity:0;pointer-events:none}100%{opacity:1}}
 @media(prefers-reduced-motion:reduce){
   .app[data-theme] .card:not(.found),.app[data-theme] .card.found,
   .app[data-theme] .card.mismatch .card-inner,.app[data-theme] .result{animation:none!important}
   .app[data-theme] .card.found{opacity:0!important}
   .app[data-theme] .card-inner{transition:none!important}
+  .app[data-theme] .card.found::after{display:none!important}
+  .app[data-theme] .victory-stars>span{animation:none!important}
 }
 
 /* Sorting uses shared timing tokens instead of local hardcoded intervals. */

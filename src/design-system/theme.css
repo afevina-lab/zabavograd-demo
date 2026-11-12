@@ -55,7 +55,12 @@
 .app[data-theme] .card:hover:not(:disabled) .card-back{
   filter:brightness(1.04) drop-shadow(0 0 8px var(--ui-accent))!important
 }
-.app[data-theme] .play-toolbar{border-image-source:var(--skin-panel)!important}
+.app[data-theme] .play-toolbar{
+  background:linear-gradient(95deg,var(--ui-pale),color-mix(in srgb,var(--ui-accent) 72%,var(--ui-pale)),var(--ui-pale))!important;
+  border:0!important;border-image:none!important;
+  color:var(--ui-text)!important;
+  box-shadow:inset 0 -2px 0 color-mix(in srgb,var(--ui-outline) 60%,transparent),0 3px 7px #10223222!important;
+}
 .app[data-theme][data-toolbar-art="illustrated"] .play-toolbar{
   background:var(--zg-toolbar-image) center/100% 100% no-repeat!important;
   border:0!important;border-image:none!important;
@@ -91,3 +96,66 @@
 .app[data-theme] .zg-scene-layers{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
 .app[data-theme] .zg-scene-sprite{position:absolute;display:block;height:auto;max-width:none;object-fit:contain;pointer-events:none;user-select:none}
 .app[data-theme] .card:disabled{opacity:1!important}
+
+/* All headers meet the viewport edges. No differently colored legacy panel margins. */
+.app[data-theme] .play-toolbar{background-clip:border-box!important}
+.app[data-theme][data-toolbar-art="illustrated"] .play-toolbar{
+ background:var(--zg-toolbar-image) center / 100% 100% no-repeat!important;
+ background-color:var(--zg-stage-fill)!important;
+}
+.app[data-theme] .play-toolbar .icon-button{
+ display:inline-flex;align-items:center;justify-content:center;
+ flex:none;text-decoration:none;color:var(--ui-deep)!important;
+}
+.app[data-theme] .play-toolbar .zg-caption-toggle[aria-pressed="true"]{
+ border-image-source:var(--skin-square-pressed)!important;
+}
+.app[data-theme] button:disabled:not(.card){filter:none!important;opacity:.68}
+.app[data-theme] .zg-caption-toggle:disabled{opacity:.5!important}
+
+/* One themed framed surface for dialogs, settings, pauses and results. */
+.app[data-theme] .settings-frame,
+.app[data-theme] .settings-shade .settings-frame .settings,
+.app[data-theme] .modal,
+.app[data-theme] .modal.gui-panel,
+.app[data-theme] .overlay>div{
+ color:var(--ui-text)!important;
+ background:linear-gradient(152deg,color-mix(in srgb,var(--ui-paper) 94%,white),
+  color-mix(in srgb,var(--ui-pale) 38%,var(--ui-paper)))!important;
+ border:3px solid var(--ui-outline)!important;
+ border-radius:24px!important;
+ box-shadow:inset 0 0 0 5px color-mix(in srgb,var(--ui-paper) 68%,white),
+  0 16px 46px #101e313f!important;
+ text-shadow:none!important;
+}
+.app[data-theme] .settings-block,
+.app[data-theme] .settings .filter-details{
+ background:color-mix(in srgb,var(--ui-paper) 86%,var(--ui-pale))!important;
+ border:1px solid color-mix(in srgb,var(--ui-outline) 55%,var(--ui-paper))!important;
+ color:var(--ui-text)!important;
+}
+.app[data-theme] .settings-block h3,.app[data-theme] .settings h2,
+.app[data-theme] .overlay h2,.app[data-theme] .modal h2,
+.app[data-theme] .modal.gui-panel h2,.app[data-theme] .welcome h2{
+ color:var(--ui-deep)!important;text-shadow:none!important;
+}
+.app[data-theme] .overlay p,.app[data-theme] .gui-panel p,
+.app[data-theme] .modal p,.app[data-theme] .modal ol,
+.app[data-theme] .settings .material p,
+.app[data-theme] .settings .filter-details summary{
+ color:var(--ui-text)!important;
+}
+.app[data-theme] .overlay .link,.app[data-theme] .modal .link,
+.app[data-theme] .gui-panel .link{color:var(--ui-deep)!important}
+.app[data-theme] .overlay .eyebrow{color:var(--ui-deep)!important}
+.app[data-theme] .welcome h2{color:var(--zg-stage-text)!important}
+.app[data-theme] .welcome>p,.app[data-theme] .welcome .eyebrow{
+ color:var(--zg-stage-text)!important;
+}
+.app[data-theme] .overlay .award{position:absolute;top:-34px;left:0;right:0;z-index:2;overflow:visible}
+.app[data-theme] .award,.app[data-theme] .victory-stars{overflow:visible}
+.app[data-theme] .modal-backdrop,.app[data-theme] .settings-shade{background:#14233883!important}
+@media(max-width:600px){
+ .app[data-theme] .play-toolbar .zg-home,.app[data-theme] .play-toolbar .zg-caption-toggle{min-width:32px!important;width:32px!important}
+ .app[data-theme] .overlay .award{top:-24px}
+}
