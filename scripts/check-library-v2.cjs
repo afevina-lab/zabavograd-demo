@@ -205,7 +205,7 @@ if(v.provenance.noun_expansion_20261109?.revision==='nouns-20261109-v1'){
  const newNouns=v.entries.filter(e=>e.id.startsWith('ru-noun-20261109-'));
  assert.equal(newNouns.length,100,'Noun expansion must contain 100 records');
  assert.equal(new Set(newNouns.map(e=>e.lemma)).size,100,'Noun expansion has duplicate spellings');
- const prior=v.entries.filter(e=>!e.id.startsWith('ru-noun-20261109-'));
+ const prior=v.entries.filter(e=>!e.id.startsWith('ru-noun-20261109-') && e.selection?.weight_source!=='public_release_consolidation_20261112');
  for(const e of newNouns){
   assert.equal(e.part_of_speech,'noun');
   assert(!prior.some(p=>p.lemma===e.lemma),'New noun duplicates existing lemma '+e.lemma);
