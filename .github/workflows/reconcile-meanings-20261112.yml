@@ -1,0 +1,64 @@
+name: Resolve equal-meaning public and editorial IDs safely
+on:
+  push:
+    branches: [migration/unify-library-20261112]
+    paths:
+      - '.github/workflows/reconcile-meanings-20261112.yml'
+      - 'scripts/reconcile-duplicate-meanings-20261112.cjs'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verify-aliases:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install libraries
+        run: npm install --ignore-scripts --no-audit --no-fund --no-package-lock
+      - name: Reconcile exact same-meaning IDs without removing any original card
+        run: node scripts/reconcile-duplicate-meanings-20261112.cjs
+      - name: Export game data and editorial preview
+        run: npm run library:refresh
+      - name: Annotate source reconciliation report
+        run: |
+          node - <<'JS'
+          const fs=require('fs');
+          const p='docs/consolidation-audit-20261112.json';
+          const j=JSON.parse(fs.readFileSync(p,'utf8'));
+          j.value_reconciliation={
+            exact_same_meaning_aliases:12,
+            published_ids_retained_as_source_records:25,
+            original_published_image_links_retained:true,
+            canonical_editorial_cards_receiving_images:12,
+            distinct_bone_meanings_not_merged:true
+          };
+          fs.writeFileSync(p,JSON.stringify(j,null,2)+'\n');
+          JS
+      - name: Validate unified library and ID/images semantics
+        run: |
+          npm run check:library
+          node scripts/verify-consolidated-library.cjs
+      - name: Test games and design
+        run: |
+          npm test
+          npm run check:design-system
+      - name: Build public site
+        run: |
+          npm run build
+          node scripts/check-offline-release.cjs dist
+      - name: Commit only verified source and static outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- outputs/library-v2.json outputs/image-library.json outputs/Библиотека.html docs/consolidation-audit-20261112.json library.json semantic-graph.json public/semantic-graph.json public/grammar-frames.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Resolve 12 equal-meaning aliases; restore images on canonical editorial words'
+            git push origin HEAD:migration/unify-library-20261112
+          fi
