@@ -212,3 +212,9 @@
   max-height:calc(1.28em * 3);
   color:var(--ui-deep)!important;
 }
+
+.transformation-paper{background:var(--zg-card-front-image) center/100% 100% no-repeat}
+.transformation-content{color:var(--ui-text)}
+.transformation-prompt{background:var(--ui-paper);color:var(--ui-text);border:2px solid var(--ui-outline);border-radius:18px}
+.transformation-rays{background:repeating-conic-gradient(from 0deg,transparent 0deg 30deg,#dcfaffcc 32deg 35deg,transparent 38deg 60deg);border-radius:16%;mix-blend-mode:screen}
+

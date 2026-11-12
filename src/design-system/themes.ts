@@ -99,3 +99,11 @@ export function soundFile(id:ThemeId,event:string):string{
  const special=THEMES[id].sounds[event as 'flip'|'match'];
  return special||(['click','wrong','win','deal'].includes(event)?event+'.wav':event+'.ogg');
 }
+
+/** Scene art and presentation stay outside the game rules. All layers share a canvas. */
+export const TRANSFORMATION_SCENES:Record<ThemeId,{kind:'flip'|'depth'|'rays';background?:string;back?:string;glass?:string;frame?:string}>={
+ neutral:{kind:'flip',back:'assets/flashcards/neutral-back.webp',frame:'assets/flashcards/neutral-front.webp'},
+ forest:{kind:'depth',frame:'assets/flashcards/tree-hollow.webp'},
+ space:{kind:'rays',background:'assets/flashcards/space-laboratory.webp',back:'assets/flashcards/camera-back.webp',glass:'assets/flashcards/camera-glass.webp',frame:'assets/flashcards/camera-frame.webp'}
+};
+
