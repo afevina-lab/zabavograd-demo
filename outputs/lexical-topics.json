@@ -1,0 +1,5086 @@
+{
+  "schema_version": 1,
+  "status": "editorial_source_pending_general_library_migration",
+  "updated_at": "2026-11-03",
+  "source": "Авторские решения по темам «Человек» и «Животный мир»; структурированный источник для будущей общей библиотеки",
+  "selection_weight_note": "Текущие утверждённые автором редакторские веса 100/70/50/30/20/10. Целевая миграция весов из LIBRARY_EDITOR.md не применена; не конвертировать автоматически.",
+  "default_selection_rule": "В базовой лексической теме используются только категории с default_selection=true; связанные формы из вспомогательных категорий доступны в специальных упражнениях и при автоматизации звуков.",
+  "deduplication_rule": "Одна запись на одно значение; категории и семантические связи не создают дубликатов.",
+  "categories": [
+    "Животный мир/Птицы/Перелётные",
+    "Животный мир/Вспомогательные/Детёныши",
+    "Человек/Профессии",
+    "Животный мир/Рыбы",
+    "Животный мир/Пресмыкающиеся и земноводные",
+    "Животный мир/Дикие животные/Жарких стран и других регионов",
+    "Животный мир/Насекомые",
+    "Человек/Семья",
+    "Животный мир/Птицы/Водоплавающие и околоводные",
+    "Животный мир/Домашние животные",
+    "Животный мир/Дикие животные/Лесные",
+    "Человек/Части тела",
+    "Животный мир/Дикие животные/Севера",
+    "Человек/Эмоции и состояния",
+    "Человек/Лицо",
+    "Человек/Люди",
+    "Животный мир/Вспомогательные/Самки",
+    "Животный мир/Птицы/Зимующие и оседлые",
+    "Животный мир/Птицы/Другие",
+    "Животный мир/Птицы/Домашние",
+    "Животный мир/Морские животные",
+    "Животный мир/Другие беспозвоночные",
+    "Животный мир/Вспомогательные/Самцы",
+    "Человек/Вспомогательные/Причёски",
+    "Человек/Вспомогательные/Физиологические проявления",
+    "Человек/Вспомогательные/Мимика"
+  ],
+  "entries": [
+    {
+      "lemma": "аист",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Перелётные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "аистёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "актёр",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "акула",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "аллигатор",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "антилопа",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "археолог",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "бабочка",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "бабушка",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "баклан",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Водоплавающие и околоводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "баран",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ],
+      "note": "Используется в базовой выдаче, связан с овцой"
+    },
+    {
+      "lemma": "барсук",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "бегемот",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "бедро",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "белка",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "белый медведь",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Севера",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "бельчонок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "библиотекарь",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "благодарность",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "близнецы",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "бобр",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "бобрёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "богомол",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "божья коровка",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "борода",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ],
+      "note": "Изображение без лица"
+    },
+    {
+      "lemma": "брат",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "бровь",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "броненосец",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "бурундук",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "бык",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ],
+      "note": "Используется в базовой выдаче, связан с коровой"
+    },
+    {
+      "lemma": "веко",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "великан",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "верблюд",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "верблюжонок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "веснушки",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ветеринар",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "внук",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "внуки",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "внучка",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "водитель",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "военный",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "волк",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "волнение",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "волосы",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "волчица",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "волчонок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "волшебник",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "волшебница",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "воробей",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "воробьёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "воробьиный сыч",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ворон",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Другие",
+          "default_selection": true
+        }
+      ],
+      "note": "Не путать с вороной; отдельная птица"
+    },
+    {
+      "lemma": "ворона",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "воронёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "воспитатель",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "врач",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ],
+      "note": "Женщина на иллюстрации"
+    },
+    {
+      "lemma": "выдра",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "гагара",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Водоплавающие и околоводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "гадюка",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "газель",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "галка",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "геолог",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "гепард",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "герой",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ],
+      "note": "Человек, совершающий героические подвиги, а не просто персонаж истории"
+    },
+    {
+      "lemma": "гиена",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "глаз",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "голень",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "голова",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "головастик",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ],
+      "note": "Стадия развития земноводных, не категория детёнышей"
+    },
+    {
+      "lemma": "голубёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "голубка",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "голубь",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "гордость",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "горилла",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "гость",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "грач",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Перелётные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "грачонок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "гриф",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Другие",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "грудь",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "грусть",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "illustration"
+    },
+    {
+      "lemma": "губы",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "гуппи",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "гусеница",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "гусёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "гусыня",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ],
+      "note": "Вспомогательное название самки гуся"
+    },
+    {
+      "lemma": "гусь",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Домашние",
+          "default_selection": true
+        },
+        {
+          "path": "Животный мир/Птицы/Водоплавающие и околоводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "дворник",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "девочка",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "дедушка",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "дельфин",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "дождевой червь",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Другие беспозвоночные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "доктор",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ],
+      "note": "Мужчина на иллюстрации; связан по значению с врачом"
+    },
+    {
+      "lemma": "дочь",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "дрозд",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Перелётные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "друг",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "дядя",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "дятел",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ёж",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ежонок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "енот",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ёрш",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "жаба",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "жаворонок",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Перелётные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "жалость",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "желудок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "жена",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "жених",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "женщина",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "жеребёнок",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "жеребец",
+      "weight": 10,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самцы",
+          "default_selection": false
+        }
+      ],
+      "note": "Только семья животных с кобылой, без базовой тематической выдачи",
+      "selection_scope": "related_tasks_only"
+    },
+    {
+      "lemma": "живот",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "жираф",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "жук",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "жук-носорог",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "жук-олень",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "журавлёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "журавль",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Перелётные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "зависть",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "зайчиха",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "зайчонок",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "запястье",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "заяц",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "зебра",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "злость",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "illustration"
+    },
+    {
+      "lemma": "змея",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "золотая рыбка",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "зрачок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "зритель",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "зуб",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "зубр",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "иволга",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Перелётные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "игуана",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "индейка",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ],
+      "selection_scope": "related_tasks_only"
+    },
+    {
+      "lemma": "индюк",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Домашние",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "индюшонок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "инженер",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "интерес",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "кабан",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "кабаниха",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "кальмар",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "камбала",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "капитан",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "карась",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "карлик",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "карп",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "кассир",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "кенгуру",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ],
+      "note": "С сумкой, без детёныша"
+    },
+    {
+      "lemma": "кисть",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ],
+      "note": "Кисть руки (отдельное значение от инструмента художника)"
+    },
+    {
+      "lemma": "кит",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "клёст",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "клещ",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Другие беспозвоночные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "клоп",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "клоун",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "коала",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "кобра",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "кобыла",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ],
+      "note": "Только связанное задание семья животных с жеребцом"
+    },
+    {
+      "lemma": "кожа",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ],
+      "note": "Изображать не как участок кожи человека"
+    },
+    {
+      "lemma": "коза",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "козёл",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "козлёнок",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "колено",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "колибри",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Другие",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "колорадский жук",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "комар",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "кондитер",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "корова",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "королева",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ],
+      "note": "Утверждённый персонаж с чёрными волосами"
+    },
+    {
+      "lemma": "король",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "коршун",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Другие",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "косатка",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ],
+      "note": "Морское млекопитающее; не ошибочное «касатка»"
+    },
+    {
+      "lemma": "косичка",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Вспомогательные/Причёски",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "космонавт",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "кость",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "кот",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ],
+      "note": "Связан с кошкой; оба доступны в базовой теме"
+    },
+    {
+      "lemma": "котёнок",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "кошка",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ],
+      "note": "Связана с котом; оба доступны в базовой теме"
+    },
+    {
+      "lemma": "краб",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "креветка",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "крокодил",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "кролик",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "крольчиха",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "крольчонок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "крот",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "крыса",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "кудри",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Вспомогательные/Причёски",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "кузнечик",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "кукушка",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Перелётные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "кукушонок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "кулак",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "куница",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "курица",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Домашние",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "куропатка",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Другие",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "курьер",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ладонь",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ласточка",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Перелётные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "лебедёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "лебедь",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Перелётные",
+          "default_selection": true
+        },
+        {
+          "path": "Животный мир/Птицы/Водоплавающие и околоводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "лев",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "лёгкие",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "лемур",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ленивец",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "леопард",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "лещ",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "лиса",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "лисёнок",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "лисица",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "лицо",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "лоб",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "локоть",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "лосёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "лосиха",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "лосось",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "лось",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "лошадь",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ],
+      "note": "Самостоятельное базовое название, НЕ использовать в семье животных"
+    },
+    {
+      "lemma": "львёнок",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "львица",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "любовь",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "лягушка",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "майский жук",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "малыш",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "мальчик",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "мама",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "матрос",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "машинист",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "медведица",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "медведь",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "медвежонок",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "медсестра",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "медуза",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "мидия",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "младенец",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "многоножка",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Другие беспозвоночные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "мозг",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "мокрица",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Другие беспозвоночные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "моль",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "морж",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Севера",
+          "default_selection": true
+        },
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "морская звезда",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "морская свинка",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "морская черепаха",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "морской ёж",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "морской конёк",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "морской котик",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "моряк",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "мотылёк",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "муж",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "мужчина",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "музыкант",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "муравей",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "муравьед",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "муха",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "мышца",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "мышь",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ],
+      "note": "Животное, отдельное значение от компьютерной мыши"
+    },
+    {
+      "lemma": "нарвал",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Севера",
+          "default_selection": true
+        },
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "невеста",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "нежность",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "незнакомец",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "нога",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ноготь",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ноздря",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "нос",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "носорог",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "обезьяна",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ],
+      "note": "Общее название, виды обезьян редки"
+    },
+    {
+      "lemma": "обида",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "овца",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "окунь",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "оленёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "олениха",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "олень",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "омар",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "орёл",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Другие",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "орлёнок",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "орлица",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "оса",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "осёл",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "осётр",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ослёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "ослица",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "осьминог",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "отвращение",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "официант",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "охотник",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "охранник",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "павлин",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Другие",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "палец",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "пантера",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ],
+      "note": "Уточнить значение перед созданием изображения"
+    },
+    {
+      "lemma": "папа",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "парикмахер",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "пассажир",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "паук",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Другие беспозвоночные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "певец",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "пекарь",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "пеликан",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Водоплавающие и околоводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "перепёлка",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Домашние",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "песец",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Севера",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "петух",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Домашние",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "пешеход",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "пилот",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "пингвин",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Водоплавающие и околоводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "пиранья",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "пират",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "питон",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "пиявка",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Другие беспозвоночные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "племянник",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "племянница",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "плечо",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "плотва",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "повар",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "подбородок",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "подросток",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "подруга",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "пожарный",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "покупатель",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "полицейский",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "пони",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "поползень",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "попугай",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Другие",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "поросёнок",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "портной",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "почтальон",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "принц",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "принцесса",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "программист",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "продавец",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "птенец",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "пупок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "пчела",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "пятка",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "радость",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "illustration"
+    },
+    {
+      "lemma": "рак",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Другие беспозвоночные",
+          "default_selection": true
+        }
+      ],
+      "note": "Речной рак, не болезнь"
+    },
+    {
+      "lemma": "ребёнок",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ревность",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "ресницы",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "родители",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "родственник",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "рот",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "рука",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ],
+      "note": "Единственное исключение с весом 100 в разделе частей тела"
+    },
+    {
+      "lemma": "рыба",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ],
+      "note": "Обобщённое название, не конкретный вид"
+    },
+    {
+      "lemma": "рыба-клоун",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "рыба-меч",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "рыбак",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "рысь",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "рыцарь",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "садовник",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "саламандра",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "саранча",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "сверчок",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "светлячок",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "свинья",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "свиристель",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "северный олень",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Севера",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "селезень",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самцы",
+          "default_selection": false
+        }
+      ],
+      "note": "Почти не используется: только связанные и фонетические задания",
+      "selection_scope": "related_tasks_only"
+    },
+    {
+      "lemma": "сельдь",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "семья",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "сердце",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ],
+      "note": "Анатомический орган, отдельное значение от геометрической фигуры"
+    },
+    {
+      "lemma": "сестра",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "синица",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "скалярия",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "скат",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "скворец",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Перелётные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "скворчонок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "скелет",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "скорпион",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Другие беспозвоночные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "скука",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "слеза",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Вспомогательные/Физиологические проявления",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "слизень",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Другие беспозвоночные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "слон",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "слонёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "слониха",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "снегирь",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "собака",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "сова",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "совёнок",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "сойка",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "сокол",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Другие",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "соколёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "солдат",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "соловей",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Перелётные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "сом",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "сорока",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "сороконожка",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Другие беспозвоночные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "сосед",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "соседка",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "спасатель",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "спина",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "спокойствие",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "спортсмен",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "старик",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "старушка",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "стоматолог",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "страус",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Другие",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "страусёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "страх",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "illustration"
+    },
+    {
+      "lemma": "стрекоза",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "стриж",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Перелётные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "стрижонок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "строитель",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ступня",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "стыд",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "сурикат",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "суслик",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Лесные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "счастье",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "сын",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "танцор",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "таракан",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "тарантул",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Другие беспозвоночные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "телёнок",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "тело",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "термит",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "тётя",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Семья",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "тигр",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ],
+      "note": "На иллюстрации без улыбки"
+    },
+    {
+      "lemma": "тигрёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "тигрица",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самки",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "тля",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "тракторист",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "тревога",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "тренер",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "треска",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "тритон",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "трясогузка",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Перелётные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "тукан",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Другие",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "тюлень",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Севера",
+          "default_selection": true
+        },
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "уборщик",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "угорь",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "удав",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "удивление",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "illustration"
+    },
+    {
+      "lemma": "уж",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "улитка",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Другие беспозвоночные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "улыбка",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Вспомогательные/Мимика",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "усталость",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Эмоции и состояния",
+          "default_selection": true
+        }
+      ],
+      "image_policy": "text_only"
+    },
+    {
+      "lemma": "устрица",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Морские животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "усы",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "утёнок",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "утка",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Домашние",
+          "default_selection": true
+        },
+        {
+          "path": "Животный мир/Птицы/Водоплавающие и околоводные",
+          "default_selection": true
+        }
+      ],
+      "note": "Базовое слово; не следует трактовать его как название самца"
+    },
+    {
+      "lemma": "ухо",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "учёный",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "учитель",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "фазан",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Другие",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "фермер",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "филин",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Зимующие и оседлые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "фламинго",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Водоплавающие и околоводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "форель",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "фотограф",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "футболист",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "хамелеон",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "хозяин",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "хомяк",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "хорёк",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "хряк",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Самцы",
+          "default_selection": false
+        }
+      ],
+      "selection_scope": "related_tasks_only"
+    },
+    {
+      "lemma": "художник",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "цапля",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Перелётные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "цыплёнок",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "чайка",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Водоплавающие и околоводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "часовщик",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "чёлка",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Вспомогательные/Причёски",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "человек",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Люди",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "черепаха",
+      "weight": 100,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "швея",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "шея",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Части тела",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "шимпанзе",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "шиншилла",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Домашние животные",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "шмель",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Насекомые",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "шофёр",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "щека",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "щенок",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "щука",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Рыбы",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "экскаваторщик",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Человек/Профессии",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ягнёнок",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Вспомогательные/Детёныши",
+          "default_selection": false
+        }
+      ]
+    },
+    {
+      "lemma": "ягуар",
+      "weight": 20,
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "язык",
+      "weight": 70,
+      "categories": [
+        {
+          "path": "Человек/Лицо",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ястреб",
+      "weight": 30,
+      "categories": [
+        {
+          "path": "Животный мир/Птицы/Другие",
+          "default_selection": true
+        }
+      ]
+    },
+    {
+      "lemma": "ящерица",
+      "weight": 50,
+      "categories": [
+        {
+          "path": "Животный мир/Пресмыкающиеся и земноводные",
+          "default_selection": true
+        }
+      ]
+    }
+  ],
+  "semantic_relations": [
+    {
+      "type": "animal_family",
+      "male": "кот",
+      "female": "кошка",
+      "offspring": "котёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "собака",
+      "offspring": "щенок"
+    },
+    {
+      "type": "animal_family",
+      "male": "бык",
+      "female": "корова",
+      "offspring": "телёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "жеребец",
+      "female": "кобыла",
+      "offspring": "жеребёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "хряк",
+      "female": "свинья",
+      "offspring": "поросёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "баран",
+      "female": "овца",
+      "offspring": "ягнёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "козёл",
+      "female": "коза",
+      "offspring": "козлёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "крольчиха",
+      "offspring": "крольчонок"
+    },
+    {
+      "type": "animal_family",
+      "male": "осёл",
+      "female": "ослица",
+      "offspring": "ослёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "медведь",
+      "female": "медведица",
+      "offspring": "медвежонок"
+    },
+    {
+      "type": "animal_family",
+      "male": "волк",
+      "female": "волчица",
+      "offspring": "волчонок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "лиса",
+      "offspring": "лисёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "заяц",
+      "female": "зайчиха",
+      "offspring": "зайчонок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "белка",
+      "offspring": "бельчонок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": null,
+      "offspring": "ежонок"
+    },
+    {
+      "type": "animal_family",
+      "male": "лось",
+      "female": "лосиха",
+      "offspring": "лосёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "олень",
+      "female": "олениха",
+      "offspring": "оленёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "бобр",
+      "female": null,
+      "offspring": "бобрёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "тигр",
+      "female": "тигрица",
+      "offspring": "тигрёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "лев",
+      "female": "львица",
+      "offspring": "львёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "слон",
+      "female": "слониха",
+      "offspring": "слонёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "верблюд",
+      "female": null,
+      "offspring": "верблюжонок"
+    },
+    {
+      "type": "animal_family",
+      "male": "петух",
+      "female": "курица",
+      "offspring": "цыплёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "селезень",
+      "female": "утка",
+      "offspring": "утёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "гусь",
+      "female": "гусыня",
+      "offspring": "гусёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": "индюк",
+      "female": "индейка",
+      "offspring": "индюшонок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "сова",
+      "offspring": "совёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "орёл",
+      "offspring": "орлёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "воробей",
+      "offspring": "воробьёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "голубь",
+      "offspring": "голубёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "ворон",
+      "offspring": "воронёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "грач",
+      "offspring": "грачонок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "скворец",
+      "offspring": "скворчонок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "кукушка",
+      "offspring": "кукушонок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "аист",
+      "offspring": "аистёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "журавль",
+      "offspring": "журавлёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "лебедь",
+      "offspring": "лебедёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "стриж",
+      "offspring": "стрижонок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "сокол",
+      "offspring": "соколёнок"
+    },
+    {
+      "type": "animal_family",
+      "male": null,
+      "female": "страус",
+      "offspring": "страусёнок"
+    }
+  ],
+  "excluded_lemmas": [
+    "хвостик (причёска)",
+    "ёжик (дубль уменьшительной формы)",
+    "обезьянка (ложный детёныш)",
+    "павиан",
+    "полярный волк",
+    "овцебык",
+    "белуха",
+    "полярная лисица",
+    "морская губка",
+    "лангуст",
+    "грачиха",
+    "ежиха",
+    "касатка"
+  ],
+  "source_note": "Самки и самцы животных — вспомогательные ролевые категории; «Семья животных» — только семантические связи. Отдельные самцы вроде жеребца/селезня исключены из обычной лексической выдачи."
+}

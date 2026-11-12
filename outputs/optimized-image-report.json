@@ -1,0 +1,734 @@
+{
+  "count": 91,
+  "format": "WebP RGBA 960px max, quality 86",
+  "images": [
+    {
+      "source": "public/assets/words/arbuz-tselyy.png",
+      "webp": "public/assets/words/arbuz-tselyy.webp",
+      "source_sha256": "a846061943976d74544581126aa7bd69e19cbf33555bf2c06e5a2da1be245ed0",
+      "webp_sha256": "3844a9af26d0e9be14474cdcaa6b48f88a2aa13ffac564151a457601e2f75a48",
+      "original_size": 1524250,
+      "webp_size": 182544
+    },
+    {
+      "source": "public/assets/words/arbuz-dolka.png",
+      "webp": "public/assets/words/arbuz-dolka.webp",
+      "source_sha256": "62172fe4ec6de8623c0ab7718d9f52e2ef8d841c77f316b25ffc3c18cb314682",
+      "webp_sha256": "483879959627c9d4ff84f7c03aec5df7c9a1e1c231ccae52d7f77f9312e7d3d0",
+      "original_size": 1181111,
+      "webp_size": 122034
+    },
+    {
+      "source": "public/assets/words/baraban.png",
+      "webp": "public/assets/words/baraban.webp",
+      "source_sha256": "21de4ac7164e3001ccf33b0fa9b8435f78d98d481609bec653c5135aeb2a0809",
+      "webp_sha256": "81436a5fd0559b2023d1d4830fcf76f130c71dc43c6c24c6f02dcf2adbaffb00",
+      "original_size": 1530432,
+      "webp_size": 120124
+    },
+    {
+      "source": "public/assets/words/vedro.png",
+      "webp": "public/assets/words/vedro.webp",
+      "source_sha256": "9a39b8ef091cdfa9f0d2b750d6619a3da346af35f9b1b405dda893100bf17865",
+      "webp_sha256": "b1a3e5b9ab9abc36116fb99ed89d05eef765c89e86c6c80748bcdcdd29fefb7a",
+      "original_size": 1317653,
+      "webp_size": 121894
+    },
+    {
+      "source": "public/assets/words/vinograd.png",
+      "webp": "public/assets/words/vinograd.webp",
+      "source_sha256": "f3a173ed904074fa67a9aeb0a635bd9fe2af6bd6057ea0ac0170f9f901fc81b6",
+      "webp_sha256": "643e701acf2afb1d6a0f2655415330a8702651a4574216166d0f203388c22e45",
+      "original_size": 1237807,
+      "webp_size": 115404
+    },
+    {
+      "source": "public/assets/words/ruchka.png",
+      "webp": "public/assets/words/ruchka.webp",
+      "source_sha256": "cccc46c0f9900f33422ec60db1a0b979820dd7a0f0ef746dbdbf161665802033",
+      "webp_sha256": "0b324502a479efe9b1ee147899d16a5ea46b3e71cd3b0159e40f39a90296c6c0",
+      "original_size": 708344,
+      "webp_size": 85888
+    },
+    {
+      "source": "public/assets/words/televizor.png",
+      "webp": "public/assets/words/televizor.webp",
+      "source_sha256": "a0c25e1b493bc8700e6b43c5cfe20f1166bbf1388c8c7ae3b4adf085de8f06fe",
+      "webp_sha256": "2840a159cfb301fd9b668d5a6583563447ecda995944303afed804648790b861",
+      "original_size": 2282714,
+      "webp_size": 225146
+    },
+    {
+      "source": "public/assets/words/tigr.png",
+      "webp": "public/assets/words/tigr.webp",
+      "source_sha256": "0a9e81e9feec9b1c54d892bfb8b4b685b3615af87d75bd6b36e70f9464b2f03b",
+      "webp_sha256": "629b44a6f804b5a3deff20c5448b8236191836e616e7cd6f2810a12a96abd504",
+      "original_size": 1773530,
+      "webp_size": 176670
+    },
+    {
+      "source": "public/assets/words/tort.png",
+      "webp": "public/assets/words/tort.webp",
+      "source_sha256": "0697b2d28708a4e7424d18609e4d9bf40af72b94d2d3b75cb402bde6aa6c6253",
+      "webp_sha256": "e73a9f4af8ba3199ecd2cde009f36900fe832e6eb91d5c098c30c8d3cecffce4",
+      "original_size": 1912885,
+      "webp_size": 169120
+    },
+    {
+      "source": "public/assets/words/trava.png",
+      "webp": "public/assets/words/trava.webp",
+      "source_sha256": "87b341fa170e0047f5bc48f27880c294694268a02364f307cd024adf27eda433",
+      "webp_sha256": "ec856c9a74d5c4c5675d5029e42ddc75e00eff0d8e15ef9824b6067552b32260",
+      "original_size": 1016625,
+      "webp_size": 148370
+    },
+    {
+      "source": "public/assets/words/traktor.png",
+      "webp": "public/assets/words/traktor.webp",
+      "source_sha256": "b94c9edc2347a65de5d5794fc750ab2585a3c928826c54b8fa596ef156cb2412",
+      "webp_sha256": "c21672cb172efdca8b30fa3d83b4b3099eadfa22f7e1170bff85d4d239e6cae2",
+      "original_size": 2264357,
+      "webp_size": 211026
+    },
+    {
+      "source": "public/assets/words/tramvay.png",
+      "webp": "public/assets/words/tramvay.webp",
+      "source_sha256": "7bcfe4dfe9b972c4ac91bad874f9421f478d02449122c30762d6c4d0a222d2d7",
+      "webp_sha256": "0b49f42315619ac200f555235c93c3a2ab4a2a35bf6a26a3082909d3b0a8e883",
+      "original_size": 2048732,
+      "webp_size": 225946
+    },
+    {
+      "source": "public/assets/words/shar-vozdushnyy.png",
+      "webp": "public/assets/words/shar-vozdushnyy.webp",
+      "source_sha256": "5d59db73e4c2a1e0873722b94d95505bba8efaaa4624131b10d73a371016d4dd",
+      "webp_sha256": "289c867a6f7221ba721efa9ca5ecb9bb07af2e4a5a13c47bb0a14b5a850a24cd",
+      "original_size": 1510368,
+      "webp_size": 144138
+    },
+    {
+      "source": "public/assets/words/vorobey.png",
+      "webp": "public/assets/words/vorobey.webp",
+      "source_sha256": "db44259ca8add64eedc9ad456fd0f43d53d8c650a3b959660184edb3a1723a8d",
+      "webp_sha256": "7ed38c7afb979878d4dc291fab7f39adcc91595ce839ad11f8ffcc6e53f9f5b4",
+      "original_size": 1145143,
+      "webp_size": 120612
+    },
+    {
+      "source": "public/assets/words/sharf.png",
+      "webp": "public/assets/words/sharf.webp",
+      "source_sha256": "4e11e6d74ce2f28f50c999e6053adf989c2a6c3f3eaa16636e9eecface6acfa9",
+      "webp_sha256": "e58d3d6ed762f1eb053ba3e60e7ec42c4be3a52f63da764875cd50433cd4e82c",
+      "original_size": 1677373,
+      "webp_size": 201248
+    },
+    {
+      "source": "public/assets/words/shorty.png",
+      "webp": "public/assets/words/shorty.webp",
+      "source_sha256": "df313c819025b8754fb404b371372995b8362ffc033446bc272392a96c63e495",
+      "webp_sha256": "3c947977b5941185e3efbb9eb65ac0001047e0f86840b70391e356c92dc29af8",
+      "original_size": 2080213,
+      "webp_size": 226818
+    },
+    {
+      "source": "public/assets/words/bober.png",
+      "webp": "public/assets/words/bober.webp",
+      "source_sha256": "73eeac9189ffe7cddb8259d5e686c9d6ffa1d43d203ea67b4eb3b1304249a9d9",
+      "webp_sha256": "1222622c14d03bcb8308cd6a68acef86485426f4d3da1be6acb6cd04a540f44d",
+      "original_size": 2062771,
+      "webp_size": 239700
+    },
+    {
+      "source": "public/assets/words/boroda.png",
+      "webp": "public/assets/words/boroda.webp",
+      "source_sha256": "ede37066b8ec6085328ef709c5c7ef63db8a8b95dc6dd7b9c1286fe86988aa1a",
+      "webp_sha256": "1079cd976acedade4efaa2ba986a1a469bcd2c281af911ba288e7ae45702081f",
+      "original_size": 1856254,
+      "webp_size": 214780
+    },
+    {
+      "source": "public/assets/words/braslet.png",
+      "webp": "public/assets/words/braslet.webp",
+      "source_sha256": "12457aea31cae35ac972de5ac4e5883c7318c4994722ca389cd0f4deaf23a741",
+      "webp_sha256": "0f9714af70f1b8513dd9eacebff1c74c7fc2cecc7f4c05cf3ae017b647e0fdbe",
+      "original_size": 1847685,
+      "webp_size": 109684
+    },
+    {
+      "source": "public/assets/words/veer.png",
+      "webp": "public/assets/words/veer.webp",
+      "source_sha256": "891c0f3aec07dc0e0ce49ccf0263e0345baef09abbebb0d2a7caaf33cb6f9d83",
+      "webp_sha256": "b13edfaee1adf41d3e97b2fbd33849423ba14904130d1daa013afde773d4b025",
+      "original_size": 1795694,
+      "webp_size": 221910
+    },
+    {
+      "source": "public/assets/words/vodorosli.png",
+      "webp": "public/assets/words/vodorosli.webp",
+      "source_sha256": "fa3357b7f71bbb5583762c565becae1bffdd74b3e98e45e514aa46ab74000d1a",
+      "webp_sha256": "0971693cf6c481abf33d30cf805ef02948807da2928fc0eb02258ca3e5f0e568",
+      "original_size": 1145962,
+      "webp_size": 178500
+    },
+    {
+      "source": "public/assets/words/vorota.png",
+      "webp": "public/assets/words/vorota.webp",
+      "source_sha256": "f17cc9b2acf5068ae3d271e938906d66405a03c8723ca927e5ccf0bca2805f69",
+      "webp_sha256": "2106579b09ac971d943e4dbc2b7c0df403f0216eca65c1f70a91117a60fc8d2f",
+      "original_size": 2428356,
+      "webp_size": 216744
+    },
+    {
+      "source": "public/assets/words/gamburger.png",
+      "webp": "public/assets/words/gamburger.webp",
+      "source_sha256": "73ac1deeee8a06c1bc5ed9d4651f232105e6aa44f7fea21d917e6dbb9b9d27f5",
+      "webp_sha256": "8352e480a10a075fde613a91908e231a66ba1c8ac929b021ad5b0623b7129831",
+      "original_size": 2459535,
+      "webp_size": 277908
+    },
+    {
+      "source": "public/assets/words/vorona.png",
+      "webp": "public/assets/words/vorona.webp",
+      "source_sha256": "ef5c36980b86b8c4088cc91f5908d5b086e6eebce64e0b3f01e8c342941546ec",
+      "webp_sha256": "9eed7e09cc0be72f092c74839ee0aec65fe8efe1422fe63eb50ac399c34f6ac1",
+      "original_size": 1037116,
+      "webp_size": 91528
+    },
+    {
+      "source": "public/assets/words/girlyanda.png",
+      "webp": "public/assets/words/girlyanda.webp",
+      "source_sha256": "9b5988b32af7aa129c2e8a918cd3ac9673ae28d1114b9c70828ba65b17876208",
+      "webp_sha256": "900f35c980206fc9274bca882ed37e71036a55e084c901b0b3af6b315a146fe0",
+      "original_size": 798466,
+      "webp_size": 131804
+    },
+    {
+      "source": "public/assets/words/gitara.png",
+      "webp": "public/assets/words/gitara.webp",
+      "source_sha256": "77539f83e9ebfcca8f96ba37cd63b03aa2a7ad28fbc4d1070a360cae8749ca56",
+      "webp_sha256": "e020bbb21ea7e45da9a2932787bc5bcce3dcd74b427b3900e22c82c8e4e5e920",
+      "original_size": 964650,
+      "webp_size": 97684
+    },
+    {
+      "source": "public/assets/words/gorshok.png",
+      "webp": "public/assets/words/gorshok.webp",
+      "source_sha256": "bee6a72b30da9ec35c33229d9fa057d70fb10d3ac5773e83be87ef6a77c212d0",
+      "webp_sha256": "8253424d4ac4f8b103eca43d0c7b738b1d9cdd446c1561647368b3d0360aecad",
+      "original_size": 1517631,
+      "webp_size": 148470
+    },
+    {
+      "source": "public/assets/words/granat.png",
+      "webp": "public/assets/words/granat.webp",
+      "source_sha256": "07ecc96d4ef11344db1b31e11cfa8b6412737d9560ca8b2ee265f3ad6c3cc57b",
+      "webp_sha256": "a029712e6af3712f5afade3351117f284529425ec550c885f1c652889c171940",
+      "original_size": 2006078,
+      "webp_size": 227810
+    },
+    {
+      "source": "public/assets/words/drakon.png",
+      "webp": "public/assets/words/drakon.webp",
+      "source_sha256": "3536c2ff86e867971a5257a5ab3b34f89ca0b4e260f8253cb285011f997a4d81",
+      "webp_sha256": "0fc1169de2dbfeeb9714bf29956b1bee635d5c88f51cd70d73b9303bfd3fec98",
+      "original_size": 1874641,
+      "webp_size": 257858
+    },
+    {
+      "source": "public/assets/words/drova.png",
+      "webp": "public/assets/words/drova.webp",
+      "source_sha256": "a3854b612c13a5eb871ffa3d1a7fa75ac5017cd51ff1eb41b764c7095e2bc366",
+      "webp_sha256": "18486b646153249a1c89e6ae8770557246b80ce5ae6460910a0f26774b2e1578",
+      "original_size": 1468152,
+      "webp_size": 174924
+    },
+    {
+      "source": "public/assets/words/edinorog.png",
+      "webp": "public/assets/words/edinorog.webp",
+      "source_sha256": "3e4d0f4bb290de18e5e3a86aa6316152947a612d5fea2f81e900cb8365613d51",
+      "webp_sha256": "b1e0f6f68395d4f0f83e41c6668372b66658a8718ed2a06196e89d17020c51de",
+      "original_size": 1524657,
+      "webp_size": 223532
+    },
+    {
+      "source": "public/assets/words/zhurnal.png",
+      "webp": "public/assets/words/zhurnal.webp",
+      "source_sha256": "b9b6e1e88282028eaaed3d8853a41a3b268ecb452981e39448cbb3240db7a103",
+      "webp_sha256": "47533f6d1223aac4d5193724c2c92cf11c0dd3de798f096da1e3fd9516b16b51",
+      "original_size": 2096953,
+      "webp_size": 245238
+    },
+    {
+      "source": "public/assets/words/zefir.png",
+      "webp": "public/assets/words/zefir.webp",
+      "source_sha256": "1d2960e4012727f10474461d368fe5626f95078027767dde401627beaa506341",
+      "webp_sha256": "3f39f7e0d6ffbced649fc96733ed687165e614714c10d93e6f77ac37f97bebe8",
+      "original_size": 1710855,
+      "webp_size": 214014
+    },
+    {
+      "source": "public/assets/words/igra.png",
+      "webp": "public/assets/words/igra.webp",
+      "source_sha256": "4aefa9838185ff0041ea53edb6db4c9e2790435465c8aeeaff4c20012c6e7632",
+      "webp_sha256": "667c148116f3f1e52312e0c9370a470b4ed46ddc6ea4242cc3090a989fe29716",
+      "original_size": 2032340,
+      "webp_size": 222852
+    },
+    {
+      "source": "public/assets/words/vrach.png",
+      "webp": "public/assets/words/vrach.webp",
+      "source_sha256": "a52d2eb304e92c7ed7f117a0068212b65bd85bac7f362c5fb3e0169c0eac0bd0",
+      "webp_sha256": "428161088473a1ae49d6f39da9cf564449819008743e55d64afc1cbe86941b8d",
+      "original_size": 717728,
+      "webp_size": 71552
+    },
+    {
+      "source": "public/assets/words/yogurt.png",
+      "webp": "public/assets/words/yogurt.webp",
+      "source_sha256": "aea5d91a51ae5abfc65ee66540d2e788a94dc7d3e5f822b0789143534224c891",
+      "webp_sha256": "23b97e95d59a586b569e849f805a3a8541ebc98a1bc5b49fa4ac2acc34b113e1",
+      "original_size": 1595576,
+      "webp_size": 160560
+    },
+    {
+      "source": "public/assets/words/kartina.png",
+      "webp": "public/assets/words/kartina.webp",
+      "source_sha256": "f8f26b9274286d12aea6918dd3f845f1481dc81eb0819ac74a63c75bfac38019",
+      "webp_sha256": "722ecd6e52908fb267ff3dfb43fb37ec1a71c20ac6f9d5327ac35ce9591901da",
+      "original_size": 2254193,
+      "webp_size": 263722
+    },
+    {
+      "source": "public/assets/words/gora.png",
+      "webp": "public/assets/words/gora.webp",
+      "source_sha256": "6e86c8f9453d404629b52f335e36df800bfe6a07812462dc5421d9773cb84dde",
+      "webp_sha256": "2189fc19e5ff0caa089c192b7ea02711750201685b359d605d9c99abf1546d6d",
+      "original_size": 1076298,
+      "webp_size": 110866
+    },
+    {
+      "source": "public/assets/words/gorka.png",
+      "webp": "public/assets/words/gorka.webp",
+      "source_sha256": "c2aee7ee7e044420546351ed9cf43904de5e3c2c9361bde010a5bbf5299e9eb9",
+      "webp_sha256": "82a417cdc62a5efe965142d347bd90db31d9c5b12deff3d3de8fb4328fbd0d7e",
+      "original_size": 1176351,
+      "webp_size": 140162
+    },
+    {
+      "source": "public/assets/words/gorokh.png",
+      "webp": "public/assets/words/gorokh.webp",
+      "source_sha256": "d08954fdc7c25077da2e494863e911df20f8cf7482f804b5629097ef4686a879",
+      "webp_sha256": "6997fb05f2e4d9a6a815afc0aeaddef8e5ec633de311759221a6da2569f64ecf",
+      "original_size": 987275,
+      "webp_size": 107286
+    },
+    {
+      "source": "public/assets/words/gruzovik.png",
+      "webp": "public/assets/words/gruzovik.webp",
+      "source_sha256": "060df59b49dd28b0a4f70e6427649e29c5b36e20ddf74d3ef189cde5e3f660f4",
+      "webp_sha256": "1589b31a17bbff8fc8d7a2cc8e955a65e3050081699e0d35aed1bc5fafe9e4c4",
+      "original_size": 1478133,
+      "webp_size": 110658
+    },
+    {
+      "source": "public/assets/words/grusha.png",
+      "webp": "public/assets/words/grusha.webp",
+      "source_sha256": "304d695adc93e132bc1f73f1065ff8a74b43a325d7caa261024d5b51ba641b8a",
+      "webp_sha256": "04963238fed5c4f88a6606d4ce525716560cbb0b98090048f5ebaa3c5a2d93f1",
+      "original_size": 859787,
+      "webp_size": 74764
+    },
+    {
+      "source": "public/assets/words/doroga.png",
+      "webp": "public/assets/words/doroga.webp",
+      "source_sha256": "ba3b226c5584d94166e716a57f18e0d8c71474f11f3921bc76b012ebfb91521e",
+      "webp_sha256": "8e3f0328544dc8fc6026151f0ea5803203f1d0836a562bd45e9c78dc01e86eb6",
+      "original_size": 1283849,
+      "webp_size": 103690
+    },
+    {
+      "source": "public/assets/words/zhiraf.png",
+      "webp": "public/assets/words/zhiraf.webp",
+      "source_sha256": "99d6122daaab0ab41f264ccae2c37bf7969e141ba3b16b6a649cefae511a0c32",
+      "webp_sha256": "6e7bed8fb9ad5636e59ffec514d093f7f55597ced0d84381a5274f9c9444047a",
+      "original_size": 785749,
+      "webp_size": 110110
+    },
+    {
+      "source": "public/assets/words/zabor.png",
+      "webp": "public/assets/words/zabor.webp",
+      "source_sha256": "064c114ae7fcd679c332d680360e476d2a330d763b50fd37e8f16cc76121ff52",
+      "webp_sha256": "073fe93e1b8ac30577c4ce9be45432a3b766c4974c5e20c6639c9bb15bcaba2a",
+      "original_size": 1582416,
+      "webp_size": 164092
+    },
+    {
+      "source": "public/assets/words/zebra.png",
+      "webp": "public/assets/words/zebra.webp",
+      "source_sha256": "64c56ff20cad3d9ca1d275d1d151e413c5b38918fed47852fd8899fe041772e5",
+      "webp_sha256": "689508b31e638f59f323029293d5bdab301c20435b738a587a1d69d89f42a05f",
+      "original_size": 1150303,
+      "webp_size": 134244
+    },
+    {
+      "source": "public/assets/words/karandash.png",
+      "webp": "public/assets/words/karandash.webp",
+      "source_sha256": "beffd31662f59fc33300c0e3844f37de4b886f84cf35a947d8d557d18b93535b",
+      "webp_sha256": "0e87c429efddd7b39d69bea1e79991531ed38ccc6f3cafbc67c68d032dc073eb",
+      "original_size": 473465,
+      "webp_size": 46030
+    },
+    {
+      "source": "public/assets/words/kartoshka.png",
+      "webp": "public/assets/words/kartoshka.webp",
+      "source_sha256": "bbc0e605f431ec99d2b2656714b7e68c684f66a5ca53706d6b9fc54ee8d73da0",
+      "webp_sha256": "24d835f3d8588ba327b5cd1e56fd30cedc122f3b565221553a053223d482b0c3",
+      "original_size": 994228,
+      "webp_size": 91382
+    },
+    {
+      "source": "public/assets/words/kovyor.png",
+      "webp": "public/assets/words/kovyor.webp",
+      "source_sha256": "3705cf157c48835d5496619dd2c88c609a448b2a1435f42ccd06cce1707ef6e9",
+      "webp_sha256": "86d7996dc7bc1102507164063e3fe0d6c00e3dc4e45f86499392d211a5f258f1",
+      "original_size": 1647307,
+      "webp_size": 188028
+    },
+    {
+      "source": "public/assets/words/komar.png",
+      "webp": "public/assets/words/komar.webp",
+      "source_sha256": "147de15ac339160b365d795b44023f74eed7670cb9ef256c40beafede3144620",
+      "webp_sha256": "d515b022ff534acabe296cfa49c0c6da15bd7ea05e0757a37f69eeb8800d525a",
+      "original_size": 997607,
+      "webp_size": 144254
+    },
+    {
+      "source": "public/assets/words/kompyuter.png",
+      "webp": "public/assets/words/kompyuter.webp",
+      "source_sha256": "132fc0c656b26c59400aa26b8cc8d966278c337c859601c4510680e945d811a6",
+      "webp_sha256": "256ddf5e743cb5bfdbb711ddf175b4767f8f08e767ed7d93bddfde03d2cbba4a",
+      "original_size": 2403959,
+      "webp_size": 119598
+    },
+    {
+      "source": "public/assets/words/korzina.png",
+      "webp": "public/assets/words/korzina.webp",
+      "source_sha256": "49ecfc1dfd6ace1ee347cbed9f6625c5a70f24114ebee317a7272ac81e01a22a",
+      "webp_sha256": "6b9505991e6722e73e23b0b8d4800dad75fa6d857c75aff7f3325ea58dccef68",
+      "original_size": 1507657,
+      "webp_size": 179738
+    },
+    {
+      "source": "public/assets/words/korobka.png",
+      "webp": "public/assets/words/korobka.webp",
+      "source_sha256": "ee5a115856ffe7f2f7098cbe5d25697a487466379b7d629eef8ba8ec5a74c008",
+      "webp_sha256": "56dd698c56fb8555e68a3956c2753acb22c24868aa5d01ef1d897814aa6efdc7",
+      "original_size": 1527495,
+      "webp_size": 205512
+    },
+    {
+      "source": "public/assets/words/korova.png",
+      "webp": "public/assets/words/korova.webp",
+      "source_sha256": "cd89c479aec5628d062707564c27587f6f6675b57e633a46b624377fbe7fafbf",
+      "webp_sha256": "a37746ad052fe7f3900b7b3582335e07a54de054b445809e2e58bc90334027a5",
+      "original_size": 1514345,
+      "webp_size": 195390
+    },
+    {
+      "source": "public/assets/words/korona.png",
+      "webp": "public/assets/words/korona.webp",
+      "source_sha256": "b694637d350136dd784849699fdf3adda2f84108b8bdb112c60ce03710d5edbb",
+      "webp_sha256": "2e1ff8d10824e272c6b4ae52e1ed2f96db6119d6afab0601a402fd620986a18a",
+      "original_size": 1334491,
+      "webp_size": 156168
+    },
+    {
+      "source": "public/assets/words/krab.png",
+      "webp": "public/assets/words/krab.webp",
+      "source_sha256": "b634f6829457cb5ba4947c57830b33d4949f0e63a9bcc174a6a3920332aa32d1",
+      "webp_sha256": "2028f8ba4b61242437f8131b7878944b25b703fc70ff7f52288febe5fabe2d50",
+      "original_size": 1572045,
+      "webp_size": 208196
+    },
+    {
+      "source": "public/assets/words/kran-vodoprovodnyy.png",
+      "webp": "public/assets/words/kran-vodoprovodnyy.webp",
+      "source_sha256": "1d59536b6f7ac216061016d98595bc8bc7425b0887b4048a329147fe40de4d75",
+      "webp_sha256": "4c611682a655b0a4e536824b3c5bf3be794e294cfb24fa19c22d018e107da367",
+      "original_size": 1119952,
+      "webp_size": 123116
+    },
+    {
+      "source": "public/assets/words/kran-stroitelnyy.png",
+      "webp": "public/assets/words/kran-stroitelnyy.webp",
+      "source_sha256": "25a8f343225cf6a8d24668e8c7deb8872e486723e11020433a7b61e2ca58003a",
+      "webp_sha256": "b77c09daea9ad5ca58773f48fe466550b179d72d61568211b2814a58fe3d21cb",
+      "original_size": 1323334,
+      "webp_size": 228408
+    },
+    {
+      "source": "public/assets/words/kraski.png",
+      "webp": "public/assets/words/kraski.webp",
+      "source_sha256": "ed38a3876e36d1f7a70249895a41f55c48634c534aa37b305f65fcefadc87334",
+      "webp_sha256": "b5390410eed66d976567ddb77736092bdf148453213e86288fda994778ebc026",
+      "original_size": 1852346,
+      "webp_size": 213642
+    },
+    {
+      "source": "public/assets/words/krovat.png",
+      "webp": "public/assets/words/krovat.webp",
+      "source_sha256": "3bb85787239cb713186f035683cedcfed03ec259a6a5ac391115ccdd4aad6913",
+      "webp_sha256": "be3f715d783659860a6a0c7fa8446f3e8563ba5479a325509398c47f647b9317",
+      "original_size": 1419673,
+      "webp_size": 150110
+    },
+    {
+      "source": "public/assets/words/krolik.png",
+      "webp": "public/assets/words/krolik.webp",
+      "source_sha256": "c8e4b7b18f2a6f166a19031ce79e7eeb9f5268e3e4ddf2a7d5e115f837c622e7",
+      "webp_sha256": "46a442708d7b5a454741253ef613955062340758d1eb6adbf9405e5740474e9c",
+      "original_size": 1178349,
+      "webp_size": 149392
+    },
+    {
+      "source": "public/assets/words/krot.png",
+      "webp": "public/assets/words/krot.webp",
+      "source_sha256": "92dcee1f54306d2b84d2e88b6ab25cda94c12731f55fcea276151d60cb8256f5",
+      "webp_sha256": "f515a5b37d733312f7b6c97de1896569fbae13bc92ee4a526a70712793c52589",
+      "original_size": 1305104,
+      "webp_size": 155722
+    },
+    {
+      "source": "public/assets/words/kruzhka.png",
+      "webp": "public/assets/words/kruzhka.webp",
+      "source_sha256": "21580af0813cd79dd4813f102bc37787a93b3cc2e929bc757d137e28784cd0a5",
+      "webp_sha256": "142ef2a7e1f759d1b863e8a9a6c0d37893ab6d9a5bf08196ca1447b7d2b00558",
+      "original_size": 1921897,
+      "webp_size": 224526
+    },
+    {
+      "source": "public/assets/words/kukuruza.png",
+      "webp": "public/assets/words/kukuruza.webp",
+      "source_sha256": "0b7216158a4b6ef18de52ca40b21e6b7565fa8e6afa0ab18b4bf1fa26aad36a5",
+      "webp_sha256": "8262303e9bbc47ade7e509f1f59325a2fdf73578f18f383de44634af6c6833c3",
+      "original_size": 1539439,
+      "webp_size": 201404
+    },
+    {
+      "source": "public/assets/words/kurtka.png",
+      "webp": "public/assets/words/kurtka.webp",
+      "source_sha256": "389d0f9be0a5f48d1ef88b2832d9a5c5cd9d52bcb8cbb14bc89a1098c4d79e19",
+      "webp_sha256": "d9dbf267a89efa0372e8bf3cd8fe993ddd7fe089036369f9da6a0fd628883fb5",
+      "original_size": 2066115,
+      "webp_size": 213130
+    },
+    {
+      "source": "public/assets/words/morkov.png",
+      "webp": "public/assets/words/morkov.webp",
+      "source_sha256": "0d8d50d46850b0486e3ab84fce3b713f007b6dfebb79fa34bd6419b4a005afba",
+      "webp_sha256": "a10e99e5a9a18b4eb69e6fde0d559d99489045ebe5c6251afdc2b93e887dfb44",
+      "original_size": 1944321,
+      "webp_size": 301626
+    },
+    {
+      "source": "public/assets/words/morozhenoe.png",
+      "webp": "public/assets/words/morozhenoe.webp",
+      "source_sha256": "2ff504fd1d3775b51f23463092318a24c8d10ed37b5b7fe8c55abe9c29aaa68b",
+      "webp_sha256": "fdba43960017b6157a132e168f63a9fd9eda2170b416a278770c3474f6fe600b",
+      "original_size": 1473131,
+      "webp_size": 212040
+    },
+    {
+      "source": "public/assets/words/muravey.png",
+      "webp": "public/assets/words/muravey.webp",
+      "source_sha256": "87c7210024271ed61c02256ae0b7cdde3b2e9e820c663578072994035772ea84",
+      "webp_sha256": "2c19c55a563d1a27127258756930970cb26af16e54ac040fec8e2edbae0be8d0",
+      "original_size": 821913,
+      "webp_size": 108762
+    },
+    {
+      "source": "public/assets/words/mukhomor.png",
+      "webp": "public/assets/words/mukhomor.webp",
+      "source_sha256": "c1aaaef2f74e18cebaae62cee1a73a6994a542721e2d6984ba7b98c12a9b2a85",
+      "webp_sha256": "425cad1f5dc469e3265faf2a8e1f4d19d04fa012d7c567c87ee85f5a0da2a0ce",
+      "original_size": 1705616,
+      "webp_size": 216792
+    },
+    {
+      "source": "public/assets/words/ozero.png",
+      "webp": "public/assets/words/ozero.webp",
+      "source_sha256": "7b498491891c8b16e9dc063e42b5002d02fb06be7b4e4dc7de2e97954a63df23",
+      "webp_sha256": "0e04904c812647540b6919ad49d0dbdfc48cea803af61f858fea1e0d242fe123",
+      "original_size": 1726939,
+      "webp_size": 211628
+    },
+    {
+      "source": "public/assets/words/persik.png",
+      "webp": "public/assets/words/persik.webp",
+      "source_sha256": "137ebc1bfc3b0a9af54b1242f652385fd25247d67199817c1708190f2af37778",
+      "webp_sha256": "5f9cc39f2772b0865c338559e086f480c592f25fcfb6082859228da6d9c18d97",
+      "original_size": 2196276,
+      "webp_size": 287284
+    },
+    {
+      "source": "public/assets/words/pirog.png",
+      "webp": "public/assets/words/pirog.webp",
+      "source_sha256": "60aa4e16012fb0cae136cd55709acb788c312e54a8d7967d355fb7bd0b5cc431",
+      "webp_sha256": "6abb4aaffa1f4a9efb9b847fe5b1e1a1c38c6a1f606c05d82cc539da57abb4fa",
+      "original_size": 1474456,
+      "webp_size": 123892
+    },
+    {
+      "source": "public/assets/words/povar.png",
+      "webp": "public/assets/words/povar.webp",
+      "source_sha256": "09b532f88f486e545cdd7339f9d47d9242b19623f5a32e759c79a7143b2c3960",
+      "webp_sha256": "dbe282457bc555a6eac232502c6eb6be143da344cb964385f15816fc49be6de9",
+      "original_size": 1074361,
+      "webp_size": 114376
+    },
+    {
+      "source": "public/assets/words/podarok.png",
+      "webp": "public/assets/words/podarok.webp",
+      "source_sha256": "88dc1c2dfee37a7139f9c41195c3f6c58346b104df63d295c7411e836ba1952d",
+      "webp_sha256": "c8b8027ca0f68ffecb66195552e1e02c707b36fb570517f25e9c11fd26af6a08",
+      "original_size": 2006290,
+      "webp_size": 84846
+    },
+    {
+      "source": "public/assets/words/pomidor.png",
+      "webp": "public/assets/words/pomidor.webp",
+      "source_sha256": "a3addaf540874157c781572036fccb3a8fa9d820acf6969d38acbaed90592d14",
+      "webp_sha256": "92422f3def96fb591fd7c069d2228444d5eff8ed6622286aa29f2a3edbbeecb1",
+      "original_size": 1748528,
+      "webp_size": 191692
+    },
+    {
+      "source": "public/assets/words/raduga.png",
+      "webp": "public/assets/words/raduga.webp",
+      "source_sha256": "d46df542d4a2135ec688ca81d2117b3224ce3f8a6145f296993dc804be498ab1",
+      "webp_sha256": "135bff1f37fadb9cd9dd8d032f51af0dd9a80af2fd89fd0f71d88eeb07773de4",
+      "original_size": 1466499,
+      "webp_size": 175150
+    },
+    {
+      "source": "public/assets/words/rak.png",
+      "webp": "public/assets/words/rak.webp",
+      "source_sha256": "5e3944b7089306f3c2842c56654f51be12640d291d7f45470f6f160c2dbc9d5e",
+      "webp_sha256": "d5108891443507cae039addd61912951765b42f70bda9960275c025ddc793a93",
+      "original_size": 1151837,
+      "webp_size": 187338
+    },
+    {
+      "source": "public/assets/words/raketa.png",
+      "webp": "public/assets/words/raketa.webp",
+      "source_sha256": "ebef4f521509383132f8a5bde7b8cd547d5a2fab4375bd0ce04f5bf05f03a0ff",
+      "webp_sha256": "c39edcde8f1a905824cc380507c24eb3dc631c959eab756a745d3b4fb11c033a",
+      "original_size": 1402420,
+      "webp_size": 159816
+    },
+    {
+      "source": "public/assets/words/rakushka.png",
+      "webp": "public/assets/words/rakushka.webp",
+      "source_sha256": "7fedcba26f1d7d1f8d26426c069105e9d84c7b057d6564650d7631cf1be65a2e",
+      "webp_sha256": "68e31ec1c4b9db6592533e081a9dc9576d0db60d9314b42cf6b43d8facd1fe13",
+      "original_size": 1782855,
+      "webp_size": 222626
+    },
+    {
+      "source": "public/assets/words/raschyoska.png",
+      "webp": "public/assets/words/raschyoska.webp",
+      "source_sha256": "e228b0c8891ffd7fe11488c0edf864d3ff776dae1adf6d8e7162e2de8d728c3b",
+      "webp_sha256": "b81a18b7260e5d071f21a3681984179b9cd56d5d27fdf692e70e0ce755801ac5",
+      "original_size": 1054154,
+      "webp_size": 163404
+    },
+    {
+      "source": "public/assets/words/robot.png",
+      "webp": "public/assets/words/robot.webp",
+      "source_sha256": "4776a14e311590969f026266ee2bf00be53954ae40658f6c3f88b813c53aa058",
+      "webp_sha256": "4109a6a367e9d465b869028cb1c683c31c3e8f73b874157a22c7c0aa76ff0cd2",
+      "original_size": 1395629,
+      "webp_size": 164136
+    },
+    {
+      "source": "public/assets/words/roza.png",
+      "webp": "public/assets/words/roza.webp",
+      "source_sha256": "20d384e202c3e63c2857440166ae70c8aa12f330559428a59944846924db8d95",
+      "webp_sha256": "99b8da14145a7def2091b9337876c9fc6177f7290e3eb46751bf065a382b4ef1",
+      "original_size": 1094716,
+      "webp_size": 129692
+    },
+    {
+      "source": "public/assets/words/romashka.png",
+      "webp": "public/assets/words/romashka.webp",
+      "source_sha256": "48ff79b469ad951e3f4d010be8df8065e34fb2120abff254508a407c0bcfc7d3",
+      "webp_sha256": "76ae9b9774c3cf459448c76aa4c456c18118e0f7a875c406a926beec4416808f",
+      "original_size": 1142827,
+      "webp_size": 161056
+    },
+    {
+      "source": "public/assets/words/rubashka.png",
+      "webp": "public/assets/words/rubashka.webp",
+      "source_sha256": "07f7aa26669678b52aabff86d3a242177392a64c5d0c1e42e381c1311ad1154a",
+      "webp_sha256": "0d7f8628e17c2c8ef70fee6ceed5982ed0b0c1584fcca9b7baad731c7d364189",
+      "original_size": 2707995,
+      "webp_size": 391138
+    },
+    {
+      "source": "public/assets/words/ruka.png",
+      "webp": "public/assets/words/ruka.webp",
+      "source_sha256": "e95b22bbbea4641e7cb44ccea9952d04bf3c236832084a86704ccd030120fcf2",
+      "webp_sha256": "8d72371f419b5252a3620b9f5c6933ef86101f7c9c98d228c5740d73df1fdd18",
+      "original_size": 1196547,
+      "webp_size": 151198
+    },
+    {
+      "source": "public/assets/words/rul.png",
+      "webp": "public/assets/words/rul.webp",
+      "source_sha256": "40b1bc3339ded54db46f9b1c7e92afdb23baa6ccf220472d789dcf899cb88b7b",
+      "webp_sha256": "abbf2e0deea1d15730f495d8d1a2ea95036095f8a193355e4ecc61e41e77c18d",
+      "original_size": 1501198,
+      "webp_size": 181704
+    },
+    {
+      "source": "public/assets/words/ryba.png",
+      "webp": "public/assets/words/ryba.webp",
+      "source_sha256": "c16304c15fc483ff4de346c56b4979483719d2423c6f2ca72122c61141814c19",
+      "webp_sha256": "f7d0f65f535631c2cc67b8bf99da24dd5f6591d920324207a80aa921a10b5f60",
+      "original_size": 1117796,
+      "webp_size": 131756
+    },
+    {
+      "source": "public/assets/words/svetofor.png",
+      "webp": "public/assets/words/svetofor.webp",
+      "source_sha256": "25ed6b2a20e125e98e99d48ea2a75c4a12d2ce55fbde4bed1021a5809296fd0f",
+      "webp_sha256": "b13716ac595a8e7c961a76368ef3a159335680cb23ced99d2ea53e13a86ba394",
+      "original_size": 965908,
+      "webp_size": 94054
+    },
+    {
+      "source": "public/assets/words/sviter.png",
+      "webp": "public/assets/words/sviter.webp",
+      "source_sha256": "0444972f20bc17952016080aa7b11583cb416ecc90735e87aa287de73a01b608",
+      "webp_sha256": "804352f39d729293824cdc41c5464b87ff1b26f86dbe3b806620a5f16a8d4dfc",
+      "original_size": 2090428,
+      "webp_size": 235300
+    },
+    {
+      "source": "public/assets/words/skovoroda.png",
+      "webp": "public/assets/words/skovoroda.webp",
+      "source_sha256": "f852f4a2f55b298fd21a3e8384a0878144fb84d6cfe2038a3ac636f79ad87bca",
+      "webp_sha256": "015cf9a09730c7dcbd1ba796aadf8ba75fcc5d34de2f12e47a770a86a7dd6a14",
+      "original_size": 1364235,
+      "webp_size": 126268
+    },
+    {
+      "source": "public/assets/words/syr.png",
+      "webp": "public/assets/words/syr.webp",
+      "source_sha256": "e58a6206033e04b72496266d5bbe1186d90e39fd85b5c6c0b80a70a410fd870f",
+      "webp_sha256": "f33ddcdc2078eb87ef152d910d57293d6a8626e46a9a01157fbf554514e3c28b",
+      "original_size": 1283140,
+      "webp_size": 175764
+    }
+  ]
+}
