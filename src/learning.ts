@@ -76,3 +76,12 @@ export function defaultOpposition(sound:string):string[]{
  if(groups['Шипящие'].includes(sound))return groups['Свистящие'];
  return [];
 }
+
+/** Preserve user-selected forbidden phonemes when the automation target changes.
+ * A sound can never be both a selected target and an active exclusion.
+ */
+export function changeTargetSound(l:Learning,sound:string,checked:boolean):Learning{
+ const sounds=checked?(l.mode==='automation'?[sound]:[...new Set([...l.sounds,sound])]):l.sounds.filter(s=>s!==sound);
+ const retainedExclusions=(l.excludedSounds||[]).filter(s=>!sounds.includes(s));
+ return {...l,sounds,excludedSounds:l.mode==='automation'&&checked&&!retainedExclusions.length?defaultOpposition(sound):retainedExclusions};
+}

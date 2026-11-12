@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {learningPool,initialLearning,type Learning} from '../src/learning.ts';
+import {learningPool,initialLearning,changeTargetSound,type Learning} from '../src/learning.ts';
 import {defaultFilters,type Word} from '../src/model.ts';
 const word=(id:string,topic:string,type:number|null,phonemes:string[]):Word=>({id,label:id,topic,subcategory:null,type,phonemes,sounds:{р:[{position:'начало',before:null,after:null}]},position:'начало',opposition:[],weight:1,images:1});
 const words=[word('a','Фрукты',null,['р','а']),word('b','Ягоды',2,['р',"л'"]),word('c','Посуда',3,['р','о'])];
@@ -20,3 +20,24 @@ test('target sound cannot exclude itself; unknown phonetics do not pass an expli
 });
 
 test('default material is unrestricted and automation requires a chosen sound',()=>{assert.equal(initialLearning.mode,'any');assert.deepEqual(initialLearning.sounds,[]);assert.equal(learningPool(words,defaultFilters,initialLearning).length,3);assert.equal(learningPool(words,defaultFilters,{...initialLearning,mode:'automation'}).length,0);});
+
+
+test('soft V automation always excludes ЧЕРВЯК when R or soft R are forbidden',()=>{
+ const worm:Word={...words[0],id:'worm',label:'червяк',type:6,weight:50,
+  phonemes:["ч'",'э','р',"в'",'а','к'],
+  sounds:{"в'":[{position:'середина',before:'р',after:null,eligibility:'eligible'}]}};
+ const l:Learning={...initialLearning,mode:'automation',sounds:["в'"],excludedSounds:['р',"р'"]};
+ assert.deepEqual(learningPool([worm],defaultFilters,l),[]);
+ assert.deepEqual(learningPool([worm],defaultFilters,{...l,excludedSounds:[]}).map(w=>w.id),['worm']);
+ const changed=changeTargetSound({...l,sounds:['в']},"в'",true);
+ assert.deepEqual(changed.sounds,["в'"]);
+ assert.deepEqual(changed.excludedSounds,['р',"р'"]);
+ assert.deepEqual(learningPool([worm],defaultFilters,changed),[]);
+});
+
+test('target phoneme removes only its own prohibition and keeps the other forbidden sounds',()=>{
+ const l:Learning={...initialLearning,mode:'automation',sounds:['в'],excludedSounds:['р',"р'","в'"]};
+ const selected=changeTargetSound(l,"в'",true);
+ assert.deepEqual(selected.sounds,["в'"]);
+ assert.deepEqual(selected.excludedSounds,['р',"р'"]);
+});
