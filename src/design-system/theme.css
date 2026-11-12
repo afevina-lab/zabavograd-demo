@@ -108,7 +108,7 @@
  border:1px solid var(--ui-outline)!important
 }
 /* A group label is readable even when no card is selected yet. */
-.app[data-theme] .bin-target:disabled{opacity:1!important}
+.app[data-theme] .sorting-stage button.bin-target:disabled{opacity:1!important}
 .app[data-theme] .sort-bin.drop-hover{
  box-shadow:0 0 0 3px var(--ui-outline),0 0 22px var(--ui-accent)!important
 }
