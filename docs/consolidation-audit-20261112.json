@@ -1,0 +1,2682 @@
+{
+  "date": "2026-11-12",
+  "source_private_commit": "77a2a3dabcf32b83097993478d44e4b215f620ca",
+  "source_public_commit": "2259dfc9d3a9bfff9bb47a433573183a207af1dc",
+  "private_original_count": 1874,
+  "public_original_count": 1594,
+  "matching_ids": 1569,
+  "public_only_ids": 25,
+  "canonical_count": 1899,
+  "runtime_count": 1899,
+  "relations_total": 1484,
+  "verified_graph_edges": 1444,
+  "families": 40,
+  "draft_grammar_models": 55,
+  "image_senses": 290,
+  "image_variants": 293,
+  "published_webp_links_added": 111,
+  "new_image_senses": 109,
+  "image_bounds_added": 0,
+  "previously_published_links_preserved": true,
+  "previously_published_graph_links_preserved": true,
+  "original_private_ids_preserved": true,
+  "missing_image_files": [],
+  "conflicts": {
+    "weight": [
+      {
+        "id": "ru-sem-20261105-c012eb6b",
+        "word": "бумажный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-d5613d0a",
+        "word": "варить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-5786fd54",
+        "word": "взбивать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-f209457e",
+        "word": "включать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-c02aa5dd",
+        "word": "выключать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-2fc0c409",
+        "word": "вытирать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-8678262e",
+        "word": "гладить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-47c70515",
+        "word": "гладкий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-4d408d13",
+        "word": "готовить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-6fb63dd2",
+        "word": "грязный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-87f58e97",
+        "word": "действие",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-817300b3",
+        "word": "деревянный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-cc0abd",
+        "word": "доставать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-e61e389e",
+        "word": "жарить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-d27a67ec",
+        "word": "забивать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-6b120a83",
+        "word": "закручивать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-86d3d4dc",
+        "word": "закрывать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-b08d82f1",
+        "word": "запекать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-61d8ff8a",
+        "word": "измельчать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-8c7cc097",
+        "word": "керамический",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-7039f75c",
+        "word": "класть",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-new-20261102-0082",
+        "word": "кормить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-cc451013",
+        "word": "красить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-138dd54",
+        "word": "лёгкий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-b80cd8a9",
+        "word": "ломать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-35cde643",
+        "word": "металлический",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-ba58b1c2",
+        "word": "мокрый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-57222209",
+        "word": "мыть",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-f1de7375",
+        "word": "мягкий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-7d0cd70c",
+        "word": "наливать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-c03ddb3d",
+        "word": "новый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-f84f7551",
+        "word": "острый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-5c588971",
+        "word": "открывать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-9514e2",
+        "word": "перемешивать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-dc3979a9",
+        "word": "печь",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-d3666f04",
+        "word": "пилить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-c8a085d",
+        "word": "пластиковый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-821ed302",
+        "word": "подметать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-c390b4f",
+        "word": "полный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-31a5b050",
+        "word": "признак",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-6f50ffc2",
+        "word": "прозрачный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-6862df09",
+        "word": "прочный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-new-20261102-0081",
+        "word": "прыгать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-32bf7ba6",
+        "word": "пустой",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-516202fc",
+        "word": "пылесосить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-df113396",
+        "word": "развешивать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-6e1604f",
+        "word": "разогревать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-e1c91700",
+        "word": "раскатывать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-8e48d4c",
+        "word": "резать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-bbfb4ec2",
+        "word": "ржавый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-new-20261102-0079",
+        "word": "рычать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-9953098d",
+        "word": "сверлить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-b0dfa4bb",
+        "word": "складывать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-542dbd6e",
+        "word": "сломанный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-new-20261102-0083",
+        "word": "собирать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-5f63bebb",
+        "word": "ставить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-50d9efe5",
+        "word": "старый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-dad326",
+        "word": "стеклянный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-aca36a39",
+        "word": "стирать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-new-20261102-0080",
+        "word": "строить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-f4d50744",
+        "word": "сухой",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-997e605c",
+        "word": "сушить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-9c5ea90d",
+        "word": "твёрдый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-d4c7f832",
+        "word": "тканевый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-ab4c872f",
+        "word": "тупой",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-11add953",
+        "word": "тушить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-48aed37d",
+        "word": "тяжёлый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-new-20261102-0084",
+        "word": "убирать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-b7724eeb",
+        "word": "упаковывать",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-452a390c",
+        "word": "фарфоровый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-1b1f492e",
+        "word": "хрупкий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-c3103cb9",
+        "word": "хрустальный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-62942200",
+        "word": "целый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-3565ef12",
+        "word": "чинить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-45f4b504",
+        "word": "чистить",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-cd915596",
+        "word": "чистый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-cb126bcb",
+        "word": "шершавый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-sem-20261105-c69e55b9",
+        "word": "электрический",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-001",
+        "word": "белый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-002",
+        "word": "чёрный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-003",
+        "word": "синий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-004",
+        "word": "голубой",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-005",
+        "word": "зелёный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-006",
+        "word": "жёлтый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-007",
+        "word": "фиолетовый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-008",
+        "word": "коричневый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-009",
+        "word": "серый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-010",
+        "word": "бежевый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-011",
+        "word": "золотистый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-012",
+        "word": "серебристый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-013",
+        "word": "разноцветный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-014",
+        "word": "светлый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-015",
+        "word": "тёмный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-016",
+        "word": "большой",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-017",
+        "word": "маленький",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-018",
+        "word": "огромный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-019",
+        "word": "крошечный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-020",
+        "word": "высокий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-021",
+        "word": "низкий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-022",
+        "word": "длинный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-023",
+        "word": "короткий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-024",
+        "word": "широкий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-025",
+        "word": "узкий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-026",
+        "word": "толстый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-027",
+        "word": "тонкий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-028",
+        "word": "крупный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-029",
+        "word": "мелкий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-030",
+        "word": "круглый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-031",
+        "word": "квадратный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-032",
+        "word": "треугольный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-033",
+        "word": "прямоугольный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-034",
+        "word": "овальный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-035",
+        "word": "прямой",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-036",
+        "word": "кривой",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-037",
+        "word": "плоский",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-038",
+        "word": "горячий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-039",
+        "word": "холодный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-040",
+        "word": "тёплый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-041",
+        "word": "прохладный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-042",
+        "word": "жаркий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-043",
+        "word": "морозный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-044",
+        "word": "сладкий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-045",
+        "word": "кислый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-046",
+        "word": "солёный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-047",
+        "word": "горький",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-048",
+        "word": "вкусный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-049",
+        "word": "невкусный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-050",
+        "word": "душистый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-051",
+        "word": "ароматный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-052",
+        "word": "колючий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-053",
+        "word": "липкий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-054",
+        "word": "пушистый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-055",
+        "word": "скользкий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-056",
+        "word": "упругий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-057",
+        "word": "здоровый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-058",
+        "word": "больной",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-059",
+        "word": "открытый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-060",
+        "word": "закрытый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-061",
+        "word": "порванный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-062",
+        "word": "разбитый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-063",
+        "word": "спелый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-064",
+        "word": "неспелый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-065",
+        "word": "добрый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-066",
+        "word": "злой",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-067",
+        "word": "весёлый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-068",
+        "word": "грустный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-069",
+        "word": "смелый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-070",
+        "word": "трусливый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-071",
+        "word": "спокойный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-072",
+        "word": "шумный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-073",
+        "word": "тихий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-074",
+        "word": "вежливый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-075",
+        "word": "сердитый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-076",
+        "word": "небрежный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-077",
+        "word": "молодой",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-078",
+        "word": "пожилой",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-079",
+        "word": "древний",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-080",
+        "word": "ранний",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-081",
+        "word": "поздний",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-082",
+        "word": "свежий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-083",
+        "word": "зимний",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-084",
+        "word": "летний",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-085",
+        "word": "осенний",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-086",
+        "word": "весенний",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-087",
+        "word": "домашний",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-088",
+        "word": "уличный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-089",
+        "word": "детский",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-090",
+        "word": "взрослый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-091",
+        "word": "школьный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-092",
+        "word": "кухонный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-093",
+        "word": "первый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-094",
+        "word": "последний",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-095",
+        "word": "другой",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-096",
+        "word": "одинаковый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-097",
+        "word": "разный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-098",
+        "word": "быстрый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-099",
+        "word": "медленный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-100",
+        "word": "громкий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-101",
+        "word": "аккуратный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-102",
+        "word": "осторожный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-103",
+        "word": "сильный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-104",
+        "word": "слабый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-105",
+        "word": "трудный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-106",
+        "word": "ловкий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-107",
+        "word": "правильный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-108",
+        "word": "неправильный",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-109",
+        "word": "хороший",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-110",
+        "word": "плохой",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-111",
+        "word": "долгий",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-112",
+        "word": "красивый",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-113",
+        "word": "быстро",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-114",
+        "word": "медленно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-115",
+        "word": "громко",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-116",
+        "word": "тихо",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-117",
+        "word": "аккуратно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-118",
+        "word": "небрежно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-119",
+        "word": "осторожно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-120",
+        "word": "смело",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-121",
+        "word": "весело",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-122",
+        "word": "грустно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-123",
+        "word": "спокойно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-124",
+        "word": "дружно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-125",
+        "word": "ловко",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-126",
+        "word": "правильно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-127",
+        "word": "неправильно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-128",
+        "word": "хорошо",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-129",
+        "word": "плохо",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-130",
+        "word": "вместе",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-131",
+        "word": "отдельно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-132",
+        "word": "легко",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-133",
+        "word": "трудно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-134",
+        "word": "старательно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-135",
+        "word": "красиво",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-136",
+        "word": "вверху",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-137",
+        "word": "внизу",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-138",
+        "word": "слева",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-139",
+        "word": "справа",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-140",
+        "word": "впереди",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-141",
+        "word": "сзади",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-142",
+        "word": "рядом",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-143",
+        "word": "далеко",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-144",
+        "word": "близко",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-145",
+        "word": "внутри",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-146",
+        "word": "снаружи",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-147",
+        "word": "сюда",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-148",
+        "word": "туда",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-149",
+        "word": "здесь",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-150",
+        "word": "там",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-151",
+        "word": "вокруг",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-152",
+        "word": "высоко",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-153",
+        "word": "низко",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-154",
+        "word": "сейчас",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-155",
+        "word": "потом",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-156",
+        "word": "раньше",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-157",
+        "word": "позже",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-158",
+        "word": "утром",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-159",
+        "word": "вечером",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-160",
+        "word": "ночью",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-161",
+        "word": "днём",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-162",
+        "word": "всегда",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-163",
+        "word": "иногда",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-164",
+        "word": "редко",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-165",
+        "word": "часто",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-166",
+        "word": "сначала",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-167",
+        "word": "скоро",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-168",
+        "word": "уже",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-169",
+        "word": "ещё",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-170",
+        "word": "недавно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-171",
+        "word": "долго",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-172",
+        "word": "очень",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-173",
+        "word": "немного",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-174",
+        "word": "сильно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-175",
+        "word": "слабо",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-176",
+        "word": "почти",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-177",
+        "word": "совсем",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-178",
+        "word": "тепло",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-179",
+        "word": "холодно",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-180",
+        "word": "жарко",
+        "published": 1,
+        "editorial": 0
+      },
+      {
+        "id": "ru-attr-20261109-181",
+        "word": "прохладно",
+        "published": 1,
+        "editorial": 0
+      }
+    ],
+    "categories": [
+      {
+        "id": "ru-new-20261102-0019",
+        "word": "барс",
+        "published": [
+          "Животный мир/Дикие животные/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0b1d0b5d0b4d180d0be",
+        "word": "бедро",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-plant-20261104-d0b1d0b5d0bbd18bd0b920d0b3d180d0b8d0b1",
+        "word": "белый гриб",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-plant-20261104-d0b1d0bbd0b5d0b4d0bdd0b0d18f20d0bfd0bed0b3d0b0d0bdd0bad0b0",
+        "word": "бледная поганка",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-r-add-d0b1d180d0bed0b2d18c",
+        "word": "бровь",
+        "published": [
+          "Человек/Части тела/Прочее",
+          "Человек/Части тела/Лицо"
+        ],
+        "editorial": [
+          "Человек/Части тела/Лицо"
+        ]
+      },
+      {
+        "id": "ru-new-20261102-0020",
+        "word": "бурундук",
+        "published": [
+          "Животный мир/Дикие животные/Прочее",
+          "Животный мир/Дикие животные/Лесные"
+        ],
+        "editorial": [
+          "Животный мир/Дикие животные/Лесные"
+        ]
+      },
+      {
+        "id": "lex-v2-d0b2d0b5d0bbd0b8d0bad0b0d0bd",
+        "word": "великан",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-plant-20261104-d0b2d0b5d188d0b5d0bdd0bad0b0",
+        "word": "вешенка",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-sem-20261105-f209457e",
+        "word": "включать",
+        "published": [
+          "Действия/Повседневные действия"
+        ],
+        "editorial": [
+          "Действия/Повседневные действия/Действия с предметами"
+        ]
+      },
+      {
+        "id": "lex-v2-d0b2d0bed0bbd188d0b5d0b1d0bdd0b8d0ba",
+        "word": "волшебник",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0b2d0bed0bbd188d0b5d0b1d0bdd0b8d186d0b0",
+        "word": "волшебница",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0040",
+        "word": "воротник",
+        "published": [
+          "Человек/Одежда, обувь и аксессуары/Одежда"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0004",
+        "word": "вчера",
+        "published": [
+          "Время и календарь/Временные представления",
+          "Наречия/Время"
+        ],
+        "editorial": [
+          "Время и календарь/Временные представления"
+        ]
+      },
+      {
+        "id": "ru-sem-20261105-c02aa5dd",
+        "word": "выключать",
+        "published": [
+          "Действия/Повседневные действия"
+        ],
+        "editorial": [
+          "Действия/Повседневные действия/Действия с предметами"
+        ]
+      },
+      {
+        "id": "ru-new-20261102-0017",
+        "word": "гепард",
+        "published": [
+          "Животный мир/Дикие животные/Прочее",
+          "Животный мир/Дикие животные/Жарких стран и других регионов"
+        ],
+        "editorial": [
+          "Животный мир/Дикие животные/Жарких стран и других регионов"
+        ]
+      },
+      {
+        "id": "ru-new-20261102-0071",
+        "word": "герой",
+        "published": [
+          "Игры, творчество и увлечения/Сказочные персонажи и предметы",
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": [
+          "Игры, творчество и увлечения/Сказочные персонажи и предметы"
+        ]
+      },
+      {
+        "id": "lex-v2-d0b3d0bed0bbd0b5d0bdd18c",
+        "word": "голень",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0b3d0bed0bbd0bed0b2d0b0",
+        "word": "голова",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0b3d0bed181d182d18c",
+        "word": "гость",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-plant-20261104-d0b3d180d0b8d0b1",
+        "word": "гриб",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0b3d180d183d0b4d18c",
+        "word": "грудь",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-plant-20261104-d0b3d180d183d0b7d0b4d18c",
+        "word": "груздь",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+        "word": "девочка",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-sem-20261105-cc0abd",
+        "word": "доставать",
+        "published": [
+          "Действия/Повседневные действия"
+        ],
+        "editorial": [
+          "Действия/Повседневные действия/Действия с предметами"
+        ]
+      },
+      {
+        "id": "ru-r-add-d0b4d180d183d0b7d18cd18f",
+        "word": "друг",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0b6d0b5d0bbd183d0b4d0bed0ba",
+        "word": "желудок",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0b6d0b5d0bdd189d0b8d0bdd0b0",
+        "word": "женщина",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0b6d0b8d0b2d0bed182",
+        "word": "живот",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-gen-20261104-animal",
+        "word": "животное",
+        "published": [
+          "Животный мир/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0005",
+        "word": "завтра",
+        "published": [
+          "Время и календарь/Временные представления",
+          "Наречия/Время"
+        ],
+        "editorial": [
+          "Время и календарь/Временные представления"
+        ]
+      },
+      {
+        "id": "ru-sem-20261105-86d3d4dc",
+        "word": "закрывать",
+        "published": [
+          "Действия/Повседневные действия"
+        ],
+        "editorial": [
+          "Действия/Повседневные действия/Действия с предметами"
+        ]
+      },
+      {
+        "id": "lex-v2-d0b7d0b0d0bfd18fd181d182d18cd0b5",
+        "word": "запястье",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0b7d180d0b8d182d0b5d0bbd18c",
+        "word": "зритель",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bad0b0d180d0bbd0b8d0ba",
+        "word": "карлик",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bad0b8d181d182d18c",
+        "word": "кисть",
+        "published": [
+          "Человек/Части тела/Прочее",
+          "Дом и быт/Инструменты/Малярные и измерительные инструменты",
+          "Игры, творчество и увлечения/Инструменты/Малярные и измерительные инструменты"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-sem-20261105-7039f75c",
+        "word": "класть",
+        "published": [
+          "Действия/Повседневные действия"
+        ],
+        "editorial": [
+          "Действия/Повседневные действия/Действия с предметами"
+        ]
+      },
+      {
+        "id": "lex-v2-d0bad0bbd0bed183d0bd",
+        "word": "клоун",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bad0bed0b6d0b0",
+        "word": "кожа",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bad0bed0bbd0b5d0bdd0be",
+        "word": "колено",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0082",
+        "word": "кормить",
+        "published": [
+          "Действия/Прочее"
+        ],
+        "editorial": [
+          "Действия/Забота и отношения",
+          "Действия/Повседневные действия/Еда и питьё"
+        ]
+      },
+      {
+        "id": "ru-r-035",
+        "word": "королева",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0070",
+        "word": "король",
+        "published": [
+          "Игры, творчество и увлечения/Сказочные персонажи и предметы",
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": [
+          "Игры, творчество и увлечения/Сказочные персонажи и предметы"
+        ]
+      },
+      {
+        "id": "lex-v2-d0bad0bed181d182d18c",
+        "word": "кость",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-r-add-d0bad180d0b0d182d0b5d180",
+        "word": "кратер",
+        "published": [
+          "Природа и окружающий мир/Космос/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0016",
+        "word": "крокодил",
+        "published": [
+          "Животный мир/Дикие животные/Прочее",
+          "Животный мир/Пресмыкающиеся и земноводные"
+        ],
+        "editorial": [
+          "Животный мир/Пресмыкающиеся и земноводные"
+        ]
+      },
+      {
+        "id": "lex-v2-d0bad183d0bbd0b0d0ba",
+        "word": "кулак",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bbd0b0d0b4d0bed0bdd18c",
+        "word": "ладонь",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-images-20261105-156_lama",
+        "word": "лама",
+        "published": [
+          "Животный мир/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bbd191d0b3d0bad0b8d0b5",
+        "word": "лёгкие",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0018",
+        "word": "леопард",
+        "published": [
+          "Животный мир/Дикие животные/Прочее",
+          "Животный мир/Дикие животные/Жарких стран и других регионов"
+        ],
+        "editorial": [
+          "Животный мир/Дикие животные/Жарких стран и других регионов"
+        ]
+      },
+      {
+        "id": "ru-plant-20261104-d0bbd0b8d181d0b8d187d0bad0b0",
+        "word": "лисичка",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bbd0bed0bad0bed182d18c",
+        "word": "локоть",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+        "word": "мальчик",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-plant-20261104-d0bcd0b0d181d0bbd191d0bdd0bed0ba",
+        "word": "маслёнок",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bcd0bbd0b0d0b4d0b5d0bdd0b5d186",
+        "word": "младенец",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bcd0bed0b7d0b3",
+        "word": "мозг",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bcd183d0b6d187d0b8d0bdd0b0",
+        "word": "мужчина",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-r-extra-001",
+        "word": "мухомор",
+        "published": [
+          "Растительный мир и грибы/Грибы/Ядовитые",
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": [
+          "Растительный мир и грибы/Грибы/Ядовитые"
+        ]
+      },
+      {
+        "id": "ru-sem-20261105-57222209",
+        "word": "мыть",
+        "published": [
+          "Действия/Уборка"
+        ],
+        "editorial": [
+          "Действия/Повседневные действия/Самообслуживание и гигиена",
+          "Действия/Уборка"
+        ]
+      },
+      {
+        "id": "lex-v2-d0bcd18bd188d186d0b0",
+        "word": "мышца",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0321",
+        "word": "мышь",
+        "published": [
+          "Животный мир/Дикие животные/Прочее",
+          "Животный мир/Дикие животные/Лесные"
+        ],
+        "editorial": [
+          "Животный мир/Дикие животные/Лесные"
+        ]
+      },
+      {
+        "id": "ru-sem-20261105-7d0cd70c",
+        "word": "наливать",
+        "published": [
+          "Действия/Приготовление пищи"
+        ],
+        "editorial": [
+          "Действия/Повседневные действия/Еда и питьё",
+          "Действия/Приготовление пищи"
+        ]
+      },
+      {
+        "id": "lex-v2-d0bdd0b5d0b7d0bdd0b0d0bad0bed0bcd0b5d186",
+        "word": "незнакомец",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bdd0bed0b3d0b0",
+        "word": "нога",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bdd0bed0b3d0bed182d18c",
+        "word": "ноготь",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-plant-20261104-d0bed0bfd191d0bdd0bed0ba",
+        "word": "опёнок",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-sem-20261105-5c588971",
+        "word": "открывать",
+        "published": [
+          "Действия/Повседневные действия"
+        ],
+        "editorial": [
+          "Действия/Повседневные действия/Действия с предметами"
+        ]
+      },
+      {
+        "id": "lex-v2-d0bfd0b0d0bbd0b5d186",
+        "word": "палец",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bfd0b0d181d181d0b0d0b6d0b8d180",
+        "word": "пассажир",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0037",
+        "word": "перчатка",
+        "published": [
+          "Человек/Одежда, обувь и аксессуары/Одежда"
+        ],
+        "editorial": [
+          "Человек/Одежда, обувь и аксессуары/Аксессуары",
+          "Человек/Одежда, обувь и аксессуары/Одежда"
+        ]
+      },
+      {
+        "id": "lex-v2-d0bfd0b5d188d0b5d185d0bed0b4",
+        "word": "пешеход",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-r-add-d0bfd0b8d180d0b0d182",
+        "word": "пират",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bfd0bbd0b5d187d0be",
+        "word": "плечо",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-plant-20261104-d0bfd0bed0b4d0b1d0b5d180d191d0b7d0bed0b2d0b8d0ba",
+        "word": "подберёзовик",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-plant-20261104-d0bfd0bed0b4d0bed181d0b8d0bdd0bed0b2d0b8d0ba",
+        "word": "подосиновик",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bfd0bed0b4d180d0bed181d182d0bed0ba",
+        "word": "подросток",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0061",
+        "word": "подруга",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bfd0bed0bad183d0bfd0b0d182d0b5d0bbd18c",
+        "word": "покупатель",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bfd180d0b8d0bdd186",
+        "word": "принц",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bfd180d0b8d0bdd186d0b5d181d181d0b0",
+        "word": "принцесса",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0081",
+        "word": "прыгать",
+        "published": [
+          "Действия/Прочее"
+        ],
+        "editorial": [
+          "Действия/Движение и положение тела/Передвижение"
+        ]
+      },
+      {
+        "id": "ru-gen-20261104-bird",
+        "word": "птица",
+        "published": [
+          "Животный мир/Птицы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bfd183d0bfd0bed0ba",
+        "word": "пупок",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d0bfd18fd182d0bad0b0",
+        "word": "пятка",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-r-060",
+        "word": "ракета",
+        "published": [
+          "Природа и окружающий мир/Космос/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-plant-20261104-d180d0b0d181d182d0b5d0bdd0b8d0b5",
+        "word": "растение",
+        "published": [
+          "Растительный мир и грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-r-extra-025",
+        "word": "рот",
+        "published": [
+          "Человек/Части тела/Прочее",
+          "Человек/Части тела/Лицо"
+        ],
+        "editorial": [
+          "Человек/Части тела/Лицо"
+        ]
+      },
+      {
+        "id": "ru-r-068",
+        "word": "рука",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-r-072",
+        "word": "рыжик",
+        "published": [
+          "Растительный мир и грибы/Грибы/Съедобные",
+          "Растительный мир и грибы/Грибы/Прочее",
+          "Еда и напитки/Грибы"
+        ],
+        "editorial": [
+          "Еда и напитки/Грибы",
+          "Растительный мир и грибы/Грибы/Съедобные"
+        ]
+      },
+      {
+        "id": "ru-r-add-d180d18bd186d0b0d180d18c",
+        "word": "рыцарь",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0079",
+        "word": "рычать",
+        "published": [
+          "Действия/Прочее"
+        ],
+        "editorial": [
+          "Действия/Поведение и голоса животных"
+        ]
+      },
+      {
+        "id": "ru-r-add-d181d0b5d180d0b4d186d0b5",
+        "word": "сердце",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d181d0bad0b5d0bbd0b5d182",
+        "word": "скелет",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-sem-20261105-b0dfa4bb",
+        "word": "складывать",
+        "published": [
+          "Действия/Стирка и уход за одеждой"
+        ],
+        "editorial": [
+          "Действия/Повседневные действия/Действия с предметами",
+          "Действия/Стирка и уход за одеждой"
+        ]
+      },
+      {
+        "id": "ru-plant-20261104-d181d0bcd0bed180d187d0bed0ba",
+        "word": "сморчок",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0083",
+        "word": "собирать",
+        "published": [
+          "Действия/Прочее"
+        ],
+        "editorial": [
+          "Действия/Игры и творчество",
+          "Действия/Повседневные действия/Действия с предметами",
+          "Действия/Природа и растения",
+          "Действия/Уборка"
+        ]
+      },
+      {
+        "id": "lex-v2-d181d0bed181d0b5d0b4",
+        "word": "сосед",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d181d0bed181d0b5d0b4d0bad0b0",
+        "word": "соседка",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d181d0bfd0b8d0bdd0b0",
+        "word": "спина",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-sem-20261105-5f63bebb",
+        "word": "ставить",
+        "published": [
+          "Действия/Повседневные действия"
+        ],
+        "editorial": [
+          "Действия/Повседневные действия/Действия с предметами"
+        ]
+      },
+      {
+        "id": "lex-v2-d181d182d0b0d180d0b8d0ba",
+        "word": "старик",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d181d182d0b0d180d183d188d0bad0b0",
+        "word": "старушка",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0080",
+        "word": "строить",
+        "published": [
+          "Действия/Ремонт"
+        ],
+        "editorial": [
+          "Действия/Игры и творчество",
+          "Действия/Ремонт"
+        ]
+      },
+      {
+        "id": "lex-v2-d181d182d183d0bfd0bdd18f",
+        "word": "ступня",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-plant-20261104-d181d18bd180d0bed0b5d0b6d0bad0b0",
+        "word": "сыроежка",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d182d0b5d0bbd0be",
+        "word": "тело",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-new-20261102-0058",
+        "word": "транспорт",
+        "published": [
+          "Общество и окружающая среда/Транспорт и специальная техника/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-plant-20261104-d182d180d183d182d0bed0b2d0b8d0ba",
+        "word": "трутовик",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-plant-20261104-d182d180d18ed184d0b5d0bbd18c",
+        "word": "трюфель",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-sem-20261105-b7724eeb",
+        "word": "упаковывать",
+        "published": [
+          "Действия/Повседневные действия"
+        ],
+        "editorial": [
+          "Действия/Повседневные действия/Действия с предметами"
+        ]
+      },
+      {
+        "id": "ru-new-20261102-0075",
+        "word": "уровень",
+        "published": [
+          "Игры, творчество и увлечения/Сказочные персонажи и предметы",
+          "Дом и быт/Инструменты/Малярные и измерительные инструменты",
+          "Игры, творчество и увлечения/Инструменты/Малярные и измерительные инструменты"
+        ],
+        "editorial": [
+          "Игры, творчество и увлечения/Сказочные персонажи и предметы"
+        ]
+      },
+      {
+        "id": "lex-v2-d185d0bed0b7d18fd0b8d0bd",
+        "word": "хозяин",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "lex-v2-d187d0b5d0bbd0bed0b2d0b5d0ba",
+        "word": "человек",
+        "published": [
+          "Человек/Люди/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-sem-20261105-45f4b504",
+        "word": "чистить",
+        "published": [
+          "Действия/Приготовление пищи"
+        ],
+        "editorial": [
+          "Действия/Повседневные действия/Самообслуживание и гигиена",
+          "Действия/Приготовление пищи",
+          "Действия/Уборка"
+        ]
+      },
+      {
+        "id": "ru-plant-20261104-d188d0b0d0bcd0bfd0b8d0bdd18cd0bed0bd",
+        "word": "шампиньон",
+        "published": [
+          "Растительный мир и грибы/Грибы/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-r-094",
+        "word": "шарф",
+        "published": [
+          "Человек/Одежда, обувь и аксессуары/Одежда"
+        ],
+        "editorial": [
+          "Человек/Одежда, обувь и аксессуары/Аксессуары",
+          "Человек/Одежда, обувь и аксессуары/Одежда"
+        ]
+      },
+      {
+        "id": "lex-v2-d188d0b5d18f",
+        "word": "шея",
+        "published": [
+          "Человек/Части тела/Прочее"
+        ],
+        "editorial": []
+      },
+      {
+        "id": "ru-plant-20261104-d18fd0b3d0bed0b4d0b0",
+        "word": "ягода",
+        "published": [
+          "Растительный мир и грибы/Ягоды/Прочее",
+          "Еда и напитки/Ягоды"
+        ],
+        "editorial": [
+          "Еда и напитки/Ягоды"
+        ]
+      }
+    ],
+    "meaning": [
+      {
+        "id": "ru-sem-20261105-8678262e",
+        "word": "гладить",
+        "published": null,
+        "editorial": "разглаживать одежду или бельё утюгом"
+      },
+      {
+        "id": "lex-v2-d0bad0b8d181d182d18c",
+        "word": "кисть",
+        "published": null,
+        "editorial": "кисть руки"
+      },
+      {
+        "id": "ru-new-20261102-0075",
+        "word": "уровень",
+        "published": null,
+        "editorial": "уровень сложности или этап игры"
+      },
+      {
+        "id": "ru-noun-20261109-0055",
+        "word": "вода",
+        "published": "питьевая вода",
+        "editorial": null
+      },
+      {
+        "id": "ru-noun-20261109-0040",
+        "word": "пазл",
+        "published": "разрезная картинка-головоломка",
+        "editorial": null
+      },
+      {
+        "id": "ru-noun-20261109-0027",
+        "word": "галстук",
+        "published": "галстук как аксессуар одежды",
+        "editorial": null
+      },
+      {
+        "id": "ru-noun-20261109-0092",
+        "word": "поле",
+        "published": "открытое природное пространство",
+        "editorial": null
+      }
+    ],
+    "kind": []
+  },
+  "decision": "On shared IDs editor V2 is authoritative for categories/weights; historic public values are held in this audit; all published WebP URLs are retained.",
+  "safety": "Only released static graph edges reach games; 55 suggested grammar frames stay in review; absolute private filesystem paths removed.",
+  "value_reconciliation": {
+    "exact_same_meaning_aliases": 12,
+    "published_ids_retained_as_source_records": 25,
+    "original_published_image_links_retained": true,
+    "canonical_editorial_cards_receiving_images": 12,
+    "distinct_bone_meanings_not_merged": true
+  }
+}

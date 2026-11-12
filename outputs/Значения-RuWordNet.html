@@ -1,0 +1,52 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Забавоград — значения RuWordNet</title>
+<style>body{font:15px system-ui;background:#f5f7f5;color:#263b32;margin:0}main{max-width:920px;margin:auto;padding:22px}
+section{padding:15px;border:1px solid #d2e0d6;background:white;margin:12px 0;border-radius:12px}
+input,select,button{font:inherit;padding:8px;border:1px solid #abbfb1;border-radius:8px}button{cursor:pointer}label{display:block;margin:8px 0}
+small{color:#607267}</style></head><body><main>
+<h1>Сопоставление значений RuWordNet</h1>
+<p>Не выбирайте соответствие только по одинаковому написанию! Проверяйте, что смысл синсета соответствует значению слова в «Забавограде». Результат используется только для исследовательских предложений и сам по себе не публикует словарные отношения.</p>
+<section><label>Файл <code>ruwordnet-mapping-candidates.json</code> <input type="file" id="file" accept=".json"></label>
+<button id="open">Открыть</button> <button id="save" disabled>Скачать проверенные соответствия</button><p id="state"></p></section>
+<label>Найти слово <input id="search" placeholder="например, замок"></label><div id="items"></div></main><script>
+'use strict';
+const $=id=>document.getElementById(id);
+let entries=[],chosen=new Map();
+function el(parent,tag,text){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;parent.append(n);return n;}
+function draw(){
+ const root=$('items');root.replaceChildren();
+ const q=$('search').value.trim().toLowerCase();
+ let shown=0;
+ for(const item of entries){
+  if(q&&!((item.lemma+' '+(item.meaning||'')).toLowerCase().includes(q)))continue;
+  if(shown++>=90)break;
+  const section=el(root,'section');el(section,'strong',item.lemma+' — '+(item.meaning||'значение в карточке не указано'));
+  el(section,'p','ID нашей карточки: '+item.entry_id);
+  const select=el(section,'select');
+  let opt=el(select,'option','Не сопоставлять');opt.value='';
+  for(const c of item.candidates){
+   opt=el(select,'option',c.synset_id+' · '+c.title);opt.value=c.synset_id;
+  }
+  select.value=chosen.get(item.entry_id)||'';
+  select.onchange=()=>{
+   if(!select.value){chosen.delete(item.entry_id);return;}
+   for(const [eid,sid] of chosen)if(eid!==item.entry_id&&sid===select.value){
+    alert('Этот синсет уже связан с другой карточкой. Уточните значение или исправьте соответствие.');
+    select.value=chosen.get(item.entry_id)||'';return;
+   }
+   chosen.set(item.entry_id,select.value);
+  };
+ }
+ $('state').textContent='Кандидатов для проверки: '+entries.length+' · проверено: '+chosen.size+' · показано: '+Math.min(shown,90);
+}
+$('open').onclick=async()=>{
+ try{const f=$('file').files[0];if(!f)throw Error('Выберите файл');
+ const json=JSON.parse(await f.text());if(json.schema!=='ruwordnet_mapping_candidates_v1'||!Array.isArray(json.entries))throw Error('Неподдерживаемый файл');
+ entries=json.entries;chosen.clear();$('save').disabled=false;draw();
+ }catch(e){$('state').textContent=e.message;}};
+$('search').oninput=draw;
+$('save').onclick=()=>{
+ const items=[...chosen].map(([entry_id,synset_id])=>({entry_id,synset_id}));
+ const url=URL.createObjectURL(new Blob([JSON.stringify(items,null,2)+'\n'],{type:'application/json'}));
+ const link=el(document.body,'a');link.href=url;link.download='ruwordnet-mappings.json';link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+};
+</script></body></html>

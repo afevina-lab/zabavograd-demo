@@ -1,0 +1,573 @@
+{
+  "schema_version": 1,
+  "source": "User-approved Pack03 parts 1-3, 90 PNG masters",
+  "assets": [
+    {
+      "file": "092_karusel",
+      "lemma": "карусель",
+      "meaning": null,
+      "semantic_webp": "karusel.webp"
+    },
+    {
+      "file": "093_kenguru",
+      "lemma": "кенгуру",
+      "meaning": null,
+      "semantic_webp": "kenguru.webp"
+    },
+    {
+      "file": "094_korabl",
+      "lemma": "корабль",
+      "meaning": null,
+      "semantic_webp": "korabl.webp"
+    },
+    {
+      "file": "095_koroleva",
+      "lemma": "королева",
+      "meaning": null,
+      "semantic_webp": "koroleva.webp"
+    },
+    {
+      "file": "096_kostyor",
+      "lemma": "костёр",
+      "meaning": null,
+      "semantic_webp": "kostyor.webp"
+    },
+    {
+      "file": "097_krug",
+      "lemma": "круг",
+      "meaning": null,
+      "semantic_webp": "krug.webp"
+    },
+    {
+      "file": "098_krysha",
+      "lemma": "крыша",
+      "meaning": null,
+      "semantic_webp": "krysha.webp"
+    },
+    {
+      "file": "099_matros",
+      "lemma": "матрос",
+      "meaning": null,
+      "semantic_webp": "matros.webp"
+    },
+    {
+      "file": "100_metro",
+      "lemma": "метро",
+      "meaning": null,
+      "semantic_webp": "metro.webp"
+    },
+    {
+      "file": "101_monstr",
+      "lemma": "монстр",
+      "meaning": null,
+      "semantic_webp": "monstr.webp"
+    },
+    {
+      "file": "102_nora",
+      "lemma": "нора",
+      "meaning": null,
+      "semantic_webp": "nora.webp"
+    },
+    {
+      "file": "103_nosorog",
+      "lemma": "носорог",
+      "meaning": null,
+      "semantic_webp": "nosorog.webp"
+    },
+    {
+      "file": "104_ogorod",
+      "lemma": "огород",
+      "meaning": null,
+      "semantic_webp": "ogorod.webp"
+    },
+    {
+      "file": "105_par",
+      "lemma": "пар",
+      "meaning": null,
+      "semantic_webp": "par.webp"
+    },
+    {
+      "file": "106_parovoz",
+      "lemma": "паровоз",
+      "meaning": null,
+      "semantic_webp": "parovoz.webp"
+    },
+    {
+      "file": "107_parus",
+      "lemma": "парус",
+      "meaning": null,
+      "semantic_webp": "parus.webp"
+    },
+    {
+      "file": "108_pero",
+      "lemma": "перо",
+      "meaning": null,
+      "semantic_webp": "pero.webp"
+    },
+    {
+      "file": "109_peshchera",
+      "lemma": "пещера",
+      "meaning": null,
+      "semantic_webp": "peshchera.webp"
+    },
+    {
+      "file": "110_pirat",
+      "lemma": "пират",
+      "meaning": null,
+      "semantic_webp": "pirat.webp"
+    },
+    {
+      "file": "111_pirozhnoe",
+      "lemma": "пирожное",
+      "meaning": null,
+      "semantic_webp": "pirozhnoe.webp"
+    },
+    {
+      "file": "112_pirozhok",
+      "lemma": "пирожок",
+      "meaning": null,
+      "semantic_webp": "pirozhok.webp"
+    },
+    {
+      "file": "113_portfel",
+      "lemma": "портфель",
+      "meaning": null,
+      "semantic_webp": "portfel.webp"
+    },
+    {
+      "file": "114_produkty",
+      "lemma": "продукты",
+      "meaning": null,
+      "semantic_webp": "produkty.webp"
+    },
+    {
+      "file": "115_prorub",
+      "lemma": "прорубь",
+      "meaning": null,
+      "semantic_webp": "prorub.webp"
+    },
+    {
+      "file": "116_prud",
+      "lemma": "пруд",
+      "meaning": null,
+      "semantic_webp": "prud.webp"
+    },
+    {
+      "file": "117_radio",
+      "lemma": "радио",
+      "meaning": null,
+      "semantic_webp": "radio.webp"
+    },
+    {
+      "file": "118_raketka",
+      "lemma": "ракетка",
+      "meaning": null,
+      "semantic_webp": "raketka.webp"
+    },
+    {
+      "file": "119_rakovina",
+      "lemma": "раковина",
+      "meaning": null,
+      "semantic_webp": "rakovina.webp"
+    },
+    {
+      "file": "120_rama",
+      "lemma": "рама",
+      "meaning": null,
+      "semantic_webp": "rama.webp"
+    },
+    {
+      "file": "121_ranets",
+      "lemma": "ранец",
+      "meaning": null,
+      "semantic_webp": "ranets.webp"
+    },
+    {
+      "file": "122_ryukzak",
+      "lemma": "рюкзак",
+      "meaning": null,
+      "semantic_webp": "ryukzak.webp"
+    },
+    {
+      "file": "123_ratsiya",
+      "lemma": "рация",
+      "meaning": null,
+      "semantic_webp": "ratsiya.webp"
+    },
+    {
+      "file": "124_rogalik",
+      "lemma": "рогалик",
+      "meaning": null,
+      "semantic_webp": "rogalik.webp"
+    },
+    {
+      "file": "125_rogatka",
+      "lemma": "рогатка",
+      "meaning": null,
+      "semantic_webp": "rogatka.webp"
+    },
+    {
+      "file": "126_roll",
+      "lemma": "ролл",
+      "meaning": null,
+      "semantic_webp": "roll.webp"
+    },
+    {
+      "file": "127_romb",
+      "lemma": "ромб",
+      "meaning": null,
+      "semantic_webp": "romb.webp"
+    },
+    {
+      "file": "128_rosa",
+      "lemma": "роса",
+      "meaning": null,
+      "semantic_webp": "rosa.webp"
+    },
+    {
+      "file": "129_rot",
+      "lemma": "рот",
+      "meaning": null,
+      "semantic_webp": "rot.webp"
+    },
+    {
+      "file": "130_royal",
+      "lemma": "рояль",
+      "meaning": null,
+      "semantic_webp": "royal.webp"
+    },
+    {
+      "file": "131_rubin",
+      "lemma": "рубин",
+      "meaning": null,
+      "semantic_webp": "rubin.webp"
+    },
+    {
+      "file": "132_rulet",
+      "lemma": "рулет",
+      "meaning": null,
+      "semantic_webp": "rulet.webp"
+    },
+    {
+      "file": "133_kruassan",
+      "lemma": "круассан",
+      "meaning": null,
+      "semantic_webp": "kruassan.webp"
+    },
+    {
+      "file": "134_rusalka",
+      "lemma": "русалка",
+      "meaning": null,
+      "semantic_webp": "rusalka.webp"
+    },
+    {
+      "file": "135_ruchey",
+      "lemma": "ручей",
+      "meaning": null,
+      "semantic_webp": "ruchey.webp"
+    },
+    {
+      "file": "136_rybak",
+      "lemma": "рыбак",
+      "meaning": null,
+      "semantic_webp": "rybak.webp"
+    },
+    {
+      "file": "137_rynok",
+      "lemma": "рынок",
+      "meaning": null,
+      "semantic_webp": "rynok.webp"
+    },
+    {
+      "file": "138_rys",
+      "lemma": "рысь",
+      "meaning": null,
+      "semantic_webp": "rys.webp"
+    },
+    {
+      "file": "139_rytsar",
+      "lemma": "рыцарь",
+      "meaning": null,
+      "semantic_webp": "rytsar.webp"
+    },
+    {
+      "file": "140_samovar",
+      "lemma": "самовар",
+      "meaning": null,
+      "semantic_webp": "samovar.webp"
+    },
+    {
+      "file": "141_sakhar",
+      "lemma": "сахар",
+      "meaning": null,
+      "semantic_webp": "sakhar.webp"
+    },
+    {
+      "file": "142_serdtse",
+      "lemma": "сердце",
+      "meaning": null,
+      "semantic_webp": "serdtse.webp"
+    },
+    {
+      "file": "143_start",
+      "lemma": "старт",
+      "meaning": null,
+      "semantic_webp": "start.webp"
+    },
+    {
+      "file": "144_straus",
+      "lemma": "страус",
+      "meaning": null,
+      "semantic_webp": "straus.webp"
+    },
+    {
+      "file": "145_stroyka",
+      "lemma": "стройка",
+      "meaning": null,
+      "semantic_webp": "stroyka.webp"
+    },
+    {
+      "file": "146_teatr",
+      "lemma": "театр",
+      "meaning": null,
+      "semantic_webp": "teatr.webp"
+    },
+    {
+      "file": "147_tetrad",
+      "lemma": "тетрадь",
+      "meaning": null,
+      "semantic_webp": "tetrad.webp"
+    },
+    {
+      "file": "148_topor",
+      "lemma": "топор",
+      "meaning": null,
+      "semantic_webp": "topor.webp"
+    },
+    {
+      "file": "149_tron",
+      "lemma": "трон",
+      "meaning": null,
+      "semantic_webp": "tron.webp"
+    },
+    {
+      "file": "150_tropinka",
+      "lemma": "тропинка",
+      "meaning": null,
+      "semantic_webp": "tropinka.webp"
+    },
+    {
+      "file": "151_trost",
+      "lemma": "трость",
+      "meaning": null,
+      "semantic_webp": "trost.webp"
+    },
+    {
+      "file": "152_truba_vodoprovodnaya",
+      "lemma": "труба",
+      "meaning": "водопроводная труба",
+      "semantic_webp": "truba-vodoprovodnaya.webp"
+    },
+    {
+      "file": "153_truba_muzykalnaya",
+      "lemma": "труба",
+      "meaning": "духовой музыкальный инструмент",
+      "semantic_webp": "truba-muzykalnaya.webp"
+    },
+    {
+      "file": "154_turnik",
+      "lemma": "турник",
+      "meaning": null,
+      "semantic_webp": "turnik.webp"
+    },
+    {
+      "file": "155_loshad",
+      "lemma": "лошадь",
+      "meaning": null,
+      "semantic_webp": "loshad.webp"
+    },
+    {
+      "file": "156_lama",
+      "lemma": "лама",
+      "meaning": null,
+      "semantic_webp": "lama.webp"
+    },
+    {
+      "file": "157_svinya",
+      "lemma": "свинья",
+      "meaning": null,
+      "semantic_webp": "svinya.webp"
+    },
+    {
+      "file": "158_lampa",
+      "lemma": "лампа",
+      "meaning": null,
+      "semantic_webp": "lampa.webp"
+    },
+    {
+      "file": "159_lastochka",
+      "lemma": "ласточка",
+      "meaning": null,
+      "semantic_webp": "lastochka.webp"
+    },
+    {
+      "file": "160_los",
+      "lemma": "лось",
+      "meaning": null,
+      "semantic_webp": "los.webp"
+    },
+    {
+      "file": "161_koza",
+      "lemma": "коза",
+      "meaning": null,
+      "semantic_webp": "koza.webp"
+    },
+    {
+      "file": "162_sobaka",
+      "lemma": "собака",
+      "meaning": null,
+      "semantic_webp": "sobaka.webp"
+    },
+    {
+      "file": "163_kot",
+      "lemma": "кот",
+      "meaning": null,
+      "semantic_webp": "kot.webp"
+    },
+    {
+      "file": "164_lebed",
+      "lemma": "лебедь",
+      "meaning": null,
+      "semantic_webp": "lebed.webp"
+    },
+    {
+      "file": "165_lyagushka",
+      "lemma": "лягушка",
+      "meaning": null,
+      "semantic_webp": "lyagushka.webp"
+    },
+    {
+      "file": "166_zhaba",
+      "lemma": "жаба",
+      "meaning": null,
+      "semantic_webp": "zhaba.webp"
+    },
+    {
+      "file": "167_babochka",
+      "lemma": "бабочка",
+      "meaning": null,
+      "semantic_webp": "babochka.webp"
+    },
+    {
+      "file": "168_kuznechik",
+      "lemma": "кузнечик",
+      "meaning": null,
+      "semantic_webp": "kuznechik.webp"
+    },
+    {
+      "file": "169_lisa",
+      "lemma": "лиса",
+      "meaning": null,
+      "semantic_webp": "lisa.webp"
+    },
+    {
+      "file": "170_slon",
+      "lemma": "слон",
+      "meaning": null,
+      "semantic_webp": "slon.webp"
+    },
+    {
+      "file": "171_uzor",
+      "lemma": "узор",
+      "meaning": null,
+      "semantic_webp": "uzor.webp"
+    },
+    {
+      "file": "172_utro",
+      "lemma": "утро",
+      "meaning": null,
+      "semantic_webp": "utro.webp"
+    },
+    {
+      "file": "173_khram",
+      "lemma": "храм",
+      "meaning": null,
+      "semantic_webp": "khram.webp"
+    },
+    {
+      "file": "174_tserkov",
+      "lemma": "церковь",
+      "meaning": null,
+      "semantic_webp": "tserkov.webp"
+    },
+    {
+      "file": "175_tsirk",
+      "lemma": "цирк",
+      "meaning": null,
+      "semantic_webp": "tsirk.webp"
+    },
+    {
+      "file": "176_chervyak",
+      "lemma": "червяк",
+      "meaning": null,
+      "semantic_webp": "chervyak.webp"
+    },
+    {
+      "file": "177_chernika",
+      "lemma": "черника",
+      "meaning": null,
+      "semantic_webp": "chernika.webp"
+    },
+    {
+      "file": "178_arfa",
+      "lemma": "арфа",
+      "meaning": null,
+      "semantic_webp": "arfa.webp"
+    },
+    {
+      "file": "179_barsuk",
+      "lemma": "барсук",
+      "meaning": null,
+      "semantic_webp": "barsuk.webp"
+    },
+    {
+      "file": "180_borshch",
+      "lemma": "борщ",
+      "meaning": null,
+      "semantic_webp": "borshch.webp"
+    },
+    {
+      "file": "181_shatyor",
+      "lemma": "шатёр",
+      "meaning": null,
+      "semantic_webp": "shatyor.webp"
+    }
+  ],
+  "missing_word_proposals": {
+    "рюкзак": {
+      "weight": 50,
+      "category": "Школьные принадлежности"
+    },
+    "круассан": {
+      "weight": 30,
+      "category": "Еда и напитки/Продукты/Выпечка"
+    },
+    "лама": {
+      "weight": 20,
+      "category": "Животный мир"
+    },
+    "лампа": {
+      "weight": 70,
+      "category": "Дом/Бытовые предметы"
+    },
+    "шатёр": {
+      "weight": 30,
+      "category": "Окружающий мир/Предметы и сооружения"
+    },
+    "труба|водопроводная труба": {
+      "weight": 30,
+      "category": "Дом/Бытовые предметы"
+    }
+  },
+  "naming": "semantic filename is authoritative; file remains the historical Pack03 source identifier"
+}

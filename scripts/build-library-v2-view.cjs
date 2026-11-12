@@ -1,0 +1,125 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('node:fs');
+const crypto=require('node:crypto');
+// The JSON catalogue on main is the ONLY editorial source. This HTML is a
+// generated, read-only snapshot for authenticated GitHub editors to inspect.
+const source=fs.readFileSync('outputs/library-v2.json');
+const sourceHash=crypto.createHash('sha256').update(source).digest('hex');
+const db=JSON.parse(source.toString('utf8'));
+const genera=db.relations.filter(r=>r.type==='is_a'&&r.child&&r.parent);
+const semantic=db.relations.filter(r=>r.subject&&r.object);
+const rows=db.entries.map(e=>({
+ id:e.id,lemma:e.lemma,meaning:e.meaning,weight:e.selection.base_weight,
+ lexical_weight:e.selection.task_overrides?.lexical_topic??null,
+ generalization:e.generalization||null,
+ scope:e.selection.scope,weight_source:e.selection.weight_source||null,
+ kind:e.kind,categories:e.categories,phonetic_status:e.phonetic_tags?.status,
+ genus:genera.filter(r=>r.child?.id===e.id).map(r=>r.parent.lemma),
+ genus_member_count:genera.filter(r=>r.parent?.id===e.id).length,
+ phonetic:e.phonetic_tags?.data?{
+  positions:e.phonetic_tags.data.selection_position||null,
+  tokens:e.phonetic_tags.data.sound_tokens||[],
+  syllables:e.phonetic_tags.data.syllable_count??null,
+  markova:e.phonetic_tags.data.markova_type??null
+ }:null,
+ morphology_status:e.morphology?.status,
+ image_policy:e.illustrations.policy,
+ images:(e.illustrations.senses||[]).flatMap(s=>(s.variants||[]).map(v=>({label:v.label,src:v.src}))),
+ image_planned:e.illustrations.planned_variants,
+ note:e.editorial?.note||null,
+ old_id:e.legacy_source?.id||null
+}));
+const data=JSON.stringify({schema:db.schema_version,generated:db.generated_at,rows,draft_action_frames:(db.speech_frame_candidates||[]).map(f=>({id:f.id,verb_id:f.verb_id,verb:db.entries.find(e=>e.id===f.verb_id)?.lemma||'',intent:f.semantic_intent,example:f.example,roles:f.roles.map(r=>({...r,labels:r.allowed_entry_ids.map(id=>db.entries.find(e=>e.id===id)?.lemma||id)}))})),genus_relations:genera.map(r=>({child_id:r.child.id,parent_id:r.parent.id,child:r.child.lemma,parent:r.parent.lemma})),relations:db.relations.filter(r=>r.type!=='is_a'&&!r.subject&&!r.object).map(r=>({
+ type:r.type,male:r.male?.lemma||null,female:r.female?.lemma||null,offspring:r.offspring?.lemma||null
+})),semantic_relations:semantic.map(r=>({id:r.id,type:r.type,subject_id:r.subject.id,object_id:r.object.id,subject:r.subject.lemma,object:r.object.lemma,inverse_type:r.inverse_type,source:r.provenance?.source||'editorial'})),review:db.review_queue,weights:db.weight_migration},null,0).replace(/</g,'\\u003c');
+const html=[
+'<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">',
+'<title>Забавоград · Библиотека слов</title>',
+'<meta name="library-source-sha256" content="'+sourceHash+'">',
+'<style>',
+':root{font-family:system-ui,Arial,sans-serif;background:#f4f7f3;color:#263b32;font-size:15px}',
+'*{box-sizing:border-box}body{margin:0}main{max-width:1650px;margin:auto;padding:26px}',
+'h1{font-size:30px;margin:6px 0}p{line-height:1.5}.sub{color:#637469}',
+'.banner{background:#fff8df;padding:12px;border-radius:10px;border:1px solid #e8d8a7;margin:12px 0}',
+'.stats{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}.stat{background:#fff;border:1px solid #dbe3da;padding:12px 18px;border-radius:12px}.stat strong{font-size:22px;display:block}',
+'.controls{display:grid;grid-template-columns:minmax(220px,2fr) repeat(3,minmax(135px,1fr)) auto;gap:10px;margin:14px 0}',
+'input,select,button{font:inherit;padding:11px;border-radius:8px;border:1px solid #bbccc0;background:white;color:inherit}button{cursor:pointer}button:hover{background:#e8f3e8}',
+'.tablewrap{background:#fff;border:1px solid #dbe3da;border-radius:12px;overflow:auto;max-height:70vh}',
+'button.sort{color:inherit;background:transparent;border:0;padding:0;font-weight:700;cursor:pointer}button.sort:hover,button.sort:focus{text-decoration:underline;background:transparent}',
+'table{border-collapse:collapse;width:100%;min-width:890px}th{position:sticky;top:0;background:#285342;color:white;text-align:left;padding:12px}td{border-top:1px solid #e7ece7;padding:10px 12px;vertical-align:top}tr:hover td{background:#f1f7f1}',
+'td:nth-child(1){font-weight:650}.small{font-size:12px;color:#718078}.tag{display:inline-block;padding:3px 7px;margin:2px;background:#e8efe7;border-radius:5px;font-size:12px}',
+'.muted{color:#859188}.actions{display:flex;gap:10px;align-items:center;margin:12px 0;flex-wrap:wrap}',
+'dialog{max-width:760px;width:min(95%,760px);border:1px solid #b9c9b9;border-radius:14px;padding:24px;background:#fff;color:#263b32;max-height:90vh;overflow:auto}',
+'dialog::backdrop{background:#1a2928aa}.details{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f5;padding:10px;border-radius:8px}',
+'a{color:#206a53}ul{padding-left:20px}footer{padding:18px 0;color:#637469}',
+'@media(max-width:780px){main{padding:12px}.controls{grid-template-columns:1fr 1fr}.controls input{grid-column:span 2}h1{font-size:23px}}',
+'</style></head><body><main><small class="sub">ЗАБАВОГРАД · РЕДАКТОРСКИЙ ПРОСМОТР</small>',
+'<h1>Библиотека слов</h1>',
+'<p class="sub">Единый редакторский черновик: все слова, значения и темы. Здесь предпросмотр — изменения вносите в исходный JSON через GitHub.</p>',
+'<p><a href="Проверка-смысловых-связей.html">Проверка и утверждение смысловых связей</a> (отдельный редактор для локальных JSON)</p>',
+'<p><a href="https://github.dev/afevina-lab/zabavograd-demo/blob/main/outputs/library-v2.json" target="_blank" rel="noopener noreferrer">Открыть библиотеку для редактирования на GitHub</a> · <a href="https://github.com/afevina-lab/zabavograd-demo/tree/main/outputs" target="_blank" rel="noopener noreferrer">Папка outputs</a></p>',
+'<div class="banner"><strong>Черновой предпросмотр.</strong> После сохранения изменений в основном JSON GitHub Actions обновляет этот HTML. Перенос черновика в публичную игру — отдельное решение, не действие этого предпросмотра. Веса: <strong>100 / 70 / 50 / 30 / 20 / 10</strong>; ноль исключает из автоматической выдачи. Предложенные веса требуют редакторского просмотра.</div>',
+'<div class="stats" id="stats"></div>',
+'<div class="controls"><input id="q" placeholder="Поиск слова, значения, категории или примечания" aria-label="Поиск">',
+'<select id="category" aria-label="Категория"></select><select id="weight" aria-label="Вес">',
+'<option value="">Все веса</option><option>100</option><option>70</option><option>50</option><option>30</option><option>20</option><option>10</option><option>0</option></select>',
+'<select id="mode" aria-label="Фильтр"><option value="">Все карточки</option><option value="basic">Базовая выдача</option><option value="aux">Вспомогательные</option><option value="illustrated">С изображениями</option><option value="pending">Ожидают фонетику</option><option value="proposed">Предложенные веса</option><option value="action">Участвует в моделях действий</option></select>',
+'<button id="csv">CSV</button></div>',
+'<div class="actions"><strong id="matchCount"></strong><span id="pageInfo" class="small"></span><button id="prev">Назад</button><button id="next">Вперёд</button></div>',
+'<div class="tablewrap"><table><thead><tr><th><button class="sort" data-sort="lemma">Слово ↕</button></th><th>Значение</th><th><button class="sort" data-sort="weight">Вес ↕</button></th><th>Категории</th><th>Родовые понятия</th><th><button class="sort" data-sort="imageCount">Изображения ↕</button></th><th><button class="sort" data-sort="phonetic_status">Разметка ↕</button></th><th>Источник</th></tr></thead><tbody id="body"></tbody></table></div>',
+'<p class="small">Нажмите на строку для полной карточки, фонетических тегов, утверждённых связей и черновых моделей действий. Черновые модели пока не используются играми. CSV выгружает текущую выборку. Список категорий включает исторические подразделы, пока не утверждённые для переноса в единую таксономию.</p>',
+'<dialog id="dialog"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h2 id="detailTitle"></h2><button id="close">Закрыть</button></div><div id="detail"></div></dialog>',
+'<footer>Источник: outputs/library-v2.json · Снимок SHA-256 '+sourceHash.slice(0,12)+' · Локальная страница обновляется из JSON. Скачанный HTML — снимок, а не редактор. После изменений на GitHub дождитесь Actions и скачайте его заново.</footer>',
+'<script id="library-data" type="application/json">'+data+'</script>',
+'<script>',
+'(()=>{const db=JSON.parse(document.getElementById("library-data").textContent),all=db.rows;',
+'const $=id=>document.getElementById(id),stats=$("stats"),body=$("body"),cats=$("category");let current=[],page=0,sortBy="weight",sortDesc=true;const size=80;',
+'function node(tag,text,klass){const x=document.createElement(tag);if(text!==undefined)x.textContent=String(text);if(klass)x.className=klass;return x}',
+'function c(el,tag,text,klass){const x=node(tag,text,klass);el.appendChild(x);return x}',
+'function init(){const categories=[...new Set(all.flatMap(e=>e.categories.map(x=>x.path)))].sort((a,b)=>a.localeCompare(b,"ru"));cats.appendChild(new Option("Все категории",""));for(const k of categories)cats.appendChild(new Option(k,k));',
+'const metrics=[["Всего",all.length],["Базовая выдача",all.filter(x=>x.categories.some(c=>c.default_selection)&&x.weight>0).length],["С изображениями",all.filter(x=>x.images.length).length],["Семейных связей",db.relations.length],["Родовых связей",db.genus_relations.length],["Моделей действий · черновик",db.draft_action_frames.length],["Обобщающих слов",all.filter(x=>x.generalization?.is_generalizing_word).length],["Предложенные веса",all.filter(x=>x.weight_source&& (x.weight_source==="reviewable_catalogue_completion"||x.weight_source.includes("propos"))).length]];',
+'for(const [k,v]of metrics){const x=c(stats,"div",undefined,"stat");c(x,"strong",v);c(x,"span",k)}',
+'for(const id of ["q","category","weight","mode"])$(id).addEventListener(id==="q"?"input":"change",()=>{page=0;render()});',
+'document.querySelectorAll("button.sort").forEach(btn=>btn.addEventListener("click",()=>{const key=btn.dataset.sort;sortDesc=sortBy===key?!sortDesc:key==="weight";sortBy=key;page=0;render()}));',
+'$("prev").onclick=()=>{page=Math.max(0,page-1);render()};$("next").onclick=()=>{page++;render()};$("csv").onclick=csv;',
+'$("close").onclick=()=>$("dialog").close();render()}',
+'function filtered(){const q=$("q").value.trim().toLocaleLowerCase("ru"),cat=cats.value,w=$("weight").value,m=$("mode").value;return all.filter(e=>{',
+'if(q&&!([e.lemma,e.meaning,e.note,...e.categories.map(c=>c.path)].filter(Boolean).join(" ").toLocaleLowerCase("ru").includes(q)))return false;',
+'if(cat&&!e.categories.some(c=>c.path===cat||c.path.startsWith(cat+"/")))return false;',
+'if(w!==""&&String(e.weight)!==w)return false;',
+'if(m==="basic"&&!(e.weight>0&&e.categories.some(c=>c.default_selection)))return false;',
+'if(m==="aux"&&!e.categories.some(c=>!c.default_selection))return false;',
+'if(m==="illustrated"&&!e.images.length)return false;',
+'if(m==="pending"&&e.phonetic_status!=="pending_automatic_analysis")return false;',
+'if(m==="proposed"&&e.weight_source!=="reviewable_catalogue_completion")return false;',
+'if(m==="action"&&!db.draft_action_frames.some(f=>f.verb_id===e.id||f.roles.some(r=>r.allowed_entry_ids.includes(e.id))))return false;',
+'return true})}',
+'function sortedRows(rows){return rows.sort((a,b)=>{const val=x=>sortBy==="imageCount"?x.images.length:x[sortBy];const av=val(a)??"",bv=val(b)??"";const cmp=typeof av==="number"&&typeof bv==="number"?av-bv:String(av).localeCompare(String(bv),"ru");return sortDesc?-cmp:cmp})}',
+'function render(){current=sortedRows(filtered());const pages=Math.max(1,Math.ceil(current.length/size));page=Math.min(page,pages-1);body.replaceChildren();',
+'$("matchCount").textContent="Найдено: "+current.length;$("pageInfo").textContent="Страница "+(page+1)+" из "+pages;$("prev").disabled=page===0;$("next").disabled=page>=pages-1;',
+'for(const e of current.slice(page*size,(page+1)*size)){const tr=node("tr");tr.tabIndex=0;tr.onclick=()=>detail(e);tr.onkeydown=ev=>{if(ev.key==="Enter")detail(e)};',
+'c(tr,"td",e.lemma+(e.generalization?.is_generalizing_word?" → "+e.generalization.default_lexical_form:""));c(tr,"td",e.meaning||"—","small");c(tr,"td",String(e.weight)+(e.lexical_weight!==null?" (лексика "+e.lexical_weight+")":""));',
+'const cc=c(tr,"td");for(const cat of e.categories)c(cc,"span",cat.path+(cat.default_selection?"":" (доп.)"),"tag");',
+'c(tr,"td",e.genus.join(", ")||"—","small");c(tr,"td",e.images.length||e.image_planned||"—");c(tr,"td",e.phonetic_status==="pending_automatic_analysis"?"Ожидает":"Есть данные","small");',
+'c(tr,"td",e.old_id?"Старая карточка":"Новая"+(e.weight_source?" · вес к проверке":""),"small");body.appendChild(tr)}}',
+'const roleNames={agent:"исполнитель",patient:"объект",instrument:"орудие",material:"материал",food:"пища",recipient:"получатель",location:"место",companion:"спутник",destination:"направление",source:"источник",result:"результат",theme:"тема"};',
+'function detail(e){$("detailTitle").textContent=e.lemma;const d=$("detail");d.replaceChildren();',
+'for(const [k,v]of [["ID",e.id],["Значение",e.meaning||"—"],["Вес",e.weight],["Вес в лексических заданиях",e.lexical_weight??e.weight],["Обобщающее слово",e.generalization?.is_generalizing_word?"Да":"Нет"],["Базовая форма в лексике",e.generalization?.default_lexical_form||e.lemma],["Выдача",e.scope],["Источник веса",e.weight_source||"Редакторская запись"],["Категории",e.categories.map(x=>x.path+(x.default_selection?"":" [вспомогательная]")).join("; ")],["Иллюстрации",e.images.length],["Изобразительная политика",e.image_policy||"Не задана"],["Родовые понятия",e.genus.join(", ")||"—"],["Число видовых понятий",e.genus_member_count],["Фонетика",e.phonetic_status||"—"],["Морфология",e.morphology_status||"—"],["Примечание",e.note||"—"]]){const row=c(d,"p");c(row,"strong",k+": ");c(row,"span",v)}',
+'const ps=e.phonetic;if(ps){c(d,"h3","Теги и фонетические сведения");c(d,"pre",JSON.stringify(ps,null,2),"details")}',
+'const rel=db.relations.filter(r=>[r.male,r.female,r.offspring].includes(e.lemma));if(rel.length){c(d,"h3","Смысловые связи (семья животных)");for(const r of rel)c(d,"p",[r.male,r.female,r.offspring].filter(Boolean).join(" — "))}',
+'const semanticNames={form_of:"Форма части тела",has_form:"Может принимать форму",antonym:"Антоним",synonym:"Синоним",same_root:"Однокоренное слово",contrasts_with:"Противопоставление",part_of:"Часть целого",has_part:"Состоит из части",used_for:"Используют для действия",purpose_of:"Действие для этого предмета",made_of:"Материал",material_of:"Используется как материал для",made_from:"Изготавливается из",ingredient_for:"Ингредиент для",produces:"Производит",produced_by:"Производится",typically_contains:"Обычно содержит",typically_found_in:"Обычно находится в",dwells_in:"Живёт в",dwelling_of:"Место обитания",is_a:"Вид",has_instance:"Имеет вид"};',
+'const sr=db.semantic_relations.filter(r=>r.subject_id===e.id||r.object_id===e.id);if(sr.length){c(d,"h3","Смысловые и однокоренные связи");for(const r of sr){const direct=r.subject_id===e.id;const type=direct?r.type:r.inverse_type;const other=direct?r.object:r.subject;const otherId=direct?r.object_id:r.subject_id;const p=c(d,"p");c(p,"strong",(semanticNames[type]||type)+": ");c(p,"span",other+" · "+otherId)}}',
+'const outgoing=db.draft_action_frames.filter(f=>f.verb_id===e.id);if(outgoing.length){c(d,"h3","Модели действия (на авторскую проверку)");for(const f of outgoing){c(d,"p",f.intent+" · "+f.example);for(const r of f.roles)c(d,"p","↳ "+(roleNames[r.role]||r.role)+" · "+(r.preposition?r.preposition+" + ":"")+r.case+" · "+(r.required?"обязательно":"необязательно")+" · "+r.labels.join(", "),"small")}}',
+'const incoming=db.draft_action_frames.flatMap(f=>f.roles.filter(r=>r.allowed_entry_ids.includes(e.id)).map(r=>({f,r})));if(incoming.length){c(d,"h3","Роли этого слова в моделях действий (черновик)");for(const {f,r} of incoming)c(d,"p",f.verb+" — "+f.intent+" · "+(roleNames[r.role]||r.role)+" · "+(r.preposition?r.preposition+" + ":"")+r.case,"small")}',
+'if(e.images.length){c(d,"h3","Иллюстрации из реестра");for(const img of e.images){const p=c(d,"p");const a=c(p,"a",img.label||img.src);a.href="https://github.com/afevina-lab/zabavograd/blob/main/public"+img.src;a.target="_blank";a.rel="noopener noreferrer"}}',
+'$("dialog").showModal()}',
+'function csv(){const head=["Слово","Значение","Вес","Вес (лексика)","Обобщающее","Форма для лексики","Категории","Родовые понятия","Подкатегории","Режим","Изображения","Фонетика","ID"];',
+'const data=[head,...current.map(e=>[e.lemma,e.meaning||"",e.weight,e.lexical_weight??e.weight,e.generalization?.is_generalizing_word?"да":"нет",e.generalization?.default_lexical_form||e.lemma,e.categories.map(x=>x.path).join("; "),e.genus.join("; "),e.categories.filter(x=>!x.default_selection).map(x=>x.path).join("; "),e.scope,e.images.length,e.phonetic_status,e.id])];',
+'const csv=data.map(r=>r.map(v=>"\\\""+String(v??"").replace(/"/g,"\\\"\\\"")+"\\\"").join(";")).join("\\r\\n");',
+'const blob=new Blob(["\\uFEFF"+csv],{type:"text/csv;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="zabavograd-library.csv";a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)}',
+'init()})();',
+'</script></main></body></html>'
+].join('\n');
+fs.writeFileSync('outputs/Библиотека.html',html);
+console.log('HTML catalogue',rows.length,'entries',Math.round(html.length/1024),'KB');

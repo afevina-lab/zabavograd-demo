@@ -1,0 +1,98 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Забавоград · Редактор моделей действия</title>
+<style>:root{font:15px system-ui,sans-serif;background:#f4f6f4;color:#253a31}main{max-width:1120px;margin:2em auto;padding:12px}
+section{background:white;border:1px solid #d1ddd4;border-radius:12px;padding:18px;margin:12px 0}
+input,select,textarea,button{font:inherit;border:1px solid #b5c8b9;border-radius:8px;padding:8px;background:white}
+label{display:block;margin:8px 0}textarea{width:100%;min-height:64px}button{cursor:pointer;margin:4px}button:hover{background:#e3eee8}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.role{border:1px solid #e4e9e5;border-radius:8px;padding:8px;margin:10px 0}
+small,.muted{color:#647c6e}code{background:#edf2ed;padding:2px 5px;border-radius:4px}.error{color:#a32a2a}
+</style></head><body><main>
+<h1>Модели действия: роли и падежи</h1>
+<p>Редактор создаёт <strong>наши собственные типичные речевые модели</strong> на основе предложений Конструктикона и FrameBank. Внешний анализ — ориентир, а не готовая модель. Нельзя копировать корпусные примеры. Все выбранные участники должны иметь ID в нашей библиотеке.</p>
+<section><label>Основная библиотека <code>library-v2.json</code> <input type="file" id="master" accept=".json"></label>
+<label>Предложения <code>constructicon-suggestions.json</code> или <code>framebank-suggestions.json</code> <input type="file" id="proposals" accept=".json"></label>
+<button id="load">Открыть очередь</button><p id="status" role="status"></p></section>
+<section id="workspace" hidden><div class="row"><label>Фильтр по слову <input id="search" placeholder="например, забивать"></label><button id="download">Скачать решения JSON</button></div><div id="queue"></div></section>
+</main><script>
+'use strict';
+const $=id=>document.getElementById(id);
+const roles=['agent','patient','instrument','material','food','recipient','location','companion','destination','source','result','theme','experiencer','other'];
+const cases=['nom','gen','dat','acc','ins','prep','none'];
+let dictionary=new Map(), candidates=[], decisions=new Map(),source=null;
+function key(r){return [r.source,r.source_record_id,r.candidate_type,r.entry_id||r.anchor_lemma].map(v=>v||'').join('|');}
+function node(parent,tag,txt){const n=document.createElement(tag);if(txt!==undefined)n.textContent=txt;parent.append(n);return n;}
+function field(parent,title,value=''){const label=node(parent,'label',title+' ');const e=node(label,'input');e.value=value;return e;}
+function check(parent,title){const label=node(parent,'label');const e=node(label,'input');e.type='checkbox';label.append(document.createTextNode(' '+title));return e;}
+function drop(parent,title,options,selected){const label=node(parent,'label',title+' '),s=node(label,'select');for(const value of options){const opt=node(s,'option',value);opt.value=value;}if(selected)s.value=selected;return s;}
+function choicesInput(parent,title){const label=node(parent,'label',title+' '),e=node(label,'input');e.placeholder='Поиск слова или ID';e.setAttribute('list','words');return e;}
+async function read(id){const file=$(id).files[0];if(!file)throw Error('Выберите оба JSON-файла');return JSON.parse(await file.text());}
+function roleEditor(container){
+ const block=node(container,'div');block.className='role';
+ const role=drop(block,'Смысловая роль',roles);
+ const gram=drop(block,'Падеж',cases,'acc');
+ const preposition=field(block,'Предлог');
+ const participants=field(block,'Типичные участники (ID через запятую)');
+ participants.placeholder='IDs из основной библиотеки';
+ const required=check(block,'Обязательный участник');required.checked=false;
+ node(block,'small','Пищу, инструмент и материал не объединять, даже если падеж совпадает.');
+ const remove=node(block,'button','Удалить роль');remove.type='button';remove.onclick=()=>block.remove();
+ return {block,read:()=>({role:role.value,case:gram.value,preposition:preposition.value.trim().toLowerCase(),
+   allowed_entry_ids:participants.value.split(',').map(x=>x.trim()).filter(Boolean),required:required.checked})};
+}
+function render(){
+ const root=$('queue');root.replaceChildren();const term=$('search').value.trim().toLowerCase();
+ for(const r of candidates.filter(x=>(x.anchor_lemma||'').toLowerCase().includes(term)).slice(0,60)){
+  const k=key(r),card=node(root,'section');
+  node(card,'h3',(r.anchor_lemma||'—')+' · '+r.source+' · '+r.source_record_id);
+  node(card,'p','Кандидаты карточек: '+(r.entry_candidates||[]).map(x=>(dictionary.get(x.id)?.lemma||'')+' ['+x.id+'] '+(x.meaning||'')).join(' / '));
+  node(card,'p','Источник предлагает: '+(r.pattern||'нет паттерна'));
+  if(r.slots?.length)node(card,'p','Слоты источника (только подсказка): '+r.slots.map(s=>[s.role,s.form,s.semantic_class].filter(Boolean).join(' / ')).join(' · '));
+  node(card,'small','В готовую игру слоты источника не копируются. Заполните роли, управление и типичных участников самостоятельно.');
+  const matches=(r.entry_candidates||[]).filter(x=>dictionary.has(x.id));
+  const select=drop(card,'Точное значение глагола',matches.map(x=>x.id));
+  const intent=field(card,'Типичное значение действия (своими словами)');
+  const roleRoot=node(card,'div');const editors=[];
+  function addRole(){const e=roleEditor(roleRoot);editors.push(e);}
+  const add=node(card,'button','+ Добавить участника');add.type='button';add.onclick=addRole;addRole();addRole();
+  const sense=check(card,'Проверены точное значение и ID');
+  const grammar=check(card,'Проверены управление, предлоги и падежи');
+  const typical=check(card,'Участники и действие типичны для детских заданий');
+  const independent=check(card,'Модель сформулирована самостоятельно, без копирования текста из источника');
+  const clearance=check(card,'Условия лицензии проверены; публикация именно этой самостоятельно сформулированной модели разрешена');
+  const note=field(card,'Примечание редактора');
+  const action=node(card,'div');action.className='row';
+  const result=node(card,'p',decisions.has(k)?'Решение сохранено в этом сеансе':'Ожидает проверки');
+  const accept=node(action,'button','Принять модель');accept.type='button';accept.onclick=()=>{
+   const verb_id=select.value;
+   const recorded=editors.filter(e=>e.block.isConnected).map(e=>e.read());
+   if(!verb_id||!dictionary.has(verb_id)||!intent.value.trim()||!sense.checked||!grammar.checked||!typical.checked||!independent.checked||!clearance.checked||!recorded.length){
+    result.textContent='Заполните значение, роли и все пять подтверждений';result.className='error';return;}
+   if(recorded.some(x=>!x.allowed_entry_ids.length||x.allowed_entry_ids.some(id=>!dictionary.has(id)))){
+    result.textContent='Укажите существующие ID для каждого участника';result.className='error';return;}
+   if(new Set(recorded.map(x=>x.role)).size!==recorded.length){
+    result.textContent='Смысловые роли должны различаться';result.className='error';return;}
+   decisions.set(k,{key:k,action:'accept',verb_id,semantic_intent:intent.value.trim(),roles:recorded,
+    review:{sense_checked:true,grammar_checked:true,typical_for_children:true,independent_authoring:true,publication_clearance:true},note:note.value});
+   result.textContent='Принято локально. Скачайте решения, чтобы применить их к V2.';result.className='';
+  };
+  const reject=node(action,'button','Отклонить');reject.type='button';reject.onclick=()=>{
+   decisions.set(k,{key:k,action:'reject',reason:note.value});result.textContent='Отклонено локально.';};
+ }
+}
+$('load').onclick=async()=>{try{
+ const db=await read('master');source=await read('proposals');
+ if(!Array.isArray(db.entries)||source.schema!=='linguistic_suggestions_v1'||source.purpose!=='review_only')throw Error('Неизвестный формат');
+ dictionary=new Map(db.entries.map(e=>[e.id,e]));
+ candidates=(source.records||[]).filter(r=>['valency_pattern','construction_anchor'].includes(r.candidate_type)&&r.review_status==='suggested');
+ decisions.clear();$('workspace').hidden=false;$('status').textContent='Загружено предложений: '+candidates.length;render();
+ const datalist=node(document.body,'datalist');datalist.id='words';
+ for(const e of db.entries){const o=node(datalist,'option');o.value=e.id;o.label=e.lemma+' — '+(e.meaning||'');}
+ }catch(e){$('workspace').hidden=true;$('status').textContent=e.message;}};
+$('search').oninput=render;
+$('download').onclick=()=>{
+ const data={schema:'speech_frame_decisions_v1',decisions:[...decisions.values()]},
+  url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)+'\n'],{type:'application/json'})),
+  a=document.createElement('a');a.href=url;a.download='speech-frame-decisions.json';a.click();
+ setTimeout(()=>URL.revokeObjectURL(url),1000);
+};
+</script></body></html>
