@@ -74,7 +74,9 @@ const entries=db.entries.map(e=>{
   ...cat,position:editorial?.selection_position||'',
   type:editorial?.markova_type??(candidate?(draft?.markova_type_proposal??editorial?.markova_type_candidate??e.machine_analysis?.phonetic?.markova_type_candidate??null):null),
   opposition:editorial?.opposition_sounds_for_r||[],
-  weight:e.selection?.base_weight??0,
+  // Source IDs of duplicate public meanings remain addressable, but cannot
+  // be drawn again as a second copy of the same meaning in an exercise.
+  weight:e.same_lexical_meaning_as?0:(e.selection?.base_weight??0),
   taskWeights:e.selection?.task_overrides||null,
   generalization:e.generalization||null,
   kindOf:genericParents.get(e.id)||[], // direct typed semantic relations
@@ -83,7 +85,8 @@ const entries=db.entries.map(e=>{
   variants,soundTokens:tokens,sounds,letters:letterMap(e.lemma),
   phoneticStatus,kind:e.kind,scope:e.selection?.scope||'general',
   partOfSpeech:e.part_of_speech||e.legacy_source?.raw?.part_of_speech||null,
-  lexicalEligibleByDefault:e.lexical_eligible_by_default!==false
+  lexicalEligibleByDefault:!e.same_lexical_meaning_as&&e.lexical_eligible_by_default!==false,
+  ...(e.same_lexical_meaning_as?{aliasOf:e.same_lexical_meaning_as}:{}),
  };
 });
 const words=[];
