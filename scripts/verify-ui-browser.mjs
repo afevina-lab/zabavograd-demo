@@ -218,6 +218,9 @@ try{
     assert.equal(await evaluate("document.querySelectorAll('.result .victory-stars>span').length"),3);
     assert.equal(await evaluate("getComputedStyle(document.querySelector('.result .victory-stars>span')).animationName"),'zg-award-fly');
     await sleep(3600);
+    const finalCards=await evaluate("[...document.querySelectorAll('.cards .card.found')].map(e=>({opacity:+getComputedStyle(e).opacity,animation:getComputedStyle(e).animationName}))");
+    assert(finalCards.length===6&&finalCards.every(x=>x.opacity<.01&&x.animation==='zg-match'),
+      'Matched cards must disappear completely after pigment pop: '+JSON.stringify(finalCards));
     await screenshot('forest-watercolor-match-and-award-1280x800');
   }
   const results=[];

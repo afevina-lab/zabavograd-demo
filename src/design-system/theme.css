@@ -95,7 +95,8 @@
 /* All scene layers have one geometry contract and never intercept input. */
 .app[data-theme] .zg-scene-layers{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
 .app[data-theme] .zg-scene-sprite{position:absolute;display:block;height:auto;max-width:none;object-fit:contain;pointer-events:none;user-select:none}
-.app[data-theme] .card:disabled{opacity:1!important}
+.app[data-theme] .card:disabled:not(.found){opacity:1!important}
+/* Matched card opacity is owned exclusively by zg-match keyframes, not disabled styles. */
 
 /* All headers meet the viewport edges. No differently colored legacy panel margins. */
 .app[data-theme] .play-toolbar{background-clip:border-box!important}
