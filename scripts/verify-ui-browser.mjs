@@ -173,6 +173,8 @@ try{
     assert(r.toolbar.width>=width-3,'Sorting toolbar is clipped: '+JSON.stringify(r));
     assert(r.stage.bottom>=height-3&&r.stage.bottom<=height+3,'Sorting stage does not fill viewport: '+JSON.stringify(r));
     assert(theme==='forest'?r.toolbarBackground.includes('assets/themes/forest/header.webp'):r.toolbarBackground.includes('linear-gradient'),'Sorting must use shared toolbar');
+    const groupOpacity=await evaluate("getComputedStyle(document.querySelector('.bin-target:disabled')).opacity");
+    if(groupOpacity)assert.equal(Number(groupOpacity),1,'Disabled sorting group labels must remain fully opaque');
     assert(r.homeHref?.endsWith('/home.html')&&r.captionButton,'Sorting home/caption controls missing');
     await screenshot('sorting-'+theme+'-'+width+'x'+height);
     if(theme==='forest'&&width>=1100){
@@ -224,7 +226,11 @@ try{
     assert(reward.every(x=>x.art.includes('approved-stars.webp')),'Result must use existing watercolor artwork: '+JSON.stringify(reward));
     assert(reward[0].delay<reward[1].delay&&reward[1].delay<reward[2].delay,'Stars must launch with staggered delays: '+JSON.stringify(reward));
     assert(reward[0].position!==reward[1].position,'Centre award must use the shining star artwork: '+JSON.stringify(reward));
-    await sleep(3600);
+    await sleep(2510);
+    const flight=await evaluate("[...document.querySelectorAll('.result .victory-stars>span')].map(e=>({opacity:+getComputedStyle(e).opacity,transform:getComputedStyle(e).transform}))");
+    assert(flight[0].opacity>.1&&flight[2].opacity<.1,'Stars must fly out consecutively, not all together: '+JSON.stringify(flight));
+    await screenshot('forest-watercolor-award-in-flight-1280x800');
+    await sleep(1290);
     const finalCards=await evaluate("[...document.querySelectorAll('.cards .card.found')].map(e=>({opacity:+getComputedStyle(e).opacity,animation:getComputedStyle(e).animationName}))");
     assert(finalCards.length===6&&finalCards.every(x=>x.opacity<.01&&x.animation==='zg-match'),
       'Matched cards must disappear completely after pigment pop: '+JSON.stringify(finalCards));

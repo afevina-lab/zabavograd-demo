@@ -59,8 +59,10 @@ function App(){
   const bounds=stage.getBoundingClientRect();
   const pairX=cards.reduce((sum,card)=>{const r=card.getBoundingClientRect();return sum+r.left+r.width/2},0)/2;
   const pairY=cards.reduce((sum,card)=>{const r=card.getBoundingClientRect();return sum+r.top+r.height/2},0)/2;
-  const panX=Math.max(-bounds.width*.19,Math.min(bounds.width*.19,(bounds.left+bounds.width/2-pairX)*.46));
-  const panY=Math.max(-bounds.height*.16,Math.min(bounds.height*.16,(bounds.top+bounds.height/2-pairY)*.46));
+  // Pan toward the pair's shared centre, not merely zoom around the scene centre.
+  // Bound travel so the illustrated stage remains stable on very narrow screens.
+  const panX=Math.max(-bounds.width*.34,Math.min(bounds.width*.34,(bounds.left+bounds.width/2-pairX)*1.18));
+  const panY=Math.max(-bounds.height*.34,Math.min(bounds.height*.34,(bounds.top+bounds.height/2-pairY)*1.18));
   camera.style.setProperty('--zg-camera-pan-x',panX.toFixed(1)+'px');
   camera.style.setProperty('--zg-camera-pan-y',panY.toFixed(1)+'px');
   // Re-arm the same animation on every pair, not just the first.
