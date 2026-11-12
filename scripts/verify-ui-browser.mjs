@@ -175,12 +175,56 @@ try{
     assert(theme==='forest'?r.toolbarBackground.includes('assets/themes/forest/header.webp'):r.toolbarBackground.includes('linear-gradient'),'Sorting must use shared toolbar');
     assert(r.homeHref?.endsWith('/home.html')&&r.captionButton,'Sorting home/caption controls missing');
     await screenshot('sorting-'+theme+'-'+width+'x'+height);
+    if(theme==='forest'&&width>=1100){
+      await evaluate("document.querySelector('.zg-caption-toggle').click()");
+      await until("!!document.querySelector('.sort-card.has-caption small')");
+      assert(await evaluate("document.querySelector('.zg-caption-toggle').getAttribute('aria-pressed')")==='true');
+    }
     return r;
+  }
+  async function winnerAndFeedback(){
+    await cmd('Emulation.setDeviceMetricsOverride',{width:1280,height:800,deviceScaleFactor:1,mobile:false});
+    await cmd('Page.navigate',{url:origin});
+    await until("!!document.querySelector('.app')");
+    await evaluate("localStorage.setItem('zabavograd.preferences',JSON.stringify({pairs:3,theme:'forest',preview:false}))");
+    await cmd('Page.reload',{ignoreCache:true});
+    await until("!!document.querySelector('.app.forest')");
+    await until("!!document.querySelector('.settings .start:not(:disabled)')",32000);
+    await evaluate("document.querySelector('.settings .start:not(:disabled)').click()");
+    await until("document.querySelectorAll('.app.game-active .cards .card').length===6");
+    await sleep(600);
+    const keys=await evaluate("[...document.querySelectorAll('.cards .card')].map(x=>x.dataset.cardKey)");
+    const pairs=new Map();
+    for(let i=0;i<keys.length;i++){
+      const id=keys[i].slice(0,keys[i].lastIndexOf(':'));
+      if(!pairs.has(id))pairs.set(id,[]);
+      pairs.get(id).push(i);
+    }
+    assert.equal(pairs.size,3);
+    for(const indexes of pairs.values()){
+      assert.equal(indexes.length,2);
+      await evaluate(`document.querySelectorAll('.cards .card')[${indexes[0]}].click()`);
+      await until(`document.querySelectorAll('.cards .card')[${indexes[0]}].classList.contains('flipped')`);
+      await evaluate(`document.querySelectorAll('.cards .card')[${indexes[1]}].click()`);
+      await until(`document.querySelectorAll('.cards .card')[${indexes[0]}].classList.contains('found')&&document.querySelectorAll('.cards .card')[${indexes[1]}].classList.contains('found')`);
+      const feedback=await evaluate(`(()=>{
+        const a=[document.querySelectorAll('.cards .card')[${indexes[0]}],document.querySelectorAll('.cards .card')[${indexes[1]}]];
+        return a.map(e=>({animation:getComputedStyle(e).animationName,start:e.getAnimations().find(z=>z.animationName==='zg-match')?.startTime,bloom:getComputedStyle(e,'::after').animationName}));
+      })()`);
+      assert(feedback.every(x=>x.animation==='zg-match'&&x.bloom==='zg-pigment-bloom'),JSON.stringify(feedback));
+      if(feedback.every(x=>typeof x.start==='number'))assert(Math.abs(feedback[0].start-feedback[1].start)<80,'Found pair must zoom synchronously');
+    }
+    await until("!!document.querySelector('.result .victory-stars')");
+    assert.equal(await evaluate("document.querySelectorAll('.result .victory-stars>span').length"),3);
+    assert.equal(await evaluate("getComputedStyle(document.querySelector('.result .victory-stars>span')).animationName"),'zg-award-fly');
+    await sleep(3600);
+    await screenshot('forest-watercolor-match-and-award-1280x800');
   }
   const results=[];
   for(const [t,w,h] of [['neutral',1440,900],['space',1440,900],['forest',1440,900],['neutral',390,844],['forest',390,844]])results.push(await scenario(t,w,h));
   const sorting=[];
   for(const [t,w,h] of [['neutral',1440,900],['space',1440,900],['forest',1440,900],['neutral',390,844],['space',390,844],['forest',390,844]])sorting.push(await sortingScenario(t,w,h));
+  await winnerAndFeedback();
   await cmd('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
   const reduced=await evaluate("getComputedStyle(document.querySelector('.zg-scene-sprite')||document.querySelector('.sort-card')).animationName");
   assert.equal(reduced,'none','Reduced-motion preference was ignored');
