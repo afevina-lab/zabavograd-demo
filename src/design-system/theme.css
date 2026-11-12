@@ -159,3 +159,13 @@
  .app[data-theme] .play-toolbar .zg-home,.app[data-theme] .play-toolbar .zg-caption-toggle{min-width:32px!important;width:32px!important}
  .app[data-theme] .overlay .award{top:-24px}
 }
+
+/* Award stars remain above the framed result card and retain their full colors. */
+.app[data-theme] .victory-star{
+ display:inline-flex;justify-content:center;align-items:center;
+ width:clamp(52px,8vw,78px);height:clamp(52px,8vw,78px);
+ color:#f1c870;filter:drop-shadow(0 3px 6px #9a6a2b66);
+}
+.app[data-theme] .victory-star .garden-icon{width:100%;height:100%;background-color:currentColor!important}
+.app[data-theme] .victory-star-empty{color:var(--ui-outline);opacity:.45}
+.app[data-theme] .victory-stars>span:nth-child(2){margin-top:-9px}
