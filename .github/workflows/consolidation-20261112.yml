@@ -65,7 +65,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- .migration outputs/library-v2.json outputs/library-v2-auto-analysis.json outputs/image-library.json outputs/Библиотека.html editorial/review/speech-frame-candidates.json docs/consolidation-audit-20261112.json library.json semantic-graph.json public/library.json public/semantic-graph.json public/grammar-frames.json
+          git add -A -- .migration outputs/library-v2.json outputs/library-v2-auto-analysis.json outputs/image-library.json outputs/Библиотека.html editorial/review/speech-frame-candidates.json docs/consolidation-audit-20261112.json library.json semantic-graph.json public/semantic-graph.json public/grammar-frames.json
           if ! git diff --cached --quiet; then
             git commit -m "Complete verified consolidation: 1,899 senses, 1,444 semantic links"
             git push origin HEAD:migration/unify-library-20261112
