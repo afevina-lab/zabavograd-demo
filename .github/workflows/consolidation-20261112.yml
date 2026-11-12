@@ -6,6 +6,10 @@ on:
     paths:
       - '.github/workflows/consolidation-20261112.yml'
       - 'scripts/consolidate-repositories-20261112.cjs'
+      - 'scripts/check-library-v2.cjs'
+      - 'scripts/export-library.cjs'
+      - 'scripts/sync-runtime.cjs'
+      - 'tests/**'
       - '.migration/**'
   workflow_dispatch:
 
