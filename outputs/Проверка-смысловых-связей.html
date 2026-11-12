@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Забавоград — проверка смысловых связей</title>
+<style>
+:root{font:16px system-ui,sans-serif;color:#283f35;background:#f3f6f3}*{box-sizing:border-box}main{max-width:1100px;margin:auto;padding:24px}
+h1{font-size:28px}p{line-height:1.5}label{display:block;margin:12px 0}input,button,textarea{font:inherit;padding:10px;border:1px solid #afc3b7;border-radius:9px;background:white}input[type=file]{max-width:100%}
+button{cursor:pointer}button:hover{background:#e3eee8}button:disabled{opacity:.45;cursor:not-allowed}
+.card{background:white;border:1px solid #d4e0d8;border-radius:12px;padding:18px;margin:12px 0}.flex{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.muted{color:#67766f}
+.bad{color:#8e2424}.good{color:#145d38}.detail{background:#f4f7f5;padding:10px;border-radius:8px;overflow-wrap:anywhere}
+textarea{width:100%;min-height:68px}select{padding:9px}small{color:#6d7973}
+</style></head><body><main>
+<h1>Проверка смысловых связей</h1>
+<p>Рабочий редактор. Данные читаются только из выбранных вами локальных JSON. Никаких отправок на сторонние сервисы. Изменение основной библиотеки происходит <b>только после применения экспортированного файла решений отдельной командой</b>.</p>
+<div class="card"><label>Основной словарь <code>outputs/library-v2.json</code><input id="master" type="file" accept=".json,application/json"></label>
+<label>Предложения <code>.local/linguistic-sources/wikidata-suggestions.json</code><input id="suggestions" type="file" accept=".json,application/json"></label>
+<p class="muted">Поддерживаются Wikidata (после проверки можно экспортировать) и RuWordNet (только исследовательские связи без публикации). Конструкции и валентности проверяются в отдельном редакторе моделей действия.</p>
+<button id="load">Загрузить предложения</button><p id="status" role="status"></p></div>
+<div id="workspace" hidden><div class="flex"><strong id="count"></strong><label>Показать <select id="filter"><option value="pending">Ожидают решения</option><option value="all">Все</option><option value="accept">Принятые</option><option value="reject">Отклонённые</option></select></label></div>
+<div id="cards"></div><button id="export">Скачать решения JSON</button></div>
+</main><script>
+'use strict';
+let db=null,bundle=null,choices=new Map(),records=[];
+const $=id=>document.getElementById(id);
+function element(tag,parent,txt,klass){const e=document.createElement(tag);if(txt!==undefined)e.textContent=String(txt);if(klass)e.className=klass;parent.append(e);return e;}
+function key(r){return [r.source,r.source_record_id,r.candidate_type,r.subject_id,r.object_id,r.relation_type].map(x=>x||'').join('|');}
+async function file(id){const f=$(id).files[0];if(!f)throw Error('Выберите оба JSON-файла');return JSON.parse(await f.text());}
+function render(){
+ const c=$('cards');c.replaceChildren();const filter=$('filter').value;
+ const relevant=records.filter(r=>filter==='all'||(filter==='pending'?!choices.has(key(r)):choices.get(key(r))?.action===filter));
+ $('count').textContent='Предложений: '+records.length+' · решений: '+choices.size+' · показано: '+relevant.length;
+ for(const r of relevant){
+  const k=key(r),a=db.get(r.subject_id),b=db.get(r.object_id),card=element('section',c,undefined,'card');
+  element('h3',card,(a?.lemma||r.subject_id)+' → '+(b?.lemma||r.object_id));
+  element('p',card,'Отношение: '+r.relation_type+' · источник: '+r.source+' · запись: '+r.source_record_id);
+  element('div',card,'Откуда: '+r.subject_id+' — '+(a?.meaning||'значение не указано')+' | Куда: '+r.object_id+' — '+(b?.meaning||'значение не указано'),'detail');
+  element('p',card,'Лицензия: '+bundle.license+' · версия: '+bundle.source_revision,'muted');
+  if(r.source==='ruwordnet')element('p',card,'RuWordNet: подтверждение сохраняется только для исследования. В автономную публичную игру эти отношения не экспортируются.','bad');
+  const state=choices.get(k),info=element('p',card,state?'Решение: '+state.action:'Ещё не рассмотрено',state?.action==='accept'?'good':'muted');
+  const confirmation=element('label',card);const tick1=element('input',confirmation);tick1.type='checkbox';confirmation.append(document.createTextNode(' Проверено точное значение обоих слов (ID)'));
+  const confirmation2=element('label',card);const tick2=element('input',confirmation2);tick2.type='checkbox';confirmation2.append(document.createTextNode(' Связь типична и уместна в детском задании'));
+  tick1.checked=state?.sense_checked===true;tick2.checked=state?.typical_for_children===true;
+  const note=element('textarea',card);note.placeholder='Примечание редактора / причина отклонения';note.value=state?.note||state?.reason||'';
+  const actions=element('div',card,undefined,'flex');
+  const accept=element('button',actions,'Принять');accept.disabled=(!a||!b||!(r.source==='ruwordnet'||(r.source==='wikidata'&&bundle.license==='CC0')));
+  accept.onclick=()=>{if(!tick1.checked||!tick2.checked){info.textContent='Сначала подтвердите смысл и педагогическую типичность';info.className='bad';return;}
+    choices.set(k,{key:k,action:'accept',subject_id:r.subject_id,object_id:r.object_id,relation_type:r.relation_type,sense_checked:true,typical_for_children:true,note:note.value});render();};
+  const reject=element('button',actions,'Отклонить');reject.onclick=()=>{choices.set(k,{key:k,action:'reject',reason:note.value});render();};
+  if(state){const undo=element('button',actions,'Сбросить решение');undo.onclick=()=>{choices.delete(k);render();};}
+ }
+}
+$('load').onclick=async()=>{try{
+ const d=await file('master'),s=await file('suggestions');if(!Array.isArray(d.entries)||s.schema!=='linguistic_suggestions_v1'||!Array.isArray(s.records)||s.purpose!=='review_only')throw Error('Неверная структура JSON');
+ db=new Map(d.entries.map(e=>[e.id,e]));if(db.size!==d.entries.length)throw Error('Повторяющиеся ID в библиотеке');
+ bundle=s;choices=new Map();records=s.records.filter(r=>r.candidate_type==='semantic_relation'&&r.review_status==='suggested'&&r.usable_for_generation===false);
+ if(new Set(records.map(key)).size!==records.length)throw Error('Повторяющиеся предложения с одним ключом');
+ $('workspace').hidden=false;$('status').textContent='Загружено. Решения не изменяют исходный словарь.';render();
+ }catch(e){$('workspace').hidden=true;$('status').textContent=e.message;}};
+$('filter').onchange=render;
+$('export').onclick=()=>{const data={schema:'semantic_review_decisions_v1',decisions:[...choices.values()]};
+ const blob=new Blob([JSON.stringify(data,null,2)+'\n'],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='semantic-review-decisions.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+</script></body></html>
