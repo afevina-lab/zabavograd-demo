@@ -1,0 +1,2469 @@
+{
+  "schema": "speech_frame_candidates_review_v1",
+  "review_status": "suggested",
+  "usable_for_generation": false,
+  "candidates": [
+    {
+      "id": "frame-candidate-20261109-water-plants",
+      "verb_id": "ru-action-20261109-0141",
+      "semantic_intent": "поливать растения",
+      "example": "Садовник поливает розу из лейки.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d181d0b0d0b4d0bed0b2d0bdd0b8d0ba",
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-plant-20261104-d186d0b2d0b5d182d0bed0ba",
+            "ru-r-066",
+            "ru-plant-20261104-d182d18ed0bbd18cd0bfd0b0d0bd",
+            "ru-plant-20261104-d0b4d0b5d180d0b5d0b2d0be",
+            "ru-plant-20261104-d18fd0b1d0bbd0bed0bdd18f"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "gen",
+          "preposition": "из",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-2de93e3e"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-plant-garden",
+      "verb_id": "ru-action-20261109-0190",
+      "semantic_intent": "сажать растение",
+      "example": "Мама сажает яблоню.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d181d0b0d0b4d0bed0b2d0bdd0b8d0ba",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-plant-20261104-d186d0b2d0b5d182d0bed0ba",
+            "ru-r-066",
+            "ru-plant-20261104-d182d18ed0bbd18cd0bfd0b0d0bd",
+            "ru-plant-20261104-d0b4d0b5d180d0b5d0b2d0be",
+            "ru-plant-20261104-d18fd0b1d0bbd0bed0bdd18f"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-dig-with-shovel",
+      "verb_id": "ru-action-20261109-0073",
+      "semantic_intent": "копать лопатой",
+      "example": "Папа копает лопатой.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d181d0b0d0b4d0bed0b2d0bdd0b8d0ba",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-85858c77"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-feed-rabbit",
+      "verb_id": "ru-new-20261102-0082",
+      "semantic_intent": "кормить зайца овощами",
+      "example": "Мальчик кормит зайца морковью.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "recipient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0b7d0b0d18fd186"
+          ]
+        },
+        {
+          "role": "food",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-r-046",
+            "ru-plant-20261104-d0bad0b0d0bfd183d181d182d0b0"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-feed-cat",
+      "verb_id": "ru-new-20261102-0082",
+      "semantic_intent": "кормить кошку рыбой",
+      "example": "Девочка кормит кошку рыбой.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "recipient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bad0bed188d0bad0b0",
+            "lex-v2-d0bad0bed182"
+          ]
+        },
+        {
+          "role": "food",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-r-071"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-cut-vegetables",
+      "verb_id": "ru-sem-20261105-8e48d4c",
+      "semantic_intent": "резать продукты ножом",
+      "example": "Повар режет огурец ножом.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-r-053",
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-plant-20261104-d0bed0b3d183d180d0b5d186",
+            "ru-r-046",
+            "ru-plant-20261104-d18fd0b1d0bbd0bed0bad0be"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-a7f282c0"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-peel-vegetables",
+      "verb_id": "ru-sem-20261105-45f4b504",
+      "semantic_intent": "очищать овощи ножом",
+      "example": "Мама чистит картошку ножом.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "ru-r-053"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-r-027",
+            "ru-r-046"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-a7f282c0"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-boil-vegetables",
+      "verb_id": "ru-sem-20261105-d5613d0a",
+      "semantic_intent": "варить овощи в кастрюле",
+      "example": "Повар варит картошку в кастрюле.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-r-053",
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-r-027",
+            "ru-r-046"
+          ]
+        },
+        {
+          "role": "location",
+          "case": "prep",
+          "preposition": "в",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-67d50378"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-fry-food",
+      "verb_id": "ru-sem-20261105-e61e389e",
+      "semantic_intent": "жарить продукты на сковороде",
+      "example": "Мама жарит рыбу на сковороде.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "ru-r-053"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-r-071",
+            "ru-r-027"
+          ]
+        },
+        {
+          "role": "location",
+          "case": "prep",
+          "preposition": "на",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-r-077"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-eat-fruit",
+      "verb_id": "ru-action-20261109-0041",
+      "semantic_intent": "принимать пищу",
+      "example": "Мальчик ест яблоко.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d180d0b5d0b1d191d0bdd0bed0ba"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-plant-20261104-d18fd0b1d0bbd0bed0bad0be",
+            "ru-plant-20261104-d0b1d0b0d0bdd0b0d0bd",
+            "ru-r-016",
+            "ru-r-046"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-wash-dishes",
+      "verb_id": "ru-sem-20261105-57222209",
+      "semantic_intent": "мыть посуду губкой",
+      "example": "Папа моет тарелку губкой.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-259cc695",
+            "ru-home-20261105-6f1d7df8",
+            "ru-r-043"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-14f98f50"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-wash-face",
+      "verb_id": "ru-sem-20261105-57222209",
+      "semantic_intent": "мыть лицо или руки",
+      "example": "Девочка моет лицо мылом.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bbd0b8d186d0be",
+            "ru-r-068"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-383c63b3"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-wipe-furniture",
+      "verb_id": "ru-sem-20261105-2fc0c409",
+      "semantic_intent": "вытирать поверхность тряпкой",
+      "example": "Мама вытирает стол тряпкой.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-9769581b",
+            "ru-home-20261105-7f2d4b7"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-1703889"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-wipe-face",
+      "verb_id": "ru-sem-20261105-2fc0c409",
+      "semantic_intent": "вытирать лицо полотенцем",
+      "example": "Мальчик вытирает лицо полотенцем.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bbd0b8d186d0be",
+            "ru-r-068"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-9ee9a0f2"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-tidy-toys",
+      "verb_id": "ru-new-20261102-0084",
+      "semantic_intent": "убирать предметы",
+      "example": "Девочка убирает игрушку.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-new-20261102-0031",
+            "ru-images-20261105-122_ryukzak",
+            "ru-home-20261105-bd699907"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-sweep-floor",
+      "verb_id": "ru-sem-20261105-821ed302",
+      "semantic_intent": "подметать пол",
+      "example": "Папа подметает пол.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-7f2d4b7"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-take-bag",
+      "verb_id": "ru-action-20261109-0006",
+      "semantic_intent": "брать вещь",
+      "example": "Мальчик берёт рюкзак.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-bd699907",
+            "ru-images-20261105-122_ryukzak",
+            "ru-home-20261105-86363d1"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-carry-bag",
+      "verb_id": "ru-action-20261109-0106",
+      "semantic_intent": "нести вещь",
+      "example": "Девочка несёт сумку.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-bd699907",
+            "ru-images-20261105-122_ryukzak",
+            "ru-home-20261105-86363d1"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-give-item",
+      "verb_id": "ru-action-20261109-0028",
+      "semantic_intent": "давать предмет кому-либо",
+      "example": "Мама даёт ребёнку яблоко.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-plant-20261104-d18fd0b1d0bbd0bed0bad0be",
+            "ru-new-20261102-0031",
+            "ru-r-add-d182d0b5d182d180d0b0d0b4d18c"
+          ]
+        },
+        {
+          "role": "recipient",
+          "case": "dat",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "lex-v2-d180d0b5d0b1d191d0bdd0bed0ba",
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0b1d0b0d0b1d183d188d0bad0b0"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-put-on-table",
+      "verb_id": "ru-sem-20261105-7039f75c",
+      "semantic_intent": "класть предмет на стол",
+      "example": "Мальчик кладёт тетрадь на стол.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-r-add-d182d0b5d182d180d0b0d0b4d18c",
+            "ru-plant-20261104-d18fd0b1d0bbd0bed0bad0be",
+            "ru-home-20261105-99e06d53"
+          ]
+        },
+        {
+          "role": "destination",
+          "case": "acc",
+          "preposition": "на",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-9769581b"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-set-on-table",
+      "verb_id": "ru-sem-20261105-5f63bebb",
+      "semantic_intent": "ставить посуду на стол",
+      "example": "Мама ставит чашку на стол.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-6f1d7df8",
+            "ru-r-043",
+            "ru-home-20261105-259cc695"
+          ]
+        },
+        {
+          "role": "destination",
+          "case": "acc",
+          "preposition": "на",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-9769581b"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-open-door",
+      "verb_id": "ru-sem-20261105-5c588971",
+      "semantic_intent": "открывать дверь, окно или шкаф",
+      "example": "Мальчик открывает дверь.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-f31fd446",
+            "ru-home-20261105-35ae72a6",
+            "ru-home-20261105-f2834e7d"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-close-door",
+      "verb_id": "ru-sem-20261105-86d3d4dc",
+      "semantic_intent": "закрывать дверь, окно или шкаф",
+      "example": "Девочка закрывает окно.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0bfd0b0d0bfd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-f31fd446",
+            "ru-home-20261105-35ae72a6",
+            "ru-home-20261105-f2834e7d"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-put-on-clothes",
+      "verb_id": "ru-action-20261109-0098",
+      "semantic_intent": "надевать одежду",
+      "example": "Мальчик надевает куртку.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-r-045",
+            "ru-r-067"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-take-off-clothes",
+      "verb_id": "ru-action-20261109-0202",
+      "semantic_intent": "снимать одежду",
+      "example": "Девочка снимает рубашку.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-r-045",
+            "ru-r-067"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-draw-picture",
+      "verb_id": "ru-action-20261109-0187",
+      "semantic_intent": "рисовать предмет инструментом",
+      "example": "Девочка рисует дом карандашом.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-8bcb0907",
+            "ru-r-066",
+            "lex-v2-d0bad0bed188d0bad0b0"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-r-025",
+            "ru-new-20261102-0044",
+            "ru-sense-20261105-kist-tool"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-write-notebook",
+      "verb_id": "ru-action-20261109-0128",
+      "semantic_intent": "писать в тетради",
+      "example": "Мальчик пишет ручкой в тетради.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d183d187d0b8d182d0b5d0bbd18c"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-r-070",
+            "ru-r-025"
+          ]
+        },
+        {
+          "role": "location",
+          "case": "prep",
+          "preposition": "в",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-r-add-d182d0b5d182d180d0b0d0b4d18c"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-sleep-on-bed",
+      "verb_id": "ru-action-20261109-0208",
+      "semantic_intent": "спать на кровати или диване",
+      "example": "Кошка спит на диване.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bad0bed188d0bad0b0",
+            "lex-v2-d0bad0bed182"
+          ]
+        },
+        {
+          "role": "location",
+          "case": "prep",
+          "preposition": "на",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-r-add-d0bad180d0bed0b2d0b0d182d18c",
+            "ru-home-20261105-c54e368a"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-sit-on-chair",
+      "verb_id": "ru-action-20261109-0193",
+      "semantic_intent": "сидеть на стуле или диване",
+      "example": "Мальчик сидит на стуле.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bad0bed188d0bad0b0"
+          ]
+        },
+        {
+          "role": "location",
+          "case": "prep",
+          "preposition": "на",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-83f6f264",
+            "ru-home-20261105-c54e368a"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-stand-near-window",
+      "verb_id": "ru-action-20261109-0214",
+      "semantic_intent": "стоять возле предмета",
+      "example": "Девочка стоит у окна.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "location",
+          "case": "gen",
+          "preposition": "у",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-35ae72a6",
+            "ru-home-20261105-9769581b"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-go-into-house",
+      "verb_id": "ru-action-20261109-0061",
+      "semantic_intent": "идти в дом",
+      "example": "Папа идёт в дом.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0"
+          ]
+        },
+        {
+          "role": "destination",
+          "case": "acc",
+          "preposition": "в",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-8bcb0907"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-walk-with-someone",
+      "verb_id": "ru-action-20261109-0027",
+      "semantic_intent": "гулять с близким человеком или собакой",
+      "example": "Мальчик гуляет с бабушкой.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "companion",
+          "case": "ins",
+          "preposition": "с",
+          "required": false,
+          "allowed_entry_ids": [
+            "lex-v2-d0b1d0b0d0b1d183d188d0bad0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d181d0bed0b1d0b0d0bad0b0"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-hammer-nail",
+      "verb_id": "ru-sem-20261105-d27a67ec",
+      "semantic_intent": "забивать гвоздь инструментом",
+      "example": "Папа забивает гвоздь молотком.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "ru-new-20261102-0064"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-e3e0c479"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-21314a78"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-screw-screw",
+      "verb_id": "ru-sem-20261105-6b120a83",
+      "semantic_intent": "закручивать шуруп отвёрткой",
+      "example": "Папа закручивает шуруп отвёрткой.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "ru-new-20261102-0064"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-r-add-d188d183d180d183d0bf"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-3dd17450"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-saw-tree",
+      "verb_id": "ru-sem-20261105-d3666f04",
+      "semantic_intent": "пилить дерево пилой",
+      "example": "Строитель пилит дерево пилой.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "ru-new-20261102-0064"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-plant-20261104-d0b4d0b5d180d0b5d0b2d0be"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-99b706d7"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-paint-furniture",
+      "verb_id": "ru-sem-20261105-cc451013",
+      "semantic_intent": "красить мебель кистью",
+      "example": "Папа красит стул кистью.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-83f6f264",
+            "ru-home-20261105-f2834e7d"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-sense-20261105-kist-tool"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-fix-furniture",
+      "verb_id": "ru-sem-20261105-3565ef12",
+      "semantic_intent": "чинить мебель",
+      "example": "Папа чинит шкаф.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "ru-new-20261102-0064"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-83f6f264",
+            "ru-home-20261105-f2834e7d"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-help-person",
+      "verb_id": "ru-action-20261109-0145",
+      "semantic_intent": "помогать другому человеку",
+      "example": "Девочка помогает маме.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0bfd0b0d0bfd0b0"
+          ]
+        },
+        {
+          "role": "recipient",
+          "case": "dat",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0b1d0b0d0b1d183d188d0bad0b0"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-give-gift",
+      "verb_id": "ru-action-20261109-0029",
+      "semantic_intent": "дарить вещь кому-либо",
+      "example": "Мальчик дарит бабушке розу.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-r-066",
+            "ru-plant-20261104-d182d18ed0bbd18cd0bfd0b0d0bd",
+            "ru-new-20261102-0031"
+          ]
+        },
+        {
+          "role": "recipient",
+          "case": "dat",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0b1d0b0d0b1d183d188d0bad0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-hug-family",
+      "verb_id": "ru-action-20261109-0111",
+      "semantic_intent": "обнимать близкого человека",
+      "example": "Девочка обнимает маму.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0b1d0b0d0b1d183d188d0bad0b0",
+            "lex-v2-d0b4d0b5d0b4d183d188d0bad0b0"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-talk-with-person",
+      "verb_id": "ru-action-20261109-0173",
+      "semantic_intent": "разговаривать с человеком",
+      "example": "Мальчик разговаривает с папой.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "companion",
+          "case": "ins",
+          "preposition": "с",
+          "required": false,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0b1d0b0d0b1d183d188d0bad0b0",
+            "lex-v2-d183d187d0b8d182d0b5d0bbd18c"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-listen-person",
+      "verb_id": "ru-action-20261109-0197",
+      "semantic_intent": "слушать человека",
+      "example": "Девочка слушает учителя.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d180d0b5d0b1d191d0bdd0bed0ba"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d183d187d0b8d182d0b5d0bbd18c"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-look-at-animal",
+      "verb_id": "ru-action-20261109-0201",
+      "semantic_intent": "смотреть на животное или растение",
+      "example": "Мальчик смотрит на кошку.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "на",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bad0bed188d0bad0b0",
+            "lex-v2-d0bad0bed182",
+            "ru-r-066",
+            "ru-plant-20261104-d182d18ed0bbd18cd0bfd0b0d0bd"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-love-family",
+      "verb_id": "ru-action-20261109-0088",
+      "semantic_intent": "любить близкого человека или животное",
+      "example": "Мальчик любит маму.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d180d0b5d0b1d191d0bdd0bed0ba"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0b1d0b0d0b1d183d188d0bad0b0",
+            "lex-v2-d0bad0bed188d0bad0b0",
+            "lex-v2-d0bad0bed182"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-meow",
+      "verb_id": "ru-action-20261109-0096",
+      "semantic_intent": "издавать мяуканье",
+      "example": "Кошка мяукает.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bad0bed188d0bad0b0",
+            "lex-v2-d0bad0bed182"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-bark",
+      "verb_id": "ru-action-20261109-0080",
+      "semantic_intent": "издавать лай",
+      "example": "Собака лает.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d181d0bed0b1d0b0d0bad0b0"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-jump",
+      "verb_id": "ru-new-20261102-0081",
+      "semantic_intent": "совершать прыжки",
+      "example": "Заяц прыгает.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0b7d0b0d18fd186",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-stroke-pet",
+      "verb_id": "ru-action-20261109-gladit-stroke",
+      "semantic_intent": "поглаживать животное рукой",
+      "example": "Девочка гладит кота.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bad0bed182",
+            "lex-v2-d0bad0bed188d0bad0b0",
+            "lex-v2-d181d0bed0b1d0b0d0bad0b0"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-iron-clothes",
+      "verb_id": "ru-sem-20261105-8678262e",
+      "semantic_intent": "разглаживать одежду утюгом",
+      "example": "Мама гладит рубашку утюгом.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-r-067",
+            "ru-r-045"
+          ]
+        },
+        {
+          "role": "instrument",
+          "case": "ins",
+          "preposition": "",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-d616cb35"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-play-with-toy",
+      "verb_id": "ru-action-20261109-0060",
+      "semantic_intent": "играть с игрушкой",
+      "example": "Мальчик играет с игрушкой.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0"
+          ]
+        },
+        {
+          "role": "theme",
+          "case": "ins",
+          "preposition": "с",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-new-20261102-0031"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-build-house",
+      "verb_id": "ru-new-20261102-0080",
+      "semantic_intent": "строить дом",
+      "example": "Строитель строит дом.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-new-20261102-0064",
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-8bcb0907"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-turn-on-device",
+      "verb_id": "ru-sem-20261105-f209457e",
+      "semantic_intent": "включать бытовой прибор",
+      "example": "Мама включает плиту.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bcd0b0",
+            "lex-v2-d0bfd0b0d0bfd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-239dbff9",
+            "ru-home-20261105-99e06d53"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-turn-off-device",
+      "verb_id": "ru-sem-20261105-c02aa5dd",
+      "semantic_intent": "выключать бытовой прибор",
+      "example": "Папа выключает телефон.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bfd0b0d0bfd0b0",
+            "lex-v2-d0bcd0b0d0bcd0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-home-20261105-99e06d53",
+            "ru-home-20261105-239dbff9"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-hide-in-closet",
+      "verb_id": "ru-action-20261109-0164",
+      "semantic_intent": "прятать предмет в шкаф",
+      "example": "Девочка прячет игрушку в шкаф.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-new-20261102-0031",
+            "ru-r-add-d182d0b5d182d180d0b0d0b4d18c"
+          ]
+        },
+        {
+          "role": "destination",
+          "case": "acc",
+          "preposition": "в",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-f2834e7d"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    },
+    {
+      "id": "frame-candidate-20261109-take-from-closet",
+      "verb_id": "ru-sem-20261105-cc0abd",
+      "semantic_intent": "доставать предмет из шкафа",
+      "example": "Мальчик достаёт игрушку из шкафа.",
+      "roles": [
+        {
+          "role": "agent",
+          "case": "nom",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+            "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0"
+          ]
+        },
+        {
+          "role": "patient",
+          "case": "acc",
+          "preposition": "",
+          "required": true,
+          "allowed_entry_ids": [
+            "ru-new-20261102-0031",
+            "ru-r-add-d182d0b5d182d180d0b0d0b4d18c"
+          ]
+        },
+        {
+          "role": "source",
+          "case": "gen",
+          "preposition": "из",
+          "required": false,
+          "allowed_entry_ids": [
+            "ru-home-20261105-f2834e7d"
+          ]
+        }
+      ],
+      "status": "suggested",
+      "usable_for_generation": false,
+      "provenance": {
+        "source": "zabavograd_editorial",
+        "authorship": "independent",
+        "date": "2026-11-09"
+      },
+      "review": {
+        "author_approved": false,
+        "typicality_approved": false,
+        "grammar_approved": false
+      }
+    }
+  ]
+}

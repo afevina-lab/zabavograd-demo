@@ -2583,6 +2583,13 @@
           "sha256": "de5309919588ffd1c8438b32f83d8747c4b2572f9bb97dd4745b439dd16e7fd2",
           "format": "webp",
           "review_note": null
+        },
+        {
+          "id": "webp-20261108-440-43e-442",
+          "src": "/assets/words/рот.webp",
+          "label": "рот",
+          "format": "webp",
+          "source": "published_release_20261112"
         }
       ]
     },
@@ -3161,6 +3168,13 @@
           "sha256": "511346682fb7bae13268b2eaa9b98306187c1994882969dc8831fece69e99c9f",
           "format": "webp",
           "review_note": null
+        },
+        {
+          "id": "webp-20261108-43a-43e-442",
+          "src": "/assets/words/кот.webp",
+          "label": "кот",
+          "format": "webp",
+          "source": "published_release_20261112"
         }
       ]
     },
@@ -3467,6 +3481,1882 @@
           "sha256": "9f7851cda510208914097bbe518069d9ce250d65b65ee089f3cfad0c50cde54e",
           "format": "webp",
           "review_note": null
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0b6d183d180d0b0d0b2d0bbd18c-published-sense",
+      "word_id": "ru-r-add-d0b6d183d180d0b0d0b2d0bbd18c",
+      "label": "журавль",
+      "meaning": "журавль",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-436-443-440-430-432-43b-44c",
+          "src": "/assets/words/журавль.webp",
+          "label": "журавль",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0b3d180d0b0d187-published-sense",
+      "word_id": "ru-r-add-d0b3d180d0b0d187",
+      "label": "грач",
+      "meaning": "грач",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-433-440-430-447",
+          "src": "/assets/words/грач.webp",
+          "label": "грач",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d183d0bad180d0bed0bf-published-sense",
+      "word_id": "ru-r-add-d183d0bad180d0bed0bf",
+      "label": "укроп",
+      "meaning": "укроп",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-443-43a-440-43e-43f",
+          "src": "/assets/words/укроп.webp",
+          "label": "укроп",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0bfd0b5d182d180d183d188d0bad0b0-published-sense",
+      "word_id": "ru-r-add-d0bfd0b5d182d180d183d188d0bad0b0",
+      "label": "петрушка",
+      "meaning": "растение, зелень",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43f-435-442-440-443-448-43a-430",
+          "src": "/assets/words/петрушка.webp",
+          "label": "петрушка",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0001-published-sense",
+      "word_id": "ru-new-20261102-0001",
+      "label": "вечер",
+      "meaning": "вечер",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-432-435-447-435-440",
+          "src": "/assets/words/вечер.webp",
+          "label": "вечер",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0002-published-sense",
+      "word_id": "ru-new-20261102-0002",
+      "label": "день",
+      "meaning": "день",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-434-435-43d-44c",
+          "src": "/assets/words/день.webp",
+          "label": "день",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0003-published-sense",
+      "word_id": "ru-new-20261102-0003",
+      "label": "ночь",
+      "meaning": "ночь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43d-43e-447-44c",
+          "src": "/assets/words/ночь.webp",
+          "label": "ночь",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0016-published-sense",
+      "word_id": "ru-new-20261102-0016",
+      "label": "крокодил",
+      "meaning": "крокодил",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-440-43e-43a-43e-434-438-43b",
+          "src": "/assets/words/крокодил.webp",
+          "label": "крокодил",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0027-published-sense",
+      "word_id": "ru-new-20261102-0027",
+      "label": "бутерброд",
+      "meaning": "бутерброд",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-431-443-442-435-440-431-440-43e-434",
+          "src": "/assets/words/бутерброд.webp",
+          "label": "бутерброд",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0032-published-sense",
+      "word_id": "ru-new-20261102-0032",
+      "label": "зеркало",
+      "meaning": "зеркало",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-437-435-440-43a-430-43b-43e",
+          "src": "/assets/words/зеркало.webp",
+          "label": "зеркало",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0037-published-sense",
+      "word_id": "ru-new-20261102-0037",
+      "label": "перчатка",
+      "meaning": "перчатка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43f-435-440-447-430-442-43a-430",
+          "src": "/assets/words/перчатка.webp",
+          "label": "перчатка",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0038-published-sense",
+      "word_id": "ru-new-20261102-0038",
+      "label": "кроссовки",
+      "meaning": "кроссовки",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-440-43e-441-441-43e-432-43a-438",
+          "src": "/assets/words/кроссовки.webp",
+          "label": "кроссовки",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0044-published-sense",
+      "word_id": "ru-new-20261102-0044",
+      "label": "фломастер",
+      "meaning": "фломастер",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-444-43b-43e-43c-430-441-442-435-440",
+          "src": "/assets/words/фломастер.webp",
+          "label": "фломастер",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0046-published-sense",
+      "word_id": "ru-new-20261102-0046",
+      "label": "карта",
+      "meaning": "карта",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-430-440-442-430-5f-43c-438-440-430",
+          "src": "/assets/words/карта_мира.webp",
+          "label": "карта",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0048-published-sense",
+      "word_id": "ru-new-20261102-0048",
+      "label": "конструктор",
+      "meaning": "конструктор",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-43e-43d-441-442-440-443-43a-442-43e-440",
+          "src": "/assets/words/конструктор.webp",
+          "label": "конструктор",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0050-published-sense",
+      "word_id": "ru-new-20261102-0050",
+      "label": "вертолёт",
+      "meaning": "вертолёт",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-432-435-440-442-43e-43b-451-442",
+          "src": "/assets/words/вертолёт.webp",
+          "label": "вертолёт",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0052-published-sense",
+      "word_id": "ru-new-20261102-0052",
+      "label": "катер",
+      "meaning": "катер",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-430-442-435-440",
+          "src": "/assets/words/катер.webp",
+          "label": "катер",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0321-published-sense",
+      "word_id": "ru-new-20261102-0321",
+      "label": "мышь",
+      "meaning": "небольшое млекопитающее — мышь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43c-44b-448-44c",
+          "src": "/assets/words/мышь.webp",
+          "label": "мышь",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b0d0b8d181d182-published-sense",
+      "word_id": "lex-v2-d0b0d0b8d181d182",
+      "label": "аист",
+      "meaning": "аист",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-430-438-441-442",
+          "src": "/assets/words/аист.webp",
+          "label": "аист",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b0d0bad183d0bbd0b0-published-sense",
+      "word_id": "lex-v2-d0b0d0bad183d0bbd0b0",
+      "label": "акула",
+      "meaning": "акула",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-430-43a-443-43b-430",
+          "src": "/assets/words/акула.webp",
+          "label": "акула",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b1d0b0d0b1d183d188d0bad0b0-published-sense",
+      "word_id": "lex-v2-d0b1d0b0d0b1d183d188d0bad0b0",
+      "label": "бабушка",
+      "meaning": "бабушка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-431-430-431-443-448-43a-430",
+          "src": "/assets/words/бабушка.webp",
+          "label": "бабушка",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b1d0b5d0b3d0b5d0bcd0bed182-published-sense",
+      "word_id": "lex-v2-d0b1d0b5d0b3d0b5d0bcd0bed182",
+      "label": "бегемот",
+      "meaning": "бегемот",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-431-435-433-435-43c-43e-442",
+          "src": "/assets/words/бегемот.webp",
+          "label": "бегемот",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b1d0b5d0bbd0bad0b0-published-sense",
+      "word_id": "lex-v2-d0b1d0b5d0bbd0bad0b0",
+      "label": "белка",
+      "meaning": "белка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-431-435-43b-43a-430",
+          "src": "/assets/words/белка.webp",
+          "label": "белка",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b1d0b5d0bbd18bd0b920d0bcd0b5d0b4d0b2d0b5d0b4d18c-published-sense",
+      "word_id": "lex-v2-d0b1d0b5d0bbd18bd0b920d0bcd0b5d0b4d0b2d0b5d0b4d18c",
+      "label": "белый медведь",
+      "meaning": "белый медведь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-431-435-43b-44b-439-5f-43c-435-434-432-435-434-44c",
+          "src": "/assets/words/белый_медведь.webp",
+          "label": "белый медведь",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b1d0bed0b1d180-published-sense",
+      "word_id": "lex-v2-d0b1d0bed0b1d180",
+      "label": "бобр",
+      "meaning": "бобр",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-431-43e-431-440",
+          "src": "/assets/words/бобр.webp",
+          "label": "бобр",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b1d0bed0b6d18cd18f20d0bad0bed180d0bed0b2d0bad0b0-published-sense",
+      "word_id": "lex-v2-d0b1d0bed0b6d18cd18f20d0bad0bed180d0bed0b2d0bad0b0",
+      "label": "божья коровка",
+      "meaning": "божья коровка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-431-43e-436-44c-44f-5f-43a-43e-440-43e-432-43a-430",
+          "src": "/assets/words/божья_коровка.webp",
+          "label": "божья коровка",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b2d0b5d180d0b1d0bbd18ed0b4-published-sense",
+      "word_id": "lex-v2-d0b2d0b5d180d0b1d0bbd18ed0b4",
+      "label": "верблюд",
+      "meaning": "верблюд",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-432-435-440-431-43b-44e-434",
+          "src": "/assets/words/верблюд.webp",
+          "label": "верблюд",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b2d0bed0bbd0ba-published-sense",
+      "word_id": "lex-v2-d0b2d0bed0bbd0ba",
+      "label": "волк",
+      "meaning": "волк",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-432-43e-43b-43a",
+          "src": "/assets/words/волк.webp",
+          "label": "волк",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b2d0bed0bbd0bed181d18b-published-sense",
+      "word_id": "lex-v2-d0b2d0bed0bbd0bed181d18b",
+      "label": "волосы",
+      "meaning": "волосы",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-432-43e-43b-43e-441-44b",
+          "src": "/assets/words/волосы.webp",
+          "label": "волосы",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b2d0bed181d0bfd0b8d182d0b0d182d0b5d0bbd18c-published-sense",
+      "word_id": "lex-v2-d0b2d0bed181d0bfd0b8d182d0b0d182d0b5d0bbd18c",
+      "label": "воспитатель",
+      "meaning": "воспитатель",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-432-43e-441-43f-438-442-430-442-435-43b-44c",
+          "src": "/assets/words/воспитатель.webp",
+          "label": "воспитатель",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b3d0bbd0b0d0b7-published-sense",
+      "word_id": "lex-v2-d0b3d0bbd0b0d0b7",
+      "label": "глаз",
+      "meaning": "глаз",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-433-43b-430-437",
+          "src": "/assets/words/глаз.webp",
+          "label": "глаз",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b3d0bed0bbd0bed0b2d0b0-published-sense",
+      "word_id": "lex-v2-d0b3d0bed0bbd0bed0b2d0b0",
+      "label": "голова",
+      "meaning": "голова",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-433-43e-43b-43e-432-430",
+          "src": "/assets/words/голова.webp",
+          "label": "голова",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b3d0bed0bbd183d0b1d18c-published-sense",
+      "word_id": "lex-v2-d0b3d0bed0bbd183d0b1d18c",
+      "label": "голубь",
+      "meaning": "голубь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-433-43e-43b-443-431-44c",
+          "src": "/assets/words/голубь.webp",
+          "label": "голубь",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b3d183d181d18c-published-sense",
+      "word_id": "lex-v2-d0b3d183d181d18c",
+      "label": "гусь",
+      "meaning": "гусь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-433-443-441-44c",
+          "src": "/assets/words/гусь.webp",
+          "label": "гусь",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0-published-sense",
+      "word_id": "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+      "label": "девочка",
+      "meaning": "девочка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-434-435-432-43e-447-43a-430",
+          "src": "/assets/words/девочка.webp",
+          "label": "девочка",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b4d0b5d0b4d183d188d0bad0b0-published-sense",
+      "word_id": "lex-v2-d0b4d0b5d0b4d183d188d0bad0b0",
+      "label": "дедушка",
+      "meaning": "дедушка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-434-435-434-443-448-43a-430",
+          "src": "/assets/words/дедушка.webp",
+          "label": "дедушка",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b4d0b5d0bbd18cd184d0b8d0bd-published-sense",
+      "word_id": "lex-v2-d0b4d0b5d0bbd18cd184d0b8d0bd",
+      "label": "дельфин",
+      "meaning": "дельфин",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-434-435-43b-44c-444-438-43d",
+          "src": "/assets/words/дельфин.webp",
+          "label": "дельфин",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b4d18fd182d0b5d0bb-published-sense",
+      "word_id": "lex-v2-d0b4d18fd182d0b5d0bb",
+      "label": "дятел",
+      "meaning": "дятел",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-434-44f-442-435-43b",
+          "src": "/assets/words/дятел.webp",
+          "label": "дятел",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d191d0b6-published-sense",
+      "word_id": "lex-v2-d191d0b6",
+      "label": "ёж",
+      "meaning": "ёж",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-451-436",
+          "src": "/assets/words/ёж.webp",
+          "label": "ёж",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b6d0b8d0b2d0bed182-published-sense",
+      "word_id": "lex-v2-d0b6d0b8d0b2d0bed182",
+      "label": "живот",
+      "meaning": "живот",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-436-438-432-43e-442",
+          "src": "/assets/words/живот.webp",
+          "label": "живот",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b6d183d0ba-published-sense",
+      "word_id": "lex-v2-d0b6d183d0ba",
+      "label": "жук",
+      "meaning": "жук",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-436-443-43a",
+          "src": "/assets/words/жук.webp",
+          "label": "жук",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b7d0b0d18fd186-published-sense",
+      "word_id": "lex-v2-d0b7d0b0d18fd186",
+      "label": "заяц",
+      "meaning": "заяц",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-437-430-44f-446",
+          "src": "/assets/words/заяц.webp",
+          "label": "заяц",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b7d0bcd0b5d18f-published-sense",
+      "word_id": "lex-v2-d0b7d0bcd0b5d18f",
+      "label": "змея",
+      "meaning": "змея",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-437-43c-435-44f",
+          "src": "/assets/words/змея.webp",
+          "label": "змея",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b7d183d0b1-published-sense",
+      "word_id": "lex-v2-d0b7d183d0b1",
+      "label": "зуб",
+      "meaning": "зуб",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-437-443-431",
+          "src": "/assets/words/зуб.webp",
+          "label": "зуб",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bad0b8d182-published-sense",
+      "word_id": "lex-v2-d0bad0b8d182",
+      "label": "кит",
+      "meaning": "кит",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-438-442",
+          "src": "/assets/words/кит.webp",
+          "label": "кит",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bad0bed181d0bcd0bed0bdd0b0d0b2d182-published-sense",
+      "word_id": "lex-v2-d0bad0bed181d0bcd0bed0bdd0b0d0b2d182",
+      "label": "космонавт",
+      "meaning": "космонавт",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-43e-441-43c-43e-43d-430-432-442",
+          "src": "/assets/words/космонавт.webp",
+          "label": "космонавт",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bbd0b5d0b2-published-sense",
+      "word_id": "lex-v2-d0bbd0b5d0b2",
+      "label": "лев",
+      "meaning": "лев",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43b-435-432",
+          "src": "/assets/words/лев.webp",
+          "label": "лев",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bbd0bed0bad0bed182d18c-published-sense",
+      "word_id": "lex-v2-d0bbd0bed0bad0bed182d18c",
+      "label": "локоть",
+      "meaning": "локоть",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43b-43e-43a-43e-442-44c",
+          "src": "/assets/words/локоть.webp",
+          "label": "локоть",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bcd0b5d0b4d0b2d0b5d0b4d18c-published-sense",
+      "word_id": "lex-v2-d0bcd0b5d0b4d0b2d0b5d0b4d18c",
+      "label": "медведь",
+      "meaning": "медведь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43c-435-434-432-435-434-44c",
+          "src": "/assets/words/медведь.webp",
+          "label": "медведь",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bdd0bed0b3d0b0-published-sense",
+      "word_id": "lex-v2-d0bdd0bed0b3d0b0",
+      "label": "нога",
+      "meaning": "нога",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43d-43e-433-430",
+          "src": "/assets/words/нога.webp",
+          "label": "нога",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bdd0bed181-published-sense",
+      "word_id": "lex-v2-d0bdd0bed181",
+      "label": "нос",
+      "meaning": "нос",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43d-43e-441",
+          "src": "/assets/words/нос.webp",
+          "label": "нос",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bed0b1d0b5d0b7d18cd18fd0bdd0b0-published-sense",
+      "word_id": "lex-v2-d0bed0b1d0b5d0b7d18cd18fd0bdd0b0",
+      "label": "обезьяна",
+      "meaning": "обезьяна",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43e-431-435-437-44c-44f-43d-430",
+          "src": "/assets/words/обезьяна.webp",
+          "label": "обезьяна",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d181d0bed0bc-published-sense",
+      "word_id": "lex-v2-d181d0bed0bc",
+      "label": "сом",
+      "meaning": "сом",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-441-43e-43c",
+          "src": "/assets/words/сом.webp",
+          "label": "сом",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d187d0b5d180d0b5d0bfd0b0d185d0b0-published-sense",
+      "word_id": "lex-v2-d187d0b5d180d0b5d0bfd0b0d185d0b0",
+      "label": "черепаха",
+      "meaning": "черепаха",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-447-435-440-435-43f-430-445-430",
+          "src": "/assets/words/черепаха.webp",
+          "label": "черепаха",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d188d0b5d18f-published-sense",
+      "word_id": "lex-v2-d188d0b5d18f",
+      "label": "шея",
+      "meaning": "шея",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-448-435-44f",
+          "src": "/assets/words/шея.webp",
+          "label": "шея",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d189d183d0bad0b0-published-sense",
+      "word_id": "lex-v2-d189d183d0bad0b0",
+      "label": "щука",
+      "meaning": "щука",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-449-443-43a-430",
+          "src": "/assets/words/щука.webp",
+          "label": "щука",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0b4d0b5d180d0b5d0b2d0be-published-sense",
+      "word_id": "ru-plant-20261104-d0b4d0b5d180d0b5d0b2d0be",
+      "label": "дерево",
+      "meaning": "дерево",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-434-435-440-435-432-43e",
+          "src": "/assets/words/дерево.webp",
+          "label": "дерево",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bed0b3d183d180d0b5d186-published-sense",
+      "word_id": "ru-plant-20261104-d0bed0b3d183d180d0b5d186",
+      "label": "огурец",
+      "meaning": "огурец",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43e-433-443-440-435-446",
+          "src": "/assets/words/огурец.webp",
+          "label": "огурец",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bbd183d0ba3ad180d0b5d0bfd187d0b0d182d18bd0b920d0bbd183d0ba2028d0bed0b2d0bed18929-published-sense",
+      "word_id": "ru-plant-20261104-d0bbd183d0ba3ad180d0b5d0bfd187d0b0d182d18bd0b920d0bbd183d0ba2028d0bed0b2d0bed18929",
+      "label": "лук",
+      "meaning": "репчатый лук (овощ)",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43b-443-43a",
+          "src": "/assets/words/лук.webp",
+          "label": "лук",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d187d0b5d181d0bdd0bed0ba-published-sense",
+      "word_id": "ru-plant-20261104-d187d0b5d181d0bdd0bed0ba",
+      "label": "чеснок",
+      "meaning": "чеснок",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-447-435-441-43d-43e-43a",
+          "src": "/assets/words/чеснок.webp",
+          "label": "чеснок",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d181d0b2d191d0bad0bbd0b0-published-sense",
+      "word_id": "ru-plant-20261104-d181d0b2d191d0bad0bbd0b0",
+      "label": "свёкла",
+      "meaning": "свёкла",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-441-432-451-43a-43b-430",
+          "src": "/assets/words/свёкла.webp",
+          "label": "свёкла",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bad0b0d0b1d0b0d187d0bed0ba-published-sense",
+      "word_id": "ru-plant-20261104-d0bad0b0d0b1d0b0d187d0bed0ba",
+      "label": "кабачок",
+      "meaning": "кабачок",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-430-431-430-447-43e-43a",
+          "src": "/assets/words/кабачок.webp",
+          "label": "кабачок",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d182d18bd0bad0b2d0b0-published-sense",
+      "word_id": "ru-plant-20261104-d182d18bd0bad0b2d0b0",
+      "label": "тыква",
+      "meaning": "тыква",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-442-44b-43a-432-430",
+          "src": "/assets/words/тыква.webp",
+          "label": "тыква",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0b1d0b0d0bad0bbd0b0d0b6d0b0d0bd-published-sense",
+      "word_id": "ru-plant-20261104-d0b1d0b0d0bad0bbd0b0d0b6d0b0d0bd",
+      "label": "баклажан",
+      "meaning": "баклажан",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-431-430-43a-43b-430-436-430-43d",
+          "src": "/assets/words/баклажан.webp",
+          "label": "баклажан",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d180d0b5d0b4d0b8d181-published-sense",
+      "word_id": "ru-plant-20261104-d180d0b5d0b4d0b8d181",
+      "label": "редис",
+      "meaning": "редис",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-440-435-434-438-441",
+          "src": "/assets/words/редис.webp",
+          "label": "редис",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d180d0b5d0bfd0b0-published-sense",
+      "word_id": "ru-plant-20261104-d180d0b5d0bfd0b0",
+      "label": "репа",
+      "meaning": "репа",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-440-435-43f-430",
+          "src": "/assets/words/репа.webp",
+          "label": "репа",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0b1d0b0d0bdd0b0d0bd-published-sense",
+      "word_id": "ru-plant-20261104-d0b1d0b0d0bdd0b0d0bd",
+      "label": "банан",
+      "meaning": "банан",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-431-430-43d-430-43d",
+          "src": "/assets/words/банан.webp",
+          "label": "банан",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0b0d0bfd0b5d0bbd18cd181d0b8d0bd-published-sense",
+      "word_id": "ru-plant-20261104-d0b0d0bfd0b5d0bbd18cd181d0b8d0bd",
+      "label": "апельсин",
+      "meaning": "апельсин",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-430-43f-435-43b-44c-441-438-43d",
+          "src": "/assets/words/апельсин.webp",
+          "label": "апельсин",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bcd0b0d0bdd0b4d0b0d180d0b8d0bd-published-sense",
+      "word_id": "ru-plant-20261104-d0bcd0b0d0bdd0b4d0b0d180d0b8d0bd",
+      "label": "мандарин",
+      "meaning": "мандарин",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43c-430-43d-434-430-440-438-43d",
+          "src": "/assets/words/мандарин.webp",
+          "label": "мандарин",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0b0d0b1d180d0b8d0bad0bed181-published-sense",
+      "word_id": "ru-plant-20261104-d0b0d0b1d180d0b8d0bad0bed181",
+      "label": "абрикос",
+      "meaning": "абрикос",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-430-431-440-438-43a-43e-441",
+          "src": "/assets/words/абрикос.webp",
+          "label": "абрикос",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d181d0bbd0b8d0b2d0b0-published-sense",
+      "word_id": "ru-plant-20261104-d181d0bbd0b8d0b2d0b0",
+      "label": "слива",
+      "meaning": "слива",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-441-43b-438-432-430",
+          "src": "/assets/words/слива.webp",
+          "label": "слива",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0b0d0bdd0b0d0bdd0b0d181-published-sense",
+      "word_id": "ru-plant-20261104-d0b0d0bdd0b0d0bdd0b0d181",
+      "label": "ананас",
+      "meaning": "ананас",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-430-43d-430-43d-430-441",
+          "src": "/assets/words/ананас.webp",
+          "label": "ананас",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bad0b8d0b2d0b8-published-sense",
+      "word_id": "ru-plant-20261104-d0bad0b8d0b2d0b8",
+      "label": "киви",
+      "meaning": "киви",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-438-432-438",
+          "src": "/assets/words/киви.webp",
+          "label": "киви",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0b4d18bd0bdd18f-published-sense",
+      "word_id": "ru-plant-20261104-d0b4d18bd0bdd18f",
+      "label": "дыня",
+      "meaning": "дыня",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-434-44b-43d-44f",
+          "src": "/assets/words/дыня.webp",
+          "label": "дыня",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d185d183d180d0bcd0b0-published-sense",
+      "word_id": "ru-plant-20261104-d185d183d180d0bcd0b0",
+      "label": "хурма",
+      "meaning": "хурма",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-445-443-440-43c-430",
+          "src": "/assets/words/хурма.webp",
+          "label": "хурма",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bad0bed0bad0bed181-published-sense",
+      "word_id": "ru-plant-20261104-d0bad0bed0bad0bed181",
+      "label": "кокос",
+      "meaning": "кокос",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-43e-43a-43e-441",
+          "src": "/assets/words/кокос.webp",
+          "label": "кокос",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bad0bbd183d0b1d0bdd0b8d0bad0b0-published-sense",
+      "word_id": "ru-plant-20261104-d0bad0bbd183d0b1d0bdd0b8d0bad0b0",
+      "label": "клубника",
+      "meaning": "клубника",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-43b-443-431-43d-438-43a-430",
+          "src": "/assets/words/клубника.webp",
+          "label": "клубника",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bcd0b0d0bbd0b8d0bdd0b0-published-sense",
+      "word_id": "ru-plant-20261104-d0bcd0b0d0bbd0b8d0bdd0b0",
+      "label": "малина",
+      "meaning": "малина",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43c-430-43b-438-43d-430",
+          "src": "/assets/words/малина.webp",
+          "label": "малина",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d181d0bcd0bed180d0bed0b4d0b8d0bdd0b0-published-sense",
+      "word_id": "ru-plant-20261104-d181d0bcd0bed180d0bed0b4d0b8d0bdd0b0",
+      "label": "смородина",
+      "meaning": "смородина",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-441-43c-43e-440-43e-434-438-43d-430",
+          "src": "/assets/words/смородина.webp",
+          "label": "смородина",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0b7d0b5d0bcd0bbd18fd0bdd0b8d0bad0b0-published-sense",
+      "word_id": "ru-plant-20261104-d0b7d0b5d0bcd0bbd18fd0bdd0b8d0bad0b0",
+      "label": "земляника",
+      "meaning": "земляника",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-437-435-43c-43b-44f-43d-438-43a-430",
+          "src": "/assets/words/земляника.webp",
+          "label": "земляника",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0b5d0b6d0b5d0b2d0b8d0bad0b0-published-sense",
+      "word_id": "ru-plant-20261104-d0b5d0b6d0b5d0b2d0b8d0bad0b0",
+      "label": "ежевика",
+      "meaning": "ежевика",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-435-436-435-432-438-43a-430",
+          "src": "/assets/words/ежевика.webp",
+          "label": "ежевика",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bbd0b8d181d1823ad0bbd0b8d181d18220d180d0b0d181d182d0b5d0bdd0b8d18f-published-sense",
+      "word_id": "ru-plant-20261104-d0bbd0b8d181d1823ad0bbd0b8d181d18220d180d0b0d181d182d0b5d0bdd0b8d18f",
+      "label": "лист",
+      "meaning": "лист растения",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43b-438-441-442",
+          "src": "/assets/words/лист.webp",
+          "label": "лист",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d180d18fd0b1d0b8d0bdd0b03ad0bfd0bbd0bed0b4d18b20d180d18fd0b1d0b8d0bdd18b-published-sense",
+      "word_id": "ru-plant-20261104-d180d18fd0b1d0b8d0bdd0b03ad0bfd0bbd0bed0b4d18b20d180d18fd0b1d0b8d0bdd18b",
+      "label": "рябина",
+      "meaning": "плоды рябины",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-440-44f-431-438-43d-430",
+          "src": "/assets/words/рябина.webp",
+          "label": "рябина",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "published-ru-r-011-sense-image-sense",
+      "word_id": "ru-r-011-sense",
+      "label": "бургер",
+      "meaning": null,
+      "topic": "Продукты",
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "pack02-079_gamburger.webp",
+          "src": "/assets/words/gamburger.webp",
+          "bounds": {
+            "x": 33,
+            "y": 68,
+            "width": 887,
+            "height": 844,
+            "sourceWidth": 960,
+            "sourceHeight": 960
+          },
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-6329bf55-published-sense",
+      "word_id": "ru-home-20261105-6329bf55",
+      "label": "метла",
+      "meaning": "метла",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43c-435-442-43b-430",
+          "src": "/assets/words/метла.webp",
+          "label": "метла",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-7f2d7d1d30-published-sense",
+      "word_id": "ru-new-20261108-7f2d7d1d30",
+      "label": "ботинок",
+      "meaning": "ботинок",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-431-43e-442-438-43d-43e-43a",
+          "src": "/assets/words/ботинок.webp",
+          "label": "ботинок",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-d34a9acbe5-published-sense",
+      "word_id": "ru-new-20261108-d34a9acbe5",
+      "label": "варежка",
+      "meaning": "варежка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-432-430-440-435-436-43a-430",
+          "src": "/assets/words/варежка.webp",
+          "label": "варежка",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-42569368f9-published-sense",
+      "word_id": "ru-new-20261108-42569368f9",
+      "label": "водолазка",
+      "meaning": "водолазка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-432-43e-434-43e-43b-430-437-43a-430",
+          "src": "/assets/words/водолазка.webp",
+          "label": "водолазка",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-47a03e0704-published-sense",
+      "word_id": "ru-new-20261108-47a03e0704",
+      "label": "гном",
+      "meaning": "гном",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-433-43d-43e-43c",
+          "src": "/assets/words/гном.webp",
+          "label": "гном",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-63afd2043f-published-sense",
+      "word_id": "ru-new-20261108-63afd2043f",
+      "label": "колготки",
+      "meaning": "колготки",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-43e-43b-433-43e-442-43a-438",
+          "src": "/assets/words/колготки.webp",
+          "label": "колготки",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-0bf35cb8f9-published-sense",
+      "word_id": "ru-new-20261108-0bf35cb8f9",
+      "label": "котёл",
+      "meaning": "котёл",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-43e-442-451-43b",
+          "src": "/assets/words/котёл.webp",
+          "label": "котёл",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-2bac6d3523-published-sense",
+      "word_id": "ru-new-20261108-2bac6d3523",
+      "label": "кукла",
+      "meaning": "кукла",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-443-43a-43b-430",
+          "src": "/assets/words/кукла.webp",
+          "label": "кукла",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-114d668efa-published-sense",
+      "word_id": "ru-new-20261108-114d668efa",
+      "label": "куст",
+      "meaning": "куст",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-443-441-442",
+          "src": "/assets/words/куст.webp",
+          "label": "куст",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-c7f4dd595f-published-sense",
+      "word_id": "ru-new-20261108-c7f4dd595f",
+      "label": "лодка",
+      "meaning": "лодка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43b-43e-434-43a-430",
+          "src": "/assets/words/лодка.webp",
+          "label": "лодка",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-04e7f5b890-published-sense",
+      "word_id": "ru-new-20261108-04e7f5b890",
+      "label": "майка",
+      "meaning": "майка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43c-430-439-43a-430",
+          "src": "/assets/words/майка.webp",
+          "label": "майка",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-b8f6c0f802-published-sense",
+      "word_id": "ru-new-20261108-b8f6c0f802",
+      "label": "молоко",
+      "meaning": "молоко",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43c-43e-43b-43e-43a-43e",
+          "src": "/assets/words/молоко.webp",
+          "label": "молоко",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-84653d88d9-published-sense",
+      "word_id": "ru-new-20261108-84653d88d9",
+      "label": "мяч",
+      "meaning": "мяч",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43c-44f-447",
+          "src": "/assets/words/мяч.webp",
+          "label": "мяч",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-370345bb3c-published-sense",
+      "word_id": "ru-new-20261108-370345bb3c",
+      "label": "носок",
+      "meaning": "носок",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43d-43e-441-43e-43a",
+          "src": "/assets/words/носок.webp",
+          "label": "носок",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-97b71638c2-published-sense",
+      "word_id": "ru-new-20261108-97b71638c2",
+      "label": "облако",
+      "meaning": "облако",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43e-431-43b-430-43a-43e",
+          "src": "/assets/words/облако.webp",
+          "label": "облако",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-70a763e9e7-published-sense",
+      "word_id": "ru-new-20261108-70a763e9e7",
+      "label": "планета",
+      "meaning": "планета",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43f-43b-430-43d-435-442-430",
+          "src": "/assets/words/планета.webp",
+          "label": "планета",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-0ca50229c2-published-sense",
+      "word_id": "ru-new-20261108-0ca50229c2",
+      "label": "платье",
+      "meaning": "платье",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43f-43b-430-442-44c-435",
+          "src": "/assets/words/платье.webp",
+          "label": "платье",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-c17d585bac-published-sense",
+      "word_id": "ru-new-20261108-c17d585bac",
+      "label": "сапог",
+      "meaning": "сапог",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-441-430-43f-43e-433",
+          "src": "/assets/words/сапог.webp",
+          "label": "сапог",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-abd179e79d-published-sense",
+      "word_id": "ru-new-20261108-abd179e79d",
+      "label": "тапок",
+      "meaning": "тапок",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-442-430-43f-43e-43a",
+          "src": "/assets/words/тапок.webp",
+          "label": "тапок",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-6ce7e80f4f-published-sense",
+      "word_id": "ru-new-20261108-6ce7e80f4f",
+      "label": "футболка",
+      "meaning": "футболка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-444-443-442-431-43e-43b-43a-430",
+          "src": "/assets/words/футболка.webp",
+          "label": "футболка",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-70c372449f-published-sense",
+      "word_id": "ru-new-20261108-70c372449f",
+      "label": "шапка",
+      "meaning": "шапка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-448-430-43f-43a-430",
+          "src": "/assets/words/шапка.webp",
+          "label": "шапка",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-53796f6d09-published-sense",
+      "word_id": "ru-new-20261108-53796f6d09",
+      "label": "штаны",
+      "meaning": "штаны",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-448-442-430-43d-44b",
+          "src": "/assets/words/штаны.webp",
+          "label": "штаны",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-4f67adafc5-published-sense",
+      "word_id": "ru-new-20261108-4f67adafc5",
+      "label": "шуба",
+      "meaning": "шуба",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-448-443-431-430",
+          "src": "/assets/words/шуба.webp",
+          "label": "шуба",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-a88df7da50-published-sense",
+      "word_id": "ru-new-20261108-a88df7da50",
+      "label": "яйцо",
+      "meaning": "яйцо",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-44f-439-446-43e",
+          "src": "/assets/words/яйцо.webp",
+          "label": "яйцо",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-0a17165966-published-sense",
+      "word_id": "ru-new-20261108-0a17165966",
+      "label": "доска",
+      "meaning": "деревянная доска для мастерской",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-434-43e-441-43a-430",
+          "src": "/assets/words/доска.webp",
+          "label": "доска",
+          "format": "webp",
+          "source": "published_release_20261112"
+        }
+      ]
+    },
+    {
+      "id": "ru-new-20261108-9e891397bc-published-sense",
+      "word_id": "ru-new-20261108-9e891397bc",
+      "label": "кость",
+      "meaning": "кость для собаки",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "webp-20261108-43a-43e-441-442-44c",
+          "src": "/assets/words/кость.webp",
+          "label": "кость",
+          "format": "webp",
+          "source": "published_release_20261112"
         }
       ]
     }
