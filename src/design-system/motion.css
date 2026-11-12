@@ -44,8 +44,8 @@
 }
 @keyframes zg-camera-zoom{
  0%,8%{transform:translate3d(0,0,0) scale(1)}
- 34%,63%{transform:translate3d(var(--zg-camera-pan-x,0px),var(--zg-camera-pan-y,0px),0) scale(1.18)}
- 80%{transform:translate3d(var(--zg-camera-pan-x,0px),var(--zg-camera-pan-y,0px),0) scale(1.12)}
+ 34%,63%{transform:scale(1.18)}
+ 80%{transform:scale(1.12)}
  100%{transform:translate3d(0,0,0) scale(1)}
 }
 @keyframes zg-match{

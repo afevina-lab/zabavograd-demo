@@ -26,7 +26,8 @@
 .app[data-theme] .zg-scene-camera{
   position:absolute;inset:0;z-index:1;box-sizing:border-box;
   padding:inherit;display:flex;align-items:center;justify-content:center;
-  isolation:isolate;overflow:hidden;transform-origin:center center;
+  isolation:isolate;overflow:hidden;
+  transform-origin:var(--zg-camera-origin-x,50%) var(--zg-camera-origin-y,50%);
 }
 .app[data-theme] .zg-scene-camera::before{
   content:'';position:absolute;inset:0;z-index:0;pointer-events:none;

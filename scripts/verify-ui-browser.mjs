@@ -214,9 +214,14 @@ try{
         return a.map(e=>({animation:getComputedStyle(e).animationName,start:e.getAnimations().find(z=>z.animationName==='zg-match')?.startTime,bloom:getComputedStyle(e,'::after').animationName}));
       })()`);
       assert(feedback.every(x=>x.animation==='zg-match'&&x.bloom==='zg-pigment-bloom'),JSON.stringify(feedback));
-      const zoom=await evaluate(`(()=>{const e=document.querySelector('.zg-scene-camera');return {name:getComputedStyle(e).animationName,pan:e.style.getPropertyValue('--zg-camera-pan-x'),background:getComputedStyle(e,'::before').backgroundImage}})()`);
-      assert(zoom.name==='zg-camera-zoom'&&zoom.pan.endsWith('px')&&zoom.background.includes('forest_background.webp'),'Whole illustrated scene must zoom to pair: '+JSON.stringify(zoom));
-      if(indexes===pairs.values().next().value){await sleep(570);const scale=await evaluate("new DOMMatrixReadOnly(getComputedStyle(document.querySelector('.zg-scene-camera')).transform).a");assert(scale>1.06,'Camera must visibly zoom toward matching cards: '+scale);await screenshot('forest-approved-camera-zoom-1280x800');}
+      const zoom=await evaluate(`(()=>{const e=document.querySelector('.zg-scene-camera');return {name:getComputedStyle(e).animationName,origin:e.style.getPropertyValue('--zg-camera-origin-x'),background:getComputedStyle(e,'::before').backgroundImage}})()`);
+      assert(zoom.name==='zg-camera-zoom'&&zoom.origin.endsWith('px')&&zoom.background.includes('forest_background.webp'),'Whole illustrated scene must zoom to pair: '+JSON.stringify(zoom));
+      if(indexes===pairs.values().next().value){
+        await sleep(570);
+        const coverage=await evaluate(`(()=>{const a=document.querySelector('.stage').getBoundingClientRect(),b=document.querySelector('.zg-scene-camera').getBoundingClientRect(),scale=new DOMMatrixReadOnly(getComputedStyle(document.querySelector('.zg-scene-camera')).transform).a;return {scale,allEdgesCovered:b.left<=a.left+1&&b.top<=a.top+1&&b.right>=a.right-1&&b.bottom>=a.bottom-1,stage:{left:a.left,top:a.top,right:a.right,bottom:a.bottom},camera:{left:b.left,top:b.top,right:b.right,bottom:b.bottom}}})()`);
+        assert(coverage.scale>1.06&&coverage.allEdgesCovered,'Camera must zoom toward the pair without revealing bare stage bands: '+JSON.stringify(coverage));
+        await screenshot('forest-approved-camera-zoom-1280x800');
+      }
       if(feedback.every(x=>typeof x.start==='number'))assert(Math.abs(feedback[0].start-feedback[1].start)<80,'Found pair must zoom synchronously');
     }
     await until("!!document.querySelector('.result .victory-stars')");
