@@ -1,0 +1,5 @@
+node_modules/
+dist/
+ui-smoke/
+public/library.json
+.DS_Store
