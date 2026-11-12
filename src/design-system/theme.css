@@ -20,6 +20,26 @@
   50%{transform:translate3d(1.5%,-.5%,0) scale(1.1111)}
   75%{transform:translate3d(.4%,1.5%,0) scale(1.1111)}
 }
+/* Memory camera holds the background, live scenery and cards in one zoom layer.
+   Results and pause dialogs remain outside it at the original viewport scale. */
+.app[data-theme] .stage.zg-memory-stage::before{content:none!important;display:none!important}
+.app[data-theme] .zg-scene-camera{
+  position:absolute;inset:0;z-index:1;box-sizing:border-box;
+  padding:inherit;display:flex;align-items:center;justify-content:center;
+  isolation:isolate;overflow:hidden;
+  transform-origin:var(--zg-camera-origin-x,50%) var(--zg-camera-origin-y,50%);
+}
+.app[data-theme] .zg-scene-camera::before{
+  content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:var(--zg-stage-image) center / cover no-repeat;
+  transform:scale(1.1111);filter:none;
+}
+.app[data-theme][data-scene-motion="drift"] .zg-scene-camera::before{
+  animation:zg-background-drift 120s cubic-bezier(.45,0,.55,1) infinite;
+}
+@media(prefers-reduced-motion:reduce){
+ .app[data-theme] .zg-scene-camera::before{animation:none!important}
+}
 .app[data-theme] .stage::after{content:none!important;display:none!important}
 .app[data-theme] .sorting-content{color:var(--zg-stage-text)!important}
 /* Whole-card WebP instead of 9-slice: no seams during flipping/scaling. */
@@ -88,6 +108,8 @@
  background:var(--ui-paper)!important;color:var(--ui-text)!important;
  border:1px solid var(--ui-outline)!important
 }
+/* A group label is readable even when no card is selected yet. */
+.app[data-theme] .sorting-stage button.bin-target:disabled{opacity:1!important}
 .app[data-theme] .sort-bin.drop-hover{
  box-shadow:0 0 0 3px var(--ui-outline),0 0 22px var(--ui-accent)!important
 }
@@ -161,14 +183,19 @@
  .app[data-theme] .overlay .award{top:-24px}
 }
 
-/* Award stars remain above the framed result card and retain their full colors. */
+/* Approved 2172×724 watercolor atlas: filled / glowing / empty, three 724px cells.
+   Use the source artwork directly, never recolor a UI glyph as a reward. */
 .app[data-theme] .victory-star{
- display:inline-flex;justify-content:center;align-items:center;
- width:clamp(52px,8vw,78px);height:clamp(52px,8vw,78px);
- color:#f1c870;filter:drop-shadow(0 3px 6px #9a6a2b66);
+ display:block;flex:none;
+ width:clamp(52px,8vw,78px);aspect-ratio:1;
+ background-image:var(--zg-award-stars-image)!important;
+ background-size:300% 100%!important;
+ background-repeat:no-repeat!important;
+ background-position:left center!important;
+ filter:drop-shadow(0 3px 6px #9a6a2b44);
 }
-.app[data-theme] .victory-star .garden-icon{width:100%;height:100%;background-color:currentColor!important}
-.app[data-theme] .victory-star-empty{color:var(--ui-outline);opacity:.45}
+.app[data-theme] .victory-star-shining{background-position:center center!important}
+.app[data-theme] .victory-star-empty{background-position:right center!important;opacity:1}
 .app[data-theme] .victory-stars>span:nth-child(2){margin-top:-9px}
 
 /* Keep long dynamically generated sorting-category lists from swallowing the scene.

@@ -16,6 +16,10 @@ async function run(){
  assert(!/saturate\s*\(/.test(layout+read('src/design-system/motion.css')),'Animations must never desaturate');
  assert(read('src/design-system/theme.css').includes('border-image:none!important'),'Full-bleed toolbar is required');
  assert(read('src/design-system/motion.css').includes('zg-pigment-bloom'),'Synchronized watercolor pop is required');
+ assert(read('src/design-system/motion.css').includes('zg-camera-zoom'),'Scene zoom must include the illustrated background');
+ assert(read('src/main.tsx').includes('className="zg-scene-camera" ref={cameraRef}'),'Memory must use one shared scene camera');
+ assert(read('src/GameUI.tsx').includes('victory-star-shining'),'Reward must use the approved watercolor star atlas');
+ assert(fs.existsSync(path.join(root,'public/assets/neutral/approved-stars.webp')),'Missing approved watercolor star atlas');
  assert(read('src/main.tsx').includes('zg-caption-toggle')&&read('src/Sorting.tsx').includes('zg-caption-toggle'),'Shared caption controls missing');
  assert.equal(read('src/style.css').trim(),`/* Shared source order: layout, theme surfaces, control skins, motion. */
 @import './styles/layout.css';

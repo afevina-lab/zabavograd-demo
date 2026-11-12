@@ -13,6 +13,7 @@ test('Every theme has one complete, validated visual configuration',()=>{
   assert.equal(a['data-toolbar-art'],t.toolbarArt?'illustrated':'kit');
   assert.equal(vars['--ui-accent'],t.palette.accent);
   assert.equal(vars['--zg-match-duration'],`${MOTION.matchMs}ms`);
+  assert.match(String(vars['--zg-award-stars-image']),/\/demo\/assets\/neutral\/approved-stars\.webp/);
   assert.match(String(vars['--skin-panel']),/\/demo\/assets\/theme-ui\/panels\//);
   assert.match(String(vars['--skin-pill']),/\/demo\/assets\/theme-ui\/buttons\/pill\//);
   if(t.scene.background)assert.match(String(vars['--zg-stage-image']),/\/demo\/assets\//);
