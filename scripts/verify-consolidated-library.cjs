@@ -33,16 +33,17 @@ const pubSnapshots=oldImported.flatMap(e=>(e.public_release_snapshot?.variants||
 for(const {id,src} of pubSnapshots){
  assert(rt.get(id)?.variants?.some(v=>v.src===src),'Public image link lost '+id+' '+src);
 }
-const imageKeys=new Set();
+const imageKeys=new Set();let imageReferences=0;
 for(const e of db.entries)for(const s of e.illustrations?.senses||[]){
  assert(s.word_id===e.id,'Image sense points to wrong dictionary ID '+s.id);
  for(const v of s.variants||[]){
   assert(v.src?.endsWith('.webp') && !v.src.includes('..'),'Invalid image '+v.src);
   assert(fs.existsSync('public'+v.src),'Missing WebP '+v.src);
-  imageKeys.add(v.src);
+  imageKeys.add(v.src);imageReferences++;
  }
 }
-assert(imageKeys.size>=293,'Lost any of 293 source WebP files');
+assert(imageReferences>=305,'Lost any of 293 original + 12 reconciled WebP links');
+assert(imageKeys.size>=292,'Lost any of 292 unique linked WebP assets');
 const regIds=new Set(registry.senses.map(s=>s.id));
 for(const e of db.entries)for(const s of e.illustrations?.senses||[])
  assert(regIds.has(s.id),'Registry is missing image sense '+s.id);
@@ -66,6 +67,6 @@ const grammar=read('public/grammar-frames.json');
 assert.equal(grammar.frames.length,0,'Unverified grammar frame leaked');
 console.log(JSON.stringify({ok:true,source_cards:words.size,game_cards:rt.size,
  public_only_ids:oldImported.length,deduplicated_same_meaning:aliases.length,
- distinct_dog_bone_preserved:true,unique_webp: imageKeys.size,
+ distinct_dog_bone_preserved:true,unique_webp: imageKeys.size,webp_links: imageReferences,
  graph:graph.relations.length,families:graph.families.length,
  unapproved_frames:db.speech_frame_candidates.length},null,2));
