@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/apply-generalizing-concepts.yml'
+      - 'scripts/migrate-generalizing-concepts.cjs'
   workflow_dispatch:
 permissions:
   contents: write
