@@ -22,7 +22,8 @@ const originalEntryCount=db.entries.length;
 for(const e of db.entries){
  if(!forms.has(e.lemma))continue;
  if(e.lemma==='цветок'&&e.meaning?.includes('часть растения'))continue;
- const original=e.generalization?.related_category_paths || e.categories.map(c=>c.path);
+ const original=e.generalization?.related_category_paths?.length ? e.generalization.related_category_paths : e.categories.map(c=>c.path);
+ if(e.lemma==='игра'&&!original.length)original.push('Игры, творчество и увлечения/Игровые понятия');
  e.generalization={
   ...(e.generalization||{}),
   is_generalizing_word:true,
