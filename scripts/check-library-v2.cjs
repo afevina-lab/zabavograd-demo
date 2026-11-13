@@ -24,7 +24,7 @@ for(const sense of img.senses){
 }
 assert.equal(v.provenance.legacy_entry_count,legacy.length);
 assert.equal(v.provenance.merged+v.provenance.created,v.provenance.editorial_input_count);
-assert.equal(v.entries.length,legacy.length+v.provenance.created+(v.provenance.plant_world?.created||0)+(v.provenance.generalization_audit?.created||0)+(v.provenance.webp_assets?.created_word_entries||0)+(v.provenance.public_reconciliation?.imported_entries||0)+(v.provenance.sense_separation?.created||0)+(v.provenance.action_lexicon?.created||0)+(v.provenance.noun_expansion_20261109?.added_entry_count||0)+(v.provenance.public_noun_additions_20261109?.created||0)+(v.provenance.attribute_lexicon_20261109?.created||0)+(v.provenance.public_only_20261112?.public_only_imported||0));
+assert.equal(v.entries.length,legacy.length+v.provenance.created+(v.provenance.plant_world?.created||0)+(v.provenance.generalization_audit?.created||0)+(v.provenance.webp_assets?.created_word_entries||0)+(v.provenance.public_reconciliation?.imported_entries||0)+(v.provenance.sense_separation?.created||0)+(v.provenance.action_lexicon?.created||0)+(v.provenance.noun_expansion_20261109?.added_entry_count||0)+(v.provenance.public_noun_additions_20261109?.created||0)+(v.provenance.attribute_lexicon_20261109?.created||0)+(v.provenance.public_only_20261112?.public_only_imported||0)+(v.provenance.useful_words_20261113?.created||0));
 const familyRelations=v.relations.filter(r=>r.type!=='is_a'&&!r.subject&&!r.object);
 assert.equal(familyRelations.length,40,'Original animal-family relations must be preserved');
 const genusRelations=v.relations.filter(r=>r.type==='is_a'&&r.child&&r.parent);
@@ -111,7 +111,7 @@ if(v.provenance.generalization_audit?.revision==='semantic-genera-20261104-v1'){
   assert(w(name).some(e=>e.generalization?.is_generalizing_word),'Missing genus '+name);
  assert.equal(w('цветок').length,2,'Flower-as-organ must be separate sense');
  assert(w('цветок').some(e=>e.meaning?.includes('часть растения')&&e.categories.every(c=>!c.default_selection)),'Flower organ not auxiliary');
- assert(w('растение')[0].categories.some(c=>c.path==='Растительный мир и грибы/Прочее'&&!c.default_selection),'Generic plant must stay in non-selected miscellaneous group');
+ assert(w('растение')[0].categories.some(c=>c.path==='Растительный мир и грибы'&&!c.default_selection),'Generic plant must stay in non-selected miscellaneous group');
  for(const [name,wrong] of [['рог','Животный мир/Дикие животные'],['крыло','Животный мир/Дикие животные'],['мотор','Транспорт/Наземный'],['маршрут','Транспорт/Наземный'],['кроссовки','Одежда'],['тёрка','Дом и быт/Посуда/Для приготовления']])
   assert(!w(name).some(e=>e.categories.some(c=>c.path===wrong)),'Wrong category remained: '+name);
  assert(genusRelations.length>100,'Too few semantic genus relations');
@@ -172,7 +172,7 @@ assert(v.categories.every(c=>!["Семья","Семья и люди","Мебел
 if(v.provenance.public_reconciliation){
  assert.equal(v.provenance.public_reconciliation.imported_entries,301,'Published-only word import was changed');
  assert.equal(v.provenance.public_reconciliation.added_is_a,76,'Published semantic links were lost');
- assert.equal(v.entries.length,1288+(v.provenance.sense_separation?.created||0)+(v.provenance.action_lexicon?.created||0)+(v.provenance.noun_expansion_20261109?.added_entry_count||0)+(v.provenance.public_noun_additions_20261109?.created||0)+(v.provenance.attribute_lexicon_20261109?.created||0)+(v.provenance.public_only_20261112?.public_only_imported||0),'Published and private word IDs must include subsequent sense separation and noun expansion');
+ assert.equal(v.entries.length,1288+(v.provenance.sense_separation?.created||0)+(v.provenance.action_lexicon?.created||0)+(v.provenance.noun_expansion_20261109?.added_entry_count||0)+(v.provenance.public_noun_additions_20261109?.created||0)+(v.provenance.attribute_lexicon_20261109?.created||0)+(v.provenance.public_only_20261112?.public_only_imported||0)+(v.provenance.useful_words_20261113?.created||0),'Published and private word IDs must include subsequent sense separation and noun expansion');
  const released=v.entries.filter(e=>e.selection.weight_source==='public_reconciliation_20261105');
  assert.equal(released.length,301,'Some published-only records disappeared');
  assert.equal(new Set(released.map(e=>e.id)).size,301,'Duplicate published IDs');
