@@ -1,0 +1,39 @@
+name: Verify and publish library editor
+on:
+  push:
+    branches: [main]
+    paths: ['public/editor/**', 'editor-service/**', '.github/workflows/library-editor.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: public-ui-release
+  cancel-in-progress: false
+jobs:
+  editor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm install --ignore-scripts --no-package-lock
+      - run: node --test editor-service/model.test.mjs
+      - run: node --check public/editor/app.js && node --check editor-service/server.mjs
+      - run: npm test && npm run check:library && npm run check:design-system && npm run build
+      - run: node scripts/check-offline-release.cjs dist
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: _published
+      - name: Publish editor without replacing game files
+        run: |
+          mkdir -p _published/editor
+          cp public/editor/* _published/editor/
+          git -C _published config user.name 'github-actions[bot]'
+          git -C _published config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C _published add editor
+          if ! git -C _published diff --cached --quiet; then
+            git -C _published commit -m 'Publish visual V2 library editor'
+            git -C _published push origin HEAD:gh-pages
+          fi
