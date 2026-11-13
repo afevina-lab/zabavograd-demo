@@ -1,0 +1,31 @@
+name: Apply approved generalizing concepts
+on:
+  push:
+    paths:
+      - '.github/workflows/apply-generalizing-concepts.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply migration
+        run: node scripts/migrate-generalizing-concepts.cjs
+      - name: Validate library integrity
+        run: node scripts/check-library-v2.cjs
+      - name: Commit canonical catalogue
+        run: |
+          if ! git diff --quiet -- outputs/library-v2.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add outputs/library-v2.json
+            git commit -m "Move approved generalizing concepts into independent category"
+            git push
+          fi
