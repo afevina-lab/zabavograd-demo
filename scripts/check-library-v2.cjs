@@ -109,9 +109,29 @@ if(v.provenance.generalization_audit?.revision==='semantic-genera-20261104-v1'){
  const w=name=>v.entries.filter(e=>e.lemma===name);
  for(const name of ['животное','птица','насекомое','мебель','посуда','одежда','обувь','транспорт','продукты','страна'])
   assert(w(name).some(e=>e.generalization?.is_generalizing_word),'Missing genus '+name);
+ const approvedForms={рыба:'рыбы',продукты:'продукты',фрукт:'фрукты',игрушка:'игрушки',транспорт:'транспорт',человек:'люди',дерево:'деревья',цветок:'цветы',растение:'растения',овощ:'овощи',ягода:'ягоды',гриб:'грибы',животное:'животные',птица:'птицы',насекомое:'насекомые',мебель:'мебель',посуда:'посуда',одежда:'одежда',обувь:'обувь',игра:'игра'};
+ if(v.categories.some(c=>c.path==='Обобщающие понятия')){
+  const migrated=v.entries.filter(e=>e.generalization?.form_source==='approved_editorial_20261114');
+  assert.equal(migrated.length,Object.keys(approvedForms).length,'Incomplete generalization migration');
+  for(const [lemma,form] of Object.entries(approvedForms)){
+   const matching=migrated.filter(e=>e.lemma===lemma);
+   assert.equal(matching.length,1,'Missing or duplicated approved concept '+lemma);
+   const e=matching[0];
+   assert.equal(e.generalization.default_lexical_form,form,'Wrong preferred form '+lemma);
+   assert(e.categories.length===1&&e.categories[0].path==='Обобщающие понятия'&&!e.categories[0].default_selection,'Wrong concept category '+lemma);
+   assert.equal(e.selection.task_overrides?.lexical_topic,0,'Concept leaks into lexical practice '+lemma);
+   assert(e.generalization.related_category_paths?.length,'Missing original thematic links '+lemma);
+  }
+ }
  assert.equal(w('цветок').length,2,'Flower-as-organ must be separate sense');
  assert(w('цветок').some(e=>e.meaning?.includes('часть растения')&&e.categories.every(c=>!c.default_selection)),'Flower organ not auxiliary');
- assert(w('растение')[0].categories.some(c=>c.path==='Растительный мир и грибы'&&!c.default_selection),'Generic plant must stay in non-selected miscellaneous group');
+ const plantConcept=w('растение')[0];
+ if(v.categories.some(c=>c.path==='Обобщающие понятия')){
+  assert(plantConcept.categories.some(c=>c.path==='Обобщающие понятия'&&!c.default_selection),'Generic plant must be in independent concept category');
+  assert(plantConcept.generalization?.related_category_paths?.includes('Растительный мир и грибы'),'Generic plant lost original thematic association');
+ }else{
+  assert(plantConcept.categories.some(c=>c.path==='Растительный мир и грибы'&&!c.default_selection),'Generic plant must stay in non-selected miscellaneous group until migration');
+ }
  for(const [name,wrong] of [['рог','Животный мир/Дикие животные'],['крыло','Животный мир/Дикие животные'],['мотор','Транспорт/Наземный'],['маршрут','Транспорт/Наземный'],['кроссовки','Одежда'],['тёрка','Дом и быт/Посуда/Для приготовления']])
   assert(!w(name).some(e=>e.categories.some(c=>c.path===wrong)),'Wrong category remained: '+name);
  assert(genusRelations.length>100,'Too few semantic genus relations');
