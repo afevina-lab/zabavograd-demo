@@ -179,7 +179,7 @@ try{
     assert(r.cardRects.every(b=>b.top>=r.stage.top-2&&b.bottom<=r.stage.bottom+2),'Sorting cards must fit vertically: '+JSON.stringify(r));
     assert(r.toolbar.width>=width-3,'Sorting toolbar is clipped: '+JSON.stringify(r));
     assert(r.stage.bottom>=height-3&&r.stage.bottom<=height+3,'Sorting stage does not fill viewport: '+JSON.stringify(r));
-    assert(theme==='forest'?r.toolbarBackground.includes('assets/themes/forest/header.webp'):r.toolbarBackground.includes('linear-gradient'),'Sorting must use shared toolbar');
+    assert(theme==='forest'?r.toolbarBackground.includes('assets/themes/forest/header.webp'):theme==='space'?r.toolbarBackground.includes('assets/themes/space/header.webp'):r.toolbarBackground.includes('linear-gradient'),'Sorting must use shared toolbar');
     const groupOpacity=await evaluate("getComputedStyle(document.querySelector('.bin-target:disabled')).opacity");
     if(groupOpacity)assert.equal(Number(groupOpacity),1,'Disabled sorting group labels must remain fully opaque');
     assert(r.homeHref?.endsWith('/home.html')&&r.captionButton,'Sorting home/caption controls missing');
