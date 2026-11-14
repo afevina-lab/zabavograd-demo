@@ -90,6 +90,9 @@ try{
       assert(r.panImage.includes('approved-paper-4k.webp'),JSON.stringify(r));
     }else if(theme==='space'){
       assert(r.panImage.includes('assets/space/background.webp'),JSON.stringify(r));
+      assert.equal(r.spriteCount,11,JSON.stringify(r));
+      assert.equal(r.pan,'zg-background-drift',JSON.stringify(r));
+      assert.equal(await evaluate("getComputedStyle(document.querySelector('[data-zg-spin=true]')).animationName"),'zg-sprite-spin');
       assert(r.cardBackground.includes('assets/space/card-back-v2.webp'),JSON.stringify(r));
     }else{
       assert(r.panImage.includes('assets/themes/forest/forest_background.webp'),JSON.stringify(r));

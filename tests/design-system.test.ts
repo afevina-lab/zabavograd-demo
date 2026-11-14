@@ -39,7 +39,7 @@ test('Every theme has one complete, validated visual configuration',()=>{
  assert.deepEqual(THEMES.forest.scene.sprites.map(x=>x.id),['tree-left','tree-right','fern','bush','flowers','leaf-birch','leaf-oak','leaf-oval']);
  assert(THEMES.forest.scene.sprites.filter(x=>x.motion==='sway').every(x=>x.origin==='50% 94%'));
  assert.equal(THEMES.forest.scene.effects.stars,0);
- assert.equal(THEMES.space.scene.sprites.length,10);
+ assert.equal(THEMES.space.scene.sprites.length,11);
  assert.equal(THEMES.space.scene.effects.stars,30);
  assert.equal(THEMES.space.scene.effects.comets,2);
 });
@@ -53,3 +53,5 @@ test('BASE_URL and audio are independent of game templates',()=>{
  assert.equal(soundFile('forest','win'),'win.wav');
  assert(MOTION.matchMs>=1500&&MOTION.resultMs>MOTION.matchMs&&MOTION.layoutMs>0);
 });
+
+test('space retains both planets and independent floating and rotation',()=>{const blue=THEMES.space.scene.sprites.find(s=>s.id==='planet-blue')!;const rings=THEMES.space.scene.sprites.find(s=>s.id==='planet-rings')!;assert(rings.src.endsWith('/planet.webp'));assert.equal(rings.motion,'float');assert.equal(blue.motion,'float');assert(blue.spinMs!>0);assert.equal(THEMES.space.scene.motion,'drift');});

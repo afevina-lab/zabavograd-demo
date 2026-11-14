@@ -218,3 +218,6 @@
 .transformation-prompt{background:var(--ui-paper);color:var(--ui-text);border:2px solid var(--ui-outline);border-radius:18px}
 .transformation-rays{background:repeating-conic-gradient(from 0deg,transparent 0deg 30deg,#dcfaffcc 32deg 35deg,transparent 38deg 60deg);border-radius:16%;mix-blend-mode:screen}
 
+
+.app[data-theme] .zg-scene-layers{container-type:size}
+.app[data-theme] .zg-scene-sprite>img{display:block;width:100%;height:auto;pointer-events:none}
