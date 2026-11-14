@@ -1,0 +1,473 @@
+{
+  "archive": "Zabavograd_Landysh_to_Kareta_63_PNG.zip",
+  "images": [
+    {
+      "file": "public/assets/words/landysh-20261114.webp",
+      "label": "ландыш",
+      "word_id": "ru-plant-20261104-d0bbd0b0d0bdd0b4d18bd188",
+      "status": "linked",
+      "bytes": 102472
+    },
+    {
+      "file": "public/assets/words/shalash-20261114.webp",
+      "label": "шалаш",
+      "word_id": "image-pack-20261114-89d0807e2016",
+      "status": "linked",
+      "bytes": 318856,
+      "canonical_lemma": "шалаш"
+    },
+    {
+      "file": "public/assets/words/mak-20261114.webp",
+      "label": "мак",
+      "word_id": "ru-plant-20261104-d0bcd0b0d0ba",
+      "status": "linked",
+      "bytes": 128618
+    },
+    {
+      "file": "public/assets/words/podsolnuh-20261114.webp",
+      "label": "подсолнух",
+      "word_id": "ru-plant-20261104-d0bfd0bed0b4d181d0bed0bbd0bdd183d185",
+      "status": "linked",
+      "bytes": 124358
+    },
+    {
+      "file": "public/assets/words/fialka-20261114.webp",
+      "label": "фиалка",
+      "word_id": "ru-plant-20261104-d184d0b8d0b0d0bbd0bad0b0",
+      "status": "linked",
+      "bytes": 175028
+    },
+    {
+      "file": "public/assets/words/feya-20261114.webp",
+      "label": "фея",
+      "word_id": "image-pack-20261114-d74d8a2cf060",
+      "status": "linked",
+      "bytes": 134428,
+      "canonical_lemma": "фея"
+    },
+    {
+      "file": "public/assets/words/stroitel-20261114.webp",
+      "label": "строитель",
+      "word_id": "ru-new-20261102-0064",
+      "status": "linked",
+      "bytes": 90662
+    },
+    {
+      "file": "public/assets/words/malyar-20261114.webp",
+      "label": "маляр",
+      "word_id": "image-pack-20261114-7bacd0e90471",
+      "status": "linked",
+      "bytes": 149522,
+      "canonical_lemma": "маляр"
+    },
+    {
+      "file": "public/assets/words/uchitelnitsa-20261114.webp",
+      "label": "учительница",
+      "word_id": "image-pack-20261114-504adad504c0",
+      "status": "linked",
+      "bytes": 100508,
+      "canonical_lemma": "учительница"
+    },
+    {
+      "file": "public/assets/words/prodavets-20261114.webp",
+      "label": "продавец",
+      "word_id": "ru-new-20261102-0063",
+      "status": "linked",
+      "bytes": 150166
+    },
+    {
+      "file": "public/assets/words/podberezovik-20261114.webp",
+      "label": "подберёзовик",
+      "word_id": "ru-plant-20261104-d0bfd0bed0b4d0b1d0b5d180d191d0b7d0bed0b2d0b8d0ba",
+      "status": "linked",
+      "bytes": 115732
+    },
+    {
+      "file": "public/assets/words/podosinovik-20261114.webp",
+      "label": "подосиновик",
+      "word_id": "ru-plant-20261104-d0bfd0bed0b4d0bed181d0b8d0bdd0bed0b2d0b8d0ba",
+      "status": "linked",
+      "bytes": 178500
+    },
+    {
+      "file": "public/assets/words/opyata-20261114.webp",
+      "label": "опята",
+      "word_id": "ru-plant-20261104-d0bed0bfd191d0bdd0bed0ba",
+      "status": "linked",
+      "bytes": 254168,
+      "canonical_lemma": "опёнок"
+    },
+    {
+      "file": "public/assets/words/blednaya-poganka-20261114.webp",
+      "label": "бледная поганка",
+      "word_id": "ru-plant-20261104-d0b1d0bbd0b5d0b4d0bdd0b0d18f20d0bfd0bed0b3d0b0d0bdd0bad0b0",
+      "status": "linked",
+      "bytes": 157668
+    },
+    {
+      "file": "public/assets/words/lisichka-20261114.webp",
+      "label": "лисичка",
+      "word_id": "ru-plant-20261104-d0bbd0b8d181d0b8d187d0bad0b0",
+      "status": "linked",
+      "bytes": 196282
+    },
+    {
+      "file": "public/assets/words/syroezhka-20261114.webp",
+      "label": "сыроежка",
+      "word_id": "ru-plant-20261104-d181d18bd180d0bed0b5d0b6d0bad0b0",
+      "status": "linked",
+      "bytes": 175258
+    },
+    {
+      "file": "public/assets/words/pugovitsa-20261114.webp",
+      "label": "пуговица",
+      "word_id": "ru-home-20261105-55ee0672",
+      "status": "linked",
+      "bytes": 243158
+    },
+    {
+      "file": "public/assets/words/osminog-20261114.webp",
+      "label": "осьминог",
+      "word_id": "lex-v2-d0bed181d18cd0bcd0b8d0bdd0bed0b3",
+      "status": "linked",
+      "bytes": 186912
+    },
+    {
+      "file": "public/assets/words/zhemchuzhina-20261114.webp",
+      "label": "жемчужина",
+      "word_id": "image-pack-20261114-0fde8ad57f8c",
+      "status": "linked",
+      "bytes": 240236,
+      "canonical_lemma": "жемчужина"
+    },
+    {
+      "file": "public/assets/words/liliya-20261114.webp",
+      "label": "лилия",
+      "word_id": "ru-plant-20261104-d0bbd0b8d0bbd0b8d18f",
+      "status": "linked",
+      "bytes": 234396
+    },
+    {
+      "file": "public/assets/words/kolokolchik-20261114.webp",
+      "label": "колокольчик",
+      "word_id": "ru-plant-20261104-d0bad0bed0bbd0bed0bad0bed0bbd18cd187d0b8d0ba",
+      "status": "linked",
+      "bytes": 225382
+    },
+    {
+      "file": "public/assets/words/okno-20261114.webp",
+      "label": "окно",
+      "word_id": "ru-home-20261105-35ae72a6",
+      "status": "linked",
+      "bytes": 247692
+    },
+    {
+      "file": "public/assets/words/vaza-20261114.webp",
+      "label": "ваза",
+      "word_id": "ru-home-20261105-20b3798c",
+      "status": "linked",
+      "bytes": 231280
+    },
+    {
+      "file": "public/assets/words/sladkaya-vata-20261114.webp",
+      "label": "сладкая вата",
+      "word_id": "image-pack-20261114-08f02b56866a",
+      "status": "linked",
+      "bytes": 137812,
+      "canonical_lemma": "сладкая вата"
+    },
+    {
+      "file": "public/assets/words/voda-20261114.webp",
+      "label": "вода",
+      "word_id": "ru-noun-20261109-0055",
+      "status": "linked",
+      "bytes": 184950
+    },
+    {
+      "file": "public/assets/words/holodilnik-20261114.webp",
+      "label": "холодильник",
+      "word_id": "ru-home-20261105-3cc18977",
+      "status": "linked",
+      "bytes": 81908
+    },
+    {
+      "file": "public/assets/words/iva-20261114.webp",
+      "label": "ива",
+      "word_id": "ru-plant-20261104-d0b8d0b2d0b0",
+      "status": "linked",
+      "bytes": 505520
+    },
+    {
+      "file": "public/assets/words/palto-20261114.webp",
+      "label": "пальто",
+      "word_id": "ru-noun-20261109-0008",
+      "status": "linked",
+      "bytes": 194584
+    },
+    {
+      "file": "public/assets/words/bant-20261114.webp",
+      "label": "бант",
+      "word_id": "image-pack-20261114-489bdafad7ab",
+      "status": "linked",
+      "bytes": 158290,
+      "canonical_lemma": "бант"
+    },
+    {
+      "file": "public/assets/words/snezhinka-20261114.webp",
+      "label": "снежинка",
+      "word_id": "ru-noun-extra-20261109-038",
+      "status": "linked",
+      "bytes": 397306
+    },
+    {
+      "file": "public/assets/words/serezhka-20261114.webp",
+      "label": "серёжка",
+      "word_id": "image-pack-20261114-dd82f061702e",
+      "status": "linked",
+      "bytes": 111020,
+      "canonical_lemma": "серёжка"
+    },
+    {
+      "file": "public/assets/words/koltso-20261114.webp",
+      "label": "кольцо",
+      "word_id": "image-pack-20261114-398c2abb61a2",
+      "status": "linked",
+      "bytes": 179332,
+      "canonical_lemma": "кольцо"
+    },
+    {
+      "file": "public/assets/words/vagon-20261114.webp",
+      "label": "вагон",
+      "word_id": "ru-noun-20261109-0078",
+      "status": "linked",
+      "bytes": 168194
+    },
+    {
+      "file": "public/assets/words/pidzhak-20261114.webp",
+      "label": "пиджак",
+      "word_id": "image-pack-20261114-b0e3e8a40c2c",
+      "status": "linked",
+      "bytes": 229888,
+      "canonical_lemma": "пиджак"
+    },
+    {
+      "file": "public/assets/words/zhilet-20261114.webp",
+      "label": "жилет",
+      "word_id": "ru-noun-20261109-0010",
+      "status": "linked",
+      "bytes": 142880
+    },
+    {
+      "file": "public/assets/words/bryuki-20261114.webp",
+      "label": "брюки",
+      "word_id": "ru-noun-20261109-0003",
+      "status": "linked",
+      "bytes": 59378
+    },
+    {
+      "file": "public/assets/words/dinozavr-20261114.webp",
+      "label": "динозавр",
+      "word_id": "image-pack-20261114-11d2188a1b8f",
+      "status": "linked",
+      "bytes": 107408,
+      "canonical_lemma": "динозавр"
+    },
+    {
+      "file": "public/assets/words/sled-medvedya-20261114.webp",
+      "label": "след медведя",
+      "word_id": "image-pack-20261114-8d30681c5417",
+      "status": "linked",
+      "bytes": 245282,
+      "canonical_lemma": "след медведя"
+    },
+    {
+      "file": "public/assets/words/karman-20261114.webp",
+      "label": "карман",
+      "word_id": "ru-r-026",
+      "status": "linked",
+      "bytes": 288968
+    },
+    {
+      "file": "public/assets/words/zhele-20261114.webp",
+      "label": "желе",
+      "word_id": "image-pack-20261114-48e041871e4e",
+      "status": "linked",
+      "bytes": 162444,
+      "canonical_lemma": "желе"
+    },
+    {
+      "file": "public/assets/words/buket-20261114.webp",
+      "label": "букет",
+      "word_id": "image-pack-20261114-6be00f4c0878",
+      "status": "linked",
+      "bytes": 190392,
+      "canonical_lemma": "букет"
+    },
+    {
+      "file": "public/assets/words/vulkan-20261114.webp",
+      "label": "вулкан",
+      "word_id": "image-pack-20261114-0c3576422b7d",
+      "status": "linked",
+      "bytes": 236578,
+      "canonical_lemma": "вулкан"
+    },
+    {
+      "file": "public/assets/words/dym-20261114.webp",
+      "label": "дым",
+      "word_id": "useful-20261113-d0b4d18bd0bc",
+      "status": "linked",
+      "bytes": 99668
+    },
+    {
+      "file": "public/assets/words/kuvshinka-20261114.webp",
+      "label": "кувшинка",
+      "word_id": "image-pack-20261114-28b5e1833f5c",
+      "status": "linked",
+      "bytes": 172408,
+      "canonical_lemma": "кувшинка"
+    },
+    {
+      "file": "public/assets/words/lestnitsa-20261114.webp",
+      "label": "лестница",
+      "word_id": "ru-home-20261105-d3ee83c7",
+      "status": "linked",
+      "bytes": 158906
+    },
+    {
+      "file": "public/assets/words/bochka-20261114.webp",
+      "label": "бочка",
+      "word_id": "image-pack-20261114-128a960b0fb1",
+      "status": "linked",
+      "bytes": 213786,
+      "canonical_lemma": "бочка"
+    },
+    {
+      "file": "public/assets/words/chemodan-20261114.webp",
+      "label": "чемодан",
+      "word_id": "image-pack-20261114-f7ad8c5b63c0",
+      "status": "linked",
+      "bytes": 194406,
+      "canonical_lemma": "чемодан"
+    },
+    {
+      "file": "public/assets/words/shokolad-20261114.webp",
+      "label": "шоколад",
+      "word_id": "ru-noun-extra-20261109-015",
+      "status": "linked",
+      "bytes": 218660
+    },
+    {
+      "file": "public/assets/words/kotleta-20261114.webp",
+      "label": "котлета",
+      "word_id": "ru-noun-20261109-0066",
+      "status": "linked",
+      "bytes": 208322
+    },
+    {
+      "file": "public/assets/words/bulka-20261114.webp",
+      "label": "булка",
+      "word_id": "image-pack-20261114-b11c136a808b",
+      "status": "linked",
+      "bytes": 288866,
+      "canonical_lemma": "булка"
+    },
+    {
+      "file": "public/assets/words/baton-20261114.webp",
+      "label": "батон",
+      "word_id": "ru-noun-extra-20261109-010",
+      "status": "linked",
+      "bytes": 178932
+    },
+    {
+      "file": "public/assets/words/leyka-20261114.webp",
+      "label": "лейка",
+      "word_id": "ru-home-20261105-2de93e3e",
+      "status": "linked",
+      "bytes": 193934
+    },
+    {
+      "file": "public/assets/words/shishka-20261114.webp",
+      "label": "шишка",
+      "word_id": "ru-plant-20261104-d188d0b8d188d0bad0b0",
+      "status": "linked",
+      "bytes": 240570
+    },
+    {
+      "file": "public/assets/words/klyuch-20261114.webp",
+      "label": "ключ",
+      "word_id": "ru-home-20261105-de0741f",
+      "status": "linked",
+      "bytes": 95858
+    },
+    {
+      "file": "public/assets/words/zamok-20261114.webp",
+      "label": "замок",
+      "word_id": "ru-home-20261105-dfa4b2aa",
+      "status": "linked",
+      "bytes": 102754
+    },
+    {
+      "file": "public/assets/words/lopata-20261114.webp",
+      "label": "лопата",
+      "word_id": "ru-home-20261105-85858c77",
+      "status": "linked",
+      "bytes": 104092
+    },
+    {
+      "file": "public/assets/words/basseyn-20261114.webp",
+      "label": "бассейн",
+      "word_id": "image-pack-20261114-52f08014edee",
+      "status": "linked",
+      "bytes": 229824,
+      "canonical_lemma": "бассейн"
+    },
+    {
+      "file": "public/assets/words/lyzhi-20261114.webp",
+      "label": "лыжи",
+      "word_id": "ru-noun-extra-20261109-021",
+      "status": "linked",
+      "bytes": 199560
+    },
+    {
+      "file": "public/assets/words/obruch-20261114.webp",
+      "label": "обруч",
+      "word_id": "ru-noun-20261109-0043",
+      "status": "linked",
+      "bytes": 119400
+    },
+    {
+      "file": "public/assets/words/gantelya-20261114.webp",
+      "label": "гантеля",
+      "word_id": "ru-noun-extra-20261109-023",
+      "status": "linked",
+      "bytes": 150982,
+      "canonical_lemma": "гантель"
+    },
+    {
+      "file": "public/assets/words/girya-20261114.webp",
+      "label": "гиря",
+      "word_id": "image-pack-20261114-d7b1de1ecf68",
+      "status": "linked",
+      "bytes": 156890,
+      "canonical_lemma": "гиря"
+    },
+    {
+      "file": "public/assets/words/shtanga-20261114.webp",
+      "label": "штанга",
+      "word_id": "image-pack-20261114-021e2551c399",
+      "status": "linked",
+      "bytes": 90952,
+      "canonical_lemma": "штанга"
+    },
+    {
+      "file": "public/assets/words/kareta-20261114.webp",
+      "label": "карета",
+      "word_id": "image-pack-20261114-2c43ed76f86c",
+      "status": "linked",
+      "bytes": 222230,
+      "canonical_lemma": "карета"
+    }
+  ],
+  "created_entries": 23,
+  "new_entries_pending_review": true
+}

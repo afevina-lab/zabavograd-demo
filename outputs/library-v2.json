@@ -279,6 +279,35 @@
     },
     "useful_words_20261113": {
       "created": 12
+    },
+    "image_pack_20261114": {
+      "created": 23,
+      "created_ids": [
+        "image-pack-20261114-89d0807e2016",
+        "image-pack-20261114-d74d8a2cf060",
+        "image-pack-20261114-7bacd0e90471",
+        "image-pack-20261114-504adad504c0",
+        "image-pack-20261114-0fde8ad57f8c",
+        "image-pack-20261114-08f02b56866a",
+        "image-pack-20261114-489bdafad7ab",
+        "image-pack-20261114-dd82f061702e",
+        "image-pack-20261114-398c2abb61a2",
+        "image-pack-20261114-b0e3e8a40c2c",
+        "image-pack-20261114-11d2188a1b8f",
+        "image-pack-20261114-8d30681c5417",
+        "image-pack-20261114-48e041871e4e",
+        "image-pack-20261114-6be00f4c0878",
+        "image-pack-20261114-0c3576422b7d",
+        "image-pack-20261114-28b5e1833f5c",
+        "image-pack-20261114-128a960b0fb1",
+        "image-pack-20261114-f7ad8c5b63c0",
+        "image-pack-20261114-b11c136a808b",
+        "image-pack-20261114-52f08014edee",
+        "image-pack-20261114-d7b1de1ecf68",
+        "image-pack-20261114-021e2551c399",
+        "image-pack-20261114-2c43ed76f86c"
+      ],
+      "archive": "Zabavograd_Landysh_to_Kareta_63_PNG.zip"
     }
   },
   "weight_migration": {
@@ -46944,7 +46973,28 @@
         "policy": "illustration_planned",
         "planned_variants": null,
         "art_status": "needs_zabavograd_redraw",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-r-026-sense",
+            "word_id": "ru-r-026",
+            "label": "карман",
+            "meaning": "карман",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/karman-20261114.webp",
+                "label": "карман",
+                "sha256": "ecae61972f1b4e81316599b73189da7deef58f482971ac9dd38aac4f3ee3fec3",
+                "width": 960,
+                "height": 877,
+                "format": "webp",
+                "master_png_sha256": "b31fad77f40f62657bc3bfadab56ea820e1d33c16466d1b9b39c9b594f578cb6"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "filled_with_explicit_extended_cases",
@@ -185343,7 +185393,28 @@
         "policy": "illustration_planned",
         "planned_variants": null,
         "art_status": "not_created",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-new-20261102-0063-sense",
+            "word_id": "ru-new-20261102-0063",
+            "label": "продавец",
+            "meaning": "продавец",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/prodavets-20261114.webp",
+                "label": "продавец",
+                "sha256": "029dd06428ac91ce9a34c870551208cfbd16f06acdc06216bc0c0a65ae6f70a5",
+                "width": 640,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "93f6dfabace31dcdb9dc16c58e489d467dddc272d07dab24a36a83e43d6308cd"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -185558,7 +185629,28 @@
         "policy": "illustration_planned",
         "planned_variants": null,
         "art_status": "not_created",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-new-20261102-0064-sense",
+            "word_id": "ru-new-20261102-0064",
+            "label": "строитель",
+            "meaning": "строитель",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/stroitel-20261114.webp",
+                "label": "строитель",
+                "sha256": "285d2a2bca9d2e52a77a2431aebb4187d630cf94abf9968930bd1937be4778af",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "87c15272b3b87b07d7314dbc23c28f2e525ab76ab9c2c3a3134a58f89e5f5017"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -223402,7 +223494,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "lex-v2-d0bed181d18cd0bcd0b8d0bdd0bed0b3-sense",
+            "word_id": "lex-v2-d0bed181d18cd0bcd0b8d0bdd0bed0b3",
+            "label": "осьминог",
+            "meaning": "осьминог",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/osminog-20261114.webp",
+                "label": "осьминог",
+                "sha256": "4a3cd2f11301957be2cd8403f8c95587b235e057641f11fe942504ca668f95a5",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "57f8bcf404cd5516f76701bf2af1f45db4bdda8a25494bd6c54a754d727380e4"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -238958,7 +239071,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0b8d0b2d0b0-sense",
+            "word_id": "ru-plant-20261104-d0b8d0b2d0b0",
+            "label": "ива",
+            "meaning": "ива",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/iva-20261114.webp",
+                "label": "ива",
+                "sha256": "38fd9d5e0ae728a1511f61740d30e3db33eb618eb715558aad0ce229b1551e7d",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "c7ec1985d4d00d367f1cdd75e69cddb2ed03b30bf829b7931b203ae40f9fa77f"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -240527,7 +240661,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0bad0bed0bbd0bed0bad0bed0bbd18cd187d0b8d0ba-sense",
+            "word_id": "ru-plant-20261104-d0bad0bed0bbd0bed0bad0bed0bbd18cd187d0b8d0ba",
+            "label": "колокольчик",
+            "meaning": "колокольчик",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/kolokolchik-20261114.webp",
+                "label": "колокольчик",
+                "sha256": "5e886f28c243ecdc6523f50d860571bf49000a29bc60e6fb430f864f2957ff95",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "a6c6c79dcafdaff0aff937faa9c1aa353e41f3703ce105a504eed5b5a5b83f0d"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -240702,7 +240857,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0bbd0b0d0bdd0b4d18bd188-sense",
+            "word_id": "ru-plant-20261104-d0bbd0b0d0bdd0b4d18bd188",
+            "label": "ландыш",
+            "meaning": "ландыш",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/landysh-20261114.webp",
+                "label": "ландыш",
+                "sha256": "a7ae97ec1802b74130e5b65899970210dcbadcf188cbd6664428b584d414d058",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "06200bd15d269466c5dddf88616a22257e5619d8f0524e1ef67800756fec009b"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -240782,7 +240958,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0bcd0b0d0ba-sense",
+            "word_id": "ru-plant-20261104-d0bcd0b0d0ba",
+            "label": "мак",
+            "meaning": "мак",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/mak-20261114.webp",
+                "label": "мак",
+                "sha256": "60e404fbcbddbfd8ee9990e98bc27a137f4c79a215a9208b88eaca933e9be253",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "5d4d8d0615915cc27211a59636b6de54eb5c59f8cdb25ab866caf7e6d1890319"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -240869,7 +241066,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0bbd0b8d0bbd0b8d18f-sense",
+            "word_id": "ru-plant-20261104-d0bbd0b8d0bbd0b8d18f",
+            "label": "лилия",
+            "meaning": "лилия",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/liliya-20261114.webp",
+                "label": "лилия",
+                "sha256": "5c9b46e6385ccc042d2d634d33ccf1a7c82c22736a10846857ddec5d2182f3a5",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "6c54856c1c7cd4a90a815252158c4370dae9f44a1d4ab9b7cb8392aa23d34721"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -241269,7 +241487,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d184d0b8d0b0d0bbd0bad0b0-sense",
+            "word_id": "ru-plant-20261104-d184d0b8d0b0d0bbd0bad0b0",
+            "label": "фиалка",
+            "meaning": "фиалка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/fialka-20261114.webp",
+                "label": "фиалка",
+                "sha256": "e8d32dedb698418ec36eda5eb94755b597494ce5d25e32dddfb66de47327c2a6",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "5fea366678287f70130d0f060ce5ab7eda96ea4dbb847dac877591176d1f0f34"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -241358,7 +241597,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0bfd0bed0b4d181d0bed0bbd0bdd183d185-sense",
+            "word_id": "ru-plant-20261104-d0bfd0bed0b4d181d0bed0bbd0bdd183d185",
+            "label": "подсолнух",
+            "meaning": "подсолнух",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/podsolnuh-20261114.webp",
+                "label": "подсолнух",
+                "sha256": "07d6696c34e4ee8ac96c141a855af40f253d60c5439bce1c89a55853c8e5c198",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "34a1def01a37d4732fa126ea538b026792bca2d7dc1636bfd888ecd209dc97fa"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -248946,7 +249206,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0bbd0b8d181d0b8d187d0bad0b0-sense",
+            "word_id": "ru-plant-20261104-d0bbd0b8d181d0b8d187d0bad0b0",
+            "label": "лисичка",
+            "meaning": "лисичка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/lisichka-20261114.webp",
+                "label": "лисичка",
+                "sha256": "c738f2e08a2851159d99d2dafd7bce60b65c55bd362b5d65f118b1876cbe0252",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "c408de86f638e97f2db5f97523983d379a6da60c4bb06e1c5d402c7d6b8742b6"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -249147,7 +249428,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0bfd0bed0b4d0b1d0b5d180d191d0b7d0bed0b2d0b8d0ba-sense",
+            "word_id": "ru-plant-20261104-d0bfd0bed0b4d0b1d0b5d180d191d0b7d0bed0b2d0b8d0ba",
+            "label": "подберёзовик",
+            "meaning": "подберёзовик",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/podberezovik-20261114.webp",
+                "label": "подберёзовик",
+                "sha256": "e49b29886950ae5adcdc2348a5cdb792710da81d021b012bc465380d5bd93841",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "2130bf11c66e3162f79c9aa6d3e5fe93f5d58f4321e304d1f37e5b3b4f2257c8"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -249248,7 +249550,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0bfd0bed0b4d0bed181d0b8d0bdd0bed0b2d0b8d0ba-sense",
+            "word_id": "ru-plant-20261104-d0bfd0bed0b4d0bed181d0b8d0bdd0bed0b2d0b8d0ba",
+            "label": "подосиновик",
+            "meaning": "подосиновик",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/podosinovik-20261114.webp",
+                "label": "подосиновик",
+                "sha256": "786d33f83bf4d02ed16df4e4f2a7b80f2c968386a4da6890ddf7679c874039af",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "5a62f8e34e42b9a6c5efce0d6b13b88e67aa0a13f79f4299062d82b0556de54e"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -249344,7 +249667,27 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0bed0bfd191d0bdd0bed0ba-sense",
+            "word_id": "ru-plant-20261104-d0bed0bfd191d0bdd0bed0ba",
+            "label": "опёнок",
+            "meaning": "опёнок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/opyata-20261114.webp",
+                "label": "опята",
+                "sha256": "cb4da61fce44e0bcddc0af6f1a40ff132704542dbce81c30b77eed1a37ddb295",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -249443,7 +249786,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d181d18bd180d0bed0b5d0b6d0bad0b0-sense",
+            "word_id": "ru-plant-20261104-d181d18bd180d0bed0b5d0b6d0bad0b0",
+            "label": "сыроежка",
+            "meaning": "сыроежка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/syroezhka-20261114.webp",
+                "label": "сыроежка",
+                "sha256": "3b5827a0e07f03bd78a5b76b98502079521227f74e66612a0cb2321a7b7a534d",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "41c80289b202906ab7138cb9261117f168dad75265731386676ed10351dab8ff"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -249494,7 +249858,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0b1d0bbd0b5d0b4d0bdd0b0d18f20d0bfd0bed0b3d0b0d0bdd0bad0b0-sense",
+            "word_id": "ru-plant-20261104-d0b1d0bbd0b5d0b4d0bdd0b0d18f20d0bfd0bed0b3d0b0d0bdd0bad0b0",
+            "label": "бледная поганка",
+            "meaning": "бледная поганка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/blednaya-poganka-20261114.webp",
+                "label": "бледная поганка",
+                "sha256": "9fde8dddaba95362b25b7f6a327caef17930ae0e89fc22c7949ea68ad6e9e982",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "a30a64da21343cba12c37ce507f91a3e2feebd69828b4f65b9b458c2b2dc9282"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "pending_automatic_analysis"
@@ -250776,7 +251161,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d188d0b8d188d0bad0b0-sense",
+            "word_id": "ru-plant-20261104-d188d0b8d188d0bad0b0",
+            "label": "шишка",
+            "meaning": "шишка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/shishka-20261114.webp",
+                "label": "шишка",
+                "sha256": "9cc8862bf3f0651d21a3b34c357492783b6f86205ce66cb4c721870284bab104",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "ef7e1aa7e365eacd3fb51097939e5a94057162b6662dd837c105ab7db8ae3101"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -254960,7 +255366,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-home-20261105-20b3798c-sense",
+            "word_id": "ru-home-20261105-20b3798c",
+            "label": "ваза",
+            "meaning": "ваза",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/vaza-20261114.webp",
+                "label": "ваза",
+                "sha256": "0a4e957b2fdcc8cd1ea34624307914fa6606374fa56e27f26d416972efe4a8bf",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "68f3fbc5d08d69f580bd500f4edf49453701ed7434dce70b05df6b135030d83c"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -259381,7 +259808,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-home-20261105-dfa4b2aa-sense",
+            "word_id": "ru-home-20261105-dfa4b2aa",
+            "label": "замок",
+            "meaning": "замок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/zamok-20261114.webp",
+                "label": "замок",
+                "sha256": "2e5a4d2fb8e7eb4524cade4b0e6d4fcfe34c27cb1bbe821f787233cae6dca270",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "f224c9061128deada6dfed3ed0347e4a7c3364094c1721f67f0e43ed96319fd3"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "pending_automatic_analysis",
@@ -260988,7 +261436,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-home-20261105-de0741f-sense",
+            "word_id": "ru-home-20261105-de0741f",
+            "label": "ключ",
+            "meaning": "ключ",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/klyuch-20261114.webp",
+                "label": "ключ",
+                "sha256": "11e77bcb70ef37c4c7f8a49df01c3ed2b7bcb43b2508064187cbb9f886577a99",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "834a1d8261dc7b280844810c31494d09b384b6dbd0a14a06c903fdfd94b7471f"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -262579,7 +263048,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-home-20261105-2de93e3e-sense",
+            "word_id": "ru-home-20261105-2de93e3e",
+            "label": "лейка",
+            "meaning": "лейка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/leyka-20261114.webp",
+                "label": "лейка",
+                "sha256": "4285cce79e4395b8fa02c68b6f0ad6cf127d0a60a2a3a2e59a19360f681fce97",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "0c044bbdc2cd320c86a3d44d59b011d8b2813c5476a799dddd30f8cd9556102e"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -262668,7 +263158,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-home-20261105-d3ee83c7-sense",
+            "word_id": "ru-home-20261105-d3ee83c7",
+            "label": "лестница",
+            "meaning": "лестница",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/lestnitsa-20261114.webp",
+                "label": "лестница",
+                "sha256": "fb9df7f4214f7ca6a62ed68bbb1d89b5ec54d6c0534aecc56b8c6606248784d8",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "cfbaa53d66ab9d3d3f598d68161190c199c9576da89db4e688d6dd33fffc7bd8"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -263092,7 +263603,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-home-20261105-85858c77-sense",
+            "word_id": "ru-home-20261105-85858c77",
+            "label": "лопата",
+            "meaning": "лопата",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/lopata-20261114.webp",
+                "label": "лопата",
+                "sha256": "e39f675dfc3984625e9ed7c284a558b1e2ba59ae3fc94224463abd2fbe089c74",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "de743e01df2a1746809007218d4fc8bf8dfcb2580b749995d4ba5e785992973a"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -265708,7 +266240,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-home-20261105-35ae72a6-sense",
+            "word_id": "ru-home-20261105-35ae72a6",
+            "label": "окно",
+            "meaning": "окно",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/okno-20261114.webp",
+                "label": "окно",
+                "sha256": "5a02ad573aeb3e7a79e142fae08e302a5ec87f2123033acc9621636dfb6ae661",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "f6c64e190d2bae2568126b71d4a9883865377d2dbac1b7298ec94ae0fdab658e"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -269392,7 +269945,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-home-20261105-55ee0672-sense",
+            "word_id": "ru-home-20261105-55ee0672",
+            "label": "пуговица",
+            "meaning": "пуговица",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/pugovitsa-20261114.webp",
+                "label": "пуговица",
+                "sha256": "4d60c5fb1f4709e459dc5c41f17ac0133853cf813de97c6771f725f8baa7d973",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "e53308ad1c2e2c4eeea30546442400c45e2bb97055905ca0b02d1ef3cf3aae5e"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -276205,7 +276779,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-home-20261105-3cc18977-sense",
+            "word_id": "ru-home-20261105-3cc18977",
+            "label": "холодильник",
+            "meaning": "холодильник",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/holodilnik-20261114.webp",
+                "label": "холодильник",
+                "sha256": "ccb3fc78637e76059450314b56fc707be34760e6c922f5340e86a0edf06386a0",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "3c61d7c0f566fc2021335daf968dd0baaab2be7f06b6509f39daf03961fc625c"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -299593,7 +300188,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0003-sense",
+            "word_id": "ru-noun-20261109-0003",
+            "label": "брюки",
+            "meaning": "брюки",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/bryuki-20261114.webp",
+                "label": "брюки",
+                "sha256": "b4cf0c0d023073c3ed0c2dd08a4a7e3e3fe4672b582251f1d411fe679ec87aa6",
+                "width": 640,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "d9ff8f4aa637e7827c254dd6418c519346a526fdae9bfd6e5eaea6207412d78b"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -300101,7 +300717,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0008-sense",
+            "word_id": "ru-noun-20261109-0008",
+            "label": "пальто",
+            "meaning": "пальто",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/palto-20261114.webp",
+                "label": "пальто",
+                "sha256": "2376422b2ba2f6cbc35dd51b321b2e44b2f5dd4d2f8d258c967e026fa7e43c63",
+                "width": 960,
+                "height": 877,
+                "format": "webp",
+                "master_png_sha256": "8eb2f7ff871ec29e71f87e1fca92f24a7603aff5f2649292088eff615291b983"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -300296,7 +300933,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0010-sense",
+            "word_id": "ru-noun-20261109-0010",
+            "label": "жилет",
+            "meaning": "жилет",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/zhilet-20261114.webp",
+                "label": "жилет",
+                "sha256": "1d95adaf89e30e440db10e67dca59cfc65babf7abddf9ff95d681d57c7bd7473",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "2f7dec7ec952ca70ea7474e5baa67be5ec9e5c172d38991a1bc51cdb5141d5e6"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -303675,7 +304333,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0043-sense",
+            "word_id": "ru-noun-20261109-0043",
+            "label": "обруч",
+            "meaning": "гимнастический обруч",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/obruch-20261114.webp",
+                "label": "обруч",
+                "sha256": "726d025b6361d1798aea296a8e7dbecb33be21a3037a868bdfc06321db5faf6d",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "48cb7dfa8275852d4231f2a798a72ebe89215393b4a85c490d41472be5d5c7e0"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -304815,7 +305494,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0055-sense",
+            "word_id": "ru-noun-20261109-0055",
+            "label": "вода",
+            "meaning": "вода",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/voda-20261114.webp",
+                "label": "вода",
+                "sha256": "35d2a00b44d9eda8224ea2e18361c72cfad17b0395f79843c0105f8b9b5426f8",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "a82684ddf05a2841b84e292a6fc0890588ab69867681ca169efc78c59020d559"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "pending_automatic_analysis",
@@ -305888,7 +306588,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0066-sense",
+            "word_id": "ru-noun-20261109-0066",
+            "label": "котлета",
+            "meaning": "котлета",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/kotleta-20261114.webp",
+                "label": "котлета",
+                "sha256": "f058e0c3ca6a1b679de8059c8ce6e7506b44d523a2899b87372afb519d455ff1",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "4abb8c9b98e88b1d8675b538156c1af9c7f939a662d3b4a41dd2c34041feab6b"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -307113,7 +307834,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0078-sense",
+            "word_id": "ru-noun-20261109-0078",
+            "label": "вагон",
+            "meaning": "железнодорожный вагон",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/vagon-20261114.webp",
+                "label": "вагон",
+                "sha256": "63e822d28b3427697a550fa14a6ad1c6230cce927e770eb686947a6b0f39c870",
+                "width": 960,
+                "height": 640,
+                "format": "webp",
+                "master_png_sha256": "2a338302a10fe6b900c6da47b64415cf0a0d44764d6fa315b9615787fc30c09f"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -310183,7 +310925,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-extra-20261109-010-sense",
+            "word_id": "ru-noun-extra-20261109-010",
+            "label": "батон",
+            "meaning": "батон",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/baton-20261114.webp",
+                "label": "батон",
+                "sha256": "12245c490f2f1686760ad77067aab6bb9a6686340b10e14cf14cd26d3d3a8d51",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "1677cca612720b963e18aef7db2f80649eac74df6044544f7450707f9e032d65"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -310643,7 +311406,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-extra-20261109-015-sense",
+            "word_id": "ru-noun-extra-20261109-015",
+            "label": "шоколад",
+            "meaning": "шоколад",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/shokolad-20261114.webp",
+                "label": "шоколад",
+                "sha256": "c285c8e026e13fa1ea537161edb029df4dbc5668cada18f055c1400b2e3b135f",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "b328354f9df24e01613dd14d8880a1ed76307ad2aa898e97c5dbeb5c341f6756"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -311150,7 +311934,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-extra-20261109-021-sense",
+            "word_id": "ru-noun-extra-20261109-021",
+            "label": "лыжи",
+            "meaning": "лыжи",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/lyzhi-20261114.webp",
+                "label": "лыжи",
+                "sha256": "41bd0e98892ba4ffc15fb7ad3413f2b57fe93803841193dfc828a12b7ea1e1bb",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "4be1faebbc2d15275d2c9270c40e4ebbf9f64e8f040fb1cba4d2a7bc76fea482"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -311334,7 +312139,27 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-extra-20261109-023-sense",
+            "word_id": "ru-noun-extra-20261109-023",
+            "label": "гантель",
+            "meaning": "гантель",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/gantelya-20261114.webp",
+                "label": "гантеля",
+                "sha256": "e3a31e3ce3a62b81e4cbb145d4de1f19b70c3cfcdc5e69610ca5dbd12528f031",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -312660,7 +313485,28 @@
         "policy": null,
         "planned_variants": null,
         "art_status": "not_assigned",
-        "senses": []
+        "senses": [
+          {
+            "id": "ru-noun-extra-20261109-038-sense",
+            "word_id": "ru-noun-extra-20261109-038",
+            "label": "снежинка",
+            "meaning": "снежинка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/snezhinka-20261114.webp",
+                "label": "снежинка",
+                "sha256": "d3c0203332a3cadd6e4cd7ed64cae716cb0b242e635eff8323b270bd1fbf917c",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "581d6ca4272bdcd08342931bb10020c4431099cfb3fb8494dd6f11d29295262a"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -329242,7 +330088,28 @@
       },
       "illustrations": {
         "policy": "illustration_planned",
-        "senses": []
+        "senses": [
+          {
+            "id": "useful-20261113-d0b4d18bd0bc-sense",
+            "word_id": "useful-20261113-d0b4d18bd0bc",
+            "label": "дым",
+            "meaning": "дым от огня",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/dym-20261114.webp",
+                "label": "дым",
+                "sha256": "75a0ba39976c4a9d700554bad63ee27d336957a33b4b782b05d34f44cc3c061b",
+                "width": 960,
+                "height": 960,
+                "format": "webp",
+                "master_png_sha256": "b7a0b19f23f0ccc242d167cdd0f117554dd4e6d1a604c80c6e44f513ac930538"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "suggested",
@@ -329779,6 +330646,1087 @@
         "review_status": "suggested",
         "image_brief": "повторение отражённого звука",
         "reading_available_without_image": true
+      }
+    },
+    {
+      "id": "image-pack-20261114-89d0807e2016",
+      "lemma": "шалаш",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-89d0807e2016-sense",
+            "word_id": "image-pack-20261114-89d0807e2016",
+            "label": "шалаш",
+            "meaning": "шалаш",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/shalash-20261114.webp",
+                "label": "шалаш",
+                "sha256": "e9aab99e6e698b469fcb41d95ceddabfb268bce9ded97995ed6ff8594e53b57a",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-d74d8a2cf060",
+      "lemma": "фея",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-d74d8a2cf060-sense",
+            "word_id": "image-pack-20261114-d74d8a2cf060",
+            "label": "фея",
+            "meaning": "фея",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/feya-20261114.webp",
+                "label": "фея",
+                "sha256": "6981e8c40927ff7d802823bd0cec34f96fe0ca0b1b35b26eb2a7acf919038b04",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-7bacd0e90471",
+      "lemma": "маляр",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-7bacd0e90471-sense",
+            "word_id": "image-pack-20261114-7bacd0e90471",
+            "label": "маляр",
+            "meaning": "маляр",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/malyar-20261114.webp",
+                "label": "маляр",
+                "sha256": "2796c149cc78edfcb6b32c6af2b69ff4affde06aa26e2078b25b5ee3f423a1bd",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-504adad504c0",
+      "lemma": "учительница",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-504adad504c0-sense",
+            "word_id": "image-pack-20261114-504adad504c0",
+            "label": "учительница",
+            "meaning": "учительница",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/uchitelnitsa-20261114.webp",
+                "label": "учительница",
+                "sha256": "48318c54e2344598ef52a3db16c0ba4f5b49d8d582aca5f603a55942fcca54d8",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-0fde8ad57f8c",
+      "lemma": "жемчужина",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-0fde8ad57f8c-sense",
+            "word_id": "image-pack-20261114-0fde8ad57f8c",
+            "label": "жемчужина",
+            "meaning": "жемчужина",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/zhemchuzhina-20261114.webp",
+                "label": "жемчужина",
+                "sha256": "231193fa4f3b0207ea4c6c5624dfc45fa3d0d5255ad19e5a90e76f60ea06fcda",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-08f02b56866a",
+      "lemma": "сладкая вата",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-08f02b56866a-sense",
+            "word_id": "image-pack-20261114-08f02b56866a",
+            "label": "сладкая вата",
+            "meaning": "сладкая вата",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/sladkaya-vata-20261114.webp",
+                "label": "сладкая вата",
+                "sha256": "b641ecf8980b74b006a5950fcc753c5ba35a18e76b55bf3384988c099fc85375",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-489bdafad7ab",
+      "lemma": "бант",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-489bdafad7ab-sense",
+            "word_id": "image-pack-20261114-489bdafad7ab",
+            "label": "бант",
+            "meaning": "бант",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/bant-20261114.webp",
+                "label": "бант",
+                "sha256": "b7af385cb8acfcdd9270632579a5b8dbbc516f73574dc4ce58b3b14595bfd568",
+                "width": 960,
+                "height": 640,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-dd82f061702e",
+      "lemma": "серёжка",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-dd82f061702e-sense",
+            "word_id": "image-pack-20261114-dd82f061702e",
+            "label": "серёжка",
+            "meaning": "серёжка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/serezhka-20261114.webp",
+                "label": "серёжка",
+                "sha256": "fefeb8dc3bde88947a9f93bcb3a83e267542bf2385c3f4296c8f8e6f30718fb7",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-398c2abb61a2",
+      "lemma": "кольцо",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-398c2abb61a2-sense",
+            "word_id": "image-pack-20261114-398c2abb61a2",
+            "label": "кольцо",
+            "meaning": "кольцо",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/koltso-20261114.webp",
+                "label": "кольцо",
+                "sha256": "da12e9b6f7903504b0ca47ea3347d3c2c18426fadd4c3b7a77f696f52604a740",
+                "width": 960,
+                "height": 877,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-b0e3e8a40c2c",
+      "lemma": "пиджак",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-b0e3e8a40c2c-sense",
+            "word_id": "image-pack-20261114-b0e3e8a40c2c",
+            "label": "пиджак",
+            "meaning": "пиджак",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/pidzhak-20261114.webp",
+                "label": "пиджак",
+                "sha256": "ff4ee4965e350a830ae43de51b469ec5e2cae0178ecea73dc884069ff9694228",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-11d2188a1b8f",
+      "lemma": "динозавр",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-11d2188a1b8f-sense",
+            "word_id": "image-pack-20261114-11d2188a1b8f",
+            "label": "динозавр",
+            "meaning": "динозавр",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/dinozavr-20261114.webp",
+                "label": "динозавр",
+                "sha256": "906082868c13e7c2849ffbf0146c060efdfa19df8ec668ce702133f17c896f89",
+                "width": 960,
+                "height": 640,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-8d30681c5417",
+      "lemma": "след медведя",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-8d30681c5417-sense",
+            "word_id": "image-pack-20261114-8d30681c5417",
+            "label": "след медведя",
+            "meaning": "след медведя",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/sled-medvedya-20261114.webp",
+                "label": "след медведя",
+                "sha256": "3b49de34d17178093e0992c66b8f6357d631c1598c42293dbe438e5bbcaff947",
+                "width": 960,
+                "height": 947,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-48e041871e4e",
+      "lemma": "желе",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-48e041871e4e-sense",
+            "word_id": "image-pack-20261114-48e041871e4e",
+            "label": "желе",
+            "meaning": "желе",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/zhele-20261114.webp",
+                "label": "желе",
+                "sha256": "14339646be07b54adff6dd05dfc5f07c268ffef0923a56337191f9e35c0a6a63",
+                "width": 960,
+                "height": 640,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-6be00f4c0878",
+      "lemma": "букет",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-6be00f4c0878-sense",
+            "word_id": "image-pack-20261114-6be00f4c0878",
+            "label": "букет",
+            "meaning": "букет",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/buket-20261114.webp",
+                "label": "букет",
+                "sha256": "aa40901cd4995b8e80659c36abe1487fbc1dd88ff3a59ac9735e601dcf6c779a",
+                "width": 960,
+                "height": 877,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-0c3576422b7d",
+      "lemma": "вулкан",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-0c3576422b7d-sense",
+            "word_id": "image-pack-20261114-0c3576422b7d",
+            "label": "вулкан",
+            "meaning": "вулкан",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/vulkan-20261114.webp",
+                "label": "вулкан",
+                "sha256": "7e860e2fdd69753db20b97ebe3a8e7a9479548985f3405566c3e832dfe007a1e",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-28b5e1833f5c",
+      "lemma": "кувшинка",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-28b5e1833f5c-sense",
+            "word_id": "image-pack-20261114-28b5e1833f5c",
+            "label": "кувшинка",
+            "meaning": "кувшинка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/kuvshinka-20261114.webp",
+                "label": "кувшинка",
+                "sha256": "a6347c0b58e42eb39c4ac6f5cf612251bd86e7b1b7bc157f3327aed62824cd53",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-128a960b0fb1",
+      "lemma": "бочка",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-128a960b0fb1-sense",
+            "word_id": "image-pack-20261114-128a960b0fb1",
+            "label": "бочка",
+            "meaning": "бочка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/bochka-20261114.webp",
+                "label": "бочка",
+                "sha256": "78eb9f1b87ff8bd3cb3e04d452f77fa45847511c727e8ff760210b9816c7b64e",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-f7ad8c5b63c0",
+      "lemma": "чемодан",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-f7ad8c5b63c0-sense",
+            "word_id": "image-pack-20261114-f7ad8c5b63c0",
+            "label": "чемодан",
+            "meaning": "чемодан",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/chemodan-20261114.webp",
+                "label": "чемодан",
+                "sha256": "f6631b8231d71d312c401ff279243a8e5a0156a38abe3daa665aefd887707ff4",
+                "width": 836,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-b11c136a808b",
+      "lemma": "булка",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-b11c136a808b-sense",
+            "word_id": "image-pack-20261114-b11c136a808b",
+            "label": "булка",
+            "meaning": "булка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/bulka-20261114.webp",
+                "label": "булка",
+                "sha256": "cfc2f69d2beb471da2382a5a9e9af6000fa6f458760bbb3a19d2ff6e4ae6ff7b",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-52f08014edee",
+      "lemma": "бассейн",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-52f08014edee-sense",
+            "word_id": "image-pack-20261114-52f08014edee",
+            "label": "бассейн",
+            "meaning": "бассейн",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/basseyn-20261114.webp",
+                "label": "бассейн",
+                "sha256": "84b96fb9c941fd29697a2cabef79f5c0994086b8bde334e1e067c0c4df8f1e59",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-d7b1de1ecf68",
+      "lemma": "гиря",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-d7b1de1ecf68-sense",
+            "word_id": "image-pack-20261114-d7b1de1ecf68",
+            "label": "гиря",
+            "meaning": "гиря",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/girya-20261114.webp",
+                "label": "гиря",
+                "sha256": "70287bb23630b042e368fba5d27fad89a33ab39486ee57329192cb2ce685bd1e",
+                "width": 960,
+                "height": 960,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-021e2551c399",
+      "lemma": "штанга",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-021e2551c399-sense",
+            "word_id": "image-pack-20261114-021e2551c399",
+            "label": "штанга",
+            "meaning": "штанга",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/shtanga-20261114.webp",
+                "label": "штанга",
+                "sha256": "a709554038e97b22dac42b200a9607f65f1e470c3a7705ab74d95f5e82d754a2",
+                "width": 960,
+                "height": 480,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
+      }
+    },
+    {
+      "id": "image-pack-20261114-2c43ed76f86c",
+      "lemma": "карета",
+      "language": "ru",
+      "meaning": null,
+      "kind": "word",
+      "selection": {
+        "base_weight": 0,
+        "scope": "general"
+      },
+      "categories": [],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": {}
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "image-pack-20261114-2c43ed76f86c-sense",
+            "word_id": "image-pack-20261114-2c43ed76f86c",
+            "label": "карета",
+            "meaning": "карета",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack-20261114",
+                "src": "/assets/words/kareta-20261114.webp",
+                "label": "карета",
+                "sha256": "4e0404a49689db977cebe9af5f809563e932faa929be81f31505b42b3847da68",
+                "width": 960,
+                "height": 640,
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      "editorial": {
+        "status": "needs_review",
+        "note": "Author requested new entry for supplied artwork. Category, selection weight, phonetics and morphology remain unreviewed."
       }
     }
   ],
