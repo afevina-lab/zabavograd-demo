@@ -21,7 +21,7 @@ const origin=`http://127.0.0.1:${server.address().port}/`;
 const chrome=process.env.CHROME_BIN||['/usr/bin/google-chrome','/usr/bin/chromium','/usr/bin/chromium-browser'].find(existsSync);
 if(!chrome)throw Error('Chrome/Chromium not available');
 const profile=mkdtempSync(join(tmpdir(),'zabavograd-ui-'));
-const proc=spawn(chrome,['--headless=new','--no-sandbox','--disable-gpu','--disable-dev-shm-usage','--no-first-run','--no-proxy-server','--proxy-bypass-list=<-loopback>','--no-default-browser-check','--remote-allow-origins=*',`--user-data-dir=${profile}`,'--remote-debugging-port=0','--window-size=1440,900','about:blank'],{stdio:['ignore','pipe','pipe']});
+const proc=spawn(chrome,['--headless=new','--no-sandbox','--disable-gpu','--disable-background-timer-throttling','--disable-renderer-backgrounding','--disable-backgrounding-occluded-windows','--disable-dev-shm-usage','--no-first-run','--no-proxy-server','--proxy-bypass-list=<-loopback>','--no-default-browser-check','--remote-allow-origins=*',`--user-data-dir=${profile}`,'--remote-debugging-port=0','--window-size=1440,900','about:blank'],{stdio:['ignore','pipe','pipe']});
 let stderr='';proc.stderr.on('data',d=>stderr+=String(d).slice(-2000));
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 let ws=null;
@@ -260,10 +260,11 @@ try{
   for(const [width,height] of [[1440,900],[390,844]]){
     await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
     await cmd('Page.navigate',{url:origin+'?game=conveyor'});
+    await cmd('Page.bringToFront');
     await until("!!document.querySelector('.conveyor-settings')");
     await evaluate(`(()=>{const select=[...document.querySelectorAll('.conveyor-settings label')].find(l=>l.textContent.startsWith('Материал')).querySelector('select');Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(select,'math');select.dispatchEvent(new Event('change',{bubbles:true}));})()`);
     await sleep(150);await evaluate("document.querySelector('.conveyor-settings>button.primary').click()");
-    await until("!!document.querySelector('.conveyor-card.is-current')",15000);
+    await until("!!document.querySelector('.conveyor-card.is-current')",15000).catch(async e=>{throw Error(e.message+'; '+JSON.stringify(await evaluate("({visible:document.visibilityState,text:document.querySelector('.conveyor-answer')?.textContent,position:document.querySelector('.conveyor-card')?.style.left,setup:!!document.querySelector('.conveyor-settings')})")))});
     await evaluate("document.querySelector('[aria-label=\"Нет, не подходит или неверно\"]').click()");
     await until("document.querySelector('.conveyor-answer')?.textContent.includes('Педагог: нужна помощь')");
     assert(await evaluate("document.documentElement.scrollWidth<=innerWidth+2&&document.documentElement.scrollHeight<=innerHeight+2"),'Conveyor must fit viewport');
