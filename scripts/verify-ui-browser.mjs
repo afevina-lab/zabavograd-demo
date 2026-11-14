@@ -227,10 +227,11 @@ try{
     await until("!!document.querySelector('.result .victory-stars')");
     assert.equal(await evaluate("document.querySelectorAll('.result .victory-stars>span').length"),3);
     assert.equal(await evaluate("getComputedStyle(document.querySelector('.result .victory-stars>span')).animationName"),'zg-award-fly');
-    const reward=await evaluate(`(()=>{const stars=[...document.querySelectorAll('.result .victory-stars>span')];return stars.map(e=>({delay:parseFloat(getComputedStyle(e).animationDelay),art:getComputedStyle(e.querySelector('.victory-star')).backgroundImage,position:getComputedStyle(e.querySelector('.victory-star')).backgroundPositionX}))})()`);
+    const reward=await evaluate(`(()=>{const stars=[...document.querySelectorAll('.result .victory-stars>span')];return stars.map(e=>({delay:parseFloat(getComputedStyle(e).animationDelay),art:getComputedStyle(e.querySelector('.victory-star')).backgroundImage,position:getComputedStyle(e.querySelector('.victory-star')).backgroundPositionX,glow:getComputedStyle(e.querySelector('.victory-star')).filter}))})()`);
     assert(reward.every(x=>x.art.includes('approved-stars.webp')),'Result must use existing watercolor artwork: '+JSON.stringify(reward));
     assert(reward[0].delay<reward[1].delay&&reward[1].delay<reward[2].delay,'Stars must launch with staggered delays: '+JSON.stringify(reward));
-    assert(reward[0].position!==reward[1].position,'Centre award must use the shining star artwork: '+JSON.stringify(reward));
+    assert(reward.every(x=>x.position===reward[0].position),'Every earned star must use the same plain artwork: '+JSON.stringify(reward));
+    assert(reward.every(x=>x.glow.includes('drop-shadow')),'Earned stars must have programmatic glow: '+JSON.stringify(reward));
     await sleep(2510);
     const flight=await evaluate("[...document.querySelectorAll('.result .victory-stars>span')].map(e=>({opacity:+getComputedStyle(e).opacity,transform:getComputedStyle(e).transform}))");
     assert(flight[0].opacity>.1&&flight[2].opacity<.1,'Stars must fly out consecutively, not all together: '+JSON.stringify(flight));
