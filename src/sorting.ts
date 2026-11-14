@@ -35,7 +35,7 @@ export function makeSorting(pools:Word[][],counts:number[],rng=Math.random):Sort
  return [...assigned.values()].map(word=>({word,accepted:pools.flatMap((p,i)=>p.some(w=>w.id===word.id)?[i]:[])})).map(item=>({item,key:rng()})).sort((a,b)=>a.key-b.key).map(x=>x.item);
 }
 
-export function starsForScore(correct:number,total:number){const percent=total?Math.round(correct/total*100):0;return percent>=81?3:percent>=51?2:percent>=30?1:0;}
+export {starsForScore} from './result-score.ts';
 export function changeCount(groups:SortGroup[],index:number,count:number){return groups.map((g,i)=>i===index?{...g,count,edited:[...new Set([...g.edited,'count'])]}:g.edited.includes('count')?g:{...g,count});}
 export function groupTitle(g:SortGroup){
  if(g.edited.includes('name'))return g.name;

@@ -10,7 +10,7 @@ export function stepConveyor(state:ConveyorState,deck:ConveyorCard[],level:Conve
  if(state.finished)return state;
  const speed=conveyorSpeed(level,deck.length<=1?0:(state.next-1)/(deck.length-1),conditional),delta=Math.max(0,Math.min(seconds,.1))*speed;
  let crossed=false,missed=state.missed;
- const cards:MovingCard[]=state.cards.map(item=>{const dt=Math.max(0,Math.min(seconds,.1));const exitSpeed=item.answered?(item.exitSpeed||.25)+dt*3:0;let position=item.position+(item.answered?dt*exitSpeed:delta);if(item.position<.5&&position>=.5)crossed=true;if(level==='easy'&&!item.answered)position=Math.min(.5,position);return {...item,position,exitSpeed};}).filter(item=>{if(item.position>1.15){if(!item.answered)missed++;return false}return true});
+ const cards:MovingCard[]=state.cards.map(item=>{const dt=Math.max(0,Math.min(seconds,.1));const exitSpeed=item.answered?(item.exitSpeed||.25)+dt*3:0;let position=item.position+(item.answered?dt*exitSpeed:delta);if(!item.answered&&item.position<.5&&position>=.5)crossed=true;if(level==='easy'&&!item.answered)position=Math.min(.5,position);return {...item,position,exitSpeed};}).filter(item=>{if(item.position>1.15){if(!item.answered)missed++;return false}return true});
  let next=state.next;
  if(next<deck.length&&((level!=='easy'&&(crossed||!cards.some(item=>!item.answered&&item.position<.5)))||(level==='easy'&&!cards.length))){cards.push({card:deck[next++],position:0,answered:false});}
  return {...state,cards,next,missed,finished:next===deck.length&&!cards.length};
