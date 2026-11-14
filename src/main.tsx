@@ -1,3 +1,4 @@
+import {memoryLayout} from './board-layout.ts';
 import {useLibrary} from './useLibrary.ts';
 import {hasMaterial,distinctCaptions} from './material-policy.ts';
 import {Transformations} from './Transformations.tsx';
@@ -81,11 +82,7 @@ function App(){
  const selection=overrideCurrent?selectionOverride!.words:automaticSelection;
  const manual=Boolean(overrideCurrent&&selectionOverride!.manual);
  const cardCount=round?.deck.length||pairs*2;
- // A landscape memory board with up to 16 cards should favour two balanced rows
- // (e.g. 7×2 for seven pairs) over a tall third row that crowds the viewport.
- const wideTwoRows=board.width>=1100&&board.width/Math.max(1,board.height)>1.3&&cardCount<=16;
- const candidateCols=wideTwoRows?[Math.ceil(cardCount/2)]:Array.from({length:Math.min(cardCount,8)},(_,i)=>i+2);
- const best=candidateCols.map(cols=>{const rows=Math.ceil(cardCount/cols);const usableWidth=Math.max(0,board.width-36-(cols-1)*12);const usableHeight=Math.max(0,board.height-36-(rows-1)*12);const width=Math.min(usableWidth/cols,usableHeight/rows*1.05);return {cols,width}}).sort((a,b)=>b.width-a.width)[0];
+ const best=memoryLayout(cardCount,board.width,board.height);
  const active=round?.phase==='playing'||round?.phase==='preview';
 
  useEffect(()=>{try{localStorage.setItem('zabavograd.preferences',JSON.stringify({...readPrefs(),pairs,theme,preview}))}catch{}},[pairs,theme,preview]);

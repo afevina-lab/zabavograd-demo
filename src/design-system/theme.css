@@ -205,11 +205,11 @@
   line-height:1.28!important;
   display:-webkit-box;
   -webkit-box-orient:vertical;
-  -webkit-line-clamp:3;
-  line-clamp:3;
+  -webkit-line-clamp:1;
+  line-clamp:1;
   overflow:hidden;
   overflow-wrap:anywhere;
-  max-height:calc(1.28em * 3);
+  max-height:1.28em;
   color:var(--ui-deep)!important;
 }
 

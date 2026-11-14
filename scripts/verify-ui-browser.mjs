@@ -72,7 +72,7 @@ try{
     assert.equal(r.theme,theme);
     assert.equal(r.cards,14);
     assert(r.cardBounds.every(b=>b.left>=r.stage.x-2&&b.right<=r.stage.right+2&&b.top>=r.stage.y-2&&b.bottom<=r.stage.bottom+2),'Card overflow: '+JSON.stringify(r));
-    if(width>=1100&&r.cards===14)assert.equal(r.columns,7,'Wide memory board should use seven columns');
+    if(width>=1100&&height>=700&&r.cards===14)assert(r.columns<7,'Seven pairs should use the layout with larger cards');
     assert(r.toolbar.width>=width-3,JSON.stringify(r));
     assert(r.stage.bottom>=height-3&&r.stage.bottom<=height+3,JSON.stringify(r));
     assert(r.htmlScroll[0]<=width+3,JSON.stringify(r));
@@ -170,6 +170,7 @@ try{
     assert(r.image,'Sorting must use shared CardArtwork');
     assert(r.cardRects.every(b=>b.left>=r.stage.left-2&&b.right<=r.stage.right+2),'Sort card horizontal overflow: '+JSON.stringify(r));
     assert(r.htmlScroll[0]<=width+3,'Sorting horizontal viewport overflow: '+JSON.stringify(r));
+    assert(r.cardRects.every(b=>b.top>=r.stage.top-2&&b.bottom<=r.stage.bottom+2),'Sorting cards must fit vertically: '+JSON.stringify(r));
     assert(r.toolbar.width>=width-3,'Sorting toolbar is clipped: '+JSON.stringify(r));
     assert(r.stage.bottom>=height-3&&r.stage.bottom<=height+3,'Sorting stage does not fill viewport: '+JSON.stringify(r));
     assert(theme==='forest'?r.toolbarBackground.includes('assets/themes/forest/header.webp'):r.toolbarBackground.includes('linear-gradient'),'Sorting must use shared toolbar');
