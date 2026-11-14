@@ -24,11 +24,14 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
   palette:{accent:'#a8bc8c',deep:'#4a694c',pale:'#edf4e5',outline:'#7c9b72',text:'#304d38',paper:'#fffaf0',page:'#eef2e6',stageText:'#344a39'},
   skin:'sage',toolbarArt:'assets/themes/forest/header.webp',
   scene:{background:'assets/themes/forest/forest_background.webp',fill:'#d5e7bf',motion:'static',sprites:[
-   {id:'tree-left',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(78cqh,55cqw)',left:'-12%',bottom:'-4%',opacity:.92,durationMs:10500,origin:'50% 94%'},
+   {id:'tree-left',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(100cqh,65cqw)',left:'-12%',bottom:'-4%',opacity:.92,durationMs:10500,origin:'50% 94%'},
    {id:'tree-right',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(78cqh,55cqw)',right:'-12%',bottom:'-4%',opacity:.92,durationMs:12400,delayMs:-4500,origin:'50% 94%'},
    {id:'fern',src:'assets/themes/forest/forest_fern.webp',motion:'breathe',width:'clamp(105px,12vw,210px)',left:'3%',bottom:'-5%',opacity:.9,durationMs:26000},
    {id:'bush',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'clamp(110px,13vw,230px)',right:'3%',bottom:'-5%',opacity:.92,durationMs:30000},
-   {id:'flowers',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(68cqw,95cqh)',left:'16%',bottom:'-1%',opacity:.9},
+   {id:'tree-far-left',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(44cqh,30cqw)',left:'12%',bottom:'36%',opacity:.65,durationMs:15000,origin:'50% 94%'},
+   {id:'tree-far-right',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(38cqh,26cqw)',right:'17%',bottom:'41%',opacity:.55,durationMs:17000,origin:'50% 94%'},
+   ...[0,1,2,3,4].map(i=>({id:'flowers-depth-'+i,src:'assets/themes/forest/forest_flower_patch.webp',motion:'none' as const,width:(12+i*2)+'cqw',left:(6+i*19)+'%',bottom:(25-i*5)+'%',opacity:.65+i*.06})),
+   {id:'flowers',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(32cqw,48cqh)',left:'30%',bottom:'-1%',opacity:.9},
    {id:'leaf-birch',src:'assets/themes/forest/forest_leaf_birch.webp',motion:'fall',width:'clamp(26px,3vw,44px)',left:'13%',top:'-12%',opacity:.8,durationMs:17000,delayMs:-2200},
    {id:'leaf-oak',src:'assets/themes/forest/forest_leaf_oak.webp',motion:'fall',width:'clamp(30px,3.2vw,49px)',left:'69%',top:'-11%',opacity:.85,durationMs:21500,delayMs:-9100},
    {id:'leaf-oval',src:'assets/themes/forest/forest_leaf_oval.webp',motion:'fall',width:'clamp(25px,2.8vw,43px)',left:'42%',top:'-13%',opacity:.8,durationMs:18800,delayMs:-13900}
@@ -38,10 +41,10 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
  space:{
   label:'Космос',
   palette:{accent:'#ae97e1',deep:'#625095',pale:'#ebe5ff',outline:'#8a76c2',text:'#2e2855',paper:'#fbf5e9',page:'#1c2340',stageText:'#fff5e8'},
-  skin:'lavender',toolbarArt:null,scene:{background:'assets/space/background.webp',fill:'#1c2340',motion:'drift',
+  skin:'lavender',toolbarArt:'assets/themes/space/header.webp',scene:{background:'assets/space/background.webp',fill:'#1c2340',motion:'drift',
  sprites:[
-  {id:'planet-blue',src:'assets/space/planet-blue.webp',motion:'float',width:'clamp(260px,62cqh,760px)',left:'-18%',bottom:'-18%',opacity:.9,durationMs:24000,spinMs:160000},
-  {id:'planet-rings',src:'assets/space/planet.webp',motion:'float',width:'clamp(220px,55cqh,680px)',right:'-10%',top:'-14%',opacity:.9,durationMs:30000,delayMs:-13000},
+  {id:'planet-blue',src:'assets/space/planet-blue.webp',motion:'float',width:'min(110cqh,75cqw)',left:'-12cqh',bottom:'-12cqh',opacity:.9,durationMs:24000,spinMs:160000},
+  {id:'planet-rings',src:'assets/space/planet.webp',motion:'float',width:'min(78cqh,52cqw)',right:'2%',top:'4%',opacity:.9,durationMs:30000,delayMs:-13000},
   {id:'purple-nebula',src:'assets/space/nebula-purple.webp',motion:'breathe',width:'45%',left:'0%',top:'0%',opacity:.16,durationMs:28000},
   {id:'blue-nebula',src:'assets/space/nebula-blue.webp',motion:'breathe',width:'45%',right:'0%',bottom:'0%',opacity:.16,durationMs:34000},
   ...Array.from({length:7},(_,i)=>({id:'star-'+i,src:'assets/space/star.webp',motion:'twinkle' as const,width:'42px',left:(8+i*13)+'%',top:(15+(i*23)%70)+'%',opacity:.2,durationMs:14000,delayMs:i*2000}))

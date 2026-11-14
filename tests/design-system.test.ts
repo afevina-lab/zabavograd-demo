@@ -36,7 +36,9 @@ test('Every theme has one complete, validated visual configuration',()=>{
  assert.equal(THEMES.forest.cards.back,'assets/themes/forest/back.webp');
  assert.equal(THEMES.forest.cards.front,'assets/themes/forest/front.webp');
  assert.equal(THEMES.forest.toolbarArt,'assets/themes/forest/header.webp');
- assert.deepEqual(THEMES.forest.scene.sprites.map(x=>x.id),['tree-left','tree-right','fern','bush','flowers','leaf-birch','leaf-oak','leaf-oval']);
+ assert.equal(THEMES.forest.scene.sprites.length,15);
+ assert(THEMES.forest.scene.sprites.some(x=>x.id==='tree-far-left'));
+ assert(THEMES.forest.scene.sprites.some(x=>x.id==='flowers-depth-4'));
  assert(THEMES.forest.scene.sprites.filter(x=>x.motion==='sway').every(x=>x.origin==='50% 94%'));
  assert.equal(THEMES.forest.scene.effects.stars,0);
  assert.equal(THEMES.space.scene.sprites.length,11);

@@ -666,7 +666,9 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .app.game-active .sorting-content>p{font-size:12px;margin:0 0 4px;line-height:1.2}
 .app.game-active .sorting-tray{min-height:0;padding:0;gap:8px;justify-content:center}
 .app.game-active .sorting-bins{grid-template-columns:repeat(var(--sort-bin-columns),minmax(0,1fr));gap:8px;margin:8px 0}
-.app.game-active .sort-bin{min-height:0;padding:6px}
+.app.game-active .sort-bin{min-height:calc(var(--sort-card-size)*1.08 + 52px);padding:6px}
 .app.game-active .sort-card,.app.game-active .sorted-cards .sort-card{width:var(--sort-card-size);height:calc(var(--sort-card-size)*1.08);padding:5px;flex:none;font-size:clamp(11px,1.3vw,20px)}
 .app.game-active .sorted-cards{gap:6px;padding-top:6px;justify-content:center}
 .app.game-active .bin-target{padding:4px 8px}
+
+.app.game-active .sort-card img{pointer-events:none;-webkit-user-drag:none;user-select:none}

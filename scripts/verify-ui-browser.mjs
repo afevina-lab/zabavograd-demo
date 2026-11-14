@@ -79,8 +79,9 @@ try{
     assert(r.htmlScroll[1]<=height+3,JSON.stringify(r));
     if(theme==='forest'){
       assert(r.toolbarBackground.includes('assets/themes/forest/header.webp'),JSON.stringify(r));
-      assert.equal(r.spriteCount,8,JSON.stringify(r));
-    }else assert(r.toolbarBackground.includes('linear-gradient'),JSON.stringify(r));
+      assert.equal(r.spriteCount,15,JSON.stringify(r));
+    }else if(theme==='space')assert(r.toolbarBackground.includes('assets/themes/space/header.webp'),JSON.stringify(r));
+    else assert(r.toolbarBackground.includes('linear-gradient'),JSON.stringify(r));
     assert(r.btnSkin.includes('theme-ui/buttons/square'),JSON.stringify(r));
     assert(r.homeHref?.endsWith('/home.html')&&r.captionButton,'Home/caption controls missing: '+JSON.stringify(r));
     assert(r.iconMask.includes('icons-new'),JSON.stringify(r));
