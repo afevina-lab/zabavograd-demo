@@ -262,11 +262,13 @@ try{
     await cmd('Page.navigate',{url:origin+'?game=conveyor'});
     await cmd('Page.bringToFront');
     await until("!!document.querySelector('.conveyor-settings')");
-    await evaluate(`(()=>{const select=[...document.querySelectorAll('.conveyor-settings label')].find(l=>l.textContent.startsWith('Материал')).querySelector('select');Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(select,'math');select.dispatchEvent(new Event('change',{bubbles:true}));})()`);
+    await evaluate(`(()=>{const select=[...document.querySelectorAll('.conveyor-settings label')].find(l=>l.textContent.startsWith('Учебная задача')).querySelector('select');Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(select,'math');select.dispatchEvent(new Event('change',{bubbles:true}));})()`);
     await sleep(150);await evaluate("document.querySelector('.conveyor-settings>button.primary').click()");
     await until("!!document.querySelector('.conveyor-card.is-current')",15000).catch(async e=>{throw Error(e.message+'; '+JSON.stringify(await evaluate("({visible:document.visibilityState,text:document.querySelector('.conveyor-answer')?.textContent,position:document.querySelector('.conveyor-card')?.style.left,setup:!!document.querySelector('.conveyor-settings')})")))});
     await evaluate("document.querySelector('[aria-label=\"Нет, не подходит или неверно\"]').click()");
-    await until("document.querySelector('.conveyor-answer')?.textContent.includes('Педагог: нужна помощь')");
+    await until("!!document.querySelector('.conveyor-wrong')");
+    assert(await evaluate("!document.querySelector('.conveyor-centre')&&!document.querySelector('.conveyor-answer').textContent.includes('Педагог:')"),'Conveyor must not show centre or textual grading');
+    assert(await evaluate("document.querySelector('.play-toolbar').textContent.includes('0 / 12')"),'Incorrect teacher answer must not increase score');
     assert(await evaluate("document.documentElement.scrollWidth<=innerWidth+2&&document.documentElement.scrollHeight<=innerHeight+2"),'Conveyor must fit viewport');
     await screenshot('conveyor-'+width+'x'+height);
   }

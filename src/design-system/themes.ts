@@ -45,7 +45,7 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
   palette:{accent:'#ae97e1',deep:'#625095',pale:'#ebe5ff',outline:'#8a76c2',text:'#2e2855',paper:'#fbf5e9',page:'#1c2340',stageText:'#fff5e8'},
   skin:'lavender',toolbarArt:'assets/themes/space/header.webp',scene:{background:'assets/space/background.webp',fill:'#1c2340',motion:'drift',
  sprites:[
-  {id:'planet-blue',src:'assets/space/planet-blue.webp',motion:'float',width:'min(120cqh,82cqw)',left:'-21cqh',bottom:'-20cqh',opacity:.9,durationMs:24000,spinMs:160000},
+  {id:'planet-blue',src:'assets/space/planet-blue.webp',motion:'float',width:'min(120cqh,82cqw)',left:'-30cqh',bottom:'-20cqh',opacity:.9,durationMs:24000,spinMs:160000},
   {id:'planet-rings',src:'assets/space/planet.webp',motion:'float',width:'min(78cqh,52cqw)',right:'2%',top:'4%',opacity:.9,durationMs:30000,delayMs:-13000},
   {id:'purple-nebula',src:'assets/space/nebula-purple.webp',motion:'cloud',layer:2,width:'55%',left:'0%',top:'0%',opacity:.12,durationMs:18000},
   {id:'blue-nebula',src:'assets/space/nebula-blue.webp',motion:'breathe',width:'45%',right:'0%',bottom:'0%',opacity:.12,durationMs:22000},

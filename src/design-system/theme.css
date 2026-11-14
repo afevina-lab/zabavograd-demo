@@ -221,3 +221,5 @@
 
 .app[data-theme] .zg-scene-layers{container-type:size}
 .app[data-theme] .zg-scene-sprite>img{display:block;width:100%;height:auto;pointer-events:none}
+
+.app[data-theme] .conveyor-card{background:var(--ui-paper) var(--zg-card-front-image) center/100% 100% no-repeat;border-color:var(--ui-outline);color:var(--ui-text)}
