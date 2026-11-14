@@ -41,7 +41,7 @@ export function Conveyor(){
  }
  useEffect(()=>{
   if(!state||state.finished||paused)return;
-  let frame=0,last=0;const move=(now:number)=>{if(last)setState(s=>s?stepConveyor(s,deck,level,(now-last)/1000):s);last=now;frame=requestAnimationFrame(move)};frame=requestAnimationFrame(move);return()=>cancelAnimationFrame(frame);
+  let frame=0,last=0;const move=(now:number)=>{const elapsed=last?(now-last)/1000:0;if(last)setState(s=>s?stepConveyor(s,deck,level,elapsed):s);last=now;frame=requestAnimationFrame(move)};frame=requestAnimationFrame(move);return()=>cancelAnimationFrame(frame);
  },[Boolean(state),state?.finished,paused,deck,level]);
  useEffect(()=>{const handler=()=>{if(document.hidden)setPaused(true)};document.addEventListener('visibilitychange',handler);return()=>document.removeEventListener('visibilitychange',handler)},[]);
  function answer(yes:boolean){const current=latest.current;if(!current||paused||current.finished)return;const active=conveyorTarget(current);if(!active)return;const correct=condition==='none'?yes:yes===active.card.expected;const next=answerConveyor(current,yes,condition!=='none');latest.current=next;setState(next);setFeedback((condition==='none'?(yes?'Педагог: верно':'Педагог: нужна помощь'):(correct?'Верно':'Неверно'))+(material==='math'?' · Ответ: '+active.card.original:condition==='correct'?' · Правильно: '+active.card.original:''));}
