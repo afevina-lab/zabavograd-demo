@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical lexical library V2 — additive contract",
+  "type": "object",
+  "required": ["schema_version", "categories", "entries", "relations"],
+  "properties": {
+    "schema_version": {"const": 2},
+    "categories": {"type": "array", "items": {"$ref": "#/$defs/category"}},
+    "entries": {"type": "array", "items": {"$ref": "#/$defs/entry"}},
+    "relations": {"type": "array", "items": {"$ref": "#/$defs/relation"}}
+  },
+  "$defs": {
+    "category": {"type": "object", "required": ["path"], "properties": {"path": {"type": "string"}, "parent_paths": {"type": "array", "items": {"type": "string"}}}},
+    "entry": {"type": "object", "required": ["id", "lemma", "categories", "selection", "morphology", "illustrations"], "properties": {
+      "id": {"type": "string"}, "lemma": {"type": "string"},
+      "categories": {"type": "array", "items": {"$ref": "#/$defs/category"}},
+      "selection": {"type": "object", "required": ["base_weight"], "properties": {"base_weight": {"type": "number"}}},
+      "morphology": {"type": "object"},
+      "illustrations": {"type": "object", "properties": {"senses": {"type": "array", "items": {"$ref": "#/$defs/sense"}}}}
+    }},
+    "sense": {"type": "object", "required": ["id", "word_id", "variants"], "properties": {"id": {"type": "string"}, "word_id": {"type": "string"}, "variants": {"type": "array", "items": {"$ref": "#/$defs/image"}}}},
+    "image": {"type": "object", "required": ["id", "src"], "properties": {"id": {"type": "string"}, "src": {"type": "string"}}},
+    "form": {"type": "object", "required": ["text"], "properties": {"text": {"type": "string"}, "review_status": {"type": "string"}}},
+    "relation": {"type": "object", "required": ["id", "type"], "properties": {"id": {"type": "string"}, "type": {"type": "string"}}}
+  }
+}

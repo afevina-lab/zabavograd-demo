@@ -3,29 +3,8 @@ name: Verify and publish public visual UI
 on:
   pull_request:
     branches: [main]
-    paths:
-      - 'src/**'
-      - 'scripts/prepare-card-skins.py'
-      - 'scripts/check-design-system.cjs'
-      - 'scripts/verify-ui-browser.mjs'
-      - 'scripts/sync-runtime.cjs'
-      - 'tests/**'
-      - 'public/**'
-      - 'package.json'
-      - 'index.html'
-      - '.github/workflows/visual-publish.yml'
   push:
     branches: [main]
-    paths:
-      - 'src/**'
-      - 'scripts/prepare-card-skins.py'
-      - 'scripts/check-design-system.cjs'
-      - 'scripts/verify-ui-browser.mjs'
-      - 'tests/**'
-      - 'public/**'
-      - 'package.json'
-      - 'index.html'
-      - '.github/workflows/visual-publish.yml'
   workflow_dispatch:
 
 permissions:
@@ -55,12 +34,16 @@ jobs:
           python -m pip install --disable-pip-version-check pillow
       - name: Test gameplay and theme registry
         run: |
+          npm run check:architecture
+          npm run check:library
           npm test
           npm run check:design-system
       - name: Build local-base UI and check image alpha
         run: |
           npm run build
           python scripts/prepare-card-skins.py dist
+      - name: Check autonomous release
+        run: node scripts/check-offline-release.cjs dist
       - name: Browser smoke test across games, themes, sizes
         run: node scripts/verify-ui-browser.mjs
       - name: Browser screenshots and report
@@ -118,3 +101,13 @@ jobs:
             git -C _published commit -m "Publish public visual source ${{ github.sha }}"
             git -C _published push origin HEAD:gh-pages
           fi
+      - name: Verify real published site version
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          for attempt in $(seq 1 20); do
+            if node scripts/verify-deployed-version.mjs https://afevina-lab.github.io/zabavograd-demo/index.html '${{ github.sha }}'; then exit 0; fi
+            sleep 15
+          done
+          echo 'Published site did not reach the expected source commit'
+          exit 1

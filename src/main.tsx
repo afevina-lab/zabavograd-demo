@@ -1,3 +1,4 @@
+import {hasMaterial} from './material-policy.ts';
 import {Transformations} from './Transformations.tsx';
 import {Sorting} from './Sorting.tsx';
 import {Icon,ThemePicker,Scenery,Challenges,ScoreStars} from './GameUI.tsx';
@@ -71,7 +72,7 @@ function App(){
  },[matchedKey,round?.deck]);
 
  const undo=useRef<number|null>(null);const pausedRef=useRef(paused);pausedRef.current=paused;
- const pool=useMemo(()=>learningPool(words,filters,learning).filter(w=>mode==='word-word'||w.variants?.length),[words,filters,learning,mode]);const manualPool=useMemo(()=>learningPool(words,filters,learning,false).filter(w=>mode==='word-word'||w.variants?.length),[words,filters,learning,mode]);
+ const pool=useMemo(()=>learningPool(words,filters,learning).filter(w=>hasMaterial(w,mode!=='word-word')),[words,filters,learning,mode]);const manualPool=useMemo(()=>learningPool(words,filters,learning,false).filter(w=>hasMaterial(w,mode!=='word-word')),[words,filters,learning,mode]);
  // Derive the visible selection synchronously from the current eligible pool.
  // Overrides from a previous settings state must never appear or start a game.
  const automaticSelection=useMemo(()=>pool.length>=pairs*rounds?balancedPick(pool,pairs*rounds,learning):[],[pool,pairs,rounds,learning]);
@@ -118,4 +119,3 @@ function App(){
  {showHelp&&<div className="modal-backdrop"><section className="modal help" role="dialog" aria-modal="true" aria-label="Как играть"><div className="modal-title"><h2>Как играть в мемори</h2><button aria-label="Закрыть инструкцию" onClick={()=>setShowHelp(false)}><Icon name="X"/></button></div><ol><li>Откройте карточку и назовите слово.</li><li>Откройте вторую. Если слова совпали, пара остаётся открытой.</li><li>Если нет — запомните расположение и попробуйте ещё.</li></ol><p>Соберите все пары. Произношение оценивает педагог; игра не распознаёт речь.</p><button className="primary" onClick={()=>{setShowHelp(false);setPaused(false)}}>Понятно, играем</button></section></div>}</div>;
 }
 createRoot(document.getElementById('root')!).render(new URLSearchParams(location.search).get('game')==='transformations'?<Transformations/>:new URLSearchParams(location.search).get('game')==='sorting'?<Sorting/>:<App/>);
-

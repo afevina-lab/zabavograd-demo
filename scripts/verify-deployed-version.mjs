@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+const [url,expected]=process.argv.slice(2);
+assert(url&&/^[a-f0-9]{40}$/.test(expected||''),'Usage: node scripts/verify-deployed-version.mjs SITE_URL FULL_SOURCE_SHA');
+const target=new URL(url);assert.equal(target.protocol,'https:');
+target.searchParams.set('verify',expected);
+const response=await fetch(target,{signal:AbortSignal.timeout(20000),headers:{'Cache-Control':'no-cache'}});
+assert(response.ok,`Published site HTTP ${response.status}`);
+const html=await response.text();
+const version=html.match(/<meta\s+name="zabavograd-ui-release"\s+content="([^"]+)"/);
+assert.equal(version?.[1],expected,'Published HTML differs from expected source commit');
+console.log(`Verified published source ${expected}`);

@@ -42,6 +42,8 @@ concurrency:
 
 jobs:
   verify-and-publish:
+    # Historical migration: the single delivery workflow owns publication.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

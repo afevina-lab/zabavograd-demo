@@ -11,6 +11,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   editor:
+    # Historical migration retained for audit; delivery belongs to visual-publish.yml.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

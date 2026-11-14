@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/sync-runtime.cjs && vite --host 127.0.0.1",
-    "build": "node scripts/sync-runtime.cjs && tsc --noEmit && vite build",
-    "test": "node scripts/sync-runtime.cjs && node --experimental-strip-types --test tests/*.test.ts",
+    "build": "node scripts/check-architecture.cjs && node scripts/sync-runtime.cjs && tsc --noEmit && vite build",
+    "test": "node scripts/check-architecture.cjs && node scripts/sync-runtime.cjs && node --experimental-strip-types --test tests/*.test.ts",
     "check:design-system": "node scripts/check-design-system.cjs",
     "preview": "vite preview --host 127.0.0.1",
     "check:library": "node scripts/check-library-v2.cjs",
     "library:refresh": "node scripts/build-library-v2-view.cjs && node scripts/sync-runtime.cjs",
-    "test:editorial": "node --experimental-strip-types --test tests/semantic-review.test.ts tests/grammar-review.test.ts tests/sound-selection.test.ts tests/speech-frame-candidates.test.ts"
+    "test:editorial": "node --experimental-strip-types --test tests/semantic-review.test.ts tests/grammar-review.test.ts tests/sound-selection.test.ts tests/speech-frame-candidates.test.ts",
+    "check:architecture": "node scripts/check-architecture.cjs"
   },
   "dependencies": {
     "react": "19.3.1",

@@ -1,16 +1,9 @@
-export type ImageVariant={id:string;src:string;bounds?:{x:number;y:number;width:number;height:number;sourceWidth:number;sourceHeight:number}};
-export type MemoryMode='word-word'|'word-image'|'image-image';
-export type SoundOccurrence={position:string;before:string|null;after:string|null;index?:number;cluster?:string|null;letter?:string|null;letterIndex?:number|null;alignment?:string;eligibility?:string};
-export type Word = {materialKind?:"syllables";syllablePattern?:string;letters?:Record<string,{index:number;position:string|null}[]>;taskWeights?:{lexical_topic?:number};categories?:string[];phonemes?:string[]|null;variants?:ImageVariant[];sounds?:Record<string,SoundOccurrence[]>;id:string;label:string;topic:string|null;subcategory:string|null;position:string;type:number|null;opposition:string[];weight:number;images:number|null};
-export type Filters = {topic:string;subcategory:string;position:string;types:number[];untyped:boolean;noOpposition:boolean};
+import type {Word,Filters,ImageVariant,MemoryMode} from './material-types.ts';
+export type {Word,Filters,ImageVariant,MemoryMode,SoundOccurrence} from './material-types.ts';
+export {pickWords} from './material-selection.ts';
+import {canSelectAutomatically} from './material-policy.ts';
 export const defaultFilters:Filters={topic:'',subcategory:'',position:'',types:Array.from({length:14},(_,i)=>i+1),untyped:true,noOpposition:false};
-export function filterWords(words:Word[],f:Filters,automatic=true){return words.filter(w=>(!automatic||w.weight>0)&&(!f.topic||w.topic===f.topic)&&(!f.subcategory||w.subcategory===f.subcategory)&&(!f.position||w.position===f.position)&&(w.type===null?f.untyped:f.types.includes(w.type))&&(!f.noOpposition||w.opposition.length===0));}
-export function pickWords(words:Word[],count:number,rng=Math.random):Word[]{
- const pool=words.filter(w=>w.weight>0).slice(),result:Word[]=[];
- if(!Number.isInteger(count)||count<0||count>pool.length)throw new Error('Недостаточно слов для выбранного количества пар.');
- if(new Set(pool.map(w=>w.id)).size!==pool.length)throw new Error('Повторяющиеся слова.');
- while(result.length<count){let n=rng()*pool.reduce((sum,w)=>sum+w.weight,0);let i=pool.length-1;for(let j=0;j<pool.length;j++){n-=pool[j].weight;if(n<0){i=j;break;}}result.push(pool.splice(i,1)[0]);}return result;
-}
+export function filterWords(words:Word[],f:Filters,automatic=true){return words.filter(w=>(!automatic||canSelectAutomatically(w))&&(!f.topic||w.topic===f.topic)&&(!f.subcategory||w.subcategory===f.subcategory)&&(!f.position||w.position===f.position)&&(w.type===null?f.untyped:f.types.includes(w.type))&&(!f.noOpposition||w.opposition.length===0));}
 export type Card={key:string;word:Word;face:'word'|'image';image?:ImageVariant};
 export function makeDeck(words:Word[],rng=Math.random,mode:MemoryMode='word-word'){
  const cards:Card[]=words.flatMap(word=>{

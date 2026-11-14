@@ -1,4 +1,4 @@
-import type {Word,MemoryMode} from './model.ts';
+import type {Word,MemoryMode} from './material-types.ts';
 import type {Learning} from './learning.ts';
 
 export const vowels=[...'аеёиоуыэюя'];

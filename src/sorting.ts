@@ -1,6 +1,7 @@
-import type {Word,Filters} from './model.ts';
+import type {Word,Filters} from './material-types.ts';
 import {defaultFilters} from './model.ts';
 import {initialLearning,learningPool,type Learning} from './learning.ts';
+import {hasMaterial} from './material-policy.ts';
 export type SortGroup={name:string;count:number;learning:Learning;filters:Filters;edited:string[]};
 export const newGroup=(index:number):SortGroup=>({name:'Группа '+(index+1),count:4,learning:structuredClone(initialLearning),filters:structuredClone(defaultFilters),edited:[]});
 export function updateGroup(groups:SortGroup[],index:number,section:'learning'|'filters',part:Record<string,unknown>):SortGroup[]{
@@ -16,7 +17,7 @@ export function updateGroup(groups:SortGroup[],index:number,section:'learning'|'
 export type SortItem={word:Word;accepted:number[]};
 export function sortingPools(words:Word[],groups:SortGroup[],exclusions:{learning:Learning;filters:Filters}[],pictures:boolean){
  const banned=new Set(exclusions.flatMap(e=>learningPool(words,e.filters,e.learning,false).map(w=>w.id)));
- return groups.map(g=>learningPool(words,g.filters,{...g.learning,exclusions:[...(g.learning.exclusions||[]),...exclusions]}).filter(w=>!banned.has(w.id)&&(!pictures||w.variants?.length)));
+ return groups.map(g=>learningPool(words,g.filters,{...g.learning,exclusions:[...(g.learning.exclusions||[]),...exclusions]}).filter(w=>!banned.has(w.id)&&hasMaterial(w,pictures)));
 }
 export function makeSorting(pools:Word[][],counts:number[],rng=Math.random):SortItem[]{
  if(pools.some((p,i)=>p.length<counts[i]))throw Error('Недостаточно материала в одной из групп. Измените правила или количество элементов.');
