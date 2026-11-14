@@ -257,6 +257,18 @@ try{
   await cmd('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
   const reduced=await evaluate("getComputedStyle(document.querySelector('.zg-scene-sprite')||document.querySelector('.sort-card')).animationName");
   assert.equal(reduced,'none','Reduced-motion preference was ignored');
+  for(const [width,height] of [[1440,900],[390,844]]){
+    await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
+    await cmd('Page.navigate',{url:origin+'?game=conveyor'});
+    await until("!!document.querySelector('.conveyor-settings')");
+    await evaluate(`(()=>{const select=[...document.querySelectorAll('.conveyor-settings label')].find(l=>l.textContent.startsWith('Материал')).querySelector('select');Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(select,'math');select.dispatchEvent(new Event('change',{bubbles:true}));})()`);
+    await sleep(150);await evaluate("document.querySelector('.conveyor-settings>button.primary').click()");
+    await until("!!document.querySelector('.conveyor-card.is-current')",15000);
+    await evaluate("document.querySelector('[aria-label=\"Нет, не подходит или неверно\"]').click()");
+    await until("document.querySelector('.conveyor-answer')?.textContent.includes('Педагог: нужна помощь')");
+    assert(await evaluate("document.documentElement.scrollWidth<=innerWidth+2&&document.documentElement.scrollHeight<=innerHeight+2"),'Conveyor must fit viewport');
+    await screenshot('conveyor-'+width+'x'+height);
+  }
   writeFileSync(join(output,'report.json'),JSON.stringify({memory:results,sorting,failedRequests:failures},null,2));
   assert.equal(failures.length,0,failures.join('\n'));
   console.log('Verified browser UI:',JSON.stringify(results.map(x=>({theme:x.theme,viewport:x.viewport,stage:x.stage,cardCount:x.cards})),null,2));
