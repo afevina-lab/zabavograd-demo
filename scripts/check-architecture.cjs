@@ -4,11 +4,17 @@ const root=path.resolve(__dirname,'..'),source=path.join(root,'src');
 const domain=new Set(['material-types.ts','material-policy.ts','material-selection.ts','model.ts','learning.ts','reading.ts','sorting.ts','transformations.ts','counting.ts']);
 const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):/\.tsx?$/.test(e.name)?[path.join(dir,e.name)]:[]);
 const graph=new Map();
+// New plain TypeScript modules are domain code unless explicitly assigned to an adapter layer.
+for(const file of walk(source)){
+ const rel=path.relative(source,file).replaceAll('\\','/');
+ if(rel.endsWith('.ts')&&!rel.endsWith('.d.ts')&&!rel.startsWith('design-system/')&&!['library-loader.ts','useLibrary.ts','useCardMotion.ts'].includes(rel))domain.add(rel);
+}
 for(const file of walk(source)){
  const rel=path.relative(source,file).replaceAll('\\','/'),text=fs.readFileSync(file,'utf8');
  const edges=[];
  // Scan the project's explicit static import/export convention; tsc verifies syntax.
  const clean=text.replace(/\/\*[\s\S]*?\*\//g,'').replace(/^[ \t]*\/\/.*$/gm,'');
+ if(rel.endsWith('.tsx'))assert(!/\bfetch\s*\(/.test(clean),rel+': use the shared library adapter instead of component fetch');
  const imports=clean.matchAll(/\b(import|export)\s+(type\s+)?([^;]*?)\s+from\s+['"]([^'"]+)['"]/g);
  for(const match of imports){
   const name=match[4],typeOnly=Boolean(match[2]);

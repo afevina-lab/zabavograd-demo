@@ -1,3 +1,4 @@
+import {useLibrary} from './useLibrary.ts';
 import {useCardMotion} from './useCardMotion.ts';
 import {soundFile,themeAttributes,themeVars} from './design-system/themes.ts';
 import {useTheme} from './design-system/useTheme.ts';
@@ -11,7 +12,10 @@ import {starsForScore,changeCount,groupTitle,newGroup,updateGroup,sortingPools,m
 import {Icon,ThemePicker,Scenery,Challenges,ScoreStars} from './GameUI.tsx';
 type Exclusion={learning:Learning;filters:typeof defaultFilters};
 export function Sorting(){
- const [words,setWords]=useState<Word[]>([]),[error,setError]=useState(''),[groups,setGroups]=useState([newGroup(0),newGroup(1)]),[exclusions,setExclusions]=useState<Exclusion[]>([]);
+ const {words,error:loadError}=useLibrary();
+ const [actionError,setError]=useState('');
+ const error=loadError||actionError;
+ const [groups,setGroups]=useState([newGroup(0),newGroup(1)]),[exclusions,setExclusions]=useState<Exclusion[]>([]);
  const [theme,setTheme]=useTheme();
  const [pictures,setPictures]=useState(true),[checkingMode,setCheckingMode]=useState('instant'),[display,setDisplay]=useState('row');
  const [timed,setTimed]=useState(false),[seconds,setSeconds]=useState(120),[withLives,setWithLives]=useState(false),[remaining,setRemaining]=useState(120),[lives,setLives]=useState(5);
@@ -25,7 +29,7 @@ export function Sorting(){
  useEffect(()=>()=>{if(checkTimer.current)clearTimeout(checkTimer.current)},[]);
  const root=useRef<HTMLDivElement>(null),tray=useRef<HTMLDivElement>(null),undo=useRef<number|null>(null);
  useCardMotion(root,'[data-motion-id]');
- useEffect(()=>{fetch(import.meta.env.BASE_URL+'library.json').then(r=>{if(!r.ok)throw Error();return r.json()}).then(setWords).catch(()=>setError('Не удалось загрузить библиотеку. Обновите страницу.'));},[]);
+
  useEffect(()=>{if(!running||paused||result||checking||!timed)return;const t=setInterval(()=>setRemaining(v=>Math.max(0,v-1)),1000);return()=>clearInterval(t)},[running,paused,result,timed,checking]);
  useEffect(()=>{if(running&&!result&&((timed&&remaining===0)||(withLives&&lives===0)))setResult(timed&&remaining===0?'Время закончилось':'Жизни закончились')},[remaining,lives,running,result,timed,withLives]);
  useEffect(()=>{const el=tray.current;if(!el)return;const o=new ResizeObserver(([e])=>setRowCount(Math.max(1,Math.floor(e.contentRect.width/130))));o.observe(el);return()=>o.disconnect()},[running]);
@@ -47,7 +51,7 @@ export function Sorting(){
   const ordered=groups.flatMap((_,g)=>items.filter(item=>placements[item.word.id]===g));
   let index=0;
   const reveal=()=>{
-   if(index<items.length){const item=ordered[index++],ok=!bad.includes(item);setVerdict(v=>({...v,[item.word.id]:ok}));root.current?.querySelector('[data-motion-id=+CSS.escape(item.word.id)+]')?.scrollIntoView({block:'nearest',behavior:'smooth'});audio(ok?'click':'wrong');checkTimer.current=setTimeout(reveal,MOTION.sortVerdictMs);return;}
+   if(index<items.length){const item=ordered[index++],ok=!bad.includes(item);setVerdict(v=>({...v,[item.word.id]:ok}));root.current?.querySelector(`[data-motion-id="${CSS.escape(item.word.id)}"]`)?.scrollIntoView({block:'nearest',behavior:'smooth'});audio(ok?'click':'wrong');checkTimer.current=setTimeout(reveal,MOTION.sortVerdictMs);return;}
    setChecking(false);
    if(checkingMode==='finish'||!bad.length){setStars(starsForScore(items.length-bad.length,items.length));setScore('Верно: '+(items.length-bad.length)+' из '+items.length);setResult(bad.length?'Игра завершена':'Все карточки на своих местах!');audio('win');}
    else{setWrong(bad.map(i=>i.word.id));checkTimer.current=setTimeout(()=>{setPlacements(p=>Object.fromEntries(Object.entries(p).filter(([id])=>!bad.some(i=>i.word.id===id))));setWrong([]);setVerdict({});},MOTION.sortRetryMs);}

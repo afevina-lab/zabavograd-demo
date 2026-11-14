@@ -13,3 +13,8 @@ export function materialWeight(word:Word,lexical=false):number {
 export function availableMaterial(words:Word[],pictures=false,automatic=true):Word[] {
  return words.filter(word=>hasMaterial(word,pictures)&&(!automatic||canSelectAutomatically(word)));
 }
+/** A word-face matching game needs distinguishable captions; the library keeps every sense. */
+export function distinctCaptions(words:Word[]):Word[]{
+ const seen=new Set<string>();
+ return words.filter(word=>{const caption=word.label.normalize('NFC').toLowerCase();if(seen.has(caption))return false;seen.add(caption);return true;});
+}

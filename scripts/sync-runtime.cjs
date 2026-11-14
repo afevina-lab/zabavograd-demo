@@ -9,9 +9,6 @@ if(fs.existsSync(source)){
  cp.execFileSync(process.execPath,[path.join(root,'scripts/export-library.cjs')],{cwd:root,stdio:'inherit'});
  fs.copyFileSync(target,runtime);
  fs.copyFileSync(path.join(root,'public/semantic-graph.json'),path.join(root,'semantic-graph.json'));
-}else{
- if(!fs.existsSync(runtime))throw Error('Missing runtime library.json');
- fs.mkdirSync(path.dirname(target),{recursive:true});
- fs.copyFileSync(runtime,target);
-}
+}else{throw Error('Missing canonical outputs/library-v2.json; refusing alternate source');}
+
 console.log('Runtime is sourced exclusively from afevina-lab/zabavograd-demo');

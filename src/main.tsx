@@ -1,4 +1,5 @@
-import {hasMaterial} from './material-policy.ts';
+import {useLibrary} from './useLibrary.ts';
+import {hasMaterial,distinctCaptions} from './material-policy.ts';
 import {Transformations} from './Transformations.tsx';
 import {Sorting} from './Sorting.tsx';
 import {Icon,ThemePicker,Scenery,Challenges,ScoreStars} from './GameUI.tsx';
@@ -6,7 +7,7 @@ import {compatibleMemoryMode,includesReading,includesSyllables} from './reading.
 import React,{useEffect,useLayoutEffect,useMemo,useRef,useState} from 'react';
 import {CardArtwork} from './CardArtwork.tsx';
 import {createRoot} from 'react-dom/client';
-import {defaultFilters,filterWords,pickWords,newRound,flip,tick,removeLife,type Word,type Round,type Filters,type MemoryMode} from './model.ts';
+import {defaultFilters,newRound,flip,tick,removeLife,type Word,type Round,type Filters,type MemoryMode} from './model.ts';
 import {soundFile,themeAttributes,themeVars} from './design-system/themes.ts';
 import {useTheme,readPreferences} from './design-system/useTheme.ts';
 import {MOTION} from './design-system/motion.ts';
@@ -33,7 +34,7 @@ function App(){
 
  function nextRound(){const next=selection.slice(roundNumber*pairs,(roundNumber+1)*pairs);if(next.length!==pairs)return;playSound('deal');setRoundNumber(n=>n+1);setPaused(false);undo.current=null;setMessage('');setRound(newRound(next,preview,timed?seconds:null,withLives?5:null,mode));setPreviewLeft(20);setDeal(n=>n+1);}
 
- const [words,setWords]=useState<Word[]>([]),[loadError,setLoadError]=useState('');
+ const {words,error:loadError}=useLibrary();
  const [filters,setFilters]=useState<Filters>(defaultFilters),[pairs,setPairs]=useState<number>(typeof prefs.pairs==='number'&&Number.isInteger(prefs.pairs)&&prefs.pairs>=3&&prefs.pairs<=10?prefs.pairs:6);
  const [theme,setTheme]=useTheme();
  const [preview,setPreview]=useState(prefs.preview===true),[timed,setTimed]=useState(false),[seconds,setSeconds]=useState(120),[withLives,setWithLives]=useState(false);
@@ -72,7 +73,7 @@ function App(){
  },[matchedKey,round?.deck]);
 
  const undo=useRef<number|null>(null);const pausedRef=useRef(paused);pausedRef.current=paused;
- const pool=useMemo(()=>learningPool(words,filters,learning).filter(w=>hasMaterial(w,mode!=='word-word')),[words,filters,learning,mode]);const manualPool=useMemo(()=>learningPool(words,filters,learning,false).filter(w=>hasMaterial(w,mode!=='word-word')),[words,filters,learning,mode]);
+ const pool=useMemo(()=>(mode==='image-image'?learningPool(words,filters,learning):distinctCaptions(learningPool(words,filters,learning))).filter(w=>hasMaterial(w,mode!=='word-word')),[words,filters,learning,mode]);const manualPool=useMemo(()=>(mode==='image-image'?learningPool(words,filters,learning,false):distinctCaptions(learningPool(words,filters,learning,false))).filter(w=>hasMaterial(w,mode!=='word-word')),[words,filters,learning,mode]);
  // Derive the visible selection synchronously from the current eligible pool.
  // Overrides from a previous settings state must never appear or start a game.
  const automaticSelection=useMemo(()=>pool.length>=pairs*rounds?balancedPick(pool,pairs*rounds,learning):[],[pool,pairs,rounds,learning]);
@@ -86,7 +87,7 @@ function App(){
  const candidateCols=wideTwoRows?[Math.ceil(cardCount/2)]:Array.from({length:Math.min(cardCount,8)},(_,i)=>i+2);
  const best=candidateCols.map(cols=>{const rows=Math.ceil(cardCount/cols);const usableWidth=Math.max(0,board.width-36-(cols-1)*12);const usableHeight=Math.max(0,board.height-36-(rows-1)*12);const width=Math.min(usableWidth/cols,usableHeight/rows*1.05);return {cols,width}}).sort((a,b)=>b.width-a.width)[0];
  const active=round?.phase==='playing'||round?.phase==='preview';
- useEffect(()=>{fetch(import.meta.env.BASE_URL+'library.json', {cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Не удалось открыть библиотеку');return r.json()}).then(setWords).catch(()=>setLoadError('Не удалось загрузить библиотеку. Обновите страницу.'));},[]);
+
  useEffect(()=>{try{localStorage.setItem('zabavograd.preferences',JSON.stringify({...readPrefs(),pairs,theme,preview}))}catch{}},[pairs,theme,preview]);
  useEffect(()=>{if(!round||paused)return;if(round.phase==='preview'){const timer=setInterval(()=>setPreviewLeft(n=>Math.max(0,n-1)),1000);return()=>clearInterval(timer);}if(round.phase==='playing'){const timer=setInterval(()=>setRound(s=>s?tick(s):s),1000);return()=>clearInterval(timer);}},[round?.phase,paused]);
  useEffect(()=>{if(round?.phase==='preview'&&previewLeft===0)setRound(s=>s?{...s,phase:'playing'}:s)},[previewLeft,round?.phase]);

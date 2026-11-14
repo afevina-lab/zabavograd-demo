@@ -1,3 +1,4 @@
+import {useLibrary} from './useLibrary.ts';
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {Icon,ThemePicker,Scenery} from './GameUI.tsx';
 import {useTheme} from './design-system/useTheme.ts';
@@ -8,9 +9,11 @@ import type {Word} from './model.ts';
 import {transformationWords,type TransformationMode,type TransformationPhase} from './transformations.ts';
 export function Transformations(){
  const[theme,setTheme]=useTheme(),[mode,setMode]=useState<TransformationMode>('small'),[phase,setPhase]=useState<TransformationPhase>('question');
- const[words,setWords]=useState<Word[]>([]),[error,setError]=useState(''),[index,setIndex]=useState(0),[started,setStarted]=useState(false),[topic,setTopic]=useState('');
+ const {words:library,error}=useLibrary();
+ const words=useMemo(()=>transformationWords(library),[library]);
+ const[index,setIndex]=useState(0),[started,setStarted]=useState(false),[topic,setTopic]=useState('');
  const timer=useRef<ReturnType<typeof setTimeout>|null>(null);
- useEffect(()=>{const abort=new AbortController();fetch(import.meta.env.BASE_URL+'library.json',{signal:abort.signal}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(data=>setWords(transformationWords(data))).catch(e=>{if(e.name!=='AbortError')setError('Не удалось загрузить библиотеку. Обновите страницу.')});return()=>abort.abort()},[]);
+
  useEffect(()=>()=>{if(timer.current)clearTimeout(timer.current)},[]);
  const pool=useMemo(()=>words.filter(w=>!topic||w.topic===topic),[words,topic]);
  const word=pool[index%Math.max(1,pool.length)];
