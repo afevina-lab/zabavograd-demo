@@ -1,0 +1,1393 @@
+{
+  "generated": true,
+  "source": "outputs/library-v2.json",
+  "editable": false,
+  "forms": [
+    {
+      "id": "ru-r-001",
+      "lemma": "арбуз",
+      "role": "diminutive",
+      "form": "арбузик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-001",
+      "lemma": "арбуз",
+      "role": "plural_nominative",
+      "form": "арбузы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-002",
+      "lemma": "арфа",
+      "role": "plural_nominative",
+      "form": "арфы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-003",
+      "lemma": "барабан",
+      "role": "diminutive",
+      "form": "барабанчик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-003",
+      "lemma": "барабан",
+      "role": "plural_nominative",
+      "form": "барабаны",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-006",
+      "lemma": "ведро",
+      "role": "diminutive",
+      "form": "ведёрко",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-006",
+      "lemma": "ведро",
+      "role": "plural_nominative",
+      "form": "вёдра",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-007",
+      "lemma": "веер",
+      "role": "plural_nominative",
+      "form": "веера",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-009",
+      "lemma": "шар",
+      "role": "plural_nominative",
+      "form": "шары",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-010",
+      "lemma": "врач",
+      "role": "plural_nominative",
+      "form": "врачи",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-011",
+      "lemma": "гамбургер",
+      "role": "plural_nominative",
+      "form": "гамбургеры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-012",
+      "lemma": "гитара",
+      "role": "plural_nominative",
+      "form": "гитары",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-013",
+      "lemma": "гора",
+      "role": "diminutive",
+      "form": "горка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-013",
+      "lemma": "гора",
+      "role": "plural_nominative",
+      "form": "горы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-014",
+      "lemma": "горка",
+      "role": "diminutive",
+      "form": "горочка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-014",
+      "lemma": "горка",
+      "role": "plural_nominative",
+      "form": "горки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-015",
+      "lemma": "горох",
+      "role": "diminutive",
+      "form": "горошек",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-016",
+      "lemma": "груша",
+      "role": "plural_nominative",
+      "form": "груши",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-017",
+      "lemma": "дорога",
+      "role": "diminutive",
+      "form": "дорожка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-017",
+      "lemma": "дорога",
+      "role": "plural_nominative",
+      "form": "дороги",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-018",
+      "lemma": "единорог",
+      "role": "plural_nominative",
+      "form": "единороги",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-019",
+      "lemma": "жираф",
+      "role": "diminutive",
+      "form": "жирафик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-019",
+      "lemma": "жираф",
+      "role": "plural_nominative",
+      "form": "жирафы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-020",
+      "lemma": "забор",
+      "role": "diminutive",
+      "form": "заборчик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-020",
+      "lemma": "забор",
+      "role": "plural_nominative",
+      "form": "заборы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-021",
+      "lemma": "зебра",
+      "role": "plural_nominative",
+      "form": "зебры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-024",
+      "lemma": "йогурт",
+      "role": "plural_nominative",
+      "form": "йогурты",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-025",
+      "lemma": "карандаш",
+      "role": "diminutive",
+      "form": "карандашик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-025",
+      "lemma": "карандаш",
+      "role": "plural_nominative",
+      "form": "карандаши",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-026",
+      "lemma": "карман",
+      "role": "diminutive",
+      "form": "кармашек",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-026",
+      "lemma": "карман",
+      "role": "plural_nominative",
+      "form": "карманы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-028",
+      "lemma": "кенгуру",
+      "role": "plural_nominative",
+      "form": "кенгуру",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-030",
+      "lemma": "комар",
+      "role": "plural_nominative",
+      "form": "комары",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-031",
+      "lemma": "компьютер",
+      "role": "plural_nominative",
+      "form": "компьютеры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-032",
+      "lemma": "корзина",
+      "role": "diminutive",
+      "form": "корзинка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-032",
+      "lemma": "корзина",
+      "role": "plural_nominative",
+      "form": "корзины",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-033",
+      "lemma": "коробка",
+      "role": "diminutive",
+      "form": "коробочка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-033",
+      "lemma": "коробка",
+      "role": "plural_nominative",
+      "form": "коробки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-034",
+      "lemma": "корова",
+      "role": "diminutive",
+      "form": "коровка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-034",
+      "lemma": "корова",
+      "role": "plural_nominative",
+      "form": "коровы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-035",
+      "lemma": "королева",
+      "role": "plural_nominative",
+      "form": "королевы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-036",
+      "lemma": "корона",
+      "role": "plural_nominative",
+      "form": "короны",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-037",
+      "lemma": "костёр",
+      "role": "diminutive",
+      "form": "костерок",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-037",
+      "lemma": "костёр",
+      "role": "plural_nominative",
+      "form": "костры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-038",
+      "lemma": "краб",
+      "role": "diminutive",
+      "form": "крабик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-038",
+      "lemma": "краб",
+      "role": "plural_nominative",
+      "form": "крабы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-039",
+      "lemma": "кран",
+      "role": "diminutive",
+      "form": "краник",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-039",
+      "lemma": "кран",
+      "role": "plural_nominative",
+      "form": "краны",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-041",
+      "lemma": "кролик",
+      "role": "plural_nominative",
+      "form": "кролики",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-043",
+      "lemma": "кружка",
+      "role": "diminutive",
+      "form": "кружечка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-043",
+      "lemma": "кружка",
+      "role": "plural_nominative",
+      "form": "кружки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-045",
+      "lemma": "куртка",
+      "role": "diminutive",
+      "form": "курточка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-045",
+      "lemma": "куртка",
+      "role": "plural_nominative",
+      "form": "куртки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-046",
+      "lemma": "морковь",
+      "role": "diminutive",
+      "form": "морковка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-048",
+      "lemma": "муравей",
+      "role": "plural_nominative",
+      "form": "муравьи",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-049",
+      "lemma": "носорог",
+      "role": "plural_nominative",
+      "form": "носороги",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-050",
+      "lemma": "огород",
+      "role": "diminutive",
+      "form": "огородик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-050",
+      "lemma": "огород",
+      "role": "plural_nominative",
+      "form": "огороды",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-051",
+      "lemma": "озеро",
+      "role": "diminutive",
+      "form": "озерцо",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-051",
+      "lemma": "озеро",
+      "role": "plural_nominative",
+      "form": "озёра",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-052",
+      "lemma": "персик",
+      "role": "plural_nominative",
+      "form": "персики",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-053",
+      "lemma": "повар",
+      "role": "plural_nominative",
+      "form": "повара",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-054",
+      "lemma": "подарок",
+      "role": "diminutive",
+      "form": "подарочек",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-054",
+      "lemma": "подарок",
+      "role": "plural_nominative",
+      "form": "подарки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-055",
+      "lemma": "помидор",
+      "role": "diminutive",
+      "form": "помидорчик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-055",
+      "lemma": "помидор",
+      "role": "plural_nominative",
+      "form": "помидоры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-056",
+      "lemma": "портфель",
+      "role": "diminutive",
+      "form": "портфельчик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-056",
+      "lemma": "портфель",
+      "role": "plural_nominative",
+      "form": "портфели",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-058",
+      "lemma": "радуга",
+      "role": "plural_nominative",
+      "form": "радуги",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-059",
+      "lemma": "рак",
+      "role": "plural_nominative",
+      "form": "раки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-060",
+      "lemma": "ракета",
+      "role": "plural_nominative",
+      "form": "ракеты",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-061",
+      "lemma": "раковина",
+      "role": "plural_nominative",
+      "form": "раковины",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-062",
+      "lemma": "ракушка",
+      "role": "plural_nominative",
+      "form": "ракушки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-063",
+      "lemma": "ранец",
+      "role": "plural_nominative",
+      "form": "ранцы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-064",
+      "lemma": "расчёска",
+      "role": "diminutive",
+      "form": "расчёсочка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-064",
+      "lemma": "расчёска",
+      "role": "plural_nominative",
+      "form": "расчёски",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-065",
+      "lemma": "робот",
+      "role": "plural_nominative",
+      "form": "роботы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-066",
+      "lemma": "роза",
+      "role": "diminutive",
+      "form": "розочка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-066",
+      "lemma": "роза",
+      "role": "plural_nominative",
+      "form": "розы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-067",
+      "lemma": "рубашка",
+      "role": "diminutive",
+      "form": "рубашечка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-067",
+      "lemma": "рубашка",
+      "role": "plural_nominative",
+      "form": "рубашки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-068",
+      "lemma": "рука",
+      "role": "diminutive",
+      "form": "ручка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-068",
+      "lemma": "рука",
+      "role": "plural_nominative",
+      "form": "руки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-069",
+      "lemma": "руль",
+      "role": "plural_nominative",
+      "form": "рули",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-070",
+      "lemma": "ручка",
+      "role": "plural_nominative",
+      "form": "ручки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-071",
+      "lemma": "рыба",
+      "role": "diminutive",
+      "form": "рыбка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-071",
+      "lemma": "рыба",
+      "role": "plural_nominative",
+      "form": "рыбы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-073",
+      "lemma": "рысь",
+      "role": "plural_nominative",
+      "form": "рыси",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-074",
+      "lemma": "самовар",
+      "role": "diminutive",
+      "form": "самоварчик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-074",
+      "lemma": "самовар",
+      "role": "plural_nominative",
+      "form": "самовары",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-075",
+      "lemma": "светофор",
+      "role": "plural_nominative",
+      "form": "светофоры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-076",
+      "lemma": "свитер",
+      "role": "diminutive",
+      "form": "свитерок",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-076",
+      "lemma": "свитер",
+      "role": "plural_nominative",
+      "form": "свитеры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-077",
+      "lemma": "сковорода",
+      "role": "diminutive",
+      "form": "сковородка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-077",
+      "lemma": "сковорода",
+      "role": "plural_nominative",
+      "form": "сковороды",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-078",
+      "lemma": "страус",
+      "role": "plural_nominative",
+      "form": "страусы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-079",
+      "lemma": "сыр",
+      "role": "diminutive",
+      "form": "сырок",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-080",
+      "lemma": "телевизор",
+      "role": "plural_nominative",
+      "form": "телевизоры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-081",
+      "lemma": "тигр",
+      "role": "plural_nominative",
+      "form": "тигры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-082",
+      "lemma": "топор",
+      "role": "plural_nominative",
+      "form": "топоры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-083",
+      "lemma": "торт",
+      "role": "diminutive",
+      "form": "тортик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-083",
+      "lemma": "торт",
+      "role": "plural_nominative",
+      "form": "торты",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-084",
+      "lemma": "трава",
+      "role": "diminutive",
+      "form": "травка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-085",
+      "lemma": "трактор",
+      "role": "plural_nominative",
+      "form": "тракторы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-086",
+      "lemma": "трамвай",
+      "role": "diminutive",
+      "form": "трамвайчик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-086",
+      "lemma": "трамвай",
+      "role": "plural_nominative",
+      "form": "трамваи",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-087",
+      "lemma": "трон",
+      "role": "plural_nominative",
+      "form": "троны",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-088",
+      "lemma": "тропинка",
+      "role": "diminutive",
+      "form": "тропиночка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-088",
+      "lemma": "тропинка",
+      "role": "plural_nominative",
+      "form": "тропинки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-089",
+      "lemma": "трость",
+      "role": "diminutive",
+      "form": "тросточка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-089",
+      "lemma": "трость",
+      "role": "plural_nominative",
+      "form": "трости",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-090",
+      "lemma": "труба",
+      "role": "plural_nominative",
+      "form": "трубы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-091",
+      "lemma": "узор",
+      "role": "plural_nominative",
+      "form": "узоры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-092",
+      "lemma": "червяк",
+      "role": "diminutive",
+      "form": "червячок",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-092",
+      "lemma": "червяк",
+      "role": "plural_nominative",
+      "form": "червяки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-094",
+      "lemma": "шарф",
+      "role": "diminutive",
+      "form": "шарфик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-094",
+      "lemma": "шарф",
+      "role": "plural_nominative",
+      "form": "шарфы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-001",
+      "lemma": "мухомор",
+      "role": "plural_nominative",
+      "form": "мухоморы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-002",
+      "lemma": "бобёр",
+      "role": "plural_nominative",
+      "form": "бобры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-003",
+      "lemma": "крот",
+      "role": "plural_nominative",
+      "form": "кроты",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-004",
+      "lemma": "рама",
+      "role": "diminutive",
+      "form": "рамка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-004",
+      "lemma": "рама",
+      "role": "plural_nominative",
+      "form": "рамы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-005",
+      "lemma": "нора",
+      "role": "diminutive",
+      "form": "норка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-005",
+      "lemma": "нора",
+      "role": "plural_nominative",
+      "form": "норы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-006",
+      "lemma": "ворона",
+      "role": "plural_nominative",
+      "form": "вороны",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-008",
+      "lemma": "воробей",
+      "role": "diminutive",
+      "form": "воробушек",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-008",
+      "lemma": "воробей",
+      "role": "plural_nominative",
+      "form": "воробьи",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-010",
+      "lemma": "парус",
+      "role": "plural_nominative",
+      "form": "паруса",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-011",
+      "lemma": "паровоз",
+      "role": "diminutive",
+      "form": "паровозик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-011",
+      "lemma": "паровоз",
+      "role": "plural_nominative",
+      "form": "паровозы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-014",
+      "lemma": "ковёр",
+      "role": "plural_nominative",
+      "form": "ковры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-018",
+      "lemma": "круг",
+      "role": "diminutive",
+      "form": "кружок",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-018",
+      "lemma": "круг",
+      "role": "plural_nominative",
+      "form": "круги",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-020",
+      "lemma": "пруд",
+      "role": "diminutive",
+      "form": "прудик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-020",
+      "lemma": "пруд",
+      "role": "plural_nominative",
+      "form": "пруды",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-022",
+      "lemma": "рыбак",
+      "role": "plural_nominative",
+      "form": "рыбаки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bfd0b8d180d0bed0b3",
+      "lemma": "пирог",
+      "role": "diminutive",
+      "form": "пирожок",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bfd0b8d180d0bed0b3",
+      "lemma": "пирог",
+      "role": "plural_nominative",
+      "form": "пироги",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-025",
+      "lemma": "рот",
+      "role": "diminutive",
+      "form": "ротик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-025",
+      "lemma": "рот",
+      "role": "plural_nominative",
+      "form": "рты",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-026",
+      "lemma": "гранат",
+      "role": "plural_nominative",
+      "form": "гранаты",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-027",
+      "lemma": "крыша",
+      "role": "plural_nominative",
+      "form": "крыши",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-028",
+      "lemma": "ручей",
+      "role": "diminutive",
+      "form": "ручеёк",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-028",
+      "lemma": "ручей",
+      "role": "plural_nominative",
+      "form": "ручьи",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-029",
+      "lemma": "рубин",
+      "role": "plural_nominative",
+      "form": "рубины",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-030",
+      "lemma": "горшок",
+      "role": "diminutive",
+      "form": "горшочек",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-030",
+      "lemma": "горшок",
+      "role": "plural_nominative",
+      "form": "горшки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-031",
+      "lemma": "дракон",
+      "role": "diminutive",
+      "form": "дракончик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-031",
+      "lemma": "дракон",
+      "role": "plural_nominative",
+      "form": "драконы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-032",
+      "lemma": "карусель",
+      "role": "diminutive",
+      "form": "каруселька",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-032",
+      "lemma": "карусель",
+      "role": "plural_nominative",
+      "form": "карусели",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-extra-033",
+      "lemma": "перо",
+      "role": "diminutive",
+      "form": "пёрышко",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bad0b0d180d182d0b8d0bdd0b0",
+      "lemma": "картина",
+      "role": "diminutive",
+      "form": "картинка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bad0b0d180d182d0b8d0bdd0b0",
+      "lemma": "картина",
+      "role": "plural_nominative",
+      "form": "картины",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d180d0b0d186d0b8d18f",
+      "lemma": "рация",
+      "role": "plural_nominative",
+      "form": "рации",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d180d0bed18fd0bbd18c",
+      "lemma": "рояль",
+      "role": "plural_nominative",
+      "form": "рояли",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d180d0bed0b3d0b0d182d0bad0b0",
+      "lemma": "рогатка",
+      "role": "plural_nominative",
+      "form": "рогатки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d180d0bed0bcd0b0d188d0bad0b0",
+      "lemma": "ромашка",
+      "role": "plural_nominative",
+      "form": "ромашки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d180d0b0d0bad0b5d182d0bad0b0",
+      "lemma": "ракетка",
+      "role": "plural_nominative",
+      "form": "ракетки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d180d0bed0b3d0b0d0bbd0b8d0ba",
+      "lemma": "рогалик",
+      "role": "plural_nominative",
+      "form": "рогалики",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d180d0bed0bcd0b1",
+      "lemma": "ромб",
+      "role": "plural_nominative",
+      "form": "ромбы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d180d0bed0bbd0bb",
+      "lemma": "ролл",
+      "role": "plural_nominative",
+      "form": "роллы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d180d183d0bbd0b5d182",
+      "lemma": "рулет",
+      "role": "plural_nominative",
+      "form": "рулеты",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d180d183d181d0b0d0bbd0bad0b0",
+      "lemma": "русалка",
+      "role": "plural_nominative",
+      "form": "русалки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d180d18bd0bdd0bed0ba",
+      "lemma": "рынок",
+      "role": "plural_nominative",
+      "form": "рынки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bfd0b5d189d0b5d180d0b0",
+      "lemma": "пещера",
+      "role": "plural_nominative",
+      "form": "пещеры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0b1d0bed180d0bed0b4d0b0",
+      "lemma": "борода",
+      "role": "diminutive",
+      "form": "бородка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0b1d0bed180d0bed0b4d0b0",
+      "lemma": "борода",
+      "role": "plural_nominative",
+      "form": "бороды",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bfd0b8d180d0b0d182",
+      "lemma": "пират",
+      "role": "plural_nominative",
+      "form": "пираты",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bad0bed180d0b0d0b1d0bbd18c",
+      "lemma": "корабль",
+      "role": "diminutive",
+      "form": "кораблик",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bad0bed180d0b0d0b1d0bbd18c",
+      "lemma": "корабль",
+      "role": "plural_nominative",
+      "form": "корабли",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0b6d183d180d0b0d0b2d0bbd18c",
+      "lemma": "журавль",
+      "role": "plural_nominative",
+      "form": "журавли",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bfd0b8d180d0bed0b6d0bed0ba",
+      "lemma": "пирожок",
+      "role": "plural_nominative",
+      "form": "пирожки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bfd0b8d180d0bed0b6d0bdd0bed0b5",
+      "lemma": "пирожное",
+      "role": "plural_nominative",
+      "form": "пирожные",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bfd180d0bed180d183d0b1d18c",
+      "lemma": "прорубь",
+      "role": "plural_nominative",
+      "form": "проруби",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0b1d0b0d180d181d183d0ba",
+      "lemma": "барсук",
+      "role": "plural_nominative",
+      "form": "барсуки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0b6d183d180d0bdd0b0d0bb",
+      "lemma": "журнал",
+      "role": "plural_nominative",
+      "form": "журналы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d182d183d180d0bdd0b8d0ba",
+      "lemma": "турник",
+      "role": "plural_nominative",
+      "form": "турники",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d186d0b8d180d0ba",
+      "lemma": "цирк",
+      "role": "plural_nominative",
+      "form": "цирки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0b3d0b8d180d0bbd18fd0bdd0b4d0b0",
+      "lemma": "гирлянда",
+      "role": "plural_nominative",
+      "form": "гирлянды",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d181d0b5d180d0b4d186d0b5",
+      "lemma": "сердце",
+      "role": "diminutive",
+      "form": "сердечко",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d181d0b5d180d0b4d186d0b5",
+      "lemma": "сердце",
+      "role": "plural_nominative",
+      "form": "сердца",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d181d182d0b0d180d182",
+      "lemma": "старт",
+      "role": "plural_nominative",
+      "form": "старты",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0b1d180d0b0d181d0bbd0b5d182",
+      "lemma": "браслет",
+      "role": "plural_nominative",
+      "form": "браслеты",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0b3d180d0b0d187",
+      "lemma": "грач",
+      "role": "plural_nominative",
+      "form": "грачи",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0b8d0b3d180d0b0",
+      "lemma": "игра",
+      "role": "plural_nominative",
+      "form": "игры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0b3d180d183d0b7d0bed0b2d0b8d0ba",
+      "lemma": "грузовик",
+      "role": "plural_nominative",
+      "form": "грузовики",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bad180d0bed0b2d0b0d182d18c",
+      "lemma": "кровать",
+      "role": "diminutive",
+      "form": "кроватка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bad180d0bed0b2d0b0d182d18c",
+      "lemma": "кровать",
+      "role": "plural_nominative",
+      "form": "кровати",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bcd0bed0bdd181d182d180",
+      "lemma": "монстр",
+      "role": "plural_nominative",
+      "form": "монстры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d183d182d180d0be",
+      "lemma": "утро",
+      "role": "plural_nominative",
+      "form": "утра",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d181d182d180d0bed0b9d0bad0b0",
+      "lemma": "стройка",
+      "role": "plural_nominative",
+      "form": "стройки",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d182d0b5d0b0d182d180",
+      "lemma": "театр",
+      "role": "plural_nominative",
+      "form": "театры",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d182d0b5d182d180d0b0d0b4d18c",
+      "lemma": "тетрадь",
+      "role": "diminutive",
+      "form": "тетрадка",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d182d0b5d182d180d0b0d0b4d18c",
+      "lemma": "тетрадь",
+      "role": "plural_nominative",
+      "form": "тетради",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d0bcd0b0d182d180d0bed181",
+      "lemma": "матрос",
+      "role": "plural_nominative",
+      "form": "матросы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d185d180d0b0d0bc",
+      "lemma": "храм",
+      "role": "plural_nominative",
+      "form": "храмы",
+      "status": "editorial_draft"
+    },
+    {
+      "id": "ru-r-add-d186d0b5d180d0bad0bed0b2d18c",
+      "lemma": "церковь",
+      "role": "plural_nominative",
+      "form": "церкви",
+      "status": "editorial_draft"
+    }
+  ]
+}

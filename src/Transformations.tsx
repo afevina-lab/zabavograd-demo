@@ -11,7 +11,7 @@ import {themeAttributes,themeVars} from './design-system/themes.ts';
 import {TransformationScene} from './design-system/TransformationScene.tsx';
 import {MOTION} from './design-system/motion.ts';
 import type {Word} from './model.ts';
-import {transformationWords,type TransformationMode,type TransformationPhase} from './transformations.ts';
+import {transformationEligibility,transformationAnswer,type TransformationMode,type TransformationPhase} from './transformations.ts';
 export function Transformations(){
  const[theme,setTheme]=useTheme(),[mode,setMode]=useState<TransformationMode>('reading'),[phase,setPhase]=useState<TransformationPhase>('question');
  const {words:library,error}=useLibrary();
@@ -22,7 +22,7 @@ export function Transformations(){
  const timer=useRef<ReturnType<typeof setTimeout>|null>(null);
 
  useEffect(()=>()=>{if(timer.current)clearTimeout(timer.current)},[]);
- const candidates=useMemo(()=>learningPool(words,filters,learning,false).filter(w=>(!topic||w.topic===topic)&&(mode==='reading'||(learning.mode==='any'||learning.mode==='lexical')&&Boolean(mode==='small'?w.verifiedForms?.diminutive:w.verifiedForms?.plural))),[words,topic,filters,learning,mode]);
+ const candidates=useMemo(()=>learningPool(words,filters,learning,false).filter(w=>(!topic||w.topic===topic)&&transformationEligibility(w,mode,learning.mode)==='eligible'),[words,topic,filters,learning,mode]);
  const pool=manual?.source===candidates?candidates.filter(w=>manual.ids.includes(w.id)):candidates.filter(canSelectAutomatically).slice(0,count);
  const activeWords=started?session:pool;
  const word=activeWords[index];
