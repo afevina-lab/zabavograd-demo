@@ -127,7 +127,7 @@
 .app[data-theme] .zg-scene-sprite[data-zg-motion="sway"]{animation:zg-sprite-sway var(--zg-sprite-duration,10000ms) ease-in-out var(--zg-sprite-delay,0ms) infinite;transform-origin:50% 90%}
 .app[data-theme] .zg-scene-sprite[data-zg-motion="fall"]{animation:zg-sprite-fall var(--zg-sprite-duration,13000ms) linear var(--zg-sprite-delay,0ms) infinite}
 @keyframes zg-sprite-float{0%,100%{transform:translateY(0)}50%{transform:translateY(12px)}}
-@keyframes zg-sprite-breathe{0%,100%{transform:scale(1);opacity:.75}50%{transform:scale(1.04);opacity:1}}
+@keyframes zg-sprite-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
 @keyframes zg-sprite-twinkle{0%,100%{filter:brightness(.7);transform:scale(.85)}50%{filter:brightness(1.4);transform:scale(1.12)}}
 @keyframes zg-sprite-sway{0%,100%{transform:rotate(-1.45deg)}50%{transform:rotate(1.6deg)}}
 @keyframes zg-sprite-fall{0%{transform:translate(0,-8vh) rotate(-15deg);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translate(90px,105vh) rotate(100deg);opacity:0}}
@@ -149,3 +149,7 @@
 .app[data-theme] .zg-scene-sprite>img[data-zg-spin=true]{animation:zg-sprite-spin var(--zg-spin-duration,160000ms) linear infinite}
 @keyframes zg-sprite-spin{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.app[data-theme] .zg-scene-sprite>img{animation:none!important}}
+
+.app[data-theme] .zg-scene-sprite[data-zg-motion=cloud]{animation:zg-cloud-drift var(--zg-sprite-duration,20000ms) ease-in-out infinite alternate}
+@keyframes zg-cloud-drift{from{transform:translate(-5%,-4%) scale(1)}to{transform:translate(9%,7%) scale(1.15)}}
+@media(prefers-reduced-motion:reduce){.app[data-theme] .zg-scene-sprite[data-zg-motion=cloud]{animation:none!important}}

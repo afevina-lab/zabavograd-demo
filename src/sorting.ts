@@ -17,7 +17,11 @@ export function updateGroup(groups:SortGroup[],index:number,section:'learning'|'
 export type SortItem={word:Word;accepted:number[]};
 export function sortingPools(words:Word[],groups:SortGroup[],exclusions:{learning:Learning;filters:Filters}[],pictures:boolean){
  const banned=new Set(exclusions.flatMap(e=>learningPool(words,e.filters,e.learning,false).map(w=>w.id)));
- return groups.map(g=>learningPool(words,g.filters,{...g.learning,exclusions:[...(g.learning.exclusions||[]),...exclusions]}).filter(w=>!banned.has(w.id)&&hasMaterial(w,pictures)));
+ const pools=groups.map(g=>learningPool(words,g.filters,{...g.learning,exclusions:[...(g.learning.exclusions||[]),...exclusions]}).filter(w=>!banned.has(w.id)&&hasMaterial(w,pictures)));
+ const soundGroup=(i:number)=>['automation','differentiation'].includes(groups[i].learning.mode)&&groups[i].learning.sounds.length>0;
+ const membership=new Map<string,number[]>();
+ pools.forEach((pool,i)=>{if(soundGroup(i))for(const word of pool)membership.set(word.id,[...(membership.get(word.id)||[]),i]);});
+ return pools.map((pool,i)=>soundGroup(i)?pool.filter(word=>!(membership.get(word.id)||[]).some(j=>j!==i&&groups[j].learning.sounds.every(sound=>!groups[i].learning.sounds.includes(sound)))):pool);
 }
 export function makeSorting(pools:Word[][],counts:number[],rng=Math.random):SortItem[]{
  if(pools.some((p,i)=>p.length<counts[i]))throw Error('Недостаточно материала в одной из групп. Измените правила или количество элементов.');

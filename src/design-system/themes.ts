@@ -5,7 +5,7 @@ import {MOTION} from './motion.ts';
 export const THEME_IDS=['neutral','forest','space'] as const;
 export type ThemeId=typeof THEME_IDS[number];
 type Palette={accent:string;deep:string;pale:string;outline:string;text:string;paper:string;page:string;stageText:string};
-export type SceneSprite={id:string;src:string;motion:'none'|'float'|'breathe'|'twinkle'|'sway'|'fall';width:string;left?:string;right?:string;top?:string;bottom?:string;opacity?:number;durationMs?:number;delayMs?:number;origin?:string;spinMs?:number};
+export type SceneSprite={id:string;src:string;motion:'none'|'float'|'breathe'|'twinkle'|'sway'|'fall'|'cloud';width:string;left?:string;right?:string;top?:string;bottom?:string;opacity?:number;durationMs?:number;delayMs?:number;origin?:string;spinMs?:number;layer?:number};
 type ThemeConfig={
  label:string;palette:Palette;skin:'blue'|'sage'|'lavender';toolbarArt:string|null;
  scene:{background:string|null;fill:string;motion:'drift'|'static';sprites:SceneSprite[];effects:{stars:number;comets:number}};
@@ -24,13 +24,15 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
   palette:{accent:'#a8bc8c',deep:'#4a694c',pale:'#edf4e5',outline:'#7c9b72',text:'#304d38',paper:'#fffaf0',page:'#eef2e6',stageText:'#344a39'},
   skin:'sage',toolbarArt:'assets/themes/forest/header.webp',
   scene:{background:'assets/themes/forest/forest_background.webp',fill:'#d5e7bf',motion:'static',sprites:[
-   {id:'tree-left',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(100cqh,65cqw)',left:'-12%',bottom:'-4%',opacity:.92,durationMs:10500,origin:'50% 94%'},
-   {id:'tree-right',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(78cqh,55cqw)',right:'-12%',bottom:'-4%',opacity:.92,durationMs:12400,delayMs:-4500,origin:'50% 94%'},
+   {id:'tree-left',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(100cqh,65cqw)',left:'-5%',bottom:'-4%',opacity:1,layer:2,durationMs:10500,origin:'50% 94%'},
+   {id:'tree-right',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(100cqh,65cqw)',right:'-5%',bottom:'-4%',opacity:1,layer:2,durationMs:12400,delayMs:-4500,origin:'50% 94%'},
    {id:'fern',src:'assets/themes/forest/forest_fern.webp',motion:'breathe',width:'clamp(105px,12vw,210px)',left:'3%',bottom:'-5%',opacity:.9,durationMs:26000},
    {id:'bush',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'clamp(110px,13vw,230px)',right:'3%',bottom:'-5%',opacity:.92,durationMs:30000},
-   {id:'tree-far-left',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(44cqh,30cqw)',left:'12%',bottom:'36%',opacity:.65,durationMs:15000,origin:'50% 94%'},
-   {id:'tree-far-right',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(38cqh,26cqw)',right:'17%',bottom:'41%',opacity:.55,durationMs:17000,origin:'50% 94%'},
-   ...[0,1,2,3,4].map(i=>({id:'flowers-depth-'+i,src:'assets/themes/forest/forest_flower_patch.webp',motion:'none' as const,width:(12+i*2)+'cqw',left:(6+i*19)+'%',bottom:(25-i*5)+'%',opacity:.65+i*.06})),
+   {id:'tree-far-left',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(62cqh,40cqw)',left:'15%',bottom:'26%',opacity:1,layer:0,durationMs:15000,origin:'50% 94%'},
+   {id:'tree-far-right',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(56cqh,38cqw)',right:'18%',bottom:'32%',opacity:1,layer:0,durationMs:17000,origin:'50% 94%'},
+   ...[0,1,2].map(i=>({id:'flowers-depth-'+i,src:'assets/themes/forest/forest_flower_patch.webp',motion:'none' as const,width:(12+i*2)+'cqw',left:(6+i*19)+'%',bottom:(25-i*5)+'%',opacity:.65+i*.06})),
+   {id:'fern-mid',src:'assets/themes/forest/forest_fern.webp',motion:'breathe',width:'18cqw',left:'22%',bottom:'12%',opacity:1,layer:3,durationMs:23000},
+   {id:'bush-mid',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'20cqw',right:'23%',bottom:'16%',opacity:1,layer:3,durationMs:28000},
    {id:'flowers',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(32cqw,48cqh)',left:'30%',bottom:'-1%',opacity:.9},
    {id:'leaf-birch',src:'assets/themes/forest/forest_leaf_birch.webp',motion:'fall',width:'clamp(26px,3vw,44px)',left:'13%',top:'-12%',opacity:.8,durationMs:17000,delayMs:-2200},
    {id:'leaf-oak',src:'assets/themes/forest/forest_leaf_oak.webp',motion:'fall',width:'clamp(30px,3.2vw,49px)',left:'69%',top:'-11%',opacity:.85,durationMs:21500,delayMs:-9100},
@@ -43,10 +45,10 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
   palette:{accent:'#ae97e1',deep:'#625095',pale:'#ebe5ff',outline:'#8a76c2',text:'#2e2855',paper:'#fbf5e9',page:'#1c2340',stageText:'#fff5e8'},
   skin:'lavender',toolbarArt:'assets/themes/space/header.webp',scene:{background:'assets/space/background.webp',fill:'#1c2340',motion:'drift',
  sprites:[
-  {id:'planet-blue',src:'assets/space/planet-blue.webp',motion:'float',width:'min(110cqh,75cqw)',left:'-12cqh',bottom:'-12cqh',opacity:.9,durationMs:24000,spinMs:160000},
+  {id:'planet-blue',src:'assets/space/planet-blue.webp',motion:'float',width:'min(120cqh,82cqw)',left:'-21cqh',bottom:'-20cqh',opacity:.9,durationMs:24000,spinMs:160000},
   {id:'planet-rings',src:'assets/space/planet.webp',motion:'float',width:'min(78cqh,52cqw)',right:'2%',top:'4%',opacity:.9,durationMs:30000,delayMs:-13000},
-  {id:'purple-nebula',src:'assets/space/nebula-purple.webp',motion:'breathe',width:'45%',left:'0%',top:'0%',opacity:.16,durationMs:28000},
-  {id:'blue-nebula',src:'assets/space/nebula-blue.webp',motion:'breathe',width:'45%',right:'0%',bottom:'0%',opacity:.16,durationMs:34000},
+  {id:'purple-nebula',src:'assets/space/nebula-purple.webp',motion:'cloud',layer:2,width:'55%',left:'0%',top:'0%',opacity:.12,durationMs:18000},
+  {id:'blue-nebula',src:'assets/space/nebula-blue.webp',motion:'breathe',width:'45%',right:'0%',bottom:'0%',opacity:.12,durationMs:22000},
   ...Array.from({length:7},(_,i)=>({id:'star-'+i,src:'assets/space/star.webp',motion:'twinkle' as const,width:'42px',left:(8+i*13)+'%',top:(15+(i*23)%70)+'%',opacity:.2,durationMs:14000,delayMs:i*2000}))
  ],effects:{stars:30,comets:2}
 },

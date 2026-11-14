@@ -54,6 +54,11 @@ export function matchesSound(w:Word,s:string,learning:Learning):boolean{
     return selected&&matchesCluster(o,s,rule);
   });
 }
+export function containsExcludedSound(w:Word,sound:string):boolean{
+ if(w.phonemes?.includes(sound)||(w.sounds?.[sound]?.length||0)>0)return true;
+ // Contextual softening is not permission to bypass exclusion of the underlying hard sound.
+ return !sound.endsWith("'")&&Boolean(w.sounds?.[sound+"'"]?.some(o=>o.eligibility==='before_soft_consonant'));
+}
 function matchesMaterial(w:Word,f:Filters,l:Learning):boolean {
  const structure=w.type===null?f.untyped:f.types.includes(w.type);
  const topics=l.topics??(f.topic?[f.topic]:[]);
@@ -61,7 +66,7 @@ function matchesMaterial(w:Word,f:Filters,l:Learning):boolean {
  const contentAllowed=['reading','automation','differentiation'].includes(l.mode)?contentKinds(l).includes(w.materialKind==='syllables'?'syllables':'words')&&(!w.materialKind||effectivePatterns(l).includes(w.syllablePattern as Pattern)):!w.materialKind;
  const base=contentAllowed&&(l.mode==='reading'?matchesReading(w,l):l.mode==='any'?true:l.mode==='lexical'?lexical:l.mode==='structure'?structure:(w.materialKind==='syllables'||structure)&&l.sounds.some(s=>matchesSound(w,s,l)));
  const forbidden=(l.excludedSounds||[]).filter(s=>!l.sounds.includes(s));
- const soundAllowed=l.mode==='reading'||!forbidden.length||(!!w.phonemes&&!forbidden.some(s=>w.phonemes!.includes(s)));
+ const soundAllowed=l.mode==='reading'||!forbidden.length||(!!w.phonemes&&!forbidden.some(s=>containsExcludedSound(w,s)));
  const allowed=base&&(!f.noOpposition||l.mode!=='automation'||l.sounds[0]!=='р'||w.opposition.length===0);
  return soundAllowed&&(allowed||(l.additional||[]).some(r=>matchesMaterial(w,r.filters,r.learning)))&&!(l.exclusions||[]).some(r=>matchesMaterial(w,r.filters,r.learning));
 }
