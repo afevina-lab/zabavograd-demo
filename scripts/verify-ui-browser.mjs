@@ -149,6 +149,8 @@ try{
     await pickCategory(0,'Животный мир');
     await pickCategory(1,'Животный мир'); // undo inherited category in group 2
     await pickCategory(1,'Растительный мир');
+    await evaluate(`(()=>{const labels=[...document.querySelectorAll('.sort-settings label')];for(const [prefix,value] of [['Элементов','6'],['Показ карточек','all']]){const label=labels.find(e=>e.textContent.startsWith(prefix));const select=label?.querySelector('select');if(!select)throw Error('Missing setting '+prefix);Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(select,value);select.dispatchEvent(new Event('change',{bubbles:true}));}})()`);
+    await sleep(300);
     const summary=await evaluate("document.querySelector('.sort-settings>[role=status]')?.textContent||document.querySelector('.sort-settings>p[role=status]')?.textContent");
     await until("!!document.querySelector('.sort-settings>.primary:not(:disabled)')",15000).catch(e=>{throw Error('Sorting default material configuration invalid: '+summary+'; '+e.message)});
     await evaluate("document.querySelector('.sort-settings>.primary:not(:disabled)').click()");
