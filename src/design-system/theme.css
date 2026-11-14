@@ -194,7 +194,7 @@
  background-position:left center!important;
  filter:drop-shadow(0 3px 6px #9a6a2b44);
 }
-.app[data-theme] .victory-star-shining{background-position:center center!important}
+.app[data-theme] .victory-star-shining{background-position:left center!important;filter:drop-shadow(0 0 12px #ffd86dbb) drop-shadow(0 0 22px #ffedb177)}
 .app[data-theme] .victory-star-empty{background-position:right center!important;opacity:1}
 .app[data-theme] .victory-stars>span:nth-child(2){margin-top:-9px}
 

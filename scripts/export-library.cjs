@@ -69,6 +69,7 @@ const entries=db.entries.map(e=>{
  const cat=category(e);
  return {
   id:e.id,label:e.lemma,meaning:e.meaning||null,
+  verifiedForms:['verified','approved','editorial_verified'].includes(e.morphology?.data?.review_status)?{diminutive:e.morphology.data.diminutive,plural:e.morphology.data.plural_nominative}:{},
   categories:e.categories.filter(c=>(c.default_selection||e.lexical_eligible_by_default===false)&&!c.path.includes('/Вспомогательные')).map(c=>c.path),
   phonemes:tokens.length?tokens.map(t=>t==='й'?"й'":t):null,
   ...cat,position:editorial?.selection_position||'',

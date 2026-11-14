@@ -86,3 +86,8 @@ export function changeTargetSound(l:Learning,sound:string,checked:boolean):Learn
  const retainedExclusions=(l.excludedSounds||[]).filter(s=>!sounds.includes(s));
  return {...l,sounds,excludedSounds:l.mode==='automation'&&checked&&!retainedExclusions.length?defaultOpposition(sound):retainedExclusions};
 }
+export function confirmSoundSelection(draft:Learning):Learning{
+ const sounds=[...new Set(draft.sounds)];
+ const clean={...draft,sounds,rules:Object.fromEntries(Object.entries(draft.rules).filter(([sound])=>sounds.includes(sound))),excludedSounds:(draft.excludedSounds||[]).filter(sound=>!sounds.includes(sound))};
+ return sounds.length===1?changeTargetSound({...clean,mode:'automation'},sounds[0],true):{...clean,mode:sounds.length>1?'differentiation':'automation'};
+}

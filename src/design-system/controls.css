@@ -49,3 +49,14 @@
 .app .icon-button .garden-icon{width:24px;height:24px}
 .app .life-heart-svg .garden-icon{width:25px;height:25px}
 .app .victory-star .garden-icon{width:100%;height:100%}
+
+/* Shared transactional sound selection. */
+.sound-picker-dialog{width:min(900px,94vw);max-height:85dvh;overflow:auto;border:0;border-radius:24px;padding:24px;background:var(--panel,#faf7f0);color:var(--ink,#403b44)}
+.sound-picker-dialog::backdrop{background:#24203388}
+.sound-picker-dialog .sound-group[open]{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start}
+.sound-picker-dialog .sound-group>summary{flex-basis:100%}
+.sound-picker-dialog .sound-group>div{display:inline-flex;flex-direction:column;max-width:100%;padding:8px;border-radius:12px}
+.sound-picker-dialog .sound-group label{white-space:normal}
+.sound-picker-actions{position:sticky;bottom:0;display:flex;justify-content:flex-end;gap:12px;padding:12px;background:var(--panel,#faf7f0)}
+.selected-sounds{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.selected-sounds>span{padding:6px 12px;border:1px solid currentColor;border-radius:20px}
