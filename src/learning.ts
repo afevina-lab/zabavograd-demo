@@ -72,7 +72,23 @@ function matchesMaterial(w:Word,f:Filters,l:Learning):boolean {
 }
 export function learningPool(words:Word[],f:Filters,l:Learning,automatic=true){const candidates=materialCandidates(words,l).filter(w=>matchesMaterial(w,f,l)).map(w=>l.mode==='lexical'?{...w,weight:materialWeight(w,true)}:w).filter(w=>!automatic||canSelectAutomatically(w));
  const seen=new Set<string>();return candidates.filter(w=>{const key=w.id;if(seen.has(key))return false;seen.add(key);return true;});}
-export function balancedPick(pool:Word[],count:number,l:Learning,rng=Math.random){if(!['automation','differentiation'].includes(l.mode)||l.sounds.length<2)return pickWords(pool,count,rng);const left=pool.filter(canSelectAutomatically).slice();if(left.length<count)throw Error('Недостаточно слов');const credits=Object.fromEntries(l.sounds.map(s=>[s,0]));const result:Word[]=[];while(result.length<count){const available=l.sounds.filter(s=>left.some(w=>matchesSound(w,s,l)));const min=Math.min(...available.map(s=>credits[s]));const targets=available.filter(s=>credits[s]===min);let candidates=left.filter(w=>targets.some(s=>matchesSound(w,s,l)));if(l.preferShared){const shared=candidates.filter(w=>l.sounds.filter(s=>matchesSound(w,s,l)).length>1);if(shared.length)candidates=shared;}const word=pickWords(candidates,1,rng)[0];result.push(word);left.splice(left.findIndex(w=>w.id===word.id),1);const covered=l.sounds.filter(s=>matchesSound(word,s,l));for(const s of covered)credits[s]+=1/covered.length;}return result;}
+/** Keep words and generated syllables near 50:50 whenever both kinds are enabled.
+ * Reallocate only when one eligible kind is genuinely too small; do not repeat IDs.
+ */
+export function balancedPick(pool:Word[],count:number,l:Learning,rng=Math.random):Word[]{
+ if(contentKinds(l).includes('words')&&contentKinds(l).includes('syllables')){
+  const words=pool.filter(w=>w.materialKind!=='syllables');
+  const syllables=pool.filter(w=>w.materialKind==='syllables');
+  const syllableCount=Math.min(syllables.length,Math.max(count-words.length,Math.round(count/2)));
+  if(syllableCount>0&&syllableCount<count){
+   const selected=[...soundBalancedPick(words,count-syllableCount,l,rng),...soundBalancedPick(syllables,syllableCount,l,rng)];
+   for(let i=selected.length-1;i>0;i--){const j=Math.min(i,Math.floor(rng()*(i+1)));[selected[i],selected[j]]=[selected[j],selected[i]];}
+   return selected;
+  }
+ }
+ return soundBalancedPick(pool,count,l,rng);
+}
+function soundBalancedPick(pool:Word[],count:number,l:Learning,rng=Math.random){if(!['automation','differentiation'].includes(l.mode)||l.sounds.length<2)return pickWords(pool,count,rng);const left=pool.filter(canSelectAutomatically).slice();if(left.length<count)throw Error('Недостаточно слов');const credits=Object.fromEntries(l.sounds.map(s=>[s,0]));const result:Word[]=[];while(result.length<count){const available=l.sounds.filter(s=>left.some(w=>matchesSound(w,s,l)));const min=Math.min(...available.map(s=>credits[s]));const targets=available.filter(s=>credits[s]===min);let candidates=left.filter(w=>targets.some(s=>matchesSound(w,s,l)));if(l.preferShared){const shared=candidates.filter(w=>l.sounds.filter(s=>matchesSound(w,s,l)).length>1);if(shared.length)candidates=shared;}const word=pickWords(candidates,1,rng)[0];result.push(word);left.splice(left.findIndex(w=>w.id===word.id),1);const covered=l.sounds.filter(s=>matchesSound(word,s,l));for(const s of covered)credits[s]+=1/covered.length;}return result;}
 export function layoutRows(count:number,columns:number){const rows=Array(Math.ceil(count/columns)).fill(columns);let missing=rows.length*columns-count;for(let i=0;missing;i++,missing--)rows[i%2===0?rows.length-1-Math.floor(i/2):Math.floor(i/2)]--;return rows;}
 
 /** Typical *possible* phonemic confusions, not a diagnosis for a particular child.
