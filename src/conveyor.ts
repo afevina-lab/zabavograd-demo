@@ -1,6 +1,6 @@
 import type {Word} from './material-types.ts';
 import {alphabet} from './reading.ts';
-import {balancedPick,containsExcludedSound,defaultOpposition,type Learning} from './learning.ts';
+import {balancedPick,containsExcludedSound,typicalConfusions,type Learning} from './learning.ts';
 import {distinctCaptions} from './material-policy.ts';
 export type ConveyorLevel='easy'|'medium'|'hard';
 export type ConveyorCard={id:string;text:string;word?:Word;expected:boolean;original?:string};
@@ -54,7 +54,7 @@ export function conveyorConditions(count:number,conditional:boolean,rng=Math.ran
 }
 export function isCloseConveyorDistractor(word:Word,learning:Learning):boolean{
  if(['automation','differentiation','search'].includes(learning.mode)){
-  const confusions=[...new Set(learning.sounds.flatMap(defaultOpposition))].filter(s=>!learning.sounds.includes(s));
+  const confusions=[...new Set(learning.sounds.flatMap(typicalConfusions))].filter(s=>!learning.sounds.includes(s));
   return confusions.some(s=>containsExcludedSound(word,s));
  }
  if(learning.mode==='lexical'){

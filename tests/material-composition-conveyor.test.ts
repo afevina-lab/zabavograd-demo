@@ -86,6 +86,17 @@ test('70% of the wrong sound cards use the familiar confusion pair where availab
  assert.equal(new Set(deck.map(c=>c.word!.id)).size,12);
 });
 
+test('developmental exclusions do not masquerade as confusable conveyor pairs',()=>{
+ const early:Learning={...initialLearning,mode:'automation',sounds:['м']};
+ assert(defaultOpposition('м').includes('ш'), 'late sounds must be excluded in automation');
+ assert(!isCloseConveyorDistractor(word('not-confusable','Слоги',['ш']),early),
+  'late sound is not automatically an acoustically close incorrect card');
+ const whistling:Learning={...initialLearning,mode:'automation',sounds:['с']};
+ assert(defaultOpposition('с').includes('р'), 'early sonors may be unmastered');
+ assert(!isCloseConveyorDistractor(word('sonor','Слоги',['р']),whistling));
+ assert(isCloseConveyorDistractor(word('sibilant','Слоги',['ж']),whistling));
+});
+
 test('lexical distractors come mostly from adjacent topics, not unrelated vocabulary',()=>{
  const cfg:Learning={...initialLearning,mode:'lexical',categoryPaths:['Животный мир/Домашние животные']};
  const positives=Array.from({length:16},(_,i)=>word('домашнее'+i));

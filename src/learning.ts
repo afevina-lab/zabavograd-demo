@@ -131,10 +131,17 @@ const additionalConfusions:Record<string,string[]>={
  'с':['ж'], "с'":['ж'],
  'з':['ш',"ч'","щ'"], "з'":['ш',"ч'","щ'"]
 };
+/** Similar sounds used for close Conveyor distractors. Ontogenetic exclusions
+ * are deliberately NOT included: an unmastered sound need not be confusable.
+ */
+export function typicalConfusions(sound:string):string[]{
+ const pairs=[...(soundConfusions[sound]||[]),...(additionalConfusions[sound]||[])];
+ if(groups['Шипящие'].includes(sound))pairs.push(...groups['Свистящие']);
+ return [...new Set(pairs)].filter(s=>s!==sound);
+}
 export function defaultOpposition(sound:string):string[]{
- const suggested=[...(soundConfusions[sound]||[]),...(additionalConfusions[sound]||[])];
+ const suggested=typicalConfusions(sound);
  if(groups['Свистящие'].includes(sound))suggested.push('р',"р'",'л');
- if(groups['Шипящие'].includes(sound))suggested.push(...groups['Свистящие']);
  // Early: vowels and consonants in the early group. Late: sibilants,
  // affricates and sonorants, including Й in the project-specific grouping.
  if(groups['Ранний онтогенез'].includes(sound)||groups['Гласные'].includes(sound)){
