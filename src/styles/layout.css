@@ -711,3 +711,13 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .sound-picker-actions>.primary{white-space:normal;text-align:left}
 @media(max-width:650px){.app.game-active .play-toolbar.shared-toolbar{gap:5px!important}.toolbar-left{gap:4px}.toolbar-centre{gap:3px;font-size:11px}.toolbar-centre .counters{flex-direction:column;gap:0!important}.toolbar-centre .lesson-tag{display:none}.sound-workshop-body{grid-template-columns:1fr}.sound-editor{position:static}.quantity-slider>div{gap:5px;grid-template-columns:36px minmax(60px,1fr) 36px 52px}.quantity-slider input[type=number]{width:52px!important}}
 .conveyor-card:has(small){grid-template-rows:minmax(0,1fr) auto}.conveyor-card small{font-size:clamp(12px,1.4vw,19px);line-height:1.2}
+
+/* Shared SoundPicker: target sounds and exclusions are independent groups. */
+.sound-exclusions{grid-column:1/-1;padding-top:16px;border-top:1px solid var(--ui-outline)}
+.sound-exclusion-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.sound-exclusion-heading h3{margin:0 0 6px}
+.sound-exclusion-heading button{width:auto;min-height:40px}
+.sound-exclusion-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px}
+.sound-exclusion-groups>section{min-width:0}
+.sound-exclusions .sound-chip-row button:disabled{opacity:.38;cursor:not-allowed}
+.sound-workshop .sound-exclusions h3{font-size:15px}

@@ -6,7 +6,7 @@ export const groups:Record<string,string[]>={'Ранний онтогенез':[
 export const positions=['начало','середина','конец','после согласного','перед согласным','несколько вхождений'];
 export type SoundOccurrence=MaterialSoundOccurrence;
 export type SoundRule={allowAssimilation?:boolean;positions:string[];clusters:string[]|null;clusterDirections?:('before'|'after')[];atLeastTwo?:boolean;searchClusters?:'any'|'only'|'without'};
-export type Learning={targetSlots?:Partial<Record<Pattern,number[]>>;reading?:Partial<ReadingOptions>;contentKinds?:ContentKind[];syllablePatterns?:Pattern[];categoryPaths?:string[];mode:'any'|'lexical'|'automation'|'differentiation'|'structure'|'search'|'reading';searchTarget?:'sound'|'letter';sounds:string[];rules:Record<string,SoundRule>;preferShared:boolean;excludedSounds?:string[];topics?:string[];subtopics?:Record<string,string[]>;additional?:{learning:Learning;filters:Filters}[];exclusions?:{learning:Learning;filters:Filters}[]};
+export type Learning={targetSlots?:Partial<Record<Pattern,number[]>>;reading?:Partial<ReadingOptions>;contentKinds?:ContentKind[];syllablePatterns?:Pattern[];categoryPaths?:string[];mode:'any'|'lexical'|'automation'|'differentiation'|'structure'|'search'|'reading';searchTarget?:'sound'|'letter';sounds:string[];rules:Record<string,SoundRule>;preferShared:boolean;excludedSounds?:string[];exclusionsEdited?:boolean;topics?:string[];subtopics?:Record<string,string[]>;additional?:{learning:Learning;filters:Filters}[];exclusions?:{learning:Learning;filters:Filters}[]};
 export const initialLearning:Learning={mode:'any',sounds:[],rules:{},preferShared:false,excludedSounds:[]};
 export const defaultSoundRule=(mode:Learning['mode']):SoundRule=>({
   positions:mode==='search'?['начало','середина','конец']:['начало','середина','конец','стечения'],
@@ -72,24 +72,70 @@ function matchesMaterial(w:Word,f:Filters,l:Learning):boolean {
 }
 export function learningPool(words:Word[],f:Filters,l:Learning,automatic=true){const candidates=materialCandidates(words,l).filter(w=>matchesMaterial(w,f,l)).map(w=>l.mode==='lexical'?{...w,weight:materialWeight(w,true)}:w).filter(w=>!automatic||canSelectAutomatically(w));
  const seen=new Set<string>();return candidates.filter(w=>{const key=w.id;if(seen.has(key))return false;seen.add(key);return true;});}
-export function balancedPick(pool:Word[],count:number,l:Learning,rng=Math.random){if(!['automation','differentiation'].includes(l.mode)||l.sounds.length<2)return pickWords(pool,count,rng);const left=pool.filter(canSelectAutomatically).slice();if(left.length<count)throw Error('Недостаточно слов');const credits=Object.fromEntries(l.sounds.map(s=>[s,0]));const result:Word[]=[];while(result.length<count){const available=l.sounds.filter(s=>left.some(w=>matchesSound(w,s,l)));const min=Math.min(...available.map(s=>credits[s]));const targets=available.filter(s=>credits[s]===min);let candidates=left.filter(w=>targets.some(s=>matchesSound(w,s,l)));if(l.preferShared){const shared=candidates.filter(w=>l.sounds.filter(s=>matchesSound(w,s,l)).length>1);if(shared.length)candidates=shared;}const word=pickWords(candidates,1,rng)[0];result.push(word);left.splice(left.findIndex(w=>w.id===word.id),1);const covered=l.sounds.filter(s=>matchesSound(word,s,l));for(const s of covered)credits[s]+=1/covered.length;}return result;}
+/** Keep words and generated syllables near 50:50 whenever both kinds are enabled.
+ * Reallocate only when one eligible kind is genuinely too small; do not repeat IDs.
+ */
+export function balancedPick(pool:Word[],count:number,l:Learning,rng=Math.random):Word[]{
+ if(contentKinds(l).includes('words')&&contentKinds(l).includes('syllables')){
+  const words=pool.filter(w=>w.materialKind!=='syllables');
+  const syllables=pool.filter(w=>w.materialKind==='syllables');
+  const syllableCount=Math.min(syllables.length,Math.max(count-words.length,Math.round(count/2)));
+  if(syllableCount>0&&syllableCount<count){
+   const selected=[...soundBalancedPick(words,count-syllableCount,l,rng),...soundBalancedPick(syllables,syllableCount,l,rng)];
+   for(let i=selected.length-1;i>0;i--){const j=Math.min(i,Math.floor(rng()*(i+1)));[selected[i],selected[j]]=[selected[j],selected[i]];}
+   return selected;
+  }
+ }
+ return soundBalancedPick(pool,count,l,rng);
+}
+function soundBalancedPick(pool:Word[],count:number,l:Learning,rng=Math.random){if(!['automation','differentiation'].includes(l.mode)||l.sounds.length<2)return pickWords(pool,count,rng);const left=pool.filter(canSelectAutomatically).slice();if(left.length<count)throw Error('Недостаточно слов');const credits=Object.fromEntries(l.sounds.map(s=>[s,0]));const result:Word[]=[];while(result.length<count){const available=l.sounds.filter(s=>left.some(w=>matchesSound(w,s,l)));const min=Math.min(...available.map(s=>credits[s]));const targets=available.filter(s=>credits[s]===min);let candidates=left.filter(w=>targets.some(s=>matchesSound(w,s,l)));if(l.preferShared){const shared=candidates.filter(w=>l.sounds.filter(s=>matchesSound(w,s,l)).length>1);if(shared.length)candidates=shared;}const word=pickWords(candidates,1,rng)[0];result.push(word);left.splice(left.findIndex(w=>w.id===word.id),1);const covered=l.sounds.filter(s=>matchesSound(word,s,l));for(const s of covered)credits[s]+=1/covered.length;}return result;}
 export function layoutRows(count:number,columns:number){const rows=Array(Math.ceil(count/columns)).fill(columns);let missing=rows.length*columns-count;for(let i=0;missing;i++,missing--)rows[i%2===0?rows.length-1-Math.floor(i/2):Math.floor(i/2)]--;return rows;}
 
+/** Typical *possible* phonemic confusions, not a diagnosis for a particular child.
+ * Keep this central: the same suggestions serve selection and Conveyor distractors.
+ * Sources: Russian Ministry of Education methodological guide 07-2627 (2020),
+ * and published logopedic differential-pair guidance (see docs/sound-confusions.md).
+ */
+const soundConfusions:Record<string,string[]>={
+ 'а':['о'],'о':['а','у'],'у':['о'],'ы':['и'],'и':['ы'],
+ 'м':["м'",'н'],"м'":['м',"н'"],'н':["н'",'м'],"н'":['н',"м'"],
+ 'п':["п'",'б'],"п'":['п',"б'"],'б':["б'",'п'],"б'":['б',"п'"],
+ 'т':["т'",'д','ц'],"т'":['т',"д'","ч'"],
+ 'д':["д'",'т'],"д'":['д',"т'"],
+ 'к':["к'",'г','х'],"к'":['к',"г'","х'"],
+ 'г':["г'",'к'],"г'":['г',"к'"],
+ 'х':["х'",'к'],"х'":['х',"к'"],
+ 'в':["в'",'ф','л'],"в'":['в',"ф'","л'"],
+ 'ф':["ф'",'в','с'],"ф'":['ф',"в'","с'"],
+ 'с':["с'",'з','ш','ц',"щ'",'ф'],
+ "с'":['с',"з'",'ц',"щ'","ч'","ф'"],
+ 'з':["з'",'с','ж'],
+ "з'":['з',"с'","ж"],
+ 'ц':['с',"с'","ч'",'т'],
+ 'ш':['с','ж',"щ'","ч'"],
+ 'ж':['з','ш',"щ'"],
+ "ч'":["т'","щ'",'ц',"с'"],
+ "щ'":["с'",'ш',"ч'"],
+ "й'":["л'",'р',"р'"],
+ 'р':["р'",'л',"л'","й'"],
+ "р'":['р','л',"л'","й'"],
+ 'л':["л'",'р',"р'",'в',"в'","й'"],
+ "л'":['л','р',"р'","й'","в'"]
+};
 export function defaultOpposition(sound:string):string[]{
- if(['р',"р'"].includes(sound))return ['р',"р'",'л',"л'","й'"].filter(s=>s!==sound);
- if(['л',"л'"].includes(sound))return ['р',"р'",'л',"л'"].filter(s=>s!==sound);
- if(groups['Свистящие'].includes(sound))return groups['Шипящие'];
- if(groups['Шипящие'].includes(sound))return groups['Свистящие'];
- return [];
+ return (soundConfusions[sound]||[]).filter(s=>s!==sound);
 }
 
-/** Preserve user-selected forbidden phonemes when the automation target changes.
- * A sound can never be both a selected target and an active exclusion.
+/** Suggested exclusions follow the selected target(s) until the teacher edits them.
+ * Explicit exclusions must not be silently restored after a teacher unchecks them.
  */
 export function changeTargetSound(l:Learning,sound:string,checked:boolean):Learning{
  const sounds=checked?(l.mode==='automation'?[sound]:[...new Set([...l.sounds,sound])]):l.sounds.filter(s=>s!==sound);
- const retainedExclusions=(l.excludedSounds||[]).filter(s=>!sounds.includes(s));
- return {...l,sounds,excludedSounds:l.mode==='automation'&&checked&&!retainedExclusions.length?defaultOpposition(sound):retainedExclusions};
+ // Undefined means legacy state: explicit existing exclusions are manual.
+ // False marks recommendations computed by the picker, not user edits.
+ const manual=l.exclusionsEdited===true||(l.exclusionsEdited===undefined&&Boolean(l.excludedSounds?.length));
+ const excludedSounds=(manual?(l.excludedSounds||[]):[...new Set(sounds.flatMap(defaultOpposition))]).filter(s=>!sounds.includes(s));
+ return {...l,sounds,excludedSounds,exclusionsEdited:manual};
 }
 export function confirmSoundSelection(draft:Learning):Learning{
  const sounds=[...new Set(draft.sounds)];
