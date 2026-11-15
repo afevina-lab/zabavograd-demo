@@ -20,6 +20,7 @@ test('methodological suggestions are a separate editable exclusion set',()=>{
  const manual=changeTargetSound({...second,exclusionsEdited:true,excludedSounds:["в'"]},'р',false);
  assert.deepEqual(manual.excludedSounds,["в'"]);
  assert(defaultOpposition('с').includes('ш'));
+ assert(defaultOpposition('с').includes('ф'), 'labiodental S–F confusion is possible');
  assert(defaultOpposition('ж').includes('з'));
  assert(defaultOpposition('ф').includes('в'));
 });
