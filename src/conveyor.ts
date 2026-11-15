@@ -1,5 +1,7 @@
 import type {Word} from './material-types.ts';
 import {alphabet} from './reading.ts';
+import {balancedPick,containsExcludedSound,defaultOpposition,type Learning} from './learning.ts';
+import {distinctCaptions} from './material-policy.ts';
 export type ConveyorLevel='easy'|'medium'|'hard';
 export type ConveyorCard={id:string;text:string;word?:Word;expected:boolean;original?:string};
 export type MovingCard={card:ConveyorCard;position:number;answered:boolean;correct?:boolean;exitSpeed?:number};
@@ -42,6 +44,50 @@ export function corruptWord(word:string,edits:1|2,kind:'omit'|'insert'|'replace'
  }
  return null;
 }
+/** Incorrect cards must never be more than 40% in Conveyor. */
+export function conveyorIncorrectCount(count:number){return Math.floor(Math.max(0,count)*.4);}
+export function conveyorConditions(count:number,conditional:boolean,rng=Math.random):boolean[]{
+ const invalid=conditional?conveyorIncorrectCount(count):0;
+ const flags=Array.from({length:count},(_,i)=>i>=invalid);
+ for(let i=flags.length-1;i>0;i--){const j=Math.min(i,Math.floor(rng()*(i+1)));[flags[i],flags[j]]=[flags[j],flags[i]];}
+ return flags;
+}
+export function isCloseConveyorDistractor(word:Word,learning:Learning):boolean{
+ if(['automation','differentiation','search'].includes(learning.mode)){
+  const confusions=[...new Set(learning.sounds.flatMap(defaultOpposition))].filter(s=>!learning.sounds.includes(s));
+  return confusions.some(s=>containsExcludedSound(word,s));
+ }
+ if(learning.mode==='lexical'){
+  const targets=learning.categoryPaths?.length?learning.categoryPaths:(learning.topics||[]);
+  const paths=word.categories?.length?word.categories:(word.topic?[word.topic]:[]);
+  return paths.some(path=>targets.some(target=>path!==target&&path.split('/')[0]===target.split('/')[0]));
+ }
+ return false;
+}
+/** At least 70% of the negative slots come from close contrasts when available.
+ * Positive and negative items cannot repeat an ID or displayed caption.
+ */
+export function materialConveyorDeck(positives:Word[],negatives:Word[],count:number,learning:Learning,rng=Math.random):ConveyorCard[]{
+ const yes=distinctCaptions(positives),no=distinctCaptions(negatives);
+ let invalid=Math.min(conveyorIncorrectCount(count),no.length);
+ if(yes.length<count-invalid)invalid=Math.max(0,count-yes.length);
+ if(invalid>conveyorIncorrectCount(count)||no.length<invalid)throw Error('Недостаточно подходящих карточек для Конвейера.');
+ const valid=balancedPick(yes,count-invalid,learning,rng);
+ const validLabels=new Set(valid.map(w=>w.label.toLocaleLowerCase('ru')));
+ const wrongPool=no.filter(w=>!validLabels.has(w.label.toLocaleLowerCase('ru')));
+ if(wrongPool.length<invalid)throw Error('Недостаточно разных неподходящих карточек для Конвейера.');
+ const near=wrongPool.filter(w=>isCloseConveyorDistractor(w,learning));
+ const mixedLearning:Learning={...learning,mode:'any',sounds:[]};
+ const closeCount=Math.min(Math.ceil(invalid*.7),near.length);
+ const chosenClose=balancedPick(near,closeCount,mixedLearning,rng);
+ const closeIds=new Set(chosenClose.map(w=>w.id));
+ const other=balancedPick(wrongPool.filter(w=>!closeIds.has(w.id)),invalid-closeCount,mixedLearning,rng);
+ const incorrect=[...chosenClose,...other];
+ const flags=conveyorConditions(count,true,rng);
+ let good=0,bad=0;
+ return flags.map((expected,i)=>{const word=expected?valid[good++]:incorrect[bad++];return {id:'word-'+i,text:word.label,word,original:word.label,expected};});
+}
 export function arithmeticDeck(count:number,max:number,conditional:boolean,rng=Math.random):ConveyorCard[]{
- return Array.from({length:count},(_,i)=>{const a=Math.floor(rng()*(max+1)),b=Math.floor(rng()*(max-a+1));const subtract=rng()<.5;const result=subtract?a:a+b;const expression=subtract?`${a+b} − ${b}`:`${a} + ${b}`;const expected=!conditional||i%2===0;return {id:'math-'+i,text:conditional?`${expression} = ${expected?result:result+1}`:expression,original:String(result),expected};});
+ const flags=conveyorConditions(count,conditional,rng);
+ return Array.from({length:count},(_,i)=>{const a=Math.floor(rng()*(max+1)),b=Math.floor(rng()*(max-a+1));const subtract=rng()<.5;const result=subtract?a:a+b;const expression=subtract?`${a+b} − ${b}`:`${a} + ${b}`;const expected=flags[i];return {id:'math-'+i,text:conditional?`${expression} = ${expected?result:result+1}`:expression,original:String(result),expected};});
 }
