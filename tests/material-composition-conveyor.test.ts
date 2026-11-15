@@ -46,6 +46,11 @@ test('expanded exclusions cover all sibilants and late sounds without losing man
   assert.equal(suggestions.length,new Set(suggestions).size,'duplicate recommendations for '+target);
   assert(!suggestions.includes(target),'target must not exclude itself: '+target);
  }
+ const sh=changeTargetSound({...initialLearning,mode:'differentiation'},'ш',true);
+ const mixed=changeTargetSound(sh,'с',true);
+ assert(mixed.sounds.includes('ш')&&mixed.sounds.includes('с'));
+ assert(!mixed.excludedSounds!.includes('ш')&&!mixed.excludedSounds!.includes('с'),
+  'target sounds must remain selectable even when each is recommended for excluding the other');
  const start=changeTargetSound({...initialLearning,mode:'automation'},'м',true);
  assert(start.excludedSounds!.includes('ш'));
  const edited=changeTargetSound({...start,exclusionsEdited:true,excludedSounds:['ш']},'м',true);
