@@ -131,9 +131,11 @@ export function defaultOpposition(sound:string):string[]{
  */
 export function changeTargetSound(l:Learning,sound:string,checked:boolean):Learning{
  const sounds=checked?(l.mode==='automation'?[sound]:[...new Set([...l.sounds,sound])]):l.sounds.filter(s=>s!==sound);
- const manual=Boolean(l.exclusionsEdited||(l.excludedSounds?.length&&!l.sounds.length));
+ // Undefined means legacy state: explicit existing exclusions are manual.
+ // False marks recommendations computed by the picker, not user edits.
+ const manual=l.exclusionsEdited===true||(l.exclusionsEdited===undefined&&Boolean(l.excludedSounds?.length));
  const excludedSounds=(manual?(l.excludedSounds||[]):[...new Set(sounds.flatMap(defaultOpposition))]).filter(s=>!sounds.includes(s));
- return {...l,sounds,excludedSounds};
+ return {...l,sounds,excludedSounds,exclusionsEdited:manual};
 }
 export function confirmSoundSelection(draft:Learning):Learning{
  const sounds=[...new Set(draft.sounds)];
