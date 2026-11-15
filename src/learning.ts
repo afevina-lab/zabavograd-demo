@@ -122,8 +122,25 @@ const soundConfusions:Record<string,string[]>={
  'л':["л'",'р',"р'",'в',"в'","й'"],
  "л'":['л','р',"р'","й'","в'"]
 };
+// Suggestions for automatic selection, not a universal diagnosis. Teachers can
+// edit any exclusion without having it silently restored.
+const lateOntogenesisSounds=[
+ ...groups['Свистящие'],...groups['Шипящие'],...groups['Соноры']
+];
+const additionalConfusions:Record<string,string[]>={
+ 'с':['ж'], "с'":['ж'],
+ 'з':['ш',"ч'","щ'"], "з'":['ш',"ч'","щ'"]
+};
 export function defaultOpposition(sound:string):string[]{
- return (soundConfusions[sound]||[]).filter(s=>s!==sound);
+ const suggested=[...(soundConfusions[sound]||[]),...(additionalConfusions[sound]||[])];
+ if(groups['Свистящие'].includes(sound))suggested.push('р',"р'",'л');
+ if(groups['Шипящие'].includes(sound))suggested.push(...groups['Свистящие']);
+ // Early: vowels and consonants in the early group. Late: sibilants,
+ // affricates and sonorants, including Й in the project-specific grouping.
+ if(groups['Ранний онтогенез'].includes(sound)||groups['Гласные'].includes(sound)){
+  suggested.push(...lateOntogenesisSounds);
+ }
+ return [...new Set(suggested)].filter(s=>s!==sound);
 }
 
 /** Suggested exclusions follow the selected target(s) until the teacher edits them.

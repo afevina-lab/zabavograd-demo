@@ -25,6 +25,33 @@ test('methodological suggestions are a separate editable exclusion set',()=>{
  assert(defaultOpposition('ф').includes('в'));
 });
 
+test('expanded exclusions cover all sibilants and late sounds without losing manual control',()=>{
+ // Broad developmental defaults can be adjusted by the teacher per child.
+ for(const target of ['з',"з'"]){
+  for(const s of ['ш',"ч'","щ'"])assert(defaultOpposition(target).includes(s),target+' / '+s);
+ }
+ for(const target of ['с',"с'"])assert(defaultOpposition(target).includes('ж'),target);
+ for(const target of ['с',"с'",'з',"з'",'ц']){
+  for(const s of ['р',"р'",'л'])assert(defaultOpposition(target).includes(s),target+' / '+s);
+ }
+ for(const target of ['ш','ж',"ч'","щ'"]){
+  for(const s of ['с',"с'",'з',"з'",'ц'])assert(defaultOpposition(target).includes(s),target+' / '+s);
+ }
+ const late=['с',"с'",'з',"з'",'ц','ш','ж',"ч'","щ'","й'",'р',"р'",'л',"л'"];
+ const early=['а','о','у','ы','э','и','м',"м'",'н',"н'",'п',"п'",'б',"б'",
+  'т',"т'",'д',"д'",'к',"к'",'г',"г'",'х',"х'",'в',"в'",'ф',"ф'"];
+ for(const target of early){
+  const suggestions=defaultOpposition(target);
+  for(const sound of late)assert(suggestions.includes(sound),target+' / '+sound);
+  assert.equal(suggestions.length,new Set(suggestions).size,'duplicate recommendations for '+target);
+  assert(!suggestions.includes(target),'target must not exclude itself: '+target);
+ }
+ const start=changeTargetSound({...initialLearning,mode:'automation'},'м',true);
+ assert(start.excludedSounds!.includes('ш'));
+ const edited=changeTargetSound({...start,exclusionsEdited:true,excludedSounds:['ш']},'м',true);
+ assert.deepEqual(edited.excludedSounds,['ш'],'manual exclusions must not be reset');
+});
+
 test('50/50 words and syllables with no repeated IDs, graceful shortage fallback',()=>{
  const pool=[...Array.from({length:15},(_,i)=>word('слово'+i)),
    ...Array.from({length:15},(_,i)=>word('слог'+i,'Слоги',['л'],'syllables'))];
