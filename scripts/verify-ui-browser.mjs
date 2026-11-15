@@ -153,7 +153,7 @@ try{
     await pickCategory(0,'Животный мир');
     await pickCategory(1,'Животный мир'); // undo inherited category in group 2
     await pickCategory(1,'Растительный мир');
-    await evaluate(`(()=>{const labels=[...document.querySelectorAll('.sort-settings label')];for(const [prefix,value] of [['Элементов','6'],['Показ карточек','all']]){const label=labels.find(e=>e.textContent.startsWith(prefix));const select=label?.querySelector('select');if(!select)throw Error('Missing setting '+prefix);Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(select,value);select.dispatchEvent(new Event('change',{bubbles:true}));}})()`);
+    await evaluate(`(()=>{const labels=[...document.querySelectorAll('.sort-settings label')];for(const [prefix,value] of [['Элементов','6'],['Показ карточек','all']]){const label=labels.find(e=>e.textContent.startsWith(prefix));const select=label?.querySelector('select')||document.getElementById(label?.getAttribute('for'));if(!select)throw Error('Missing setting '+prefix);const proto=select.tagName==='SELECT'?HTMLSelectElement.prototype:HTMLInputElement.prototype;Object.getOwnPropertyDescriptor(proto,'value').set.call(select,value);select.dispatchEvent(new Event(select.tagName==='SELECT'?'change':'input',{bubbles:true}));}})()`);
     await sleep(300);
     const summary=await evaluate("document.querySelector('.sort-settings>[role=status]')?.textContent||document.querySelector('.sort-settings>p[role=status]')?.textContent");
     await until("!!document.querySelector('.sort-settings>.primary:not(:disabled)')",15000).catch(e=>{throw Error('Sorting default material configuration invalid: '+summary+'; '+e.message)});
@@ -272,6 +272,23 @@ try{
     assert(await evaluate("document.documentElement.scrollWidth<=innerWidth+2&&document.documentElement.scrollHeight<=innerHeight+2"),'Conveyor must fit viewport');
     await screenshot('conveyor-'+width+'x'+height);
   }
+  await cmd('Emulation.setDeviceMetricsOverride',{width:1440,height:900,deviceScaleFactor:1,mobile:false});
+  await cmd('Page.navigate',{url:origin});
+  await until("!!document.querySelector('.settings select[aria-label=\"Учебная задача\"]')");
+  await evaluate(`(()=>{const select=document.querySelector('.settings select[aria-label="Учебная задача"]');Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(select,'automation');select.dispatchEvent(new Event('change',{bubbles:true}));})()`);
+  await until("!!document.querySelector('.sound-selection')");
+  await evaluate("[...document.querySelectorAll('.sound-selection>button')][0].click()");
+  await until("!!document.querySelector('.sound-workshop[open]')");
+  await evaluate("[...document.querySelectorAll('.sound-bank button')].find(b=>b.textContent==='Р').click()");
+  assert(await evaluate("document.querySelector('.sound-editor').textContent.includes('Позиция')&&!document.querySelector('.sound-workshop details')"),'Sound settings must be immediately accessible');
+  await evaluate("[...document.querySelectorAll('.sound-picker-actions button')].find(b=>b.textContent==='Отмена').click()");
+  assert(await evaluate("document.querySelectorAll('.selected-sounds button').length===0"),'Cancel must discard sound edits');
+  await evaluate("document.querySelector('.sound-selection>button').click()");
+  await evaluate("[...document.querySelectorAll('.sound-bank button')].find(b=>b.textContent==='Р').click()");
+  assert(await evaluate("document.querySelector('.sound-picker-actions .primary').textContent.includes('Р')"),'Confirmation must name chosen sound');
+  await screenshot('sound-workshop-open-1440x900');
+  await evaluate("document.querySelector('.sound-picker-actions .primary').click()");
+  assert(await evaluate("!!document.querySelector('.selected-sounds button')&&!document.querySelector('.sound-workshop[open]')"),'Sound selection must commit');
   writeFileSync(join(output,'report.json'),JSON.stringify({memory:results,sorting,failedRequests:failures},null,2));
   assert.equal(failures.length,0,failures.join('\n'));
   console.log('Verified browser UI:',JSON.stringify(results.map(x=>({theme:x.theme,viewport:x.viewport,stage:x.stage,cardCount:x.cards})),null,2));

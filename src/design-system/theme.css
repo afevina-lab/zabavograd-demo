@@ -223,3 +223,11 @@
 .app[data-theme] .zg-scene-sprite>img{display:block;width:100%;height:auto;pointer-events:none}
 
 .app[data-theme] .conveyor-card{background:var(--ui-paper) var(--zg-card-front-image) center/100% 100% no-repeat;border-color:var(--ui-outline);color:var(--ui-text)}
+
+/* Shared workshop surfaces use approved theme palettes, without plain white fields. */
+.app[data-theme] .settings-block,.app[data-theme] .sound-bank>section{background:color-mix(in srgb,var(--ui-pale) 55%,var(--ui-paper));border:1px solid var(--ui-outline);border-radius:18px;padding:14px}
+.app[data-theme] .sound-workshop{background:var(--ui-paper);color:var(--ui-text);border:2px solid var(--ui-outline);box-shadow:0 16px 60px #17213855}
+.app[data-theme] .sound-editor{background:var(--ui-pale);border:1px solid var(--ui-outline)}
+.app[data-theme] .sound-chip-row button,.app[data-theme] .selected-sounds button{background:var(--ui-paper);color:var(--ui-text);border:1px solid var(--ui-outline);box-shadow:0 3px 0 var(--ui-outline)}
+.app[data-theme] .sound-chip-row button[aria-pressed=true]{background:var(--ui-pale);outline:2px solid var(--ui-deep);transform:translateY(-2px)}
+.app[data-theme] .settings input:not([type=checkbox]):not([type=range]),.app[data-theme] .settings select{background:color-mix(in srgb,var(--ui-paper) 80%,var(--ui-pale));color:var(--ui-text);border-color:var(--ui-outline)}
