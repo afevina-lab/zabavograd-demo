@@ -25,6 +25,38 @@ test('methodological suggestions are a separate editable exclusion set',()=>{
  assert(defaultOpposition('ф').includes('в'));
 });
 
+test('expanded exclusions cover all sibilants and late sounds without losing manual control',()=>{
+ // Broad developmental defaults can be adjusted by the teacher per child.
+ for(const target of ['з',"з'"]){
+  for(const s of ['ш',"ч'","щ'"])assert(defaultOpposition(target).includes(s),target+' / '+s);
+ }
+ for(const target of ['с',"с'"])assert(defaultOpposition(target).includes('ж'),target);
+ for(const target of ['с',"с'",'з',"з'",'ц']){
+  for(const s of ['р',"р'",'л'])assert(defaultOpposition(target).includes(s),target+' / '+s);
+ }
+ for(const target of ['ш','ж',"ч'","щ'"]){
+  for(const s of ['с',"с'",'з',"з'",'ц'])assert(defaultOpposition(target).includes(s),target+' / '+s);
+ }
+ const late=['с',"с'",'з',"з'",'ц','ш','ж',"ч'","щ'","й'",'р',"р'",'л',"л'"];
+ const early=['а','о','у','ы','э','и','м',"м'",'н',"н'",'п',"п'",'б',"б'",
+  'т',"т'",'д',"д'",'к',"к'",'г',"г'",'х',"х'",'в',"в'",'ф',"ф'"];
+ for(const target of early){
+  const suggestions=defaultOpposition(target);
+  for(const sound of late)assert(suggestions.includes(sound),target+' / '+sound);
+  assert.equal(suggestions.length,new Set(suggestions).size,'duplicate recommendations for '+target);
+  assert(!suggestions.includes(target),'target must not exclude itself: '+target);
+ }
+ const sh=changeTargetSound({...initialLearning,mode:'differentiation'},'ш',true);
+ const mixed=changeTargetSound(sh,'с',true);
+ assert(mixed.sounds.includes('ш')&&mixed.sounds.includes('с'));
+ assert(!mixed.excludedSounds!.includes('ш')&&!mixed.excludedSounds!.includes('с'),
+  'target sounds must remain selectable even when each is recommended for excluding the other');
+ const start=changeTargetSound({...initialLearning,mode:'automation'},'м',true);
+ assert(start.excludedSounds!.includes('ш'));
+ const edited=changeTargetSound({...start,exclusionsEdited:true,excludedSounds:['ш']},'м',true);
+ assert.deepEqual(edited.excludedSounds,['ш'],'manual exclusions must not be reset');
+});
+
 test('50/50 words and syllables with no repeated IDs, graceful shortage fallback',()=>{
  const pool=[...Array.from({length:15},(_,i)=>word('слово'+i)),
    ...Array.from({length:15},(_,i)=>word('слог'+i,'Слоги',['л'],'syllables'))];
@@ -57,6 +89,17 @@ test('70% of the wrong sound cards use the familiar confusion pair where availab
  assert.equal(wrong.length,4);
  assert(wrong.filter(c=>isCloseConveyorDistractor(c.word!,learning)).length>=3);
  assert.equal(new Set(deck.map(c=>c.word!.id)).size,12);
+});
+
+test('developmental exclusions do not masquerade as confusable conveyor pairs',()=>{
+ const early:Learning={...initialLearning,mode:'automation',sounds:['м']};
+ assert(defaultOpposition('м').includes('ш'), 'late sounds must be excluded in automation');
+ assert(!isCloseConveyorDistractor(word('not-confusable','Слоги',['ш']),early),
+  'late sound is not automatically an acoustically close incorrect card');
+ const whistling:Learning={...initialLearning,mode:'automation',sounds:['с']};
+ assert(defaultOpposition('с').includes('р'), 'early sonors may be unmastered');
+ assert(!isCloseConveyorDistractor(word('sonor','Слоги',['р']),whistling));
+ assert(isCloseConveyorDistractor(word('sibilant','Слоги',['ж']),whistling));
 });
 
 test('lexical distractors come mostly from adjacent topics, not unrelated vocabulary',()=>{
