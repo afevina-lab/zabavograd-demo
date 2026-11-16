@@ -5,11 +5,11 @@ import {canSelectAutomatically,materialWeight} from './material-policy.ts';
 export const groups:Record<string,string[]>={'Ранний онтогенез':['м',"м'",'н',"н'",'п',"п'",'б',"б'",'т',"т'",'д',"д'",'к',"к'",'г',"г'",'х',"х'",'в',"в'",'ф',"ф'"],'Гласные':['а','о','у','ы','э','и'],'Свистящие':['с',"с'",'з',"з'",'ц'],'Шипящие':['ш','ж',"ч'","щ'"],'Соноры':["й'",'р',"р'",'л',"л'"]};
 export const positions=['начало','середина','конец','после согласного','перед согласным','несколько вхождений'];
 export type SoundOccurrence=MaterialSoundOccurrence;
-export type SoundRule={allowAssimilation?:boolean;positions:string[];clusters:string[]|null;clusterDirections?:('before'|'after')[];atLeastTwo?:boolean;searchClusters?:'any'|'only'|'without'};
+export type SoundRule={allowAssimilation?:boolean;positions:string[];clusters:string[]|null;clusterDirections?:('before'|'after')[];atLeastTwo?:boolean;excludeMultiple?:boolean;searchClusters?:'any'|'only'|'without'};
 export type Learning={targetSlots?:Partial<Record<Pattern,number[]>>;reading?:Partial<ReadingOptions>;contentKinds?:ContentKind[];syllablePatterns?:Pattern[];categoryPaths?:string[];mode:'any'|'lexical'|'automation'|'differentiation'|'structure'|'search'|'reading';searchTarget?:'sound'|'letter';sounds:string[];rules:Record<string,SoundRule>;preferShared:boolean;excludedSounds?:string[];topics?:string[];subtopics?:Record<string,string[]>;additional?:{learning:Learning;filters:Filters}[];exclusions?:{learning:Learning;filters:Filters}[]};
 export const initialLearning:Learning={mode:'any',sounds:[],rules:{},preferShared:false,excludedSounds:[]};
 export const defaultSoundRule=(mode:Learning['mode']):SoundRule=>({
-  positions:mode==='search'?['начало','середина','конец']:['начало','середина','конец','стечения'],
+  positions:mode==='search'?['начало','середина','конец']:['начало','середина','конец','после согласного','перед согласным'],
   clusters:null,clusterDirections:['before','after'],atLeastTwo:false,searchClusters:'any'
 });
 const hasCluster=(o:SoundOccurrence)=>Boolean(o.before||o.after);
@@ -33,6 +33,7 @@ export function matchesSound(w:Word,s:string,learning:Learning):boolean{
   const all=w.sounds?.[s]||[];
   const occurrences=searching?all:all.filter(o=>validForAutomation(o)||(rule.allowAssimilation&&o.eligibility==='before_soft_consonant'));
   if(rule.atLeastTwo&&occurrences.length<2)return false;
+ if(rule.excludeMultiple&&all.length>=2)return false;
   if(searching){
     // Position is independent of consonant clusters for pure sound search.
     return occurrences.some(o=>{

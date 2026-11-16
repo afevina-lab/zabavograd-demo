@@ -59,7 +59,7 @@ const categoryPaths=new Set(v.categories.map(c=>c.path));
 for(const c of v.categories){
  for(const parent of c.parent_paths)assert(categoryPaths.has(parent),'Missing category parent '+c.path+' -> '+parent);
 }
-const auxOnly=new Set(['телёнок','поросёнок','жеребёнок','львица','селезень','жеребец','улыбка','слеза']);
+const auxOnly=new Set(['львица','селезень','жеребец','улыбка','слеза']);
 for(const lemma of auxOnly){
  const e=v.entries.find(x=>x.lemma===lemma);
  assert(e,'Missing auxiliary lemma '+lemma);
@@ -246,3 +246,6 @@ if(v.provenance.attribute_lexicon_20261109){
  assert.equal(new Set(added.map(e=>e.lemma)).size,added.length,'Duplicate attribute lemma');
  assert.equal(v.relations.filter(r=>r.id.startsWith('semantic-attribute-20261109-')).length,q.created_relations,'Attribute relations lost');
 }
+
+for(const lemma of ['телёнок','поросёнок','жеребёнок'])assert(word(lemma).categories.some(c=>c.path==='Животный мир/Домашние животные/Детёныши'));
+assert(word('лисёнок').categories.every(c=>!c.path.includes('Домашние')));

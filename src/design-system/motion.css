@@ -154,8 +154,8 @@
 @keyframes zg-cloud-drift{from{transform:translate(-5%,-4%) scale(1)}to{transform:translate(9%,7%) scale(1.15)}}
 @media(prefers-reduced-motion:reduce){.app[data-theme] .zg-scene-sprite[data-zg-motion=cloud]{animation:none!important}}
 
-.conveyor-correct{animation:zg-conveyor-correct var(--zg-flip-duration) ease-out both}
-.conveyor-wrong{animation:zg-conveyor-wrong var(--zg-mismatch-duration) ease-in-out both}
-@keyframes zg-conveyor-correct{from{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.12);filter:drop-shadow(0 0 12px #ffe7a5)}to{transform:translate(-50%,-50%) scale(.9);opacity:0}}
+.conveyor-correct{animation:zg-conveyor-correct 650ms ease-out both}
+.conveyor-wrong{animation:zg-conveyor-wrong 650ms ease-in-out both}
+@keyframes zg-conveyor-correct{from{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.12);filter:drop-shadow(0 0 12px #ffe7a5)}to{transform:translate(-50%,-50%) scale(1);opacity:1}}
 @keyframes zg-conveyor-wrong{0%,100%{transform:translate(-50%,-50%) rotate(0)}25%{transform:translate(-50%,-50%) rotate(-6deg)}75%{transform:translate(-50%,-50%) rotate(6deg)}}
 @media(prefers-reduced-motion:reduce){.conveyor-correct,.conveyor-wrong{animation:none!important}}

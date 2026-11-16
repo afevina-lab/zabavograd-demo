@@ -1727,6 +1727,20 @@
     {
       "path": "Обобщающие понятия",
       "parent_paths": []
+    },
+    {
+      "path": "Животный мир/Домашние животные/Детёныши",
+      "parent_paths": [
+        "Животный мир",
+        "Животный мир/Домашние животные"
+      ]
+    },
+    {
+      "path": "Животный мир/Дикие животные/Детёныши",
+      "parent_paths": [
+        "Животный мир",
+        "Животный мир/Дикие животные"
+      ]
     }
   ],
   "relations": [
@@ -123798,8 +123812,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Домашние животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -203789,8 +203803,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Дикие животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -204262,8 +204276,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Дикие животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -204960,8 +204974,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Домашние животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -206037,8 +206051,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Дикие животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -209852,8 +209866,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Дикие животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -210657,8 +210671,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Домашние животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -211452,8 +211466,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Дикие животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -214518,8 +214532,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Домашние животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -215361,8 +215375,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Домашние животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -215721,8 +215735,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Домашние животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -217640,8 +217654,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Дикие животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -218093,8 +218107,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Дикие животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -218566,8 +218580,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Дикие животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -219521,8 +219535,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Дикие животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -222397,8 +222411,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Дикие животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -223253,8 +223267,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Домашние животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -229728,8 +229742,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Дикие животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -232806,8 +232820,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Домашние животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -233155,8 +233169,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Дикие животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -237650,8 +237664,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Домашние животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {
@@ -237936,8 +237950,8 @@
       },
       "categories": [
         {
-          "path": "Животный мир/Вспомогательные/Детёныши",
-          "default_selection": false
+          "path": "Животный мир/Домашние животные/Детёныши",
+          "default_selection": true
         }
       ],
       "phonetic_tags": {

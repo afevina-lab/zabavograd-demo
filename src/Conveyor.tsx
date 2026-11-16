@@ -1,3 +1,4 @@
+import {MOTION} from './design-system/motion.ts';
 import {QuantitySlider} from './QuantitySlider.tsx';
 import {GameToolbar} from './GameToolbar.tsx';
 import {starsForScore} from './result-score.ts';
@@ -48,7 +49,7 @@ export function Conveyor(){
   let frame=0,last=0;const move=(now:number)=>{const elapsed=last?(now-last)/1000:0;if(last)setState(s=>s?stepConveyor(s,deck,level,elapsed,condition!=='none'):s);last=now;frame=requestAnimationFrame(move)};frame=requestAnimationFrame(move);return()=>cancelAnimationFrame(frame);
  },[Boolean(state),state?.finished,paused,deck,level,condition]);
  useEffect(()=>{const handler=()=>{if(document.hidden)setPaused(true)};document.addEventListener('visibilitychange',handler);return()=>document.removeEventListener('visibilitychange',handler)},[]);
- function answer(yes:boolean){const current=latest.current;if(!current||paused||current.finished)return;const active=conveyorTarget(current);if(!active)return;const correct=condition==='none'?yes:yes===active.card.expected;const next=answerConveyor(current,yes,condition!=='none');latest.current=next;setState(next);if(sound){const audio=new Audio(import.meta.env.BASE_URL+'assets/audio/'+soundFile(theme,correct?'match':'wrong'));audio.volume=.35;void audio.play().catch(()=>{})};}
+ function answer(yes:boolean){const current=latest.current;if(!current||paused||current.finished)return;const active=conveyorTarget(current);if(!active)return;const correct=condition==='none'?yes:yes===active.card.expected;const next=answerConveyor(current,yes,condition!=='none',MOTION.conveyorFeedbackMs/1000);latest.current=next;setState(next);if(sound){const audio=new Audio(import.meta.env.BASE_URL+'assets/audio/'+soundFile(theme,correct?'match':'wrong'));audio.volume=.35;void audio.play().catch(()=>{})};}
  useEffect(()=>{const handler=(e:KeyboardEvent)=>{if((e.target as HTMLElement).closest('input,select,textarea,button')||e.repeat)return;if(e.key==='ArrowRight'){e.preventDefault();answer(true)}if(e.key==='ArrowLeft'){e.preventDefault();answer(false)}};window.addEventListener('keydown',handler);return()=>window.removeEventListener('keydown',handler)});
  const active=state?conveyorTarget(state):undefined;
  return <div className={'app '+(state?'game-active':'')} {...themeAttributes(theme)} style={themeVars(theme,import.meta.env.BASE_URL)}><main>

@@ -100,3 +100,11 @@ test('always-soft consonants are covered, including Й without an apostrophe',()
  for(const sound of ["т'","х'","ч'","щ'",'ч','щ','й'])assert.equal(isSoftConsonant(sound),true,sound);
  for(const sound of ['т','х','с','а'])assert.equal(isSoftConsonant(sound),false,sound);
 });
+
+test('automation and differentiation reject sound-letter substitutions',()=>{
+ for(const mode of ['automation','differentiation'] as const){
+ const l={...initialLearning,mode,sounds:['с'],rules:{}};
+ assert.equal(matchesSound(example('арбуз',['а','р','б','у','с']),'с',l),false);
+ assert.equal(matchesSound(example('счастье',["щ'",'а','с',"т'","й'",'э']),"щ'",l),false);
+ }
+});

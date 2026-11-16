@@ -2,7 +2,7 @@ import type {Word} from './material-types.ts';
 import {alphabet} from './reading.ts';
 export type ConveyorLevel='easy'|'medium'|'hard';
 export type ConveyorCard={id:string;text:string;word?:Word;expected:boolean;original?:string};
-export type MovingCard={card:ConveyorCard;position:number;answered:boolean;correct?:boolean;exitSpeed?:number};
+export type MovingCard={card:ConveyorCard;position:number;answered:boolean;correct?:boolean;feedbackLeft?:number;exitSpeed?:number};
 export type ConveyorState={cards:MovingCard[];next:number;finished:boolean;correct:number;marked:number;missed:number};
 export function conveyorSpeed(level:ConveyorLevel,progress:number,conditional=true){return (level==='easy'?.09:level==='medium'?.035:.065)*(conditional?1:2)*(level==='easy'?1:1+Math.min(.5,Math.max(0,progress)*.5));}
 export function startConveyor(deck:ConveyorCard[]):ConveyorState{return {cards:deck.length?[{card:deck[0],position:0,answered:false}]:[],next:Math.min(1,deck.length),finished:!deck.length,correct:0,marked:0,missed:0};}
@@ -10,16 +10,16 @@ export function stepConveyor(state:ConveyorState,deck:ConveyorCard[],level:Conve
  if(state.finished)return state;
  const speed=conveyorSpeed(level,deck.length<=1?0:(state.next-1)/(deck.length-1),conditional),delta=Math.max(0,Math.min(seconds,.1))*speed;
  let crossed=false,missed=state.missed;
- const cards:MovingCard[]=state.cards.map(item=>{const dt=Math.max(0,Math.min(seconds,.1));const exitSpeed=item.answered?(item.exitSpeed||.25)+dt*3:0;let position=item.position+(item.answered?dt*exitSpeed:delta);if(!item.answered&&item.position<.5&&position>=.5)crossed=true;if(level==='easy'&&!item.answered)position=Math.min(.5,position);return {...item,position,exitSpeed};}).filter(item=>{if(item.position>1.15){if(!item.answered)missed++;return false}return true});
+ const cards:MovingCard[]=state.cards.map(item=>{const dt=Math.max(0,Math.min(seconds,.1));const feedbackLeft=Math.max(0,(item.feedbackLeft||0)-dt);const exitSpeed=item.answered?(item.exitSpeed||.25)+dt*3:0;let position=item.position+(item.answered?(feedbackLeft>0?0:dt*exitSpeed):delta);if(!item.answered&&item.position<.5&&position>=.5)crossed=true;if(level==='easy'&&!item.answered)position=Math.min(.5,position);return {...item,position,exitSpeed,feedbackLeft};}).filter(item=>{if(item.position>1.15){if(!item.answered)missed++;return false}return true});
  let next=state.next;
  if(next<deck.length&&((level!=='easy'&&(crossed||!cards.some(item=>!item.answered&&item.position<.5)))||(level==='easy'&&!cards.length))){cards.push({card:deck[next++],position:0,answered:false});}
  return {...state,cards,next,missed,finished:next===deck.length&&!cards.length};
 }
 export function conveyorTarget(state:ConveyorState){return state.cards.find(item=>!item.answered);}
-export function answerConveyor(state:ConveyorState,yes:boolean,conditional:boolean):ConveyorState{
+export function answerConveyor(state:ConveyorState,yes:boolean,conditional:boolean,feedbackSeconds=0):ConveyorState{
  const target=conveyorTarget(state);if(!target)return state;
  const right=conditional?yes===target.card.expected:yes;
- return {...state,cards:state.cards.map(item=>item===target?{...item,answered:true,correct:right,exitSpeed:.25}:item),marked:state.marked+1,correct:state.correct+Number(right)};
+ return {...state,cards:state.cards.map(item=>item===target?{...item,answered:true,correct:right,feedbackLeft:feedbackSeconds,exitSpeed:.25}:item),marked:state.marked+1,correct:state.correct+Number(right)};
 }
 export function conveyorErrorCount(word:string):1|2{return [...word].length>=7?2:1;}
 function editDistance(a:string,b:string):number{

@@ -711,3 +711,8 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .sound-picker-actions>.primary{white-space:normal;text-align:left}
 @media(max-width:650px){.app.game-active .play-toolbar.shared-toolbar{gap:5px!important}.toolbar-left{gap:4px}.toolbar-centre{gap:3px;font-size:11px}.toolbar-centre .counters{flex-direction:column;gap:0!important}.toolbar-centre .lesson-tag{display:none}.sound-workshop-body{grid-template-columns:1fr}.sound-editor{position:static}.quantity-slider>div{gap:5px;grid-template-columns:36px minmax(60px,1fr) 36px 52px}.quantity-slider input[type=number]{width:52px!important}}
 .conveyor-card:has(small){grid-template-rows:minmax(0,1fr) auto}.conveyor-card small{font-size:clamp(12px,1.4vw,19px);line-height:1.2}
+
+.sound-workshop-body{display:block!important}.sound-bank{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.sound-editor{margin-top:20px}
+@media(max-width:600px){.sound-bank{grid-template-columns:1fr}}
+
+.sort-card{touch-action:none}
