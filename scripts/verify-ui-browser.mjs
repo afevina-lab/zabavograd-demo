@@ -52,6 +52,18 @@ try{
   ws.addEventListener('message',e=>{let m;try{m=JSON.parse(e.data)}catch{return}if(m.method==='Network.responseReceived'&&m.params?.response?.status>=400&&!m.params.response.url.endsWith('/favicon.ico'))failures.push(m.params.response.url+' HTTP '+m.params.response.status)});
   async function until(predicate,timeoutMs=20000){let last;for(let i=0;i<timeoutMs/150;i++){try{last=await evaluate(predicate);if(last)return last;}catch{}await sleep(150)}throw Error('Timed out waiting for '+predicate.slice(0,150)+'; last='+last)}
   async function screenshot(name){const out=await cmd('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});writeFileSync(join(output,name+'.png'),Buffer.from(out.data,'base64'))}
+  async function verifyCardDrag(selector){
+    const before=await evaluate(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});const r=e.getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2,style:e.style.cssText}})()`);
+    await cmd('Input.dispatchMouseEvent',{type:'mouseMoved',x:before.x,y:before.y});
+    await cmd('Input.dispatchMouseEvent',{type:'mousePressed',x:before.x,y:before.y,button:'left',clickCount:1});
+    await cmd('Input.dispatchMouseEvent',{type:'mouseMoved',x:before.x+30,y:before.y+15,button:'left',buttons:1});
+    assert(await evaluate("!!document.querySelector('[data-card-dragging=true]') && getComputedStyle(document.querySelector('[data-card-dragging=true]')).opacity==='1'"),'The original opaque card must follow the pointer');
+    await cmd('Input.dispatchMouseEvent',{type:'mouseMoved',x:2,y:2,button:'left',buttons:1});
+    await cmd('Input.dispatchMouseEvent',{type:'mouseReleased',x:2,y:2,button:'left',clickCount:1});
+    assert.equal(await evaluate(`document.querySelector(${JSON.stringify(selector)}).style.cssText`),before.style,'Drop outside a target must restore all card geometry');
+    assert(await evaluate("!document.querySelector('[data-card-dragging=true]')"),'Drag must clean up');
+    await sleep(300);
+  }
   async function scenario(theme,width,height){
     await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
     const navigation=await cmd('Page.navigate',{url:origin});if(navigation.errorText)throw Error('Browser navigation: '+navigation.errorText);
@@ -184,6 +196,7 @@ try{
     if(groupOpacity)assert.equal(Number(groupOpacity),1,'Disabled sorting group labels must remain fully opaque');
     assert(r.homeHref?.endsWith('/home.html')&&r.captionButton,'Sorting home/caption controls missing');
     await screenshot('sorting-'+theme+'-'+width+'x'+height);
+    if(width===1440&&theme==='neutral')await verifyCardDrag('.sorting-tray .sort-card');
     if(theme==='forest'&&width>=1100){
       await evaluate("document.querySelector('.zg-caption-toggle').click()");
       await until("!!document.querySelector('.sort-card.has-caption small')");
@@ -302,6 +315,7 @@ try{
     await selectMatching('Проверка','correct');
     await evaluate("document.querySelector('.matching-setup .primary').click()");
     await until("!!document.querySelector('.matching-bank button')");
+    if(width===1440)await verifyCardDrag('.matching-bank button');
     const cards=await evaluate("[...document.querySelectorAll('.matching-bank button')].map(e=>e.dataset.matchCard)");
     for(const id of cards){
       await evaluate(`document.querySelector('[data-match-card="${id}"]').click()`);

@@ -92,15 +92,18 @@
 
 /* Sorting uses the same surface palette and interactions as memory. */
 .app[data-theme] .sort-card,
-.app[data-theme] .sorted-cards .sort-card{
+.app[data-theme] .sorted-cards .sort-card,
+.app[data-theme] .matching-card{
  background:var(--ui-paper)!important;
  border:2px solid var(--ui-outline)!important;color:var(--ui-text)!important;
  box-shadow:0 4px 0 var(--ui-deep)!important;border-radius:16px
 }
-.app[data-theme] .sort-card:hover:not(:disabled){
+.app[data-theme] .sort-card:hover:not(:disabled),
+.app[data-theme] button.matching-card:hover:not(:disabled){
  box-shadow:0 6px 14px var(--ui-accent)!important
 }
-.app[data-theme] .sort-bin{
+.app[data-theme] .sort-bin,
+.app[data-theme] .matching-group{
  background:color-mix(in srgb,var(--ui-accent) 18%,var(--ui-paper))!important;
  border-color:var(--ui-outline)!important;color:var(--ui-text)!important
 }
@@ -232,4 +235,4 @@
 .app[data-theme] .sound-chip-row button[aria-pressed=true]{background:var(--ui-pale);outline:2px solid var(--ui-deep);transform:translateY(-2px)}
 .app[data-theme] .settings input:not([type=checkbox]):not([type=range]),.app[data-theme] .settings select{background:color-mix(in srgb,var(--ui-paper) 80%,var(--ui-pale));color:var(--ui-text);border-color:var(--ui-outline)}
 
-.app .matching-card.verdict-bad{border:4px dashed #b93838}.app .matching-card.verdict-good{border:4px solid #327247}
+.app[data-theme] .matching-card.verdict-bad{border:4px dashed #b93838!important}.app[data-theme] .matching-card.verdict-good{border:4px solid #327247!important}
