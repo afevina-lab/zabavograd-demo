@@ -291,6 +291,35 @@ try{
   await screenshot('sound-workshop-open-1440x900');
   await evaluate("document.querySelector('.sound-picker-actions .primary').click()");
   assert(await evaluate("!!document.querySelector('.selected-sounds button')&&!document.querySelector('.sound-workshop[open]')"),'Sound selection must commit');
+  const selectMatching=async(label,value)=>evaluate(`(()=>{const el=document.querySelector('select[aria-label="${label}"]');Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(el,${JSON.stringify(value)});el.dispatchEvent(new Event('change',{bubbles:true}));})()`);
+  for(const [width,height] of [[1440,900],[390,844]]){
+    await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
+    await cmd('Page.navigate',{url:origin+'?game=matching'});
+    await until("document.querySelectorAll('.matching-setup select option').length>20");
+    assert(await evaluate("!document.querySelector('select[aria-label=\"Задание\"]')"),'Matching task appears after topic');
+    await selectMatching('Лексическая тема','Животный мир/Домашние животные');
+    await until("document.querySelector('select[aria-label=\"Задание\"] option[value=family]:not(:disabled)')");
+    await selectMatching('Проверка','correct');
+    await evaluate("document.querySelector('.matching-setup .primary').click()");
+    await until("document.querySelector('.matching-bank button')");
+    const cards=await evaluate("[...document.querySelectorAll('.matching-bank button')].map(e=>e.dataset.matchCard)");
+    for(const id of cards){
+      await evaluate(`document.querySelector('[data-match-card="${id}"]').click()`);
+      await evaluate(`document.querySelector('[data-match-group="${id.split(':')[0]}"] .matching-slot').click()`);
+    }
+    await evaluate("[...document.querySelectorAll('button')].find(b=>b.textContent==='Проверить').click()");
+    await until("[...document.querySelectorAll('button')].some(b=>b.textContent==='К настройкам')");
+    assert(await evaluate("document.querySelectorAll('.matching-card.verdict-bad').length===0"),'Correct matching must pass final check');
+    assert(await evaluate("document.documentElement.scrollWidth<=innerWidth+2"),'Matching must fit viewport width');
+    await screenshot('matching-'+width+'x'+height);
+  }
+  await cmd('Page.navigate',{url:origin+'?game=matching'});
+  await until("document.querySelectorAll('.matching-setup select option').length>20");
+  await selectMatching('Лексическая тема','Животный мир');
+  await selectMatching('Задание','shadow');
+  await evaluate("document.querySelector('.matching-setup .primary').click()");
+  await until("document.querySelector('.matching-bank img[src^=\"data:image/\"]')",32000);
+  await screenshot('matching-shadows-390x844');
   writeFileSync(join(output,'report.json'),JSON.stringify({memory:results,sorting,failedRequests:failures},null,2));
   assert.equal(failures.length,0,failures.join('\n'));
   console.log('Verified browser UI:',JSON.stringify(results.map(x=>({theme:x.theme,viewport:x.viewport,stage:x.stage,cardCount:x.cards})),null,2));

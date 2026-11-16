@@ -1,6 +1,6 @@
 import {useEffect,useState} from 'react';
 import type {Word} from './material-types.ts';
-import {loadLibrary} from './library-loader.ts';
+import {loadLibrary,loadFamilies} from './library-loader.ts';
 
 export function useLibrary(){
  const [words,setWords]=useState<Word[]>([]),[error,setError]=useState('');
@@ -13,3 +13,9 @@ export function useLibrary(){
  },[]);
  return {words,error};
 }
+export function useFamilies(){
+ const [families,setFamilies]=useState<import('./matching.ts').Family[]>([]),[error,setError]=useState('');
+ useEffect(()=>{const c=new AbortController();loadFamilies(import.meta.env.BASE_URL+'semantic-graph.json',c.signal).then(v=>{if(!c.signal.aborted)setFamilies(v)}).catch(()=>{if(!c.signal.aborted)setError('Не удалось загрузить связи животных.')});return()=>c.abort()},[]);
+ return {families,error};
+}
+

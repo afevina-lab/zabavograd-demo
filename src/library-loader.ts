@@ -14,3 +14,10 @@ export async function loadLibrary(url:string,signal?:AbortSignal):Promise<Word[]
  if(!response.ok)throw Error(`Не удалось открыть библиотеку: ${response.status}`);
  return validateRuntimeLibrary(await response.json());
 }
+export async function loadFamilies(url:string,signal?:AbortSignal){
+ const response=await fetch(url,{signal,cache:'no-store'});
+ if(!response.ok)throw Error('Не удалось загрузить связи.');
+ const data=await response.json();
+ if(!Array.isArray(data.families))throw Error('Некорректные связи.');
+ return data.families as import('./matching.ts').Family[];
+}
