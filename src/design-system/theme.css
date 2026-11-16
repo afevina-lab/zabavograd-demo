@@ -236,3 +236,6 @@
 .app[data-theme] .settings input:not([type=checkbox]):not([type=range]),.app[data-theme] .settings select{background:color-mix(in srgb,var(--ui-paper) 80%,var(--ui-pale));color:var(--ui-text);border-color:var(--ui-outline)}
 
 .app[data-theme] .matching-card.verdict-bad{border:4px dashed #b93838!important}.app[data-theme] .matching-card.verdict-good{border:4px solid #327247!important}
+
+.app [data-card-drop-hover=true]{outline:3px solid var(--ui-accent)!important;outline-offset:2px}.app [data-card-dragging=true]{cursor:grabbing!important}.app [data-card-placeholder=true]{visibility:hidden!important}
+

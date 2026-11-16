@@ -31,7 +31,7 @@ export function matchesReading(w:Word,l:Learning){
 export function includesReading(l:Learning):boolean{return l.mode==='reading'||(l.additional||[]).some(r=>includesReading(r.learning));}
 export function includesSyllables(l:Learning):boolean{return (['reading','automation','differentiation'].includes(l.mode)&&contentKinds(l).includes('syllables'))||(l.additional||[]).some(r=>includesSyllables(r.learning));}
 export function compatibleMemoryMode(mode:MemoryMode,l:Learning):MemoryMode{
- return includesSyllables(l)?'word-word':includesReading(l)&&mode==='image-image'?'word-word':mode;
+ return includesSyllables(l)?'word-word':includesReading(l)&&mode.startsWith('image-')?'word-word':mode;
 }
 
 // These are pronounced teaching combinations, not lexical phonetic analyses.

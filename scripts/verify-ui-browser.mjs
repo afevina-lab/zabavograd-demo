@@ -58,10 +58,12 @@ try{
     await cmd('Input.dispatchMouseEvent',{type:'mousePressed',x:before.x,y:before.y,button:'left',clickCount:1});
     await cmd('Input.dispatchMouseEvent',{type:'mouseMoved',x:before.x+30,y:before.y+15,button:'left',buttons:1});
     assert(await evaluate("!!document.querySelector('[data-card-dragging=true]') && getComputedStyle(document.querySelector('[data-card-dragging=true]')).opacity==='1'"),'The original opaque card must follow the pointer');
+    assert(await evaluate("document.querySelectorAll('[data-card-placeholder=true]').length===1"),'Dragging must reserve the bank slot');
     await cmd('Input.dispatchMouseEvent',{type:'mouseMoved',x:2,y:2,button:'left',buttons:1});
     await cmd('Input.dispatchMouseEvent',{type:'mouseReleased',x:2,y:2,button:'left',clickCount:1});
     assert.equal(await evaluate(`document.querySelector(${JSON.stringify(selector)}).style.cssText`),before.style,'Drop outside a target must restore all card geometry');
     assert(await evaluate("!document.querySelector('[data-card-dragging=true]')"),'Drag must clean up');
+    assert(await evaluate("!document.querySelector('[data-card-placeholder=true]')"),'Drag placeholder must clean up');
     await sleep(300);
   }
   async function scenario(theme,width,height){
@@ -332,8 +334,29 @@ try{
   await selectMatching('Лексическая тема','Животный мир');
   await selectMatching('Задание','shadow');
   await evaluate("document.querySelector('.matching-setup .primary').click()");
-  await until("!!document.querySelector('.matching-bank img[src^=\"data:image/\"]')",32000);
+  await until("!!document.querySelector('.matching-bank image[href^=\"data:image/\"]')",32000);
   await screenshot('matching-shadows-390x844');
+  for(const [mode,width,height] of [['image-outline',1440,900],['image-silhouette',390,844]]){
+    await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
+    await cmd('Page.navigate',{url:origin+'?game=memory'});
+    await until("!!document.querySelector('select[aria-label=\"Режим карточек\"]')");
+    await selectMatching('Режим карточек',mode);
+    await until("!!document.querySelector('.settings .start:not(:disabled)') && document.querySelector('.material-preparation')?.textContent.includes('Подходящих изображений')",60000);
+    await evaluate("document.querySelector('.material-preparation summary').click()");
+    assert(await evaluate("document.querySelectorAll('.derived-preview image[href^=\"data:image/\"]').length>0"),'Prepared pairs must be previewable');
+    await screenshot('memory-'+mode+'-preview');
+    await evaluate("document.querySelector('.settings .start').click()");
+    await until("!!document.querySelector('.cards .card:not(:disabled)')");
+    const faces=await evaluate("[...document.querySelectorAll('.card[data-card-key]')].map(e=>({key:e.dataset.cardKey,face:e.dataset.face}))");
+    const groups=new Map();for(const c of faces){const id=c.key.slice(0,c.key.lastIndexOf(':'));if(!groups.has(id))groups.set(id,[]);groups.get(id).push(c);}
+    for(const pair of groups.values()){
+      assert.deepEqual(pair.map(c=>c.face).sort(),['image',mode.replace('image-','')].sort());
+      for(const c of pair)await evaluate(`document.querySelector('[data-card-key="${c.key}"]').click()`);
+    }
+    await until("document.querySelector('.overlay.result')?.textContent.includes('Все пары нашлись')");
+    assert(await evaluate("document.querySelectorAll('[data-face=outline] small,[data-face=silhouette] small').length===0"),'Derived faces must not reveal captions');
+    await screenshot('memory-'+mode+'-complete');
+  }
   writeFileSync(join(output,'report.json'),JSON.stringify({memory:results,sorting,failedRequests:failures},null,2));
   assert.equal(failures.length,0,failures.join('\n'));
   console.log('Verified browser UI:',JSON.stringify(results.map(x=>({theme:x.theme,viewport:x.viewport,stage:x.stage,cardCount:x.cards})),null,2));

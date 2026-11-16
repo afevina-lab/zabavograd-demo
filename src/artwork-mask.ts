@@ -18,10 +18,12 @@ export function artworkMask(rgba:Uint8ClampedArray,width:number,height:number):U
  }
  const count=mask.reduce((a,b)=>a+b,0);return count<mask.length*.005||count>mask.length*.9?null:mask;
 }
-export function maskPixels(mask:Uint8Array,width:number,height:number,outline:boolean):Uint8ClampedArray{
+export function maskPixels(mask:Uint8Array,width:number,height:number,outline:boolean,thickness=3):Uint8ClampedArray{
  const pixels=new Uint8ClampedArray(width*height*4);
+ const radius=Math.max(1,Math.min(8,Math.round(thickness)));
+ const offsets:number[][]=[];for(let dy=-radius;dy<=radius;dy++)for(let dx=-radius;dx<=radius;dx++)if(dx*dx+dy*dy<=radius*radius)offsets.push([dx,dy]);
  for(let y=0;y<height;y++)for(let x=0;x<width;x++){const i=y*width+x;if(!mask[i])continue;
- const edge=!outline||x<2||y<2||x>=width-2||y>=height-2||!mask[i-2]||!mask[i+2]||!mask[i-width*2]||!mask[i+width*2];
+ const edge=!outline||offsets.some(([dx,dy])=>x+dx<0||y+dy<0||x+dx>=width||y+dy>=height||!mask[(y+dy)*width+x+dx]);
  if(edge){pixels[i*4]=35;pixels[i*4+1]=35;pixels[i*4+2]=40;pixels[i*4+3]=255;}
  }return pixels;
 }

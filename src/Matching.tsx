@@ -1,9 +1,9 @@
 import {useCardDrag} from './design-system/useCardDrag.tsx';
-import {useState} from 'react';
+import {useEffect,useRef,useState} from 'react';
 import {useLibrary,useFamilies} from './useLibrary.ts';
 import {familyGroups,visualGroups,validateGroups,checkMatching,shuffled,inTopic,type MatchGroup,type MatchElement} from './matching.ts';
 import {CardArtwork} from './CardArtwork.tsx';
-import {DerivedArtwork,prepareArtwork} from './design-system/DerivedArtwork.tsx';
+import {DerivedArtwork,prepareMaterial} from './design-system/DerivedArtwork.tsx';
 import {GameToolbar} from './GameToolbar.tsx';
 import {QuantitySlider} from './QuantitySlider.tsx';
 import {Icon,Scenery,ThemePicker} from './GameUI.tsx';
@@ -15,6 +15,8 @@ export function Matching(){
  const [manual,setManual]=useState<string[][]>([Array(2).fill('')]),[session,setSession]=useState<MatchGroup[]>([]),[bank,setBank]=useState<MatchElement[]>([]);
  const [placements,setPlacements]=useState<Record<string,string[]>>({}),[selected,setSelected]=useState<string|null>(null),[message,setMessage]=useState(''),[paused,setPaused]=useState(false);
  const [checkMode,setCheckMode]=useState('instant'),[verdict,setVerdict]=useState<Record<string,boolean>>({}),[finished,setFinished]=useState(false),[busy,setBusy]=useState(false),[captions,setCaptions]=useState(false);
+ const preparation=useRef<AbortController|null>(null);const [preparedCount,setPreparedCount]=useState(0);
+ useEffect(()=>()=>preparation.current?.abort(),[]);
  const drag=useCardDrag(paused||finished);
  const topics=[...new Set(words.flatMap(w=>(w.categories||[]).flatMap(p=>p.split('/').map((_,i)=>p.split('/').slice(0,i+1).join('/')))))].sort();
  const available=words.filter(w=>inTopic(w,topic));
@@ -25,7 +27,7 @@ export function Matching(){
  async function start(){
  setBusy(true);setMessage('');
  let candidates=mode==='manual'?groups:shuffled(groups);
- if(mode==='shadow'||mode==='outline'){const checked=await Promise.all(candidates.map(async g=>({g,ok:!!await prepareArtwork(g.elements[0].word.variants![0],mode==='outline')})));candidates=checked.filter(x=>x.ok).map(x=>x.g);}
+ if(mode==='shadow'||mode==='outline'){const c=new AbortController();preparation.current=c;setPreparedCount(0);const material=await prepareMaterial(candidates.map(g=>({...g.elements[0].word,variants:g.elements[0].word.variants?.slice(0,1)})),mode==='outline',c.signal,setPreparedCount);if(c.signal.aborted)return;const ready=new Map(material.map(w=>[w.id,w]));candidates=candidates.filter(g=>ready.has(g.elements[0].word.id)).map(g=>({...g,elements:g.elements.map(e=>({...e,word:ready.get(e.word.id)!}))}));}
  const next=mode==='manual'?candidates:candidates.slice(0,count);
  if(!next.length){setMessage('Нет изображений с отделяемым фоном. Выберите другую тему или задание.');setBusy(false);return;}
  setSession(next);setBank(shuffled(next.flatMap(g=>g.elements.slice(1))));setPlacements({});setVerdict({});setSelected(null);setFinished(false);setPaused(false);setBusy(false);
@@ -58,7 +60,7 @@ export function Matching(){
  {mode==='manual'?<section><p>Первый элемент — опора. Остальные подходят к нему в любом порядке. Группы задаются только для этого занятия.</p>{manual.map((row,i)=><fieldset className="settings-block" key={i}><legend>Группа {i+1}</legend><div className="matching-manual">{row.map((id,j)=><label key={j}>{j===0?'Опора':'Ответ '+j}<select value={id} disabled={busy} onChange={e=>setManual(rows=>rows.map((r,k)=>k===i?r.map((v,l)=>l===j?e.target.value:v):r))}><option value="">Выберите слово</option>{available.map(w=><option key={w.id} value={w.id}>{w.label}</option>)}</select></label>)}</div><button type="button" className="secondary" disabled={busy||manual.length===1} onClick={()=>setManual(rows=>rows.filter((_,j)=>j!==i))}>Удалить группу</button></fieldset>)}<button type="button" className="secondary" disabled={busy||manual.length>=8} onClick={()=>setManual(rows=>[...rows,Array(size).fill('')])}>Добавить группу</button></section>:<QuantitySlider label="Количество групп" value={count} min={1} max={8} onChange={setCount}/>}
  </section><section className="settings-block"><h2>Правила игры</h2><label>Проверка<select aria-label="Проверка" value={checkMode} onChange={e=>setCheckMode(e.target.value)}><option value="instant">Сразу</option><option value="correct">В конце с исправлением</option><option value="finish">В конце с результатом</option></select></label>
  <label className="check"><input type="checkbox" checked={captions} onChange={e=>setCaptions(e.target.checked)}/>Подписи к исходным картинкам</label><p className="hint">Если рисунка пока нет, показывается слово. Подписи к теням и контурам скрыты.</p>
- </section><section className="settings-block"><h2>Оформление</h2><ThemePicker theme={theme} setTheme={setTheme}/></section><p role="status">{error||familyError||message||setupError||('Доступно групп: '+groups.length)}</p><button className="primary" disabled={busy||!!setupError||!!error||(mode==='family'&&!!familyError)} onClick={()=>void start()}>{busy?'Готовим изображения…':'Начать игру'}</button></>}
+ </section><section className="settings-block"><h2>Оформление</h2><ThemePicker theme={theme} setTheme={setTheme}/></section><p role="status">{error||familyError||message||setupError||('Доступно групп: '+groups.length)}</p><button className="primary" disabled={busy||!!setupError||!!error||(mode==='family'&&!!familyError)} onClick={()=>void start()}>{busy?`Готовим изображения: ${preparedCount} / ${groups.length}`:'Начать игру'}</button>{busy&&<button className="secondary" onClick={()=>{preparation.current?.abort();setBusy(false);setMessage('Подготовка отменена.')}}>Отменить подготовку</button>}</>}
  </main>:<section className="play-area"><GameToolbar><a className="icon-button" aria-label="Домой" href={import.meta.env.BASE_URL+'home.html'}><Icon name="Home1"/></a><button className="icon-button" aria-label="Настройки" onClick={()=>{setSession([]);setMessage('')}}><Icon name="Settings"/></button><button className="icon-button" aria-label={paused?'Продолжить':'Пауза'} onClick={()=>setPaused(v=>!v)}><Icon name={paused?'RightArrow1':'Pause'}/></button><span>{placed.size} / {bank.length}</span></GameToolbar>
  <div className="stage matching-stage"><Scenery theme={theme}/><div className="matching-content"><h1>Найди подходящие элементы</h1><div className="matching-groups">{session.map(g=><section className="matching-group" key={g.id} data-match-group={g.id}><div className="matching-card matching-anchor">{artwork(g.elements[0])}</div><div className="matching-slots">{(placements[g.id]||[]).map(id=>card(bank.find(e=>e.id===id)!,true))}{Array.from({length:g.elements.length-1-(placements[g.id]?.length||0)},(_,i)=><button type="button" className="matching-slot" key={'slot-'+i} aria-label={'Поместить под '+g.elements[0].word.label} disabled={!selected||paused||finished} onClick={()=>selected&&place(selected,g.id)}>+</button>)}</div></section>)}</div>
  {!finished&&<section className="matching-bank" aria-label="Общий банк"><h2>Общий банк</h2><div>{remaining.map(e=>card(e))}</div></section>}

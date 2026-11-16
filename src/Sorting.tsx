@@ -36,7 +36,7 @@ export function Sorting(){
  const checkTimer=useRef<ReturnType<typeof setTimeout>|null>(null);
  useEffect(()=>()=>{if(checkTimer.current)clearTimeout(checkTimer.current)},[]);
  const root=useRef<HTMLDivElement>(null),tray=useRef<HTMLDivElement>(null),undo=useRef<number|null>(null);
- useCardMotion(root,'[data-motion-id]');
+ useCardMotion(root,'[data-motion-id]',drag.suppressClick);
 
  useEffect(()=>{if(!running||paused||result||checking||!timed)return;const t=setInterval(()=>setRemaining(v=>Math.max(0,v-1)),1000);return()=>clearInterval(t)},[running,paused,result,timed,checking]);
  useEffect(()=>{if(running&&!result&&((timed&&remaining===0)||(withLives&&lives===0)))setResult(timed&&remaining===0?'Время закончилось':'Жизни закончились')},[remaining,lives,running,result,timed,withLives]);
