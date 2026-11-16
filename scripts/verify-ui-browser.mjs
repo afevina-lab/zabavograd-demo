@@ -298,10 +298,10 @@ try{
     await until("document.querySelectorAll('.matching-setup select option').length>20");
     assert(await evaluate("!document.querySelector('select[aria-label=\"Задание\"]')"),'Matching task appears after topic');
     await selectMatching('Лексическая тема','Животный мир/Домашние животные');
-    await until("document.querySelector('select[aria-label=\"Задание\"] option[value=family]:not(:disabled)')");
+    await until("!!document.querySelector('select[aria-label=\"Задание\"] option[value=family]:not(:disabled)')");
     await selectMatching('Проверка','correct');
     await evaluate("document.querySelector('.matching-setup .primary').click()");
-    await until("document.querySelector('.matching-bank button')");
+    await until("!!document.querySelector('.matching-bank button')");
     const cards=await evaluate("[...document.querySelectorAll('.matching-bank button')].map(e=>e.dataset.matchCard)");
     for(const id of cards){
       await evaluate(`document.querySelector('[data-match-card="${id}"]').click()`);
@@ -318,7 +318,7 @@ try{
   await selectMatching('Лексическая тема','Животный мир');
   await selectMatching('Задание','shadow');
   await evaluate("document.querySelector('.matching-setup .primary').click()");
-  await until("document.querySelector('.matching-bank img[src^=\"data:image/\"]')",32000);
+  await until("!!document.querySelector('.matching-bank img[src^=\"data:image/\"]')",32000);
   await screenshot('matching-shadows-390x844');
   writeFileSync(join(output,'report.json'),JSON.stringify({memory:results,sorting,failedRequests:failures},null,2));
   assert.equal(failures.length,0,failures.join('\n'));
