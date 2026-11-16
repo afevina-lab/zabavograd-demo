@@ -280,7 +280,9 @@ try{
   await evaluate("[...document.querySelectorAll('.sound-selection>button')][0].click()");
   await until("!!document.querySelector('.sound-workshop[open]')");
   await evaluate("[...document.querySelectorAll('.sound-bank button')].find(b=>b.textContent==='Р').click()");
-  assert(await evaluate("document.querySelector('.sound-editor').textContent.includes('Позиция')&&!document.querySelector('.sound-workshop details')"),'Sound settings must be immediately accessible');
+  assert(await evaluate("document.querySelector('.sound-editor').textContent.includes('Позиция')&&document.querySelectorAll('.sound-workshop details').length===2&&![...document.querySelectorAll('.sound-workshop details')].some(d=>d.open)"),'Positions must be visible and advanced settings collapsed behind gears');
+  await evaluate("document.querySelector('.sound-workshop details summary').click()");
+  assert(await evaluate("document.querySelector('.sound-workshop details').open"),'Cluster gear must reveal settings');
   await evaluate("[...document.querySelectorAll('.sound-picker-actions button')].find(b=>b.textContent==='Отмена').click()");
   assert(await evaluate("document.querySelectorAll('.selected-sounds button').length===0"),'Cancel must discard sound edits');
   await evaluate("document.querySelector('.sound-selection>button').click()");
