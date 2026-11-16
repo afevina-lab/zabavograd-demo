@@ -716,3 +716,12 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 @media(max-width:600px){.sound-bank{grid-template-columns:1fr}}
 
 .sort-card{touch-action:none}
+/* Shared SoundPicker: target sounds and exclusions are independent groups. */
+.sound-exclusions{grid-column:1/-1;padding-top:16px;border-top:1px solid var(--ui-outline)}
+.sound-exclusion-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.sound-exclusion-heading h3{margin:0 0 6px}
+.sound-exclusion-heading button{width:auto;min-height:40px}
+.sound-exclusion-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px}
+.sound-exclusion-groups>section{min-width:0}
+.sound-exclusions .sound-chip-row button:disabled{opacity:.38;cursor:not-allowed}
+.sound-workshop .sound-exclusions h3{font-size:15px}

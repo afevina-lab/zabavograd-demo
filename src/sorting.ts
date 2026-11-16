@@ -27,11 +27,32 @@ export function makeSorting(pools:Word[][],counts:number[],rng=Math.random):Sort
  if(pools.some((p,i)=>p.length<counts[i]))throw Error('Недостаточно материала в одной из групп. Измените правила или количество элементов.');
  for(let i=0;i<pools.length;i++)for(let j=0;j<i;j++)if(pools[i].length===pools[j].length&&pools[i].every(w=>pools[j].some(v=>v.id===w.id)))throw Error('Группы '+(j+1)+' и '+(i+1)+' имеют одинаковый состав. Уточните их характеристики.');
  const shuffled=pools.map(p=>p.map(w=>({w,key:rng()})).sort((a,b)=>a.key-b.key).map(x=>x.w));
- const slots=counts.flatMap((n,g)=>Array.from({length:n},()=>g)),owners=new Map<string,number>(),assigned=new Map<number,Word>();
- function place(slot:number,seen:Set<string>):boolean{
-  for(const w of shuffled[slots[slot]]){if(seen.has(w.id))continue;seen.add(w.id);const prior=owners.get(w.id);if(prior===undefined||place(prior,seen)){owners.set(w.id,slot);assigned.set(slot,w);return true;}}return false;
+ // Each group gets approximately half words and half syllables when both
+ // are enabled and available. Strict matching keeps all meaning IDs unique.
+ const slots=counts.flatMap((n,g)=>{
+  const syllables=pools[g].filter(w=>w.materialKind==='syllables').length;
+  const words=pools[g].length-syllables;
+  const mixed=syllables>0&&words>0;
+  const desired=mixed?Math.min(syllables,Math.max(n-words,Math.round(n/2))):0;
+  return Array.from({length:n},(_,i)=>({group:g,kind:mixed?(i<desired?'syllables':'words'):null}));
+ });
+ function assign(strict:boolean):Map<number,Word>|null{
+  const owners=new Map<string,number>(),assigned=new Map<number,Word>();
+  function place(slot:number,seen:Set<string>):boolean{
+   const {group,kind}=slots[slot];
+   for(const w of shuffled[group]){
+    if(strict&&kind&&(w.materialKind==='syllables'?'syllables':'words')!==kind)continue;
+    if(seen.has(w.id))continue;seen.add(w.id);
+    const prior=owners.get(w.id);
+    if(prior===undefined||place(prior,seen)){owners.set(w.id,slot);assigned.set(slot,w);return true;}
+   }
+   return false;
+  }
+  for(let i=0;i<slots.length;i++)if(!place(i,new Set()))return null;
+  return assigned;
  }
- for(let i=0;i<slots.length;i++)if(!place(i,new Set()))throw Error('Не хватает разных элементов на все группы: подборки пересекаются. Уменьшите количество или уточните правила.');
+ const assigned=assign(true)||assign(false);
+ if(!assigned)throw Error('Не хватает разных элементов на все группы: подборки пересекаются. Уменьшите количество или уточните правила.');
  return [...assigned.values()].map(word=>({word,accepted:pools.flatMap((p,i)=>p.some(w=>w.id===word.id)?[i]:[])})).map(item=>({item,key:rng()})).sort((a,b)=>a.key-b.key).map(x=>x.item);
 }
 

@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import {startConveyor,stepConveyor,answerConveyor,conveyorTarget,conveyorSpeed,conveyorErrorCount,arithmeticDeck,corruptWord} from '../src/conveyor.ts';
 const deck=arithmeticDeck(4,10,true,()=>.3);
 test('easy stops at centre until teacher answers; rejected condition can be correct',()=>{
- let s=startConveyor(deck.slice(1,2));for(let i=0;i<200;i++)s=stepConveyor(s,deck.slice(1,2),'easy',.1);
+ const rejected=deck.find(card=>!card.expected);assert(rejected);
+ let s=startConveyor([rejected]);for(let i=0;i<200;i++)s=stepConveyor(s,[rejected],'easy',.1);
  assert.equal(s.cards[0].position,.5);assert(conveyorTarget(s));s=answerConveyor(s,false,true);assert.equal(s.correct,1);assert.equal(answerConveyor(s,true,true).marked,1);
 });
 test('moving levels spawn at centre and cap acceleration at fifty percent',()=>{
