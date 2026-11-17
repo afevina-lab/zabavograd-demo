@@ -153,12 +153,14 @@ try{
     const pickCategory=async(groupIndex,name)=>{
       const chosen=await evaluate(`(()=>{
         const group=document.querySelectorAll('.sort-group-settings>.settings-block')[${groupIndex}];
+        [...group.querySelectorAll('button')].find(b=>b.textContent.startsWith('Лексические темы')).click();
         const roots=[...group.querySelectorAll('.category-picker>ul>li')];
         const item=roots.find(el=>el.querySelector(':scope>details>summary')?.textContent.startsWith(${JSON.stringify(name)}));
         if(!item)return false;
         const input=item.querySelector(':scope>details>label.check>input[type=checkbox]');
         if(!input)return false;
         input.click();
+        group.querySelector('.category-picker .primary').click();
         return true;
       })()`);
       assert(chosen,'Missing category root '+name+' for group '+groupIndex);
@@ -310,12 +312,12 @@ try{
   for(const [width,height] of [[1440,900],[390,844]]){
     await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
     await cmd('Page.navigate',{url:origin+'?game=matching'});
-    await until("document.querySelectorAll('.matching-setup select option').length>20");
-    assert(await evaluate("!document.querySelector('select[aria-label=\"Задание\"]')"),'Matching task appears after topic');
-    await selectMatching('Лексическая тема','Животный мир/Домашние животные');
+    await until("document.querySelectorAll('.matching-setup .category-picker li').length>20");
+    assert(await evaluate("!document.querySelector('select[aria-label=\"Задание\"] option[value=family]:not(:disabled)')"),'Matching task appears after topic');
+    await evaluate("[...document.querySelectorAll('.category-picker details')].find(e=>e.querySelector('summary')?.textContent==='Домашние животные').querySelector('input').click()");await evaluate("document.querySelector('.category-picker .primary').click()");await selectMatching('Режим карточек','word-word');
     await until("!!document.querySelector('select[aria-label=\"Задание\"] option[value=family]:not(:disabled)')");
     await selectMatching('Проверка','correct');
-    await evaluate("document.querySelector('.matching-setup .primary').click()");
+    await evaluate("document.querySelector('.matching-setup>button.primary').click()");
     await until("!!document.querySelector('.matching-bank button')");
     if(width===1440)await verifyCardDrag('.matching-bank button');
     const cards=await evaluate("[...document.querySelectorAll('.matching-bank button')].map(e=>e.dataset.matchCard)");
@@ -331,17 +333,17 @@ try{
   }
   await cmd('Page.navigate',{url:origin+'?game=matching'});
   await until("document.querySelectorAll('.matching-setup select option').length>20");
-  await selectMatching('Лексическая тема','Животный мир');
-  await selectMatching('Задание','shadow');
+  await evaluate("[...document.querySelectorAll('.category-picker details')].find(e=>e.querySelector('summary')?.textContent==='Животный мир').querySelector('input').click()");await evaluate("document.querySelector('.category-picker .primary').click()");
+  await selectMatching('Задание','shadow');await until("!!document.querySelector('.matching-setup>button.primary:not(:disabled)')",32000);
   await evaluate("document.querySelector('.matching-setup .primary').click()");
-  await until("!!document.querySelector('.matching-bank image[href^=\"data:image/\"]')",32000);
+  await until("!!document.querySelector('.matching-anchor image[href^=\"data:image/\"]')",32000);
   await screenshot('matching-shadows-390x844');
   for(const [mode,width,height] of [['image-outline',1440,900],['image-silhouette',390,844]]){
     await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
     await cmd('Page.navigate',{url:origin+'?game=memory'});
     await until("!!document.querySelector('select[aria-label=\"Режим карточек\"]')");
     await selectMatching('Режим карточек',mode);
-    await until("!!document.querySelector('.settings .start:not(:disabled)') && document.querySelector('.material-preparation')?.textContent.includes('Подходящих изображений')",60000);
+    await until("!!document.querySelector('.settings .start:not(:disabled)') && document.querySelector('.material-preparation')?.textContent.includes('Подготовлено изображений')",60000);
     await evaluate("document.querySelector('.material-preparation summary').click()");
     assert(await evaluate("document.querySelectorAll('.derived-preview image[href^=\"data:image/\"]').length>0"),'Prepared pairs must be previewable');
     await screenshot('memory-'+mode+'-preview');

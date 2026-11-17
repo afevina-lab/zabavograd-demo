@@ -16,7 +16,7 @@ export function familyGroups(words:Word[],families:Family[],topic:string,size:nu
  });
 }
 export function visualGroups(words:Word[],topic:string,appearance:Appearance):MatchGroup[]{
- return words.filter(w=>w.weight>0&&inTopic(w,topic)&&w.variants?.length).map(w=>({id:w.id,elements:[{id:w.id+':0',word:w,appearance:'original'},{id:w.id+':1',word:w,appearance}]}));
+ return words.filter(w=>w.weight>0&&(!topic||inTopic(w,topic))&&w.variants?.length).map(w=>({id:w.id,elements:[{id:w.id+':0',word:w,appearance},{id:w.id+':1',word:w,appearance:'original'}]}));
 }
 export function validateGroups(groups:MatchGroup[],size:number):string{
  if(size<2||size>5)return 'В группе должно быть от 2 до 5 элементов.';

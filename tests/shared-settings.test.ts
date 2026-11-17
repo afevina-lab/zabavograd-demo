@@ -1,0 +1,11 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {fillPrepared} from '../src/prepared-selection.ts';
+import {readingLabel} from '../src/reading.ts';
+import {initialLearning} from '../src/learning.ts';
+import {spendLives,automaticLives,manualLives} from '../src/life-policy.ts';
+import {compositionDeck,arithmeticDeck} from '../src/conveyor.ts';
+test('only required masks are prepared and failed candidates replaced',async()=>{const checked:number[]=[];const result=await fillPrepared([1,2,3,4,5],2,async n=>{checked.push(n);return n===2?null:n});assert.deepEqual(result,[1,3]);assert.deepEqual(checked,[1,2,3]);});
+test('reading display is uppercase with optional syllables and does not mutate labels',()=>{const l={...initialLearning,mode:'reading' as const,reading:{splitSyllables:true}};assert.equal(readingLabel('мама',l),'МА·МА');assert.equal(readingLabel('ма',{...l,reading:{}}),'МА');assert.equal(readingLabel('мама',initialLearning),'мама');});
+test('life policies support teacher and error modes with half-heart steps',()=>{assert(manualLives('manual'));assert(!automaticLives('manual'));assert(automaticLives('mistakes'));assert(!manualLives('mistakes'));assert.equal(spendLives(5,2),4);assert.equal(spendLives(.5,2),0);});
+test('composition is bounded by the exact target and operations can be restricted',()=>{for(const n of [1,10,20])for(const c of compositionDeck(24,n)){const a=Number(c.text.split(' = ')[1].split(' + ')[0]);assert.equal(a+Number(c.original),n);}assert(arithmeticDeck(20,20,false,Math.random,{add:true,subtract:false}).every(c=>c.text.includes('+')));assert(arithmeticDeck(20,20,false,Math.random,{add:false,subtract:true}).every(c=>c.text.includes('−')));});

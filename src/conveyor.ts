@@ -87,7 +87,9 @@ export function materialConveyorDeck(positives:Word[],negatives:Word[],count:num
  let good=0,bad=0;
  return flags.map((expected,i)=>{const word=expected?valid[good++]:incorrect[bad++];return {id:'word-'+i,text:word.label,word,original:word.label,expected};});
 }
-export function arithmeticDeck(count:number,max:number,conditional:boolean,rng=Math.random):ConveyorCard[]{
+export function arithmeticDeck(count:number,max:number,conditional:boolean,rng=Math.random,operations:{add:boolean;subtract:boolean}={add:true,subtract:true}):ConveyorCard[]{
  const flags=conveyorConditions(count,conditional,rng);
- return Array.from({length:count},(_,i)=>{const a=Math.floor(rng()*(max+1)),b=Math.floor(rng()*(max-a+1));const subtract=rng()<.5;const result=subtract?a:a+b;const expression=subtract?`${a+b} − ${b}`:`${a} + ${b}`;const expected=flags[i];return {id:'math-'+i,text:conditional?`${expression} = ${expected?result:result+1}`:expression,original:String(result),expected};});
+ return Array.from({length:count},(_,i)=>{const a=Math.floor(rng()*(max+1)),b=Math.floor(rng()*(max-a+1));const subtract=operations.subtract&&(!operations.add||rng()<.5);const result=subtract?a:a+b;const expression=subtract?`${a+b} − ${b}`:`${a} + ${b}`;const expected=flags[i];return {id:'math-'+i,text:conditional?`${expression} = ${expected?result:result+1}`:expression,original:String(result),expected};});
 }
+
+export function compositionDeck(count:number,target:number):ConveyorCard[]{return Array.from({length:count},(_,i)=>{const a=i%(target+1);return {id:'composition-'+i,text:target+' = '+a+' + ?',original:String(target-a),expected:true}})}

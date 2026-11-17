@@ -14,7 +14,7 @@ export const syllablePatterns={
 } as const;
 export type Pattern=keyof typeof syllablePatterns;
 export type ContentKind='words'|'syllables';
-export type ReadingOptions={available:string[];required:string[];min:number;max:number;excludeClusters:boolean};
+export type ReadingOptions={splitSyllables?:boolean;available:string[];required:string[];min:number;max:number;excludeClusters:boolean};
 export const textOf=(s:string)=>s.normalize('NFC').toLocaleLowerCase('ru').replace(/\u0301/g,'');
 export const wordLength=(s:string)=>[...textOf(s)].length;
 export const maxWordLength=(words:Word[])=>Math.max(3,...words.filter(w=>/^[а-яё]+$/i.test(textOf(w.label))).map(w=>wordLength(w.label)));
@@ -85,4 +85,12 @@ export function materialCandidates(words:Word[],l:Learning):Word[]{
  const unique=new Map<string,Word>();
  for(const w of generated)unique.set(w.label,w);
  return [...words,...unique.values()];
+}
+/** Display-only syllable support; never changes spelling used by filters or IDs. */
+export function readingLabel(text:string,l:Learning):string{
+ if(!includesReading(l))return text;
+ const upper=text.toLocaleUpperCase('ru');if(!l.reading?.splitSyllables)return upper;
+ return upper.replace(/[А-ЯЁ]+/g,word=>{const indices=[...word].flatMap((c,i)=>'АЕЁИОУЫЭЮЯ'.includes(c)?[i]:[]);const cuts:number[]=[];
+ for(let j=0;j<indices.length-1;j++){let cut=indices[j]+1;const next=indices[j+1];if(cut<next&&'ЙЬЪ'.includes(word[cut]))cut++;if(next-cut>1&&'ЛМНР'.includes(word[cut])&&!'ЛМНРЙ'.includes(word[cut+1]))cut++;cuts.push(cut)}
+ return [...word].map((c,i)=>(cuts.includes(i)?'·':'')+c).join('');});
 }

@@ -1,3 +1,4 @@
+import {fillPrepared} from '../prepared-selection.ts';
 import {useEffect,useState} from 'react';
 import {artworkMask,maskPixels} from '../artwork-mask.ts';
 import type {ImageVariant,Word} from '../material-types.ts';
@@ -30,15 +31,10 @@ function derive(src:string,outline:boolean):Promise<Prepared|null>{
  pending.set(key,promise);return promise;
 }
 export function prepareArtwork(image:ImageVariant,outline:boolean){return derive(import.meta.env.BASE_URL+image.src.replace(/^\//,''),outline)}
-export async function prepareMaterial(words:Word[],outline:boolean,signal:AbortSignal,onProgress:(done:number)=>void=()=>{}){
- const result:Array<Word|null>=Array(words.length).fill(null);let cursor=0,done=0;
- await Promise.all(Array.from({length:Math.min(4,words.length)},async()=>{
-  while(!signal.aborted){const index=cursor++;if(index>=words.length)return;const word=words[index],variants:ImageVariant[]=[];
-   for(const image of word.variants||[]){if(signal.aborted)return;const prepared=await prepareArtwork(image,outline);if(prepared)variants.push({...image,bounds:prepared.bounds,derived:{kind:outline?'outline':'silhouette',src:prepared.src}})}
-   if(signal.aborted)return;if(variants.length)result[index]={...word,variants};onProgress(++done);
-  }
- }));return signal.aborted?[]:result.filter((word):word is Word=>!!word);
+export async function prepareMaterial(words:Word[],outline:boolean,signal:AbortSignal,onProgress:(done:number)=>void=()=>{},limit=words.length){
+ return fillPrepared(words,limit,async word=>{for(const image of word.variants||[]){if(signal.aborted)return null;const prepared=await prepareArtwork(image,outline);if(prepared)return {...word,variants:[{...image,bounds:prepared.bounds,derived:{kind:outline?'outline' as const:'silhouette' as const,src:prepared.src}}]};}return null;},()=>signal.aborted,onProgress);
 }
+
 export function DerivedArtwork({image,outline,onReady}:{image:ImageVariant;outline:boolean;onReady?:(ok:boolean)=>void}){
  const kind=outline?'outline':'silhouette',embedded=image.derived?.kind===kind&&image.bounds?{src:image.derived.src,bounds:image.bounds}:null;
  const [prepared,setPrepared]=useState<Prepared|null|undefined>(embedded||undefined);
