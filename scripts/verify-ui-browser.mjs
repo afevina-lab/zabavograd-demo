@@ -335,7 +335,7 @@ try{
   await until("document.querySelectorAll('.matching-setup select option').length>20");
   await evaluate("[...document.querySelectorAll('.category-picker details')].find(e=>e.querySelector('summary')?.textContent==='Животный мир').querySelector('input').click()");await evaluate("document.querySelector('.category-picker .primary').click()");
   await selectMatching('Задание','shadow');await until("!!document.querySelector('.matching-setup>button.primary:not(:disabled)')",32000);
-  await evaluate("document.querySelector('.matching-setup .primary').click()");
+  await evaluate("document.querySelector('.matching-setup>button.primary').click()");
   await until("!!document.querySelector('.matching-anchor image[href^=\"data:image/\"]')",32000);
   await screenshot('matching-shadows-390x844');
   for(const [mode,width,height] of [['image-outline',1440,900],['image-silhouette',390,844]]){
