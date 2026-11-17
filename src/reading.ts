@@ -31,7 +31,7 @@ export function matchesReading(w:Word,l:Learning){
 export function includesReading(l:Learning):boolean{return l.mode==='reading'||(l.additional||[]).some(r=>includesReading(r.learning));}
 export function includesSyllables(l:Learning):boolean{return (['reading','automation','differentiation'].includes(l.mode)&&contentKinds(l).includes('syllables'))||(l.additional||[]).some(r=>includesSyllables(r.learning));}
 export function compatibleMemoryMode(mode:MemoryMode,l:Learning):MemoryMode{
- return includesSyllables(l)?'word-word':includesReading(l)&&mode.startsWith('image-')?'word-word':mode;
+ return l.mode==='math'?'word-word':includesSyllables(l)?'word-word':includesReading(l)&&mode.startsWith('image-')?'word-word':mode;
 }
 
 // These are pronounced teaching combinations, not lexical phonetic analyses.
@@ -88,7 +88,7 @@ export function materialCandidates(words:Word[],l:Learning):Word[]{
 }
 /** Display-only syllable support; never changes spelling used by filters or IDs. */
 export function readingLabel(text:string,l:Learning):string{
- if(!includesReading(l))return text;
+ if(!includesReading(l)&&!l.reading?.splitSyllables)return text;
  const upper=text.toLocaleUpperCase('ru');if(!l.reading?.splitSyllables)return upper;
  return upper.replace(/[А-ЯЁ]+/g,word=>{const indices=[...word].flatMap((c,i)=>'АЕЁИОУЫЭЮЯ'.includes(c)?[i]:[]);const cuts:number[]=[];
  for(let j=0;j<indices.length-1;j++){let cut=indices[j]+1;const next=indices[j+1];if(cut<next&&'ЙЬЪ'.includes(word[cut]))cut++;if(next-cut>1&&'ЛМНР'.includes(word[cut])&&!'ЛМНРЙ'.includes(word[cut+1]))cut++;cuts.push(cut)}

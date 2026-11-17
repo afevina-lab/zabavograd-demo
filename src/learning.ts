@@ -1,3 +1,4 @@
+import {mathMaterial,type MathSettings} from './math-material.ts';
 import {contentKinds,effectivePatterns,matchesReading,materialCandidates,type ReadingOptions,type ContentKind,type Pattern} from './reading.ts';
 import type {Word,Filters,SoundOccurrence as MaterialSoundOccurrence} from './material-types.ts';
 import {pickWords} from './material-selection.ts';
@@ -6,7 +7,7 @@ export const groups:Record<string,string[]>={'Ранний онтогенез':[
 export const positions=['начало','середина','конец','после согласного','перед согласным','несколько вхождений'];
 export type SoundOccurrence=MaterialSoundOccurrence;
 export type SoundRule={allowAssimilation?:boolean;positions:string[];clusters:string[]|null;clusterDirections?:('before'|'after')[];atLeastTwo?:boolean;excludeMultiple?:boolean;searchClusters?:'any'|'only'|'without'};
-export type Learning={targetSlots?:Partial<Record<Pattern,number[]>>;reading?:Partial<ReadingOptions>;contentKinds?:ContentKind[];syllablePatterns?:Pattern[];categoryPaths?:string[];mode:'any'|'lexical'|'automation'|'differentiation'|'structure'|'search'|'reading';searchTarget?:'sound'|'letter';sounds:string[];rules:Record<string,SoundRule>;preferShared:boolean;excludedSounds?:string[];exclusionsEdited?:boolean;topics?:string[];subtopics?:Record<string,string[]>;additional?:{learning:Learning;filters:Filters}[];exclusions?:{learning:Learning;filters:Filters}[]};
+export type Learning={math?:Partial<MathSettings>;targetSlots?:Partial<Record<Pattern,number[]>>;reading?:Partial<ReadingOptions>;contentKinds?:ContentKind[];syllablePatterns?:Pattern[];categoryPaths?:string[];mode:'any'|'lexical'|'automation'|'differentiation'|'structure'|'search'|'reading'|'math';searchTarget?:'sound'|'letter';sounds:string[];rules:Record<string,SoundRule>;preferShared:boolean;excludedSounds?:string[];exclusionsEdited?:boolean;topics?:string[];subtopics?:Record<string,string[]>;additional?:{learning:Learning;filters:Filters}[];exclusions?:{learning:Learning;filters:Filters}[]};
 export const initialLearning:Learning={mode:'any',sounds:[],rules:{},preferShared:false,excludedSounds:[]};
 export const defaultSoundRule=(mode:Learning['mode']):SoundRule=>({
   positions:mode==='search'?['начало','середина','конец']:['начало','середина','конец','после согласного','перед согласным'],
@@ -71,7 +72,7 @@ function matchesMaterial(w:Word,f:Filters,l:Learning):boolean {
  const allowed=base&&(!f.noOpposition||l.mode!=='automation'||l.sounds[0]!=='р'||w.opposition.length===0);
  return soundAllowed&&(allowed||(l.additional||[]).some(r=>matchesMaterial(w,r.filters,r.learning)))&&!(l.exclusions||[]).some(r=>matchesMaterial(w,r.filters,r.learning));
 }
-export function learningPool(words:Word[],f:Filters,l:Learning,automatic=true){const candidates=materialCandidates(words,l).filter(w=>matchesMaterial(w,f,l)).map(w=>l.mode==='lexical'?{...w,weight:materialWeight(w,true)}:w).filter(w=>!automatic||canSelectAutomatically(w));
+export function learningPool(words:Word[],f:Filters,l:Learning,automatic=true){if(l.mode==='math')return mathMaterial(l.math);const candidates=materialCandidates(words,l).filter(w=>matchesMaterial(w,f,l)).map(w=>l.mode==='lexical'?{...w,weight:materialWeight(w,true)}:w).filter(w=>!automatic||canSelectAutomatically(w));
  const seen=new Set<string>();return candidates.filter(w=>{const key=w.id;if(seen.has(key))return false;seen.add(key);return true;});}
 /** Keep words and generated syllables near 50:50 whenever both kinds are enabled.
  * Reallocate only when one eligible kind is genuinely too small; do not repeat IDs.

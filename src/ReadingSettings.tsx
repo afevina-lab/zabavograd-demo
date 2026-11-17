@@ -2,14 +2,14 @@ import {alphabet,vowels,consonants,readingOptions,contentKinds,effectivePatterns
 import type {Learning} from './learning.ts';
 import type {Word} from './model.ts';
 
-export function ReadingSettings({l,setL,words}:{l:Learning;setL:(l:Learning)=>void;words:Word[]}){
+export function ReadingSettings({l,setL,words,textDisplayProvided=false}:{l:Learning;setL:(l:Learning)=>void;words:Word[];textDisplayProvided?:boolean}){
  const r=readingOptions(l),kinds=contentKinds(l),patterns=effectivePatterns(l),maximum=maxWordLength(words);
  const update=(part:Partial<typeof r>)=>setL({...l,reading:{...r,...part}});
  const toggle=(values:string[],v:string,on:boolean)=>on?[...new Set([...values,v])]:values.filter(x=>x!==v);
  return <div className="reading-settings">
  <div className="field-label">{l.mode==='reading'?'Что читаем':'Материал для задания'}</div>
  <div className="reading-kinds">{([['words','Слова'],['syllables','Слоги и сочетания']] as [ContentKind,string][]).map(([kind,label])=><label className="check" key={kind}><input type="checkbox" checked={kinds.includes(kind)} onChange={e=>setL({...l,contentKinds:toggle(kinds,kind,e.target.checked) as ContentKind[]})}/>{label}</label>)}</div>
- {l.mode==='reading'&&<><label className="check"><input type="checkbox" checked={!!r.splitSyllables} onChange={e=>update({splitSyllables:e.target.checked})}/>Разделить на слоги</label>
+ {l.mode==='reading'&&<>{!textDisplayProvided&&<label className="check"><input type="checkbox" checked={!!r.splitSyllables} onChange={e=>update({splitSyllables:e.target.checked})}/>Разделить на слоги</label>}
  <details className="filter-details"><summary>Доступные буквы · {r.available.length} из 33</summary>
  <label className="check"><input type="checkbox" checked={r.available.length===33} onChange={e=>update({available:e.target.checked?alphabet:[],required:[]})}/>Все буквы</label>
  {Object.entries({'Гласные':vowels,'Согласные':consonants,'Знаки': ['ь','ъ']}).map(([group,letters])=><details className="letter-group" key={group} open><summary>{group}</summary><label className="check"><input type="checkbox" checked={letters.every(c=>r.available.includes(c))} onChange={e=>update({available:e.target.checked?[...new Set([...r.available,...letters])]:r.available.filter(c=>!letters.includes(c)),required:e.target.checked?r.required:r.required.filter(c=>!letters.includes(c))})}/>Выбрать всё</label><div className="letter-grid">{letters.map(c=><label key={c} className="letter-choice"><input type="checkbox" checked={r.available.includes(c)} onChange={e=>update({available:toggle(r.available,c,e.target.checked),required:e.target.checked?r.required:r.required.filter(x=>x!==c)})}/>{c.toUpperCase()}</label>)}</div></details>)}

@@ -239,3 +239,5 @@
 
 .app [data-card-drop-hover=true]{outline:3px solid var(--ui-accent)!important;outline-offset:2px}.app [data-card-dragging=true]{cursor:grabbing!important}.app [data-card-placeholder=true]{visibility:hidden!important}
 
+.app .settings,.app dialog{scrollbar-color:var(--ui-outline) var(--ui-paper)!important;scrollbar-width:thin}.app .settings::-webkit-scrollbar-track,.app dialog::-webkit-scrollbar-track{background:var(--ui-paper)!important}.app .settings::-webkit-scrollbar-thumb,.app dialog::-webkit-scrollbar-thumb{background:var(--ui-outline)!important;border-color:var(--ui-paper)!important}.app .task-tiles button[aria-pressed=true]{outline:2px solid var(--ui-outline);background:var(--ui-pale)}
+.app[data-theme] .choice-tiles button[aria-pressed=true]{outline:2px solid var(--ui-outline);outline-offset:1px;background:var(--ui-pale)}

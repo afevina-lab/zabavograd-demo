@@ -61,6 +61,7 @@ export function changeCount(groups:SortGroup[],index:number,count:number){return
 export function groupTitle(g:SortGroup){
  if(g.edited.includes('name'))return g.name;
  const l=g.learning;
+ if(l.mode==='math')return (l.math?.kind==='composition'?'Состав числа ':'Ответ: ')+(l.math?.target??10);
  if(l.mode==='lexical')return (l.categoryPaths||[]).map(p=>p.split('/').at(-1)).join(', ')||'Выберите тему';
  if(l.sounds.length){const position=l.rules[l.sounds[0]]?.positions||[];const names:Record<string,string>={'начало':'в начале слова','середина':'в середине слова','конец':'в конце слова'};return 'Звук '+l.sounds.map(s=>s.toUpperCase()).join(', ')+(position.length===1?' '+(names[position[0]]||position[0]):'');}
  return l.mode==='reading'?'Чтение':l.mode==='structure'?'Слоговая структура':g.name;

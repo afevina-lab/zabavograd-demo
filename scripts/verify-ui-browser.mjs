@@ -279,7 +279,7 @@ try{
     await cmd('Page.navigate',{url:origin+'?game=conveyor'});
     await cmd('Page.bringToFront');
     await until("!!document.querySelector('.conveyor-settings')");
-    await evaluate(`(()=>{const select=[...document.querySelectorAll('.conveyor-settings label')].find(l=>l.textContent.startsWith('Учебная задача')).querySelector('select');Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(select,'math');select.dispatchEvent(new Event('change',{bubbles:true}));})()`);
+    await evaluate(`(()=>{const select=document.querySelector('.conveyor-settings select[aria-label="Учебная задача"]');Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(select,'math');select.dispatchEvent(new Event('change',{bubbles:true}));})()`);
     await sleep(150);await evaluate("document.querySelector('.conveyor-settings>button.primary').click()");
     await until("!!document.querySelector('.conveyor-card.is-current')",15000).catch(async e=>{throw Error(e.message+'; '+JSON.stringify(await evaluate("({visible:document.visibilityState,text:document.querySelector('.conveyor-answer')?.textContent,position:document.querySelector('.conveyor-card')?.style.left,setup:!!document.querySelector('.conveyor-settings')})")))});
     await evaluate("document.querySelector('[aria-label=\"Нет, не подходит или неверно\"]').click()");
@@ -358,6 +358,43 @@ try{
     await until("document.querySelector('.overlay.result')?.textContent.includes('Все пары нашлись')");
     assert(await evaluate("document.querySelectorAll('[data-face=outline] small,[data-face=silhouette] small').length===0"),'Derived faces must not reveal captions');
     await screenshot('memory-'+mode+'-complete');
+  }
+
+  for(const [width,height] of [[1440,900],[390,844]]){
+    await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
+    await cmd('Page.navigate',{url:origin+'?game=memory'});
+    await until("!!document.querySelector('.settings .task-tiles')");
+    await selectMatching('Режим карточек','word-word');
+    assert(await evaluate("document.querySelectorAll('.text-display-setting').length===1&&document.querySelector('.game-choice select').getBoundingClientRect().height===0"),'Word display needs syllable control without reading task');
+    await evaluate("document.querySelector('.text-display-setting input').click()");
+    assert(await evaluate("!!document.querySelector('.settings [aria-label=Домой]')"),'Settings need home navigation');
+    await screenshot('settings-unified-'+width);
+    await evaluate("[...document.querySelectorAll('.task-tiles button')].find(b=>b.textContent==='Тематика').click()");
+    await evaluate("[...document.querySelectorAll('.settings button')].find(b=>b.textContent.startsWith('Лексические темы')).click()");
+    assert(await evaluate("getComputedStyle(document.querySelector('.category-grid')).display==='grid'"),'Themes need a grid');
+    await screenshot('category-grid-'+width);
+    await evaluate("document.querySelector('.category-picker .primary').click()");
+    await evaluate("[...document.querySelectorAll('.task-tiles button')].find(b=>b.textContent==='Звуки').click()");
+    await evaluate("document.querySelector('.sound-selection>button').click()");
+    assert(await evaluate("[...document.querySelectorAll('.sound-bank>section')].every(s=>[...s.querySelectorAll('button')].every(b=>b.getBoundingClientRect().right<=s.getBoundingClientRect().right+1))"),'Sound chips must stay inside their groups');
+    await screenshot('sound-layout-'+width);
+    await evaluate("document.querySelector('.sound-workshop .primary').click()");
+    await evaluate("[...document.querySelectorAll('.task-tiles button')].find(b=>b.textContent==='Математика').click()");
+    await until("!!document.querySelector('.settings .start:not(:disabled)')");
+    await evaluate("document.querySelector('.settings .start').click()");
+    await until("!!document.querySelector('.card[data-card-key]')");
+    assert(await evaluate("[...document.querySelectorAll('.card-front')].some(e=>/^[0-9]+$/.test(e.textContent))&&[...document.querySelectorAll('.card-front')].some(e=>/[+−]/.test(e.textContent))"),'Math memory needs expression and answer faces');
+    for(const game of ['matching','transformations']){
+      await cmd('Page.navigate',{url:origin+'?game='+game});
+      await until("!!document.querySelector('.task-tiles')");
+      if(game==='matching')await selectMatching('Задание','manual');
+      await evaluate("[...document.querySelectorAll('.task-tiles button')].find(b=>b.textContent==='Математика').click()");
+      await until("!!document.querySelector('.math-settings')");
+      await screenshot(game+'-math-settings-'+width);
+      await evaluate("[...document.querySelectorAll('button.primary')].find(b=>b.textContent==='Начать игру').click()");
+      await until("!!document.querySelector('.play-area')");
+      assert(await evaluate("document.documentElement.scrollWidth<=innerWidth+2"),'Math game fits viewport');
+    }
   }
   writeFileSync(join(output,'report.json'),JSON.stringify({memory:results,sorting,failedRequests:failures},null,2));
   assert.equal(failures.length,0,failures.join('\n'));

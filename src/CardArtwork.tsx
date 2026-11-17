@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import {useEffect,useState} from 'react';
 import type {ImageVariant} from './model.ts';
 
 type Bounds=NonNullable<ImageVariant['bounds']>;
