@@ -264,7 +264,7 @@ footer span{display:none}
 .panel-heading h2{font-size:26px}
 .settings fieldset{display:grid;grid-template-columns:1fr 1.25fr;gap:18px;align-items:start}
 .settings-block{padding:18px;background:#fffdf8;border:1px solid #e0deea;border-radius:16px;min-width:0}
-.settings-block:nth-child(2){grid-column:2;grid-row:1 / span 2}
+.settings.unified-settings-content>fieldset>.settings-block:nth-child(2){grid-column:2;grid-row:1 / span 2}
 .settings-block h3{font-size:18px;margin:0 0 18px;color:#424e84}
 .settings label,.settings .field-label{font-size:15px;display:block;margin:12px 0 6px}
 .settings select{font-size:15px;padding:12px;margin-top:7px;background:white;border-color:#c6c9dd;min-height:44px}
@@ -445,7 +445,7 @@ h1,h2,h3,.card-back{font-family:Londrina, sans-serif}
 .reading-length label{display:flex;align-items:center;gap:6px}
 .reading-length select{width:75px;margin:0}
 .settings fieldset{grid-template-rows:auto 1fr}
-.settings-block:nth-child(3){grid-column:1;grid-row:2}
+.settings.unified-settings-content>fieldset>.settings-block:nth-child(3){grid-column:1;grid-row:2}
 .settings details>summary{list-style:none;cursor:pointer;border-radius:8px;padding:10px;background:#ebe7f5;display:flex;align-items:center;gap:9px}
 .settings details>summary::before{content:'▸'!important;display:inline-block;color:#7259ba}
 .settings details[open]>summary::before{content:'▾'!important}
@@ -777,3 +777,14 @@ html:has(.settings-shade){overflow:hidden}
 .app .overlay:has(.award){padding-top:76px;padding-bottom:32px}
 .app .overlay>div:has(.award){overflow:visible;max-height:calc(100dvh - 180px)}
 .app .overlay .award{top:-46px;z-index:2;pointer-events:none}
+
+/* The shell owns height; its scroll area consumes only the remaining space. */
+.app .settings-shade .settings-frame.shared-settings-window{display:flex;flex-direction:column;height:94dvh;max-height:94dvh!important;min-height:0}
+.settings-window-heading{flex:none}
+.app .settings-shade .settings-frame.shared-settings-window .unified-settings-content{flex:1 1 0;min-height:0!important;max-height:none!important;height:auto!important;overflow-y:auto!important;overflow-x:hidden!important}
+.shared-settings-window .unified-settings-content>*{min-width:0;max-width:100%;box-sizing:border-box}
+.shared-settings-window .unified-settings-content>.settings{min-width:0;display:block}
+.shared-settings-window .settings-block{min-width:0;box-sizing:border-box}
+.app .transformation-scene{container-type:size;min-width:0;width:100%;overflow:hidden}
+.app .transformation-chamber{width:min(100cqw,133cqh);height:auto;max-height:none;aspect-ratio:4/3;min-width:0;justify-self:center}
+.shared-settings-window .matching-setup>.settings-block,.shared-settings-window .conveyor-settings>.settings-block{grid-column:auto;grid-row:auto}
