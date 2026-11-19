@@ -8,7 +8,7 @@ export function ReadingSettings({l,setL,words,textDisplayProvided=false}:{l:Lear
  const toggle=(values:string[],v:string,on:boolean)=>on?[...new Set([...values,v])]:values.filter(x=>x!==v);
  return <div className="reading-settings">
  <div className="field-label">{l.mode==='reading'?'Что читаем':'Материал для задания'}</div>
- <div className="reading-kinds">{([['words','Слова'],['syllables','Слоги и сочетания']] as [ContentKind,string][]).map(([kind,label])=><label className="check" key={kind}><input type="checkbox" checked={kinds.includes(kind)} onChange={e=>setL({...l,contentKinds:toggle(kinds,kind,e.target.checked) as ContentKind[]})}/>{label}</label>)}</div>
+ <div className="reading-kinds">{([['words','Слова'],['syllables','Слоги и сочетания']] as [ContentKind,string][]).map(([kind,label])=><label className="check" key={kind}><input type={l.mode==='reading'?'radio':'checkbox'} checked={kinds.includes(kind)} onChange={e=>setL({...l,contentKinds:l.mode==='reading'?[kind]:toggle(kinds,kind,e.target.checked) as ContentKind[]})}/>{label}</label>)}</div>
  {l.mode==='reading'&&<>{!textDisplayProvided&&<label className="check"><input type="checkbox" checked={!!r.splitSyllables} onChange={e=>update({splitSyllables:e.target.checked})}/>Разделить на слоги</label>}
  <details className="filter-details"><summary>Доступные буквы · {r.available.length} из 33</summary>
  <label className="check"><input type="checkbox" checked={r.available.length===33} onChange={e=>update({available:e.target.checked?alphabet:[],required:[]})}/>Все буквы</label>

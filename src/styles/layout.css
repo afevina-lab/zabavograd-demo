@@ -773,3 +773,7 @@ html:has(.settings-shade){overflow:hidden}
 .shared-settings-window .task-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.shared-settings-window .choice-tiles{gap:8px}.shared-settings-window label{line-height:1.45}
 @media(min-width:900px){.app .shared-settings-window .matching-setup,.app .shared-settings-window .conveyor-settings{display:grid;grid-template-columns:1fr 1fr;gap:18px}.shared-settings-window .matching-setup>p,.shared-settings-window .conveyor-settings>p{grid-column:1/-1}}
 @media(max-width:600px){.settings-window-heading{padding:6px 10px 12px}.settings-window-heading h2{font-size:23px}.app .shared-settings-window .unified-settings-content{max-height:calc(94dvh - 115px)!important;padding:10px!important}.shared-settings-window .task-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Awards sit above the result frame instead of inside its scroll clipping box. */
+.app .overlay:has(.award){padding-top:76px;padding-bottom:32px}
+.app .overlay>div:has(.award){overflow:visible;max-height:calc(100dvh - 180px)}
+.app .overlay .award{top:-46px;z-index:2;pointer-events:none}
