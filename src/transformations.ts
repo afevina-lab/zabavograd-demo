@@ -4,7 +4,7 @@ export type TransformationMode='small'|'many'|'reading';
 export type TransformationPhase='question'|'transforming'|'answer';
 export function transformationAnswer(word:Word,mode:TransformationMode):string|null{
  if(mode==='reading')return word.label;
- const form=mode==='small'?word.verifiedForms?.diminutive:word.verifiedForms?.plural;
+ const form=mode==='small'?(word.verifiedForms?.diminutive||word.suggestedForms?.diminutive):(word.verifiedForms?.plural||word.suggestedForms?.plural);
  return typeof form==='string'&&form.trim()?form.trim():null;
 }
 export function transformationEligibility(word:Word,mode:TransformationMode,learningMode:string):'eligible'|'missing-image'|'unverified-form'|'missing-form-phonetics'{
