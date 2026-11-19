@@ -788,3 +788,5 @@ html:has(.settings-shade){overflow:hidden}
 .app .transformation-scene{container-type:size;min-width:0;width:100%;overflow:hidden}
 .app .transformation-chamber{width:min(100cqw,133cqh);height:auto;max-height:none;aspect-ratio:4/3;min-width:0;justify-self:center}
 .shared-settings-window .matching-setup>.settings-block,.shared-settings-window .conveyor-settings>.settings-block{grid-column:auto;grid-row:auto}
+
+.transformation-content{container-type:inline-size;min-width:0}.transformation-word{max-width:100%}
