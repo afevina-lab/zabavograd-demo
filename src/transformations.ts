@@ -8,6 +8,7 @@ export function transformationAnswer(word:Word,mode:TransformationMode):string|n
  return typeof form==='string'&&form.trim()?form.trim():null;
 }
 export function transformationEligibility(word:Word,mode:TransformationMode,learningMode:string):'eligible'|'missing-image'|'unverified-form'|'missing-form-phonetics'{
+ if(mode==='reading'&&word.materialKind)return 'eligible';
  if(!word.variants?.length)return 'missing-image';
  if(!transformationAnswer(word,mode))return 'unverified-form';
  if(mode!=='reading'&&!['any','lexical'].includes(learningMode))return 'missing-form-phonetics';

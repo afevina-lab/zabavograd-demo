@@ -11,7 +11,7 @@ export function TransformationScene({theme,word,mode,phase}:{theme:ThemeId;word:
   <div className="transformation-chamber">
    {scene.kind==='flip'?<img className="transformation-back" src={url((phase==='answer'?scene.frame:scene.back)!)} alt=""/>:scene.back&&<img className="transformation-back" src={url(scene.back)} alt=""/>}
    <div className="transformation-content" data-count={result.count} data-small={result.scale===.5} aria-live="polite">
-    {result.kind==='word'?<span className="transformation-word" style={{whiteSpace: 'nowrap', overflowWrap: 'normal', fontSize: `min(64px, ${90/Math.max(1,word.label.length*.7)}cqw)`}}>{word.label.toLocaleUpperCase('ru')}</span>:Array.from({length:result.count},(_,i)=><div className="transformation-object" key={word.id+':'+i}><CardArtwork image={word.variants![0]} label={word.label}/></div>)}
+    {(result.kind==='word'||word.materialKind)?<span className="transformation-word" style={{whiteSpace: 'nowrap', overflowWrap: 'normal', fontSize: `min(64px, ${90/Math.max(1,word.label.length*.7)}cqw)`}}>{word.label.toLocaleUpperCase('ru')}</span>:Array.from({length:result.count},(_,i)=><div className="transformation-object" key={word.id+':'+i}><CardArtwork image={word.variants![0]} label={word.label}/></div>)}
    </div>
    {scene.kind==='rays'&&<div className="transformation-rays" aria-hidden="true"/>}
    {scene.glass&&<img className="transformation-glass" src={url(scene.glass)} alt=""/>}

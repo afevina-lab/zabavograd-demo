@@ -13,7 +13,7 @@ export const syllablePatterns={
  CVC:'Согласный + гласный + согласный'
 } as const;
 export type Pattern=keyof typeof syllablePatterns;
-export type ContentKind='words'|'syllables';
+export type ContentKind='letters'|'words'|'syllables';
 export type ReadingOptions={splitSyllables?:boolean;available:string[];required:string[];min:number;max:number;excludeClusters:boolean};
 export const textOf=(s:string)=>s.normalize('NFC').toLocaleLowerCase('ru').replace(/\u0301/g,'');
 export const wordLength=(s:string)=>[...textOf(s)].length;
@@ -25,11 +25,11 @@ export const hasClusters=(s:string)=>new RegExp('['+consonants.join('')+']{2}').
 export function matchesReading(w:Word,l:Learning){
  const r=readingOptions(l),text=textOf(w.label),letters=[...text];
  return /^[а-яё]+$/.test(text)&&letters.every(c=>r.available.includes(c))&&
- r.required.every(c=>letters.includes(c))&&(!r.excludeClusters||!hasClusters(text))&&
- (w.materialKind==='syllables'||(letters.length>=r.min&&letters.length<=r.max));
+ (w.materialKind==='letters'||r.required.every(c=>letters.includes(c)))&&(!r.excludeClusters||!hasClusters(text))&&
+ (!!w.materialKind||(letters.length>=r.min&&letters.length<=r.max));
 }
 export function includesReading(l:Learning):boolean{return l.mode==='reading'||(l.additional||[]).some(r=>includesReading(r.learning));}
-export function includesSyllables(l:Learning):boolean{return (['reading','automation','differentiation'].includes(l.mode)&&contentKinds(l).includes('syllables'))||(l.additional||[]).some(r=>includesSyllables(r.learning));}
+export function includesSyllables(l:Learning):boolean{return (['reading','automation','differentiation'].includes(l.mode)&&contentKinds(l).some(k=>k==='syllables'||k==='letters'))||(l.additional||[]).some(r=>includesSyllables(r.learning));}
 export function compatibleMemoryMode(mode:MemoryMode,l:Learning):MemoryMode{
  return l.mode==='math'?'word-word':includesSyllables(l)?'word-word':includesReading(l)&&mode.startsWith('image-')?'word-word':mode;
 }
@@ -80,7 +80,8 @@ export function generateCombinations(l:Learning):Word[]{
  return result;
 }
 export function materialCandidates(words:Word[],l:Learning):Word[]{
- const generated=generateCombinations(l).concat((l.additional||[]).flatMap(r=>materialCandidates([],r.learning)));
+ const letters:Word[]=l.mode==='reading'&&contentKinds(l).includes('letters')?readingOptions(l).available.map(label=>({id:'letter:'+label,label,materialKind:'letters',topic:null,subcategory:null,position:'',type:null,opposition:[],weight:100,images:0})):[];
+ const generated=[...letters,...generateCombinations(l)].concat((l.additional||[]).flatMap(r=>materialCandidates([],r.learning)));
  // A spelled word and the same generated combination are one visible answer.
  const unique=new Map<string,Word>();
  for(const w of generated)unique.set(w.label,w);

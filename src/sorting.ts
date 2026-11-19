@@ -30,18 +30,16 @@ export function makeSorting(pools:Word[][],counts:number[],rng=Math.random):Sort
  // Each group gets approximately half words and half syllables when both
  // are enabled and available. Strict matching keeps all meaning IDs unique.
  const slots=counts.flatMap((n,g)=>{
-  const syllables=pools[g].filter(w=>w.materialKind==='syllables').length;
-  const words=pools[g].length-syllables;
-  const mixed=syllables>0&&words>0;
-  const desired=mixed?Math.min(syllables,Math.max(n-words,Math.round(n/2))):0;
-  return Array.from({length:n},(_,i)=>({group:g,kind:mixed?(i<desired?'syllables':'words'):null}));
+  const kinds=['letters','syllables','words'];const available=kinds.map(kind=>pools[g].filter(w=>(w.materialKind||'words')===kind).length);const selected:string[]=[];
+  while(selected.length<n){let added=false;for(let i=0;i<kinds.length&&selected.length<n;i++)if(available[i]>0){selected.push(kinds[i]);available[i]--;added=true;}if(!added)break;}
+  return selected.map(kind=>({group:g,kind}));
  });
  function assign(strict:boolean):Map<number,Word>|null{
   const owners=new Map<string,number>(),assigned=new Map<number,Word>();
   function place(slot:number,seen:Set<string>):boolean{
    const {group,kind}=slots[slot];
    for(const w of shuffled[group]){
-    if(strict&&kind&&(w.materialKind==='syllables'?'syllables':'words')!==kind)continue;
+    if(strict&&kind&&(w.materialKind||'words')!==kind)continue;
     if(seen.has(w.id))continue;seen.add(w.id);
     const prior=owners.get(w.id);
     if(prior===undefined||place(prior,seen)){owners.set(w.id,slot);assigned.set(slot,w);return true;}

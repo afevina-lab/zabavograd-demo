@@ -3,14 +3,14 @@ import {useGameViewport} from './design-system/useGameViewport.ts';
 import {GameSelect} from './GameSelect.tsx';
 import {TextDisplaySettings} from './TextDisplaySettings.tsx';
 import {readingLabel} from './reading.ts';
-import {shuffled} from './matching.ts';
+
 import {useGameLimits} from './design-system/GameLimits.tsx';
 import {QuantitySlider} from './QuantitySlider.tsx';
 import {GameToolbar} from './GameToolbar.tsx';
 import {WordPicker} from './WordPicker.tsx';
 import {availableMaterial,canSelectAutomatically} from './material-policy.ts';
 import {MaterialSettings} from './MaterialSettings.tsx';
-import {initialLearning,learningPool} from './learning.ts';
+import {initialLearning,learningPool,balancedPick} from './learning.ts';
 import {defaultFilters} from './model.ts';
 import {useLibrary} from './useLibrary.ts';
 import {useEffect,useMemo,useRef,useState} from 'react';
@@ -36,7 +36,7 @@ export function Transformations(){
  useEffect(()=>()=>{if(timer.current)clearTimeout(timer.current)},[]);
  const candidates=useMemo(()=>learningPool(words,filters,learning,false).filter(w=>learning.mode==='math'||transformationEligibility(w,mode,learning.mode)==='eligible'),[words,filters,learning,mode]);
  const [shuffleKey,setShuffleKey]=useState(0);
- const pool=useMemo(()=>manual?.source===candidates?candidates.filter(w=>manual.ids.includes(w.id)):shuffled(candidates.filter(canSelectAutomatically)).slice(0,count),[manual,candidates,count,shuffleKey]);
+ const pool=useMemo(()=>manual?.source===candidates?candidates.filter(w=>manual.ids.includes(w.id)):balancedPick(candidates.filter(canSelectAutomatically),Math.min(count,candidates.filter(canSelectAutomatically).length),learning),[manual,candidates,count,shuffleKey]);
  const activeWords=started?session:pool;
  const word=activeWords[index];
  function reset(){if(timer.current)clearTimeout(timer.current);setPhase('question');setStarted(false)}

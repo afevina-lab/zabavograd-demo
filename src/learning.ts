@@ -65,7 +65,7 @@ function matchesMaterial(w:Word,f:Filters,l:Learning):boolean {
  const structure=w.type===null?f.untyped:f.types.includes(w.type);
  const topics=l.topics??(f.topic?[f.topic]:[]);
  const lexical=l.categoryPaths!==undefined?(w.categories||[]).some(p=>l.categoryPaths!.includes(p)):topics.length>0&&topics.some(t=>w.topic===t&&(!l.subtopics?.[t]?.length||l.subtopics[t].includes(w.subcategory||'')));
- const contentAllowed=['reading','automation','differentiation'].includes(l.mode)?contentKinds(l).includes(w.materialKind==='syllables'?'syllables':'words')&&(!w.materialKind||effectivePatterns(l).includes(w.syllablePattern as Pattern)):!w.materialKind;
+ const contentAllowed=['reading','automation','differentiation'].includes(l.mode)?contentKinds(l).includes(w.materialKind||'words')&&(w.materialKind!=='syllables'||effectivePatterns(l).includes(w.syllablePattern as Pattern)):!w.materialKind;
  const base=contentAllowed&&(l.mode==='reading'?matchesReading(w,l):l.mode==='any'?true:l.mode==='lexical'?lexical:l.mode==='structure'?structure:(w.materialKind==='syllables'||structure)&&l.sounds.some(s=>matchesSound(w,s,l)));
  const forbidden=(l.excludedSounds||[]).filter(s=>!l.sounds.includes(s));
  const soundAllowed=l.mode==='reading'||!forbidden.length||(!!w.phonemes&&!forbidden.some(s=>containsExcludedSound(w,s)));
@@ -78,6 +78,7 @@ export function learningPool(words:Word[],f:Filters,l:Learning,automatic=true){i
  * Reallocate only when one eligible kind is genuinely too small; do not repeat IDs.
  */
 export function balancedPick(pool:Word[],count:number,l:Learning,rng=Math.random):Word[]{
+ if(l.mode==='reading'&&contentKinds(l).includes('letters')){const groups=contentKinds(l).map(kind=>pool.filter(w=>(w.materialKind||'words')===kind));const selected:Word[]=[];while(selected.length<count){let added=false;for(const group of groups){if(selected.length>=count)break;const remaining=group.filter(w=>!selected.some(s=>s.id===w.id));if(remaining.length){selected.push(pickWords(remaining,1,rng)[0]);added=true;}}if(!added)throw Error('Недостаточно материала');}return selected;}
  if(contentKinds(l).includes('words')&&contentKinds(l).includes('syllables')){
   const words=pool.filter(w=>w.materialKind!=='syllables');
   const syllables=pool.filter(w=>w.materialKind==='syllables');
