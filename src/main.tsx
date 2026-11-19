@@ -1,3 +1,4 @@
+import {useGameViewport} from './design-system/useGameViewport.ts';
 import {GameSelect} from './GameSelect.tsx';
 import {TextDisplaySettings} from './TextDisplaySettings.tsx';
 import {readingLabel} from './reading.ts';
@@ -111,6 +112,7 @@ function App(){
 
  function openPicker(){setChosen(selection.map(w=>w.id));setSearch('');setShowPicker(true);}
  const choices=manualPool.filter(w=>w.label.toLocaleLowerCase('ru').includes(search.toLocaleLowerCase('ru')));
+ useGameViewport(!!round&&!settingsOpen);
  return <div onClickCapture={e=>{const el=e.target as HTMLElement;if(el.closest('button')&&!el.closest('.card'))playSound('click')}} ref={gameRoot} className={`app ${theme} ${round&&!settingsOpen?'game-active':''}`} style={themeVars(theme,import.meta.env.BASE_URL)} {...themeAttributes(theme)}><header className="topbar"><a className="brand" href={import.meta.env.BASE_URL+"home.html"} aria-label="Забавоград, начало"><span className="brand-mark"><Icon name="Home1"/></span>забавоград<span className="brand-note">место для открытий</span></a><div className="toplinks"><span>Первая игровая мастерская</span><button className="link" onClick={()=>{setPaused(true);setShowHelp(true)}}>Как играть <Icon name="Question"/></button></div></header>
  <main><nav className="game-switch"><strong>Мемори</strong><a href="?game=sorting">Сортировка</a></nav><div className="breadcrumb">Свободные игры <span>/</span> Память и внимание</div><div className="heading"><div><p className="eyebrow">НАХОДИМ ПАРЫ · 01</p><h1>Мемори<span className="title-dot">.</span></h1><p className="intro">Открываем, называем, запоминаем.</p></div><div className="prototype">Первая версия<span>Слова из библиотеки на Р</span></div></div>
  <div className="workspace">{settingsOpen&&<div className="settings-shade"><div className="settings-frame"><aside className="settings" role="dialog" aria-modal="true" aria-label="Настройки мемори"><div className="panel-heading"><h2>Настроим игру</h2><a className="icon-button" aria-label="Домой" href={import.meta.env.BASE_URL+'home.html'}><Icon name="Home1"/></a><Icon name="Star"/></div><fieldset disabled={!!active}><section className="settings-block"><h3>1. Карточки и раунды</h3><QuantitySlider label="Количество пар" value={pairs} min={learning.mode==='math'?1:3} max={Math.max(learning.mode==='math'?1:3,Math.min(10,Math.floor(rawPool.length/rounds)))} onChange={setPairs}/>
