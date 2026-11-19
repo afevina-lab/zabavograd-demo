@@ -367,7 +367,7 @@ try{
     await selectMatching('Режим карточек','word-word');
     assert(await evaluate("document.querySelectorAll('.text-display-setting').length===1&&document.querySelector('.game-choice select').getBoundingClientRect().height===0"),'Word display needs syllable control without reading task');
     await evaluate("document.querySelector('.text-display-setting input').click()");
-    assert(await evaluate("!!document.querySelector('.settings [aria-label=Домой]')"),'Settings need home navigation');
+    assert(await evaluate("!!document.querySelector('.settings-window-heading [aria-label=Домой]')"),'Settings need home navigation');
     await screenshot('settings-unified-'+width);
     await evaluate("[...document.querySelectorAll('.task-tiles button')].find(b=>b.textContent==='Тематика').click()");
     await evaluate("[...document.querySelectorAll('.settings button')].find(b=>b.textContent.startsWith('Лексические темы')).click()");
@@ -387,6 +387,7 @@ try{
     for(const game of ['matching','transformations']){
       await cmd('Page.navigate',{url:origin+'?game='+game});
       await until("!!document.querySelector('.task-tiles')");
+      assert(await evaluate("!!document.querySelector('.shared-settings-window .unified-settings-content')"),'Every game must use the shared settings shell');
       if(game==='matching')await selectMatching('Задание','manual');
       await evaluate("[...document.querySelectorAll('.task-tiles button')].find(b=>b.textContent==='Математика').click()");
       await until("!!document.querySelector('.math-settings')");

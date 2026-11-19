@@ -764,3 +764,12 @@ html:has(.settings-shade){overflow:hidden}
 @media(max-height:550px){.transformation-prompt{padding:4px 8px}.transformation-prompt p{margin:4px}.transformation-prompt h2{font-size:18px}.transformation-actions button{min-height:36px;padding:6px 12px}}
 .app.game-active .stage.matching-stage{overflow:hidden!important}.matching-stage .matching-content{transform-origin:top center}
 .stage:has(>.game-dialog)>.conveyor-answer{visibility:hidden}.game-dialog .primary{margin:8px}
+/* Shared settings window overrides historical per-game page geometry. */
+.settings-window-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 16px 18px}.settings-window-heading h2{margin:0;font-size:28px}.settings-window-heading span{display:block;margin-top:4px;font-size:15px}
+.app .shared-settings-window .unified-settings-content{width:calc(100% - 12px)!important;max-width:none!important;margin:0 12px 0 0!important;max-height:calc(94dvh - 138px)!important;min-height:0;padding:16px!important;overflow:auto!important;box-sizing:border-box;display:block}
+.shared-settings-window .unified-settings-content>.settings{padding:0!important;max-height:none!important;overflow:visible!important;width:100%!important;margin:0!important;border:0!important;box-shadow:none!important;background:transparent!important}
+.shared-settings-window .unified-settings-content>p:first-child{margin:0 0 16px;line-height:1.5}
+.shared-settings-window .settings-block{margin:0 0 18px;padding:18px}.shared-settings-window .settings-block h2,.shared-settings-window .settings-block h3{font-size:21px;margin:0 0 18px}
+.shared-settings-window .task-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.shared-settings-window .choice-tiles{gap:8px}.shared-settings-window label{line-height:1.45}
+@media(min-width:900px){.app .shared-settings-window .matching-setup,.app .shared-settings-window .conveyor-settings{display:grid;grid-template-columns:1fr 1fr;gap:18px}.shared-settings-window .matching-setup>p,.shared-settings-window .conveyor-settings>p{grid-column:1/-1}}
+@media(max-width:600px){.settings-window-heading{padding:6px 10px 12px}.settings-window-heading h2{font-size:23px}.app .shared-settings-window .unified-settings-content{max-height:calc(94dvh - 115px)!important;padding:10px!important}.shared-settings-window .task-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
