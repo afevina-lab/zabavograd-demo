@@ -11,7 +11,7 @@ Branch: design/ui-audit-20261120. Review only; no main merge or site publication
 ## Validation
 
 115 tests passed; TypeScript, architecture, design-system, library validation and Vite build passed.
-Browser script passed for five games at 1440×900, 1024×768, 768×1024, 390×844 and 844×390: no horizontal content overflow or scroll region escaping its frame. Mixed reading selection checked in each game. Forest theme screenshots include expanded category dialogs at all five sizes. Earlier run also checked the default space theme; neutral theme requires separate visual review.
+Browser script passed for five games at 1440×900, 1024×768, 768×1024, 390×844 and 844×390: no horizontal content overflow or scroll region escaping its frame. Mixed reading selection checked in each game. Forest theme screenshots include expanded category dialogs at all five sizes. Earlier run also checked the default space theme; neutral theme was subsequently checked in the full material/layout pass.
 
 Local screenshots and machine report: ui-smoke/ (ignored build artifacts). User visual approval remains pending. Existing backgrounds and gameplay logic were retained.
 
@@ -44,3 +44,13 @@ Matching captions are offered immediately after display-mode selection only for 
 Added SettingsDisclosure for additional conditions and time/lives: consistent icon, title, state description and disclosure affordance; native details keyboard behavior retained. Category selection now uses a full-width warm gold action with selected-topic names and count, retaining the transactional tree. Unified quiet rounded scrollbar rules, removing competing theme scrollbar overrides. No additional game mechanics, rewards or decorative vegetation.
 
 115 tests, architecture, TypeScript, design-system and build passed. Browser scenario includes expanding/collapsing both sections and screenshots with expanded controls.
+
+## Full material and layout pass
+
+Honey wood frame uses CSS grain, edge highlight, inner recess and darker bottom edge. Cream center retained. Forest palette has stronger green actions. Setup typography uses the body family with a consistent heading hierarchy.
+
+Shared matching/conveyor layout distributes sections into independent columns with a separate final readiness area, eliminating row-height gaps. Additional conditions are visually secondary. Shared MaterialPreview displays existing artwork and text cards; an empty state opens category selection or focuses material selection. QuantitySlider now has one editable count between minus/plus, a filled track, gold thumb and min/max labels; unavailable ranges show an explanation. Existing numeric bounds and change handlers retained.
+
+115 tests, TypeScript, architecture, design-system and build pass. Browser scenarios cover caption modes, disclosure controls, quantity increment/decrement with restored value, previews, expanded categories and responsive overflow.
+
+Final browser pass: 25 responsive layouts with no horizontal overflow; caption mode conditions, disclosure interaction and count increment/decrement passed. Additional 1440×900 smoke checked neutral, forest and space theme switching with screenshots under ui-smoke/themes/. Desktop ready-material and mobile ready-material screenshots visually inspected.

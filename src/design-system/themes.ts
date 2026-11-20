@@ -21,7 +21,7 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
  },
  forest:{
   label:'Лес',
-  palette:{accent:'#a8bc8c',deep:'#4a694c',pale:'#edf4e5',outline:'#7c9b72',text:'#304d38',paper:'#fffaf0',page:'#eef2e6',stageText:'#344a39'},
+  palette:{accent:'#80b84c',deep:'#3f782f',pale:'#edf4e5',outline:'#7c9b72',text:'#304d38',paper:'#fffaf0',page:'#eef2e6',stageText:'#344a39'},
   skin:'sage',toolbarArt:'assets/themes/forest/header.webp',
   scene:{background:'assets/themes/forest/forest_background.webp',fill:'#d5e7bf',motion:'static',sprites:[
    {id:'tree-left',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(100cqh,65cqw)',left:'-5%',bottom:'-4%',opacity:1,layer:2,durationMs:10500,origin:'50% 94%'},
@@ -63,7 +63,7 @@ export function themeVars(id:ThemeId,base='/'):CSSProperties{
  const kit=(dir:string,name:string)=>url(`assets/theme-ui/${dir}/${name}.webp`,base);
  return {
   '--ui-accent':p.accent,'--ui-deep':p.deep,'--ui-pale':p.pale,
-  '--ui-setup-gold':'#e9b84f','--ui-setup-peach':'#f3d6b0','--ui-setup-paper':'#f5e9cc','--ui-setup-field':'#fff5df','--ui-outline':p.outline,'--ui-text':p.text,'--ui-paper':p.paper,
+  '--ui-wood':'#c28a48','--ui-wood-light':'#e7bc7d','--ui-wood-dark':'#79502c','--ui-setup-gold':'#efba3e','--ui-setup-peach':'#f3d6b0','--ui-setup-paper':'#f5e9cc','--ui-setup-field':'#fff5df','--ui-outline':p.outline,'--ui-text':p.text,'--ui-paper':p.paper,
   '--zg-page':p.page,'--zg-stage-fill':t.scene.fill,'--zg-stage-text':p.stageText,
   '--zg-stage-image':url(t.scene.background,base),
   '--zg-toolbar-image':url(t.toolbarArt,base),
