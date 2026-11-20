@@ -26,3 +26,11 @@ Validation: 115 tests, architecture, TypeScript, design-system check and product
 Rounded asymmetric cardboard outlines, tactile shared buttons, section title tabs and native selects with a custom caret. Theme choices preview the existing scene artwork. No additional leaf or branch ornaments. Existing scene artwork is retained.
 
 115 tests, architecture, design-system, TypeScript and production build passed. Responsive browser screenshots refreshed.
+
+## Tactile panel implementation
+
+Replaced the previous cartoon outline rules with one shared CSS system: regular rounded panel with a broad inset rim and bottom edge; recessed native selects with caret wells; raised buttons and range thumbs. No new bitmap assets or decorative vegetation. Removed numbered section tabs and nested section borders.
+
+Binary preferences (captions, preview, syllable splitting, cluster exclusion, random order, zero inclusion, timer and lives) expose checkbox-backed accessible switches. Set membership, category trees, letters and multiple-choice task selection retain checkbox semantics and partial selection. All labels and handlers retained.
+
+115 tests, TypeScript, architecture, design-system and production build passed. Browser scenario now also verifies the caption switch can toggle and restore its state.

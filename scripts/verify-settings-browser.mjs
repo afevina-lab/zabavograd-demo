@@ -60,6 +60,7 @@ for(const game of ['memory','sorting','matching','conveyor','transformations']){
 await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");await evaluate("document.querySelectorAll('.themes button')[1]?.click()");await sleep(800);
 await screenshot('audit-'+game+'-'+width+'-top');
 if(game==='conveyor'){
+ assert(await evaluate("(()=>{const e=document.querySelector('input[role=switch]');if(!e)return false;const before=e.checked;e.click();const changed=e.checked!==before;e.click();return changed&&e.checked===before})()"),'Caption switch failed');
  await evaluate("(()=>{const e=[...document.querySelectorAll('select')].find(e=>[...e.options].some(o=>o.value==='lexical'));if(e){e.value='lexical';e.dispatchEvent(new Event('change',{bubbles:true}))}})()");await sleep(200);
  await evaluate("[...document.querySelectorAll('button')].find(b=>b.textContent.startsWith('Лексические темы'))?.click()");
  if(await evaluate("!!document.querySelector('.category-picker[open]')")){
