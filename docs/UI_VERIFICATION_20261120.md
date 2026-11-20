@@ -62,3 +62,13 @@ Replaced picture-card previews with compact text material summaries. Added a nat
 115 tests, TypeScript, architecture, design-system and build pass. Browser assertions cover styled native selects, absence of card previews and quantity interactions.
 
 Final confirmation: 25 responsive layouts passed without overflow. Additional smoke of final icon mapping and all three themes passed; screenshots in ui-smoke/final/. Mobile layout visually inspected.
+
+## Unified expanded controls and game dialogs
+
+Shared ControlWell supplies the same SVG chevron and plus treatment to selects, additional conditions, time/lives and category selection. Labels changed to Лексика and Выберите условия. Native customizable select pickers use the cream/wood palette, themed option states and keyboard behavior where supported; unsupported browsers retain their native picker. Expanded checkboxes retain indeterminate semantics with themed rendering.
+
+Pause, settings confirmation, selection dialogs and game results now share the wood/cream surface and saturated actions. Removed the stale toolbar foreground rule which hid icons on green buttons. Transformation pause is attached to the full stage; completing its last card now shows the common completion dialog rather than immediately dismissing the game. No mastery or score is inferred from completion.
+
+Validation: 115 tests, TypeScript, architecture, design-system and build. Added scripts/verify-dialogs-browser.mjs: pause, life-limit endings and settings in all five games at 1440×900 and 390×844, a fully completed Memory round, a fully completed Transformations session and real pointer/keyboard interaction with the opened native select. Screenshots: ui-smoke/dialogs/.
+
+Confirmed low-height 844×390 pause/end/settings scenarios in all five games. Native select was opened by pointer and changed by keyboard; screenshots visually reviewed. Active-game reset confirmations separately checked for Memory and Sorting.

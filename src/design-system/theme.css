@@ -131,10 +131,10 @@
 }
 .app[data-theme] .play-toolbar .icon-button{
  display:inline-flex;align-items:center;justify-content:center;
- flex:none;text-decoration:none;color:var(--ui-deep)!important;
+ flex:none;text-decoration:none;
 }
 .app[data-theme] .play-toolbar .zg-caption-toggle[aria-pressed="true"]{
- border-image-source:var(--skin-square-pressed)!important;
+ border-image-source:none!important;
 }
 .app[data-theme] button:disabled:not(.card){filter:none!important;opacity:.68}
 .app[data-theme] .zg-caption-toggle:disabled{opacity:.5!important}
