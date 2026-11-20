@@ -34,3 +34,7 @@ Replaced the previous cartoon outline rules with one shared CSS system: regular 
 Binary preferences (captions, preview, syllable splitting, cluster exclusion, random order, zero inclusion, timer and lives) expose checkbox-backed accessible switches. Set membership, category trees, letters and multiple-choice task selection retain checkbox semantics and partial selection. All labels and handlers retained.
 
 115 tests, TypeScript, architecture, design-system and production build passed. Browser scenario now also verifies the caption switch can toggle and restore its state.
+
+## Caption condition and spacing correction
+
+Matching captions are offered immediately after display-mode selection only for image-image, non-math and non-derived-image modes. In-game captions use the same display-mode guard. Browser checks exercise all four display modes. Setup paper and field colors have dedicated warm cream tokens; section spacing and desktop row spans remove the empty gap below short first-column sections.

@@ -771,7 +771,7 @@ html:has(.settings-shade){overflow:hidden}
 .shared-settings-window .unified-settings-content>p:first-child{margin:0 0 16px;line-height:1.5}
 .shared-settings-window .settings-block{margin:0 0 18px;padding:18px}.shared-settings-window .settings-block h2,.shared-settings-window .settings-block h3{font-size:21px;margin:0 0 18px}
 .shared-settings-window .task-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.shared-settings-window .choice-tiles{gap:8px}.shared-settings-window label{line-height:1.45}
-@media(min-width:900px){.app .shared-settings-window .matching-setup,.app .shared-settings-window .conveyor-settings{display:grid;grid-template-columns:1fr 1fr;gap:18px}.shared-settings-window .matching-setup>p,.shared-settings-window .conveyor-settings>p{grid-column:1/-1}}
+@media(min-width:900px){.app .shared-settings-window .matching-setup,.app .shared-settings-window .conveyor-settings{display:grid;grid-template-columns:1.1fr 1fr;gap:12px 28px;align-items:start}.shared-settings-window .matching-setup>p,.shared-settings-window .conveyor-settings>p{grid-column:1/-1}}
 @media(max-width:600px){.settings-window-heading{padding:6px 10px 12px}.settings-window-heading h2{font-size:23px}.shared-settings-window .task-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* Awards sit above the result frame instead of inside its scroll clipping box. */
 .app .overlay:has(.award){padding-top:76px;padding-bottom:32px}
@@ -787,6 +787,6 @@ html:has(.settings-shade){overflow:hidden}
 .shared-settings-window .settings-block{min-width:0;box-sizing:border-box}
 .app .transformation-scene{container-type:size;min-width:0;width:100%;overflow:hidden}
 .app .transformation-chamber{width:min(100cqw,133cqh);height:auto;max-height:none;aspect-ratio:4/3;min-width:0;justify-self:center}
-.shared-settings-window .matching-setup>.settings-block,.shared-settings-window .conveyor-settings>.settings-block{grid-column:auto;grid-row:auto}
+@media(min-width:900px){.shared-settings-window .matching-setup>.settings-block:nth-of-type(2),.shared-settings-window .conveyor-settings>.settings-block:nth-of-type(2){grid-row:span 2}}
 
 .transformation-content{container-type:inline-size;min-width:0}.transformation-word{max-width:100%}

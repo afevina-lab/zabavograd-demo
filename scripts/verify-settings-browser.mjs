@@ -58,6 +58,12 @@ for(const [width,height] of [[1440,900],[1024,768],[768,1024],[390,844],[844,390
 await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
 for(const game of ['memory','sorting','matching','conveyor','transformations']){
 await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");await evaluate("document.querySelectorAll('.themes button')[1]?.click()");await sleep(800);
+if(game==='matching'){
+ for(const value of ['word-word','word-image','image-word','image-image']){
+ await evaluate("(()=>{const e=document.querySelector('select[aria-label=\"Режим карточек\"]');e.value='"+value+"';e.dispatchEvent(new Event('change',{bubbles:true}))})()");
+ assert(await evaluate("!![...document.querySelectorAll('label')].find(e=>e.textContent==='Подписи к исходным картинкам')") === (value==='image-image'),'Caption visibility: '+value);
+ }
+}
 await screenshot('audit-'+game+'-'+width+'-top');
 if(game==='conveyor'){
  assert(await evaluate("(()=>{const e=document.querySelector('input[role=switch]');if(!e)return false;const before=e.checked;e.click();const changed=e.checked!==before;e.click();return changed&&e.checked===before})()"),'Caption switch failed');
