@@ -14,3 +14,9 @@ Branch: design/ui-audit-20261120. Review only; no main merge or site publication
 Browser script passed for five games at 1440×900, 1024×768, 768×1024, 390×844 and 844×390: no horizontal content overflow or scroll region escaping its frame. Mixed reading selection checked in each game. Forest theme screenshots include expanded category dialogs at all five sizes. Earlier run also checked the default space theme; neutral theme requires separate visual review.
 
 Local screenshots and machine report: ui-smoke/ (ignored build artifacts). User visual approval remains pending. Existing backgrounds and gameplay logic were retained.
+
+## Adventure presentation follow-up
+
+Shared settings now show the existing theme scene behind the panel, an adventure emblem and game title, numbered setup sections with tactile surfaces, and a prominent start button with pressed feedback. Theme selection remains available. All changes are shared presentation; game rules and task values are unchanged.
+
+Validation: 115 tests, architecture, TypeScript, design-system check and production build passed. Browser screenshots refreshed for review.
