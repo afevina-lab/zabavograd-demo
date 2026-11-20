@@ -64,6 +64,8 @@ if(game==='matching'){
  assert(await evaluate("!![...document.querySelectorAll('label')].find(e=>e.textContent==='Подписи к исходным картинкам')") === (value==='image-image'),'Caption visibility: '+value);
  }
 }
+assert(await evaluate("[...document.querySelectorAll('.settings select')].every(e=>e.closest('.select-control'))"),'Unstyled native select');
+assert(await evaluate("!document.querySelector('.setup-card-preview,.setup-preview-card')"),'Picture preview still present');
 await screenshot('audit-'+game+'-'+width+'-top');
 if(game==='matching'){
  assert(await evaluate("(()=>{const es=[...document.querySelectorAll('.settings-disclosure')];return es.length>=2&&es.every(e=>{e.querySelector('summary').click();const opened=e.open;e.querySelector('summary').click();return opened&&!e.open})})()"),'Disclosure interaction failed');

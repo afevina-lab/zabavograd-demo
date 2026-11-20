@@ -1,0 +1,3 @@
+export function MaterialSummary({items,empty='Выберите тему или измените условия подбора.'}:{items:{label:string}[];empty?:string}){
+ return items.length?<p className="setup-material-summary">{items.map(item=>item.label).join(' · ')}</p>:<div className="setup-empty"><strong>Соберём набор для игры</strong><p>{empty}</p><button type="button" onClick={e=>{const root=e.currentTarget.closest('.settings');const picker=root?.querySelector<HTMLButtonElement>('.category-picker-trigger');if(picker)picker.click();else root?.querySelector<HTMLSelectElement>('select')?.focus()}}>Выбрать материал</button></div>;
+}

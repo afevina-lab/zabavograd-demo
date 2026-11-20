@@ -54,3 +54,11 @@ Shared matching/conveyor layout distributes sections into independent columns wi
 115 tests, TypeScript, architecture, design-system and build pass. Browser scenarios cover caption modes, disclosure controls, quantity increment/decrement with restored value, previews, expanded categories and responsive overflow.
 
 Final browser pass: 25 responsive layouts with no horizontal overflow; caption mode conditions, disclosure interaction and count increment/decrement passed. Additional 1440×900 smoke checked neutral, forest and space theme switching with screenshots under ui-smoke/themes/. Desktop ready-material and mobile ready-material screenshots visually inspected.
+
+## Select and quantity refinement
+
+Replaced picture-card previews with compact text material summaries. Added a native SelectControl wrapper across game settings, preserving native select attributes and events while providing semantic leading icons and a saturated theme-color caret well. Pictograms cover tasks, cards, checking, matching, groups, difficulty, time and letters. Icon actions share the saturated button treatment. Start action has a stronger lower face and a forward arrow. Quantity control uses a compact label/stepper header with the existing filled track below, retaining numeric entry and bounds.
+
+115 tests, TypeScript, architecture, design-system and build pass. Browser assertions cover styled native selects, absence of card previews and quantity interactions.
+
+Final confirmation: 25 responsive layouts passed without overflow. Additional smoke of final icon mapping and all three themes passed; screenshots in ui-smoke/final/. Mobile layout visually inspected.

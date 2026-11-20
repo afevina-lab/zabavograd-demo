@@ -1,5 +1,0 @@
-import {CardArtwork} from '../CardArtwork.tsx';
-import type {ImageVariant} from '../model.ts';
-export function MaterialPreview({items,empty='Выберите тему или измените условия подбора.'}:{items:{label:string;image?:ImageVariant}[];empty?:string}){
- return items.length?<div className="setup-card-preview" aria-label="Предпросмотр материала">{items.slice(0,6).map((item,i)=><div className="setup-preview-card" key={i}>{item.image?<CardArtwork image={item.image} label={item.label}/>:<span className="setup-preview-word">{item.label}</span>}{item.image&&<small>{item.label}</small>}</div>)}{items.length>6&&<span className="setup-preview-more">Ещё {items.length-6}</span>}</div>:<div className="setup-empty"><strong>Соберём набор для игры</strong><p>{empty}</p><button type="button" onClick={e=>{const root=e.currentTarget.closest('.settings');const picker=root?.querySelector<HTMLButtonElement>('.category-picker-trigger');if(picker)picker.click();else root?.querySelector<HTMLSelectElement>('select')?.focus()}}>Выбрать материал</button></div>;
-}
