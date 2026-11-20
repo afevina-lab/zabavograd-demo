@@ -72,11 +72,11 @@
 .app[data-theme] .shared-settings-window .settings-block{border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;padding:6px 14px!important}
 .shared-settings-window .settings-block h2,.shared-settings-window .settings-block h3{color:var(--ui-text);padding:0;background:none;border:0;box-shadow:none}
 .shared-settings-window .settings-block h2::before,.shared-settings-window .settings-block h3::before{content:none!important}
-.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) button,.app[data-theme] dialog button,.app .settings-window-heading .icon-button{border-image:none!important;border:1px solid var(--ui-outline)!important;border-radius:15px!important;background:var(--ui-pale)!important;color:var(--ui-text)!important;min-height:42px;padding:9px 14px;box-shadow:inset 0 2px 2px #ffffffc0,inset 0 -3px 4px #263c2220,0 3px 0 var(--ui-outline),0 5px 7px #172a4020!important}
+.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) button,.app[data-theme] dialog button,.app .settings-window-heading .icon-button{border-image:none!important;border:1px solid var(--ui-outline)!important;border-radius:15px!important;background:var(--ui-pale)!important;color:var(--ui-text)!important;min-height:42px;padding:9px 14px;box-shadow:inset 0 2px 2px #ffffffc0,inset 0 -3px 4px var(--ui-button-inset),0 3px 0 var(--ui-outline),0 5px 7px #172a4020!important}
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) button:hover:not(:disabled),.app[data-theme] dialog button:hover:not(:disabled){filter:brightness(1.045)}
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) button:active:not(:disabled),.app[data-theme] dialog button:active:not(:disabled){transform:translateY(2px);box-shadow:inset 0 2px 4px #172a4025,0 1px 0 var(--ui-outline)!important}
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) button:disabled{opacity:.5;cursor:not-allowed;filter:saturate(.5)}
-.app[data-theme] .settings select,.app[data-theme] .settings input[type=number]{appearance:none;box-sizing:border-box;border:1px solid color-mix(in srgb,var(--ui-outline) 65%,var(--ui-paper))!important;border-radius:13px!important;background-color:var(--ui-setup-field)!important;color:var(--ui-text)!important;min-height:46px;padding:11px 48px 11px 15px!important;box-shadow:inset 0 3px 5px #57452a20,inset 0 -2px 1px #fffdf0,0 1px 0 #fffdf0!important}
+.app[data-theme] .settings select,.app[data-theme] .settings input[type=number]{appearance:none;box-sizing:border-box;border:1px solid color-mix(in srgb,var(--ui-outline) 65%,var(--ui-paper))!important;border-radius:13px!important;background-color:var(--ui-setup-field)!important;color:var(--ui-text)!important;min-height:46px;padding:11px 48px 11px 15px!important;box-shadow:inset 0 3px 5px var(--ui-well-shadow),inset 0 -2px 1px var(--ui-field-glint),0 1px 0 var(--ui-field-glint)!important}
 .app[data-theme] .settings select{width:100%;background-image:none!important}
 .app[data-theme] .settings input[type=number]{padding:8px!important}
 .app :is(button,a,input,select,summary):focus-visible{outline:3px solid var(--ui-deep)!important;outline-offset:3px!important}
@@ -103,10 +103,10 @@
 
 /* Shared expandable setup actions; native details preserves keyboard behavior. */
 .app[data-theme] .settings .settings-disclosure{padding:0!important;margin:18px 0!important;border:0!important;background:transparent!important;box-shadow:none!important;border-radius:18px!important}
-.app[data-theme] .settings .settings-disclosure>summary,.app[data-theme] .settings .category-picker-trigger{display:flex;align-items:center;gap:12px;width:100%;box-sizing:border-box;min-height:68px;padding:11px 14px!important;border:1px solid color-mix(in srgb,var(--ui-outline) 60%,var(--ui-paper))!important;border-radius:17px!important;background:var(--ui-setup-field)!important;color:var(--ui-text)!important;box-shadow:inset 0 2px 2px #fff9,0 3px 0 color-mix(in srgb,var(--ui-outline) 45%,var(--ui-paper)),0 5px 8px #49382012!important;list-style:none;cursor:pointer;text-align:left;white-space:normal}
+.app[data-theme] .settings .settings-disclosure>summary,.app[data-theme] .settings .category-picker-trigger{display:flex;align-items:center;gap:12px;width:100%;box-sizing:border-box;min-height:68px;padding:11px 14px!important;border:1px solid color-mix(in srgb,var(--ui-outline) 60%,var(--ui-paper))!important;border-radius:17px!important;background:var(--ui-setup-field)!important;color:var(--ui-text)!important;box-shadow:inset 0 2px 2px #fff9,0 3px 0 color-mix(in srgb,var(--ui-outline) 45%,var(--ui-paper)),0 5px 8px var(--ui-soft-shadow)!important;list-style:none;cursor:pointer;text-align:left;white-space:normal}
 .app[data-theme] .settings .settings-disclosure>summary::before{content:none!important}.settings-disclosure>summary::-webkit-details-marker{display:none}
 .app[data-theme] .settings .settings-disclosure>summary:hover,.app[data-theme] .settings .category-picker-trigger:hover{filter:brightness(1.025)}
-.setup-action-icon{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:14px;background:var(--ui-pale);color:var(--ui-deep);box-shadow:inset 0 2px 1px #fff9,0 2px 2px #49382020}
+.setup-action-icon{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:14px;background:var(--ui-pale);color:var(--ui-deep);box-shadow:inset 0 2px 1px #fff9,0 2px 2px var(--ui-icon-shadow)}
 .setup-action-icon svg{width:25px;height:25px}
 .setup-action-copy{display:flex;flex-direction:column;gap:5px;flex:1;min-width:0;line-height:1.3}
 .setup-action-copy strong{font-size:16px;font-weight:750}.setup-action-copy small{font-size:13px;font-weight:450;color:var(--ui-text);opacity:.8;overflow-wrap:anywhere}
@@ -114,9 +114,9 @@
 
 .app[data-theme] .settings .settings-disclosure[open]>summary{box-shadow:inset 0 2px 2px #fff9,0 2px 0 var(--ui-outline)!important}
 .settings-disclosure-body{padding:18px 6px 4px}.settings-disclosure-body>section+section{margin-top:18px}
-.app[data-theme] .settings .challenge .setup-action-icon{background:var(--ui-setup-peach);color:var(--ui-deep)}
-.app[data-theme] .settings .category-picker-trigger{margin:14px 0 20px!important;border-color:color-mix(in srgb,var(--ui-setup-gold) 65%,var(--ui-deep))!important;background:color-mix(in srgb,var(--ui-setup-gold) 20%,var(--ui-setup-field))!important}
-.category-picker-trigger .setup-action-icon{background:var(--ui-setup-gold);color:var(--ui-text)}
+.app[data-theme] .settings .challenge .setup-action-icon{background:var(--ui-icon-surface);color:var(--ui-deep)}
+.app[data-theme] .settings .category-picker-trigger{margin:14px 0 20px!important;border-color:color-mix(in srgb,var(--ui-highlight) 65%,var(--ui-deep))!important;background:color-mix(in srgb,var(--ui-highlight) 20%,var(--ui-setup-field))!important}
+.category-picker-trigger .setup-action-icon{background:var(--ui-highlight);color:var(--ui-text)}
 
 @media(max-width:600px){.app[data-theme] .settings .settings-disclosure>summary,.app[data-theme] .settings .category-picker-trigger{gap:10px;padding:12px!important}.setup-action-icon{width:38px;height:40px;border-radius:12px}.setup-action-copy strong{font-size:15px}.setup-action-copy small{font-size:12px}}
 /* One quiet scrollbar contract for setup surfaces and dialogs. */
@@ -128,9 +128,9 @@
 
 @supports selector(::-webkit-scrollbar){.app .settings,.app dialog{scrollbar-width:auto!important;scrollbar-color:auto!important}}
 
-/* Manufactured honey-wood frame around a quiet cream playing surface. */
-.app[data-theme] :is(.settings-frame.shared-settings-window,.overlay>div,.modal,dialog){position:relative;isolation:isolate;background:repeating-linear-gradient(2deg,transparent 0 5px,#6d3e1710 6px,transparent 7px 13px),linear-gradient(100deg,var(--ui-wood-light),var(--ui-wood) 24%,var(--ui-wood-light) 54%,var(--ui-wood))!important;border:2px solid var(--ui-wood-dark)!important;border-radius:30px!important;box-shadow:inset 0 2px 2px #fff6d6,0 7px 0 var(--ui-wood-dark),0 12px 0 #53351f55,0 24px 48px #172a4050!important}
-.app[data-theme] :is(.shared-settings-window,.overlay>div,.modal,dialog)::before{content:'';position:absolute;inset:13px;z-index:-1;pointer-events:none;background:var(--ui-setup-paper);border:1px solid #a97b43;border-radius:18px;box-shadow:0 -2px 2px #60361640,inset 0 2px 2px #fff5df}
+/* Theme-defined frame material around the shared inset playing surface. */
+.app[data-theme] :is(.settings-frame.shared-settings-window,.overlay>div,.modal,dialog){position:relative;isolation:isolate;background:var(--ui-frame-texture),var(--ui-frame-fill)!important;border:2px solid var(--ui-frame-dark)!important;border-radius:30px!important;box-shadow:inset 0 2px 2px var(--ui-frame-glint),0 7px 0 var(--ui-frame-dark),0 12px 0 var(--ui-frame-shadow),0 24px 48px #172a4050!important}
+.app[data-theme] :is(.shared-settings-window,.overlay>div,.modal,dialog)::before{content:'';position:absolute;inset:13px;z-index:-1;pointer-events:none;background:var(--ui-setup-paper);border:1px solid var(--ui-inner-edge);border-radius:18px;box-shadow:0 -2px 2px var(--ui-inner-shadow),inset 0 2px 2px var(--ui-surface-glint)}
 .app .shared-settings-window :is(h2,h3,h4){font-family:Akt,Arial,sans-serif;font-weight:750;letter-spacing:-.025em;line-height:1.25}
 .app .settings-window-heading{padding:12px 14px 16px;margin-bottom:4px}.app .settings-window-heading h2{font-size:30px}.app .settings-window-heading span{font-size:14px}
 .app .shared-settings-window .unified-settings-content{font-size:16px;line-height:1.45}
@@ -151,21 +151,21 @@
 .quantity-slider input[type=number]::-webkit-inner-spin-button,.quantity-slider input[type=number]::-webkit-outer-spin-button{appearance:none;margin:0}
 .app[data-theme] .quantity-slider button{width:42px;height:42px;background:var(--ui-deep)!important;color:var(--ui-paper)!important;border-color:var(--ui-deep)!important;font-size:26px}
 .app .settings .quantity-slider input[type=range]{width:100%;height:18px!important;margin:6px 0 0;background:linear-gradient(to right,var(--ui-deep) 0 var(--quantity-fill),color-mix(in srgb,var(--ui-outline) 25%,var(--ui-setup-paper)) var(--quantity-fill) 100%)!important;border:1px solid var(--ui-outline)!important;box-shadow:inset 0 3px 5px #233a3540,inset 0 -1px 1px #fff8}
-.app .settings .quantity-slider input[type=range]::-webkit-slider-thumb{width:32px;height:32px;border:1px solid #ba8b2c;background:var(--ui-setup-gold);box-shadow:inset 0 2px 2px #fff9,0 3px 0 #b58a2c,0 4px 6px #172a4040}
-.app .settings .quantity-slider input[type=range]::-moz-range-thumb{width:32px;height:32px;border:1px solid #ba8b2c;background:var(--ui-setup-gold);box-shadow:inset 0 2px 2px #fff9,0 3px 0 #b58a2c,0 4px 6px #172a4040}
+.app .settings .quantity-slider input[type=range]::-webkit-slider-thumb{width:32px;height:32px;border:1px solid var(--ui-thumb-edge);background:var(--ui-highlight);box-shadow:inset 0 2px 2px #fff9,0 3px 0 var(--ui-thumb-base),0 4px 6px #172a4040}
+.app .settings .quantity-slider input[type=range]::-moz-range-thumb{width:32px;height:32px;border:1px solid var(--ui-thumb-edge);background:var(--ui-highlight);box-shadow:inset 0 2px 2px #fff9,0 3px 0 var(--ui-thumb-base),0 4px 6px #172a4040}
 .app .quantity-slider .quantity-bounds{display:flex;justify-content:space-between;font-size:12px;opacity:.75;margin-top:8px}
 /* Shared final area places actual material beside the readiness action. */
-.setup-footer{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:12px 28px;align-items:center;margin-top:24px;padding:22px 8px 12px;border-top:1px solid color-mix(in srgb,var(--ui-wood) 40%,transparent)}
+.setup-footer{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:12px 28px;align-items:center;margin-top:24px;padding:22px 8px 12px;border-top:1px solid color-mix(in srgb,var(--ui-frame-base) 40%,transparent)}
 .app .shared-settings-window .setup-footer>.settings-block{grid-column:1;grid-row:1 / span 4;margin:0!important;padding:0!important}
 .setup-footer>p[role=status],.setup-footer>button.primary,.setup-footer>.theme-section,.setup-footer>.settings-disclosure{grid-column:2;min-width:0}.setup-footer>p{margin:4px 0;font-size:14px}
-.setup-empty{padding:18px;border:1px dashed #ba9d70;border-radius:16px;background:var(--ui-setup-field)}.setup-empty strong{font-size:17px}.setup-empty p{font-size:14px;margin:8px 0 14px}.app .setup-empty button{font-size:14px}
+.setup-empty{padding:18px;border:1px dashed var(--ui-empty-edge);border-radius:16px;background:var(--ui-setup-field)}.setup-empty strong{font-size:17px}.setup-empty p{font-size:14px;margin:8px 0 14px}.app .setup-empty button{font-size:14px}
 @media(max-width:899px){.setup-columns{grid-template-columns:1fr;gap:24px}.setup-footer{grid-template-columns:1fr}.setup-footer>*{grid-column:1!important;grid-row:auto!important}.setup-footer>button.primary{margin-top:10px}.app .shared-settings-window .setup-footer>.settings-block{grid-row:auto}}
 @media(max-width:600px){.app .settings-frame.shared-settings-window{padding:14px!important}.shared-settings-window::before{inset:10px;border-radius:19px}.app .shared-settings-window .unified-settings-content{padding:10px!important;font-size:15px}.app .settings-window-heading{padding:6px 8px 12px}.app .settings-window-heading h2{font-size:25px}.setup-column{gap:18px}.setup-columns{gap:22px}.app .shared-settings-window .unified-settings-content>p:first-child{margin-bottom:16px!important}.setup-footer{padding:18px 4px 10px}}
 .app .shared-settings-window .setup-footer>.settings-block{align-self:start}.setup-column .theme-section>.field-label{display:none}.quantity-availability{display:block;margin-top:12px;font-size:12px;color:var(--ui-text)}.app .quantity-slider input[type=range]:disabled{opacity:.5;cursor:default}
 
 /* Native select with semantic leading pictogram and a saturated action well. */
 .select-control{position:relative;display:block;width:100%;min-width:0;margin-top:6px}
-.app[data-theme] .settings .select-control select{display:block;width:100%;min-height:54px;margin:0!important;padding:13px 50px 13px 50px!important;border-radius:14px!important;background-image:none!important;border-color:color-mix(in srgb,var(--ui-outline) 70%,var(--ui-wood-light))!important;box-shadow:inset 0 3px 5px #57452a20,inset 0 -2px 1px #fffdf0,0 2px 0 #d2bb8d!important;font-weight:600}
+.app[data-theme] .settings .select-control select{display:block;width:100%;min-height:54px;margin:0!important;padding:13px 50px 13px 50px!important;border-radius:14px!important;background-image:none!important;border-color:color-mix(in srgb,var(--ui-outline) 70%,var(--ui-frame-light))!important;box-shadow:inset 0 3px 5px var(--ui-well-shadow),inset 0 -2px 1px var(--ui-field-glint),0 2px 0 var(--ui-field-edge)!important;font-weight:600}
 .select-leading,.select-caret{position:absolute;top:50%;transform:translateY(-50%);display:grid;place-items:center;pointer-events:none}
 .select-leading{left:12px;width:27px;height:30px;color:var(--ui-deep)}.select-leading svg{width:23px;height:23px}
 .select-caret{right:6px}
@@ -174,14 +174,14 @@
 .app[data-theme] .icon-button,.app[data-theme] .settings-window-heading .icon-button,.app[data-theme] .settings .material-head .icon-button{border-image:none!important;border:1px solid var(--ui-deep)!important;border-radius:13px!important;background:var(--ui-deep)!important;color:var(--ui-paper)!important;box-shadow:inset 0 2px 2px #fff6,inset 0 -3px 3px #0002,0 3px 0 color-mix(in srgb,var(--ui-deep) 65%,black),0 5px 7px #172a4020!important}
 .app[data-theme] .icon-button:hover:not(:disabled){filter:brightness(1.1)}.app[data-theme] .icon-button:active:not(:disabled){transform:translateY(2px);box-shadow:inset 0 2px 3px #0002,0 1px 0 var(--ui-deep)!important}
 /* Compact quantity header; the track retains its broad, tactile thumb. */
-.app .quantity-slider{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 16px;align-items:center;margin:22px 0 24px;padding:16px;border:1px solid #cbb58a;border-radius:16px;background:var(--ui-setup-field);box-shadow:inset 0 2px 3px #fff9,0 2px 0 #d5c399}
+.app .quantity-slider{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 16px;align-items:center;margin:22px 0 24px;padding:16px;border:1px solid var(--ui-tray-edge);border-radius:16px;background:var(--ui-setup-field);box-shadow:inset 0 2px 3px #fff9,0 2px 0 var(--ui-tray-shadow)}
 .app .quantity-slider>label{margin:0!important;font-size:15px;line-height:1.3}
 .app .quantity-slider>div.quantity-stepper{display:flex;gap:0;align-items:center;justify-content:center;padding:0;overflow:hidden;border:1px solid var(--ui-deep);border-radius:11px;box-shadow:0 2px 0 color-mix(in srgb,var(--ui-deep) 70%,black)}
 .app[data-theme] .quantity-slider .quantity-stepper button{width:32px;height:36px;min-height:36px!important;min-width:0;border:0!important;border-radius:0!important;box-shadow:inset 0 1px 1px #fff5!important;font-size:22px;padding:0!important}
-.app[data-theme] .quantity-slider .quantity-stepper input[type=number]{width:44px!important;height:36px!important;min-height:36px!important;border:0!important;border-radius:0!important;box-shadow:inset 0 2px 4px #57452a25!important;font-size:20px;padding:3px!important}
+.app[data-theme] .quantity-slider .quantity-stepper input[type=number]{width:44px!important;height:36px!important;min-height:36px!important;border:0!important;border-radius:0!important;box-shadow:inset 0 2px 4px var(--ui-well-shadow-strong)!important;font-size:20px;padding:3px!important}
 .app .quantity-slider>input[type=range],.app .quantity-slider>.quantity-bounds,.quantity-slider>.quantity-availability{grid-column:1/-1}.app .quantity-slider>input[type=range]{margin:6px 0 0!important}.app .quantity-slider .quantity-bounds{margin-top:0}
 /* The start action has a visible lower face and a forward arrow. */
-.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .primary:not(.rule-delete),.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .start{box-shadow:inset 0 3px 2px #fff7,inset 0 -5px 5px #17331a40,0 7px 0 color-mix(in srgb,var(--ui-deep) 62%,black),0 11px 14px #172a4030!important;border-top-color:color-mix(in srgb,var(--ui-deep) 50%,var(--ui-paper))!important;min-height:64px;margin-bottom:8px}
+.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .primary:not(.rule-delete),.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .start{box-shadow:inset 0 3px 2px #fff7,inset 0 -5px 5px var(--ui-button-inset-strong),0 7px 0 color-mix(in srgb,var(--ui-deep) 62%,black),0 11px 14px #172a4030!important;border-top-color:color-mix(in srgb,var(--ui-deep) 50%,var(--ui-paper))!important;min-height:64px;margin-bottom:8px}
 .setup-footer>button.primary,.settings>.primary:last-child{display:flex;align-items:center;justify-content:center;gap:24px}
 .setup-footer>button.primary::after,.settings>.primary:last-child::after{content:'';display:block;width:30px;height:30px;background:currentColor;clip-path:polygon(0 40%,64% 40%,40% 16%,55% 0,100% 50%,55% 100%,40% 84%,64% 60%,0 60%)}
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .primary:active:not(:disabled){transform:translateY(4px);box-shadow:inset 0 1px 3px #0002,0 3px 0 color-mix(in srgb,var(--ui-deep) 62%,black)!important}
@@ -191,7 +191,7 @@
 /* Shared wells for selects, expandable rows and category selection. */
 .control-well{display:grid;place-items:center;flex:none;width:36px;height:38px;border-radius:10px;background:var(--ui-deep);color:var(--ui-paper);border:1px solid color-mix(in srgb,var(--ui-deep) 85%,black);box-shadow:inset 0 2px 1px #fff5,inset 0 -2px 2px #0002,0 2px 0 color-mix(in srgb,var(--ui-deep) 70%,black);pointer-events:none}
 .control-well svg{width:22px;height:22px}.settings-disclosure[open]>summary .disclosure-well svg{transform:rotate(180deg)}
-/* All dialog surfaces use the same wood-and-cream construction as setup. */
+/* Every dialog uses the same theme material and geometry as setup. */
 .app[data-theme] :is(.overlay>div,.modal,dialog){padding:30px!important;color:var(--ui-text)!important;max-width:min(900px,calc(100vw - 28px));max-height:calc(100dvh - 40px);font-family:Akt,Arial,sans-serif}
 .app[data-theme] :is(.overlay>div,.modal,dialog) :is(h2,h3){font-family:Akt,Arial,sans-serif;line-height:1.25;letter-spacing:-.025em;color:var(--ui-text)}
 .app[data-theme] .overlay>div{width:min(500px,calc(100vw - 28px));text-align:center;overflow:auto}
@@ -199,22 +199,22 @@
 .app[data-theme] :is(.overlay>div,.modal,dialog) button{margin:6px;min-height:44px}
 .app[data-theme] :is(.overlay>div,.modal,dialog) button.primary{padding:13px 22px;font-weight:750;font-size:18px;background:var(--ui-deep)!important;color:var(--ui-paper)!important;box-shadow:inset 0 2px 2px #fff6,inset 0 -3px 4px #0002,0 4px 0 color-mix(in srgb,var(--ui-deep) 60%,black)!important}
 .app[data-theme] :is(.overlay>div,.modal,dialog) button.link{background:var(--ui-setup-field)!important;color:var(--ui-deep)!important;border-color:var(--ui-outline)!important}
-.app[data-theme] :is(.settings,.modal,dialog) input:not([type=checkbox]):not([type=radio]):not([type=range]){background-color:var(--ui-setup-field);color:var(--ui-text);border-radius:12px;padding:10px 12px;border:1px solid var(--ui-outline);box-shadow:inset 0 2px 4px #57452a20}
+.app[data-theme] :is(.settings,.modal,dialog) input:not([type=checkbox]):not([type=radio]):not([type=range]){background-color:var(--ui-setup-field);color:var(--ui-text);border-radius:12px;padding:10px 12px;border:1px solid var(--ui-outline);box-shadow:inset 0 2px 4px var(--ui-well-shadow)}
 /* Set membership keeps checkbox semantics, including partially selected parents. */
-.app[data-theme] :is(.settings,.modal,dialog) input[type=checkbox]:not([role=switch]),.app[data-theme] :is(.settings,.modal,dialog) input[type=radio]{position:relative;display:inline-grid;place-items:center;width:24px!important;height:24px!important;min-width:24px;appearance:none!important;background:var(--ui-setup-field)!important;border:1px solid var(--ui-outline)!important;border-radius:6px!important;box-shadow:inset 0 2px 3px #57452a25;vertical-align:middle;cursor:pointer}
+.app[data-theme] :is(.settings,.modal,dialog) input[type=checkbox]:not([role=switch]),.app[data-theme] :is(.settings,.modal,dialog) input[type=radio]{position:relative;display:inline-grid;place-items:center;width:24px!important;height:24px!important;min-width:24px;appearance:none!important;background:var(--ui-setup-field)!important;border:1px solid var(--ui-outline)!important;border-radius:6px!important;box-shadow:inset 0 2px 3px var(--ui-well-shadow-strong);vertical-align:middle;cursor:pointer}
 .app[data-theme] :is(.settings,.modal,dialog) input[type=checkbox]:checked:not([role=switch]),.app[data-theme] :is(.settings,.modal,dialog) input[type=checkbox]:indeterminate{background:var(--ui-deep)!important;color:var(--ui-paper)}
 .app[data-theme] :is(.settings,.modal,dialog) input[type=checkbox]:checked:not([role=switch])::after{content:'✓';font-size:18px;font-weight:800;line-height:1}
 .app[data-theme] :is(.settings,.modal,dialog) input[type=checkbox]:indeterminate::after{content:'−';font-size:20px;font-weight:800;line-height:1}
 .app[data-theme] :is(.settings,.modal,dialog) input[type=radio]{border-radius:50%!important}.app[data-theme] :is(.settings,.modal,dialog) input[type=radio]:checked::after{content:'';width:12px;height:12px;border-radius:50%;background:var(--ui-deep)}
 .app[data-theme] :is(.settings,.modal,dialog) input:disabled{opacity:.5;cursor:not-allowed}
-.app[data-theme] .settings-disclosure-body :is(.material-rule,.settings-block){padding:14px!important;margin:10px 0!important;border:1px solid #cfb68c!important;border-radius:14px!important;background:var(--ui-setup-field)!important}
-.app[data-theme] :is(.sound-picker-dialog,.category-picker){background:var(--ui-wood)!important}.app[data-theme] .sound-picker-actions{background:var(--ui-setup-paper)!important;border-top:1px solid #cfb68c}
+.app[data-theme] .settings-disclosure-body :is(.material-rule,.settings-block){padding:14px!important;margin:10px 0!important;border:1px solid var(--ui-surface-edge)!important;border-radius:14px!important;background:var(--ui-setup-field)!important}
+.app[data-theme] :is(.sound-picker-dialog,.category-picker){background:var(--ui-frame-base)!important}.app[data-theme] .sound-picker-actions{background:var(--ui-setup-paper)!important;border-top:1px solid var(--ui-surface-edge)}
 .app[data-theme] .category-grid summary{color:var(--ui-text);background:var(--ui-setup-field);border-radius:10px;padding:10px 12px;margin-bottom:8px;cursor:pointer}.app .category-grid .check{display:flex;gap:10px;align-items:center;min-height:40px}
 @supports (appearance:base-select){
  .app[data-theme] .select-control select,.app[data-theme] .select-control select::picker(select){appearance:base-select}
  .app[data-theme] .select-control select{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;min-width:0}
  .app[data-theme] .select-control select::picker-icon{display:none}
- .app[data-theme] .select-control select::picker(select){background:var(--ui-setup-field);color:var(--ui-text);border:2px solid var(--ui-wood);border-radius:14px;padding:6px;box-shadow:0 4px 0 var(--ui-wood-dark),0 10px 24px #172a4035;max-height:min(360px,60dvh);overflow:auto;font-family:Akt,Arial,sans-serif}
+ .app[data-theme] .select-control select::picker(select){background:var(--ui-setup-field);color:var(--ui-text);border:2px solid var(--ui-frame-base);border-radius:14px;padding:6px;box-shadow:0 4px 0 var(--ui-frame-dark),0 10px 24px #172a4035;max-height:min(360px,60dvh);overflow:auto;font-family:Akt,Arial,sans-serif}
  .app[data-theme] .select-control option{display:flex;align-items:center;gap:12px;min-height:42px;padding:10px 12px;border-radius:9px;font:inherit;white-space:normal;cursor:pointer}
  .app[data-theme] .select-control option:checked{background:var(--ui-pale);color:var(--ui-deep);font-weight:750}
  .app[data-theme] .select-control option:hover,.app[data-theme] .select-control option:focus{background:var(--ui-deep);color:var(--ui-paper)}
@@ -247,7 +247,7 @@
 .app[data-theme] .overlay.result>div>button{min-height:64px!important;height:auto;font-size:18px!important;padding:14px 22px!important;box-sizing:border-box;border-radius:18px!important}
 /* Required state follows the existing selection validity, never color alone. */
 .app[data-theme] .settings .select-control[data-field-state] select{border:3px solid var(--ui-outline)!important;padding:11px 48px!important}
-.app[data-theme] .settings .select-control[data-field-state=required] select{border-color:var(--ui-required)!important;box-shadow:inset 0 2px 4px #57452a20,0 2px 0 var(--ui-required-dark)!important}
+.app[data-theme] .settings .select-control[data-field-state=required] select{border-color:var(--ui-required)!important;box-shadow:inset 0 2px 4px var(--ui-well-shadow),0 2px 0 var(--ui-required-dark)!important}
 .app[data-theme] .settings .select-control[data-field-state=required] .control-well,.app[data-theme] .settings button[data-field-state=required] .control-well{background:var(--ui-required);border-color:var(--ui-required-dark);box-shadow:inset 0 2px 1px #fff5,inset 0 -2px 2px #0002,0 2px 0 var(--ui-required-dark)}
 .app[data-theme] .settings .select-control[data-field-state=required] .select-leading{color:var(--ui-required)}
 .app[data-theme] .settings button[data-field-state]{border-width:3px!important;box-sizing:border-box}
@@ -261,3 +261,5 @@
 .app[data-theme] .settings .settings-disclosure>summary{padding-left:11px!important;padding-right:7px!important;gap:12px}
 .app[data-theme] .settings :is(.category-picker-trigger,.settings-disclosure>summary)>.setup-action-icon{width:28px;height:30px;border-radius:9px}
 .app[data-theme] .settings :is(.category-picker-trigger,.settings-disclosure>summary)>.setup-action-icon svg{width:23px;height:23px}
+
+.app[data-theme] .hint{color:var(--ui-muted-text)}

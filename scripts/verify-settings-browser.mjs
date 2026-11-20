@@ -5,8 +5,11 @@ import {tmpdir} from 'node:os';
 import {join,resolve,extname,sep} from 'node:path';
 import {createServer} from 'node:http';
 
+const selectedTheme=process.env.UI_THEME||'forest';
+assert(['neutral','forest','space'].includes(selectedTheme),'Unknown UI_THEME');
+const themeIndex=['neutral','forest','space'].indexOf(selectedTheme);
 const root=resolve('dist');
-const output=resolve('ui-smoke');
+const output=resolve(selectedTheme==='forest'?'ui-smoke':'ui-smoke/'+selectedTheme);
 mkdirSync(output,{recursive:true});
 const contentTypes={'.html':'text/html','.js':'text/javascript','.css':'text/css','.webp':'image/webp','.png':'image/png','.svg':'image/svg+xml','.json':'application/json'};
 const server=createServer((req,res)=>{
@@ -57,7 +60,7 @@ const report=[];
 for(const [width,height] of [[1440,900],[1024,768],[768,1024],[390,844],[844,390]]){
 await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
 for(const game of ['memory','sorting','matching','conveyor','transformations']){
-await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");await evaluate("document.querySelectorAll('.themes button')[1]?.click()");await sleep(800);
+await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");await evaluate("document.querySelectorAll('.themes button')["+themeIndex+"]?.click()");await sleep(800);
 if(game==='matching'){
  for(const value of ['word-word','word-image','image-word','image-image']){
  await evaluate("(()=>{const e=document.querySelector('select[aria-label=\"Режим карточек\"]');e.value='"+value+"';e.dispatchEvent(new Event('change',{bubbles:true}))})()");

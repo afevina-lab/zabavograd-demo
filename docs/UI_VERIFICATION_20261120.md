@@ -80,3 +80,9 @@ Aligned all select/disclosure/category action wells to the same 8 px outer inset
 Required empty category/sound choices and placeholder or disabled select options receive a 3 px red outline, red action well and aria-invalid state. Selecting valid data restores the theme green. Legitimate empty-valued Any/All options are not treated as missing. Existing gameplay validation remains authoritative.
 
 Validation: 115 tests, TypeScript, design-system, architecture and build passed. Browser checks measure action-well alignment, matching result-button sizes, toolbar cleanup, required-to-ready transitions for category and sound selection on desktop/mobile. F8/F9 verified in all five games.
+
+## Space GUI material pass
+
+Space uses the same shared geometry and controls as Forest. Material-neutral surface tokens now cover frame texture/fill, bevel highlights, inner edges, inset shadows, text hints, quantity tray, empty states and picker borders. Space has a brushed silver-blue frame, cold blue-white surfaces, saturated violet actions and cyan highlights. Required-field red remains semantic across themes. Existing backgrounds, scene animation, assets, rewards and mechanics retained.
+
+Browser scripts accept UI_THEME=space (forest remains the default) and separate reports/screenshots by theme. Space passed 25 responsive game setups and 15 pause/end/settings scenarios, plus genuine Memory/Transformations completion and pointer/keyboard native picker operation. Forest regression passed 25 setups; two baseline screenshots are byte-identical and desktop matching was visually compared. 115 unit tests, TypeScript, architecture, design-system and production build pass.

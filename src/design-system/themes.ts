@@ -42,7 +42,7 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
  },
  space:{
   label:'Космос',
-  palette:{accent:'#ae97e1',deep:'#625095',pale:'#ebe5ff',outline:'#8a76c2',text:'#2e2855',paper:'#fbf5e9',page:'#1c2340',stageText:'#fff5e8'},
+  palette:{accent:'#93a7ed',deep:'#5050a8',pale:'#e0e6fb',outline:'#8b9cbf',text:'#29365a',paper:'#f5f8ff',page:'#111b35',stageText:'#f0f5ff'},
   skin:'lavender',toolbarArt:'assets/themes/space/header.webp',scene:{background:'assets/space/background.webp',fill:'#1c2340',motion:'drift',
  sprites:[
   {id:'planet-blue',src:'assets/space/planet-blue.webp',motion:'float',width:'min(120cqh,82cqw)',left:'-30cqh',bottom:'-20cqh',opacity:.9,durationMs:24000,spinMs:160000},
@@ -58,12 +58,40 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
 export const asThemeId=(x:unknown):ThemeId=>typeof x==='string'&&(THEME_IDS as readonly string[]).includes(x)?x as ThemeId:'space';
 export const assetUrl=(p:string,base='/')=>base.replace(/\/?$/,'/')+p.replace(/^\//,'');
 const url=(p:string|null,base:string)=>p?`url("${assetUrl(p,base)}")`:'none';
+
+/** Surface materials are presentation only; every game uses the same geometry. */
+const warmSurface={
+ '--ui-frame-base':'#c28a48','--ui-frame-light':'#e7bc7d','--ui-frame-dark':'#79502c',
+ '--ui-frame-texture':'repeating-linear-gradient(2deg,transparent 0 5px,#6d3e1710 6px,transparent 7px 13px)',
+ '--ui-frame-fill':'linear-gradient(100deg,var(--ui-frame-light),var(--ui-frame-base) 24%,var(--ui-frame-light) 54%,var(--ui-frame-base))',
+ '--ui-frame-glint':'#fff6d6','--ui-frame-shadow':'#53351f55','--ui-inner-edge':'#a97b43','--ui-inner-shadow':'#60361640',
+ '--ui-surface-glint':'#fff5df','--ui-field-glint':'#fffdf0','--ui-surface-edge':'#cfb68c','--ui-field-edge':'#d2bb8d',
+ '--ui-tray-edge':'#cbb58a','--ui-tray-shadow':'#d5c399','--ui-well-shadow':'#57452a20','--ui-well-shadow-strong':'#57452a25',
+ '--ui-muted-text':'#8b8f81','--ui-button-inset':'#263c2220','--ui-button-inset-strong':'#17331a40','--ui-soft-shadow':'#49382012','--ui-icon-shadow':'#49382020','--ui-empty-edge':'#ba9d70',
+ '--ui-thumb-edge':'#ba8b2c','--ui-thumb-base':'#b58a2c',
+ '--ui-highlight':'#efba3e','--ui-icon-surface':'#f3d6b0','--ui-setup-paper':'#f5e9cc','--ui-setup-field':'#fff5df'
+};
+const setupSurfaces:Record<ThemeId,typeof warmSurface>={
+ neutral:warmSurface,forest:warmSurface,
+ space:{
+ '--ui-frame-base':'#8397b1','--ui-frame-light':'#e8f2ff','--ui-frame-dark':'#354b65',
+ '--ui-frame-texture':'repeating-linear-gradient(90deg,#ffffff18 0 1px,#263d5710 1px 2px,transparent 2px 4px)',
+ '--ui-frame-fill':'linear-gradient(110deg,#eff6ff 0%,#a6b9d0 16%,#71879f 32%,#e7effc 49%,#92a8c2 64%,#cad7e6 84%,#6f87a3)',
+ '--ui-frame-glint':'#ffffff','--ui-frame-shadow':'#08162966','--ui-inner-edge':'#647e9c','--ui-inner-shadow':'#182c4d60',
+ '--ui-surface-glint':'#ffffff','--ui-field-glint':'#ffffff','--ui-surface-edge':'#93a6c0','--ui-field-edge':'#9aacc3',
+ '--ui-tray-edge':'#9aacc3','--ui-tray-shadow':'#b4c3d7','--ui-well-shadow':'#1b355028','--ui-well-shadow-strong':'#1b355030',
+ '--ui-muted-text':'#626f8e','--ui-button-inset':'#1a2d4c24','--ui-button-inset-strong':'#1c245540','--ui-soft-shadow':'#19375418','--ui-icon-shadow':'#19375422','--ui-empty-edge':'#91a8c4',
+ '--ui-thumb-edge':'#268bac','--ui-thumb-base':'#287b9b',
+ '--ui-highlight':'#64d1ed','--ui-icon-surface':'#ccd7ff','--ui-setup-paper':'#e4ebf6','--ui-setup-field':'#f7faff'
+ }
+};
+
 export function themeVars(id:ThemeId,base='/'):CSSProperties{
  const t=THEMES[id],p=t.palette,c=t.skin;
  const kit=(dir:string,name:string)=>url(`assets/theme-ui/${dir}/${name}.webp`,base);
  return {
   '--ui-accent':p.accent,'--ui-deep':p.deep,'--ui-pale':p.pale,
-  '--ui-required':'#c63b32','--ui-required-dark':'#86281f','--ui-wood':'#c28a48','--ui-wood-light':'#e7bc7d','--ui-wood-dark':'#79502c','--ui-setup-gold':'#efba3e','--ui-setup-peach':'#f3d6b0','--ui-setup-paper':'#f5e9cc','--ui-setup-field':'#fff5df','--ui-outline':p.outline,'--ui-text':p.text,'--ui-paper':p.paper,
+  ...setupSurfaces[id],'--ui-required':'#c63b32','--ui-required-dark':'#86281f','--ui-outline':p.outline,'--ui-text':p.text,'--ui-paper':p.paper,
   '--zg-page':p.page,'--zg-stage-fill':t.scene.fill,'--zg-stage-text':p.stageText,
   '--zg-stage-image':url(t.scene.background,base),
   '--zg-toolbar-image':url(t.toolbarArt,base),
