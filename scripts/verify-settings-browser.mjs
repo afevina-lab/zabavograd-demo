@@ -64,5 +64,13 @@ await evaluate("document.querySelector('.unified-settings-content').scrollTop=10
 assert(await evaluate("(()=>{const e=document.querySelector('.unified-settings-content'),f=document.querySelector('.settings-frame'),a=e.getBoundingClientRect(),b=f.getBoundingClientRect();return a.bottom<=b.bottom-8&&a.right<=b.right&&e.scrollWidth<=e.clientWidth+2})()"),'Settings exceed frame: '+game+' '+width);
 if(game==='transformations'){await evaluate("[...document.querySelectorAll('button')].find(b=>b.textContent==='Начать игру')?.click()");await sleep(500);await screenshot('audit-transformations-'+width+'-play');assert(await evaluate("(()=>{const e=document.querySelector('.transformation-chamber');if(!e)return false;const r=e.getBoundingClientRect();const t=document.querySelector('.transformation-word')?.getBoundingClientRect();return r.width>0&&r.left>=0&&r.right<=innerWidth+1&&(!t||(t.left>=r.left&&t.right<=r.right))})()"),'Transformation chamber cropped: '+width);}
 }}
+
+for(const game of ['memory','sorting','matching','conveyor','transformations']){
+ await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");
+ await evaluate("[...document.querySelectorAll('.unified-settings-content button')].find(b=>b.textContent==='Чтение').click()");await until("!!document.querySelector('.reading-settings')");
+ for(const label of ['Буквы','Слоги','Слова'])await evaluate("(()=>{const e=[...document.querySelectorAll('.reading-settings .reading-kinds label')].find(e=>e.textContent==='"+label+"')?.querySelector('input');if(!e)throw Error('Missing reading kind');if(!e.checked)e.click()})()");
+ assert(await evaluate("[...document.querySelectorAll('.reading-settings .reading-kinds')][0].querySelectorAll('input:checked').length===3"),'Mixed reading unavailable in '+game);
+ await screenshot('reading-mixed-'+game);
+}
 writeFileSync(join(output,'audit.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));
 }finally{ws?.close();proc.kill('SIGTERM');server.close();await Promise.race([new Promise(r=>proc.once('exit',r)),sleep(1500)]);try{rmSync(profile,{recursive:true,force:true,maxRetries:5,retryDelay:100})}catch{}}
