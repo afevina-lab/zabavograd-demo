@@ -92,3 +92,9 @@ Browser scripts accept UI_THEME=space (forest remains the default) and separate 
 Space frame now uses a broader iridescent silver/cyan/violet finish with soft horizontal brushing rather than dense gray ribbing. The inset panel adds subtle cyan/violet light fields and fine static grain. Surface texture and frame inset are theme tokens; Forest retains no interior texture and its original 13 px frame inset. Shared control geometry and game mechanics are unchanged. Space action violet is more saturated.
 
 115 tests, TypeScript, architecture, design-system and production build pass. Space settings/dialog scenarios refreshed; Forest screenshot regression checked independently.
+
+## Raised control faces in all themes
+
+Space restored the previously approved calm palette and untextured light interior. Its frame now has stronger neutral silver/steel contrast, bright highlights and an 18 px inset, without colored iridescence. Shared raised-face tokens give all theme selects, expandable summaries, category actions, ordinary buttons and native picker options a convex lit face, a lower edge and soft ambient shadow. Required red edges remain distinct; input handlers, layout measurements and selection semantics are unchanged.
+
+115 tests, TypeScript, architecture, design-system and build pass. Full setup checks passed at 25 layouts for each of neutral, forest and space (75 total), plus 15 space game-dialog scenarios. Final desktop/mobile snapshots cover generic disclosures and open pickers.

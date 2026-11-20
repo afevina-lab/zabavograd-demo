@@ -72,7 +72,7 @@
 .app[data-theme] .shared-settings-window .settings-block{border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;padding:6px 14px!important}
 .shared-settings-window .settings-block h2,.shared-settings-window .settings-block h3{color:var(--ui-text);padding:0;background:none;border:0;box-shadow:none}
 .shared-settings-window .settings-block h2::before,.shared-settings-window .settings-block h3::before{content:none!important}
-.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) button,.app[data-theme] dialog button,.app .settings-window-heading .icon-button{border-image:none!important;border:1px solid var(--ui-outline)!important;border-radius:15px!important;background:var(--ui-pale)!important;color:var(--ui-text)!important;min-height:42px;padding:9px 14px;box-shadow:inset 0 2px 2px #ffffffc0,inset 0 -3px 4px var(--ui-button-inset),0 3px 0 var(--ui-outline),0 5px 7px #172a4020!important}
+.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) button,.app[data-theme] dialog button,.app .settings-window-heading .icon-button{border-image:none!important;border:1px solid var(--ui-outline)!important;border-radius:15px!important;background:var(--ui-control-face)!important;color:var(--ui-text)!important;min-height:42px;padding:9px 14px;box-shadow:inset 0 2px 2px #ffffffc0,inset 0 -3px 4px var(--ui-button-inset),0 3px 0 var(--ui-outline),0 5px 7px #172a4020!important}
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) button:hover:not(:disabled),.app[data-theme] dialog button:hover:not(:disabled){filter:brightness(1.045)}
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) button:active:not(:disabled),.app[data-theme] dialog button:active:not(:disabled){transform:translateY(2px);box-shadow:inset 0 2px 4px #172a4025,0 1px 0 var(--ui-outline)!important}
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) button:disabled{opacity:.5;cursor:not-allowed;filter:saturate(.5)}
@@ -198,7 +198,7 @@
 .app[data-theme] .overlay>div:has(.award){overflow:visible}
 .app[data-theme] :is(.overlay>div,.modal,dialog) button{margin:6px;min-height:44px}
 .app[data-theme] :is(.overlay>div,.modal,dialog) button.primary{padding:13px 22px;font-weight:750;font-size:18px;background:var(--ui-deep)!important;color:var(--ui-paper)!important;box-shadow:inset 0 2px 2px #fff6,inset 0 -3px 4px #0002,0 4px 0 color-mix(in srgb,var(--ui-deep) 60%,black)!important}
-.app[data-theme] :is(.overlay>div,.modal,dialog) button.link{background:var(--ui-setup-field)!important;color:var(--ui-deep)!important;border-color:var(--ui-outline)!important}
+.app[data-theme] :is(.overlay>div,.modal,dialog) button.link{background:var(--ui-control-face)!important;color:var(--ui-deep)!important;border-color:var(--ui-outline)!important}
 .app[data-theme] :is(.settings,.modal,dialog) input:not([type=checkbox]):not([type=radio]):not([type=range]){background-color:var(--ui-setup-field);color:var(--ui-text);border-radius:12px;padding:10px 12px;border:1px solid var(--ui-outline);box-shadow:inset 0 2px 4px var(--ui-well-shadow)}
 /* Set membership keeps checkbox semantics, including partially selected parents. */
 .app[data-theme] :is(.settings,.modal,dialog) input[type=checkbox]:not([role=switch]),.app[data-theme] :is(.settings,.modal,dialog) input[type=radio]{position:relative;display:inline-grid;place-items:center;width:24px!important;height:24px!important;min-width:24px;appearance:none!important;background:var(--ui-setup-field)!important;border:1px solid var(--ui-outline)!important;border-radius:6px!important;box-shadow:inset 0 2px 3px var(--ui-well-shadow-strong);vertical-align:middle;cursor:pointer}
@@ -247,11 +247,11 @@
 .app[data-theme] .overlay.result>div>button{min-height:64px!important;height:auto;font-size:18px!important;padding:14px 22px!important;box-sizing:border-box;border-radius:18px!important}
 /* Required state follows the existing selection validity, never color alone. */
 .app[data-theme] .settings .select-control[data-field-state] select{border:3px solid var(--ui-outline)!important;padding:11px 48px!important}
-.app[data-theme] .settings .select-control[data-field-state=required] select{border-color:var(--ui-required)!important;box-shadow:inset 0 2px 4px var(--ui-well-shadow),0 2px 0 var(--ui-required-dark)!important}
+.app[data-theme] .settings .select-control[data-field-state=required] select{border-color:var(--ui-required)!important}
 .app[data-theme] .settings .select-control[data-field-state=required] .control-well,.app[data-theme] .settings button[data-field-state=required] .control-well{background:var(--ui-required);border-color:var(--ui-required-dark);box-shadow:inset 0 2px 1px #fff5,inset 0 -2px 2px #0002,0 2px 0 var(--ui-required-dark)}
 .app[data-theme] .settings .select-control[data-field-state=required] .select-leading{color:var(--ui-required)}
 .app[data-theme] .settings button[data-field-state]{border-width:3px!important;box-sizing:border-box}
-.app[data-theme] .settings button[data-field-state=required]{border-color:var(--ui-required)!important;box-shadow:inset 0 2px 1px #fff9,0 2px 0 var(--ui-required-dark)!important}
+.app[data-theme] .settings button[data-field-state=required]{border-color:var(--ui-required)!important}
 .app[data-theme] .settings button[data-field-state=ready]{border-color:var(--ui-outline)!important}
 .app[data-theme] .settings button[data-field-state=required] .setup-action-icon{color:var(--ui-required)}
 
@@ -263,3 +263,18 @@
 .app[data-theme] .settings :is(.category-picker-trigger,.settings-disclosure>summary)>.setup-action-icon svg{width:23px;height:23px}
 
 .app[data-theme] .hint{color:var(--ui-muted-text)}
+
+/* Raised faces: the complete field surface sits above the board in every theme. */
+.app[data-theme] :is(.settings,.modal,dialog) :is(.select-control select,.settings-disclosure>summary,.category-picker-trigger,.category-grid summary,.sound-group>summary,.letter-group>summary,details>summary){background:var(--ui-control-face)!important;box-shadow:inset 0 2px 1px var(--ui-field-glint),inset 0 -3px 4px var(--ui-button-inset),0 3px 0 var(--ui-raised-edge,var(--ui-control-bottom)),0 5px 4px var(--ui-control-shadow),0 9px 12px var(--ui-control-ambient)!important}
+.app[data-theme] :is(.settings,.modal,dialog) :is(.select-control[data-field-state=required],button[data-field-state=required]){--ui-raised-edge:var(--ui-required-dark)}
+.app[data-theme] .settings .settings-disclosure[open]>summary{background:var(--ui-control-face)!important;box-shadow:inset 0 2px 1px var(--ui-field-glint),inset 0 -3px 4px var(--ui-button-inset),0 3px 0 var(--ui-control-bottom),0 5px 4px var(--ui-control-shadow),0 9px 12px var(--ui-control-ambient)!important}
+.app[data-theme] .select-control select:open{box-shadow:inset 0 1px 2px var(--ui-well-shadow),0 2px 0 var(--ui-raised-edge,var(--ui-control-bottom)),0 4px 6px var(--ui-control-shadow)!important}
+.app[data-theme] .category-grid summary{margin-bottom:12px}
+@supports (appearance:base-select){
+ .app[data-theme] .select-control select::picker(select){padding:8px;background:var(--ui-setup-paper)}
+ .app[data-theme] .select-control option{margin:4px 0 6px;background:var(--ui-control-face);border:1px solid var(--ui-outline);box-shadow:inset 0 1px 1px var(--ui-field-glint),0 2px 0 var(--ui-control-bottom),0 3px 4px var(--ui-control-shadow)}
+ .app[data-theme] .select-control option:is(:checked,:hover,:focus){background:var(--ui-deep);color:var(--ui-paper);border-color:var(--ui-deep);box-shadow:inset 0 2px 1px #fff5,0 2px 0 color-mix(in srgb,var(--ui-deep) 65%,black)}
+ .app[data-theme] .select-control option:is(:checked,:hover,:focus)::checkmark{color:var(--ui-paper)}
+}
+
+.app[data-theme] :is(.settings,.modal,dialog) details>summary{border:1px solid var(--ui-outline);border-radius:14px}

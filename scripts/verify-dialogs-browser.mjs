@@ -67,7 +67,7 @@ async function setup(game){
  await evaluate("(()=>{const e=document.querySelectorAll('.sort-group-settings>.settings-block')["+i+"].querySelector('select[aria-label=\"Учебная задача\"]');e.value='lexical';e.dispatchEvent(new Event('change',{bubbles:true}))})()");
  await sleep(150);
  await evaluate("document.querySelectorAll('.sort-group-settings>.settings-block')["+i+"].querySelector('.category-picker-trigger').click()");
- await sleep(100);
+ await until("[...document.querySelectorAll('.category-picker[open] .category-grid>li summary')].some(e=>e.textContent.includes("+JSON.stringify(i?'Дом и быт':'Животный мир')+"))");
  await evaluate("(()=>{const d=document.querySelector('.category-picker[open]');d.querySelectorAll('input:checked').forEach(e=>e.click());const nodes=[...d.querySelectorAll('.category-grid>li')];const n=nodes.find(e=>e.querySelector('summary')?.textContent.includes('"+(i?'Дом и быт':'Животный мир')+"'));if(!n)throw Error('Category missing');n.querySelector('details').open=true;n.querySelector('input').click()})()");
  await sleep(100);await evaluate("document.querySelector('.category-picker[open] .primary').click()");await sleep(200);
  }
