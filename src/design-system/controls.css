@@ -221,7 +221,7 @@
  .app[data-theme] .select-control option:disabled{opacity:.5;cursor:not-allowed}
  .app[data-theme] .select-control option::checkmark{color:var(--ui-deep);font-weight:800}.app[data-theme] .select-control option:hover::checkmark{color:var(--ui-paper)}
 }
-@media(max-width:600px){.app[data-theme] :is(.overlay>div,.modal,dialog){padding:25px!important}.control-well{width:32px;height:36px}.setup-action-copy{min-width:0}}
+@media(max-width:600px){.app[data-theme] :is(.overlay>div,.modal,dialog){padding:25px!important}.setup-action-copy{min-width:0}}
 
 .app[data-theme] .overlay :is(p,.eyebrow){color:var(--ui-text)!important}.app[data-theme] .overlay p{font-size:16px;line-height:1.5;margin:16px 0 22px}
 .app[data-theme] .overlay>div>button{display:block;width:100%;margin:12px 0!important}.app[data-theme] .overlay>div>button:not(.primary){font-size:15px;padding:12px 16px}
@@ -233,3 +233,31 @@
 .app[data-theme] .quantity-slider .quantity-stepper button{background:var(--ui-deep)!important;color:var(--ui-paper)!important}
 
 @media(max-height:550px){.app .overlay{padding:12px!important}.app[data-theme] .overlay>div:has(.award){overflow:auto!important;max-height:calc(100dvh - 24px)!important;padding:18px 26px!important}.app[data-theme] .overlay .award{position:relative!important;top:auto!important;left:auto;right:auto;margin:0 auto 12px!important}.app[data-theme] .overlay p{font-size:14px;margin:10px 0 14px}.app[data-theme] .overlay h2{font-size:23px;margin-block:10px}}
+
+/* One rhythm and one action-well inset for all setup fields. */
+.app[data-theme] .settings .select-control{margin:0}
+.app[data-theme] .settings .game-choice{display:grid;gap:8px;margin:0 0 16px}
+.app[data-theme] .settings .game-choice>.field-label{margin:0!important}
+.app[data-theme] .settings label:not(.check):has(>.select-control){display:grid;gap:8px;margin:0 0 16px!important}
+.app[data-theme] .settings .category-picker-trigger{margin:0 0 16px!important;padding:11px 6px 11px 14px!important}
+.app[data-theme] .settings .settings-disclosure>summary{padding:11px 6px 11px 14px!important}
+.app .control-well{width:36px;height:38px;box-sizing:border-box}
+.app .icon-button .garden-icon{width:27px!important;height:27px!important}
+@media(max-width:600px){.app.game-active .icon-button .garden-icon{width:23px!important;height:23px!important}}
+.app[data-theme] .overlay.result>div>button{min-height:64px!important;height:auto;font-size:18px!important;padding:14px 22px!important;box-sizing:border-box;border-radius:18px!important}
+/* Required state follows the existing selection validity, never color alone. */
+.app[data-theme] .settings .select-control[data-field-state] select{border:3px solid var(--ui-outline)!important;padding:11px 48px!important}
+.app[data-theme] .settings .select-control[data-field-state=required] select{border-color:var(--ui-required)!important;box-shadow:inset 0 2px 4px #57452a20,0 2px 0 var(--ui-required-dark)!important}
+.app[data-theme] .settings .select-control[data-field-state=required] .control-well,.app[data-theme] .settings button[data-field-state=required] .control-well{background:var(--ui-required);border-color:var(--ui-required-dark);box-shadow:inset 0 2px 1px #fff5,inset 0 -2px 2px #0002,0 2px 0 var(--ui-required-dark)}
+.app[data-theme] .settings .select-control[data-field-state=required] .select-leading{color:var(--ui-required)}
+.app[data-theme] .settings button[data-field-state]{border-width:3px!important;box-sizing:border-box}
+.app[data-theme] .settings button[data-field-state=required]{border-color:var(--ui-required)!important;box-shadow:inset 0 2px 1px #fff9,0 2px 0 var(--ui-required-dark)!important}
+.app[data-theme] .settings button[data-field-state=ready]{border-color:var(--ui-outline)!important}
+.app[data-theme] .settings button[data-field-state=required] .setup-action-icon{color:var(--ui-required)}
+
+/* Same eight-pixel outer inset and leading icon column, regardless of border width. */
+.app .select-caret{right:8px}
+.app[data-theme] .settings .category-picker-trigger{padding-left:9px!important;padding-right:5px!important;gap:12px}
+.app[data-theme] .settings .settings-disclosure>summary{padding-left:11px!important;padding-right:7px!important;gap:12px}
+.app[data-theme] .settings :is(.category-picker-trigger,.settings-disclosure>summary)>.setup-action-icon{width:28px;height:30px;border-radius:9px}
+.app[data-theme] .settings :is(.category-picker-trigger,.settings-disclosure>summary)>.setup-action-icon svg{width:23px;height:23px}

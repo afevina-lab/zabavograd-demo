@@ -72,3 +72,11 @@ Pause, settings confirmation, selection dialogs and game results now share the w
 Validation: 115 tests, TypeScript, architecture, design-system and build. Added scripts/verify-dialogs-browser.mjs: pause, life-limit endings and settings in all five games at 1440×900 and 390×844, a fully completed Memory round, a fully completed Transformations session and real pointer/keyboard interaction with the opened native select. Screenshots: ui-smoke/dialogs/.
 
 Confirmed low-height 844×390 pause/end/settings scenarios in all five games. Native select was opened by pointer and changed by keyboard; screenshots visually reviewed. Active-game reset confirmations separately checked for Memory and Sorting.
+
+## Forest GUI consistency checkpoint
+
+Aligned all select/disclosure/category action wells to the same 8 px outer inset and shared leading-icon column. Prepared icon glyphs slightly enlarged. Result actions have matching width, height and font size. Removed the lesson/theme label and extra spend/undo icons from the game toolbar. Heart clicks and F8 spending, F9 undo remain; no artwork redesign for hearts or stars in this pass.
+
+Required empty category/sound choices and placeholder or disabled select options receive a 3 px red outline, red action well and aria-invalid state. Selecting valid data restores the theme green. Legitimate empty-valued Any/All options are not treated as missing. Existing gameplay validation remains authoritative.
+
+Validation: 115 tests, TypeScript, design-system, architecture and build passed. Browser checks measure action-well alignment, matching result-button sizes, toolbar cleanup, required-to-ready transitions for category and sound selection on desktop/mobile. F8/F9 verified in all five games.

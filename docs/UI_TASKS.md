@@ -47,3 +47,14 @@ Definition of done: no lost gameplay behavior, no clipped controls or double scr
 - C02: distinguish persistent selected state from keyboard focus-visible (must retain focus ring).
 - C04: review 14 shared icon SVG viewBoxes, especially house.svg.
 - Asset inventory: 210 WebP files, 14 SVG icons. No new art should be generated until component audit decides what is actually missing.
+
+## Forest GUI checkpoint — 2026-11-20
+
+Основной GUI лесной темы принят как практически завершённый этап: деревянно-кремовые поверхности, общие контролы, игровые окна, единые интервалы и размеры, состояния обязательного выбора. Изменения остаются в design/ui-audit-20261120 без публикации.
+
+- [x] Единые интервалы и положение кнопок раскрытия.
+- [x] Размеры кнопок результата и подготовленных значков.
+- [x] Обязательные поля: красное состояние до выбора, зелёное после выбора.
+- [x] Игровое поле без подписи темы и дополнительных значков возле сердец.
+- [ ] Отдельно проработать изображения и состояния звёзд и сердец.
+- [ ] Финальное утверждение и публикация отдельным шагом.

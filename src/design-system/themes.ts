@@ -63,7 +63,7 @@ export function themeVars(id:ThemeId,base='/'):CSSProperties{
  const kit=(dir:string,name:string)=>url(`assets/theme-ui/${dir}/${name}.webp`,base);
  return {
   '--ui-accent':p.accent,'--ui-deep':p.deep,'--ui-pale':p.pale,
-  '--ui-wood':'#c28a48','--ui-wood-light':'#e7bc7d','--ui-wood-dark':'#79502c','--ui-setup-gold':'#efba3e','--ui-setup-peach':'#f3d6b0','--ui-setup-paper':'#f5e9cc','--ui-setup-field':'#fff5df','--ui-outline':p.outline,'--ui-text':p.text,'--ui-paper':p.paper,
+  '--ui-required':'#c63b32','--ui-required-dark':'#86281f','--ui-wood':'#c28a48','--ui-wood-light':'#e7bc7d','--ui-wood-dark':'#79502c','--ui-setup-gold':'#efba3e','--ui-setup-peach':'#f3d6b0','--ui-setup-paper':'#f5e9cc','--ui-setup-field':'#fff5df','--ui-outline':p.outline,'--ui-text':p.text,'--ui-paper':p.paper,
   '--zg-page':p.page,'--zg-stage-fill':t.scene.fill,'--zg-stage-text':p.stageText,
   '--zg-stage-image':url(t.scene.background,base),
   '--zg-toolbar-image':url(t.toolbarArt,base),

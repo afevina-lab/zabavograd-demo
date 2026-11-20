@@ -7,6 +7,7 @@ export function GameToolbar({children}:{children:ReactNode}){
  function collect(nodes:ReactNode){Children.toArray(nodes).forEach(node=>{
   if(!isValidElement<{className?:string;'aria-label'?:string;children?:ReactNode}>(node)){status.push(node);return;}
   const props=node.props;
+  if(props.className?.split(' ').includes('lesson-tag'))return;
   if(props.className?.split(' ').some(name=>name==='game-actions'||name==='counters')){collect(props.children);return;}
   if(/экран/i.test(props['aria-label']||'')){view.push(node);return;}
   if(node.type==='button'||node.type==='a'||node.type==='label'){controls.push(node);return;}

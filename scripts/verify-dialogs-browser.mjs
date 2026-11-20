@@ -79,6 +79,7 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
  await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
  for(const game of ['memory','sorting','matching','conveyor','transformations']){
  await setup(game);
+ assert(await evaluate("!document.querySelector('.play-toolbar .lesson-tag')&&document.querySelectorAll('.life-controls .icon-button').length===0"),'Toolbar clutter remains');
  await until("!!document.querySelector('button[aria-label=Пауза]')");
  await evaluate("document.querySelector('button[aria-label=Пауза]').click()");await until("!!document.querySelector('.overlay')");await sleep(350);assert(await evaluate("(()=>{const e=document.querySelector('.play-toolbar .garden-icon'),b=e.closest('button,a');return getComputedStyle(e).backgroundColor!==getComputedStyle(b).backgroundColor})()"),'Toolbar icon contrast');await screenshot(game+'-pause-'+width);
  assert(await evaluate("(()=>{const e=document.querySelector('.overlay>div'),r=e.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1&&r.top>=0&&r.bottom<=innerHeight+1})()"),'Pause overflow '+game);
@@ -88,6 +89,12 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
  await evaluate("document.querySelector('button[aria-label=Настройки]').click()");await until("!!document.querySelector('.modal.gui-panel')");await screenshot(game+'-active-settings-'+width);
  assert(await evaluate("(()=>{const r=document.querySelector('.modal.gui-panel').getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1&&r.top>=0&&r.bottom<=innerHeight+1})()"),'Settings confirmation overflow');
  await evaluate("[...document.querySelectorAll('.modal.gui-panel button')].find(e=>e.textContent.startsWith('Продолжить')).click()");await until("!document.querySelector('.modal.gui-panel')");
+ }
+
+ const fullLifeLabel=await evaluate("document.querySelector('button.hearts').getAttribute('aria-label')");
+ for(const key of ['F8','F9']){
+ await cmd('Input.dispatchKeyEvent',{type:'keyDown',key,code:key,windowsVirtualKeyCode:key==='F8'?119:120});await cmd('Input.dispatchKeyEvent',{type:'keyUp',key,code:key,windowsVirtualKeyCode:key==='F8'?119:120});
+ await until("document.querySelector('button.hearts').getAttribute('aria-label')"+(key==='F8'?'!==':'===')+JSON.stringify(fullLifeLabel));
  }
  for(let i=0;i<10;i++){await cmd('Input.dispatchKeyEvent',{type:'keyDown',key:'F8',code:'F8',windowsVirtualKeyCode:119});await cmd('Input.dispatchKeyEvent',{type:'keyUp',key:'F8',code:'F8',windowsVirtualKeyCode:119});await sleep(60)}
  await until("!!document.querySelector('.overlay')");await until("getComputedStyle(document.querySelector('.overlay')).opacity==='1'");await sleep(600);await screenshot(game+'-ended-'+width);
@@ -103,6 +110,7 @@ await setup('memory');await until("!!document.querySelector('.card:not(:disabled
 const pairs=await evaluate("(()=>{const m={};for(const e of document.querySelectorAll('[data-card-key]')){const k=e.dataset.cardKey,id=k.slice(0,k.lastIndexOf(':'));(m[id]||=[]).push(k)}return Object.values(m)})()");
 for(const pair of pairs){for(const key of pair){await evaluate("document.querySelector('[data-card-key=\""+key+"\"]').click()");await sleep(80)}await until("document.querySelector('[data-card-key=\""+pair[0]+"\"]').classList.contains('found')")}
 await until("!!document.querySelector('.overlay.result')");await until("getComputedStyle(document.querySelector('.overlay.result')).opacity==='1'");await sleep(1000);await screenshot('memory-completed');
+assert(await evaluate("(()=>{const b=[...document.querySelectorAll('.overlay.result>div>button')].map(e=>e.getBoundingClientRect());return b.length===2&&Math.abs(b[0].width-b[1].width)<1&&Math.abs(b[0].height-b[1].height)<1})()"),'Result buttons differ in size');
 assert(await evaluate("(()=>{const r=document.querySelector('.overlay.result>div').getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&r.bottom<=innerHeight})()"),'Completion panel overflow');
 
 // Complete Transformations through its visible controls.

@@ -66,6 +66,7 @@ if(game==='matching'){
 }
 assert(await evaluate("[...document.querySelectorAll('.settings select')].every(e=>e.closest('.select-control'))"),'Unstyled native select');
 assert(await evaluate("!document.querySelector('.setup-card-preview,.setup-preview-card')"),'Picture preview still present');
+assert(await evaluate("(()=>{const nodes=[...document.querySelectorAll('.select-control,.category-picker-trigger,.settings-disclosure>summary')];return nodes.every(e=>{const w=e.querySelector(':scope>.control-well'),r=e.getBoundingClientRect();if(!w||r.width===0)return true;return Math.abs(r.right-w.getBoundingClientRect().right-8)<1})})()"),'Action well inset mismatch '+game+' '+width);
 await screenshot('audit-'+game+'-'+width+'-top');
 if(game==='matching'){
  assert(await evaluate("(()=>{const es=[...document.querySelectorAll('.settings-disclosure')];return es.length>=2&&es.every(e=>{e.querySelector('summary').click();const opened=e.open;e.querySelector('summary').click();return opened&&!e.open})})()"),'Disclosure interaction failed');
@@ -104,6 +105,28 @@ for(const game of ['memory','sorting','matching','conveyor','transformations']){
  for(const label of ['Буквы','Слоги','Слова'])await evaluate("(()=>{const e=[...document.querySelectorAll('.reading-settings .reading-kinds label')].find(e=>e.textContent==='"+label+"')?.querySelector('input');if(!e)throw Error('Missing reading kind');if(!e.checked)e.click()})()");
  assert(await evaluate("[...document.querySelectorAll('.reading-settings .reading-kinds')][0].querySelectorAll('input:checked').length===3"),'Mixed reading unavailable in '+game);
  await screenshot('reading-mixed-'+game);
+}
+
+// Required selections change their state immediately after a genuine choice.
+for(const [width,height] of [[1440,900],[390,844]]){
+ await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
+ await cmd('Page.navigate',{url:origin+'?game=matching'});await until("!!document.querySelector('.category-picker-trigger')");
+ assert(await evaluate("document.querySelector('.category-picker-trigger').dataset.fieldState==='required'&&document.querySelector('select[aria-label=\"Задание\"]').getAttribute('aria-invalid')==='true'"),'Missing required state');
+ const requiredColor=await evaluate("getComputedStyle(document.querySelector('.category-picker-trigger .control-well')).backgroundColor");
+ await screenshot('required-empty-'+width);
+ await evaluate("document.querySelector('.category-picker-trigger').click()");await until("document.querySelectorAll('.category-grid>li').length>0");
+ await evaluate("(()=>{const n=[...document.querySelectorAll('.category-grid>li')].find(e=>e.querySelector('summary')?.textContent.includes('Животный мир'));n.querySelector('details').open=true;n.querySelector('input').click()})()");
+ await evaluate("document.querySelector('.category-picker[open] .primary').click()");
+ await until("document.querySelector('.category-picker-trigger').dataset.fieldState==='ready'&&document.querySelector('select[aria-label=\"Задание\"]').getAttribute('aria-invalid')!=='true'");
+ assert(await evaluate("getComputedStyle(document.querySelector('.category-picker-trigger .control-well')).backgroundColor!=="+JSON.stringify(requiredColor)),'Required color not cleared');
+ await screenshot('required-filled-'+width);
+ await cmd('Page.navigate',{url:origin+'?game=memory'});await until("!!document.querySelector('select[aria-label=\"Учебная задача\"]')");
+ await evaluate("(()=>{const e=document.querySelector('select[aria-label=\"Учебная задача\"]');e.value='automation';e.dispatchEvent(new Event('change',{bubbles:true}))})()");
+ await until("!!document.querySelector('.sound-selection>button[data-field-state=required]')");
+ await evaluate("document.querySelector('.sound-selection>button').click()");await until("!!document.querySelector('.sound-chip>button:not(:disabled)')");
+ await evaluate("document.querySelector('.sound-chip>button:not(:disabled)').click()");await evaluate("document.querySelector('.sound-workshop .primary').click()");
+ await until("!!document.querySelector('.sound-selection>button[data-field-state=ready]')");
+ assert(await evaluate("document.querySelector('.sound-selection>button').getAttribute('aria-invalid')!=='true'&&getComputedStyle(document.querySelector('.sound-selection>button')).borderColor!=='rgb(198, 59, 50)'"),'Sound selection required state did not clear');
 }
 writeFileSync(join(output,'audit.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));
 }finally{ws?.close();proc.kill('SIGTERM');server.close();await Promise.race([new Promise(r=>proc.once('exit',r)),sleep(1500)]);try{rmSync(profile,{recursive:true,force:true,maxRetries:5,retryDelay:100})}catch{}}
