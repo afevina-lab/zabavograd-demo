@@ -62,10 +62,10 @@
 .selected-sounds>span{padding:6px 12px;border:1px solid currentColor;border-radius:20px}
 
 /* Shared setup controls use theme colors and one visible keyboard focus. */
-.app[data-theme] .settings button,.app .settings-window-heading .icon-button,.app dialog button{border-image:none!important;border:1px solid var(--ui-outline)!important;border-radius:12px!important;background:var(--ui-paper)!important;color:var(--ui-text)!important;box-shadow:none!important}
+.app[data-theme] .settings button,.app .settings-window-heading .icon-button,.app dialog button{border-image:none!important;border:2px solid var(--ui-outline)!important;border-radius:15px 18px 14px 18px!important;background:var(--ui-paper)!important;color:var(--ui-text)!important;box-shadow:0 3px 0 var(--ui-outline)!important;min-height:40px;padding:7px 12px}
 .app[data-theme] .settings button:hover:not(:disabled),.app dialog button:hover:not(:disabled){background:var(--ui-pale)!important}
 .app[data-theme] .settings button:disabled{opacity:.5;cursor:not-allowed}
-.app .settings select{width:100%;min-height:44px;box-sizing:border-box;padding:10px 36px 10px 12px!important;border-radius:10px}
+.app .settings select{width:100%;min-height:44px;box-sizing:border-box;padding:10px 44px 10px 14px!important;border-radius:14px 17px 13px 16px!important;border:2px solid var(--ui-outline)!important;box-shadow:0 3px 0 color-mix(in srgb,var(--ui-outline) 32%,transparent);appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='12' viewBox='0 0 16 12'%3E%3Cpath d='m3 4 5 5 5-5' fill='none' stroke='%23465543' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")!important;background-repeat:no-repeat!important;background-position:right 14px center!important;background-size:16px 12px!important}
 .app :is(button,a,input,select,summary):focus-visible{outline:3px solid var(--ui-deep)!important;outline-offset:3px!important}
 .settings-window-heading .icon-button{display:grid;place-items:center;flex:none;width:44px;height:44px;padding:0!important}
 .app .quantity-slider button{width:36px;min-height:36px!important;padding:0!important}
@@ -73,20 +73,26 @@
 /* Adventure preparation shares the same controls and theme tokens in every game. */
 .app:has(.shared-settings-window){min-height:100dvh;background:var(--zg-stage-image) center/cover fixed,var(--ui-pale)}
 .app[data-theme] .settings-shade:has(.shared-settings-window){background:color-mix(in srgb,var(--ui-deep) 20%,transparent)!important;backdrop-filter:blur(2px)}
-.app[data-theme] .shared-settings-window{border:2px solid var(--ui-outline)!important;box-shadow:0 8px 0 color-mix(in srgb,var(--ui-deep) 25%,transparent),0 22px 60px #172a4040!important}
+.app[data-theme] .shared-settings-window{border:3px solid var(--ui-outline)!important;border-radius:32px 26px 34px 28px!important;box-shadow:0 8px 0 color-mix(in srgb,var(--ui-deep) 25%,transparent),0 22px 60px #172a4040!important}
 .settings-adventure-title{display:flex;align-items:center;gap:16px;min-width:0}
 .settings-window-heading .settings-adventure-emblem{display:grid;place-items:center;flex:none;width:62px;height:62px;margin:0;border-radius:22px 22px 28px 28px;background:var(--ui-pale);color:var(--ui-deep);border:2px solid var(--ui-outline);box-shadow:0 4px 0 var(--ui-outline);font-size:30px;transform:rotate(-6deg)}
 .settings-adventure-emblem .garden-icon{width:32px!important;height:32px!important}
 .settings-window-heading .settings-eyebrow{margin:0 0 5px;font-size:12px;letter-spacing:.08em;font-weight:750;text-transform:uppercase;color:var(--ui-deep)}
 .settings-window-heading{border-bottom:1px dashed var(--ui-outline);margin-bottom:12px}
 .app .shared-settings-window .unified-settings-content{counter-reset:preparation}
-.shared-settings-window .settings-block{position:relative;counter-increment:preparation;border-radius:22px!important;box-shadow:0 4px 0 color-mix(in srgb,var(--ui-outline) 20%,transparent);padding:18px!important}
-.shared-settings-window .settings-block>h2:first-child,.shared-settings-window .settings-block>h3:first-child,.shared-settings-window .settings-block>.material-head h2{display:flex;align-items:center;gap:10px}
+.shared-settings-window .settings-block{position:relative;counter-increment:preparation;border:2px solid var(--ui-outline)!important;border-radius:24px 19px 26px 20px!important;box-shadow:0 4px 0 color-mix(in srgb,var(--ui-outline) 20%,transparent);padding:18px!important}
+.shared-settings-window .settings-block>h2:first-child,.shared-settings-window .settings-block>h3:first-child,.shared-settings-window .settings-block>.material-head h2{display:flex;align-items:center;gap:10px;width:fit-content;max-width:100%;padding:7px 12px;background:var(--ui-pale);border:2px solid var(--ui-outline);border-radius:13px 16px 12px 15px;box-sizing:border-box}
 .shared-settings-window .settings-block>h2:first-child::before,.shared-settings-window .settings-block>h3:first-child::before,.shared-settings-window .settings-block>.material-head h2::before{content:counter(preparation,decimal-leading-zero);display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:50%;background:var(--ui-pale);color:var(--ui-deep);border:1px solid var(--ui-outline);font-size:14px}
-.app[data-theme] .settings .primary,.app[data-theme] .settings .start{min-height:58px;padding:14px 28px!important;background:var(--ui-deep)!important;color:var(--ui-paper)!important;border:2px solid var(--ui-deep)!important;border-radius:18px!important;box-shadow:0 5px 0 color-mix(in srgb,var(--ui-deep) 70%,black)!important;font-size:21px;font-weight:750;justify-self:stretch}
+.app[data-theme] .settings .primary,.app[data-theme] .settings .start{min-height:58px;padding:14px 28px!important;background:var(--ui-deep)!important;color:var(--ui-paper)!important;border:2px solid var(--ui-deep)!important;border-radius:20px 24px 18px 23px!important;box-shadow:0 5px 0 color-mix(in srgb,var(--ui-deep) 70%,black)!important;font-size:21px;font-weight:750;justify-self:stretch}
 .app[data-theme] .settings .primary::after,.app[data-theme] .settings .start::after{content:' →';font-size:24px}
 .app[data-theme] .settings .primary:hover:not(:disabled){background:var(--ui-deep)!important;filter:brightness(1.1)}
 .app[data-theme] .settings .primary:active:not(:disabled){transform:translateY(3px);box-shadow:0 2px 0 var(--ui-outline)!important}
 .app[data-theme] .settings .themes button{min-height:76px;border-width:2px!important;box-shadow:0 3px 0 color-mix(in srgb,var(--ui-outline) 25%,transparent)!important}
 .app[data-theme] .settings .themes button.selected{background:var(--ui-pale)!important;border-color:var(--ui-deep)!important}
 @media(max-width:600px){.settings-window-heading .settings-adventure-emblem{width:42px;height:46px;border-radius:15px;font-size:23px}.settings-adventure-title{gap:10px}.settings-window-heading .settings-eyebrow{font-size:9px}.settings-window-heading span{font-size:12px}.settings-window-heading h2{font-size:24px}.shared-settings-window .settings-block{padding:14px!important}}
+
+.app[data-theme] .settings button:active:not(:disabled),.app dialog button:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 var(--ui-outline)!important}
+.app .settings .themes i{display:block;width:100%;height:68px;border:2px solid var(--ui-outline);border-radius:12px 15px 11px 14px;box-sizing:border-box;background-position:center;background-size:cover}
+.app .settings .themes button{position:relative;min-width:0;flex:1;padding:8px!important}
+.app .settings .themes button[aria-pressed=true]::after{content:"✓";position:absolute;right:4px;top:4px;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--ui-deep);color:var(--ui-paper);border:2px solid var(--ui-paper);font-weight:800}
+.app .category-grid>li{border:2px solid var(--ui-outline);border-radius:16px 20px 15px 18px}.app .category-grid summary{border-radius:12px;padding:10px}.app .category-grid ul{border-left:2px dashed var(--ui-outline);margin-left:12px;padding-left:14px}

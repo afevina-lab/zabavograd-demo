@@ -20,3 +20,9 @@ Local screenshots and machine report: ui-smoke/ (ignored build artifacts). User 
 Shared settings now show the existing theme scene behind the panel, an adventure emblem and game title, numbered setup sections with tactile surfaces, and a prominent start button with pressed feedback. Theme selection remains available. All changes are shared presentation; game rules and task values are unchanged.
 
 Validation: 115 tests, architecture, TypeScript, design-system check and production build passed. Browser screenshots refreshed for review.
+
+## Cartoon controls follow-up
+
+Rounded asymmetric cardboard outlines, tactile shared buttons, section title tabs and native selects with a custom caret. Theme choices preview the existing scene artwork. No additional leaf or branch ornaments. Existing scene artwork is retained.
+
+115 tests, architecture, design-system, TypeScript and production build passed. Responsive browser screenshots refreshed.

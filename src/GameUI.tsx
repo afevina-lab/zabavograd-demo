@@ -23,7 +23,7 @@ export function ScoreStars({value}:{value:number}){
   </span>)}</span>;
 }
 export function ThemePicker({theme,setTheme}:{theme:ThemeId;setTheme:(v:ThemeId)=>void}){
- return <div className="theme-section"><label className="field-label">Оформление</label><div className="themes">{THEME_IDS.map(id=><button key={id} onClick={()=>setTheme(id)} className={theme===id?'selected':''} aria-pressed={theme===id}><i className={id} style={{backgroundColor:THEMES[id].palette.accent}}/>{THEMES[id].label}</button>)}</div></div>;
+ return <div className="theme-section"><label className="field-label">Оформление</label><div className="themes">{THEME_IDS.map(id=><button key={id} onClick={()=>setTheme(id)} className={theme===id?'selected':''} aria-pressed={theme===id}><i className={id} style={{backgroundColor:THEMES[id].palette.accent,backgroundImage:THEMES[id].scene.background?`url("${import.meta.env.BASE_URL+THEMES[id].scene.background}")`:undefined}}/>{THEMES[id].label}</button>)}</div></div>;
 }
 export function Scenery({theme,celebrate=false}:{theme:ThemeId;celebrate?:boolean}){
  return <><SceneLayers theme={theme}/><Effects theme={theme} celebrate={celebrate}/></>;
