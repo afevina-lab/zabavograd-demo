@@ -5,8 +5,8 @@ All tasks are pending unless checked. Screenshots = user reports; code audit = i
 ## Stage A — verify and inventory
 - [x] A01 Establish the single public source repository and relevant design system files.
 - [x] A02 Confirm existing forest background and theme skins; do not redraw background.
-- [ ] A03 Locate Conveyor setup and lexical tree components; map markup to CSS selectors.
-- [ ] A04 Inventory WebP/SVG assets, variants and icon viewBoxes.
+- [x] A03 Locate Conveyor setup and lexical tree components; map markup to CSS selectors.
+- [x] A04 Inventory WebP/SVG assets, variants and icon viewBoxes.
 - [ ] A05 Run/check current browser snapshots for settings on 1440x900, 1024x768, 768x1024 and 390x844, including expanded lexical dialog.
 - [ ] A06 Verify main / gh-pages publication and save baseline screenshots.
 
@@ -39,3 +39,11 @@ All tasks are pending unless checked. Screenshots = user reports; code audit = i
 - [ ] E04 Apply same shared components to other games, then publish via normal workflow.
 
 Definition of done: no lost gameplay behavior, no clipped controls or double scrollbar, visible keyboard focus, 3 themes verified, responsive screenshot review, CI checks passing.
+
+## Dependencies found during inspection
+- D01: GameSelect currently deliberately hides native select and exposes tiles; adjust automated reading-setting scenario in `scripts/verify-settings-browser.mjs`.
+- D06: CategoryPicker already preserves tree ancestry and indeterminate states; rewrite layout without discarding its data behavior.
+- C01/D05: collapse 94dvh fixed window rules and width/margin hacks in `layout.css`; avoid new override layers.
+- C02: distinguish persistent selected state from keyboard focus-visible (must retain focus ring).
+- C04: review 14 shared icon SVG viewBoxes, especially house.svg.
+- Asset inventory: 210 WebP files, 14 SVG icons. No new art should be generated until component audit decides what is actually missing.
