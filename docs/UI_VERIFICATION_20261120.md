@@ -86,3 +86,9 @@ Validation: 115 tests, TypeScript, design-system, architecture and build passed.
 Space uses the same shared geometry and controls as Forest. Material-neutral surface tokens now cover frame texture/fill, bevel highlights, inner edges, inset shadows, text hints, quantity tray, empty states and picker borders. Space has a brushed silver-blue frame, cold blue-white surfaces, saturated violet actions and cyan highlights. Required-field red remains semantic across themes. Existing backgrounds, scene animation, assets, rewards and mechanics retained.
 
 Browser scripts accept UI_THEME=space (forest remains the default) and separate reports/screenshots by theme. Space passed 25 responsive game setups and 15 pause/end/settings scenarios, plus genuine Memory/Transformations completion and pointer/keyboard native picker operation. Forest regression passed 25 setups; two baseline screenshots are byte-identical and desktop matching was visually compared. 115 unit tests, TypeScript, architecture, design-system and production build pass.
+
+## Space texture and color refinement
+
+Space frame now uses a broader iridescent silver/cyan/violet finish with soft horizontal brushing rather than dense gray ribbing. The inset panel adds subtle cyan/violet light fields and fine static grain. Surface texture and frame inset are theme tokens; Forest retains no interior texture and its original 13 px frame inset. Shared control geometry and game mechanics are unchanged. Space action violet is more saturated.
+
+115 tests, TypeScript, architecture, design-system and production build pass. Space settings/dialog scenarios refreshed; Forest screenshot regression checked independently.

@@ -42,7 +42,7 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
  },
  space:{
   label:'Космос',
-  palette:{accent:'#93a7ed',deep:'#5050a8',pale:'#e0e6fb',outline:'#8b9cbf',text:'#29365a',paper:'#f5f8ff',page:'#111b35',stageText:'#f0f5ff'},
+  palette:{accent:'#93a7ed',deep:'#6150be',pale:'#e8e5fc',outline:'#9099c8',text:'#29365a',paper:'#f5f8ff',page:'#111b35',stageText:'#f0f5ff'},
   skin:'lavender',toolbarArt:'assets/themes/space/header.webp',scene:{background:'assets/space/background.webp',fill:'#1c2340',motion:'drift',
  sprites:[
   {id:'planet-blue',src:'assets/space/planet-blue.webp',motion:'float',width:'min(120cqh,82cqw)',left:'-30cqh',bottom:'-20cqh',opacity:.9,durationMs:24000,spinMs:160000},
@@ -61,7 +61,7 @@ const url=(p:string|null,base:string)=>p?`url("${assetUrl(p,base)}")`:'none';
 
 /** Surface materials are presentation only; every game uses the same geometry. */
 const warmSurface={
- '--ui-frame-base':'#c28a48','--ui-frame-light':'#e7bc7d','--ui-frame-dark':'#79502c',
+ '--ui-frame-inset':'13px','--ui-surface-texture':'none','--ui-frame-base':'#c28a48','--ui-frame-light':'#e7bc7d','--ui-frame-dark':'#79502c',
  '--ui-frame-texture':'repeating-linear-gradient(2deg,transparent 0 5px,#6d3e1710 6px,transparent 7px 13px)',
  '--ui-frame-fill':'linear-gradient(100deg,var(--ui-frame-light),var(--ui-frame-base) 24%,var(--ui-frame-light) 54%,var(--ui-frame-base))',
  '--ui-frame-glint':'#fff6d6','--ui-frame-shadow':'#53351f55','--ui-inner-edge':'#a97b43','--ui-inner-shadow':'#60361640',
@@ -74,15 +74,15 @@ const warmSurface={
 const setupSurfaces:Record<ThemeId,typeof warmSurface>={
  neutral:warmSurface,forest:warmSurface,
  space:{
- '--ui-frame-base':'#8397b1','--ui-frame-light':'#e8f2ff','--ui-frame-dark':'#354b65',
- '--ui-frame-texture':'repeating-linear-gradient(90deg,#ffffff18 0 1px,#263d5710 1px 2px,transparent 2px 4px)',
- '--ui-frame-fill':'linear-gradient(110deg,#eff6ff 0%,#a6b9d0 16%,#71879f 32%,#e7effc 49%,#92a8c2 64%,#cad7e6 84%,#6f87a3)',
- '--ui-frame-glint':'#ffffff','--ui-frame-shadow':'#08162966','--ui-inner-edge':'#647e9c','--ui-inner-shadow':'#182c4d60',
+ '--ui-frame-inset':'17px','--ui-surface-texture':'radial-gradient(ellipse at 3% 0%,#66deff42,transparent 48%),radial-gradient(ellipse at 100% 100%,#b68af24a,transparent 58%),linear-gradient(135deg,#ffffff78,transparent 45%,#d6ccf52b),repeating-linear-gradient(12deg,#ffffff10 0 1px,transparent 1px 4px)','--ui-frame-base':'#899bdd','--ui-frame-light':'#effaff','--ui-frame-dark':'#383c70',
+ '--ui-frame-texture':'repeating-linear-gradient(0deg,#ffffff14 0 1px,transparent 1px 5px)',
+ '--ui-frame-fill':'linear-gradient(125deg,#f8fdff 0%,#a2dafa 12%,#718ae3 25%,#f0f7ff 37%,#a4a1e8 52%,#665dc2 68%,#b9e6f2 84%,#7485c9 100%)',
+ '--ui-frame-glint':'#ffffff','--ui-frame-shadow':'#08162966','--ui-inner-edge':'#8d9fcb','--ui-inner-shadow':'#252a6566',
  '--ui-surface-glint':'#ffffff','--ui-field-glint':'#ffffff','--ui-surface-edge':'#93a6c0','--ui-field-edge':'#9aacc3',
  '--ui-tray-edge':'#9aacc3','--ui-tray-shadow':'#b4c3d7','--ui-well-shadow':'#1b355028','--ui-well-shadow-strong':'#1b355030',
  '--ui-muted-text':'#626f8e','--ui-button-inset':'#1a2d4c24','--ui-button-inset-strong':'#1c245540','--ui-soft-shadow':'#19375418','--ui-icon-shadow':'#19375422','--ui-empty-edge':'#91a8c4',
  '--ui-thumb-edge':'#268bac','--ui-thumb-base':'#287b9b',
- '--ui-highlight':'#64d1ed','--ui-icon-surface':'#ccd7ff','--ui-setup-paper':'#e4ebf6','--ui-setup-field':'#f7faff'
+ '--ui-highlight':'#64d1ed','--ui-icon-surface':'#ccd7ff','--ui-setup-paper':'#e9eafa','--ui-setup-field':'#f7faff'
  }
 };
 
