@@ -103,3 +103,30 @@
 @media(max-width:600px){.settings-window-heading{padding:10px 8px 16px}.settings-window-heading h2{font-size:27px}.settings-window-heading span{font-size:12px}.app[data-theme] .shared-settings-window .settings-block{padding:10px!important}.app .quantity-slider>div{gap:5px;grid-template-columns:36px minmax(40px,1fr) 36px 52px}}
 
 .app .shared-settings-window .settings-block{margin:0 0 12px!important}.app .shared-settings-window .settings-block h2{margin:0 0 20px!important;font-size:24px}.app .shared-settings-window .settings-block label:not(.check){margin-block:12px 8px}.app .shared-settings-window .settings-block select{margin-top:8px}.app .shared-settings-window .settings-block .check{margin-block:14px}.app .shared-settings-window .unified-settings-content>p:first-child{margin-bottom:26px}
+
+/* Shared expandable setup actions; native details preserves keyboard behavior. */
+.app[data-theme] .settings .settings-disclosure{padding:0!important;margin:18px 0!important;border:0!important;background:transparent!important;box-shadow:none!important;border-radius:18px!important}
+.app[data-theme] .settings .settings-disclosure>summary,.app[data-theme] .settings .category-picker-trigger{display:flex;align-items:center;gap:12px;width:100%;box-sizing:border-box;min-height:76px;padding:13px 16px!important;border:1px solid color-mix(in srgb,var(--ui-outline) 60%,var(--ui-paper))!important;border-radius:17px!important;background:var(--ui-setup-field)!important;color:var(--ui-text)!important;box-shadow:inset 0 2px 2px #fff9,0 3px 0 color-mix(in srgb,var(--ui-outline) 45%,var(--ui-paper)),0 5px 8px #49382012!important;list-style:none;cursor:pointer;text-align:left;white-space:normal}
+.app[data-theme] .settings .settings-disclosure>summary::before{content:none!important}.settings-disclosure>summary::-webkit-details-marker{display:none}
+.app[data-theme] .settings .settings-disclosure>summary:hover,.app[data-theme] .settings .category-picker-trigger:hover{filter:brightness(1.025)}
+.setup-action-icon{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:14px;background:var(--ui-pale);color:var(--ui-deep);box-shadow:inset 0 2px 1px #fff9,0 2px 2px #49382020}
+.setup-action-icon svg{width:25px;height:25px}
+.setup-action-copy{display:flex;flex-direction:column;gap:5px;flex:1;min-width:0;line-height:1.3}
+.setup-action-copy strong{font-size:16px;font-weight:750}.setup-action-copy small{font-size:13px;font-weight:450;color:var(--ui-text);opacity:.8;overflow-wrap:anywhere}
+.setup-disclosure-arrow{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;background:var(--ui-pale);color:var(--ui-deep);font-size:23px;font-weight:700}
+.settings-disclosure[open]>summary .setup-disclosure-arrow{transform:rotate(180deg)}
+.app[data-theme] .settings .settings-disclosure[open]>summary{box-shadow:inset 0 2px 2px #fff9,0 2px 0 var(--ui-outline)!important}
+.settings-disclosure-body{padding:18px 6px 4px}.settings-disclosure-body>section+section{margin-top:18px}
+.app[data-theme] .settings .challenge .setup-action-icon{background:var(--ui-setup-peach);color:var(--ui-deep)}
+.app[data-theme] .settings .category-picker-trigger{margin:14px 0 20px!important;border-color:color-mix(in srgb,var(--ui-setup-gold) 65%,var(--ui-deep))!important;background:color-mix(in srgb,var(--ui-setup-gold) 20%,var(--ui-setup-field))!important}
+.category-picker-trigger .setup-action-icon{background:var(--ui-setup-gold);color:var(--ui-text)}
+.category-selection-count{display:grid;place-items:center;flex:none;min-width:30px;height:30px;padding:0 4px;box-sizing:border-box;border-radius:50%;background:var(--ui-setup-field);color:var(--ui-deep);font-weight:800;font-size:19px;box-shadow:inset 0 1px 3px #49382020}
+@media(max-width:600px){.app[data-theme] .settings .settings-disclosure>summary,.app[data-theme] .settings .category-picker-trigger{gap:10px;padding:12px!important}.setup-action-icon{width:38px;height:40px;border-radius:12px}.setup-action-copy strong{font-size:15px}.setup-action-copy small{font-size:12px}}
+/* One quiet scrollbar contract for setup surfaces and dialogs. */
+.app .settings,.app dialog{scrollbar-width:thin!important;scrollbar-color:color-mix(in srgb,var(--ui-outline) 48%,var(--ui-setup-paper)) transparent!important}
+.app .settings::-webkit-scrollbar,.app dialog::-webkit-scrollbar{width:8px;height:8px}
+.app .settings::-webkit-scrollbar-track,.app dialog::-webkit-scrollbar-track{background:transparent!important;border-radius:20px;margin-block:12px}
+.app .settings::-webkit-scrollbar-thumb,.app dialog::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--ui-outline) 48%,var(--ui-setup-paper))!important;border:2px solid var(--ui-setup-paper)!important;border-radius:20px!important}
+.app .settings::-webkit-scrollbar-button,.app dialog::-webkit-scrollbar-button{display:none!important;width:0!important;height:0!important}
+
+@supports selector(::-webkit-scrollbar){.app .settings,.app dialog{scrollbar-width:auto!important;scrollbar-color:auto!important}}

@@ -65,10 +65,17 @@ if(game==='matching'){
  }
 }
 await screenshot('audit-'+game+'-'+width+'-top');
+if(game==='matching'){
+ assert(await evaluate("(()=>{const es=[...document.querySelectorAll('.settings-disclosure')];return es.length>=2&&es.every(e=>{e.querySelector('summary').click();const opened=e.open;e.querySelector('summary').click();return opened&&!e.open})})()"),'Disclosure interaction failed');
+ await evaluate("document.querySelectorAll('.settings-disclosure').forEach(e=>e.open=true)");
+ await screenshot('expanded-settings-'+width);
+ assert(await evaluate("(()=>{const e=document.querySelector('.unified-settings-content');return e.scrollWidth<=e.clientWidth+2})()"),'Expanded settings overflow');
+ await evaluate("document.querySelectorAll('.settings-disclosure').forEach(e=>e.open=false)");
+}
 if(game==='conveyor'){
  assert(await evaluate("(()=>{const e=document.querySelector('input[role=switch]');if(!e)return false;const before=e.checked;e.click();const changed=e.checked!==before;e.click();return changed&&e.checked===before})()"),'Caption switch failed');
  await evaluate("(()=>{const e=[...document.querySelectorAll('select')].find(e=>[...e.options].some(o=>o.value==='lexical'));if(e){e.value='lexical';e.dispatchEvent(new Event('change',{bubbles:true}))}})()");await sleep(200);
- await evaluate("[...document.querySelectorAll('button')].find(b=>b.textContent.startsWith('Лексические темы'))?.click()");
+ await evaluate("document.querySelector('.category-picker-trigger')?.click()");
  if(await evaluate("!!document.querySelector('.category-picker[open]')")){
  await evaluate("document.querySelectorAll('.category-picker details').forEach(e=>e.open=true)");
  await screenshot('categories-'+width);

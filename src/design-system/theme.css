@@ -237,7 +237,7 @@
 
 .app [data-card-drop-hover=true]{outline:3px solid var(--ui-accent)!important;outline-offset:2px}.app [data-card-dragging=true]{cursor:grabbing!important}.app [data-card-placeholder=true]{visibility:hidden!important}
 
-.app .settings,.app dialog{scrollbar-color:var(--ui-outline) var(--ui-paper)!important;scrollbar-width:thin}.app .settings::-webkit-scrollbar-track,.app dialog::-webkit-scrollbar-track{background:var(--ui-paper)!important}.app .settings::-webkit-scrollbar-thumb,.app dialog::-webkit-scrollbar-thumb{background:var(--ui-outline)!important;border-color:var(--ui-paper)!important}.app .task-tiles button[aria-pressed=true]{outline:2px solid var(--ui-outline);background:var(--ui-pale)}
+.app .task-tiles button[aria-pressed=true]{outline:2px solid var(--ui-outline);background:var(--ui-pale)}
 .app[data-theme] .choice-tiles button[aria-pressed=true]{outline:2px solid var(--ui-outline);outline-offset:1px;background:var(--ui-pale)}
 /* Pauses and results use the same double frame and palette as settings. */
 .app[data-theme] .overlay>div,.app[data-theme] .modal.gui-panel{background:var(--ui-paper);color:var(--ui-text);border:3px solid var(--ui-outline);border-radius:28px;box-shadow:inset 0 0 0 9px var(--ui-paper),inset 0 0 0 11px var(--ui-outline),0 12px 40px #0004}

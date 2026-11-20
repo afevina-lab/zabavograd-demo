@@ -38,3 +38,9 @@ Binary preferences (captions, preview, syllable splitting, cluster exclusion, ra
 ## Caption condition and spacing correction
 
 Matching captions are offered immediately after display-mode selection only for image-image, non-math and non-derived-image modes. In-game captions use the same display-mode guard. Browser checks exercise all four display modes. Setup paper and field colors have dedicated warm cream tokens; section spacing and desktop row spans remove the empty gap below short first-column sections.
+
+## Shared setup actions
+
+Added SettingsDisclosure for additional conditions and time/lives: consistent icon, title, state description and disclosure affordance; native details keyboard behavior retained. Category selection now uses a full-width warm gold action with selected-topic names and count, retaining the transactional tree. Unified quiet rounded scrollbar rules, removing competing theme scrollbar overrides. No additional game mechanics, rewards or decorative vegetation.
+
+115 tests, architecture, TypeScript, design-system and build passed. Browser scenario includes expanding/collapsing both sections and screenshots with expanded controls.
