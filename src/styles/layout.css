@@ -779,7 +779,7 @@ html:has(.settings-shade){overflow:hidden}
 .app .overlay .award{top:-46px;z-index:2;pointer-events:none}
 
 /* The shell owns height; its scroll area consumes only the remaining space. */
-.app .settings-shade .settings-frame.shared-settings-window{display:flex;flex-direction:column;height:auto;max-height:calc(100dvh - 32px)!important;min-height:0;padding:16px!important;width:min(1100px,96vw)!important;box-sizing:border-box;overflow:hidden}
+.app .settings-shade .settings-frame.shared-settings-window{display:flex;flex-direction:column;height:auto;max-height:calc(100dvh - 32px)!important;min-height:0;padding:calc(var(--ui-frame-inset) + 8px)!important;width:min(1100px,96vw)!important;box-sizing:border-box;overflow:hidden}
 .settings-window-heading{flex:none}
 .app .settings-shade .settings-frame.shared-settings-window .unified-settings-content{width:100%!important;max-width:none!important;margin:0!important;padding:12px!important;box-sizing:border-box;scrollbar-gutter:stable;border:0!important;box-shadow:none!important;background:transparent!important;border-radius:0!important;flex:1 1 auto;min-height:0!important;max-height:none!important;height:auto!important;overflow-y:auto!important;overflow-x:hidden!important}
 .shared-settings-window .unified-settings-content>*{min-width:0;max-width:100%;box-sizing:border-box}

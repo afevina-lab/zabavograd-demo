@@ -98,3 +98,11 @@ Space frame now uses a broader iridescent silver/cyan/violet finish with soft ho
 Space restored the previously approved calm palette and untextured light interior. Its frame now has stronger neutral silver/steel contrast, bright highlights and an 18 px inset, without colored iridescence. Shared raised-face tokens give all theme selects, expandable summaries, category actions, ordinary buttons and native picker options a convex lit face, a lower edge and soft ambient shadow. Required red edges remain distinct; input handlers, layout measurements and selection semantics are unchanged.
 
 115 tests, TypeScript, architecture, design-system and build pass. Full setup checks passed at 25 layouts for each of neutral, forest and space (75 total), plus 15 space game-dialog scenarios. Final desktop/mobile snapshots cover generic disclosures and open pickers.
+
+## Inset scrolling and neutral GUI
+
+Settings padding is derived from the theme frame thickness plus an 8 px safe inset. Native dialogs, raw game overlays and manual modals now keep the material frame fixed while a panel-scroll child owns scrolling. Category actions stay sticky inside that child. This prevents scrollbar tracks from painting onto the frame and keeps the inset material visible at the end of long lists. Existing labels, controls, award placement and handlers retained.
+
+Neutral now has a matte warm-ivory frame without wood grain or metallic reflections, an off-white playing surface, muted blue actions, restrained sand accents and shared convex controls. Existing neutral scene/card artwork retained.
+
+115 tests, TypeScript, architecture, design-system and production build pass. All 75 theme/game/viewport setup cases pass. Browser checks measure the material-frame clearance, scroll an expanded category tree to its bottom, and verify the outer dialog itself does not scroll. Neutral game dialogs passed 15 scenarios plus real completion and native picker interaction.

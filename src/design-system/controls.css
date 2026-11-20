@@ -224,7 +224,7 @@
 @media(max-width:600px){.app[data-theme] :is(.overlay>div,.modal,dialog){padding:25px!important}.setup-action-copy{min-width:0}}
 
 .app[data-theme] .overlay :is(p,.eyebrow){color:var(--ui-text)!important}.app[data-theme] .overlay p{font-size:16px;line-height:1.5;margin:16px 0 22px}
-.app[data-theme] .overlay>div>button{display:block;width:100%;margin:12px 0!important}.app[data-theme] .overlay>div>button:not(.primary){font-size:15px;padding:12px 16px}
+.app[data-theme] .overlay>div>.panel-scroll>button{display:block;width:100%;margin:12px 0!important}.app[data-theme] .overlay>div>.panel-scroll>button:not(.primary){font-size:15px;padding:12px 16px}
 .app[data-theme] :is(.settings,dialog) details:not(.settings-disclosure)>summary{list-style:none}
 .app[data-theme] :is(.settings,dialog) details:not(.settings-disclosure)>summary::-webkit-details-marker{display:none}
 .app[data-theme] :is(.settings,dialog) details:not(.settings-disclosure)>summary::before{content:''!important;display:inline-block;flex:none;width:8px;height:8px;margin-right:10px;color:var(--ui-deep);border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg)}
@@ -244,7 +244,7 @@
 .app .control-well{width:36px;height:38px;box-sizing:border-box}
 .app .icon-button .garden-icon{width:27px!important;height:27px!important}
 @media(max-width:600px){.app.game-active .icon-button .garden-icon{width:23px!important;height:23px!important}}
-.app[data-theme] .overlay.result>div>button{min-height:64px!important;height:auto;font-size:18px!important;padding:14px 22px!important;box-sizing:border-box;border-radius:18px!important}
+.app[data-theme] .overlay.result>div>.panel-scroll>button{min-height:64px!important;height:auto;font-size:18px!important;padding:14px 22px!important;box-sizing:border-box;border-radius:18px!important}
 /* Required state follows the existing selection validity, never color alone. */
 .app[data-theme] .settings .select-control[data-field-state] select{border:3px solid var(--ui-outline)!important;padding:11px 48px!important}
 .app[data-theme] .settings .select-control[data-field-state=required] select{border-color:var(--ui-required)!important}
@@ -278,3 +278,15 @@
 }
 
 .app[data-theme] :is(.settings,.modal,dialog) details>summary{border:1px solid var(--ui-outline);border-radius:14px}
+
+/* Fixed material frame with a separate, fully inset scrolling body. */
+.app[data-theme] :is(.modal,dialog,.overlay>div){overflow:hidden!important;padding:calc(var(--ui-frame-inset) + 8px)!important;box-sizing:border-box;max-height:calc(100dvh - 32px)!important}
+.app[data-theme] :is(.modal,dialog,.overlay>div)>.panel-scroll{max-height:calc(100dvh - 52px - var(--ui-frame-inset) - var(--ui-frame-inset));overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:8px;min-width:0;box-sizing:border-box}
+.app[data-theme] .overlay>div:has(.award){overflow:visible!important}
+.app .panel-scroll{scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--ui-outline) 48%,var(--ui-setup-paper)) transparent}
+.app .panel-scroll::-webkit-scrollbar{width:8px;height:8px}.app .panel-scroll::-webkit-scrollbar-track{background:transparent;border-radius:20px;margin:12px 0}.app .panel-scroll::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--ui-outline) 48%,var(--ui-setup-paper));border:2px solid var(--ui-setup-paper);border-radius:20px}.app .panel-scroll::-webkit-scrollbar-button{display:none;width:0;height:0}
+@supports selector(::-webkit-scrollbar){.app .panel-scroll{scrollbar-width:auto;scrollbar-color:auto}}
+.app[data-theme] .overlay .panel-scroll>button{max-width:100%;min-width:0}
+@media(max-height:550px){.app[data-theme] .overlay>div:has(.award)>.panel-scroll{max-height:calc(100dvh - 140px - var(--ui-frame-inset) - var(--ui-frame-inset))}}
+
+.app .category-grid>li:last-child{border-bottom:0}

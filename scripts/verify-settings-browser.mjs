@@ -92,6 +92,9 @@ if(game==='conveyor'){
  if(await evaluate("!!document.querySelector('.category-picker[open]')")){
  await evaluate("document.querySelectorAll('.category-picker details').forEach(e=>e.open=true)");
  await screenshot('categories-'+width);
+ await evaluate("document.querySelector('.category-picker[open]>.panel-scroll').scrollTop=100000");
+ assert(await evaluate("(()=>{const d=document.querySelector('.category-picker[open]'),s=d.querySelector('.panel-scroll'),a=s.getBoundingClientRect(),b=d.getBoundingClientRect(),inset=parseFloat(getComputedStyle(d).getPropertyValue('--ui-frame-inset'));return d.scrollTop===0&&s.scrollTop>0&&b.right-a.right>=inset+8&&b.bottom-a.bottom>=inset+8})()"),'Dialog scrollbar overlaps frame');
+ await screenshot('categories-'+width+'-bottom');
  assert(await evaluate("document.querySelector('.category-picker').scrollWidth<=document.querySelector('.category-picker').clientWidth+2"),'Category overflow');
  await evaluate("document.querySelector('.category-picker').close()");
  }
@@ -99,6 +102,7 @@ if(game==='conveyor'){
 report.push(await evaluate("(()=>{const e=document.querySelector('.unified-settings-content'),r=e.getBoundingClientRect();return {game:'"+game+"',width:innerWidth,height:innerHeight,scroll:e.scrollHeight,client:e.clientHeight,bottom:r.bottom,overflow:e.scrollWidth>e.clientWidth+2,buttons:[...e.querySelectorAll('button')].filter(b=>b.textContent.startsWith('Начать')).map(b=>({text:b.textContent,disabled:b.disabled}))}})()"));
 await evaluate("document.querySelector('.unified-settings-content').scrollTop=100000");await screenshot('audit-'+game+'-'+width+'-bottom');
 assert(await evaluate("(()=>{const e=document.querySelector('.unified-settings-content'),f=document.querySelector('.settings-frame'),a=e.getBoundingClientRect(),b=f.getBoundingClientRect();return a.bottom<=b.bottom-8&&a.right<=b.right&&e.scrollWidth<=e.clientWidth+2})()"),'Settings exceed frame: '+game+' '+width);
+assert(await evaluate("(()=>{const e=document.querySelector('.unified-settings-content'),f=document.querySelector('.settings-frame'),a=e.getBoundingClientRect(),b=f.getBoundingClientRect(),inset=parseFloat(getComputedStyle(f).getPropertyValue('--ui-frame-inset'));return b.right-a.right>=inset+8&&b.bottom-a.bottom>=inset+8})()"),'Settings scrollbar overlaps material frame: '+game+' '+width);
 if(game==='transformations'){await evaluate("[...document.querySelectorAll('button')].find(b=>b.textContent==='Начать игру')?.click()");await sleep(500);await screenshot('audit-transformations-'+width+'-play');assert(await evaluate("(()=>{const e=document.querySelector('.transformation-chamber');if(!e)return false;const r=e.getBoundingClientRect();const t=document.querySelector('.transformation-word')?.getBoundingClientRect();return r.width>0&&r.left>=0&&r.right<=innerWidth+1&&(!t||(t.left>=r.left&&t.right<=r.right))})()"),'Transformation chamber cropped: '+width);}
 }}
 

@@ -15,7 +15,7 @@ type ThemeConfig={
 export const THEMES:Record<ThemeId,ThemeConfig>={
  neutral:{
   label:'Нейтральное',
-  palette:{accent:'#77b0d6',deep:'#285174',pale:'#e4f2fa',outline:'#5d86a5',text:'#243d59',paper:'#fbf5e9',page:'#f8f1e8',stageText:'#5b5059'},
+  palette:{accent:'#9bb8d0',deep:'#4c6c8d',pale:'#edf3f8',outline:'#97a9b8',text:'#334559',paper:'#fffdf6',page:'#f4f0e8',stageText:'#5b5059'},
   skin:'blue',toolbarArt:null,scene:{background:'assets/neutral/approved-paper-4k.webp',fill:'#f9f2e7',motion:'drift',sprites:[],effects:{stars:0,comets:0}},
   cards:{kind:'watercolor',back:'assets/neutral/approved-back.webp',front:'assets/neutral/approved-front.webp'},sounds:{}
  },
@@ -72,7 +72,15 @@ const warmSurface={
  '--ui-highlight':'#efba3e','--ui-icon-surface':'#f3d6b0','--ui-setup-paper':'#f5e9cc','--ui-setup-field':'#fff5df'
 };
 const setupSurfaces:Record<ThemeId,typeof warmSurface>={
- neutral:warmSurface,forest:warmSurface,
+ neutral:{...warmSurface,
+ '--ui-control-face':'linear-gradient(180deg,#fffefb 0%,#faf6ec 45%,#eee6d6 100%)','--ui-control-bottom':'#c9bfaa','--ui-control-shadow':'#514b3e1a','--ui-control-ambient':'#514b3e12',
+ '--ui-frame-base':'#c6bdad','--ui-frame-light':'#f7f1e5','--ui-frame-dark':'#9a9183','--ui-frame-texture':'none',
+ '--ui-frame-fill':'linear-gradient(115deg,#fffaf0,#d7cdbb 35%,#f6efdf 60%,#c2b8a6)',
+ '--ui-frame-glint':'#fffdf7','--ui-frame-shadow':'#625a4933','--ui-inner-edge':'#c2b7a1','--ui-inner-shadow':'#6f604126',
+ '--ui-surface-glint':'#fffdf6','--ui-field-glint':'#ffffff','--ui-surface-edge':'#d5ccb9','--ui-field-edge':'#d4cbb7','--ui-tray-edge':'#d5ccb9','--ui-tray-shadow':'#ded5c3',
+ '--ui-muted-text':'#687064','--ui-button-inset':'#53617118','--ui-button-inset-strong':'#33485e30','--ui-soft-shadow':'#514b3e10','--ui-icon-shadow':'#514b3e18','--ui-empty-edge':'#c4bba7',
+ '--ui-thumb-edge':'#b7a173','--ui-thumb-base':'#ad986d','--ui-highlight':'#e4c996','--ui-icon-surface':'#e4e9ee','--ui-setup-paper':'#f6f0e3','--ui-setup-field':'#fffdf6'
+ },forest:warmSurface,
  space:{
  '--ui-control-face':'linear-gradient(180deg,#ffffff 0%,#f2f6ff 38%,#d9e3f4 100%)','--ui-control-bottom':'#9aaccc','--ui-control-shadow':'#1b30502d','--ui-control-ambient':'#1b30501e','--ui-frame-inset':'18px','--ui-surface-texture':'none',
  '--ui-frame-base':'#8397b1','--ui-frame-light':'#e8f2ff','--ui-frame-dark':'#273c56',
