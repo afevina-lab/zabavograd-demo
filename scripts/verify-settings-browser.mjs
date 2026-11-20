@@ -54,11 +54,21 @@ try{
   async function screenshot(name){const out=await cmd('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});writeFileSync(join(output,name+'.png'),Buffer.from(out.data,'base64'))}
 
 const report=[];
-for(const [width,height] of [[1440,900],[390,844],[844,390]]){
+for(const [width,height] of [[1440,900],[1024,768],[768,1024],[390,844],[844,390]]){
 await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
 for(const game of ['memory','sorting','matching','conveyor','transformations']){
-await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");await sleep(800);
+await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");await evaluate("document.querySelectorAll('.themes button')[1]?.click()");await sleep(800);
 await screenshot('audit-'+game+'-'+width+'-top');
+if(game==='conveyor'){
+ await evaluate("(()=>{const e=[...document.querySelectorAll('select')].find(e=>[...e.options].some(o=>o.value==='lexical'));if(e){e.value='lexical';e.dispatchEvent(new Event('change',{bubbles:true}))}})()");await sleep(200);
+ await evaluate("[...document.querySelectorAll('button')].find(b=>b.textContent.startsWith('Лексические темы'))?.click()");
+ if(await evaluate("!!document.querySelector('.category-picker[open]')")){
+ await evaluate("document.querySelectorAll('.category-picker details').forEach(e=>e.open=true)");
+ await screenshot('categories-'+width);
+ assert(await evaluate("document.querySelector('.category-picker').scrollWidth<=document.querySelector('.category-picker').clientWidth+2"),'Category overflow');
+ await evaluate("document.querySelector('.category-picker').close()");
+ }
+}
 report.push(await evaluate("(()=>{const e=document.querySelector('.unified-settings-content'),r=e.getBoundingClientRect();return {game:'"+game+"',width:innerWidth,height:innerHeight,scroll:e.scrollHeight,client:e.clientHeight,bottom:r.bottom,overflow:e.scrollWidth>e.clientWidth+2,buttons:[...e.querySelectorAll('button')].filter(b=>b.textContent.startsWith('Начать')).map(b=>({text:b.textContent,disabled:b.disabled}))}})()"));
 await evaluate("document.querySelector('.unified-settings-content').scrollTop=100000");await screenshot('audit-'+game+'-'+width+'-bottom');
 assert(await evaluate("(()=>{const e=document.querySelector('.unified-settings-content'),f=document.querySelector('.settings-frame'),a=e.getBoundingClientRect(),b=f.getBoundingClientRect();return a.bottom<=b.bottom-8&&a.right<=b.right&&e.scrollWidth<=e.clientWidth+2})()"),'Settings exceed frame: '+game+' '+width);
@@ -67,7 +77,7 @@ if(game==='transformations'){await evaluate("[...document.querySelectorAll('butt
 
 for(const game of ['memory','sorting','matching','conveyor','transformations']){
  await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");
- await evaluate("[...document.querySelectorAll('.unified-settings-content button')].find(b=>b.textContent==='Чтение').click()");await until("!!document.querySelector('.reading-settings')");
+ await evaluate("(()=>{const e=[...document.querySelectorAll('.unified-settings-content select')].find(e=>[...e.options].some(o=>o.textContent==='Чтение'));if(!e)throw Error('Task select missing');e.value=[...e.options].find(o=>o.textContent==='Чтение').value;e.dispatchEvent(new Event('change',{bubbles:true}))})()");await until("!!document.querySelector('.reading-settings')");
  for(const label of ['Буквы','Слоги','Слова'])await evaluate("(()=>{const e=[...document.querySelectorAll('.reading-settings .reading-kinds label')].find(e=>e.textContent==='"+label+"')?.querySelector('input');if(!e)throw Error('Missing reading kind');if(!e.checked)e.click()})()");
  assert(await evaluate("[...document.querySelectorAll('.reading-settings .reading-kinds')][0].querySelectorAll('input:checked').length===3"),'Mixed reading unavailable in '+game);
  await screenshot('reading-mixed-'+game);

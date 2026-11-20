@@ -18,7 +18,7 @@
  border-image-source:var(--skin-pill)!important;border-image-slice:47 61 fill!important;border-image-width:14px!important;border-image-repeat:stretch!important;
 }
 .app .themes button:hover:not(:disabled),.app .game-switch a:hover{border-image-source:var(--skin-pill-hover)!important}
-.app .themes button.selected{outline:2px solid var(--ui-outline)!important}
+.app .themes button.selected{background:var(--ui-pale)!important;border-color:var(--ui-deep)!important}
 .app .lesson-tag{
  background:none!important;border:1px solid transparent!important;border-radius:0!important;
  border-image-source:var(--skin-chip)!important;border-image-slice:38 50 fill!important;border-image-width:11px!important;border-image-repeat:stretch!important;
@@ -60,3 +60,12 @@
 .sound-picker-actions{position:sticky;bottom:0;display:flex;justify-content:flex-end;gap:12px;padding:12px;background:var(--panel,#faf7f0)}
 .selected-sounds{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
 .selected-sounds>span{padding:6px 12px;border:1px solid currentColor;border-radius:20px}
+
+/* Shared setup controls use theme colors and one visible keyboard focus. */
+.app[data-theme] .settings button,.app .settings-window-heading .icon-button,.app dialog button{border-image:none!important;border:1px solid var(--ui-outline)!important;border-radius:12px!important;background:var(--ui-paper)!important;color:var(--ui-text)!important;box-shadow:none!important}
+.app[data-theme] .settings button:hover:not(:disabled),.app dialog button:hover:not(:disabled){background:var(--ui-pale)!important}
+.app[data-theme] .settings button:disabled{opacity:.5;cursor:not-allowed}
+.app .settings select{width:100%;min-height:44px;box-sizing:border-box;padding:10px 36px 10px 12px!important;border-radius:10px}
+.app :is(button,a,input,select,summary):focus-visible{outline:3px solid var(--ui-deep)!important;outline-offset:3px!important}
+.settings-window-heading .icon-button{display:grid;place-items:center;flex:none;width:44px;height:44px;padding:0!important}
+.app .quantity-slider button{width:36px;min-height:36px!important;padding:0!important}
