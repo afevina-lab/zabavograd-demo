@@ -13,7 +13,7 @@ import {WordPicker} from './WordPicker.tsx';
 import {initialLearning,learningPool,balancedPick} from './learning.ts';
 import {defaultFilters} from './model.ts';
 import {useCardDrag} from './design-system/useCardDrag.tsx';
-import {useMemo,useState} from 'react';
+import {useLayoutEffect,useMemo,useRef,useState,type CSSProperties} from 'react';
 import {useLibrary,useFamilies} from './useLibrary.ts';
 import {familyGroups,visualGroups,validateGroups,checkMatching,shuffled,type MatchGroup,type MatchElement} from './matching.ts';
 import {CardArtwork} from './CardArtwork.tsx';
@@ -33,6 +33,9 @@ export function Matching(){
  const limits=useGameLimits(session.length>0&&!finished,paused);
  const drag=useCardDrag(paused||finished||!!limits.lost);
  const [displayMode,setDisplayMode]=useState('image-image');
+ const stageRef=useRef<HTMLDivElement|null>(null);
+ const [bankPage,setBankPage]=useState(0);
+ const [boardLayout,setBoardLayout]=useState({columns:4,cardWidth:104,bankPageSize:12});
  const available=useMemo(()=>learningPool(words,filters,learning),[words,filters,learning]);
  const kind=learning.mode==='math'?null:mode==='shadow'?'silhouette':mode==='outline'?'outline':null;
  const visualWords=useMemo(()=>available.filter(w=>w.variants?.length),[available]);
@@ -47,7 +50,44 @@ export function Matching(){
  const maxCount=Math.min(8,kind&&!prepared.busy&&prepared.words.length<count?prepared.words.length:displayCandidates.length);
  const setupError=validateGroups(groups,learning.mode==='math'?2:size)||(groups.length!==count&&(learning.mode==='math'||mode!=='manual')?'Недостаточно полных групп: уменьшите количество или измените материал.':'')||(learning.mode!=='math'&&mode==='manual'&&manual.some(row=>new Set(row).size!==row.length)?'Внутри одной группы выберите разные слова.':'');
  const placed=new Set(Object.values(placements).flat()),remaining=bank.filter(e=>!placed.has(e.id)),complete=remaining.length===0;
- function start(){if(setupError||prepared.busy)return;const next=groups;limits.reset();setSession(next);setBank(shuffled(next.flatMap(g=>g.elements.slice(1))));setPlacements({});setVerdict({});setSelected(null);setFinished(false);setPaused(false);setMessage('');}
+ // The complete game stays inside the viewport: resize cards, not text or the page.
+ // For large groups the answer bank is paged, never scrolled or clipped.
+ useLayoutEffect(()=>{
+  const stage=stageRef.current;
+  if(!stage||!session.length)return;
+  const fit=()=>{
+   const width=Math.max(260,stage.clientWidth-32),height=Math.max(260,stage.clientHeight-26);
+   const maxElements=Math.max(2,...session.map(g=>g.elements.length));
+   let best={columns:1,cardWidth:36,bankPageSize:4},bestScore=-1;
+   for(let columns=1;columns<=Math.min(6,session.length);columns++){
+    const groupRows=Math.ceil(session.length/columns);
+    for(let cardWidth=132;cardWidth>=36;cardWidth-=2){
+     const gap=6,groupWidth=maxElements*cardWidth+(maxElements-1)*gap+16;
+     if(columns*groupWidth+(columns-1)*10>width)continue;
+     const cardHeight=cardWidth*1.04;
+     const groupHeight=groupRows*(cardHeight+20)+(groupRows-1)*10;
+     const bankColumns=Math.max(1,Math.floor((width+8)/(cardWidth+8)));
+     const pageSize=Math.min(bank.length,Math.min(12,bankColumns*2));
+     const bankRows=Math.ceil(pageSize/bankColumns);
+     const bankHeight=bank.length?30+bankRows*(cardHeight+8)+14:0;
+     if(groupHeight+bankHeight+34>height)continue;
+     const score=cardWidth+Math.min(columns,4)*0.08;
+     if(score>bestScore){bestScore=score;best={columns,cardWidth,bankPageSize:Math.max(1,pageSize)}}
+     break;
+    }
+   }
+   setBoardLayout(prev=>prev.columns===best.columns&&prev.cardWidth===best.cardWidth&&prev.bankPageSize===best.bankPageSize?prev:best);
+  };
+  const observer=new ResizeObserver(fit);
+  observer.observe(stage);
+  fit();
+  return()=>observer.disconnect();
+ },[session,bank.length]);
+ const pageCount=Math.max(1,Math.ceil(remaining.length/boardLayout.bankPageSize));
+ const currentPage=Math.min(bankPage,pageCount-1);
+ const visibleBank=remaining.slice(currentPage*boardLayout.bankPageSize,(currentPage+1)*boardLayout.bankPageSize);
+ const boardVars={'--matching-columns':String(boardLayout.columns),'--matching-card-size':boardLayout.cardWidth+'px'} as CSSProperties;
+ function start(){if(setupError||prepared.busy)return;const next=groups;limits.reset();setSession(next);setBank(shuffled(next.flatMap(g=>g.elements.slice(1))));setPlacements({});setVerdict({});setSelected(null);setBankPage(0);setFinished(false);setPaused(false);setMessage('');}
  function place(id:string,groupId:string){
  if(paused||finished||limits.lost)return;
  const existing=placements[groupId]||[],g=session.find(g=>g.id===groupId);
@@ -78,8 +118,8 @@ export function Matching(){
  <p className="hint">В режиме картинок используются только слова с изображениями. Подписи к теням и контурам скрыты.</p>{limits.settings}
  </section><section className="settings-block"><h2>Оформление</h2><ThemePicker theme={theme} setTheme={setTheme}/></section><section className="settings-block material"><div className="material-head"><h2>В этой игре</h2><div><button type="button" className="icon-button" onClick={()=>{if(kind)prepared.shuffle();else{setChosenGroups(null);setShuffleKey(k=>k+1)}}} aria-label="Перемешать состав" title="Перемешать состав"><Icon name="Return1"/></button><WordPicker max={8} words={kind?visualWords:displayCandidates.map(g=>({...g.elements[0]?.word,id:g.id,label:g.elements.map(e=>e.word.label).join(' — ')}))} selected={kind?groups.map(g=>g.id):selectedGroups.map(g=>g.id)} onConfirm={ids=>{setCount(ids.length);if(kind)prepared.select(ids);else setChosenGroups({source:candidates,ids})}}/></div></div><MaterialSummary items={groups.flatMap(g=>g.elements.map(e=>({label:e.word.label})))}/></section><p role="status">{error||familyError||message||(prepared.busy?'Подбираем '+count+' групп, проверено '+prepared.done:setupError)||('Доступно групп: '+maxCount)}</p>{prepared.busy&&<button className="secondary" onClick={prepared.cancel}>Отменить подготовку</button>}{prepared.cancelled&&<button className="secondary" onClick={prepared.retry}>Подготовить снова</button>}<button className="primary" disabled={prepared.busy||!!setupError||!!error} onClick={start}>Начать игру</button>
  </main></SettingsWindow>:<section className="play-area"><GameToolbar><a className="icon-button" aria-label="Домой" href={import.meta.env.BASE_URL+'home.html'}><Icon name="Home1"/></a><button className="icon-button" aria-label="Настройки" onClick={()=>{setSession([]);setMessage('')}}><Icon name="Settings"/></button><button className="icon-button" aria-label={paused?'Продолжить':'Пауза'} onClick={()=>setPaused(v=>!v)}><Icon name={paused?'RightArrow1':'Pause'}/></button><span>{placed.size} / {bank.length}</span>{limits.status}</GameToolbar>
- <div className="stage matching-stage"><Scenery theme={theme}/>{(paused||finished||limits.lost)&&<GameDialog title={limits.lost||(finished?message:'Пауза')} onContinue={paused&&!finished&&!limits.lost?()=>setPaused(false):undefined} onSettings={()=>{setSession([]);setMessage('')}}/>}<div className="matching-content"><h1>Найди подходящие элементы</h1><div className="matching-groups">{session.map(g=><section className="matching-group" key={g.id} data-match-group={g.id}><div className="matching-card matching-anchor">{artwork(g.elements[0])}</div><div className="matching-slots">{(placements[g.id]||[]).map(id=>card(bank.find(e=>e.id===id)!,true))}{Array.from({length:g.elements.length-1-(placements[g.id]?.length||0)},(_,i)=><button type="button" className="matching-slot" key={'slot-'+i} aria-label={'Поместить под '+g.elements[0].word.label} disabled={!selected||paused||finished||!!limits.lost} onClick={()=>selected&&place(selected,g.id)}>+</button>)}</div></section>)}</div>
- {!finished&&<section className="matching-bank" aria-label="Общий банк"><h2>Общий банк</h2><div>{remaining.map(e=>card(e))}</div></section>}
+ <div className="stage matching-stage" ref={stageRef} style={boardVars}><Scenery theme={theme}/>{(paused||finished||limits.lost)&&<GameDialog title={limits.lost||(finished?message:'Пауза')} onContinue={paused&&!finished&&!limits.lost?()=>setPaused(false):undefined} onSettings={()=>{setSession([]);setMessage('')}}/>}<div className="matching-content"><div className="matching-groups">{session.map(g=><section className="matching-group" key={g.id} data-match-group={g.id}><div className="matching-card matching-anchor">{artwork(g.elements[0])}</div><div className="matching-slots">{(placements[g.id]||[]).map(id=>card(bank.find(e=>e.id===id)!,true))}{Array.from({length:g.elements.length-1-(placements[g.id]?.length||0)},(_,i)=><button type="button" className="matching-slot" key={'slot-'+i} aria-label={'Поместить под '+g.elements[0].word.label} disabled={!selected||paused||finished||!!limits.lost} onClick={()=>selected&&place(selected,g.id)}>+</button>)}</div></section>)}</div>
+ {!finished&&<section className="matching-bank" aria-label="Общий банк"><div className="matching-bank-heading"><h2>Общий банк</h2>{pageCount>1&&<div className="matching-bank-pages"><button type="button" disabled={currentPage===0} onClick={()=>setBankPage(currentPage-1)} aria-label="Предыдущие карточки">‹</button><span>{currentPage+1} / {pageCount}</span><button type="button" disabled={currentPage>=pageCount-1} onClick={()=>setBankPage(currentPage+1)} aria-label="Следующие карточки">›</button></div>}</div><div className="matching-bank-cards">{visibleBank.map(e=>card(e))}</div></section>}
  <p role="status">{limits.lost||(paused?'Пауза':message)}</p>{checkMode!=='instant'&&!finished&&<button className="primary" disabled={!complete||paused||!!limits.lost||Object.keys(verdict).length>0} onClick={check}>Проверить</button>}{checkMode==='correct'&&Object.values(verdict).some(v=>!v)&&<button className="primary" disabled={paused} onClick={retry}>Вернуть ошибки в банк</button>}
  {(finished||limits.lost)&&<button className="primary" onClick={()=>{setSession([]);setMessage('')}}>К настройкам</button>}</div></div></section>}
  </div>;
