@@ -53,6 +53,13 @@ export function conveyorConditions(count:number,conditional:boolean,rng=Math.ran
  for(let i=flags.length-1;i>0;i--){const j=Math.min(i,Math.floor(rng()*(i+1)));[flags[i],flags[j]]=[flags[j],flags[i]];}
  return flags;
 }
+/** A sound-presence question is not an automation-eligibility test.
+ * Check the actual phoneme, including occurrences marked not approved or in clusters.
+ * Hard and soft consonants remain distinct.
+ */
+export function conveyorHasTargetSound(word:Word,targetSounds:string[]):boolean{
+ return targetSounds.some(sound=>Boolean(word.phonemes?.includes(sound)||word.sounds?.[sound]?.length));
+}
 export function isCloseConveyorDistractor(word:Word,learning:Learning):boolean{
  if(['automation','differentiation','search'].includes(learning.mode)){
   const confusions=[...new Set(learning.sounds.flatMap(typicalConfusions))].filter(s=>!learning.sounds.includes(s));
