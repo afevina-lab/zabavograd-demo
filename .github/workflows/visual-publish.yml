@@ -12,7 +12,8 @@ permissions:
 
 concurrency:
   group: public-ui-release
-  cancel-in-progress: false
+  # Main releases supersede outdated PR smoke tests; PR checks never cancel a release.
+  cancel-in-progress: ${{ github.event_name == 'push' }}
 
 jobs:
   verify-and-publish:
