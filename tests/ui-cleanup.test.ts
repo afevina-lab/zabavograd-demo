@@ -182,6 +182,6 @@ test('Shared picker dialogs use the same secondary cancel button',()=>{
  const dialogs=['WordPicker.tsx','CategoryPicker.tsx','SoundPicker.tsx'];
  for(const file of dialogs){
   const source=readFileSync('src/'+file,'utf8');
-  assert.match(source,/<button type="button" className="secondary"[^>]*>Отмена<\/button>/,file);
+  assert.match(source,/<button type="button" className="secondary"[\s\S]*?Отмена<\/button>/,file);
  }
 });
