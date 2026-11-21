@@ -41,4 +41,16 @@ for(const file of fs.readdirSync(workflows)){
  const text=fs.readFileSync(path.join(workflows,file),'utf8');
  if(file!=='visual-publish.yml'&&/HEAD:gh-pages|push[^\n]*gh-pages/.test(text))assert(/if:\s*\$\{\{\s*false\s*\}\}/.test(text),`Competing publication workflow: ${file}`);
 }
+// One working implementation of settings and one publishing source.
+const settingsShell=fs.readFileSync(path.join(source,'design-system/SettingsWindow.tsx'),'utf8');
+assert(/export function SettingsWindow\b/.test(settingsShell),'Missing canonical settings shell');
+for(const file of ['main.tsx','Matching.tsx','Sorting.tsx','Conveyor.tsx','Transformations.tsx']){
+ const code=fs.readFileSync(path.join(source,file),'utf8');
+ assert(code.includes("from './design-system/SettingsWindow.tsx'"),file+': use canonical SettingsWindow');
+ assert(code.includes('<SettingsWindow'),file+': missing canonical settings shell');
+}
+const visualPublish=fs.readFileSync(path.join(workflows,'visual-publish.yml'),'utf8');
+assert(visualPublish.includes("if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'"),'UI workflow must never run publish jobs from a non-main manual dispatch');
+const publishingSteps=visualPublish.match(/if: github.ref == 'refs\/heads\/main' && github.event_name != 'pull_request'/g)||[];
+assert(publishingSteps.length>=4,'Every deployment and verification step must enforce main-only publishing');
 console.log(`Architecture verified: ${graph.size} modules, pure domain, no runtime cycles, one active publisher`);
