@@ -113,3 +113,17 @@ test('Action copy min-width is defined in the base control, not repeated on mobi
  assert.match(css,/\.setup-action-copy\{[^}]*min-width:0/);
  assert.doesNotMatch(css,/@media\(max-width:600px\)\{\.setup-action-copy\{min-width:0\}\}/);
 });
+
+
+test('Sorting grid has one canonical column declaration, including at narrow widths',()=>{
+ const css=readFileSync('src/styles/layout.css','utf8');
+ assert.doesNotMatch(css,/\.sorting-bins\{[^}]*grid-template-columns:repeat\(auto-fit/);
+ assert.match(css,/\.sorting-bins\{grid-template-columns:repeat\(2,minmax\(0,1fr\)\);width:100%;align-items:start\}/);
+ assert.match(css,/\.app\.game-active \.sorting-bins\{grid-template-columns:repeat\(var\(--sort-bin-columns\),minmax\(0,1fr\)\)/);
+});
+
+test('Mobile settings fieldset display fallback is declared once',()=>{
+ const css=readFileSync('src/styles/layout.css','utf8');
+ assert.equal([...css.matchAll(/\.settings fieldset\{display:block\}/g)].length,1);
+ assert.match(css,/@media\(max-width:700px\)\{\s*\.settings fieldset\{display:block\}/);
+});
