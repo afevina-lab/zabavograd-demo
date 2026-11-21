@@ -223,7 +223,7 @@ test('Toolbar icon sizes come from one responsive token contract',()=>{
  assert.match(css,/\.app\.game-active \.play-toolbar \.icon-button\{[^}]*width:var\(--zg-toolbar-icon-width\)!important/);
  assert.match(css,/\.app\.game-active \.play-toolbar\{--zg-toolbar-icon-width:32px;--zg-toolbar-icon-height:34px;--zg-toolbar-icon-min-height:32px;--zg-toolbar-icon-padding:4px\}/);
  assert.equal([...css.matchAll(/\.app\.game-active \.play-toolbar \.icon-button\{/g)].length,1);
- assert.match(toolbar,/<button type="button" className="icon-button" aria-label="Полный экран"/);
+ assert.match(toolbar,/<button type="button" className="icon-button toolbar-mobile-fullscreen" aria-label="Полный экран"/);
 });
 
 
