@@ -942,22 +942,28 @@ html:has(.settings-shade){overflow:hidden}
 .app.game-active .play-toolbar.shared-toolbar .toolbar-centre{justify-content:center}
 .app.game-active .play-toolbar.shared-toolbar .toolbar-right{justify-content:flex-end}
 .app.game-active .play-toolbar.shared-toolbar .icon-button{vertical-align:middle;margin-block:0!important;flex:0 0 auto}
-@media(max-width:650px){
+/* Compact touch play: pause + fullscreen + optional timer/lives, never scroll the toolbar. */
+@media (pointer:coarse), (max-width:650px){
  .app.game-active .play-toolbar.shared-toolbar{
-  --zg-toolbar-layout-gap:5px;
-  grid-template-columns:minmax(0,1fr) minmax(0,auto) max-content;
+  --zg-toolbar-layout-gap:var(--zg-space-2,8px);
+  grid-template-columns:max-content minmax(0,1fr) max-content;
  }
  .app.game-active .play-toolbar.shared-toolbar .toolbar-left{
-  gap:4px;
+  gap:0;
   min-width:0;
-  overflow-x:auto;
-  overflow-y:hidden;
-  overscroll-behavior-x:contain;
-  scrollbar-width:none;
+  overflow:visible!important;
+  flex-wrap:nowrap!important;
  }
- .app.game-active .play-toolbar.shared-toolbar .toolbar-left::-webkit-scrollbar{display:none}
- .app.game-active .play-toolbar.shared-toolbar .toolbar-centre{min-width:0;max-width:clamp(65px,25vw,160px)}
- .app.game-active .play-toolbar.shared-toolbar .toolbar-centre .counters{min-width:0;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+ .app.game-active .play-toolbar.shared-toolbar .toolbar-left>:not(.toolbar-mobile-pause){display:none!important}
+ .app.game-active .play-toolbar.shared-toolbar .toolbar-centre{min-width:0;max-width:none;width:100%;overflow:hidden}
+ .app.game-active .play-toolbar.shared-toolbar .toolbar-centre .counters{
+  display:flex!important;min-width:0;max-width:100%;width:100%;
+  justify-content:center!important;align-items:center;gap:var(--zg-space-2,8px)!important;
+  flex-wrap:nowrap!important;overflow:hidden;white-space:nowrap;
+ }
+ .app.game-active .play-toolbar.shared-toolbar .toolbar-centre .counters>:not(.toolbar-timer):not(.life-controls){display:none!important}
+ .app.game-active .play-toolbar.shared-toolbar .toolbar-centre .counters>.toolbar-timer{display:inline-flex;min-width:0;flex:none}
+ .app.game-active .play-toolbar.shared-toolbar .toolbar-centre .counters>.life-controls{display:inline-flex;min-width:0;flex:0 1 auto}
  .app.game-active .play-toolbar.shared-toolbar .toolbar-right{min-width:0}
 }
 /* Preview controls cannot overhang the content area. */
