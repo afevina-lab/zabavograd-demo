@@ -7,7 +7,7 @@ export const groups:Record<string,string[]>={'Ранний онтогенез':[
 export const positions=['начало','середина','конец','после согласного','перед согласным','несколько вхождений'];
 export type SoundOccurrence=MaterialSoundOccurrence;
 export type SoundRule={allowAssimilation?:boolean;positions:string[];clusters:string[]|null;clusterDirections?:('before'|'after')[];atLeastTwo?:boolean;excludeMultiple?:boolean;searchClusters?:'any'|'only'|'without'};
-export type Learning={math?:Partial<MathSettings>;targetSlots?:Partial<Record<Pattern,number[]>>;reading?:Partial<ReadingOptions>;contentKinds?:ContentKind[];syllablePatterns?:Pattern[];categoryPaths?:string[];mode:'any'|'lexical'|'automation'|'differentiation'|'structure'|'search'|'reading'|'math';searchTarget?:'sound'|'letter';sounds:string[];rules:Record<string,SoundRule>;preferShared:boolean;excludedSounds?:string[];exclusionsEdited?:boolean;topics?:string[];subtopics?:Record<string,string[]>;additional?:{learning:Learning;filters:Filters}[];exclusions?:{learning:Learning;filters:Filters}[]};
+export type Learning={math?:Partial<MathSettings>;targetSlots?:Partial<Record<Pattern,number[]>>;reading?:Partial<ReadingOptions>;contentKinds?:ContentKind[];syllablePatterns?:Pattern[];categoryPaths?:string[];mode:'any'|'lexical'|'automation'|'differentiation'|'structure'|'search'|'reading'|'math';searchTarget?:'sound'|'letter';conveyorOppositionSounds?:string[];sounds:string[];rules:Record<string,SoundRule>;preferShared:boolean;excludedSounds?:string[];exclusionsEdited?:boolean;topics?:string[];subtopics?:Record<string,string[]>;additional?:{learning:Learning;filters:Filters}[];exclusions?:{learning:Learning;filters:Filters}[]};
 export const initialLearning:Learning={mode:'any',sounds:[],rules:{},preferShared:false,excludedSounds:[]};
 export const defaultSoundRule=(mode:Learning['mode']):SoundRule=>({
   positions:mode==='search'?['начало','середина','конец']:['начало','середина','конец','после согласного','перед согласным'],
@@ -141,6 +141,18 @@ export function typicalConfusions(sound:string):string[]{
  const pairs=[...(soundConfusions[sound]||[]),...(additionalConfusions[sound]||[])];
  if(groups['Шипящие'].includes(sound))pairs.push(...groups['Свистящие']);
  return [...new Set(pairs)].filter(s=>s!==sound);
+}
+/** Contrast sounds used for NO cards, not the wider set of sounds excluded
+ * during sound automation. A consonant may be excluded without being a contrast.
+ */
+export function defaultConveyorOpposition(sound:string):string[]{
+ const main:Record<string,string[]>={
+  'с':['ш'],"с'":['ш'],'з':['ж'],"з'":['ж'],
+  'р':['л'],"р'":["л'"],'л':['р'],"л'":["р'"],
+  'ш':['с'],'ж':['з'],"ч'":['ц'],"щ'":["с'"],
+  'ц':["ч'"]
+ };
+ return main[sound]||typicalConfusions(sound).slice(0,1);
 }
 export function defaultOpposition(sound:string):string[]{
  const suggested=typicalConfusions(sound);
