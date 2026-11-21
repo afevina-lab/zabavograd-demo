@@ -1,0 +1,34 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {existsSync,readFileSync,readdirSync} from 'node:fs';
+import {join} from 'node:path';
+
+// The Matching grid sizes its own cards; scaling the whole stage blurs text
+// and competes with the no-scroll gameplay layout.
+test('Matching does not retain the deprecated whole-board scale hook',()=>{
+ assert.equal(existsSync('src/design-system/useMatchingFit.ts'),false);
+ function walk(dir:string):string[]{
+  return readdirSync(dir,{withFileTypes:true}).flatMap(entry=>{
+   const file=join(dir,entry.name);
+   return entry.isDirectory()?walk(file):/\.tsx?$/.test(file)?[file]:[];
+  });
+ }
+ for(const file of walk('src'))assert.doesNotMatch(readFileSync(file,'utf8'),/\buseMatchingFit\b/,file);
+});
+
+test('Current Matching layout cannot restore obsolete scrolling and heading selectors',()=>{
+ const css=readFileSync('src/styles/layout.css','utf8');
+ assert.doesNotMatch(css,/\.matching-stage\s*\{\s*overflow:\s*auto\s*!important/);
+ assert.doesNotMatch(css,/\.app\.game-active \.stage\.matching-stage\s*\{\s*overflow:\s*auto\s*!important/);
+ assert.doesNotMatch(css,/\.matching-content\s+h1\s*\{/);
+ assert.doesNotMatch(css,/\.matching-bank\s+h2\s*\{/);
+ assert.match(css,/\.app\.game-active \.stage\.matching-stage\s*\{\s*overflow:\s*hidden\s*!important/);
+});
+
+test('QuantitySlider has one modern stepper without old bounds labels',()=>{
+ const slider=readFileSync('src/QuantitySlider.tsx','utf8');
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ assert.match(slider,/quantity-stepper/);
+ assert.doesNotMatch(slider,/quantity-bounds/);
+ assert.doesNotMatch(css,/quantity-bounds/);
+});
