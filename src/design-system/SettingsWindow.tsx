@@ -1,5 +1,5 @@
 import {Children,cloneElement,isValidElement,useState,type ReactNode} from 'react';
-import {Icon} from '../GameUI.tsx';
+import {Icon,ThemePicker} from '../GameUI.tsx';
 /** The single settings shell for every game. Only its content varies. */
 export function SettingsWindow({game,children}:{game:string;children:ReactNode}){
  const child=Children.only(children);
@@ -20,7 +20,15 @@ export function SettingsWindow({game,children}:{game:string;children:ReactNode})
     if(preview)footer.push(item);
     else if(purpose==='material'||purpose==='rules')left.push(item);
     else if(purpose==='task')right.push(item);
-    else if(purpose==='appearance')appearance.push(item);
+    else if(purpose==='appearance'){
+     // Only the theme picker belongs in the independent side rail.
+     // Other presentation controls remain in the main task column in every game.
+     const parts=Children.toArray(node.props.children);
+     const themeParts=parts.filter(part=>isValidElement(part)&&(part.type===ThemePicker||part.type==='h2'));
+     const presentationParts=parts.filter(part=>!isValidElement(part)||(part.type!==ThemePicker&&part.type!=='h2'));
+     if(presentationParts.length)right.push(<section className="settings-block setup-presentation-options">{presentationParts}</section>);
+     appearance.push(cloneElement(node,{},...themeParts));
+    }
     else (section++%2?right:left).push(item);
    }else if(!seenSection)intro.push(node);
    else if(isValidElement<{className?:string;role?:string}>(node)&&((node.type==='button'&&node.props.className?.split(/\s+/).includes('primary'))||(node.type==='p'&&node.props.role==='status')))footer.push(node);
