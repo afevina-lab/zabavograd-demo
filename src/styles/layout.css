@@ -316,9 +316,6 @@ h1,h2,h3,.card-back{font-family:Londrina, sans-serif}
 .effects{z-index:0}
 .cards,.welcome{position:relative;z-index:1}
 
-@media(prefers-reduced-motion:reduce){
-
-}
 .stage{overflow:hidden}
 .play-toolbar{position:relative;z-index:4}
 .modal .primary{display:inline-flex;margin:8px}
@@ -326,9 +323,6 @@ h1,h2,h3,.card-back{font-family:Londrina, sans-serif}
 .themes i:after{display:none}
 .themes{max-width:420px}
 
-@media(prefers-reduced-motion:reduce){
-
-}
 .themes button{flex:0 1 150px;min-height:0;height:auto;padding:8px}
 .themes i{display:block;width:100%;height:auto;aspect-ratio:2/1;min-height:0;background-size:cover;background-position:center;border-radius:7px}
 .app:fullscreen{background:#1c2340;width:100vw;height:100dvh;margin:0;padding:0;overflow:hidden}
@@ -338,9 +332,6 @@ h1,h2,h3,.card-back{font-family:Londrina, sans-serif}
 .card-back{background: none center/100% 100% no-repeat;border:0;box-shadow:none}
 .card-front{background:none center/100% 100% no-repeat;border:0;box-shadow:none}
 .card-back:after{display:none}
-@media(prefers-reduced-motion:reduce){
-
-}
 .card-back{background:linear-gradient(#75cfcbcc,#4da9b4dd),none center/cover;border:2px solid #c3ebe2;border-radius:14px;box-shadow:0 4px 0 #266b7c,0 6px 16px #10152b55}
 .card-back:after{display:block;border-color:#fff5}
 .card-front{background:#fff5e8;border:2px solid #7acfd1;border-radius:14px;box-shadow:0 3px 0 #47777c}
