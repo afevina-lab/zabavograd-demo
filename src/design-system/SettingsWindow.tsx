@@ -1,5 +1,6 @@
 import {Children,cloneElement,isValidElement,useState,type ReactNode} from 'react';
 import {Icon,ThemePicker} from '../GameUI.tsx';
+import {SetupPreview} from './SetupPreview.tsx';
 /** The single settings shell for every game. Only its content varies. */
 export function SettingsWindow({game,children}:{game:string;children:ReactNode}){
  const child=Children.only(children);
@@ -8,6 +9,8 @@ export function SettingsWindow({game,children}:{game:string;children:ReactNode})
   const nodes=Children.toArray(content),left:ReactNode[]=[],right:ReactNode[]=[],footer:ReactNode[]=[],intro:ReactNode[]=[],appearance:ReactNode[]=[],extras:ReactNode[]=[];
   let section=0,seenSection=false;
   function place(node:ReactNode,fieldsetDisabled?:boolean){
+   if(isValidElement(node)&&node.type===SetupPreview){seenSection=true;footer.push(node);return;}
+
    if(isValidElement<{className?:string;children?:ReactNode;disabled?:boolean;'data-setup-section'?:string}>(node)&&node.type==='fieldset'&&Children.toArray(node.props.children).some(child=>isValidElement<{className?:string}>(child)&&child.type==='section'&&child.props.className?.includes('settings-block'))){
     Children.forEach(node.props.children,child=>place(child,node.props.disabled));return;
    }
