@@ -66,3 +66,23 @@ test('No discarded card skin reset or hidden theme preview variant remains',()=>
  assert.match(css,/\.card-front\s*\{background:#fff5e8/);
  assert.match(css,/\.themes i\s*\{display:block;width:100%;height:auto;aspect-ratio:2\/1/);
 });
+
+
+test('Shared settings header geometry is owned by the canonical controls stylesheet',()=>{
+ const layout=readFileSync('src/styles/layout.css','utf8');
+ const controls=readFileSync('src/design-system/controls.css','utf8');
+ const heading=layout.match(/\.settings-window-heading\{([^}]*)\}/)?.[1]||'';
+ assert.doesNotMatch(heading,/\bpadding\s*:/);
+ assert.doesNotMatch(layout,/\.settings-window-heading h2\{[^}]*font-size:/);
+ assert.doesNotMatch(layout,/\.settings-window-heading span\{[^}]*font-size:/);
+ assert.match(controls,/\.app \.settings-window-heading\{[^}]*padding:/);
+ assert.match(controls,/\.app \.settings-window-heading h2\{font-size:30px\}/);
+ assert.match(controls,/@media\(max-width:600px\)\{[^\n]*\.app \.settings-window-heading\{padding:6px 8px 12px\}/);
+});
+
+test('Modal backdrop uses a single stacking rule',()=>{
+ const layout=readFileSync('src/styles/layout.css','utf8');
+ const blocks=[...layout.matchAll(/\.modal-backdrop\s*\{([^}]*)\}/g)];
+ assert.equal(blocks.filter(m=>/z-index\s*:/.test(m[1])).length,1);
+ assert.match(blocks.find(m=>/z-index\s*:/.test(m[1]))?.[1]||'',/z-index:12/);
+});

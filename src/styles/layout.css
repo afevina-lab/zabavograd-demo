@@ -119,7 +119,7 @@ select{display:block;width:100%;padding:11px 26px 11px 12px;border:1px solid #dd
 .overlay .link{display:block;margin:12px auto;font-size:11px}
 .award{font-size:62px;color:#b18b44;margin-bottom:14px}
 footer{padding:23px 0 5px;display:flex;justify-content:space-between;font-size:9px;color:#969c8c}
-.modal-backdrop{position:fixed;inset:0;background:#23362e70;backdrop-filter:blur(5px);z-index:10;display:grid;place-items:center;padding:24px}
+.modal-backdrop{position:fixed;inset:0;background:#23362e70;backdrop-filter:blur(5px);z-index:12;display:grid;place-items:center;padding:24px}
 .modal{background:#fffefa;border:1px solid #d8deca;border-radius:22px;max-width:660px;width:100%;padding:26px;box-shadow:0 22px 80px #1c2b292c;max-height:90vh;overflow:auto}
 .modal-title{display:flex;align-items:center;justify-content:space-between}
 .modal-title h2{font-size:23px;letter-spacing:-.6px;margin:0}
@@ -198,7 +198,6 @@ footer span{display:none}
 .app:fullscreen main{max-width:1600px;padding:18px}
 .app:fullscreen .stage{min-height:calc(100vh - 160px)}
 .app:fullscreen .play-area{min-height:0}
-.modal-backdrop{z-index:12}
 .modal .link{margin-left:18px}
 .settings .footnote{margin-bottom:0}
 @keyframes deal-in{from{opacity:0;transform:translateY(80px) rotate(-9deg) scale(.7)}to{opacity:1;transform:translateY(0) rotate(0) scale(1)}}
@@ -726,14 +725,14 @@ html:has(.settings-shade){overflow:hidden}
 .app.game-active .stage.matching-stage{overflow:hidden!important}
 .stage:has(>.game-dialog)>.conveyor-answer{visibility:hidden}.game-dialog .primary{margin:8px}
 /* Shared settings window overrides historical per-game page geometry. */
-.settings-window-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 16px 18px}.settings-window-heading h2{margin:0;font-size:28px}.settings-window-heading span{display:block;margin-top:4px;font-size:15px}
+.settings-window-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}.settings-window-heading h2{margin:0}.settings-window-heading span{display:block;margin-top:4px}
 
 .shared-settings-window .unified-settings-content>.settings{padding:0!important;max-height:none!important;overflow:visible!important;width:100%!important;margin:0!important;border:0!important;box-shadow:none!important;background:transparent!important}
 .shared-settings-window .unified-settings-content>p:first-child{margin:0 0 16px;line-height:1.5}
-.shared-settings-window .settings-block{margin:0 0 18px;padding:18px}.shared-settings-window .settings-block h2,.shared-settings-window .settings-block h3{font-size:21px;margin:0 0 18px}
+.shared-settings-window .settings-block h3{font-size:21px;margin:0 0 18px}
 .shared-settings-window .task-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.shared-settings-window .choice-tiles{gap:8px}.shared-settings-window label{line-height:1.45}
 @media(min-width:900px){.app .shared-settings-window .matching-setup,.app .shared-settings-window .conveyor-settings{display:grid;grid-template-columns:1.1fr 1fr;gap:12px 28px;align-items:start}.shared-settings-window .matching-setup>p,.shared-settings-window .conveyor-settings>p{grid-column:1/-1}}
-@media(max-width:600px){.settings-window-heading{padding:6px 10px 12px}.settings-window-heading h2{font-size:23px}.shared-settings-window .task-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.shared-settings-window .task-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* Awards sit above the result frame instead of inside its scroll clipping box. */
 .app .overlay:has(.award){padding-top:76px;padding-bottom:32px}
 .app .overlay>div:has(.award){overflow:visible;max-height:calc(100dvh - 180px)}
