@@ -308,3 +308,14 @@ test('Deprecated game-specific setup grids cannot override shared semantic colum
  const memory=readFileSync('src/main.tsx','utf8');
  assert.doesNotMatch(memory, /Начать игру'\} <Icon name="RightArrow1"/);
 });
+
+
+test('All setup labels inherit the shared control rules, never per-game geometry',()=>{
+ const css=readFileSync('src/styles/layout.css','utf8');
+ const shared=readFileSync('src/design-system/controls.css','utf8');
+ for(const name of ['matching-setup','conveyor-settings','transformation-setup']){
+  assert.doesNotMatch(css,new RegExp('\\.'+name+' label(?:\\.check)?\\{'),'Legacy label rule: '+name);
+ }
+ assert.match(shared,/\.app \.settings label\.check\{display:flex/);
+ assert.match(shared,/\.app\[data-theme\] \.settings label:not\(\.check\):has\(>\.select-control\)\{display:grid/);
+});
