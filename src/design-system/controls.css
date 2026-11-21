@@ -98,7 +98,7 @@
 
 @media(max-width:600px){.app[data-theme] .shared-settings-window .settings-block{padding:10px!important}}
 
-.app .shared-settings-window .settings-block{margin:0 0 12px!important}.app .shared-settings-window .settings-block h2{margin:0 0 20px!important;font-size:24px}.app .shared-settings-window .settings-block label:not(.check){margin-block:12px 8px}.app .shared-settings-window .settings-block select{margin-top:8px}.app .shared-settings-window .settings-block .check{margin-block:14px}.app .shared-settings-window .unified-settings-content>p:first-child{margin-bottom:26px}
+.app .shared-settings-window .settings-block{margin:0 0 12px!important}.app .shared-settings-window .settings-block h2{margin:0!important}.app .shared-settings-window .settings-block .check{margin-block:14px}.app .shared-settings-window .unified-settings-content>p:first-child{margin-bottom:26px}
 
 /* Shared expandable setup actions; native details preserves keyboard behavior. */
 .app[data-theme] .settings .settings-disclosure{padding:0!important;margin:18px 0!important;border:0!important;background:transparent!important;box-shadow:none!important;border-radius:18px!important}
