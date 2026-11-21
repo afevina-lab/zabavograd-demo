@@ -939,7 +939,12 @@ html:has(.settings-shade){overflow:hidden}
  margin-bottom:0!important;
 }
 .app.game-active .play-toolbar.shared-toolbar .toolbar-left{justify-content:flex-start;gap:9px}
-.app.game-active .play-toolbar.shared-toolbar .toolbar-centre{justify-content:center}
+.app.game-active .play-toolbar.shared-toolbar .toolbar-centre{justify-content:center;min-width:0}
+.app.game-active .play-toolbar.shared-toolbar .toolbar-centre>.counters{
+ display:flex;flex:0 1 auto;flex-direction:row;flex-wrap:nowrap;
+ align-items:center;justify-content:center;gap:var(--zg-space-2,8px);
+ min-width:0;max-width:100%;
+}
 .app.game-active .play-toolbar.shared-toolbar .toolbar-right{justify-content:flex-end}
 .app.game-active .play-toolbar.shared-toolbar .icon-button{vertical-align:middle;margin-block:0!important;flex:0 0 auto}
 /* Compact touch play: pause + fullscreen + optional timer/lives, never scroll the toolbar. */
