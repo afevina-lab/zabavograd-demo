@@ -24,10 +24,11 @@ export function SettingsWindow({game,children}:{game:string;children:ReactNode})
    else footer.push(node);
   }
   nodes.forEach(node=>place(node));
-  return <>{intro}<div className="setup-columns"><div className="setup-column">{left}</div><div className="setup-column">{right}</div></div><div className="setup-footer">{footer}</div></>;
+  return {body:<>{intro}<div className="setup-columns"><div className="setup-column">{left}</div><div className="setup-column">{right}</div></div></>,footer:<div className="setup-footer">{footer}</div>};
  }
+ const assembled=isValidElement<{className?:string;children?:ReactNode}>(child)?arrange(child.props.children):null;
  return <div className="settings-shade"><section className="settings-frame shared-settings-window" role="dialog" aria-modal="true" aria-label={'Настройки: '+game}>
  <header className="settings-window-heading"><div className="settings-adventure-title"><span className="settings-adventure-emblem" aria-hidden="true"><Icon name="Star"/></span><div><p className="settings-eyebrow">Забавоград · пора играть</p><h2>{game}</h2><span>Подготовка к игре</span></div></div><a className="icon-button" href={import.meta.env.BASE_URL+'home.html'} aria-label="Домой" title="На главную"><Icon name="Home1"/></a></header>
- {isValidElement<{className?:string;children?:ReactNode}>(child)?cloneElement(child,{className:(child.props.className||'')+' settings unified-settings-content'},arrange(child.props.children)):child}
+ {assembled&&isValidElement<{className?:string;children?:ReactNode}>(child)?<>{cloneElement(child,{className:(child.props.className||'')+' settings unified-settings-content'},assembled.body)}{assembled.footer}</>:child}
  </section></div>;
 }
