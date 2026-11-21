@@ -34,7 +34,7 @@ export function SettingsWindow({game,children}:{game:string;children:ReactNode})
     }
     else (section++%2?right:left).push(item);
    }else if(!seenSection)intro.push(node);
-   else if(isValidElement<{className?:string;role?:string}>(node)&&((node.type==='button'&&node.props.className?.split(/\s+/).includes('primary'))||(node.type==='p'&&node.props.role==='status')))footer.push(node);
+   else if(isValidElement<{className?:string}>(node)&&node.type==='button'&&node.props.className?.split(/\s+/).some(name=>name==='primary'||name==='start'))footer.push(node);
    else extras.push(node);
   }
   nodes.forEach(node=>place(node));
