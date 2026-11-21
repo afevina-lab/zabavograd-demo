@@ -203,3 +203,14 @@ test('GameSelect forwards its optional styling variant into the common wrapper',
  assert.match(source,/choiceClassName=''/);
  assert.match(source,/className=\{\["game-choice",choiceClassName\]\.filter\(Boolean\)\.join\(" "\)\}/);
 });
+
+
+test('Shared settings use their final heading and label rhythm without shadowed earlier declarations',()=>{
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ assert.match(css,/\.app \.shared-settings-window \.settings-block h2\{margin:0!important\}/);
+ assert.match(css,/\.app \.shared-settings-window \.settings-block h2\{font-size:22px!important;margin-bottom:16px!important\}/);
+ assert.match(css,/\.app \.shared-settings-window \.settings-block label:not\(\.check\)\{margin-block:10px 6px\}/);
+ assert.doesNotMatch(css,/margin:0 0 20px!important;font-size:24px/);
+ assert.doesNotMatch(css,/\.app \.shared-settings-window \.settings-block label:not\(\.check\)\{margin-block:12px 8px\}/);
+ assert.doesNotMatch(css,/\.app \.shared-settings-window \.settings-block select\{margin-top:8px\}/);
+});
