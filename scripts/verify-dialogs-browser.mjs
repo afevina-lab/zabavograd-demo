@@ -131,6 +131,7 @@ for(const game of ['memory','sorting','matching','conveyor','transformations']){
 }
 // A genuine completed memory round, separate from the life-limit endings.
 await cmd('Emulation.setDeviceMetricsOverride',{width:1440,height:900,deviceScaleFactor:1,mobile:false});
+await cmd('Emulation.setTouchEmulationEnabled',{enabled:false});
 await setup('memory');await until("!!document.querySelector('.card:not(:disabled)')",20000);
 const pairs=await evaluate("(()=>{const m={};for(const e of document.querySelectorAll('[data-card-key]')){const k=e.dataset.cardKey,id=k.slice(0,k.lastIndexOf(':'));(m[id]||=[]).push(k)}return Object.values(m)})()");
 for(const pair of pairs){for(const key of pair){await evaluate("document.querySelector('[data-card-key=\""+key+"\"]').click()");await sleep(80)}await until("document.querySelector('[data-card-key=\""+pair[0]+"\"]').classList.contains('found')")}
