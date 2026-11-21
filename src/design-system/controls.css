@@ -146,14 +146,14 @@
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .primary{background:var(--ui-deep)!important}
 /* One quantity value, flanked by buttons, above the filled recessed track. */
 .app .quantity-slider{margin:16px 0 22px}.app .quantity-slider>label{font-weight:650;margin-bottom:12px!important}
-.app .quantity-slider>div:not(.quantity-bounds){display:flex;justify-content:center;align-items:center;gap:16px;padding:0 0 16px}
+
 .app[data-theme] .quantity-slider input[type=number]{width:76px!important;height:64px!important;min-height:64px;border-radius:50%!important;text-align:center;font-size:27px;font-weight:750;padding:8px!important;appearance:textfield;-moz-appearance:textfield}
 .quantity-slider input[type=number]::-webkit-inner-spin-button,.quantity-slider input[type=number]::-webkit-outer-spin-button{appearance:none;margin:0}
 .app[data-theme] .quantity-slider button{width:42px;height:42px;background:var(--ui-deep)!important;color:var(--ui-paper)!important;border-color:var(--ui-deep)!important;font-size:26px}
 .app .settings .quantity-slider input[type=range]{width:100%;height:18px!important;margin:6px 0 0;background:linear-gradient(to right,var(--ui-deep) 0 var(--quantity-fill),color-mix(in srgb,var(--ui-outline) 25%,var(--ui-setup-paper)) var(--quantity-fill) 100%)!important;border:1px solid var(--ui-field-edge)!important;box-shadow:inset 0 3px 5px #233a3540,inset 0 -1px 1px #fff8}
 .app .settings .quantity-slider input[type=range]::-webkit-slider-thumb{width:32px;height:32px;border:1px solid var(--ui-thumb-edge);background:var(--ui-highlight);box-shadow:inset 0 2px 2px #fff9,0 3px 0 var(--ui-thumb-base),0 4px 6px #172a4040}
 .app .settings .quantity-slider input[type=range]::-moz-range-thumb{width:32px;height:32px;border:1px solid var(--ui-thumb-edge);background:var(--ui-highlight);box-shadow:inset 0 2px 2px #fff9,0 3px 0 var(--ui-thumb-base),0 4px 6px #172a4040}
-.app .quantity-slider .quantity-bounds{display:flex;justify-content:space-between;font-size:12px;opacity:.75;margin-top:8px}
+
 /* Shared final area places actual material beside the readiness action. */
 .setup-footer{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:12px 28px;align-items:center;margin-top:24px;padding:22px 8px 12px;border-top:1px solid color-mix(in srgb,var(--ui-frame-base) 40%,transparent)}
 .app .shared-settings-window .setup-footer>.settings-block{grid-column:1;grid-row:1 / span 4;margin:0!important;padding:0!important}
@@ -179,7 +179,7 @@
 .app .quantity-slider>div.quantity-stepper{display:flex;gap:0;align-items:center;justify-content:center;padding:0;overflow:hidden;border:1px solid var(--ui-deep);border-radius:11px;box-shadow:0 2px 0 color-mix(in srgb,var(--ui-deep) 70%,black)}
 .app[data-theme] .quantity-slider .quantity-stepper button{width:32px;height:36px;min-height:36px!important;min-width:0;border:0!important;border-radius:0!important;box-shadow:inset 0 1px 1px #fff5!important;font-size:22px;padding:0!important}
 .app[data-theme] .quantity-slider .quantity-stepper input[type=number]{width:44px!important;height:36px!important;min-height:36px!important;border:0!important;border-radius:0!important;box-shadow:inset 0 2px 4px var(--ui-well-shadow-strong)!important;font-size:20px;padding:3px!important}
-.app .quantity-slider>input[type=range],.app .quantity-slider>.quantity-bounds,.quantity-slider>.quantity-availability{grid-column:1/-1}.app .quantity-slider>input[type=range]{margin:6px 0 0!important}.app .quantity-slider .quantity-bounds{margin-top:0}
+.app .quantity-slider>input[type=range],.quantity-slider>.quantity-availability{grid-column:1/-1}.app .quantity-slider>input[type=range]{margin:6px 0 0!important}
 /* The start action has a visible lower face and a forward arrow. */
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .primary:not(.rule-delete),.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .start{box-shadow:inset 0 3px 2px #fff7,inset 0 -5px 5px var(--ui-button-inset-strong),0 7px 0 color-mix(in srgb,var(--ui-deep) 62%,black),0 11px 14px #172a4030!important;border-top-color:color-mix(in srgb,var(--ui-deep) 50%,var(--ui-paper))!important;min-height:64px;margin-bottom:8px}
 .setup-footer>button.primary,.settings>.primary:last-child{display:flex;align-items:center;justify-content:center;gap:24px}
