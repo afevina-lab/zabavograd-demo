@@ -32,7 +32,6 @@ h1{font-size:56px;letter-spacing:-2.8px;line-height:1.05;margin:12px 0}
 .intro{font-size:14px;color:#7c8277;margin:14px 0 0}
 .prototype{font-size:11px;text-align:right;color:#54705a;font-weight:700;line-height:1.8}
 .prototype span{display:block;color:#8a8d80;font-size:10px;font-weight:500}
-.workspace{display:grid;grid-template-columns:300px minmax(0,1fr);gap:24px;align-items:start}
 .settings{background:#fffefa;border:1px solid #e1e2d7;border-radius:20px;padding:23px;box-shadow:0 6px 22px #31402d03}
 .panel-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:23px}
 .panel-heading h2{font-size:16px;margin:0;font-weight:800;letter-spacing:-.4px}
@@ -84,7 +83,7 @@ select{display:block;width:100%;padding:11px 26px 11px 12px;border:1px solid #dd
 .counters b{font-weight:700;color:#435a3b;margin-left:6px}
 .icon-button{width:30px;height:30px;border:1px solid #c2cfb6;background:#f4f6ed;border-radius:8px}
 .hearts{color:#ad735e}
-.stage{position:relative;min-height:540px;padding:30px;display:flex;align-items:center;justify-content:center;isolation:isolate}
+.stage{position:relative;padding:30px;display:flex;align-items:center;justify-content:center;isolation:isolate}
 .effects{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
 .effects canvas{width:100%!important;height:100%!important}
 .welcome{text-align:center;padding:0 10px 20px}
@@ -133,16 +132,11 @@ footer{padding:23px 0 5px;display:flex;justify-content:space-between;font-size:9
 .modal-footer{display:flex;align-items:center;justify-content:space-between;margin-top:22px;font-size:12px}
 .help li{padding:8px 0}
 .help{max-width:490px}
-@media(min-width:1450px){
-.stage{min-height:610px}
-
-}
 @media(max-width:1050px){
 .topbar{padding:0 25px}
 main{padding:25px}
-.workspace{grid-template-columns:270px minmax(0,1fr);gap:16px}
 .settings{padding:18px}
-.stage{padding:18px;min-height:500px}
+.stage{padding:18px}
 .counters{gap:10px}
 .play-toolbar{padding:0 15px}
 .card-back small{display:none}
@@ -159,10 +153,9 @@ main{padding:22px 16px}
 .heading{margin:22px 0}
 .prototype{display:none}
 h1{font-size:44px}
-.workspace{display:flex;flex-direction:column}
 .settings{width:100%;padding:20px}
 .play-area{width:100%;position:relative;top:0}
-.stage{min-height:470px;padding:18px}
+.stage{padding:18px}
 .card-front{font-size:13px}
 .card-back>span{font-size:26px}
 .word-picker{grid-template-columns:repeat(2,1fr)}
@@ -211,9 +204,8 @@ footer span{display:none}
 @keyframes deal-in{from{opacity:0;transform:translateY(80px) rotate(-9deg) scale(.7)}to{opacity:1;transform:translateY(0) rotate(0) scale(1)}}
 @keyframes heart-break{0%{transform:scale(1.3);opacity:1;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}45%{transform:rotate(-18deg) translateY(4px);opacity:.8;clip-path:polygon(0 0,40% 0,60% 50%,40% 100%,0 100%)}100%{transform:translateY(10px) scale(.5);opacity:.2;clip-path:polygon(0 0,40% 0,60% 50%,40% 100%,0 100%)}}
 @media(max-width:760px){
-.workspace{display:block}
 .card-front{font-size:10px}
-.stage{padding:12px;min-height:480px}
+.stage{padding:12px}
 .card-back{border-width:2px}
 .card-back:after{inset:4px}
 .heart{font-size:16px}
