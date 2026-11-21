@@ -39,6 +39,6 @@ export function mathMaterial(options:Partial<MathSettings>={}):Word[]{
  const filtered=rows.filter(([label,answer])=>includeZero||answer!==0&&!/(^|\D)0(\D|$)/.test(label));
  const byAnswer=new Map<number,Array<[string,number]>>();
  for(const row of filtered){const group=byAnswer.get(row[1])||[];group.push(row);byAnswer.set(row[1],group);}
- const distinct=o.answerOnly&&o.kind==='examples'?[...byAnswer.values()].flat().filter(row=>row[1]===limit):[...byAnswer.values()].map(group=>group[Math.floor(group.length/2)]);
+ const distinct=o.answerOnly&&o.kind==='examples'?[...byAnswer.values()].flat().filter(row=>row[1]===limit):[...byAnswer.entries()].map(([answer,group])=>group[answer%group.length]);
  return distinct.map(([label,answer])=>({id:'math:'+label,label,answer:String(answer),topic:null,subcategory:null,position:'',type:null,opposition:[],weight:50,images:0}));
 }
