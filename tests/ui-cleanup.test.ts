@@ -106,3 +106,10 @@ test('Modal frames take scrolling and spacing from the canonical control rule',(
  assert.match(controls,/\.app\[data-theme\] \.overlay>div:has\(\.award\)\{overflow:visible!important\}/);
  assert.match(controls,/@media\(max-height:550px\)\{\.app \.overlay\{padding:12px!important\}/);
 });
+
+
+test('Action copy min-width is defined in the base control, not repeated on mobile',()=>{
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ assert.match(css,/\.setup-action-copy\{[^}]*min-width:0/);
+ assert.doesNotMatch(css,/@media\(max-width:600px\)\{\.setup-action-copy\{min-width:0\}\}/);
+});
