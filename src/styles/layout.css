@@ -1107,3 +1107,34 @@ html:has(.settings-shade){overflow:hidden}
   grid-row:auto!important;grid-column:auto!important;
  }
 }
+
+
+/* Four arithmetic toggles share one line when there is room. */
+@media(min-width:900px){
+ .app[data-theme] .shared-settings-window .math-settings .reading-kinds{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:8px 12px!important;
+  align-items:center!important;
+ }
+}
+@media(min-width:600px) and (max-width:899px){
+ .app[data-theme] .shared-settings-window .math-settings .reading-kinds{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ }
+}
+.app[data-theme] .shared-settings-window .math-settings .reading-kinds .check{
+ white-space:nowrap;min-width:0;gap:8px!important;
+}
+/* The same spacing rules apply to arbitrary lexical disclosures and nested settings. */
+.app[data-theme] .shared-settings-window .filter-details{margin:12px 0!important;padding:0!important}
+.app[data-theme] .shared-settings-window .filter-details>summary{
+ min-height:52px!important;box-sizing:border-box;margin:0!important;
+ display:flex!important;align-items:center!important;
+ padding:10px 14px!important;
+}
+.app[data-theme] .shared-settings-window .filter-details>summary::before{
+ flex:none;margin-right:8px;
+}
+.app[data-theme] .shared-settings-window .filter-details[open]>summary{margin-bottom:12px!important}
