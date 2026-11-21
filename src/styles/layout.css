@@ -269,7 +269,7 @@ footer span{display:none}
 .settings .start{position:sticky;bottom:0;z-index:3;background:#7967cd;color:#fff5e8;border:1px solid #a99be7;box-shadow:0 4px 0 #55449a;text-shadow:none;font-size:18px}
 .settings .sound-option{margin-bottom:18px}
 .settings .hint,.settings .footnote{font-size:14px}
-.settings-block section>button{border:1px dashed #939bc6;border-radius:9px;background:#f2effb;color:#515b8d;padding:10px;margin-top:10px;width:100%;text-align:left}
+
 @media(max-width:700px){
 .settings fieldset{display:block}
 .settings-block{margin-bottom:12px}
@@ -718,7 +718,7 @@ html:has(.settings-shade){overflow:hidden}
 .transformation-actions button{min-width:0}
 .app .overlay>div,.app .modal.gui-panel{box-sizing:border-box;max-width:min(620px,92vw)}
 .app .overlay{position:absolute;inset:0;z-index:30;display:grid;place-items:center;padding:16px;box-sizing:border-box}
-@media(max-height:550px){.transformation-prompt{padding:4px 8px}.transformation-prompt p{margin:4px}.transformation-prompt h2{font-size:18px}.transformation-actions button{min-height:36px;padding:6px 12px}}
+@media(max-height:550px){.transformation-prompt{padding:4px 8px}.transformation-prompt p{margin:4px}.transformation-prompt h2{font-size:18px}.transformation-actions button{min-height:var(--zg-control-height,48px);padding:10px 14px}}
 .app.game-active .stage.matching-stage{overflow:hidden!important}
 .stage:has(>.game-dialog)>.conveyor-answer{visibility:hidden}.game-dialog .primary{margin:8px}
 /* Shared settings window overrides historical per-game page geometry. */
