@@ -79,9 +79,20 @@ async function setup(game){
  await until("!!document.querySelector('.app.game-active')");
 }
 for(const [width,height] of [[1440,900],[390,844],[844,390]]){
- await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
+ await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600||width===844});
+ await cmd('Emulation.setTouchEmulationEnabled',{enabled:width<=844,maxTouchPoints:1});
  for(const game of ['memory','sorting','matching','conveyor','transformations']){
  await setup(game);
+ if(width<=844){
+  const compact=await evaluate("(()=>{const bar=document.querySelector('.play-toolbar.shared-toolbar'),left=[...bar.querySelectorAll('.toolbar-left>button,.toolbar-left>a')],right=[...bar.querySelectorAll('.toolbar-right>button,.toolbar-right>a')],shown=e=>getComputedStyle(e).display!=='none'&&e.getBoundingClientRect().width>0,counters=bar.querySelector('.toolbar-centre>.counters'),lives=counters.querySelector('.life-controls'),pause=left.filter(shown),view=right.filter(shown),b=bar.getBoundingClientRect();return {pause:pause.map(e=>e.getAttribute('aria-label')),view:view.map(e=>e.getAttribute('aria-label')),hasLives:!!lives&&shown(lives),hasTimer:!!counters.querySelector('.toolbar-timer'),row:getComputedStyle(counters).flexDirection,scroll:getComputedStyle(bar.querySelector('.toolbar-left')).overflowX,within:b.left>=0&&b.right<=innerWidth+1,overlap:(()=>{const p=pause[0]?.getBoundingClientRect(),v=view[0]?.getBoundingClientRect(),l=lives?.getBoundingClientRect();return !!p&&!!v&&!!l&&(p.right>l.left+1||l.right>v.left+1||p.right>v.left+1)})()}})()");
+  assert.deepEqual(compact.pause,['Пауза'],'Compact toolbar must show only pause: '+game+' '+width);
+  assert.deepEqual(compact.view,['Полный экран'],'Compact toolbar must show only fullscreen: '+game+' '+width);
+  assert(compact.hasLives&&!compact.hasTimer,'Only enabled lives should appear: '+game+' '+width);
+  assert.equal(compact.row,'row','Mobile counter layout must remain horizontal: '+game+' '+width);
+  assert.notEqual(compact.scroll,'auto','No toolbar scrolling: '+game+' '+width);
+  assert(compact.within&&!compact.overlap,'Mobile toolbar elements overflow or overlap: '+game+' '+width);
+  await screenshot(game+'-toolbar-'+width);
+ }
  assert(await evaluate("!document.querySelector('.play-toolbar .lesson-tag')&&document.querySelectorAll('.life-controls .icon-button').length===0"),'Toolbar clutter remains');
  await until("!!document.querySelector('button[aria-label=Пауза]')");
  await evaluate("document.querySelector('button[aria-label=Пауза]').click()");await until("!!document.querySelector('.overlay')");await sleep(350);assert(await evaluate("(()=>{const e=document.querySelector('.play-toolbar .garden-icon'),b=e.closest('button,a');return getComputedStyle(e).backgroundColor!==getComputedStyle(b).backgroundColor})()"),'Toolbar icon contrast');await screenshot(game+'-pause-'+width);
