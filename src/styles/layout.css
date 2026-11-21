@@ -790,3 +790,70 @@ html:has(.settings-shade){overflow:hidden}
 @media(min-width:900px){.shared-settings-window .matching-setup>.settings-block:nth-of-type(2),.shared-settings-window .conveyor-settings>.settings-block:nth-of-type(2){grid-row:span 2}}
 
 .transformation-content{container-type:inline-size;min-width:0}.transformation-word{max-width:100%}
+
+
+/* Matching: fit readable cards without scaling the entire text layer.
+   Scaled headings caused stacked/blurred glyphs on desktop. */
+.app.game-active .stage.matching-stage{
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+  scrollbar-width:thin!important;
+  scrollbar-gutter:stable!important;
+  display:block!important;
+  padding:clamp(8px,1.4dvh,14px)!important;
+}
+.app.game-active .matching-stage .matching-content{
+  transform:none!important;
+  transform-origin:initial!important;
+  width:100%;
+  max-width:1500px;
+  margin:0 auto;
+  padding:6px 12px 12px;
+  box-sizing:border-box;
+}
+.app.game-active .matching-content>h1{
+  font-family:Arial,sans-serif;
+  font-size:clamp(18px,2.2vw,26px);
+  line-height:1.25;
+  letter-spacing:normal;
+  text-shadow:none!important;
+  margin:0 0 12px;
+  padding:0;
+  position:relative;
+  transform:none!important;
+}
+.app.game-active .matching-groups{
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));
+  gap:clamp(8px,1vw,14px);
+}
+.app.game-active .matching-group{
+  padding:clamp(8px,1vw,12px);
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.app.game-active .matching-card,
+.app.game-active .matching-slot{
+  box-sizing:border-box;
+  width:clamp(90px,8vw,135px);
+  height:clamp(104px,16dvh,148px);
+  flex:0 0 auto;
+}
+.app.game-active .matching-anchor{margin:0 auto 10px}
+.app.game-active .matching-slots{gap:8px;width:100%}
+.app.game-active .matching-bank{
+  margin-top:clamp(10px,1.5dvh,18px);
+  padding:clamp(10px,1vw,14px);
+}
+.app.game-active .matching-bank>div{gap:8px}
+.app.game-active .matching-bank h2{margin:0 0 9px}
+@media(max-width:720px){
+ .app.game-active .matching-groups{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .app.game-active .matching-card,.app.game-active .matching-slot{width:clamp(75px,22vw,120px);height:clamp(90px,16dvh,135px)}
+ .app.game-active .matching-stage .matching-content{padding:4px}
+}
+@media(max-height:650px){
+ .app.game-active .matching-card,.app.game-active .matching-slot{height:110px;width:105px}
+ .app.game-active .matching-content>h1{margin-bottom:6px}
+}
