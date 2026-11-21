@@ -316,3 +316,36 @@
 .app .card-presentation{max-width:580px;margin-top:24px!important}
 @media(max-width:600px){.app .category-grid,.app .category-grid ul{grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))}.app .category-grid .category-children{margin-left:4px;padding-left:8px}.app .group-count-choice .pair-options{gap:8px}.app[data-theme] .group-count-choice .pair-options button{width:45px}}
 
+/* Category columns belong to top-level sections; descendants remain a vertical tree. */
+.app .category-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+.app .category-grid .category-branch{grid-column:auto}
+.app .category-grid ul{display:flex!important;flex-direction:column;gap:8px}
+.category-grid .category-name{flex:1;min-width:0}
+.category-icon{width:24px;height:24px;flex:none;color:var(--ui-deep)}
+.app .category-grid summary input{margin:0;flex:none}
+@media(min-width:1200px){.app .category-picker{width:min(1180px,96vw)!important;max-width:1180px}.app .category-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.app .category-grid{grid-template-columns:1fr}}
+.app[data-theme] .sound-chip-row button[aria-pressed=true]{transform:none!important;outline:0!important;background:var(--ui-deep)!important;color:var(--ui-paper)!important;box-shadow:inset 0 2px 2px #fff5,0 3px 0 var(--ui-control-bottom)!important}
+.app .sound-bank{align-items:start;grid-template-rows:auto auto auto;grid-auto-flow:row}
+.sound-bank>section[data-sound-group='Ранний онтогенез']{grid-column:1;grid-row:1/3}
+.sound-bank>section[data-sound-group='Гласные']{grid-column:1;grid-row:3}
+.sound-bank>section[data-sound-group='Свистящие']{grid-column:2;grid-row:1}
+.sound-bank>section[data-sound-group='Шипящие']{grid-column:2;grid-row:2}
+.sound-bank>section[data-sound-group='Соноры']{grid-column:2;grid-row:3}
+.app .sound-chip{gap:0;align-items:center}.app[data-theme] dialog .sound-chip button{margin:3px 0}.app .sound-editor{position:static;scroll-margin-top:8px}
+.app .sound-workshop>.panel-scroll{display:flex;flex-direction:column;padding-bottom:0}
+.app .sound-workshop .sound-picker-actions{position:sticky;bottom:0;flex:none;display:flex;align-items:center;justify-content:flex-end;gap:10px;padding:12px 4px;margin:0;background:var(--ui-setup-paper)!important;z-index:3}
+.sound-selection-summary{flex:1;min-width:0;max-height:3em;overflow:auto;font-size:13px;line-height:1.4;margin:0}
+.app .sound-workshop .sound-picker-actions button{flex:none;margin:0!important;white-space:nowrap}
+.app[data-theme] .overlay>div>.panel-scroll>button:not(.primary){background:var(--ui-control-face)!important;color:var(--ui-text)!important;border:1px solid var(--ui-field-edge)!important;box-shadow:inset 0 2px 1px #fff9,0 3px 0 var(--ui-control-bottom)!important}
+.app.game-active .play-toolbar{box-sizing:border-box!important;min-height:56px!important;height:auto!important;overflow:visible}
+.app.game-active .play-toolbar .icon-button{box-sizing:border-box;min-height:36px!important;height:40px!important;max-height:100%;width:40px!important;min-width:32px!important;padding:6px!important}
+@media(max-width:600px){.app .sound-bank>section{grid-column:1!important;grid-row:auto!important}.sound-selection-summary{flex-basis:100%}.app.game-active .play-toolbar .icon-button{width:32px!important;height:34px!important;min-height:32px!important;padding:4px!important}}
+.app .sound-bank{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+.sound-bank-column{display:flex;flex-direction:column;gap:14px;min-width:0}
+.sound-bank-column>section{padding:14px;border:1px solid var(--ui-field-edge);border-radius:16px;background:var(--ui-setup-field)}
+@media(max-width:600px){.app .sound-bank{grid-template-columns:1fr!important}}
+@media(min-width:1200px){.app[data-theme] dialog.category-picker{width:min(1180px,96vw)!important;max-width:1180px!important}}
+.app[data-theme] dialog.sound-workshop[open]{display:flex;flex-direction:column;max-height:calc(100dvh - 32px)!important}
+.app[data-theme] .sound-workshop>.panel-scroll{flex:1;min-height:0;overflow:auto;max-height:none}
+.app[data-theme] .sound-workshop>.sound-picker-actions{position:relative;bottom:auto;flex:none;margin:0;padding:12px 8px 4px;box-sizing:border-box;width:100%;background:var(--ui-setup-paper)!important}
