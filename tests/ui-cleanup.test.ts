@@ -399,3 +399,13 @@ test('Lesson task selectors are not laid out as a three-column button tile group
  assert.doesNotMatch(material,/choiceClassName="task-tiles"/);
  assert.match(material,/<GameSelect hideLabel=\{!nested\} label="Учебная задача"/);
 });
+
+
+test('Landscape mobile settings retain a usable scrolling area above the pinned footer',()=>{
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ const smoke=readFileSync('scripts/verify-settings-browser.mjs','utf8');
+ assert.match(css,/@media \(orientation:landscape\) and \(max-height:550px\) and \(min-width:600px\)/);
+ assert.match(css,/\.settings-frame\.shared-settings-window>\.setup-footer>button\.primary\{[^}]*min-height:48px!important/);
+ assert.match(css,/\.settings-frame\.shared-settings-window>\.unified-settings-content>p:first-child\{[^}]*display:none!important/);
+ assert.match(smoke,/bodyClientHeight>=120&&actualLayout\.footerHeight<=105/);
+});
