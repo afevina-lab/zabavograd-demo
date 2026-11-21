@@ -79,7 +79,7 @@
 .app[data-theme] .settings select{width:100%;background-image:none!important}
 .app[data-theme] .settings input[type=number]{padding:8px!important}
 .app :is(button,a,input,select,summary):focus-visible{outline:3px solid var(--ui-deep)!important;outline-offset:3px!important}
-.settings-window-heading .icon-button{display:grid;place-items:center;flex:none;width:46px;height:46px;padding:0!important}
+.settings-window-heading .icon-button{display:grid;place-items:center;flex:none;width:var(--zg-heading-icon-size);height:var(--zg-heading-icon-size);padding:0!important}
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .primary,.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .start{min-height:62px;padding:14px 28px!important;background:var(--ui-deep)!important;color:var(--ui-paper)!important;border-color:var(--ui-deep)!important;border-radius:18px!important;box-shadow:inset 0 2px 3px #ffffff70,inset 0 -4px 6px #172a4030,0 5px 0 color-mix(in srgb,var(--ui-deep) 75%,black),0 9px 13px #172a4030!important;font-size:22px;font-weight:750;justify-self:stretch}
 .app .quantity-slider button{width:38px;height:38px;min-height:38px!important;padding:0!important;border-radius:50%!important;font-size:24px}
 .app .settings input[type=range]{height:12px!important;background:var(--ui-pale)!important;border:1px solid var(--ui-field-edge)!important;border-radius:20px;box-shadow:inset 0 2px 4px #172a4030}
@@ -102,7 +102,7 @@
 
 /* Shared expandable setup actions; native details preserves keyboard behavior. */
 .app[data-theme] .settings .settings-disclosure{padding:0!important;margin:18px 0!important;border:0!important;background:transparent!important;box-shadow:none!important;border-radius:18px!important}
-.app[data-theme] .settings .settings-disclosure>summary,.app[data-theme] .settings .category-picker-trigger{display:flex;align-items:center;gap:12px;width:100%;box-sizing:border-box;min-height:68px;padding:11px 14px!important;border:1px solid var(--ui-field-edge)!important;border-radius:17px!important;background:var(--ui-setup-field)!important;color:var(--ui-text)!important;box-shadow:inset 0 2px 2px #fff9,0 3px 0 color-mix(in srgb,var(--ui-outline) 45%,var(--ui-paper)),0 5px 8px var(--ui-soft-shadow)!important;list-style:none;cursor:pointer;text-align:left;white-space:normal}
+.app[data-theme] .settings .settings-disclosure>summary,.app[data-theme] .settings .category-picker-trigger{display:flex;align-items:center;gap:12px;width:100%;box-sizing:border-box;min-height:var(--zg-disclosure-height);padding:11px 14px!important;border:1px solid var(--ui-field-edge)!important;border-radius:17px!important;background:var(--ui-setup-field)!important;color:var(--ui-text)!important;box-shadow:inset 0 2px 2px #fff9,0 3px 0 color-mix(in srgb,var(--ui-outline) 45%,var(--ui-paper)),0 5px 8px var(--ui-soft-shadow)!important;list-style:none;cursor:pointer;text-align:left;white-space:normal}
 .app[data-theme] .settings .settings-disclosure>summary::before{content:none!important}.settings-disclosure>summary::-webkit-details-marker{display:none}
 .app[data-theme] .settings .settings-disclosure>summary:hover,.app[data-theme] .settings .category-picker-trigger:hover{filter:brightness(1.025)}
 .setup-action-icon{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:14px;background:var(--ui-pale);color:var(--ui-deep);box-shadow:inset 0 2px 1px #fff9,0 2px 2px var(--ui-icon-shadow)}
@@ -162,7 +162,7 @@
 
 /* Native select with semantic leading pictogram and a saturated action well. */
 .select-control{position:relative;display:block;width:100%;min-width:0;margin-top:6px}
-.app[data-theme] .settings .select-control select{display:block;width:100%;min-height:54px;margin:0!important;padding:13px 50px 13px 50px!important;border-radius:14px!important;background-image:none!important;border-color:var(--ui-field-edge)!important;box-shadow:inset 0 3px 5px var(--ui-well-shadow),inset 0 -2px 1px var(--ui-field-glint),0 2px 0 var(--ui-field-edge)!important;font-weight:600}
+.app[data-theme] .settings .select-control select{display:block;width:100%;min-height:var(--zg-select-height);margin:0!important;padding:13px 50px 13px 50px!important;border-radius:14px!important;background-image:none!important;border-color:var(--ui-field-edge)!important;box-shadow:inset 0 3px 5px var(--ui-well-shadow),inset 0 -2px 1px var(--ui-field-glint),0 2px 0 var(--ui-field-edge)!important;font-weight:600}
 .select-leading,.select-caret{position:absolute;top:50%;transform:translateY(-50%);display:grid;place-items:center;pointer-events:none}
 .select-leading{left:12px;width:27px;height:30px;color:var(--ui-deep)}.select-leading svg{width:23px;height:23px}
 .select-caret{right:6px}
@@ -373,6 +373,9 @@
  --zg-space-5:24px;
  --zg-space-6:32px;
  --zg-control-height:48px;
+ --zg-select-height:54px;
+ --zg-disclosure-height:68px;
+ --zg-heading-icon-size:46px;
  --zg-chip-size:52px;
  --zg-control-radius:12px;
  --zg-panel-radius:16px;
