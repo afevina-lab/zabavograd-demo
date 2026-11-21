@@ -11,8 +11,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: public-ui-release
-  # Main releases supersede outdated PR smoke tests; PR checks never cancel a release.
+  # PR smoke runs must not cancel or block a production release.
+  group: public-ui-${{ github.event_name == 'pull_request' && 'pr-checks' || 'main-release' }}
   cancel-in-progress: ${{ github.event_name == 'push' }}
 
 jobs:
