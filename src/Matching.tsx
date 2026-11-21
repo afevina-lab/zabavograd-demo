@@ -56,7 +56,7 @@ export function Matching(){
   const stage=stageRef.current;
   if(!stage||!session.length)return;
   const fit=()=>{
-   const width=Math.max(260,stage.clientWidth-32),height=Math.max(260,stage.clientHeight-26);
+   const width=Math.max(180,stage.clientWidth-32),height=Math.max(160,stage.clientHeight-26);
    const maxElements=Math.max(2,...session.map(g=>g.elements.length));
    let best={columns:1,cardWidth:36,bankPageSize:4},bestScore=-1;
    for(let columns=1;columns<=Math.min(6,session.length);columns++){
@@ -70,7 +70,7 @@ export function Matching(){
      const pageSize=Math.min(bank.length,Math.min(12,bankColumns*2));
      const bankRows=Math.ceil(pageSize/bankColumns);
      const bankHeight=bank.length?30+bankRows*(cardHeight+8)+14:0;
-     if(groupHeight+bankHeight+34>height)continue;
+     if(groupHeight+bankHeight+100>height)continue;
      const score=cardWidth+Math.min(columns,4)*0.08;
      if(score>bestScore){bestScore=score;best={columns,cardWidth,bankPageSize:Math.max(1,pageSize)}}
      break;
