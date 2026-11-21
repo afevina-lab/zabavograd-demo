@@ -234,7 +234,7 @@ footer span{display:none}
 @keyframes float-planet{50%{transform:translateY(12px) rotate(5deg)}}
 .primary{background:transparent none center/100% 100% no-repeat;color:#fff;border:0;min-height:60px;text-shadow:0 1px 2px #183a60;box-shadow:none}
 .material-rule{border:1px solid #b8c9d8;border-radius:14px;padding:14px;margin:12px 0;background:#fff8}
-.material-rule>button{float:right}
+
 .material-rule strong{color:#365275}
 .picture-face small{position:absolute;bottom:0;left:0;right:0;background:#fffD;border-radius:8px;z-index:2}
 .icon-button{color:var(--ui-text);border:0}
@@ -339,7 +339,7 @@ h1,h2,h3,.card-back{font-family:Londrina, sans-serif}
 .category-picker ul ul{margin-left:14px;padding-left:14px;border-left:2px solid #7acfd166}
 .category-picker li{display:block}
 .category-picker .check{justify-content:flex-start}
-.material-rule .rule-delete{float:right;min-height:38px;padding:8px 22px;color:#fff5e8;background:transparent none center/100% 100% no-repeat;border:0}
+
 .effects{z-index:0;pointer-events:none}
 .cards,.welcome{z-index:2}
 .procedural-star{display:block;width:100%;aspect-ratio:1;background:#fff0bd;clip-path:polygon(50% 0,61% 37%,100% 50%,61% 63%,50% 100%,39% 63%,0 50%,39% 37%);animation:quiet-twinkle 17s ease-in-out infinite;animation-delay:var(--twinkle-delay)}
