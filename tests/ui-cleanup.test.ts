@@ -225,3 +225,16 @@ test('Toolbar icon sizes come from one responsive token contract',()=>{
  assert.equal([...css.matchAll(/\.app\.game-active \.play-toolbar \.icon-button\{/g)].length,1);
  assert.match(toolbar,/<button type="button" className="icon-button" aria-label="Полный экран"/);
 });
+
+
+test('Responsive shared toolbar gap is declared after the base layout',()=>{
+ const css=readFileSync('src/styles/layout.css','utf8');
+ const base='.app.game-active .play-toolbar.shared-toolbar{\n display:grid!important;';
+ const responsive='@media(max-width:650px){\n .app.game-active .play-toolbar.shared-toolbar{--zg-toolbar-layout-gap:5px}';
+ assert.ok(css.indexOf(base)>=0,'shared toolbar layout must exist');
+ assert.ok(css.indexOf(responsive)>css.indexOf(base),'responsive rule must follow base rule');
+ assert.match(css,/--zg-toolbar-layout-gap:12px;\s*gap:var\(--zg-toolbar-layout-gap\)!important/);
+ assert.equal([...css.matchAll(/--zg-toolbar-layout-gap:5px/g)].length,1);
+ assert.doesNotMatch(css,/\.play-toolbar\.shared-toolbar\{min-height:54px!important;gap:6px\}/);
+ assert.match(css,/@media\(max-width:600px\)\{\s*\.app\.game-active \.play-toolbar\.shared-toolbar\{min-height:54px!important\}/);
+});
