@@ -358,3 +358,122 @@
 .app .reading-length-range{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .app .reading-length-range .quantity-slider{min-width:0;margin:0}
 @media(max-width:720px){.app .reading-length-range{grid-template-columns:minmax(0,1fr)}}
+
+
+/* Zabavograd UI contract v1 — reusable size and spacing tokens.
+   Color and paper texture still come from theme variables; only geometry lives here. */
+.app[data-theme],.app[data-theme] dialog{
+ --zg-space-1:4px;
+ --zg-space-2:8px;
+ --zg-space-3:12px;
+ --zg-space-4:16px;
+ --zg-space-5:24px;
+ --zg-space-6:32px;
+ --zg-control-height:48px;
+ --zg-chip-size:52px;
+ --zg-control-radius:12px;
+ --zg-panel-radius:16px;
+}
+/* A button has one height regardless of icon/text or selected state. */
+.app[data-theme] dialog.sound-workshop .sound-chip-row button,
+.app[data-theme] dialog.sound-workshop .sound-chip .sound-symbol{
+ box-sizing:border-box!important;
+ height:var(--zg-chip-size)!important;
+ min-height:var(--zg-chip-size)!important;
+ min-width:var(--zg-chip-size)!important;
+ padding:0 10px!important;
+ display:inline-flex!important;
+ align-items:center!important;
+ justify-content:center!important;
+ margin:0!important;
+ line-height:1.1!important;
+ border-radius:var(--zg-control-radius)!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-chip-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--zg-space-2)!important}
+.app[data-theme] dialog.sound-workshop .sound-chip{display:inline-flex;align-items:center;gap:0!important;flex:none}
+.app[data-theme] .sound-chip-attached{position:relative;isolation:isolate;display:inline-flex!important;align-items:center;gap:0!important;padding-right:25px}
+.app[data-theme] .sound-chip-attached .sound-symbol{position:relative;z-index:2}
+.app[data-theme] .sound-chip-attached .sound-gear{
+ box-sizing:border-box!important;
+ width:39px!important;min-width:39px!important;
+ height:var(--zg-chip-size)!important;min-height:var(--zg-chip-size)!important;
+ margin:0 0 0 -6px!important;
+ padding:0 0 0 7px!important;
+ position:relative;z-index:1;
+ border-radius:0 12px 12px 0!important;
+ display:inline-flex;align-items:center;justify-content:center;
+ background:var(--ui-control-face)!important;
+ color:var(--ui-text)!important;
+}
+.app[data-theme] .sound-chip-attached .sound-gear .garden-icon{width:18px;height:18px}
+.app[data-theme] .selected-sounds{display:flex;align-items:center;gap:var(--zg-space-3);margin:var(--zg-space-3) 0!important}
+.app[data-theme] .selected-sounds .sound-symbol{
+ height:var(--zg-chip-size)!important;min-height:var(--zg-chip-size)!important;
+ min-width:var(--zg-chip-size)!important;
+ border-radius:12px!important;
+ background:var(--ui-deep)!important;color:var(--ui-paper)!important;
+ font-size:18px;
+}
+.app[data-theme] dialog.sound-workshop .sound-exclusion-disclosure{
+ margin:var(--zg-space-4) 0 0!important;
+ padding:0!important;
+ border:0!important;background:transparent!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-exclusion-disclosure>summary{
+ display:flex!important;justify-content:space-between;align-items:center;
+ box-sizing:border-box;
+ min-height:60px!important;
+ padding:8px 8px 8px 16px!important;
+ margin:0!important;
+ border-radius:var(--zg-panel-radius)!important;
+ cursor:pointer;
+}
+.app[data-theme] dialog.sound-workshop .sound-exclusion-disclosure>summary::before{display:none!important}
+.app[data-theme] dialog.sound-workshop .sound-exclusion-disclosure .control-well{margin-left:auto}
+.app[data-theme] dialog.sound-workshop .sound-exclusion-disclosure[open]>summary .control-well svg{transform:rotate(180deg)}
+.app[data-theme] dialog.sound-workshop .sound-exclusion-content{
+ padding:var(--zg-space-3) var(--zg-space-2) var(--zg-space-2);
+ display:grid;gap:var(--zg-space-3);
+ background:transparent!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-excluded-list{margin:0!important;min-height:0!important}
+.app[data-theme] dialog.sound-workshop .sound-excluded-list:empty{display:none!important}
+/* The lexical tree uses the same action sizes, row gaps, and disclosure arrows. */
+.app[data-theme] .category-picker .category-grid,
+.app[data-theme] .category-picker .category-grid ul{gap:var(--zg-space-2)!important}
+.app[data-theme] .category-picker .category-grid li{margin:0!important}
+.app[data-theme] .category-picker .category-grid summary{
+ min-height:var(--zg-control-height)!important;
+ padding:8px 10px!important;
+ display:flex;align-items:center;gap:var(--zg-space-2);
+ margin:0!important;
+}
+.app[data-theme] .category-picker .category-grid .control-well{flex:none;margin-left:auto}
+.app[data-theme] .category-picker .category-children{padding:var(--zg-space-2) 0!important}
+.app[data-theme] .category-picker .category-grid label.check{min-height:var(--zg-control-height);margin:0!important;align-items:center;gap:var(--zg-space-2)}
+/* Identical controls within all shared game menus. */
+.app[data-theme] .shared-settings-window .setup-empty{
+ display:flex;flex-direction:column;align-items:flex-start;
+ gap:var(--zg-space-3);padding:var(--zg-space-4)!important;
+}
+.app[data-theme] .shared-settings-window .setup-empty p{margin:0!important}
+.app[data-theme] .shared-settings-window .setup-empty button{
+ min-height:var(--zg-control-height);margin:0!important;
+}
+.app[data-theme] .shared-settings-window .settings-disclosure-body{padding:var(--zg-space-3) var(--zg-space-2) var(--zg-space-2)!important}
+.app[data-theme] .shared-settings-window .settings-disclosure-body>section+section{margin-top:var(--zg-space-4)!important}
+.app[data-theme] .shared-settings-window .settings-block .check{margin:var(--zg-space-2) 0!important}
+.app[data-theme] .shared-settings-window .settings-block .quantity-slider{margin:var(--zg-space-3) 0!important}
+.app[data-theme] .shared-settings-window .settings-block :is(h2,h3){margin-bottom:var(--zg-space-4)!important}
+.app[data-theme] .shared-settings-window .theme-section{margin:var(--zg-space-4) 0!important}
+.app[data-theme] .shared-settings-window .theme-section .themes{gap:var(--zg-space-3)!important}
+/* Repeated Memory actions must share size, including Back. */
+.app[data-theme] .modal.gui-panel .panel-scroll>.modal-back-action{
+ box-sizing:border-box;display:block;
+ width:100%;max-width:100%;
+ min-height:var(--zg-control-height);
+ padding:10px 16px!important;
+ margin:var(--zg-space-3) auto 0!important;
+ border-radius:var(--zg-control-radius);
+ font-size:16px;font-weight:650;
+}
