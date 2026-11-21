@@ -140,7 +140,12 @@ for(const [width,height] of [[1440,900],[390,844]]){
  await evaluate("(()=>{const e=document.querySelector('select[aria-label=\"Учебная задача\"]');e.value='automation';e.dispatchEvent(new Event('change',{bubbles:true}))})()");
  await until("!!document.querySelector('.sound-selection>button[data-field-state=required]')");
  await evaluate("document.querySelector('.sound-selection>button').click()");await until("!!document.querySelector('.sound-chip>button:not(:disabled)')");
- await evaluate("document.querySelector('.sound-chip>button:not(:disabled)').click()");await evaluate("document.querySelector('.sound-workshop .primary').click()");
+ await evaluate("document.querySelector('.sound-chip>button:not(:disabled)').click()");
+ assert(await evaluate("(()=>{const e=document.querySelector('.sound-chip>button[aria-pressed=true]'),s=getComputedStyle(e);return s.transform==='none'&&s.color!==s.backgroundColor})()"),'Selected sound must stay still with contrasting text');
+ await evaluate("document.querySelector('.sound-gear').click()");await sleep(400);
+ assert(await evaluate("(()=>{const d=document.querySelector('.sound-workshop'),f=d.querySelector(':scope>.sound-picker-actions'),r=f.getBoundingClientRect(),b=d.getBoundingClientRect();return !!f&&r.bottom<=b.bottom&&r.top>=b.top&&f.querySelector('.primary').textContent==='Готово'})()"),'Sound footer must remain separate from scrolling and use a concise action');
+ await screenshot('sound-editor-fixed-footer-'+width);
+ await evaluate("document.querySelector('.sound-workshop .primary').click()");
  await until("!!document.querySelector('.sound-selection>button[data-field-state=ready]')");
  assert(await evaluate("document.querySelector('.sound-selection>button').getAttribute('aria-invalid')!=='true'&&getComputedStyle(document.querySelector('.sound-selection>button')).borderColor!=='rgb(198, 59, 50)'"),'Sound selection required state did not clear');
 }
