@@ -2,7 +2,7 @@ import {SelectControl,selectIcon} from './design-system/SelectControl.tsx';
 import {MaterialSummary} from './design-system/MaterialSummary.tsx';
 import {SettingsWindow} from './design-system/SettingsWindow.tsx';
 import {GameDialog} from './design-system/GameDialog.tsx';
-import {useGameViewport} from './design-system/useGameViewport.ts';
+import {useGameViewport,enterGameViewport} from './design-system/useGameViewport.ts';
 import {GameSelect} from './GameSelect.tsx';
 import {TextDisplaySettings} from './TextDisplaySettings.tsx';
 import {readingLabel} from './reading.ts';
@@ -90,7 +90,7 @@ export function Matching(){
  const currentPage=Math.min(bankPage,pageCount-1);
  const visibleBank=remaining.slice(currentPage*boardLayout.bankPageSize,(currentPage+1)*boardLayout.bankPageSize);
  const boardVars={'--matching-columns':String(boardLayout.columns),'--matching-card-size':boardLayout.cardWidth+'px','--matching-caption-width':Math.max(162,boardLayout.cardWidth*1.55)+'px'} as CSSProperties;
- function start(){if(setupError||prepared.busy)return;const next=groups;limits.reset();setSession(next);setBank(shuffled(next.flatMap(g=>g.elements.slice(1))));setPlacements({});setVerdict({});setSelected(null);setBankPage(0);setFinished(false);setPaused(false);setMessage('');}
+ function start(){if(setupError||prepared.busy)return;enterGameViewport();const next=groups;limits.reset();setSession(next);setBank(shuffled(next.flatMap(g=>g.elements.slice(1))));setPlacements({});setVerdict({});setSelected(null);setBankPage(0);setFinished(false);setPaused(false);setMessage('');}
  function place(id:string,groupId:string){
  if(paused||finished||limits.lost)return;
  const existing=placements[groupId]||[],g=session.find(g=>g.id===groupId);
