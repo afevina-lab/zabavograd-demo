@@ -2,7 +2,6 @@ import {SelectControl,selectIcon} from './design-system/SelectControl.tsx';
 import {MaterialSummary} from './design-system/MaterialSummary.tsx';
 import {SettingsWindow} from './design-system/SettingsWindow.tsx';
 import {GameDialog} from './design-system/GameDialog.tsx';
-import {useMatchingFit} from './design-system/useMatchingFit.ts';
 import {useGameViewport} from './design-system/useGameViewport.ts';
 import {GameSelect} from './GameSelect.tsx';
 import {TextDisplaySettings} from './TextDisplaySettings.tsx';
@@ -68,7 +67,7 @@ export function Matching(){
  function artwork(e:MatchElement){const image=e.appearance==='word'?undefined:e.word.variants?.[0];return <>{image?(e.appearance==='silhouette'||e.appearance==='outline'?<DerivedArtwork image={image} outline={e.appearance==='outline'}/>:<CardArtwork image={image} label={e.word.label}/>):<span className="unbroken-card-text" style={{fontSize:`min(22px, ${110/Math.max(5,e.word.label.length*.65)}px)`}}>{readingLabel(e.word.label,learning)}</span>}{captions&&displayMode==='image-image'&&!kind&&image&&e.appearance==='original'&&<small>{readingLabel(e.word.label,learning)}</small>}</>;}
  function card(e:MatchElement,isPlaced=false){return <button type="button" key={e.id} data-match-card={e.id} disabled={paused||finished||!!limits.lost} className={'matching-card '+(selected===e.id?'chosen ':'')+(verdict[e.id]===false?'verdict-bad':verdict[e.id]===true?'verdict-good':'')} aria-label={e.appearance==='original'?e.word.label:e.appearance==='outline'?'Контур':'Тень'} onClick={()=>{if(drag.suppressClick())return;if(isPlaced)remove(e.id);else setSelected(e.id)}} onPointerDown={event=>{if(!isPlaced)drag.begin(event,'[data-match-group]',target=>place(e.id,target.dataset.matchGroup!));}}>{artwork(e)}</button>;}
  function resize(n:number){setSize(n);setManual(rows=>rows.map(row=>Array.from({length:n},(_,i)=>row[i]||'')));if(n>3)setMode('manual');}
- useGameViewport(session.length>0); useMatchingFit(session.length>0);
+ useGameViewport(session.length>0);
  return <div className={'app '+(session.length?'game-active':'')} {...themeAttributes(theme)} style={themeVars(theme,import.meta.env.BASE_URL)}>
  {!session.length?<SettingsWindow game="Соотнесение"><main className="matching-setup settings"><p>Выбери карточку из общего банка и помести её под подходящим элементом. Можно перетаскивать или нажимать.</p>
  <section className="settings-block"><h2>Учебный материал</h2><MaterialSettings textDisplayProvided={!kind&&(displayMode!=='image-image'||captions)} words={words} l={learning} setL={l=>{setLearning(l);if(l.mode==='math'){setSize(2);setDisplayMode('word-word')}else if(l.mode!=='lexical'&&mode==='family'){setMode('reading');setSize(2)}if(l.mode==='reading'&&(learning.mode!=='reading'||l.contentKinds?.some(k=>k!=='words'))){setMode('reading');setSize(2);setDisplayMode(l.contentKinds?.includes('syllables')?'word-word':'word-image')}}} f={filters} setF={part=>setFilters(f=>({...f,...part}))}/></section>
