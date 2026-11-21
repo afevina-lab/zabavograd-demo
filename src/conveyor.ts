@@ -92,7 +92,7 @@ export function isCloseConveyorDistractor(word:Word,learning:Learning):boolean{
  */
 export function materialConveyorDeck(positives:Word[],negatives:Word[],count:number,learning:Learning,rng=Math.random,negativeShare=.4):ConveyorCard[]{
  const yes=distinctCaptions(positives),no=distinctCaptions(negatives);
- const targetNegatives=Math.ceil(count*negativeShare);
+ const targetNegatives=negativeShare<=.4?conveyorIncorrectCount(count):Math.ceil(count*negativeShare);
  let invalid=Math.min(targetNegatives,no.length);
  if(yes.length<count-invalid)invalid=Math.max(invalid,count-yes.length);
  if(invalid>targetNegatives||no.length<invalid||yes.length<count-invalid)throw Error('Недостаточно подходящих карточек для Конвейера.');
