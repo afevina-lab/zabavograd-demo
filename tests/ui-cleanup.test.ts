@@ -319,3 +319,12 @@ test('All setup labels inherit the shared control rules, never per-game geometry
  assert.match(shared,/\.app \.settings label\.check\{display:flex/);
  assert.match(shared,/\.app\[data-theme\] \.settings label:not\(\.check\):has\(>\.select-control\)\{display:grid/);
 });
+
+
+test('Destructive setup edits do not borrow the primary Start-game button skin',()=>{
+ const material=readFileSync('src/MaterialSettings.tsx','utf8');
+ const sorting=readFileSync('src/Sorting.tsx','utf8');
+ assert.match(material,/className="secondary rule-delete"/);
+ assert.doesNotMatch(material,/className="primary rule-delete"/);
+ assert.match(sorting,/<button className="secondary" type="button" onClick=\{\(\)=>setExclusions/);
+});
