@@ -61,6 +61,11 @@ for(const [width,height] of [[1440,900],[1024,768],[768,1024],[390,844],[844,390
 await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
 for(const game of ['memory','sorting','matching','conveyor','transformations']){
 await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");await evaluate("document.querySelectorAll('.themes button')["+themeIndex+"]?.click()");await sleep(800);
+const setupGeometry=await evaluate("(()=>{const grid=document.querySelector('.setup-columns'),cols=[...grid?.querySelectorAll(':scope>.setup-column')||[]],footer=document.querySelector('.setup-footer'),preview=footer?.querySelector(':scope>.setup-material-preview'),start=[...footer?.children||[]].find(e=>e.matches('button.primary,button.start')),body=document.querySelector('.unified-settings-content');if(!grid||cols.length!==2||!footer||!preview||!start)return {ok:false,reason:'missing shared sections or material preview / start'};const sections=cols.map(c=>[...c.querySelectorAll('[data-setup-section]')].map(e=>e.dataset.setupSection));const p=preview.getBoundingClientRect(),b=start.getBoundingClientRect(),twoColumns=getComputedStyle(grid).gridTemplateColumns.split(' ').length===2;return {ok:JSON.stringify(sections)===JSON.stringify([['material','rules'],['task','appearance']]),sections,twoColumns,aligned:Math.abs(p.top-b.top)<5,notOverflowing:body.scrollWidth<=body.clientWidth+2,previewWidth:p.width,buttonWidth:b.width}})()");
+assert(setupGeometry.ok,'Unified setup sections: '+game+' '+width+' '+JSON.stringify(setupGeometry));
+assert(setupGeometry.notOverflowing,'Shared settings horizontally overflow: '+game+' '+width);
+if(width>=900)assert(setupGeometry.twoColumns&&setupGeometry.aligned,'Preview and Start must share one footer row: '+game+' '+width+' '+JSON.stringify(setupGeometry));
+await screenshot('unified-setup-'+game+'-'+width);
 if(game==='matching'){
  for(const value of ['word-word','word-image','image-word','image-image']){
  await evaluate("(()=>{const e=document.querySelector('select[aria-label=\"Режим карточек\"]');e.value='"+value+"';e.dispatchEvent(new Event('change',{bubbles:true}))})()");
