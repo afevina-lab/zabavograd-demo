@@ -111,3 +111,13 @@ test('lexical distractors come mostly from adjacent topics, not unrelated vocabu
  assert.equal(deck.filter(c=>!c.expected).length,4);
  assert(deck.filter(c=>!c.expected&&isCloseConveyorDistractor(c.word!,cfg)).length>=3);
 });
+
+test('sound-check Conveyor has majority opposition-only NO cards and no mixed phonemes',()=>{
+ const cfg:Learning={...initialLearning,mode:'automation',sounds:['р'],excludedSounds:['л']};
+ const positive=Array.from({length:10},(_,i)=>word('ракета'+i,'Тест',['р']));
+ const contrast=Array.from({length:12},(_,i)=>word('лампа'+i,'Тест',['л']));
+ const deck=materialConveyorDeck(positive,contrast,12,cfg,()=>.43,.6);
+ assert.equal(deck.filter(c=>!c.expected).length,8);
+ assert(deck.filter(c=>c.expected).every(c=>c.word!.phonemes!.includes('р')&&!c.word!.phonemes!.includes('л')));
+ assert(deck.filter(c=>!c.expected).every(c=>c.word!.phonemes!.includes('л')&&!c.word!.phonemes!.includes('р')));
+});
