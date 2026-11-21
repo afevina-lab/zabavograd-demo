@@ -616,7 +616,7 @@
  gap:var(--zg-space-2,8px)!important;
 }
 .app[data-theme] .shared-settings-window .setup-footer{
- background:var(--ui-frame-fill)!important;
+ background:var(--ui-setup-paper)!important;
  border-top:1px solid var(--ui-surface-edge)!important;
 }
 .app[data-theme] .shared-settings-window .settings-disclosure-body{
