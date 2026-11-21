@@ -515,3 +515,20 @@
  .app .shared-settings-window .setup-footer>:is(button.primary,button.start),
  .app .shared-settings-window .setup-footer>p[role=status]{grid-column:1!important;grid-row:auto!important}
 }
+
+
+/* Shared material toolbar: every preview uses the same square icon action. */
+.app[data-theme] .shared-settings-window .material-head .icon-button{
+ box-sizing:border-box;flex:0 0 auto;
+ width:var(--zg-heading-icon-size,46px)!important;
+ min-width:var(--zg-heading-icon-size,46px)!important;
+ height:var(--zg-heading-icon-size,46px)!important;
+ min-height:var(--zg-heading-icon-size,46px)!important;
+ padding:8px!important;
+ border-radius:var(--zg-control-radius,12px)!important;
+}
+.app[data-theme] .shared-settings-window .setup-footer>button.primary{
+ box-sizing:border-box;min-height:62px;
+ border-radius:var(--zg-panel-radius,16px)!important;
+ font-size:20px;font-weight:750;
+}
