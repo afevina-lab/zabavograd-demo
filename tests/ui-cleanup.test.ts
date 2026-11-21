@@ -230,11 +230,23 @@ test('Toolbar icon sizes come from one responsive token contract',()=>{
 test('Responsive shared toolbar gap is declared after the base layout',()=>{
  const css=readFileSync('src/styles/layout.css','utf8');
  const base='.app.game-active .play-toolbar.shared-toolbar{\n display:grid!important;';
- const responsive='@media(max-width:650px){\n .app.game-active .play-toolbar.shared-toolbar{--zg-toolbar-layout-gap:5px}';
+ const responsive='@media(max-width:650px){\n .app.game-active .play-toolbar.shared-toolbar{';
  assert.ok(css.indexOf(base)>=0,'shared toolbar layout must exist');
  assert.ok(css.indexOf(responsive)>css.indexOf(base),'responsive rule must follow base rule');
  assert.match(css,/--zg-toolbar-layout-gap:12px;\s*gap:var\(--zg-toolbar-layout-gap\)!important/);
  assert.equal([...css.matchAll(/--zg-toolbar-layout-gap:5px/g)].length,1);
  assert.doesNotMatch(css,/\.play-toolbar\.shared-toolbar\{min-height:54px!important;gap:6px\}/);
  assert.match(css,/@media\(max-width:600px\)\{\s*\.app\.game-active \.play-toolbar\.shared-toolbar\{min-height:54px!important\}/);
+});
+
+
+test('Narrow shared toolbar reserves fullscreen width and contains crowded controls',()=>{
+ const css=readFileSync('src/styles/layout.css','utf8');
+ const media=css.slice(css.indexOf('@media(max-width:650px){\\n .app.game-active .play-toolbar.shared-toolbar{'));
+ assert.match(media,/grid-template-columns:minmax\(0,1fr\) minmax\(0,auto\) max-content/);
+ assert.match(media,/\.toolbar-left\{[^}]*overflow-x:auto/);
+ assert.match(media,/\.toolbar-left::-webkit-scrollbar\{display:none\}/);
+ assert.match(media,/\.toolbar-centre\{min-width:0;max-width:clamp\(65px,25vw,160px\)\}/);
+ assert.match(media,/\.toolbar-centre \.counters\{min-width:0;max-width:100%;overflow:hidden/);
+ assert.match(media,/\.toolbar-right\{min-width:0\}/);
 });
