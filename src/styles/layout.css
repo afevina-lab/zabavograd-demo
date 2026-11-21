@@ -1029,3 +1029,112 @@ html:has(.settings-shade){overflow:hidden}
  .app.game-active .play-toolbar.shared-toolbar .toolbar-left{gap:4px}
  .app .shared-settings-window .math-settings .reading-kinds{gap:4px 8px!important}
 }
+
+
+/* Standard layout contract: 8/12/16/24px spacing, no stretched empty grid rows. */
+.app[data-theme] dialog.sound-workshop .sound-bank{
+ display:grid!important;
+ grid-template-columns:minmax(0,1.32fr) minmax(0,1fr)!important;
+ gap:16px!important;
+ align-items:start!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-bank-column{gap:12px!important}
+.app[data-theme] dialog.sound-workshop .sound-bank-column>section{
+ padding:16px!important;
+ background:var(--ui-setup-field)!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-bank-column>section h3{margin:0 0 12px!important}
+.app[data-theme] dialog.sound-workshop .sound-editor{
+ display:grid;gap:12px;
+ margin-top:16px!important;padding:14px!important;
+ background:transparent!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-editor>h3,
+.app[data-theme] dialog.sound-workshop .sound-editor>h4{margin:0!important}
+.app[data-theme] dialog.sound-workshop .sound-editor>.sound-chip-row{margin:0!important}
+.app[data-theme] dialog.sound-workshop .sound-exclusion-disclosure{grid-column:1/-1}
+.app[data-theme] dialog.sound-workshop .sound-chip-attached{padding-right:0!important}
+.app[data-theme] dialog.sound-workshop .sound-chip-attached .sound-gear{width:34px!important;min-width:34px!important}
+.app[data-theme] .selected-sounds .sound-chip-attached{padding-right:0!important}
+.app[data-theme] .selected-sounds .sound-gear{width:34px!important;min-width:34px!important}
+.app[data-theme] .category-picker .panel-scroll{display:flex;flex-direction:column;gap:12px}
+.app[data-theme] .category-picker .panel-scroll>h2,
+.app[data-theme] .category-picker .panel-scroll>p{margin:0!important}
+.app[data-theme] .category-picker .category-grid{margin:4px 0!important}
+.app[data-theme] .category-picker .sound-picker-actions{
+ position:sticky!important;bottom:0;
+ margin-top:0!important;padding:12px 4px!important;
+}
+/* Memory: an independent two-column workshop, not a tall 1fr grid row.
+   Prevents 'How to play' from inheriting the height of its long neighbor. */
+@media(min-width:801px){
+ .app[data-theme] .shared-settings-window .settings.unified-settings-content:has(>fieldset){
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.13fr);
+  grid-template-rows:repeat(4,min-content) auto;
+  column-gap:24px;row-gap:16px;
+  align-content:start;align-items:start;
+ }
+ .app[data-theme] .shared-settings-window .settings.unified-settings-content>fieldset{
+  display:contents!important;
+ }
+ .app[data-theme] .shared-settings-window .settings.unified-settings-content>fieldset>.settings-block:nth-child(1){
+  grid-column:1;grid-row:1;
+ }
+ .app[data-theme] .shared-settings-window .settings.unified-settings-content>fieldset>.settings-block:nth-child(2){
+  grid-column:2;grid-row:1/span 4;
+ }
+ .app[data-theme] .shared-settings-window .settings.unified-settings-content>fieldset>.settings-block:nth-child(3){
+  grid-column:1;grid-row:2;
+ }
+ .app[data-theme] .shared-settings-window .settings.unified-settings-content>.theme-section{
+  grid-column:1;grid-row:3;
+ }
+ .app[data-theme] .shared-settings-window .settings.unified-settings-content>.start{
+  grid-column:1;grid-row:4;margin:0!important;
+ }
+ .app[data-theme] .shared-settings-window .settings.unified-settings-content>.material-preparation{grid-column:1/-1}
+ .app[data-theme] .shared-settings-window .settings.unified-settings-content>p{grid-column:1/-1}
+}
+@media(max-width:800px){
+ .app[data-theme] dialog.sound-workshop .sound-bank{grid-template-columns:1fr!important}
+ .app[data-theme] .shared-settings-window .settings.unified-settings-content>fieldset{
+  grid-template-rows:auto!important;
+  align-items:start!important;
+ }
+ .app[data-theme] .shared-settings-window .settings.unified-settings-content>fieldset>.settings-block:nth-child(2),
+ .app[data-theme] .shared-settings-window .settings.unified-settings-content>fieldset>.settings-block:nth-child(3){
+  grid-row:auto!important;grid-column:auto!important;
+ }
+}
+
+
+/* Four arithmetic toggles share one line when there is room. */
+@media(min-width:900px){
+ .app[data-theme] .shared-settings-window .math-settings .reading-kinds{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:8px 12px!important;
+  align-items:center!important;
+ }
+}
+@media(min-width:600px) and (max-width:899px){
+ .app[data-theme] .shared-settings-window .math-settings .reading-kinds{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ }
+}
+.app[data-theme] .shared-settings-window .math-settings .reading-kinds .check{
+ white-space:nowrap;min-width:0;gap:8px!important;
+}
+/* The same spacing rules apply to arbitrary lexical disclosures and nested settings. */
+.app[data-theme] .shared-settings-window .filter-details{margin:12px 0!important;padding:0!important}
+.app[data-theme] .shared-settings-window .filter-details>summary{
+ min-height:52px!important;box-sizing:border-box;margin:0!important;
+ display:flex!important;align-items:center!important;
+ padding:10px 14px!important;
+}
+.app[data-theme] .shared-settings-window .filter-details>summary::before{
+ flex:none;margin-right:8px;
+}
+.app[data-theme] .shared-settings-window .filter-details[open]>summary{margin-bottom:12px!important}
