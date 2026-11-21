@@ -817,7 +817,7 @@
 }
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>.setup-material-preview{
  grid-column:1!important;grid-row:1/span 2!important;
- align-self:center;min-height:0;max-height:64px!important;
+ align-self:start;min-height:0;max-height:64px!important;
  margin:0!important;padding:0!important;overflow:hidden;
 }
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head{
