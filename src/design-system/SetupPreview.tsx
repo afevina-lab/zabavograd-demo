@@ -8,7 +8,7 @@ export function SetupPreview({actions,children,message}:{
  children?:ReactNode;
  message?:ReactNode;
 }){
- return <section className="settings-block setup-preview" data-setup-section="preview">
+ return <section className="settings-block setup-preview setup-material-preview" data-setup-section="preview">
   <div className="setup-preview-meta">
    <h2>В этой игре</h2>
    {actions&&<div className="setup-preview-actions">{actions}</div>}
