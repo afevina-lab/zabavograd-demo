@@ -176,3 +176,12 @@ test('Shared word-length track can choose either endpoint by pointer',()=>{
  assert.match(range,/if\(next<=lower\)onChange\(next,upper\)/);
  assert.match(range,/else if\(next>=upper\)onChange\(lower,next\)/);
 });
+
+
+test('Shared picker dialogs use the same secondary cancel button',()=>{
+ const dialogs=['WordPicker.tsx','CategoryPicker.tsx','SoundPicker.tsx'];
+ for(const file of dialogs){
+  const source=readFileSync('src/'+file,'utf8');
+  assert.match(source,/<button type="button" className="secondary"[^>]*>Отмена<\/button>/,file);
+ }
+});
