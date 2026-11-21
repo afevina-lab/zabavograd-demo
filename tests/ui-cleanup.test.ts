@@ -380,3 +380,22 @@ test('Nested supplementary material uses icon wells and does not float delete ac
  assert.match(css,/\.shared-settings-window \.material-rule-heading\{/);
  assert.match(css,/\.shared-settings-window \.setup-add-rule\{/);
 });
+
+
+test('Shared settings footer stays outside the independently scrolling body',()=>{
+ const shell=readFileSync('src/design-system/SettingsWindow.tsx','utf8');
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ const script=readFileSync('scripts/verify-settings-browser.mjs','utf8');
+ assert.match(shell,/return \{body:<>,?\{?intro\}?/);
+ assert.match(shell,/footer:<div className="setup-footer">\{footer\}<\/div>/);
+ assert.match(shell,/cloneElement\(child,\{className:[^}]+\},assembled\.body\)/);
+ assert.match(shell,/\{assembled\.footer\}/);
+ assert.match(css,/\.settings-frame\.shared-settings-window>\.setup-footer\{/);
+ assert.match(script,/Shared footer\/select geometry failed/);
+ assert.match(script,/Footer must stay visible after settings scroll/);
+});
+test('Lesson task selectors are not laid out as a three-column button tile group',()=>{
+ const material=readFileSync('src/MaterialSettings.tsx','utf8');
+ assert.doesNotMatch(material,/choiceClassName="task-tiles"/);
+ assert.match(material,/<GameSelect hideLabel=\{!nested\} label="Учебная задача"/);
+});
