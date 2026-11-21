@@ -24,7 +24,7 @@ import {CardArtwork} from './CardArtwork.tsx';
 import {defaultFilters} from './model.ts';
 import {groups,initialLearning,learningPool,balancedPick} from './learning.ts';
 
-import {arithmeticDeck,compositionDeck,corruptWord,conveyorConditions,materialConveyorDeck,conveyorErrorCount,startConveyor,stepConveyor,answerConveyor,conveyorTarget,type ConveyorCard,type ConveyorState,type ConveyorLevel} from './conveyor.ts';
+import {arithmeticDeck,compositionDeck,corruptWord,conveyorConditions,materialConveyorDeck,conveyorHasTargetSound,conveyorErrorCount,startConveyor,stepConveyor,answerConveyor,conveyorTarget,type ConveyorCard,type ConveyorState,type ConveyorLevel} from './conveyor.ts';
 
 export function Conveyor(){
  const {words,error}=useLibrary(),[theme,setTheme]=useTheme();
@@ -48,8 +48,10 @@ export function Conveyor(){
  const suitable=useMemo(()=>learningPool(words,filters,learning).filter(w=>material!=='pictures'||w.variants?.length),[words,filters,learning,material]);
  const suitableIds=useMemo(()=>new Set(suitable.map(w=>w.id)),[suitable]);
  const classifiedUniverse=useMemo(()=>condition==='material'&&['automation','differentiation','search'].includes(learning.mode)?universe.filter(w=>learning.searchTarget==='letter'||Boolean(w.phonemes)):condition==='material'&&learning.mode==='structure'?universe.filter(w=>w.type!==null):condition==='material'&&learning.mode==='lexical'?universe.filter(w=>w.categories?.length):universe,[condition,learning,universe]);
- const positives=useMemo(()=>condition==='material'?classifiedUniverse.filter(w=>suitableIds.has(w.id)):condition==='correct'?suitable.filter(w=>/^[а-яё]{2,}$/i.test(w.label)):suitable,[condition,classifiedUniverse,suitableIds,suitable]);
- const negatives=useMemo(()=>condition==='material'?classifiedUniverse.filter(w=>!suitableIds.has(w.id)):[],[condition,classifiedUniverse,suitableIds]);
+ const soundPresenceCheck=condition==='material'&&learning.mode==='automation'&&learning.sounds.length>0;
+ const isSuitableForCondition=(w:typeof classifiedUniverse[number])=>soundPresenceCheck?conveyorHasTargetSound(w,learning.sounds):suitableIds.has(w.id);
+ const positives=useMemo(()=>condition==='material'?classifiedUniverse.filter(isSuitableForCondition):condition==='correct'?suitable.filter(w=>/^[а-яё]{2,}$/i.test(w.label)):suitable,[condition,classifiedUniverse,suitableIds,suitable,soundPresenceCheck,learning.sounds]);
+ const negatives=useMemo(()=>condition==='material'?classifiedUniverse.filter(w=>!isSuitableForCondition(w)):[],[condition,classifiedUniverse,suitableIds,soundPresenceCheck,learning.sounds]);
  const legal=material==='math'?condition==='none'||condition==='math':condition==='none'||condition==='material'||material==='words'&&condition==='correct';
  const preparation=useMemo(()=>{try{if(!legal)throw Error('Выберите совместимое задание.');const selectedPositive=manualIds?positives.filter(w=>manualIds.includes(w.id)):positives;const selectedNegative=manualIds?negatives.filter(w=>manualIds.includes(w.id)):negatives;
    let next:ConveyorCard[]=[];
