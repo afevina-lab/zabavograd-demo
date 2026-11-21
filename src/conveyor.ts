@@ -88,10 +88,19 @@ export function materialConveyorDeck(positives:Word[],negatives:Word[],count:num
  let good=0,bad=0;
  return flags.map((expected,i)=>{const word=expected?valid[good++]:incorrect[bad++];return {id:'word-'+i,text:word.label,word,original:word.label,expected};});
 }
-export function arithmeticDeck(count:number,max:number,conditional:boolean,rng=Math.random,operations:{add:boolean;subtract:boolean;includeZero?:boolean}={add:true,subtract:true}):ConveyorCard[]{
- if(operations.includeZero===false){const pool=mathMaterial({target:max,add:operations.add,subtract:operations.subtract,includeZero:false});if(!pool.length)throw Error('Для выбранных условий нет примеров. Увеличьте число или включите 0.');const flags=conveyorConditions(count,conditional,rng);return flags.map((expected,i)=>{const w=pool[Math.floor(rng()*pool.length)],result=Number(w.answer);return {id:'math-'+i,text:conditional?w.label+' = '+(expected?result:result+1):w.label,original:w.answer,expected}});}
+export function arithmeticDeck(count:number,max:number,conditional:boolean,rng=Math.random,operations:{add:boolean;subtract:boolean;multiply?:boolean;divide?:boolean;includeZero?:boolean}={add:true,subtract:true}):ConveyorCard[]{
+ const available=([
+  ['add','add'],['subtract','subtract'],['multiply','multiply'],['divide','divide']
+ ] as const).filter(([key])=>operations[key]===true);
+ if(!available.length)throw Error('Выберите хотя бы одно арифметическое действие.');
+ const pools=available.map(([key])=>mathMaterial({target:max,add:key==='add',subtract:key==='subtract',multiply:key==='multiply',divide:key==='divide',includeZero:operations.includeZero})).filter(pool=>pool.length>0);
+ if(!pools.length)throw Error('Для выбранных условий нет примеров. Увеличьте число или включите 0.');
  const flags=conveyorConditions(count,conditional,rng);
- return Array.from({length:count},(_,i)=>{const a=Math.floor(rng()*(max+1)),b=Math.floor(rng()*(max-a+1));const subtract=operations.subtract&&(!operations.add||rng()<.5);const result=subtract?a:a+b;const expression=subtract?`${a+b} − ${b}`:`${a} + ${b}`;const expected=flags[i];return {id:'math-'+i,text:conditional?`${expression} = ${expected?result:result+1}`:expression,original:String(result),expected};});
+ return flags.map((expected,i)=>{
+  const pool=pools[i%pools.length],w=pool[Math.floor(rng()*pool.length)],result=Number(w.answer);
+  const wrong=result===max?result-1:result+1;
+  return {id:'math-'+i,text:conditional?w.label+' = '+(expected?result:wrong):w.label,original:w.answer,expected};
+ });
 }
 
 export function compositionDeck(count:number,target:number,includeZero=true):ConveyorCard[]{if(!includeZero&&target<2)throw Error('Состав числа без нуля доступен от 2.');return Array.from({length:count},(_,i)=>{const a=includeZero?i%(target+1):1+i%(target-1);return {id:'composition-'+i,text:target+' = '+a+' + ?',original:String(target-a),expected:true}})}

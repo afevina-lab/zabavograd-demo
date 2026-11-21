@@ -894,3 +894,138 @@ html:has(.settings-shade){overflow:hidden}
  .app.game-active .matching-group{padding:4px!important;gap:3px}
  .app.game-active .matching-slots{gap:3px}
 }
+
+
+/* Matching uses minimal, legible caption strips rather than full-size word cards. */
+.app.game-active .matching-stage-caption .matching-group{
+ flex-direction:column!important;
+ gap:4px!important;
+ background:transparent!important;
+ border:0!important;
+ box-shadow:none!important;
+ padding:2px 4px!important;
+}
+.app.game-active .matching-group-caption.caption-above .matching-anchor{order:0}
+.app.game-active .matching-group-caption.caption-above .matching-slots{order:1}
+.app.game-active .matching-group-caption.caption-below .matching-anchor{order:0}
+.app.game-active .matching-group-caption.caption-below .matching-slots{order:1}
+.app.game-active .matching-stage .matching-caption,
+.app.game-active .matching-stage .matching-caption-slot,
+.app.game-active .matching-stage .matching-word-card{
+ box-sizing:border-box;
+ width:var(--matching-caption-width,180px)!important;
+ min-width:0;
+ max-width:100%;
+ height:auto!important;
+ min-height:38px;
+ max-height:56px;
+ padding:5px 7px!important;
+ border-radius:10px;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+}
+.app.game-active .matching-stage .matching-caption{
+ background:color-mix(in srgb,var(--ui-paper) 90%,transparent)!important;
+ border:1px solid var(--ui-outline)!important;
+ color:var(--ui-text)!important;
+}
+.app.game-active .matching-stage .matching-word-card{
+ height:45px!important;
+ background:color-mix(in srgb,var(--ui-paper) 90%,transparent)!important;
+}
+.app.game-active .matching-stage .matching-caption-slot{
+ height:45px!important;
+ border-style:dashed;
+ background:color-mix(in srgb,var(--ui-paper) 52%,transparent)!important;
+}
+.app.game-active .matching-stage .matching-caption .matching-word-text,
+.app.game-active .matching-stage .matching-word-card .matching-word-text{
+ display:block;
+ width:100%;
+ min-width:0;
+ overflow-wrap:anywhere;
+ word-break:normal;
+ white-space:normal;
+ line-height:1.1;
+ font-weight:700;
+ text-align:center;
+}
+.app.game-active .matching-stage .matching-group-caption .matching-slots{width:100%;max-width:100%}
+.app.game-active .matching-stage .matching-bank{
+ background:transparent!important;
+ border:0!important;
+ box-shadow:none!important;
+ padding:4px!important;
+}
+.app.game-active .matching-stage .matching-bank-heading:empty{display:none}
+.app.game-active .matching-stage .matching-bank-heading{min-height:0!important;margin:0 0 4px}
+.app.game-active .matching-stage .matching-bank-pages{margin-left:auto}
+/* Keep navigation arrangement, align each control vertically inside the top bar. */
+.app.game-active .play-toolbar.shared-toolbar{
+ display:grid!important;
+ grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+ align-items:center!important;
+ min-height:66px!important;
+ padding-block:6px!important;
+}
+.app.game-active .play-toolbar.shared-toolbar .toolbar-left,
+.app.game-active .play-toolbar.shared-toolbar .toolbar-centre,
+.app.game-active .play-toolbar.shared-toolbar .toolbar-right{
+ align-self:center!important;
+ display:flex;
+ align-items:center!important;
+ margin-top:0!important;
+ margin-bottom:0!important;
+}
+.app.game-active .play-toolbar.shared-toolbar .toolbar-left{justify-content:flex-start;gap:9px}
+.app.game-active .play-toolbar.shared-toolbar .toolbar-centre{justify-content:center}
+.app.game-active .play-toolbar.shared-toolbar .toolbar-right{justify-content:flex-end}
+.app.game-active .play-toolbar.shared-toolbar .icon-button{vertical-align:middle;margin-block:0!important;flex:0 0 auto}
+/* Preview controls cannot overhang the content area. */
+.app .shared-settings-window .material-head{
+ position:relative!important;
+ display:flex!important;
+ align-items:center!important;
+ justify-content:space-between!important;
+ flex-wrap:wrap;
+ gap:12px;
+ min-height:58px;
+ padding:4px 0 12px;
+ margin:0 0 10px;
+}
+.app .shared-settings-window .material-head>div{
+ position:static!important;
+ transform:none!important;
+ display:flex;
+ align-items:center;
+ gap:10px;
+ margin-left:auto;
+}
+.app .shared-settings-window .material-head .icon-button{position:static!important;transform:none!important}
+.app .shared-settings-window .setup-empty{margin-top:8px}
+/* Compact coherent numerical settings and even vertical rhythm. */
+.app .shared-settings-window .math-settings{display:flex;flex-direction:column;gap:12px!important}
+.app .shared-settings-window .math-settings .quantity-slider{margin:4px 0!important}
+.app .shared-settings-window .math-settings .reading-kinds{
+ display:grid!important;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:8px 16px!important;
+ margin:0!important;
+}
+.app .shared-settings-window .math-settings .check{
+ min-height:38px!important;
+ margin:0!important;
+ padding:2px 0!important;
+}
+.app .shared-settings-window .math-settings>.check{margin:0!important}
+.app .shared-settings-window .setup-columns{align-items:start;row-gap:14px!important}
+.app .shared-settings-window .setup-column{display:flex;flex-direction:column;gap:14px!important;min-width:0}
+.app .shared-settings-window .setup-column>.settings-block{margin:0!important}
+.app .shared-settings-window .quantity-slider{margin-block:10px 12px!important}
+@media(max-width:600px){
+ .app.game-active .play-toolbar.shared-toolbar{min-height:54px!important;gap:6px}
+ .app.game-active .play-toolbar.shared-toolbar .toolbar-left{gap:4px}
+ .app .shared-settings-window .math-settings .reading-kinds{gap:4px 8px!important}
+}
