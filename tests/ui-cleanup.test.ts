@@ -190,7 +190,7 @@ test('Shared picker dialogs use the same secondary cancel button',()=>{
 
 test('Canonical UI geometry is tokenized across shared settings controls',()=>{
  const css=readFileSync('src/design-system/controls.css','utf8');
- for(const [token,value] of [['--zg-control-height','48px'],['--zg-select-height','54px'],['--zg-disclosure-height','68px'],['--zg-heading-icon-size','46px']]){
+ for(const [token,value] of [['--zg-control-height','48px'],['--zg-select-height','52px'],['--zg-disclosure-height','60px'],['--zg-heading-icon-size','46px']]){
   assert.match(css,new RegExp(token+':'+value.replace('.','\\.')+';'));
  }
  assert.match(css,/\.settings-window-heading \.icon-button\{[^}]*width:var\(--zg-heading-icon-size\);height:var\(--zg-heading-icon-size\)/);
@@ -336,4 +336,47 @@ test('Sorting fields do not override common slider and numeric input surfaces',(
  assert.doesNotMatch(layout,/\.sort-settings input:not\(\[type=checkbox\]\)/);
  assert.match(controls,/\.app\[data-theme\] \.settings input\[type=number\]/);
  assert.match(controls,/\.app \.settings input\[type=range\]/);
+});
+
+
+test('Conveyor keeps material-dependent choices adjacent and all game limits in rules',()=>{
+ const source=readFileSync('src/Conveyor.tsx','utf8');
+ const setup=source.slice(source.indexOf('<SettingsWindow'),source.indexOf('</SettingsWindow>'));
+ const material=setup.slice(setup.indexOf('data-setup-section="material"'),setup.indexOf('data-setup-section="task"'));
+ const task=setup.slice(setup.indexOf('data-setup-section="task"'),setup.indexOf('data-setup-section="rules"'));
+ const rules=setup.slice(setup.indexOf('data-setup-section="rules"'),setup.indexOf('data-setup-section="preview"'));
+ assert.match(material,/<GameSelect label="Учебная задача"/);
+ assert.match(material,/<MaterialSettings/);
+ assert.ok(material.indexOf('<MaterialSettings')>material.indexOf('</GameSelect>'));
+ assert.doesNotMatch(material,/<label>Карточки/);
+ assert.match(task,/<label>Карточки/);
+ assert.match(task,/<QuantitySlider label="Карточек"/);
+ assert.match(rules,/<label>Проверка/);
+ assert.match(rules, /\{limits\.settings\}/);
+ assert.doesNotMatch(task,/\{limits\.settings\}/);
+});
+
+test('Lexical dialog footer is outside scroll area and categories expand across its grid',()=>{
+ const picker=readFileSync('src/CategoryPicker.tsx','utf8');
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ assert.match(picker,/<strong>Выберите тему<\/strong>/);
+ assert.match(picker,/\{ordered\(roots\)\.map\(render\)\}<\/ul><\/div><div className="sound-picker-actions">/);
+ assert.match(css,/dialog\.category-picker>\.sound-picker-actions/);
+ assert.match(css,/li\.category-branch:has\(>details\[open\]\)/);
+ assert.match(css,/dialog\.category-picker \.category-grid ul/);
+ assert.match(css,/\.sound-picker-actions>button:is\(\.primary,\.secondary\)/);
+});
+
+test('Nested supplementary material uses icon wells and does not float delete actions',()=>{
+ const material=readFileSync('src/MaterialSettings.tsx','utf8');
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ const layout=readFileSync('src/styles/layout.css','utf8');
+ assert.match(material, /<ControlWell symbol="plus"\/>/);
+ assert.match(material, /className="setup-add-rule"/);
+ assert.match(material, /className="material-rule-heading"/);
+ assert.match(material,/hideLabel=\{!nested\}/);
+ assert.doesNotMatch(layout,/\.material-rule>button\{float:right\}/);
+ assert.doesNotMatch(layout,/\.material-rule \.rule-delete\{float:right/);
+ assert.match(css,/\.shared-settings-window \.material-rule-heading\{/);
+ assert.match(css,/\.shared-settings-window \.setup-add-rule\{/);
 });
