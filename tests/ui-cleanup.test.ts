@@ -214,3 +214,14 @@ test('Shared settings use their final heading and label rhythm without shadowed 
  assert.doesNotMatch(css,/\.app \.shared-settings-window \.settings-block label:not\(\.check\)\{margin-block:12px 8px\}/);
  assert.doesNotMatch(css,/\.app \.shared-settings-window \.settings-block select\{margin-top:8px\}/);
 });
+
+
+test('Toolbar icon sizes come from one responsive token contract',()=>{
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ const toolbar=readFileSync('src/GameToolbar.tsx','utf8');
+ assert.match(css,/\.app\.game-active \.play-toolbar\{[^}]*--zg-toolbar-icon-width:40px;--zg-toolbar-icon-height:40px;--zg-toolbar-icon-min-height:36px;--zg-toolbar-icon-padding:6px/);
+ assert.match(css,/\.app\.game-active \.play-toolbar \.icon-button\{[^}]*width:var\(--zg-toolbar-icon-width\)!important/);
+ assert.match(css,/@media\(max-width:600px\)\{[^}]*\.app\.game-active \.play-toolbar\{--zg-toolbar-icon-width:32px;--zg-toolbar-icon-height:34px;--zg-toolbar-icon-min-height:32px;--zg-toolbar-icon-padding:4px\}/);
+ assert.equal([...css.matchAll(/\.app\.game-active \.play-toolbar \.icon-button\{/g)].length,1);
+ assert.match(toolbar,/<button type="button" className="icon-button" aria-label="Полный экран"/);
+});
