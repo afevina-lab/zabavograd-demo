@@ -59,7 +59,7 @@ try{
 
 const report=[];
 async function choose(selector,value){await evaluate("(()=>{const e=document.querySelector("+JSON.stringify(selector)+");if(!e)throw Error('Missing select');e.value="+JSON.stringify(value)+";e.dispatchEvent(new Event('change',{bubbles:true}))})()");await sleep(100)}
-async function setup(game){
+async function setup(game,{timed=false}={}){
  await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");
  await evaluate("document.querySelectorAll('.themes button')["+themeIndex+"]?.click()");
  if(game==='sorting'){
@@ -74,6 +74,7 @@ async function setup(game){
  }
  if(game==='matching')await choose('select[aria-label="Учебная задача"]','math');
  await evaluate("(()=>{const d=document.querySelector('.challenge');d.open=true;const label=[...d.querySelectorAll('label')].find(e=>e.textContent==='5 жизней');const e=label.querySelector('input');if(!e.checked)e.click()})()");
+ if(timed)await evaluate("(()=>{const d=document.querySelector('.challenge');const label=[...d.querySelectorAll('label')].find(e=>e.textContent==='На время');if(!label)throw Error('Missing timer toggle');const e=label.querySelector('input');if(!e.checked)e.click()})()");
  await until("!![...document.querySelectorAll('.settings button')].find(e=>e.textContent.startsWith('Начать')&&!e.disabled)");
  await evaluate("[...document.querySelectorAll('.settings button')].find(e=>e.textContent.startsWith('Начать')&&!e.disabled).click()");
  await until("!!document.querySelector('.app.game-active')");
@@ -117,6 +118,16 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
  await until("!!document.querySelector('.modal,.settings-shade')");await screenshot(game+'-settings-'+width);
  report.push({game,width,pause:true,ended:true,settings:true});
  }
+}
+// Real Chromium render check: timer and lives must coexist in the centre for every game.
+await cmd('Emulation.setDeviceMetricsOverride',{width:844,height:390,deviceScaleFactor:1,mobile:true});
+await cmd('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:1});
+for(const game of ['memory','sorting','matching','conveyor','transformations']){
+ await setup(game,{timed:true});
+ await until("!!document.querySelector('.play-toolbar .toolbar-timer')");
+ const measured=await evaluate("(()=>{const bar=document.querySelector('.play-toolbar.shared-toolbar'),timer=bar.querySelector('.toolbar-timer'),life=bar.querySelector('.life-controls'),pause=bar.querySelector('.toolbar-mobile-pause'),full=bar.querySelector('.toolbar-mobile-fullscreen'),counters=bar.querySelector('.toolbar-centre .counters'),visible=e=>!!e&&getComputedStyle(e).display!=='none'&&e.getBoundingClientRect().width>0;const rects=[pause,timer,life,full].map(e=>e?.getBoundingClientRect());return {visible:[pause,timer,life,full].every(visible),inOrder:rects.every((r,i)=>r&&r.left>=0&&r.right<=innerWidth+1&&(i===0||rects[i-1].right<=r.left+1)),noDocumentScroll:document.documentElement.scrollWidth<=innerWidth+1,row:getComputedStyle(counters).flexDirection}})()");
+ assert(measured.visible&&measured.inOrder&&measured.noDocumentScroll&&measured.row==='row','Compact timed toolbar geometry failed '+game+': '+JSON.stringify(measured));
+ await screenshot(game+'-toolbar-timed-844');
 }
 // A genuine completed memory round, separate from the life-limit endings.
 await cmd('Emulation.setDeviceMetricsOverride',{width:1440,height:900,deviceScaleFactor:1,mobile:false});
