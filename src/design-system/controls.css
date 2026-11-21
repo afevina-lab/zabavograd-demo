@@ -612,7 +612,7 @@
 }
 .app[data-theme] .shared-settings-window .settings :is(.category-picker-trigger,.settings-disclosure>summary){
  min-height:var(--zg-disclosure-height,60px)!important;
- padding:8px 12px!important;margin:0 0 var(--zg-space-2,8px)!important;
+ padding:8px 8px 8px 12px!important;margin:0 0 var(--zg-space-2,8px)!important;
  gap:var(--zg-space-2,8px)!important;
 }
 .app[data-theme] .shared-settings-window .setup-footer{
