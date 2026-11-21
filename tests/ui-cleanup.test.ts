@@ -292,9 +292,10 @@ test('All five setups use one semantic two-column arrangement and common preview
  for(const file of ['main.tsx','Matching.tsx','Sorting.tsx','Conveyor.tsx','Transformations.tsx']){
   const source=readFileSync('src/'+file,'utf8');
   const setup=source.slice(source.indexOf('<SettingsWindow'),source.indexOf('</SettingsWindow>'));
-  for(const slot of ['material','rules','task','appearance','preview']){
+  for(const slot of ['material','rules','task','appearance']){
    assert.match(setup,new RegExp('data-setup-section="'+slot+'"'),file+': '+slot);
   }
+  assert.match(setup,/<SetupPreview /,file+': shared preview');
  }
  assert.match(css,/\.app \.shared-settings-window \.setup-columns\{display:grid;grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
  assert.match(css,/\.setup-footer>\.setup-material-preview\{/);
@@ -345,7 +346,7 @@ test('Conveyor keeps material-dependent choices adjacent and all game limits in 
  const setup=source.slice(source.indexOf('<SettingsWindow'),source.indexOf('</SettingsWindow>'));
  const material=setup.slice(setup.indexOf('data-setup-section="material"'),setup.indexOf('data-setup-section="task"'));
  const task=setup.slice(setup.indexOf('data-setup-section="task"'),setup.indexOf('data-setup-section="rules"'));
- const rules=setup.slice(setup.indexOf('data-setup-section="rules"'),setup.indexOf('data-setup-section="preview"'));
+ const rules=setup.slice(setup.indexOf('data-setup-section="rules"'),setup.indexOf('<SetupPreview'));
  assert.match(material,/<GameSelect label="Учебная задача"/);
  assert.match(material,/<MaterialSettings/);
  assert.ok(material.indexOf('<MaterialSettings')>material.indexOf('</GameSelect>'));
@@ -446,4 +447,32 @@ test('Only themes enter shared rail; other appearance controls stay in main task
  assert.match(shell,/right\.push\(<section className="settings-block setup-presentation-options">\{presentationParts\}<\/section>\)/);
  assert.match(shell,/appearance\.push\(cloneElement\(node,\{\},\.\.\.themeParts\)\)/);
  assert.match(sorting,/className="card-presentation settings-block"/);
+});
+
+
+test('All five setup previews share one word-and-status layout with no sub-CTA labels',()=>{
+ const preview=readFileSync('src/design-system/SetupPreview.tsx','utf8');
+ const window=readFileSync('src/design-system/SettingsWindow.tsx','utf8');
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ assert.match(preview,/className="settings-block setup-preview setup-material-preview"/);
+ assert.match(preview,/className="setup-preview-meta"/);
+ assert.match(preview,/className="setup-preview-actions"/);
+ assert.match(preview,/className="setup-preview-content"/);
+ assert.match(preview,/className="setup-preview-message" role="status"/);
+ assert.match(window,/node\.type===SetupPreview/);
+ assert.doesNotMatch(window,/node\.type==='p'&&node\.props\.role==='status'/);
+ assert.match(css,/grid-template-columns:minmax\(92px,\.37fr\) minmax\(0,\.63fr\)/);
+ assert.match(css,/-webkit-line-clamp:2/);
+ for(const file of ['main.tsx','Matching.tsx','Sorting.tsx','Conveyor.tsx','Transformations.tsx']){
+  const source=readFileSync('src/'+file,'utf8');
+  assert.match(source,/<SetupPreview actions=\{</,file);
+ }
+ const matching=readFileSync('src/Matching.tsx','utf8');
+ const conveyor=readFileSync('src/Conveyor.tsx','utf8');
+ const transformations=readFileSync('src/Transformations.tsx','utf8');
+ assert.doesNotMatch(matching,/Выбери карточку из общего банка/);
+ assert.doesNotMatch(matching,/В режиме картинок используются только слова с изображениями/);
+ assert.doesNotMatch(conveyor,/<p role="status">\{error\|\|message/);
+ assert.doesNotMatch(transformations,/Ребёнок отвечает вслух\. Взрослый запускает превращение/);
+ assert.match(transformations,/<GameSelect label="Задание" hideLabel/);
 });
