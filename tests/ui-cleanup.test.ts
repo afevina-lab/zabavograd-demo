@@ -41,4 +41,6 @@ test('Game stage never restores legacy scrolling or discarded card layouts',()=>
  assert.doesNotMatch(css,/\.cards\s*\{\s*grid-template-columns/);
  assert.doesNotMatch(css,/\.card\s*\{\s*aspect-ratio:\s*(?:1\.35|\.85|\.9)/);
  assert.doesNotMatch(css,/@media\(prefers-reduced-motion:reduce\)\s*\{\s*\}/);
+ assert.doesNotMatch(css,/\.stage\s*\{\s*min-height:\s*(?:540|610|520)px/);
+ assert.doesNotMatch(css,/\.workspace\s*\{\s*display:\s*grid/);
 });
