@@ -65,13 +65,20 @@ export function conveyorHasTargetSound(word:Word,targetSounds:string[]):boolean{
  * NO cards must contain an explicitly selected opposition without the target.
  * null means the word is not eligible for this round at all.
  */
-export function classifyConveyorSoundWord(word:Word,learning:Learning):boolean|null{
+export type ConveyorOppositionRule={mode:'sounds'|'lexical';sounds?:string[];categories?:string[]};
+/** The opposing rule is independent of therapy exclusions; lexical opposition
+ * means a word in the selected category with no target phoneme.
+ */
+export function classifyConveyorSoundWord(word:Word,learning:Learning,rule:ConveyorOppositionRule={mode:'sounds'}):boolean|null{
  if(!word.phonemes?.length||!learning.sounds.length)return null;
  const target=conveyorHasTargetSound(word,learning.sounds);
  const exclusions=[...new Set(learning.excludedSounds||[])].filter(s=>!learning.sounds.includes(s));
  const hasExcluded=exclusions.some(s=>containsExcludedSound(word,s));
  if(target)return hasExcluded?null:true;
- const oppositions=learning.conveyorOppositionSounds?.length?learning.conveyorOppositionSounds:learning.sounds.flatMap(defaultConveyorOpposition);
+ if(rule.mode==='lexical'){
+  return Boolean(rule.categories?.some(category=>word.categories?.some(path=>path===category||path.startsWith(category+'/'))))?false:null;
+ }
+ const oppositions=rule.sounds?.length?rule.sounds:learning.sounds.flatMap(defaultConveyorOpposition);
  return [...new Set(oppositions)].some(s=>!learning.sounds.includes(s)&&containsExcludedSound(word,s))?false:null;
 }
 export function isCloseConveyorDistractor(word:Word,learning:Learning):boolean{
