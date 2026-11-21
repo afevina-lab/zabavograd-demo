@@ -100,7 +100,7 @@ select{display:block;width:100%;padding:11px 26px 11px 12px;border:1px solid #dd
 .stage-footer>span:first-child{display:flex;gap:9px;align-items:center}
 .stage-footer>span:first-child>span{font-size:9px}
 .cards{display:grid;grid-template-columns:repeat(var(--columns),minmax(0,1fr));gap:13px;width:100%;max-width:760px}
-.card{aspect-ratio:1.15;position:relative;border:0;padding:0;background:none;perspective:900px;border-radius:13px;opacity:1}
+.card{position:relative;border:0;padding:0;background:none;perspective:900px;border-radius:13px;opacity:1}
 .card-inner{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
 .card.flipped .card-inner{transform:rotateY(180deg)}
 .card-back,.card-front{position:absolute;inset:0;backface-visibility:hidden;border-radius:13px;display:flex;align-items:center;justify-content:center;flex-direction:column}
@@ -145,7 +145,6 @@ main{padding:25px}
 .stage{padding:18px;min-height:500px}
 .counters{gap:10px}
 .play-toolbar{padding:0 15px}
-.cards{gap:8px}
 .card-back small{display:none}
 .toplinks>span{display:none}
 .stage-footer{padding:15px 12px}
@@ -164,8 +163,6 @@ h1{font-size:44px}
 .settings{width:100%;padding:20px}
 .play-area{width:100%;position:relative;top:0}
 .stage{min-height:470px;padding:18px}
-.cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.card{aspect-ratio:1.35}
 .card-front{font-size:13px}
 .card-back>span{font-size:26px}
 .word-picker{grid-template-columns:repeat(2,1fr)}
@@ -189,7 +186,6 @@ footer span{display:none}
 }
 .workspace{display:block}
 .play-area{position:relative;top:0;min-height:650px}
-.stage{min-height:520px}
 .settings-shade{position:fixed;inset:0;z-index:8;background:#293d3266;backdrop-filter:blur(5px);display:grid;place-items:center;padding:20px}
 .settings-shade .settings{width:min(620px,100%);max-height:90vh;overflow:auto;padding:28px}
 .settings .field-label{display:block}
@@ -203,7 +199,6 @@ footer span{display:none}
 .heart.broken{animation:heart-break .6s ease both;color:#b8bdb0;opacity:.2}
 .time-track{height:6px;background:#d8dece}
 .time-track>div{height:100%;transition:width 1s linear,background 1s linear}
-.cards{grid-template-columns:repeat(calc(var(--columns)*2),minmax(0,1fr));max-width:900px;gap:14px}
 .card:disabled{cursor:default}
 .app:fullscreen{overflow:auto;background:#f5f3ed}
 .app:fullscreen .topbar,.app:fullscreen .breadcrumb,.app:fullscreen .heading,.app:fullscreen footer{display:none}
@@ -217,8 +212,6 @@ footer span{display:none}
 @keyframes heart-break{0%{transform:scale(1.3);opacity:1;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}45%{transform:rotate(-18deg) translateY(4px);opacity:.8;clip-path:polygon(0 0,40% 0,60% 50%,40% 100%,0 100%)}100%{transform:translateY(10px) scale(.5);opacity:.2;clip-path:polygon(0 0,40% 0,60% 50%,40% 100%,0 100%)}}
 @media(max-width:760px){
 .workspace{display:block}
-.cards{grid-template-columns:repeat(calc(var(--columns)*2),minmax(0,1fr));gap:5px}
-.card{aspect-ratio:.85}
 .card-front{font-size:10px}
 .stage{padding:12px;min-height:480px}
 .card-back{border-width:2px}
@@ -294,7 +287,6 @@ footer span{display:none}
 .settings .pair-options{gap:1px}
 .settings .pair-options button{padding:4px}
 .card-front{font-size:18px}
-.card{aspect-ratio:.9}
 .picture-face small{font-size:14px}
 
 }
@@ -527,7 +519,7 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .app.game-active .topbar,.app.game-active .game-switch,.app.game-active .heading,.app.game-active .breadcrumb,.app.game-active main>h1,.app.game-active footer{display:none}
 .app.game-active .workspace{flex:1;min-height:0;width:100%}
 .app.game-active .play-area{display:flex;flex-direction:column;height:100%;min-height:0!important;max-width:100%;overflow:hidden}
-.app.game-active .stage,.app.game-active:fullscreen .stage{flex:1;height:auto!important;min-height:0!important;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#8c7abe #252c4c;scrollbar-gutter:stable}
+.app.game-active .stage,.app.game-active:fullscreen .stage{flex:1;height:auto!important;min-height:0!important;overflow:hidden!important;overscroll-behavior:contain;scrollbar-width:none!important;scrollbar-gutter:auto!important}
 .app.game-active .play-toolbar,.app.game-active .stage-footer,.app.game-active .time-track{flex-shrink:0}
 .app.game-active .play-toolbar{gap:12px;flex-wrap:wrap;height:auto;min-height:68px;padding:10px 16px}
 .app.game-active .game-actions{flex-wrap:wrap}
