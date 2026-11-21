@@ -373,8 +373,8 @@
  --zg-space-5:24px;
  --zg-space-6:32px;
  --zg-control-height:48px;
- --zg-select-height:54px;
- --zg-disclosure-height:68px;
+ --zg-select-height:52px;
+ --zg-disclosure-height:60px;
  --zg-heading-icon-size:46px;
  --zg-chip-size:52px;
  --zg-control-radius:12px;
@@ -470,8 +470,8 @@
 .app[data-theme] .shared-settings-window .settings-disclosure-body>section+section{margin-top:var(--zg-space-4)!important}
 .app[data-theme] .shared-settings-window .settings-block .check{margin:var(--zg-space-2) 0!important}
 .app[data-theme] .shared-settings-window .settings-block .quantity-slider{margin:var(--zg-space-3) 0!important}
-.app[data-theme] .shared-settings-window .settings-block :is(h2,h3){margin-bottom:var(--zg-space-4)!important}
-.app[data-theme] .shared-settings-window .theme-section{margin:var(--zg-space-4) 0!important}
+.app[data-theme] .shared-settings-window .settings-block :is(h2,h3){margin-bottom:var(--zg-space-2)!important}
+.app[data-theme] .shared-settings-window .theme-section{margin:var(--zg-space-2) 0!important}
 .app[data-theme] .shared-settings-window .theme-section .themes{gap:var(--zg-space-3)!important}
 /* Repeated Memory actions must share size, including Back. */
 .app[data-theme] .modal.gui-panel .panel-scroll>.modal-back-action{
@@ -487,17 +487,17 @@
 
 /* Canonical setup composition: same semantic columns and launch row in every game. */
 .app .shared-settings-window .unified-settings-content{display:block!important}
-.app .shared-settings-window .setup-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--zg-space-5,24px)!important;align-items:start}
-.app .shared-settings-window .setup-column{display:flex;flex-direction:column;gap:var(--zg-space-4,16px)!important;min-width:0}
+.app .shared-settings-window .setup-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--zg-space-4,16px)!important;align-items:start}
+.app .shared-settings-window .setup-column{display:flex;flex-direction:column;gap:var(--zg-space-2,8px)!important;min-width:0}
 .app .shared-settings-window .setup-column>.settings-block,
-.app .shared-settings-window .setup-section-fieldset{margin:0!important;padding:var(--zg-space-3,12px)!important;min-width:0}
+.app .shared-settings-window .setup-section-fieldset{margin:0!important;padding:var(--zg-space-2,8px)!important;min-width:0}
 .app .shared-settings-window .setup-section-fieldset{border:0!important;min-inline-size:0}
 .app .shared-settings-window .setup-section-fieldset>.settings-block{margin:0!important;padding:0!important}
 .app .shared-settings-window .setup-footer{
  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
- gap:var(--zg-space-3,12px) var(--zg-space-5,24px);
- align-items:start;margin-top:var(--zg-space-5,24px);
- padding:var(--zg-space-4,16px) var(--zg-space-2,8px) var(--zg-space-3,12px);
+ gap:var(--zg-space-2,8px) var(--zg-space-4,16px);
+ align-items:start;margin-top:var(--zg-space-3,12px);
+ padding:var(--zg-space-3,12px) var(--zg-space-2,8px) var(--zg-space-3,12px);
  border-top:1px solid var(--ui-field-edge);
 }
 .app .shared-settings-window .setup-footer>.setup-material-preview{
@@ -599,4 +599,58 @@
  .app[data-theme] dialog.category-picker .category-grid,
  .app[data-theme] dialog.category-picker .category-grid ul{grid-template-columns:minmax(0,1fr)!important}
  .app[data-theme] :is(dialog.category-picker,dialog.sound-workshop)>.sound-picker-actions>button:is(.primary,.secondary){min-width:0;flex:1}
+}
+
+
+/* Compact shared lesson preparation: one rhythm for all five games. */
+.app[data-theme] .shared-settings-window .settings-window-heading{
+ padding:var(--zg-space-2,8px) var(--zg-space-3,12px) var(--zg-space-2,8px)!important;
+ margin-bottom:var(--zg-space-2,8px)!important;
+}
+.app[data-theme] .shared-settings-window .setup-column .settings-block{
+ padding-block:var(--zg-space-2,8px)!important;
+}
+.app[data-theme] .shared-settings-window .settings :is(.category-picker-trigger,.settings-disclosure>summary){
+ min-height:var(--zg-disclosure-height,60px)!important;
+ padding:8px 12px!important;margin:0 0 var(--zg-space-2,8px)!important;
+ gap:var(--zg-space-2,8px)!important;
+}
+.app[data-theme] .shared-settings-window .setup-footer{
+ background:var(--ui-frame-fill)!important;
+ border-top:1px solid var(--ui-surface-edge)!important;
+}
+.app[data-theme] .shared-settings-window .settings-disclosure-body{
+ padding:var(--zg-space-2,8px) 0!important;
+}
+.app[data-theme] .shared-settings-window .material-rule-group{
+ display:grid;gap:var(--zg-space-2,8px);min-width:0;
+}
+.app[data-theme] .shared-settings-window .settings-disclosure-body .material-rule{
+ margin:0!important;padding:var(--zg-space-3,12px)!important;
+ min-width:0;box-sizing:border-box;overflow:hidden;
+}
+.app[data-theme] .shared-settings-window .material-rule-heading{
+ display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;
+ gap:var(--zg-space-2,8px);margin-bottom:var(--zg-space-2,8px);
+}
+.app[data-theme] .shared-settings-window .material-rule-heading strong{
+ color:var(--ui-text);font-size:16px;line-height:1.25;
+}
+.app[data-theme] .shared-settings-window .material-rule-heading .rule-delete{
+ float:none!important;flex:0 0 auto;width:auto;
+ min-height:40px!important;padding:8px 12px!important;margin:0!important;
+ font-size:14px!important;border-radius:var(--zg-control-radius,12px)!important;
+}
+/* Reuse the existing icon-well action rather than a new full-size button style. */
+.app[data-theme] .shared-settings-window .setup-add-rule{
+ display:flex!important;align-items:center;justify-content:space-between;
+ box-sizing:border-box;width:100%;min-width:0;min-height:var(--zg-control-height,48px)!important;
+ gap:var(--zg-space-2,8px);padding:5px 6px 5px 12px!important;margin:0!important;
+ border:1px solid var(--ui-field-edge)!important;border-radius:var(--zg-control-radius,12px)!important;
+ background:var(--ui-control-face)!important;color:var(--ui-text)!important;
+ box-shadow:inset 0 2px 1px var(--ui-field-glint),0 3px 0 var(--ui-control-bottom),0 5px 6px var(--ui-control-shadow)!important;
+ font-size:14px!important;font-weight:650;text-align:left;
+}
+.app[data-theme] .shared-settings-window .setup-add-rule .control-well{
+ flex:none;margin-left:auto;width:36px;height:36px;
 }
