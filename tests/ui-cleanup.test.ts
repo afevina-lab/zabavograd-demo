@@ -242,7 +242,7 @@ test('Responsive shared toolbar gap is declared after the base layout',()=>{
 
 test('Narrow shared toolbar reserves fullscreen width and contains crowded controls',()=>{
  const css=readFileSync('src/styles/layout.css','utf8');
- const media=css.slice(css.indexOf('@media(max-width:650px){\\n .app.game-active .play-toolbar.shared-toolbar{'));
+ const media=css.slice(css.indexOf('@media(max-width:650px){\n .app.game-active .play-toolbar.shared-toolbar{'));
  assert.match(media,/grid-template-columns:minmax\(0,1fr\) minmax\(0,auto\) max-content/);
  assert.match(media,/\.toolbar-left\{[^}]*overflow-x:auto/);
  assert.match(media,/\.toolbar-left::-webkit-scrollbar\{display:none\}/);
