@@ -112,7 +112,7 @@ export function materialConveyorDeck(positives:Word[],negatives:Word[],count:num
  if(wrongPool.length<invalid)throw Error('Недостаточно разных неподходящих карточек для Конвейера.');
  const near=wrongPool.filter(w=>isPreferredConveyorDistractor(w,learning,preferredRule));
  const mixedLearning:Learning={...learning,mode:'any',sounds:[]};
- const closeCount=Math.min(Math.ceil(invalid*.8),near.length);
+ const closeCount=Math.min(Math.round(invalid*.8),near.length);
  const chosenClose=balancedPick(near,closeCount,mixedLearning,rng);
  const closeIds=new Set(chosenClose.map(w=>w.id));
  const other=balancedPick(wrongPool.filter(w=>!closeIds.has(w.id)),invalid-closeCount,mixedLearning,rng);
