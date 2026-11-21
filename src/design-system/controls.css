@@ -483,3 +483,35 @@
  border-radius:var(--zg-control-radius);
  font-size:16px;font-weight:650;
 }
+
+
+/* Canonical setup composition: same semantic columns and launch row in every game. */
+.app .shared-settings-window .unified-settings-content{display:block!important}
+.app .shared-settings-window .setup-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--zg-space-5,24px)!important;align-items:start}
+.app .shared-settings-window .setup-column{display:flex;flex-direction:column;gap:var(--zg-space-4,16px)!important;min-width:0}
+.app .shared-settings-window .setup-column>.settings-block,
+.app .shared-settings-window .setup-section-fieldset{margin:0!important;padding:var(--zg-space-3,12px)!important;min-width:0}
+.app .shared-settings-window .setup-section-fieldset{border:0!important;min-inline-size:0}
+.app .shared-settings-window .setup-section-fieldset>.settings-block{margin:0!important;padding:0!important}
+.app .shared-settings-window .setup-footer{
+ display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+ gap:var(--zg-space-3,12px) var(--zg-space-5,24px);
+ align-items:start;margin-top:var(--zg-space-5,24px);
+ padding:var(--zg-space-4,16px) var(--zg-space-2,8px) var(--zg-space-3,12px);
+ border-top:1px solid var(--ui-field-edge);
+}
+.app .shared-settings-window .setup-footer>.setup-material-preview{
+ grid-column:1;grid-row:1/span 6;min-width:0;margin:0!important;padding:0!important;
+}
+.app .shared-settings-window .setup-footer>:is(button.primary,button.start){
+ grid-column:2;grid-row:1;align-self:start;justify-self:stretch;
+ width:100%;margin:0!important;min-height:var(--zg-control-height,48px);
+}
+.app .shared-settings-window .setup-footer>p[role=status]{grid-column:2;margin:0;min-width:0}
+.app .shared-settings-window .setup-footer .material-head{min-height:var(--zg-control-height,48px)}
+@media(max-width:899px){
+ .app .shared-settings-window .setup-columns,.app .shared-settings-window .setup-footer{grid-template-columns:minmax(0,1fr)!important}
+ .app .shared-settings-window .setup-footer>.setup-material-preview,
+ .app .shared-settings-window .setup-footer>:is(button.primary,button.start),
+ .app .shared-settings-window .setup-footer>p[role=status]{grid-column:1!important;grid-row:auto!important}
+}
