@@ -350,3 +350,11 @@
 .app[data-theme] .sound-workshop>.panel-scroll{flex:1;min-height:0;overflow:auto;max-height:none}
 .app[data-theme] .sound-workshop>.sound-picker-actions{position:relative;bottom:auto;flex:none;margin:0;padding:12px 8px 4px;box-sizing:border-box;width:100%;background:var(--ui-setup-paper)!important}
 .app[data-theme] dialog.sound-workshop[open]{position:fixed!important;inset:16px 0!important;margin:auto!important;height:calc(100dvh - 32px);max-height:calc(100dvh - 32px)!important}
+
+
+/* Shared two-ended numeric range, using the same sliders as Memory. */
+.app .reading-length-sliders{margin:14px 0 18px}
+.app .reading-length-sliders>strong{display:block;font-size:15px;margin-bottom:8px}
+.app .reading-length-range{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.app .reading-length-range .quantity-slider{min-width:0;margin:0}
+@media(max-width:720px){.app .reading-length-range{grid-template-columns:minmax(0,1fr)}}
