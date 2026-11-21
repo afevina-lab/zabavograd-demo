@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {startConveyor,stepConveyor,answerConveyor,conveyorTarget,conveyorSpeed,conveyorErrorCount,arithmeticDeck,corruptWord} from '../src/conveyor.ts';
+import {startConveyor,stepConveyor,answerConveyor,conveyorTarget,conveyorSpeed,conveyorErrorCount,arithmeticDeck,corruptWord,conveyorHasTargetSound} from '../src/conveyor.ts';
+import type {Word} from '../src/material-types.ts';
 const deck=arithmeticDeck(4,10,true,()=>.3);
 test('easy stops at centre until teacher answers; rejected condition can be correct',()=>{
  const rejected=deck.find(card=>!card.expected);assert(rejected);
@@ -20,3 +21,16 @@ test('answers are accepted before centre, accelerate exit, and only correct answ
 test('error count follows word length and phrases are never corrupted as a single word',()=>{for(const word of ['да','кот','машина'])assert.equal(conveyorErrorCount(word),1);assert.equal(conveyorErrorCount('машинка'),2);assert.equal(corruptWord('два слова',1,'mixed',new Set()),null);});
 
 test('final score can be four of twelve: wrong marks never increment it',()=>{const cards=arithmeticDeck(12,10,false,()=>.3);let state=startConveyor(cards);for(let i=0;i<12;i++){state=answerConveyor(state,i<4,false);for(let frame=0;frame<200&&!state.finished&&!conveyorTarget(state);frame++)state=stepConveyor(state,cards,'easy',.1,false);}assert.equal(state.correct,4);assert.equal(state.marked,12);assert(state.finished);});
+
+
+test('Conveyor sound-presence check accepts hard Р in зеркало and компьютер regardless of automation eligibility',()=>{
+ const fixture=(label:string,eligibility:string):Word=>({
+  id:label,label,phonemes:label==='зеркало'?['з\'','э','р','к','а','л','а']:['к','а','м','п\'','й','у','т\'','э','р'],
+  sounds:{р:[{eligibility,position:label==='зеркало'?'середина':'конец'}]}
+ } as unknown as Word);
+ for(const word of [fixture('зеркало','not_approved'),fixture('компьютер','needs_review')]){
+  assert.equal(conveyorHasTargetSound(word,['р']),true);
+  assert.equal(conveyorHasTargetSound(word,["р'"]),false);
+ }
+ assert.equal(conveyorHasTargetSound({id:'мак',label:'мак',phonemes:['м','а','к']} as Word,['р']),false);
+});
