@@ -138,7 +138,7 @@ test('Shared material actions use the design-system button variants',()=>{
  assert.match(memory,/<button type="button" className="icon-button" title="Перемешать состав"/);
  assert.match(memory,/<button type="button" className="icon-button" title="Выбрать слова вручную"/);
  assert.match(picker,/<button type="button" className="secondary" onClick={close}>Отмена<\/button>/);
- assert.match(material,/<button type="button" className="secondary" onClick=\{\(\)=>setL\(/);
+ assert.match(material,/<button type="button" className="setup-add-rule" onClick=\{\(\)=>setL\(/);
  assert.match(theme,/<button type="button" key=\{id\} onClick=\{\(\)=>setTheme\(id\)\}/);
 });
 
