@@ -415,7 +415,9 @@ test('Landscape mobile settings retain a usable scrolling area above the pinned 
 test('All games inherit a third, independently scrolling theme rail rather than separate theme grids',()=>{
  const shell=readFileSync('src/design-system/SettingsWindow.tsx','utf8');
  const controls=readFileSync('src/design-system/controls.css','utf8');
- assert.match(shell,/else if\(purpose==='appearance'\)appearance\.push\(item\)/);
+ assert.match(shell,/else if\(purpose==='appearance'\)\{/);
+ assert.match(shell,/part\.type===ThemePicker/);
+ assert.match(shell,/className="settings-block setup-presentation-options"/);
  assert.match(shell,/className="setup-workspace"/);
  assert.match(shell,/className="setup-theme-rail"/);
  assert.match(shell,/className=\{'setup-theme-scroll'/);
@@ -434,4 +436,14 @@ test('Shared setup footer contains only preview, main action and status, not ove
  assert.match(controls,/\.setup-footer>\.setup-material-preview\{[^}]*grid-row:1\/span 2!important/);
  assert.match(controls,/\.setup-footer\{[^}]*max-height:80px/);
  assert.match(controls,/--zg-setup-control-height:52px/);
+});
+
+
+test('Only themes enter shared rail; other appearance controls stay in main task column',()=>{
+ const shell=readFileSync('src/design-system/SettingsWindow.tsx','utf8');
+ const sorting=readFileSync('src/Sorting.tsx','utf8');
+ assert.match(shell,/presentationParts=parts\.filter/);
+ assert.match(shell,/right\.push\(<section className="settings-block setup-presentation-options">\{presentationParts\}<\/section>\)/);
+ assert.match(shell,/appearance\.push\(cloneElement\(node,\{\},\.\.\.themeParts\)\)/);
+ assert.match(sorting,/className="card-presentation settings-block"/);
 });
