@@ -349,3 +349,4 @@
 .app[data-theme] dialog.sound-workshop[open]{display:flex;flex-direction:column;max-height:calc(100dvh - 32px)!important}
 .app[data-theme] .sound-workshop>.panel-scroll{flex:1;min-height:0;overflow:auto;max-height:none}
 .app[data-theme] .sound-workshop>.sound-picker-actions{position:relative;bottom:auto;flex:none;margin:0;padding:12px 8px 4px;box-sizing:border-box;width:100%;background:var(--ui-setup-paper)!important}
+.app[data-theme] dialog.sound-workshop[open]{position:fixed!important;inset:16px 0!important;margin:auto!important;height:calc(100dvh - 32px);max-height:calc(100dvh - 32px)!important}
