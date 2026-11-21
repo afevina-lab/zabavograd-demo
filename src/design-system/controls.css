@@ -745,3 +745,211 @@
   padding:2px 8px 4px!important;margin-bottom:3px!important;
  }
 }
+
+
+/* Unified settings architecture: two material/rules columns + independent narrow theme rail.
+   All five games inherit these exact rules from SettingsWindow, not local game CSS. */
+.app[data-theme] .settings-frame.shared-settings-window{
+ --zg-setup-gap:8px;
+ --zg-setup-control-height:52px;
+ --zg-setup-rail-width:190px;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-workspace{
+ box-sizing:border-box;display:grid;flex:1 1 auto;min-width:0;min-height:0;
+ grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;
+ align-items:stretch;gap:var(--zg-setup-gap);
+ overflow:hidden;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-workspace>.unified-settings-content{
+ box-sizing:border-box;min-width:0;min-height:0!important;max-height:100%;height:auto;
+ overflow-x:hidden!important;overflow-y:auto!important;
+ padding:var(--zg-space-2,8px)!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-columns{
+ grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ gap:var(--zg-setup-gap)!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-column{
+ gap:var(--zg-setup-gap)!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-column>.settings-block,
+.app[data-theme] .settings-frame.shared-settings-window .setup-section-fieldset{
+ padding:6px 8px!important;margin:0!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .settings-block :is(h2,h3){
+ font-size:18px!important;line-height:1.2;margin:0 0 6px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .settings-block label:not(.check){
+ margin-block:6px 4px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .settings .game-choice{
+ margin:0 0 6px!important;gap:4px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .settings .select-control select{
+ min-height:var(--zg-setup-control-height)!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .settings :is(.category-picker-trigger,.settings-disclosure>summary){
+ min-height:var(--zg-setup-control-height)!important;
+ margin:0 0 var(--zg-space-1,4px)!important;
+ padding-block:5px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .settings .setup-add-rule{
+ min-height:var(--zg-setup-control-height)!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .settings :is(.settings-disclosure-body,.advanced-material){
+ margin-block:var(--zg-space-1,4px)!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .settings-block .quantity-slider{
+ margin:var(--zg-space-2,8px) 0!important;
+}
+
+/* A compact, truly independent summary/action row (no six-row spanning grid). */
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer{
+ box-sizing:border-box;display:grid!important;flex:0 0 auto;
+ grid-template-columns:minmax(0,1.15fr) minmax(220px,.85fr)!important;
+ grid-template-rows:auto min-content!important;
+ align-items:center!important;gap:0 var(--zg-setup-gap)!important;
+ width:100%;height:auto!important;min-height:0!important;max-height:80px;
+ margin:0!important;padding:5px 8px!important;
+ overflow:hidden;
+ background:var(--ui-setup-paper)!important;
+ border-top:1px solid var(--ui-surface-edge)!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer>.setup-material-preview{
+ grid-column:1!important;grid-row:1/span 2!important;
+ align-self:center;min-height:0;max-height:64px!important;
+ margin:0!important;padding:0!important;overflow:hidden;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head{
+ min-height:36px!important;max-height:38px!important;margin:0!important;
+ padding:0!important;gap:var(--zg-space-1,4px)!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head .icon-button{
+ width:36px!important;min-width:36px!important;height:36px!important;min-height:36px!important;
+ padding:5px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-material-summary{
+ margin:0!important;max-height:1.3em!important;white-space:nowrap;overflow:hidden;
+ text-overflow:ellipsis;line-height:1.25!important;font-size:13px;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer>button.primary{
+ grid-column:2!important;grid-row:1!important;
+ height:var(--zg-setup-control-height)!important;
+ min-height:var(--zg-setup-control-height)!important;
+ padding:7px 16px!important;margin:0!important;
+ border-radius:var(--zg-control-radius,12px)!important;
+ font-size:17px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer>button.primary::after{
+ width:22px;height:22px;flex:none;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer>p[role=status]{
+ grid-column:2!important;grid-row:2!important;
+ margin:2px 0 0!important;min-height:0;max-height:16px;
+ line-height:1.2;font-size:12px;
+ white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-extra-notes{
+ margin:8px 0 0;font-size:13px;line-height:1.3;
+}
+
+/* ThemePicker stays a single instance. On smaller screens use a compact disclosure. */
+.app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail{
+ min-width:0;min-height:0;max-height:112px;overflow:hidden;
+ border-top:1px solid var(--ui-surface-edge);
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-theme-toggle{
+ display:flex!important;align-items:center;justify-content:space-between;
+ box-sizing:border-box;width:100%;height:36px;min-height:36px!important;
+ border:1px solid var(--ui-field-edge)!important;
+ border-radius:var(--zg-control-radius,12px)!important;
+ padding:5px 12px!important;
+ color:var(--ui-text)!important;background:var(--ui-control-face)!important;
+ font-size:14px;font-weight:700;cursor:pointer;
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-theme-scroll{
+ display:none;min-height:0;max-height:75px;overflow-x:auto;overflow-y:hidden;
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-theme-scroll.is-expanded{display:block}
+.app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail .settings-block{
+ padding:0!important;margin:0!important;min-width:0;
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail .settings-block>h2,
+.app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail .theme-section>.field-label{
+ display:none!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail .theme-section{
+ border:0!important;margin:0!important;padding:0!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail .themes{
+ display:flex!important;flex-wrap:nowrap!important;gap:6px!important;max-width:none;
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail .themes button{
+ box-sizing:border-box;flex:0 0 132px!important;min-width:0!important;
+ width:132px;min-height:64px!important;padding:5px!important;
+ border-radius:var(--zg-control-radius,12px)!important;
+ font-size:13px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail .themes i{
+ height:35px!important;width:100%;margin:0 0 3px;
+}
+@media(min-width:1180px) and (min-height:560px){
+ .app[data-theme] .settings-shade .settings-frame.shared-settings-window{
+  width:min(1360px,calc(100vw - 28px))!important;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-workspace{
+  grid-template-columns:minmax(0,1fr) var(--zg-setup-rail-width);
+  grid-template-rows:minmax(0,1fr);
+  gap:var(--zg-space-3,12px);
+ }
+ .app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail{
+  display:flex;flex-direction:column;grid-column:2;grid-row:1;
+  min-height:0;max-height:none;overflow:hidden;
+  border-top:0;border-left:1px solid var(--ui-surface-edge);
+  padding:4px 0 0 10px;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window .setup-theme-toggle{display:none!important}
+ .app[data-theme] .settings-frame.shared-settings-window .setup-theme-scroll{
+  display:block!important;flex:1 1 auto;min-height:0;max-height:none;
+  overflow-y:auto;overflow-x:hidden;
+  scrollbar-width:thin;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail .settings-block>h2{
+  display:block!important;font-size:17px!important;margin:0 0 8px!important;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail .themes{
+  display:flex!important;flex-direction:column;flex-wrap:nowrap!important;
+  gap:var(--zg-space-2,8px)!important;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail .themes button{
+  flex:0 0 auto!important;width:100%!important;min-width:0!important;
+  min-height:76px!important;padding:6px!important;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail .themes i{
+  height:48px!important;
+ }
+}
+@media(max-width:600px){
+ .app[data-theme] .settings-frame.shared-settings-window .setup-columns{
+  grid-template-columns:minmax(0,1fr)!important;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer{
+  grid-template-columns:minmax(0,1fr) minmax(105px,.7fr)!important;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head .icon-button{
+  width:32px!important;min-width:32px!important;height:32px!important;min-height:32px!important;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>button.primary{
+  font-size:14px!important;padding:5px 8px!important;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>button.primary::after{display:none}
+}
+/* Keep the footer compact on touch devices in landscape; disclosure must not crowd the body. */
+@media(orientation:landscape) and (max-height:550px) and (min-width:600px){
+ .app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail{max-height:36px}
+ .app[data-theme] .settings-frame.shared-settings-window .setup-theme-scroll.is-expanded{max-height:75px}
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer{max-height:64px;padding:3px 8px!important}
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>button.primary{
+  height:46px!important;min-height:46px!important;font-size:15px!important;
+ }
+}
