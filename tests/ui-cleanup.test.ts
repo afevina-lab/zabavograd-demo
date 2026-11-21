@@ -166,3 +166,13 @@ test('Reading length is one shared two-ended range, not separate QuantitySliders
  assert.match(css,/\.range-slider-track::before/);
  assert.match(css,/\.range-slider-track input:focus-visible/);
 });
+
+
+test('Shared word-length track can choose either endpoint by pointer',()=>{
+ const range=readFileSync('src/design-system/RangeSlider.tsx','utf8');
+ assert.match(range,/onPointerDown=\{event=>\{/);
+ assert.match(range,/event\.target!==event\.currentTarget/);
+ assert.match(range,/event\.currentTarget\.getBoundingClientRect\(\)/);
+ assert.match(range,/if\(next<=lower\)onChange\(next,upper\)/);
+ assert.match(range,/else if\(next>=upper\)onChange\(lower,next\)/);
+});
