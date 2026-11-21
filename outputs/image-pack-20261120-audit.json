@@ -1,0 +1,279 @@
+{
+  "count": 39,
+  "created_cards": 19,
+  "entries": [
+    {
+      "word": "конфета",
+      "id": "ru-noun-extra-20261109-016",
+      "src": "/assets/words/konfeta.webp",
+      "sha256": "a3e79a5617b6e5e61da1052ff86082be06c501d37183b32d4e26eda0c485e85e",
+      "operation": "link"
+    },
+    {
+      "word": "леденец",
+      "id": "image-pack-20261120-8bc8d5171df6",
+      "src": "/assets/words/ledenets.webp",
+      "sha256": "70b099e8e69a5ff684bcf964ba9effd38abedd69f10374f49f0c9ae919a09e8b",
+      "operation": "link"
+    },
+    {
+      "word": "мармелад",
+      "id": "image-pack-20261120-d523dfc5bedb",
+      "src": "/assets/words/marmelad.webp",
+      "sha256": "80f7e5f4c38e7e08baa873d605f5321b3375b6ae33f82235d16006bf31654e4d",
+      "operation": "link"
+    },
+    {
+      "word": "драже",
+      "id": "ru-r-add-d0b4d180d0b0d0b6d0b5",
+      "src": "/assets/words/drazhe.webp",
+      "sha256": "7e331edfa45acdcd742dcca376c12bbcbbfaf7e7926135e8fd112e9d2cafa463",
+      "operation": "link"
+    },
+    {
+      "word": "кекс",
+      "id": "ru-noun-extra-20261109-014",
+      "src": "/assets/words/keks.webp",
+      "sha256": "da5dda15b59b7221422f1c394bae81e04cc8c297866d22ee212ce6559fa12505",
+      "operation": "link"
+    },
+    {
+      "word": "дорожный знак",
+      "id": "image-pack-20261120-de5275ef5c64",
+      "src": "/assets/words/dorozhnyy_znak.webp",
+      "sha256": "39caa50f9b923f47fc8b63f024d9630fbe7ba12d7fd6e3acdab7b2925121f9fa",
+      "operation": "link"
+    },
+    {
+      "word": "духи",
+      "id": "image-pack-20261120-144dd4e65cc5",
+      "src": "/assets/words/dukhi.webp",
+      "sha256": "56e62dca09f5d4d2efaa4f1440b59fdac469b37d59f2d425cf8d3dee4d82d838",
+      "operation": "link"
+    },
+    {
+      "word": "крем",
+      "id": "ru-home-20261105-fa53a4f6",
+      "src": "/assets/words/krem.webp",
+      "sha256": "e0edc034a9024550a81a30af84f16d96948b9e9e2a1ecff50de014965631ecb9",
+      "operation": "link"
+    },
+    {
+      "word": "тушь",
+      "id": "image-pack-20261120-3deecb9cef23",
+      "src": "/assets/words/tush.webp",
+      "sha256": "4f0b535aaed072e13f108eb242e4d6ba80c53b940e5dc8ac144dcefc433f2c4b",
+      "operation": "link"
+    },
+    {
+      "word": "пудра",
+      "id": "image-pack-20261120-33fa94f97034",
+      "src": "/assets/words/pudra.webp",
+      "sha256": "6a5679ba4a7910d688b3e38b420dc93d54d19ab77c391a95fe0b8b9648e7ba57",
+      "operation": "link"
+    },
+    {
+      "word": "румяна",
+      "id": "ru-r-add-d180d183d0bcd18fd0bdd0b0",
+      "src": "/assets/words/rumyana.webp",
+      "sha256": "cc5ede5831cdc4573a8e3498055b6e506a38a82c79deb09fc49ad61db5c53519",
+      "operation": "link"
+    },
+    {
+      "word": "помада",
+      "id": "image-pack-20261120-f13b9379ecf4",
+      "src": "/assets/words/pomada.webp",
+      "sha256": "e3e0449bcdde69bba6f364406819cf4bb7768fa9a1a5cb26c9ab11c606aa8e00",
+      "operation": "link"
+    },
+    {
+      "word": "пончик",
+      "id": "image-pack-20261120-688267b382d5",
+      "src": "/assets/words/ponchik.webp",
+      "sha256": "66648f9aae32a780fca031a050482ae526358356495311038a95b63c767b1e38",
+      "operation": "link"
+    },
+    {
+      "word": "бублик",
+      "id": "image-pack-20261120-d2c46b77a8b0",
+      "src": "/assets/words/bublik.webp",
+      "sha256": "34e24959114b98f375845adc661c1e18e423c95fff8bc41116c4b8d4682434f3",
+      "operation": "link"
+    },
+    {
+      "word": "оркестр",
+      "id": "image-pack-20261120-307d9c06abbf",
+      "src": "/assets/words/orkestr.webp",
+      "sha256": "0781fad9858946eaf33301507926d1c9b11bf4beb759f68396d5bf3c40c2bc18",
+      "operation": "link"
+    },
+    {
+      "word": "дирижёр",
+      "id": "ru-r-add-d0b4d0b8d180d0b8d0b6d191d180",
+      "src": "/assets/words/dirizher.webp",
+      "sha256": "975b3321e5dfa5568c0cf700687bad954e29d9f4c8c184b66e1cf7ababe7f33f",
+      "operation": "link"
+    },
+    {
+      "word": "ветеринар",
+      "id": "lex-v2-d0b2d0b5d182d0b5d180d0b8d0bdd0b0d180",
+      "src": "/assets/words/veterinar.webp",
+      "sha256": "973826b852a894d33a287941b5bc5815ff98e9aa2bf9f60a06b38021ebf4f5c4",
+      "operation": "link"
+    },
+    {
+      "word": "садовник",
+      "id": "lex-v2-d181d0b0d0b4d0bed0b2d0bdd0b8d0ba",
+      "src": "/assets/words/sadovnik.webp",
+      "sha256": "f553ecc0fd99993dbfc45be1467f3512c85b6baa05c9976ba52cee9d3aa5e000",
+      "operation": "link"
+    },
+    {
+      "word": "художница",
+      "id": "image-pack-20261120-ac746bb25fd4",
+      "src": "/assets/words/khudozhnitsa.webp",
+      "sha256": "a6d51a29e2fe9124a748eda9a33adf7660824c35d3c6be2b54938c509a584b34",
+      "operation": "link"
+    },
+    {
+      "word": "певец",
+      "id": "lex-v2-d0bfd0b5d0b2d0b5d186",
+      "src": "/assets/words/pevets.webp",
+      "sha256": "bfab7cfc371815aee3981cff0de01fcf638e3d989128da5bf71316c5f66868cc",
+      "operation": "link"
+    },
+    {
+      "word": "сантехник",
+      "id": "image-pack-20261120-0dfbf5e88cc6",
+      "src": "/assets/words/santekhnik.webp",
+      "sha256": "e99dec539ebf2e0f0fe223a865b5b7c06aec99fb398cf810fedc45fc20f5b1ed",
+      "operation": "link"
+    },
+    {
+      "word": "электрик",
+      "id": "image-pack-20261120-301d744f3f66",
+      "src": "/assets/words/elektrik.webp",
+      "sha256": "be500d026e4c10937819203a19bb24d1ef2a6d99d1b2acfe11839ddff095cc15",
+      "operation": "link"
+    },
+    {
+      "word": "пожарный",
+      "id": "ru-new-20261102-0065",
+      "src": "/assets/words/pozharnyy.webp",
+      "sha256": "f925e8175df6c0b2b0f52c8a5b432fbb9bfb02de46c86b6ba29f2c2ff5879412",
+      "operation": "link"
+    },
+    {
+      "word": "рыбак",
+      "id": "ru-r-extra-022",
+      "src": "/assets/words/rybak.webp",
+      "sha256": "e67fbbcf2bb6aecc4b4b5f7fd0d20edbdc24e3e08ccb44331bacce66c987cb78",
+      "operation": "replace"
+    },
+    {
+      "word": "парикмахер",
+      "id": "lex-v2-d0bfd0b0d180d0b8d0bad0bcd0b0d185d0b5d180",
+      "src": "/assets/words/parikmakher.webp",
+      "sha256": "408b03a22727f2cc761061df94ae8ee03747b78dffbe4ef49ba38c53aa7f8f29",
+      "operation": "link"
+    },
+    {
+      "word": "балерина",
+      "id": "image-pack-20261120-7ea474a52ebe",
+      "src": "/assets/words/balerina.webp",
+      "sha256": "4e81d0c5ad25911dddbfa872999d3def7fea26690f587e52f3926be81ada80e0",
+      "operation": "link"
+    },
+    {
+      "word": "учительница",
+      "id": "image-pack-20261114-504adad504c0",
+      "src": "/assets/words/uchitelnitsa-20261114.webp",
+      "sha256": "f949de60113ac69aed5db9bc440c3c6842fc93d0d6eac13067b2256b4a9b7a01",
+      "operation": "replace"
+    },
+    {
+      "word": "водитель",
+      "id": "lex-v2-d0b2d0bed0b4d0b8d182d0b5d0bbd18c",
+      "src": "/assets/words/voditel.webp",
+      "sha256": "1b6e67faf471ec0064cf233a6ff4d55043e567b1395a21db1e97a8f290f24e33",
+      "operation": "link"
+    },
+    {
+      "word": "солдат",
+      "id": "lex-v2-d181d0bed0bbd0b4d0b0d182",
+      "src": "/assets/words/soldat.webp",
+      "sha256": "cc42cd9a5cb76fe1ed777c221102e9c9704352c3169d870e6aed5fce07ae7225",
+      "operation": "link"
+    },
+    {
+      "word": "уборщик",
+      "id": "lex-v2-d183d0b1d0bed180d189d0b8d0ba",
+      "src": "/assets/words/uborshchik.webp",
+      "sha256": "0745f62b9e5b03080aaf08b080975be93978a651d0cf88ef09443e01c2ae719a",
+      "operation": "link"
+    },
+    {
+      "word": "дровосек",
+      "id": "image-pack-20261120-2434039d0026",
+      "src": "/assets/words/drovosek.webp",
+      "sha256": "1aa06a4af6e58db159361f1ca2b162059fc4f3922f1bd8d1f3abdab2cc282652",
+      "operation": "link"
+    },
+    {
+      "word": "фокусник",
+      "id": "image-pack-20261120-790c065a3241",
+      "src": "/assets/words/fokusnik.webp",
+      "sha256": "087bef217c0f1b9a07b1ffb0e7dae2913699c885a8e590febe0b78fb0a5275a8",
+      "operation": "link"
+    },
+    {
+      "word": "учёный",
+      "id": "lex-v2-d183d187d191d0bdd18bd0b9",
+      "src": "/assets/words/uchenyy.webp",
+      "sha256": "92f106978efeffec5731a4abcf5c6ac2e850085d129b19d9a3fa30b01770f9c9",
+      "operation": "link"
+    },
+    {
+      "word": "щит",
+      "id": "image-pack-20261120-2c97720d10aa",
+      "src": "/assets/words/shchit.webp",
+      "sha256": "eb406fde3b42c890e26f3a86ce716e2edf00a9274105d9799c81adfbf74df02a",
+      "operation": "link"
+    },
+    {
+      "word": "пальма",
+      "id": "ru-plant-20261104-d0bfd0b0d0bbd18cd0bcd0b0",
+      "src": "/assets/words/palma.webp",
+      "sha256": "7972586843da84b15885d2b4aa78bde063139d059b39f6b757e3536bd3180ccc",
+      "operation": "link"
+    },
+    {
+      "word": "одуванчик",
+      "id": "ru-plant-20261104-d0bed0b4d183d0b2d0b0d0bdd187d0b8d0ba",
+      "src": "/assets/words/oduvanchik.webp",
+      "sha256": "a3ffa022a1697e6fda3b51b76d55f0b4e42b1da20cb7f1a6ec5155a3775c7fd2",
+      "operation": "link"
+    },
+    {
+      "word": "пробирка",
+      "id": "image-pack-20261120-dcb486fa89bb",
+      "src": "/assets/words/probirka.webp",
+      "sha256": "ec8451cb45829fb2588b0f57ec2e5ef9aa63cbab01b32a6c148a5cdc1feb0c8c",
+      "operation": "link"
+    },
+    {
+      "word": "шкатулка",
+      "id": "image-pack-20261120-750cd2044ccd",
+      "src": "/assets/words/shkatulka.webp",
+      "sha256": "2bcf0871583a900628f761e19becc20dc549ab1ddb76996e898465ee6bc098e9",
+      "operation": "link"
+    },
+    {
+      "word": "тренер",
+      "id": "lex-v2-d182d180d0b5d0bdd0b5d180",
+      "src": "/assets/words/trener.webp",
+      "sha256": "fe75b526085304930cf0ecfb43055065d499c585d1f40747a45d10b4d7fdbb14",
+      "operation": "link"
+    }
+  ]
+}
