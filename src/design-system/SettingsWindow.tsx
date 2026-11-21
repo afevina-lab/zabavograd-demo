@@ -1,10 +1,11 @@
-import {Children,cloneElement,isValidElement,type ReactNode} from 'react';
+import {Children,cloneElement,isValidElement,useState,type ReactNode} from 'react';
 import {Icon} from '../GameUI.tsx';
 /** The single settings shell for every game. Only its content varies. */
 export function SettingsWindow({game,children}:{game:string;children:ReactNode}){
  const child=Children.only(children);
+ const [themeOpen,setThemeOpen]=useState(false);
  function arrange(content:ReactNode){
-  const nodes=Children.toArray(content),left:ReactNode[]=[],right:ReactNode[]=[],footer:ReactNode[]=[],intro:ReactNode[]=[];
+  const nodes=Children.toArray(content),left:ReactNode[]=[],right:ReactNode[]=[],footer:ReactNode[]=[],intro:ReactNode[]=[],appearance:ReactNode[]=[],extras:ReactNode[]=[];
   let section=0,seenSection=false;
   function place(node:ReactNode,fieldsetDisabled?:boolean){
    if(isValidElement<{className?:string;children?:ReactNode;disabled?:boolean;'data-setup-section'?:string}>(node)&&node.type==='fieldset'&&Children.toArray(node.props.children).some(child=>isValidElement<{className?:string}>(child)&&child.type==='section'&&child.props.className?.includes('settings-block'))){
@@ -18,17 +19,24 @@ export function SettingsWindow({game,children}:{game:string;children:ReactNode})
     const item=fieldsetDisabled?<fieldset className="setup-section-fieldset" disabled={fieldsetDisabled}>{element}</fieldset>:element;
     if(preview)footer.push(item);
     else if(purpose==='material'||purpose==='rules')left.push(item);
-    else if(purpose==='task'||purpose==='appearance')right.push(item);
+    else if(purpose==='task')right.push(item);
+    else if(purpose==='appearance')appearance.push(item);
     else (section++%2?right:left).push(item);
    }else if(!seenSection)intro.push(node);
-   else footer.push(node);
+   else if(isValidElement<{className?:string;role?:string}>(node)&&((node.type==='button'&&node.props.className?.split(/\s+/).includes('primary'))||(node.type==='p'&&node.props.role==='status')))footer.push(node);
+   else extras.push(node);
   }
   nodes.forEach(node=>place(node));
-  return {body:<>{intro}<div className="setup-columns"><div className="setup-column">{left}</div><div className="setup-column">{right}</div></div></>,footer:<div className="setup-footer">{footer}</div>};
+  return {body:<>{intro}<div className="setup-columns"><div className="setup-column">{left}</div><div className="setup-column">{right}</div></div>{extras.length>0&&<div className="setup-extra-notes">{extras}</div>}</>,
+   theme:<aside className="setup-theme-rail" aria-label="Оформление игры">
+    <button type="button" className="setup-theme-toggle" aria-expanded={themeOpen} aria-controls="setup-theme-list" onClick={()=>setThemeOpen(v=>!v)}>Оформление <span aria-hidden="true">{themeOpen?'▴':'▾'}</span></button>
+    <div className={'setup-theme-scroll'+(themeOpen?' is-expanded':'')} id="setup-theme-list">{appearance}</div>
+   </aside>,
+   footer:<div className="setup-footer">{footer}</div>};
  }
  const assembled=isValidElement<{className?:string;children?:ReactNode}>(child)?arrange(child.props.children):null;
  return <div className="settings-shade"><section className="settings-frame shared-settings-window" role="dialog" aria-modal="true" aria-label={'Настройки: '+game}>
  <header className="settings-window-heading"><div className="settings-adventure-title"><span className="settings-adventure-emblem" aria-hidden="true"><Icon name="Star"/></span><div><p className="settings-eyebrow">Забавоград · пора играть</p><h2>{game}</h2><span>Подготовка к игре</span></div></div><a className="icon-button" href={import.meta.env.BASE_URL+'home.html'} aria-label="Домой" title="На главную"><Icon name="Home1"/></a></header>
- {assembled&&isValidElement<{className?:string;children?:ReactNode}>(child)?<>{cloneElement(child,{className:(child.props.className||'')+' settings unified-settings-content'},assembled.body)}{assembled.footer}</>:child}
+ {assembled&&isValidElement<{className?:string;children?:ReactNode}>(child)?<><div className="setup-workspace">{cloneElement(child,{className:(child.props.className||'')+' settings unified-settings-content'},assembled.body)}{assembled.theme}</div>{assembled.footer}</>:child}
  </section></div>;
 }
