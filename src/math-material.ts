@@ -36,7 +36,15 @@ export function mathMaterial(options:Partial<MathSettings>={}):Word[]{
    }
   }
  }
- const filtered=rows.filter(([label,answer])=>includeZero||answer!==0&&!/(^|\D)0(\D|$)/.test(label));
+ if(o.answerOnly&&o.kind==='examples'){
+  rows.length=0;
+  const n=limit;
+  for(let k=0;k<=Math.min(32,limit);k++)if(o.add&&(includeZero||k>0&&n-k>0))rows.push([k+' + '+(n-k),n]);
+  for(let k=includeZero?0:1;k<=Math.min(32,maxMathTarget-n);k++)if(o.subtract)rows.push([(n+k)+' − '+k,n]);
+  if(o.multiply)for(let d=1;d<=Math.min(32,n);d++)if(n%d===0)rows.push([d+' × '+(n/d),n]);
+  if(o.divide)for(let d=1;d<=Math.min(32,Math.floor(maxMathTarget/n));d++)rows.push([(n*d)+' ÷ '+d,n]);
+ }
+  const filtered=rows.filter(([label,answer])=>includeZero||answer!==0&&!/(^|\D)0(\D|$)/.test(label));
  const byAnswer=new Map<number,Array<[string,number]>>();
  for(const row of filtered){const group=byAnswer.get(row[1])||[];group.push(row);byAnswer.set(row[1],group);}
  const distinct=o.answerOnly&&o.kind==='examples'?[...byAnswer.values()].flat().filter(row=>row[1]===limit):[...byAnswer.entries()].map(([answer,group])=>group[answer%group.length]);
