@@ -93,6 +93,10 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
   assert.notEqual(compact.scroll,'auto','No toolbar scrolling: '+game+' '+width);
   assert(compact.within&&!compact.overlap,'Mobile toolbar elements overflow or overlap: '+game+' '+width);
   await screenshot(game+'-toolbar-'+width);
+ }else{
+  const desktop=await evaluate("(()=>{const bar=document.querySelector('.play-toolbar.shared-toolbar'),center=bar.querySelector('.toolbar-centre'),counts=center.querySelector('.counters'),r=center.getBoundingClientRect(),b=bar.getBoundingClientRect();return {row:getComputedStyle(counts).flexDirection,inside:r.left>=b.left&&r.right<=b.right+1,life:!!counts.querySelector('.life-controls'),fullscreen:!!bar.querySelector('.toolbar-right .toolbar-mobile-fullscreen')}})()");
+  assert(desktop.row==='row'&&desktop.inside&&desktop.life&&desktop.fullscreen,'Desktop counter contract failed '+game+': '+JSON.stringify(desktop));
+  await screenshot(game+'-toolbar-desktop-'+width);
  }
  assert(await evaluate("!document.querySelector('.play-toolbar .lesson-tag')&&document.querySelectorAll('.life-controls .icon-button').length===0"),'Toolbar clutter remains');
  await until("!!document.querySelector('button[aria-label=Пауза]')");
