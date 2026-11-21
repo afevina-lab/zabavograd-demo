@@ -185,3 +185,21 @@ test('Shared picker dialogs use the same secondary cancel button',()=>{
   assert.match(source,/<button type="button" className="secondary"[\s\S]*?Отмена<\/button>/,file);
  }
 });
+
+
+test('Canonical UI geometry is tokenized across shared settings controls',()=>{
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ for(const [token,value] of [['--zg-control-height','48px'],['--zg-select-height','54px'],['--zg-disclosure-height','68px'],['--zg-heading-icon-size','46px']]){
+  assert.match(css,new RegExp(token+':'+value.replace('.','\\.')+';'));
+ }
+ assert.match(css,/\.settings-window-heading \.icon-button\{[^}]*width:var\(--zg-heading-icon-size\);height:var\(--zg-heading-icon-size\)/);
+ assert.match(css,/\.app\[data-theme\] \.settings \.select-control select\{[^}]*min-height:var\(--zg-select-height\)/);
+ assert.match(css,/\.app\[data-theme\] \.settings \.settings-disclosure>summary,\.app\[data-theme\] \.settings \.category-picker-trigger\{[^}]*min-height:var\(--zg-disclosure-height\)/);
+ assert.doesNotMatch(css,/\.settings-window-heading \.icon-button\{[^}]*width:46px;height:46px/);
+});
+
+test('GameSelect forwards its optional styling variant into the common wrapper',()=>{
+ const source=readFileSync('src/GameSelect.tsx','utf8');
+ assert.match(source,/choiceClassName=''/);
+ assert.match(source,/className=\{\["game-choice",choiceClassName\]\.filter\(Boolean\)\.join\(" "\)\}/);
+});
