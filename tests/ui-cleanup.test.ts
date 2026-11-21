@@ -256,3 +256,23 @@ test('Every game requests touch fullscreen directly from Start action',()=>{
  assert.match(memory,/toolbar-timer/);
  assert.match(sorting,/toolbar-timer/);
 });
+
+
+test('All game counters use one centered desktop row and no obsolete mobile column',()=>{
+ const css=readFileSync('src/styles/layout.css','utf8');
+ assert.match(css,/\.app\.game-active \.play-toolbar\.shared-toolbar \.toolbar-centre>\.counters\{[^}]*flex:0 1 auto;flex-direction:row;flex-wrap:nowrap/);
+ assert.match(css,/\.app\.game-active \.play-toolbar\.shared-toolbar \.toolbar-centre>\.counters\{[^}]*justify-content:center/);
+ assert.doesNotMatch(css,/\.toolbar-centre \.counters\{flex-direction:column/);
+});
+
+test('Chromium smoke covers compact and desktop counters in all five games',()=>{
+ const script=readFileSync('scripts/verify-dialogs-browser.mjs','utf8');
+ assert.match(script,/Emulation\.setTouchEmulationEnabled/);
+ assert.match(script,/for\(const game of \['memory','sorting','matching','conveyor','transformations'\]\)/);
+ assert.match(script,/Compact toolbar must show only pause/);
+ assert.match(script,/Desktop counter contract failed/);
+ assert.match(script,/Compact timed toolbar geometry failed/);
+ assert.match(script,/game\+'-toolbar-timed-844'/);
+ const reading=readFileSync('scripts/verify-settings-browser.mjs','utf8');
+ assert.match(reading,/Word length must use one accessible two-ended track/);
+});
