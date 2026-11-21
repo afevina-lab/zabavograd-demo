@@ -504,7 +504,6 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .app.game-active .play-area{display:flex;flex-direction:column;height:100%;min-height:0!important;max-width:100%;overflow:hidden}
 .app.game-active .stage,.app.game-active:fullscreen .stage{flex:1;height:auto!important;min-height:0!important;overflow:hidden!important;overscroll-behavior:contain;scrollbar-width:none!important;scrollbar-gutter:auto!important}
 .app.game-active .play-toolbar,.app.game-active .stage-footer,.app.game-active .time-track{flex-shrink:0}
-.app.game-active .play-toolbar{gap:12px;flex-wrap:wrap;height:auto;min-height:68px;padding:10px 16px}
 .app.game-active .game-actions{flex-wrap:wrap}
 .app.game-active .stage>.overlay{position:fixed;inset:0;z-index:9;padding:24px;overflow:auto}
 .app.game-active .sorting-content{max-width:1200px;margin:auto}
@@ -528,7 +527,6 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .settings input[type=checkbox]:active{transform:scale(.88)}
 @media(max-width:600px){
 .app.game-active>main{padding:5px}
-.app.game-active .play-toolbar{padding:8px;gap:8px}
 .sorting-bins{gap:10px}
 .sorting-stage{padding:12px}
 .sort-group-settings{grid-template-columns:1fr}
@@ -661,7 +659,6 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .conveyor-answer button{min-width:100px;font-size:32px;margin:0 8px}
 
 /* One toolbar geometry for every game. */
-.app.game-active .play-toolbar.shared-toolbar{display:grid!important;grid-template-columns:minmax(max-content,1fr) minmax(0,auto) minmax(34px,1fr);gap:12px!important}
 .toolbar-left,.toolbar-right{display:flex;align-items:center;gap:8px;min-width:0}
 .toolbar-right{justify-content:flex-end}
 .toolbar-centre{display:flex;align-items:center;justify-content:center;gap:12px;min-width:0;text-align:center}
@@ -680,7 +677,7 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .sound-editor h3,.sound-editor h4{margin:8px 0 12px}
 .sound-workshop .sound-picker-actions{flex-wrap:wrap}
 .sound-picker-actions>.primary{white-space:normal;text-align:left}
-@media(max-width:650px){.app.game-active .play-toolbar.shared-toolbar{gap:5px!important}.toolbar-left{gap:4px}.toolbar-centre{gap:3px;font-size:11px}.toolbar-centre .counters{flex-direction:column;gap:0!important}.toolbar-centre .lesson-tag{display:none}.sound-workshop-body{grid-template-columns:1fr}.sound-editor{position:static}.quantity-slider>div{gap:5px;grid-template-columns:36px minmax(60px,1fr) 36px 52px}.quantity-slider input[type=number]{width:52px!important}}
+@media(max-width:650px){.app.game-active .play-toolbar.shared-toolbar{gap:5px!important}.toolbar-left{gap:4px}.toolbar-centre{gap:3px;font-size:11px}.toolbar-centre .counters{flex-direction:column;gap:0!important}.toolbar-centre .lesson-tag{display:none}.sound-workshop-body{grid-template-columns:1fr}.sound-editor{position:static}}
 .conveyor-card:has(small){grid-template-rows:minmax(0,1fr) auto}.conveyor-card small{font-size:clamp(12px,1.4vw,19px);line-height:1.2}
 
 .sound-workshop-body{display:block!important}.sound-bank{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.sound-editor{margin-top:20px}
@@ -937,6 +934,7 @@ html:has(.settings-shade){overflow:hidden}
 .app.game-active .play-toolbar.shared-toolbar{
  display:grid!important;
  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+ gap:12px!important;
  align-items:center!important;
  min-height:66px!important;
  padding-block:6px!important;
