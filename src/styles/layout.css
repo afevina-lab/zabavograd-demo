@@ -666,7 +666,7 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .sound-editor h3,.sound-editor h4{margin:8px 0 12px}
 .sound-workshop .sound-picker-actions{flex-wrap:wrap}
 .sound-picker-actions>.primary{white-space:normal;text-align:left}
-@media(max-width:650px){.toolbar-centre{gap:3px;font-size:11px}.toolbar-centre .counters{flex-direction:column;gap:0!important}.toolbar-centre .lesson-tag{display:none}.sound-workshop-body{grid-template-columns:1fr}.sound-editor{position:static}}
+@media(max-width:650px){.sound-workshop-body{grid-template-columns:1fr}.sound-editor{position:static}}
 .conveyor-card:has(small){grid-template-rows:minmax(0,1fr) auto}.conveyor-card small{font-size:clamp(12px,1.4vw,19px);line-height:1.2}
 
 .sound-workshop-body{display:block!important}.sound-bank{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.sound-editor{margin-top:20px}
