@@ -54,3 +54,15 @@ test('Only canonical shared toolbar grid is defined',()=>{
  assert.doesNotMatch(css,/\.app\.game-active \.play-toolbar\s*\{gap:12px;flex-wrap:wrap/);
  assert.doesNotMatch(css,/\.quantity-slider>div\s*\{\s*gap:5px;grid-template-columns:/);
 });
+
+
+test('No discarded card skin reset or hidden theme preview variant remains',()=>{
+ const css=readFileSync('src/styles/layout.css','utf8');
+ assert.doesNotMatch(css,/\.card-back\s*\{background:\s*none center\/100% 100% no-repeat/);
+ assert.doesNotMatch(css,/\.card-front\s*\{background:\s*none center\/100% 100% no-repeat/);
+ assert.doesNotMatch(css,/\.card-back:after\s*\{display:none\}/);
+ assert.doesNotMatch(css,/\.themes i\s*\{display:none\}/);
+ assert.match(css,/\.card-back\s*\{background:linear-gradient/);
+ assert.match(css,/\.card-front\s*\{background:#fff5e8/);
+ assert.match(css,/\.themes i\s*\{display:block;width:100%;height:auto;aspect-ratio:2\/1/);
+});
