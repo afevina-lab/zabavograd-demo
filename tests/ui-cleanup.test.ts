@@ -227,26 +227,32 @@ test('Toolbar icon sizes come from one responsive token contract',()=>{
 });
 
 
-test('Responsive shared toolbar gap is declared after the base layout',()=>{
+test('Compact touch toolbar has no scrolling and only essential controls',()=>{
  const css=readFileSync('src/styles/layout.css','utf8');
- const base='.app.game-active .play-toolbar.shared-toolbar{\n display:grid!important;';
- const responsive='@media(max-width:650px){\n .app.game-active .play-toolbar.shared-toolbar{';
- assert.ok(css.indexOf(base)>=0,'shared toolbar layout must exist');
- assert.ok(css.indexOf(responsive)>css.indexOf(base),'responsive rule must follow base rule');
- assert.match(css,/--zg-toolbar-layout-gap:12px;\s*gap:var\(--zg-toolbar-layout-gap\)!important/);
- assert.equal([...css.matchAll(/--zg-toolbar-layout-gap:5px/g)].length,1);
- assert.doesNotMatch(css,/\.play-toolbar\.shared-toolbar\{min-height:54px!important;gap:6px\}/);
- assert.match(css,/@media\(max-width:600px\)\{\s*\.app\.game-active \.play-toolbar\.shared-toolbar\{min-height:54px!important\}/);
+ const toolbar=readFileSync('src/GameToolbar.tsx','utf8');
+ assert.match(css,/@media \(pointer:coarse\), \(max-width:650px\)/);
+ assert.match(css,/grid-template-columns:max-content minmax\(0,1fr\) max-content/);
+ assert.match(css,/\.toolbar-left\{[^}]*overflow:visible!important/);
+ assert.match(css,/\.toolbar-left>:not\(\.toolbar-mobile-pause\)\{display:none!important\}/);
+ assert.match(css,/\.counters>:not\(\.toolbar-timer\):not\(\.life-controls\)\{display:none!important\}/);
+ assert.doesNotMatch(css,/\.toolbar-left\{[^}]*overflow-x:auto/);
+ assert.match(toolbar,/toolbar-mobile-pause/);
+ assert.match(toolbar,/toolbar-mobile-fullscreen/);
 });
 
-
-test('Narrow shared toolbar reserves fullscreen width and contains crowded controls',()=>{
- const css=readFileSync('src/styles/layout.css','utf8');
- const media=css.slice(css.indexOf('@media(max-width:650px){\n .app.game-active .play-toolbar.shared-toolbar{'));
- assert.match(media,/grid-template-columns:minmax\(0,1fr\) minmax\(0,auto\) max-content/);
- assert.match(media,/\.toolbar-left\{[^}]*overflow-x:auto/);
- assert.match(media,/\.toolbar-left::-webkit-scrollbar\{display:none\}/);
- assert.match(media,/\.toolbar-centre\{min-width:0;max-width:clamp\(65px,25vw,160px\)\}/);
- assert.match(media,/\.toolbar-centre \.counters\{min-width:0;max-width:100%;overflow:hidden/);
- assert.match(media,/\.toolbar-right\{min-width:0\}/);
+test('Every game requests touch fullscreen directly from Start action',()=>{
+ const viewport=readFileSync('src/design-system/useGameViewport.ts','utf8');
+ assert.match(viewport,/export function enterGameViewport\(\)/);
+ assert.match(viewport,/root\.requestFullscreen\(\)\.then\(lock\)\.catch/);
+ assert.match(viewport,/orientation\?\.lock\?\.\('landscape'\)/);
+ for(const file of ['main.tsx','Matching.tsx','Sorting.tsx','Conveyor.tsx','Transformations.tsx']){
+  const source=readFileSync('src/'+file,'utf8');
+  assert.match(source,/enterGameViewport\(\)/,file);
+ }
+ const limits=readFileSync('src/design-system/GameLimits.tsx','utf8');
+ const memory=readFileSync('src/main.tsx','utf8');
+ const sorting=readFileSync('src/Sorting.tsx','utf8');
+ assert.match(limits,/className="toolbar-timer"/);
+ assert.match(memory,/toolbar-timer/);
+ assert.match(sorting,/toolbar-timer/);
 });
