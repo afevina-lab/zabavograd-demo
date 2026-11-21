@@ -532,3 +532,12 @@
  border-radius:var(--zg-panel-radius,16px)!important;
  font-size:20px;font-weight:750;
 }
+
+
+/* Sorting groups are independent material panels inside one shared material column. */
+.app .shared-settings-window .setup-column .sort-group-settings{
+ display:grid;grid-template-columns:minmax(0,1fr);
+ gap:var(--zg-space-4,16px);
+ margin:var(--zg-space-3,12px) 0;
+}
+.app .shared-settings-window .setup-column .sort-group-settings>.settings-block{min-width:0}
