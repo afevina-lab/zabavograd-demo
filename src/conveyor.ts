@@ -60,6 +60,21 @@ export function conveyorConditions(count:number,conditional:boolean,rng=Math.ran
 export function conveyorHasTargetSound(word:Word,targetSounds:string[]):boolean{
  return targetSounds.some(sound=>Boolean(word.phonemes?.includes(sound)||word.sounds?.[sound]?.length));
 }
+/** Sound-check Conveyor deliberately excludes mixed target/opposition words.
+ * Other sound exclusions are also barred from positive material, while
+ * NO cards must contain an explicitly selected opposition without the target.
+ * null means the word is not eligible for this round at all.
+ */
+export function classifyConveyorSoundWord(word:Word,learning:Learning):boolean|null{
+ if(!word.phonemes?.length||!learning.sounds.length)return null;
+ const target=conveyorHasTargetSound(word,learning.sounds);
+ const exclusions=[...new Set(learning.excludedSounds||[])].filter(s=>!learning.sounds.includes(s));
+ const hasExcluded=exclusions.some(s=>containsExcludedSound(word,s));
+ if(target)return hasExcluded?null:true;
+ const oppositions=new Set(learning.sounds.flatMap(typicalConfusions));
+ const selectedOppositions=exclusions.filter(s=>oppositions.has(s));
+ return selectedOppositions.some(s=>containsExcludedSound(word,s))?false:null;
+}
 export function isCloseConveyorDistractor(word:Word,learning:Learning):boolean{
  if(['automation','differentiation','search'].includes(learning.mode)){
   const confusions=[...new Set(learning.sounds.flatMap(typicalConfusions))].filter(s=>!learning.sounds.includes(s));
@@ -75,11 +90,12 @@ export function isCloseConveyorDistractor(word:Word,learning:Learning):boolean{
 /** At least 70% of the negative slots come from close contrasts when available.
  * Positive and negative items cannot repeat an ID or displayed caption.
  */
-export function materialConveyorDeck(positives:Word[],negatives:Word[],count:number,learning:Learning,rng=Math.random):ConveyorCard[]{
+export function materialConveyorDeck(positives:Word[],negatives:Word[],count:number,learning:Learning,rng=Math.random,negativeShare=.4):ConveyorCard[]{
  const yes=distinctCaptions(positives),no=distinctCaptions(negatives);
- let invalid=Math.min(conveyorIncorrectCount(count),no.length);
- if(yes.length<count-invalid)invalid=Math.max(0,count-yes.length);
- if(invalid>conveyorIncorrectCount(count)||no.length<invalid)throw Error('Недостаточно подходящих карточек для Конвейера.');
+ const targetNegatives=Math.ceil(count*negativeShare);
+ let invalid=Math.min(targetNegatives,no.length);
+ if(yes.length<count-invalid)invalid=Math.max(invalid,count-yes.length);
+ if(invalid>targetNegatives||no.length<invalid||yes.length<count-invalid)throw Error('Недостаточно подходящих карточек для Конвейера.');
  const valid=balancedPick(yes,count-invalid,learning,rng);
  const validLabels=new Set(valid.map(w=>w.label.toLocaleLowerCase('ru')));
  const wrongPool=no.filter(w=>!validLabels.has(w.label.toLocaleLowerCase('ru')));
@@ -91,7 +107,8 @@ export function materialConveyorDeck(positives:Word[],negatives:Word[],count:num
  const closeIds=new Set(chosenClose.map(w=>w.id));
  const other=balancedPick(wrongPool.filter(w=>!closeIds.has(w.id)),invalid-closeCount,mixedLearning,rng);
  const incorrect=[...chosenClose,...other];
- const flags=conveyorConditions(count,true,rng);
+ const flags=Array.from({length:count},(_,i)=>i>=invalid);
+ for(let i=flags.length-1;i>0;i--){const j=Math.min(i,Math.floor(rng()*(i+1)));[flags[i],flags[j]]=[flags[j],flags[i]];}
  let good=0,bad=0;
  return flags.map((expected,i)=>{const word=expected?valid[good++]:incorrect[bad++];return {id:'word-'+i,text:word.label,word,original:word.label,expected};});
 }
