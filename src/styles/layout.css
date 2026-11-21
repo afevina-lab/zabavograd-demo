@@ -666,7 +666,7 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .sound-editor h3,.sound-editor h4{margin:8px 0 12px}
 .sound-workshop .sound-picker-actions{flex-wrap:wrap}
 .sound-picker-actions>.primary{white-space:normal;text-align:left}
-@media(max-width:650px){.app.game-active .play-toolbar.shared-toolbar{gap:5px!important}.toolbar-left{gap:4px}.toolbar-centre{gap:3px;font-size:11px}.toolbar-centre .counters{flex-direction:column;gap:0!important}.toolbar-centre .lesson-tag{display:none}.sound-workshop-body{grid-template-columns:1fr}.sound-editor{position:static}}
+@media(max-width:650px){.toolbar-centre{gap:3px;font-size:11px}.toolbar-centre .counters{flex-direction:column;gap:0!important}.toolbar-centre .lesson-tag{display:none}.sound-workshop-body{grid-template-columns:1fr}.sound-editor{position:static}}
 .conveyor-card:has(small){grid-template-rows:minmax(0,1fr) auto}.conveyor-card small{font-size:clamp(12px,1.4vw,19px);line-height:1.2}
 
 .sound-workshop-body{display:block!important}.sound-bank{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.sound-editor{margin-top:20px}
@@ -923,7 +923,8 @@ html:has(.settings-shade){overflow:hidden}
 .app.game-active .play-toolbar.shared-toolbar{
  display:grid!important;
  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
- gap:12px!important;
+ --zg-toolbar-layout-gap:12px;
+ gap:var(--zg-toolbar-layout-gap)!important;
  align-items:center!important;
  min-height:66px!important;
  padding-block:6px!important;
@@ -941,6 +942,10 @@ html:has(.settings-shade){overflow:hidden}
 .app.game-active .play-toolbar.shared-toolbar .toolbar-centre{justify-content:center}
 .app.game-active .play-toolbar.shared-toolbar .toolbar-right{justify-content:flex-end}
 .app.game-active .play-toolbar.shared-toolbar .icon-button{vertical-align:middle;margin-block:0!important;flex:0 0 auto}
+@media(max-width:650px){
+ .app.game-active .play-toolbar.shared-toolbar{--zg-toolbar-layout-gap:5px}
+ .app.game-active .play-toolbar.shared-toolbar .toolbar-left{gap:4px}
+}
 /* Preview controls cannot overhang the content area. */
 .app .shared-settings-window .material-head{
  position:relative!important;
@@ -983,8 +988,7 @@ html:has(.settings-shade){overflow:hidden}
 .app .shared-settings-window .setup-column>.settings-block{margin:0!important}
 .app .shared-settings-window .quantity-slider{margin-block:10px 12px!important}
 @media(max-width:600px){
- .app.game-active .play-toolbar.shared-toolbar{min-height:54px!important;gap:6px}
- .app.game-active .play-toolbar.shared-toolbar .toolbar-left{gap:4px}
+ .app.game-active .play-toolbar.shared-toolbar{min-height:54px!important}
  .app .shared-settings-window .math-settings .reading-kinds{gap:4px 8px!important}
 }
 
