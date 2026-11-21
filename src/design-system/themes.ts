@@ -24,16 +24,19 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
   palette:{accent:'#80b84c',deep:'#3f782f',pale:'#edf4e5',outline:'#7c9b72',text:'#304d38',paper:'#fffaf0',page:'#eef2e6',stageText:'#344a39'},
   skin:'sage',toolbarArt:'assets/themes/forest/header.webp',
   scene:{background:'assets/themes/forest/forest_background.webp',fill:'#d5e7bf',motion:'static',sprites:[
-   {id:'tree-left',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(100cqh,65cqw)',left:'-5%',bottom:'-4%',opacity:1,layer:2,durationMs:10500,origin:'50% 94%'},
-   {id:'tree-right',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(100cqh,65cqw)',right:'-5%',bottom:'-4%',opacity:1,layer:2,durationMs:12400,delayMs:-4500,origin:'50% 94%'},
-   {id:'fern',src:'assets/themes/forest/forest_fern.webp',motion:'breathe',width:'clamp(105px,12vw,210px)',left:'3%',bottom:'-5%',opacity:.9,durationMs:26000},
-   {id:'bush',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'clamp(110px,13vw,230px)',right:'3%',bottom:'-5%',opacity:.92,durationMs:30000},
-   {id:'tree-far-left',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(62cqh,40cqw)',left:'15%',bottom:'26%',opacity:1,layer:0,durationMs:15000,origin:'50% 94%'},
-   {id:'tree-far-right',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(56cqh,38cqw)',right:'18%',bottom:'32%',opacity:1,layer:0,durationMs:17000,origin:'50% 94%'},
-   ...[0,1,2].map(i=>({id:'flowers-depth-'+i,src:'assets/themes/forest/forest_flower_patch.webp',motion:'none' as const,width:(12+i*2)+'cqw',left:(6+i*19)+'%',bottom:(25-i*5)+'%',opacity:.65+i*.06})),
-   {id:'fern-mid',src:'assets/themes/forest/forest_fern.webp',motion:'breathe',width:'18cqw',left:'22%',bottom:'12%',opacity:1,layer:3,durationMs:23000},
-   {id:'bush-mid',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'20cqw',right:'23%',bottom:'16%',opacity:1,layer:3,durationMs:28000},
-   {id:'flowers',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(32cqw,48cqh)',left:'30%',bottom:'-1%',opacity:.9},
+   // One perspective composition for every game: distant trunks stand higher on the hillside;
+   // foreground trees are larger and lower. All dimensions use the SCENE container, not the card grid.
+   {id:'tree-far-left',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(38cqh,23cqw)',left:'18%',bottom:'24%',opacity:.82,layer:0,durationMs:15000,origin:'50% 94%'},
+   {id:'tree-far-right',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(35cqh,21cqw)',right:'19%',bottom:'29%',opacity:.79,layer:0,durationMs:17000,origin:'50% 94%'},
+   {id:'tree-left',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(71cqh,38cqw)',left:'-5%',bottom:'-7%',opacity:1,layer:2,durationMs:10500,origin:'50% 94%'},
+   {id:'tree-right',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(68cqh,37cqw)',right:'-5%',bottom:'-8%',opacity:1,layer:2,durationMs:12400,delayMs:-4500,origin:'50% 94%'},
+   // Understory follows the same depth scale, with the centre reserved for gameplay.
+   {id:'fern-mid',src:'assets/themes/forest/forest_fern.webp',motion:'breathe',width:'min(15cqh,9cqw)',left:'19%',bottom:'23%',opacity:.8,layer:1,durationMs:23000},
+   {id:'bush-mid',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(14cqh,8cqw)',right:'20%',bottom:'27%',opacity:.8,layer:1,durationMs:28000},
+   {id:'fern',src:'assets/themes/forest/forest_fern.webp',motion:'breathe',width:'min(27cqh,15cqw)',left:'1%',bottom:'-3%',opacity:.95,layer:3,durationMs:26000},
+   {id:'bush',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(25cqh,14cqw)',right:'1%',bottom:'-3%',opacity:.95,layer:3,durationMs:30000},
+   {id:'flowers-left',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(18cqh,11cqw)',left:'13%',bottom:'4%',opacity:.8,layer:1},
+   {id:'flowers-right',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(17cqh,10cqw)',right:'12%',bottom:'5%',opacity:.8,layer:1},
    {id:'leaf-birch',src:'assets/themes/forest/forest_leaf_birch.webp',motion:'fall',width:'clamp(26px,3vw,44px)',left:'13%',top:'-12%',opacity:.8,durationMs:17000,delayMs:-2200},
    {id:'leaf-oak',src:'assets/themes/forest/forest_leaf_oak.webp',motion:'fall',width:'clamp(30px,3.2vw,49px)',left:'69%',top:'-11%',opacity:.85,durationMs:21500,delayMs:-9100},
    {id:'leaf-oval',src:'assets/themes/forest/forest_leaf_oval.webp',motion:'fall',width:'clamp(25px,2.8vw,43px)',left:'42%',top:'-13%',opacity:.8,durationMs:18800,delayMs:-13900}
