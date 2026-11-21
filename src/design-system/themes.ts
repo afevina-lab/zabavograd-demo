@@ -82,7 +82,7 @@ const setupSurfaces:Record<ThemeId,typeof warmSurface>={
  '--ui-thumb-edge':'#b7a173','--ui-thumb-base':'#ad986d','--ui-highlight':'#e4c996','--ui-icon-surface':'#e4e9ee','--ui-setup-paper':'#f6f0e3','--ui-setup-field':'#fffdf6'
  },forest:warmSurface,
  space:{
- '--ui-control-face':'linear-gradient(180deg,#ffffff 0%,#f2f6ff 38%,#d9e3f4 100%)','--ui-control-bottom':'#9aaccc','--ui-control-shadow':'#1b30502d','--ui-control-ambient':'#1b30501e','--ui-frame-inset':'18px','--ui-surface-texture':'none',
+ '--ui-control-face':'linear-gradient(180deg,#ffffff 0%,#f2f6ff 38%,#d9e3f4 100%)','--ui-control-bottom':'#9aaccc','--ui-control-shadow':'#1b30502d','--ui-control-ambient':'#1b30501e','--ui-frame-inset':'13px','--ui-surface-texture':'none',
  '--ui-frame-base':'#8397b1','--ui-frame-light':'#e8f2ff','--ui-frame-dark':'#273c56',
  '--ui-frame-texture':'repeating-linear-gradient(0deg,#ffffff10 0 1px,transparent 1px 5px)',
  '--ui-frame-fill':'linear-gradient(105deg,#f9fcff 0%,#adbed4 10%,#617a98 22%,#dfe9f5 35%,#ffffff 44%,#7d93af 58%,#465e7e 73%,#dce8f5 86%,#98adc6 100%)',
