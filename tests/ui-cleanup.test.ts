@@ -149,3 +149,20 @@ test('All five game setups use the shared settings shell and select implementati
   assert.doesNotMatch(source,/<select\b/,file+': native selects must use shared controls');
  }
 });
+
+
+test('Reading length is one shared two-ended range, not separate QuantitySliders',()=>{
+ const reading=readFileSync('src/ReadingSettings.tsx','utf8');
+ const range=readFileSync('src/design-system/RangeSlider.tsx','utf8');
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ assert.match(reading,/import \{RangeSlider\} from '.\/design-system\/RangeSlider.tsx'/);
+ assert.match(reading,/<RangeSlider label="Длина слова, букв"/);
+ assert.doesNotMatch(reading,/<QuantitySlider/);
+ assert.doesNotMatch(css,/reading-length-sliders|reading-length-range/);
+ assert.match(range,/role="group" aria-label=\{label\}/);
+ assert.equal([...range.matchAll(/type="range"/g)].length,2,'two accessible thumbs share one track');
+ assert.match(range,/Math.min\(\+event.target.value,upper\)/);
+ assert.match(range,/Math.max\(\+event.target.value,lower\)/);
+ assert.match(css,/\.range-slider-track::before/);
+ assert.match(css,/\.range-slider-track input:focus-visible/);
+});
