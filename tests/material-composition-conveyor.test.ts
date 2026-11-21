@@ -80,14 +80,14 @@ test('conditional conveyor caps wrong answers at 40% even for small decks',()=>{
  }
 });
 
-test('70% of the wrong sound cards use the familiar confusion pair where available',()=>{
+test('80% of the wrong sound cards use the familiar confusion pair where available',()=>{
  const positives=Array.from({length:20},(_,i)=>word('л'+i));
  const negatives=[...Array.from({length:12},(_,i)=>word('р'+i,'Животный мир/Дикие животные',['р'])),
  ...Array.from({length:12},(_,i)=>word('ш'+i,'Растительный мир/Цветы',['ш']))];
  const deck=materialConveyorDeck(positives,negatives,12,{...learning,contentKinds:['words']},()=>.4);
  const wrong=deck.filter(c=>!c.expected);
  assert.equal(wrong.length,4);
- assert(wrong.filter(c=>isCloseConveyorDistractor(c.word!,learning)).length>=3);
+ assert(wrong.filter(c=>isCloseConveyorDistractor(c.word!,learning)).length>=4);
  assert.equal(new Set(deck.map(c=>c.word!.id)).size,12);
 });
 
@@ -112,12 +112,12 @@ test('lexical distractors come mostly from adjacent topics, not unrelated vocabu
  assert(deck.filter(c=>!c.expected&&isCloseConveyorDistractor(c.word!,cfg)).length>=3);
 });
 
-test('sound-check Conveyor has majority opposition-only NO cards and no mixed phonemes',()=>{
+test('sound-check Conveyor has 80% opposition in NO cards and no mixed phonemes',()=>{
  const cfg:Learning={...initialLearning,mode:'automation',sounds:['р'],excludedSounds:['л']};
  const positive=Array.from({length:10},(_,i)=>word('ракета'+i,'Тест',['р']));
  const contrast=Array.from({length:12},(_,i)=>word('лампа'+i,'Тест',['л']));
- const deck=materialConveyorDeck(positive,contrast,12,cfg,()=>.43,.6);
- assert.equal(deck.filter(c=>!c.expected).length,8);
+ const deck=materialConveyorDeck(positive,contrast,12,cfg,()=>.43,{mode:'sounds',sounds:['л']});
+ assert.equal(deck.filter(c=>!c.expected).length,4);
  assert(deck.filter(c=>c.expected).every(c=>c.word!.phonemes!.includes('р')&&!c.word!.phonemes!.includes('л')));
  assert(deck.filter(c=>!c.expected).every(c=>c.word!.phonemes!.includes('л')&&!c.word!.phonemes!.includes('р')));
 });
