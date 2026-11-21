@@ -48,9 +48,9 @@ test('Game stage never restores legacy scrolling or discarded card layouts',()=>
 
 test('Only canonical shared toolbar grid is defined',()=>{
  const css=readFileSync('src/styles/layout.css','utf8');
- const grids=[...css.matchAll(/\.app\.game-active \.play-toolbar\.shared-toolbar\s*\{[^}]*grid-template-columns:/g)];
+ const grids=[...css.matchAll(/\.app\.game-active \.play-toolbar\.shared-toolbar\s*\{([^}]*)\}/g)].filter(match=>match[1].includes('grid-template-columns:'));
  assert.equal(grids.length,1,'shared toolbar must have one grid definition');
- assert.match(grids[0][0],/minmax\(0,1fr\) auto minmax\(0,1fr\)/);
+ assert.match(grids[0][1],/grid-template-columns:\s*minmax\(0,1fr\) auto minmax\(0,1fr\)/);
  assert.doesNotMatch(css,/\.app\.game-active \.play-toolbar\s*\{gap:12px;flex-wrap:wrap/);
  assert.doesNotMatch(css,/\.quantity-slider>div\s*\{\s*gap:5px;grid-template-columns:/);
 });
