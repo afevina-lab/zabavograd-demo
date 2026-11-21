@@ -2,7 +2,7 @@ import {SelectControl,selectIcon} from './design-system/SelectControl.tsx';
 import {MaterialSummary} from './design-system/MaterialSummary.tsx';
 import {SettingsWindow} from './design-system/SettingsWindow.tsx';
 import {GameDialog} from './design-system/GameDialog.tsx';
-import {useGameViewport} from './design-system/useGameViewport.ts';
+import {useGameViewport,enterGameViewport} from './design-system/useGameViewport.ts';
 import {MathSettingsPanel} from './MathSettingsPanel.tsx';
 import {GameSelect} from './GameSelect.tsx';
 import {TextDisplaySettings} from './TextDisplaySettings.tsx';
@@ -69,7 +69,7 @@ export function Conveyor(){
    return {deck:next,error:''};
   }catch(e){return {deck:[],error:e instanceof Error?e.message:'Не удалось подобрать карточки.'}}
  },[legal,material,condition,count,max,learning,positives,negatives,words,shuffleKey,manualIds,mathKind,add,subtract,multiply,divide,includeZero]);
- function start(){if(preparation.error)return;limits.reset();setDeck(preparation.deck);setState(startConveyor(preparation.deck));setPaused(false);setMessage('');}
+ function start(){if(preparation.error)return;enterGameViewport();limits.reset();setDeck(preparation.deck);setState(startConveyor(preparation.deck));setPaused(false);setMessage('');}
  useEffect(()=>{
   if(!state||state.finished||paused||limits.lost)return;
   let frame=0,last=0;const move=(now:number)=>{const elapsed=last?(now-last)/1000:0;if(last)setState(s=>s?stepConveyor(s,deck,level,elapsed,condition!=='none'):s);last=now;frame=requestAnimationFrame(move)};frame=requestAnimationFrame(move);return()=>cancelAnimationFrame(frame);
