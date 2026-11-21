@@ -32,7 +32,20 @@ test('Conveyor sound-opposition classification rejects mixed words and accepts �
  assert.equal(classifyConveyorSoundWord(word('лампа',['л','а','м','п','а']),cfg),false);
  assert.equal(classifyConveyorSoundWord(word('зеркало',["з'",'э','р','к','а','л','а']),cfg),null);
  assert.equal(classifyConveyorSoundWord(word('мак',['м','а','к']),cfg),null);
- assert.equal(classifyConveyorSoundWord(word('ряд',["р'",'а','т']),cfg),false);
+ assert.equal(classifyConveyorSoundWord(word('ряд',["р'",'а','т']),cfg),null);
  assert.equal(classifyConveyorSoundWord(word('сыр',['с','ы','р']),{...cfg,excludedSounds:['л']}),true);
  assert.equal(classifyConveyorSoundWord(word('зеркало',["з'",'э','р','к','а','л','а']),{...cfg,excludedSounds:[]}),true);
+});
+
+test('Conveyor excludes R from S distractors even if R is excluded in therapy',()=>{
+ const cfg:Learning={...initialLearning,mode:'automation',sounds:['с'],excludedSounds:['р','ш']};
+ const word=(label:string,phonemes:string[],categories:string[]=[]):Word=>({id:label,label,phonemes,categories,sounds:{}} as unknown as Word);
+ assert.equal(classifyConveyorSoundWord(word('шар',['ш','а','р']),cfg),false);
+ assert.equal(classifyConveyorSoundWord(word('рак',['р','а','к']),cfg),null);
+ assert.equal(classifyConveyorSoundWord(word('саша',['с','а','ш','а']),cfg),null);
+ assert.equal(classifyConveyorSoundWord(word('санки',['с','а','н','к',"и"]),cfg),true);
+ assert.equal(classifyConveyorSoundWord(word('рак',['р','а','к']),cfg,{mode:'lexical',categories:['Транспорт']}),null);
+ assert.equal(classifyConveyorSoundWord(word('автобус',['а','в','т','о','б','у','с'],['Транспорт']),cfg,{mode:'lexical',categories:['Транспорт']}),true);
+ assert.equal(classifyConveyorSoundWord(word('машина',['м','а','ш','ы','н','а'],['Транспорт']),cfg,{mode:'lexical',categories:['Транспорт']}),false);
+ assert.equal(classifyConveyorSoundWord(word('рак',['р','а','к']),cfg,{mode:'sounds',sounds:['р']}),false);
 });
