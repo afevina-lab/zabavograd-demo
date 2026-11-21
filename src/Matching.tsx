@@ -33,12 +33,12 @@ export function Matching(){
  const limits=useGameLimits(session.length>0&&!finished,paused);
  const drag=useCardDrag(paused||finished||!!limits.lost);
  const [displayMode,setDisplayMode]=useState('image-image');
- const captionMode=!kind&&(displayMode==='word-image'||displayMode==='image-word');
  const stageRef=useRef<HTMLDivElement|null>(null);
  const [bankPage,setBankPage]=useState(0);
  const [boardLayout,setBoardLayout]=useState({columns:4,cardWidth:104,bankPageSize:12});
  const available=useMemo(()=>learningPool(words,filters,learning),[words,filters,learning]);
  const kind=learning.mode==='math'?null:mode==='shadow'?'silhouette':mode==='outline'?'outline':null;
+ const captionMode=!kind&&(displayMode==='word-image'||displayMode==='image-word');
  const visualWords=useMemo(()=>available.filter(w=>w.variants?.length),[available]);
  const prepared=usePreparedMaterial(visualWords,kind,count);const busy=prepared.busy;
  const [shuffleKey,setShuffleKey]=useState(0),[chosenGroups,setChosenGroups]=useState<{source:MatchGroup[];ids:string[]}|null>(null);
