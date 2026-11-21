@@ -1,7 +1,7 @@
 import {mathMaterial} from './math-material.ts';
 import type {Word} from './material-types.ts';
 import {alphabet} from './reading.ts';
-import {balancedPick,containsExcludedSound,typicalConfusions,type Learning} from './learning.ts';
+import {balancedPick,containsExcludedSound,typicalConfusions,defaultConveyorOpposition,type Learning} from './learning.ts';
 import {distinctCaptions} from './material-policy.ts';
 export type ConveyorLevel='easy'|'medium'|'hard';
 export type ConveyorCard={id:string;text:string;word?:Word;expected:boolean;original?:string};
@@ -71,9 +71,8 @@ export function classifyConveyorSoundWord(word:Word,learning:Learning):boolean|n
  const exclusions=[...new Set(learning.excludedSounds||[])].filter(s=>!learning.sounds.includes(s));
  const hasExcluded=exclusions.some(s=>containsExcludedSound(word,s));
  if(target)return hasExcluded?null:true;
- const oppositions=new Set(learning.sounds.flatMap(typicalConfusions));
- const selectedOppositions=exclusions.filter(s=>oppositions.has(s));
- return selectedOppositions.some(s=>containsExcludedSound(word,s))?false:null;
+ const oppositions=learning.conveyorOppositionSounds?.length?learning.conveyorOppositionSounds:learning.sounds.flatMap(defaultConveyorOpposition);
+ return [...new Set(oppositions)].some(s=>!learning.sounds.includes(s)&&containsExcludedSound(word,s))?false:null;
 }
 export function isCloseConveyorDistractor(word:Word,learning:Learning):boolean{
  if(['automation','differentiation','search'].includes(learning.mode)){
