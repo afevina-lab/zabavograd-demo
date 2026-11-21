@@ -957,7 +957,7 @@ html:has(.settings-shade){overflow:hidden}
  .app.game-active .play-toolbar.shared-toolbar .toolbar-left>:not(.toolbar-mobile-pause){display:none!important}
  .app.game-active .play-toolbar.shared-toolbar .toolbar-centre{min-width:0;max-width:none;width:100%;overflow:hidden}
  .app.game-active .play-toolbar.shared-toolbar .toolbar-centre .counters{
-  display:flex!important;min-width:0;max-width:100%;width:100%;
+  display:flex!important;flex-direction:row!important;min-width:0;max-width:100%;width:100%;
   justify-content:center!important;align-items:center;gap:var(--zg-space-2,8px)!important;
   flex-wrap:nowrap!important;overflow:hidden;white-space:nowrap;
  }
