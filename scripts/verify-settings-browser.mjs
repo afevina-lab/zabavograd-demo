@@ -105,6 +105,8 @@ if(game==='conveyor'){
  if(await evaluate("!!document.querySelector('.category-picker[open]')")){
  await evaluate("document.querySelectorAll('.category-picker details').forEach(e=>e.open=true)");
  assert(await evaluate("[...document.querySelectorAll('.category-grid summary')].every(e=>e.querySelector('.control-well')&&getComputedStyle(e).userSelect==='none')"),'Category rows must share arrows and prevent accidental text selection');
+ const pickerLayout=await evaluate("(()=>{const d=document.querySelector('dialog.category-picker[open]'),scroll=d.querySelector(':scope>.panel-scroll'),footer=d.querySelector(':scope>.sound-picker-actions'),grid=d.querySelector('.category-grid'),opened=[...grid.querySelectorAll(':scope>li.category-branch:has(>details[open])')],buttons=[...footer?.querySelectorAll('button')||[]],sr=scroll.getBoundingClientRect(),fr=footer?.getBoundingClientRect(),gr=grid.getBoundingClientRect();return {separate:!!footer&&footer.parentElement===d,nonOverlapping:!!fr&&sr.bottom<=fr.top+2,expanded:opened.length>0&&opened.every(e=>e.getBoundingClientRect().width>=gr.width*.90),equalButtons:buttons.length===2&&Math.abs(buttons[0].getBoundingClientRect().height-buttons[1].getBoundingClientRect().height)<1&&getComputedStyle(buttons[0]).borderRadius===getComputedStyle(buttons[1]).borderRadius,distinctColors:buttons.length===2&&getComputedStyle(buttons[0]).backgroundColor!==getComputedStyle(buttons[1]).backgroundColor}})()");
+ assert(Object.values(pickerLayout).every(Boolean),'Category picker responsive tree/footer geometry: '+width+' '+JSON.stringify(pickerLayout));
  await screenshot('categories-'+width);
  await evaluate("document.querySelector('.category-picker[open]>.panel-scroll').scrollTop=100000");
  assert(await evaluate("(()=>{const d=document.querySelector('.category-picker[open]'),s=d.querySelector('.panel-scroll'),a=s.getBoundingClientRect(),b=d.getBoundingClientRect(),inset=parseFloat(getComputedStyle(d).getPropertyValue('--ui-frame-inset'));return d.scrollTop===0&&s.scrollTop>0&&b.right-a.right>=inset+8&&b.bottom-a.bottom>=inset+8})()"),'Dialog scrollbar overlaps frame');
@@ -155,5 +157,20 @@ for(const [width,height] of [[1440,900],[390,844]]){
  await until("!!document.querySelector('.sound-selection>button[data-field-state=ready]')");
  assert(await evaluate("document.querySelector('.sound-selection>button').getAttribute('aria-invalid')!=='true'&&getComputedStyle(document.querySelector('.sound-selection>button')).borderColor!=='rgb(198, 59, 50)'"),'Sound selection required state did not clear');
 }
+
+// Dependent lexical selection and supplementary-rule controls on a real setup screen.
+await cmd('Emulation.setDeviceMetricsOverride',{width:1440,height:900,deviceScaleFactor:1,mobile:false});
+await cmd('Page.navigate',{url:origin+'?game=conveyor'});
+await until("!!document.querySelector('select[aria-label=\"Учебная задача\"]')");
+await evaluate("(()=>{const e=document.querySelector('select[aria-label=\"Учебная задача\"]');e.value='lexical';e.dispatchEvent(new Event('change',{bubbles:true}))})()");
+await until("!!document.querySelector('.setup-column [data-setup-section=material] .category-picker-trigger')");
+const dependent=await evaluate("(()=>{const m=document.querySelector('[data-setup-section=material]'),a=m.querySelector('select[aria-label=\"Учебная задача\"]').getBoundingClientRect(),b=m.querySelector('.category-picker-trigger').getBoundingClientRect();return {below:b.top>=a.bottom-1,adjacent:b.top-a.bottom<=90,label:m.querySelector('.category-picker-trigger .setup-action-copy strong')?.textContent}})()");
+assert(dependent.below&&dependent.adjacent&&dependent.label==='Выберите тему','Dependent picker is not immediately below learning task: '+JSON.stringify(dependent));
+await evaluate("document.querySelector('.advanced-material').open=true");
+await evaluate("document.querySelector('.material-rule-group .setup-add-rule').click()");
+await until("!!document.querySelector('.material-rule')");
+const ruleLayout=await evaluate("(()=>{const r=document.querySelector('.material-rule'),h=r.querySelector('.material-rule-heading'),d=h.querySelector('.rule-delete'),f=r.querySelector('.game-choice'),a=h.getBoundingClientRect(),b=f.getBoundingClientRect(),c=d.getBoundingClientRect();return {headed:!!h,notOverlapping:a.bottom<=b.top+1,deleteContained:c.left>=a.left&&c.right<=a.right+1,buttonHeight:c.height<=56,addIcon:!!document.querySelector('.setup-add-rule .control-well')}})()");
+assert(Object.values(ruleLayout).every(Boolean),'Nested additional rule layout overlaps: '+JSON.stringify(ruleLayout));
+await screenshot('conveyor-dependent-material-rule-editor');
 writeFileSync(join(output,'audit.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));
 }finally{ws?.close();proc.kill('SIGTERM');server.close();await Promise.race([new Promise(r=>proc.once('exit',r)),sleep(1500)]);try{rmSync(profile,{recursive:true,force:true,maxRetries:5,retryDelay:100})}catch{}}
