@@ -86,3 +86,23 @@ test('Modal backdrop uses a single stacking rule',()=>{
  assert.equal(blocks.filter(m=>/z-index\s*:/.test(m[1])).length,1);
  assert.match(blocks.find(m=>/z-index\s*:/.test(m[1]))?.[1]||'',/z-index:12/);
 });
+
+
+test('Modal frames take scrolling and spacing from the canonical control rule',()=>{
+ const layout=readFileSync('src/styles/layout.css','utf8');
+ const controls=readFileSync('src/design-system/controls.css','utf8');
+ assert.doesNotMatch(layout,/\.modal\{[^}]*\b(?:padding|overflow|max-height):/);
+ assert.doesNotMatch(layout,/\.overlay>div,\.modal\.gui-panel\{[^}]*\bpadding:/);
+ assert.doesNotMatch(layout,/\.app \.overlay>div,\.app \.modal\.gui-panel\{[^}]*\b(?:padding|overflow|max-height):/);
+ assert.doesNotMatch(controls,/\.app\[data-theme\] :is\(\.overlay>div,\.modal,dialog\)\{[^}]*\b(?:padding|max-height):/);
+ assert.doesNotMatch(controls,/\.app\[data-theme\] \.overlay>div\{[^}]*\boverflow:/);
+ const frame=controls.match(/\.app\[data-theme\] :is\(\.modal,dialog,\.overlay>div\)\{([^}]*)\}/)?.[1]||'';
+ assert.match(frame,/overflow:hidden!important/);
+ assert.match(frame,/padding:calc\(var\(--ui-frame-inset\) \+ 8px\)!important/);
+ assert.match(frame,/max-height:calc\(100dvh - 32px\)!important/);
+ const inner=controls.match(/\.app\[data-theme\] :is\(\.modal,dialog,\.overlay>div\)>\.panel-scroll\{([^}]*)\}/)?.[1]||'';
+ assert.match(inner,/overflow:auto/);
+ assert.match(inner,/overscroll-behavior:contain/);
+ assert.match(controls,/\.app\[data-theme\] \.overlay>div:has\(\.award\)\{overflow:visible!important\}/);
+ assert.match(controls,/@media\(max-height:550px\)\{\.app \.overlay\{padding:12px!important\}/);
+});
