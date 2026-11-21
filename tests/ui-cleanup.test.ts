@@ -283,7 +283,8 @@ test('All five setups use one semantic two-column arrangement and common preview
  const shell=readFileSync('src/design-system/SettingsWindow.tsx','utf8');
  const css=readFileSync('src/design-system/controls.css','utf8');
  assert.match(shell,/purpose==='material'\|\|purpose==='rules'/);
- assert.match(shell,/purpose==='task'\|\|purpose==='appearance'/);
+ assert.match(shell,/purpose==='task'/);
+ assert.match(shell,/purpose==='appearance'/);
  assert.match(shell,/purpose==='preview'/);
  assert.match(shell,/setup-section-fieldset/);
  assert.doesNotMatch(shell,/matching-setup\\|conveyor-settings\\|transformation-setup\\|sort-settings/);
@@ -408,4 +409,29 @@ test('Landscape mobile settings retain a usable scrolling area above the pinned 
  assert.match(css,/\.settings-frame\.shared-settings-window>\.setup-footer>button\.primary\{[^}]*min-height:48px!important/);
  assert.match(css,/\.settings-frame\.shared-settings-window>\.unified-settings-content>p:first-child\{[^}]*display:none!important/);
  assert.match(smoke,/bodyClientHeight>=120&&actualLayout\.footerHeight<=105/);
+});
+
+
+test('All games inherit a third, independently scrolling theme rail rather than separate theme grids',()=>{
+ const shell=readFileSync('src/design-system/SettingsWindow.tsx','utf8');
+ const controls=readFileSync('src/design-system/controls.css','utf8');
+ assert.match(shell,/else if\(purpose==='appearance'\)appearance\.push\(item\)/);
+ assert.match(shell,/className="setup-workspace"/);
+ assert.match(shell,/className="setup-theme-rail"/);
+ assert.match(shell,/className=\{'setup-theme-scroll'/);
+ assert.match(shell,/aria-expanded=\{themeOpen\}/);
+ assert.match(controls,/@media\(min-width:1180px\) and \(min-height:560px\)/);
+ assert.match(controls,/grid-template-columns:minmax\(0,1fr\) var\(--zg-setup-rail-width\)/);
+ assert.match(controls,/\.setup-theme-scroll\{[^}]*overflow-y:auto;overflow-x:hidden/);
+ assert.match(controls,/\.setup-theme-rail \.themes\{[^}]*flex-direction:column/);
+});
+test('Shared setup footer contains only preview, main action and status, not oversized information blocks',()=>{
+ const shell=readFileSync('src/design-system/SettingsWindow.tsx','utf8');
+ const controls=readFileSync('src/design-system/controls.css','utf8');
+ assert.match(shell,/else extras\.push\(node\)/);
+ assert.match(shell,/className="setup-extra-notes"/);
+ assert.match(controls,/grid-template-rows:auto min-content!important/);
+ assert.match(controls,/\.setup-footer>\.setup-material-preview\{[^}]*grid-row:1\/span 2!important/);
+ assert.match(controls,/\.setup-footer\{[^}]*max-height:80px/);
+ assert.match(controls,/--zg-setup-control-height:52px/);
 });
