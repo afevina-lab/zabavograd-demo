@@ -295,7 +295,7 @@ test('All five setups use one semantic two-column arrangement and common preview
   for(const slot of ['material','rules','task','appearance']){
    assert.match(setup,new RegExp('data-setup-section="'+slot+'"'),file+': '+slot);
   }
-  assert.match(setup,/<SetupPreview /,file+': shared preview');
+  assert.match(setup,/<SetupPreview\s+/,file+': shared preview');
  }
  assert.match(css,/\.app \.shared-settings-window \.setup-columns\{display:grid;grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
  assert.match(css,/\.setup-footer>\.setup-material-preview\{/);
@@ -465,7 +465,7 @@ test('All five setup previews share one word-and-status layout with no sub-CTA l
  assert.match(css,/-webkit-line-clamp:2/);
  for(const file of ['main.tsx','Matching.tsx','Sorting.tsx','Conveyor.tsx','Transformations.tsx']){
   const source=readFileSync('src/'+file,'utf8');
-  assert.match(source,/<SetupPreview actions=\{</,file);
+  assert.match(source,/<SetupPreview\s+actions=\{</,file);
  }
  const matching=readFileSync('src/Matching.tsx','utf8');
  const conveyor=readFileSync('src/Conveyor.tsx','utf8');
