@@ -286,7 +286,8 @@ test('All five setups use one semantic two-column arrangement and common preview
  assert.match(shell,/purpose==='task'\|\|purpose==='appearance'/);
  assert.match(shell,/purpose==='preview'/);
  assert.match(shell,/setup-section-fieldset/);
- assert.match(shell,/matching-setup\|conveyor-settings\|transformation-setup\|sort-settings/);
+ assert.doesNotMatch(shell,/matching-setup\\|conveyor-settings\\|transformation-setup\\|sort-settings/);
+ assert.match(shell,/arrange\(child\.props\.children\)/);
  for(const file of ['main.tsx','Matching.tsx','Sorting.tsx','Conveyor.tsx','Transformations.tsx']){
   const source=readFileSync('src/'+file,'utf8');
   const setup=source.slice(source.indexOf('<SettingsWindow'),source.indexOf('</SettingsWindow>'));
