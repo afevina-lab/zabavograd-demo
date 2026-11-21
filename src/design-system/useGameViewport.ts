@@ -3,3 +3,17 @@ import {useEffect} from 'react';
 export function useGameViewport(playing:boolean){
  useEffect(()=>{if(!playing&&document.fullscreenElement)void document.exitFullscreen().catch(()=>{});},[playing]);
 }
+
+/** Request immersive landscape directly from the user-initiated Start action.
+ * Browsers may deny fullscreen or orientation lock; gameplay must still work.
+ */
+export function enterGameViewport(){
+ if(!window.matchMedia('(pointer:coarse)').matches&&navigator.maxTouchPoints===0)return;
+ const root=document.querySelector<HTMLElement>('.app');
+ if(!root)return;
+ const orientation=screen.orientation as ScreenOrientation & {lock?:(orientation:'landscape')=>Promise<void>};
+ const lock=()=>orientation.lock?.('landscape').catch(()=>{});
+ if(document.fullscreenElement){void lock();return;}
+ if(!root.requestFullscreen)return;
+ void root.requestFullscreen().then(lock).catch(()=>{});
+}
