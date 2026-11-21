@@ -145,9 +145,7 @@
 .advanced-material .setup-action-icon{width:34px;height:34px;background:transparent;box-shadow:none}.advanced-material .setup-action-copy strong{font-size:14px}.advanced-material .setup-action-copy small{font-size:12px}
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .primary{background:var(--ui-deep)!important}
 /* One quantity value, flanked by buttons, above the filled recessed track. */
-.app .quantity-slider{margin:16px 0 22px}.app .quantity-slider>label{font-weight:650;margin-bottom:12px!important}
 
-.app[data-theme] .quantity-slider input[type=number]{width:76px!important;height:64px!important;min-height:64px;border-radius:50%!important;text-align:center;font-size:27px;font-weight:750;padding:8px!important;appearance:textfield;-moz-appearance:textfield}
 .quantity-slider input[type=number]::-webkit-inner-spin-button,.quantity-slider input[type=number]::-webkit-outer-spin-button{appearance:none;margin:0}
 .app[data-theme] .quantity-slider button{width:42px;height:42px;background:var(--ui-deep)!important;color:var(--ui-paper)!important;border-color:var(--ui-deep)!important;font-size:26px}
 .app .settings .quantity-slider input[type=range]{width:100%;height:18px!important;margin:6px 0 0;background:linear-gradient(to right,var(--ui-deep) 0 var(--quantity-fill),color-mix(in srgb,var(--ui-outline) 25%,var(--ui-setup-paper)) var(--quantity-fill) 100%)!important;border:1px solid var(--ui-field-edge)!important;box-shadow:inset 0 3px 5px #233a3540,inset 0 -1px 1px #fff8}
@@ -175,10 +173,10 @@
 .app[data-theme] .icon-button:hover:not(:disabled){filter:brightness(1.1)}.app[data-theme] .icon-button:active:not(:disabled){transform:translateY(2px);box-shadow:inset 0 2px 3px #0002,0 1px 0 var(--ui-deep)!important}
 /* Compact quantity header; the track retains its broad, tactile thumb. */
 .app .quantity-slider{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 16px;align-items:center;margin:22px 0 24px;padding:16px;border:1px solid var(--ui-tray-edge);border-radius:16px;background:var(--ui-setup-field);box-shadow:inset 0 2px 3px #fff9,0 2px 0 var(--ui-tray-shadow)}
-.app .quantity-slider>label{margin:0!important;font-size:15px;line-height:1.3}
+.app .quantity-slider>label{margin:0!important;font-size:15px;line-height:1.3;font-weight:650}
 .app .quantity-slider>div.quantity-stepper{display:flex;gap:0;align-items:center;justify-content:center;padding:0;overflow:hidden;border:1px solid var(--ui-deep);border-radius:11px;box-shadow:0 2px 0 color-mix(in srgb,var(--ui-deep) 70%,black)}
 .app[data-theme] .quantity-slider .quantity-stepper button{width:32px;height:36px;min-height:36px!important;min-width:0;border:0!important;border-radius:0!important;box-shadow:inset 0 1px 1px #fff5!important;font-size:22px;padding:0!important}
-.app[data-theme] .quantity-slider .quantity-stepper input[type=number]{width:44px!important;height:36px!important;min-height:36px!important;border:0!important;border-radius:0!important;box-shadow:inset 0 2px 4px var(--ui-well-shadow-strong)!important;font-size:20px;padding:3px!important}
+.app[data-theme] .quantity-slider .quantity-stepper input[type=number]{width:44px!important;height:36px!important;min-height:36px!important;min-width:0;text-align:center;font-weight:750;appearance:textfield;-moz-appearance:textfield;border:0!important;border-radius:0!important;box-shadow:inset 0 2px 4px var(--ui-well-shadow-strong)!important;font-size:20px;padding:3px!important}
 .app .quantity-slider>input[type=range],.quantity-slider>.quantity-availability{grid-column:1/-1}.app .quantity-slider>input[type=range]{margin:6px 0 0!important}
 /* The start action has a visible lower face and a forward arrow. */
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .primary:not(.rule-delete),.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .start{box-shadow:inset 0 3px 2px #fff7,inset 0 -5px 5px var(--ui-button-inset-strong),0 7px 0 color-mix(in srgb,var(--ui-deep) 62%,black),0 11px 14px #172a4030!important;border-top-color:color-mix(in srgb,var(--ui-deep) 50%,var(--ui-paper))!important;min-height:64px;margin-bottom:8px}
