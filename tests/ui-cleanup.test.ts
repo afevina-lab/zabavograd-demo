@@ -77,7 +77,7 @@ test('Shared settings header geometry is owned by the canonical controls stylesh
  assert.doesNotMatch(layout,/\.settings-window-heading span\{[^}]*font-size:/);
  assert.match(controls,/\.app \.settings-window-heading\{[^}]*padding:/);
  assert.match(controls,/\.app \.settings-window-heading h2\{font-size:30px\}/);
- assert.match(controls,/@media\(max-width:600px\)\{[^}]*\.app \.settings-window-heading\{padding:6px 8px 12px\}/);
+ assert.match(controls,/@media\(max-width:600px\)\{[^\n]*\.app \.settings-window-heading\{padding:6px 8px 12px\}/);
 });
 
 test('Modal backdrop uses a single stacking rule',()=>{
