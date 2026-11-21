@@ -276,3 +276,33 @@ test('Chromium smoke covers compact and desktop counters in all five games',()=>
  const reading=readFileSync('scripts/verify-settings-browser.mjs','utf8');
  assert.match(reading,/Word length must use one accessible two-ended track/);
 });
+
+
+test('All five setups use one semantic two-column arrangement and common preview footer',()=>{
+ const shell=readFileSync('src/design-system/SettingsWindow.tsx','utf8');
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ assert.match(shell,/purpose==='material'\|\|purpose==='rules'/);
+ assert.match(shell,/purpose==='task'\|\|purpose==='appearance'/);
+ assert.match(shell,/purpose==='preview'/);
+ assert.match(shell,/setup-section-fieldset/);
+ assert.match(shell,/matching-setup\|conveyor-settings\|transformation-setup\|sort-settings/);
+ for(const file of ['main.tsx','Matching.tsx','Sorting.tsx','Conveyor.tsx','Transformations.tsx']){
+  const source=readFileSync('src/'+file,'utf8');
+  const setup=source.slice(source.indexOf('<SettingsWindow'),source.indexOf('</SettingsWindow>'));
+  for(const slot of ['material','rules','task','appearance','preview']){
+   assert.match(setup,new RegExp('data-setup-section="'+slot+'"'),file+': '+slot);
+  }
+ }
+ assert.match(css,/\.app \.shared-settings-window \.setup-columns\{display:grid;grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
+ assert.match(css,/\.setup-footer>\.setup-material-preview\{/);
+ assert.match(css,/\.setup-footer>:is\(button.primary,button.start\)\{/);
+});
+
+test('Deprecated game-specific setup grids cannot override shared semantic columns',()=>{
+ const css=readFileSync('src/styles/layout.css','utf8');
+ assert.doesNotMatch(css,/\.app \.shared-settings-window \.matching-setup,\.app \.shared-settings-window \.conveyor-settings\{display:grid/);
+ assert.doesNotMatch(css,/\.transformation-setup \.settings\{display:grid/);
+ assert.doesNotMatch(css,/\.shared-settings-window \.matching-setup>\.settings-block:nth-of-type/);
+ const memory=readFileSync('src/main.tsx','utf8');
+ assert.doesNotMatch(memory, /Начать игру'\} <Icon name="RightArrow1"/);
+});
