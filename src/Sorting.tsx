@@ -1,6 +1,6 @@
 import {SelectControl} from './design-system/SelectControl.tsx';
 import {SettingsWindow} from './design-system/SettingsWindow.tsx';
-import {useGameViewport} from './design-system/useGameViewport.ts';
+import {useGameViewport,enterGameViewport} from './design-system/useGameViewport.ts';
 import {GameSelect} from './GameSelect.tsx';
 import {TextDisplaySettings} from './TextDisplaySettings.tsx';
 import {readingLabel} from './reading.ts';
@@ -60,7 +60,7 @@ export function Sorting(){
   try{const picked=makeSorting(pools.map(p=>p.filter(w=>chosen.includes(w.id))),groups.map(g=>g.count));setPreviewOverride({source:preparation,items:picked});setPicker(false);setError('');}catch(e){setError((e as Error).message)}
  }
  function audio(name:string){if(sound){const a=new Audio(import.meta.env.BASE_URL+'assets/audio/'+soundFile(theme,name));a.volume=.3;void a.play().catch(()=>{})}}
- function start(){if(preparation.error)return;setItems(previewItems);setStars(0);setScore('');setVerdict({});setChecking(false);setPlacements({});setSelected(null);setWrong([]);setResult('');setPaused(false);setRemaining(seconds);setLives(5);undo.current=null;setRunning(true);audio('deal')}
+ function start(){if(preparation.error)return;enterGameViewport();setItems(previewItems);setStars(0);setScore('');setVerdict({});setChecking(false);setPlacements({});setSelected(null);setWrong([]);setResult('');setPaused(false);setRemaining(seconds);setLives(5);undo.current=null;setRunning(true);audio('deal')}
  function place(id:string,g:number){if(paused||result||checking)return;const item=items.find(i=>i.word.id===id);if(!item)return;if(instant&&!item.accepted.includes(g)){if(withLives&&automaticLives(lifeMode)){undo.current=lives;setLives(spendLives(lives));}setWrong([id]);setSelected(null);audio('wrong');setTimeout(()=>setWrong([]),MOTION.sortRetryMs);return;}const next={...placements,[id]:g};setPlacements(next);setSelected(null);audio('click');if(instant&&items.every(i=>next[i.word.id]!==undefined)){setStars(3);setResult('Все карточки на своих местах!');audio('win')}}
  function check(){
  if(checking||paused||result||items.some(i=>placements[i.word.id]===undefined))return;
