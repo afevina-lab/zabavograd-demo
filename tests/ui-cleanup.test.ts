@@ -127,3 +127,25 @@ test('Mobile settings fieldset display fallback is declared once',()=>{
  assert.equal([...css.matchAll(/\.settings fieldset\{display:block\}/g)].length,1);
  assert.match(css,/@media\(max-width:700px\)\{\s*\.settings fieldset\{display:block\}/);
 });
+
+
+test('Shared material actions use the design-system button variants',()=>{
+ const memory=readFileSync('src/main.tsx','utf8');
+ const picker=readFileSync('src/WordPicker.tsx','utf8');
+ const material=readFileSync('src/MaterialSettings.tsx','utf8');
+ const theme=readFileSync('src/GameUI.tsx','utf8');
+ assert.match(memory,/<button type="button" className="icon-button" title="Перемешать состав"/);
+ assert.match(memory,/<button type="button" className="icon-button" title="Выбрать слова вручную"/);
+ assert.match(picker,/<button type="button" className="secondary" onClick={close}>Отмена<\/button>/);
+ assert.match(material,/<button type="button" className="secondary" onClick=\{\(\)=>setL\(/);
+ assert.match(theme,/<button type="button" key=\{id\} onClick=\{\(\)=>setTheme\(id\)\}/);
+});
+
+test('All five game setups use the shared settings shell and select implementations',()=>{
+ for(const file of ['main.tsx','Matching.tsx','Sorting.tsx','Conveyor.tsx','Transformations.tsx']){
+  const source=readFileSync('src/'+file,'utf8');
+  assert.match(source,/<SettingsWindow game=/,file);
+  assert.match(source,/\b(?:GameSelect|SelectControl)\b/,file);
+  assert.doesNotMatch(source,/<select\b/,file+': native selects must use shared controls');
+ }
+});
