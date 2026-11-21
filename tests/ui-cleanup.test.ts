@@ -32,3 +32,15 @@ test('QuantitySlider has one modern stepper without old bounds labels',()=>{
  assert.doesNotMatch(slider,/quantity-bounds/);
  assert.doesNotMatch(css,/quantity-bounds/);
 });
+
+
+test('Game stage never restores legacy scrolling or discarded card layouts',()=>{
+ const css=readFileSync('src/styles/layout.css','utf8');
+ assert.doesNotMatch(css,/\.app\.game-active \.stage,\.app\.game-active:fullscreen \.stage\s*\{[^}]*overflow:\s*auto/);
+ assert.match(css,/\.app\.game-active \.stage,\.app\.game-active:fullscreen \.stage\s*\{[^}]*overflow:\s*hidden\s*!important/);
+ assert.doesNotMatch(css,/\.cards\s*\{\s*grid-template-columns/);
+ assert.doesNotMatch(css,/\.card\s*\{\s*aspect-ratio:\s*(?:1\.35|\.85|\.9)/);
+ assert.doesNotMatch(css,/@media\(prefers-reduced-motion:reduce\)\s*\{\s*\}/);
+ assert.doesNotMatch(css,/\.stage\s*\{\s*min-height:\s*(?:540|610|520)px/);
+ assert.doesNotMatch(css,/\.workspace\s*\{\s*display:\s*grid/);
+});
