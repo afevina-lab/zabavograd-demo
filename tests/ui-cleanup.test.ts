@@ -328,3 +328,12 @@ test('Destructive setup edits do not borrow the primary Start-game button skin',
  assert.doesNotMatch(material,/className="primary rule-delete"/);
  assert.match(sorting,/<button className="secondary" type="button" onClick=\{\(\)=>setExclusions/);
 });
+
+
+test('Sorting fields do not override common slider and numeric input surfaces',()=>{
+ const layout=readFileSync('src/styles/layout.css','utf8');
+ const controls=readFileSync('src/design-system/controls.css','utf8');
+ assert.doesNotMatch(layout,/\.sort-settings input:not\(\[type=checkbox\]\)/);
+ assert.match(controls,/\.app\[data-theme\] \.settings input\[type=number\]/);
+ assert.match(controls,/\.app \.settings input\[type=range\]/);
+});
