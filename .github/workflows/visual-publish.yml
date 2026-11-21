@@ -46,8 +46,10 @@ jobs:
         run: node scripts/check-offline-release.cjs dist
       - name: Browser smoke test across games, themes, sizes
         run: |
-          node scripts/verify-ui-browser.mjs
-          node scripts/verify-settings-browser.mjs
+          for theme in neutral forest space; do
+            UI_THEME="$theme" node scripts/verify-settings-browser.mjs
+            UI_THEME="$theme" node scripts/verify-dialogs-browser.mjs
+          done
       - name: Browser screenshots and report
         if: always()
         uses: actions/upload-artifact@v4

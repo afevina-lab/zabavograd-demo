@@ -15,13 +15,13 @@ type ThemeConfig={
 export const THEMES:Record<ThemeId,ThemeConfig>={
  neutral:{
   label:'Нейтральное',
-  palette:{accent:'#77b0d6',deep:'#285174',pale:'#e4f2fa',outline:'#5d86a5',text:'#243d59',paper:'#fbf5e9',page:'#f8f1e8',stageText:'#5b5059'},
+  palette:{accent:'#9bb8d0',deep:'#4c6c8d',pale:'#edf3f8',outline:'#97a9b8',text:'#334559',paper:'#fffdf6',page:'#f4f0e8',stageText:'#5b5059'},
   skin:'blue',toolbarArt:null,scene:{background:'assets/neutral/approved-paper-4k.webp',fill:'#f9f2e7',motion:'drift',sprites:[],effects:{stars:0,comets:0}},
   cards:{kind:'watercolor',back:'assets/neutral/approved-back.webp',front:'assets/neutral/approved-front.webp'},sounds:{}
  },
  forest:{
   label:'Лес',
-  palette:{accent:'#a8bc8c',deep:'#4a694c',pale:'#edf4e5',outline:'#7c9b72',text:'#304d38',paper:'#fffaf0',page:'#eef2e6',stageText:'#344a39'},
+  palette:{accent:'#80b84c',deep:'#3f782f',pale:'#edf4e5',outline:'#7c9b72',text:'#304d38',paper:'#fffaf0',page:'#eef2e6',stageText:'#344a39'},
   skin:'sage',toolbarArt:'assets/themes/forest/header.webp',
   scene:{background:'assets/themes/forest/forest_background.webp',fill:'#d5e7bf',motion:'static',sprites:[
    {id:'tree-left',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(100cqh,65cqw)',left:'-5%',bottom:'-4%',opacity:1,layer:2,durationMs:10500,origin:'50% 94%'},
@@ -42,7 +42,7 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
  },
  space:{
   label:'Космос',
-  palette:{accent:'#ae97e1',deep:'#625095',pale:'#ebe5ff',outline:'#8a76c2',text:'#2e2855',paper:'#fbf5e9',page:'#1c2340',stageText:'#fff5e8'},
+  palette:{accent:'#93a7ed',deep:'#5050a8',pale:'#e0e6fb',outline:'#8b9cbf',text:'#29365a',paper:'#f5f8ff',page:'#111b35',stageText:'#f0f5ff'},
   skin:'lavender',toolbarArt:'assets/themes/space/header.webp',scene:{background:'assets/space/background.webp',fill:'#1c2340',motion:'drift',
  sprites:[
   {id:'planet-blue',src:'assets/space/planet-blue.webp',motion:'float',width:'min(120cqh,82cqw)',left:'-30cqh',bottom:'-20cqh',opacity:.9,durationMs:24000,spinMs:160000},
@@ -58,12 +58,49 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
 export const asThemeId=(x:unknown):ThemeId=>typeof x==='string'&&(THEME_IDS as readonly string[]).includes(x)?x as ThemeId:'space';
 export const assetUrl=(p:string,base='/')=>base.replace(/\/?$/,'/')+p.replace(/^\//,'');
 const url=(p:string|null,base:string)=>p?`url("${assetUrl(p,base)}")`:'none';
+
+/** Surface materials are presentation only; every game uses the same geometry. */
+const warmSurface={
+ '--ui-control-face':'linear-gradient(180deg,#fffdf5 0%,#fff4dc 44%,#f1dfb9 100%)','--ui-control-bottom':'#c6ad82','--ui-control-shadow':'#65451d24','--ui-control-ambient':'#65451d18','--ui-frame-inset':'13px','--ui-surface-texture':'none','--ui-frame-base':'#c28a48','--ui-frame-light':'#e7bc7d','--ui-frame-dark':'#79502c',
+ '--ui-frame-texture':'repeating-linear-gradient(2deg,transparent 0 5px,#6d3e1710 6px,transparent 7px 13px)',
+ '--ui-frame-fill':'linear-gradient(100deg,var(--ui-frame-light),var(--ui-frame-base) 24%,var(--ui-frame-light) 54%,var(--ui-frame-base))',
+ '--ui-frame-glint':'#fff6d6','--ui-frame-shadow':'#53351f55','--ui-inner-edge':'#a97b43','--ui-inner-shadow':'#60361640',
+ '--ui-surface-glint':'#fff5df','--ui-field-glint':'#fffdf0','--ui-surface-edge':'#cfb68c','--ui-field-edge':'#d2bb8d',
+ '--ui-tray-edge':'#cbb58a','--ui-tray-shadow':'#d5c399','--ui-well-shadow':'#57452a20','--ui-well-shadow-strong':'#57452a25',
+ '--ui-muted-text':'#8b8f81','--ui-button-inset':'#263c2220','--ui-button-inset-strong':'#17331a40','--ui-soft-shadow':'#49382012','--ui-icon-shadow':'#49382020','--ui-empty-edge':'#ba9d70',
+ '--ui-thumb-edge':'#ba8b2c','--ui-thumb-base':'#b58a2c',
+ '--ui-highlight':'#efba3e','--ui-icon-surface':'#f3d6b0','--ui-setup-paper':'#f5e9cc','--ui-setup-field':'#fff5df'
+};
+const setupSurfaces:Record<ThemeId,typeof warmSurface>={
+ neutral:{...warmSurface,
+ '--ui-control-face':'linear-gradient(180deg,#fffefb 0%,#faf6ec 45%,#eee6d6 100%)','--ui-control-bottom':'#c9bfaa','--ui-control-shadow':'#514b3e1a','--ui-control-ambient':'#514b3e12',
+ '--ui-frame-base':'#c6bdad','--ui-frame-light':'#f7f1e5','--ui-frame-dark':'#9a9183','--ui-frame-texture':'none',
+ '--ui-frame-fill':'linear-gradient(115deg,#fffaf0,#d7cdbb 35%,#f6efdf 60%,#c2b8a6)',
+ '--ui-frame-glint':'#fffdf7','--ui-frame-shadow':'#625a4933','--ui-inner-edge':'#c2b7a1','--ui-inner-shadow':'#6f604126',
+ '--ui-surface-glint':'#fffdf6','--ui-field-glint':'#ffffff','--ui-surface-edge':'#d5ccb9','--ui-field-edge':'#d4cbb7','--ui-tray-edge':'#d5ccb9','--ui-tray-shadow':'#ded5c3',
+ '--ui-muted-text':'#687064','--ui-button-inset':'#53617118','--ui-button-inset-strong':'#33485e30','--ui-soft-shadow':'#514b3e10','--ui-icon-shadow':'#514b3e18','--ui-empty-edge':'#c4bba7',
+ '--ui-thumb-edge':'#b7a173','--ui-thumb-base':'#ad986d','--ui-highlight':'#e4c996','--ui-icon-surface':'#e4e9ee','--ui-setup-paper':'#f6f0e3','--ui-setup-field':'#fffdf6'
+ },forest:warmSurface,
+ space:{
+ '--ui-control-face':'linear-gradient(180deg,#ffffff 0%,#f2f6ff 38%,#d9e3f4 100%)','--ui-control-bottom':'#9aaccc','--ui-control-shadow':'#1b30502d','--ui-control-ambient':'#1b30501e','--ui-frame-inset':'18px','--ui-surface-texture':'none',
+ '--ui-frame-base':'#8397b1','--ui-frame-light':'#e8f2ff','--ui-frame-dark':'#273c56',
+ '--ui-frame-texture':'repeating-linear-gradient(0deg,#ffffff10 0 1px,transparent 1px 5px)',
+ '--ui-frame-fill':'linear-gradient(105deg,#f9fcff 0%,#adbed4 10%,#617a98 22%,#dfe9f5 35%,#ffffff 44%,#7d93af 58%,#465e7e 73%,#dce8f5 86%,#98adc6 100%)',
+ '--ui-frame-glint':'#ffffff','--ui-frame-shadow':'#08162966','--ui-inner-edge':'#647e9c','--ui-inner-shadow':'#182c4d60',
+ '--ui-surface-glint':'#ffffff','--ui-field-glint':'#ffffff','--ui-surface-edge':'#93a6c0','--ui-field-edge':'#9aacc3',
+ '--ui-tray-edge':'#9aacc3','--ui-tray-shadow':'#b4c3d7','--ui-well-shadow':'#1b355028','--ui-well-shadow-strong':'#1b355030',
+ '--ui-muted-text':'#626f8e','--ui-button-inset':'#1a2d4c24','--ui-button-inset-strong':'#1c245540','--ui-soft-shadow':'#19375418','--ui-icon-shadow':'#19375422','--ui-empty-edge':'#91a8c4',
+ '--ui-thumb-edge':'#268bac','--ui-thumb-base':'#287b9b',
+ '--ui-highlight':'#64d1ed','--ui-icon-surface':'#ccd7ff','--ui-setup-paper':'#e4ebf6','--ui-setup-field':'#f7faff'
+ }
+};
+
 export function themeVars(id:ThemeId,base='/'):CSSProperties{
  const t=THEMES[id],p=t.palette,c=t.skin;
  const kit=(dir:string,name:string)=>url(`assets/theme-ui/${dir}/${name}.webp`,base);
  return {
   '--ui-accent':p.accent,'--ui-deep':p.deep,'--ui-pale':p.pale,
-  '--ui-outline':p.outline,'--ui-text':p.text,'--ui-paper':p.paper,
+  ...setupSurfaces[id],'--ui-required':'#c63b32','--ui-required-dark':'#86281f','--ui-outline':p.outline,'--ui-text':p.text,'--ui-paper':p.paper,
   '--zg-page':p.page,'--zg-stage-fill':t.scene.fill,'--zg-stage-text':p.stageText,
   '--zg-stage-image':url(t.scene.background,base),
   '--zg-toolbar-image':url(t.toolbarArt,base),

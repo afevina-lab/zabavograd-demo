@@ -5,8 +5,11 @@ import {tmpdir} from 'node:os';
 import {join,resolve,extname,sep} from 'node:path';
 import {createServer} from 'node:http';
 
+const selectedTheme=process.env.UI_THEME||'forest';
+assert(['neutral','forest','space'].includes(selectedTheme),'Unknown UI_THEME');
+const themeIndex=['neutral','forest','space'].indexOf(selectedTheme);
 const root=resolve('dist');
-const output=resolve('ui-smoke');
+const output=resolve(selectedTheme==='forest'?'ui-smoke':'ui-smoke/'+selectedTheme);
 mkdirSync(output,{recursive:true});
 const contentTypes={'.html':'text/html','.js':'text/javascript','.css':'text/css','.webp':'image/webp','.png':'image/png','.svg':'image/svg+xml','.json':'application/json'};
 const server=createServer((req,res)=>{
@@ -54,23 +57,83 @@ try{
   async function screenshot(name){const out=await cmd('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});writeFileSync(join(output,name+'.png'),Buffer.from(out.data,'base64'))}
 
 const report=[];
-for(const [width,height] of [[1440,900],[390,844],[844,390]]){
+for(const [width,height] of [[1440,900],[1024,768],[768,1024],[390,844],[844,390]]){
 await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
 for(const game of ['memory','sorting','matching','conveyor','transformations']){
-await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");await sleep(800);
+await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");await evaluate("document.querySelectorAll('.themes button')["+themeIndex+"]?.click()");await sleep(800);
+if(game==='matching'){
+ for(const value of ['word-word','word-image','image-word','image-image']){
+ await evaluate("(()=>{const e=document.querySelector('select[aria-label=\"Режим карточек\"]');e.value='"+value+"';e.dispatchEvent(new Event('change',{bubbles:true}))})()");
+ assert(await evaluate("!![...document.querySelectorAll('label')].find(e=>e.textContent==='Подписи к исходным картинкам')") === (value==='image-image'),'Caption visibility: '+value);
+ }
+}
+assert(await evaluate("[...document.querySelectorAll('.settings select')].every(e=>e.closest('.select-control'))"),'Unstyled native select');
+assert(await evaluate("!document.querySelector('.setup-card-preview,.setup-preview-card')"),'Picture preview still present');
+assert(await evaluate("(()=>{const nodes=[...document.querySelectorAll('.select-control,.category-picker-trigger,.settings-disclosure>summary')];return nodes.every(e=>{const w=e.querySelector(':scope>.control-well'),r=e.getBoundingClientRect();if(!w||r.width===0)return true;return Math.abs(r.right-w.getBoundingClientRect().right-8)<1})})()"),'Action well inset mismatch '+game+' '+width);
 await screenshot('audit-'+game+'-'+width+'-top');
+if(game==='matching'){
+ assert(await evaluate("(()=>{const es=[...document.querySelectorAll('.settings-disclosure')];return es.length>=2&&es.every(e=>{e.querySelector('summary').click();const opened=e.open;e.querySelector('summary').click();return opened&&!e.open})})()"),'Disclosure interaction failed');
+ await evaluate("document.querySelectorAll('.settings-disclosure').forEach(e=>e.open=true)");
+ await screenshot('expanded-settings-'+width);
+ assert(await evaluate("(()=>{const e=document.querySelector('.unified-settings-content');return e.scrollWidth<=e.clientWidth+2})()"),'Expanded settings overflow');
+ await evaluate("document.querySelectorAll('.settings-disclosure').forEach(e=>e.open=false)");
+}
+if(game==='conveyor'){
+ const beforeCount=await evaluate("+document.querySelector('.quantity-slider input[type=number]').value");
+ await evaluate("document.querySelectorAll('.quantity-slider button')[1].click()");
+ await until("+document.querySelector('.quantity-slider input[type=number]').value==="+(beforeCount+1));
+ await evaluate("document.querySelectorAll('.quantity-slider button')[0].click()");
+ await until("+document.querySelector('.quantity-slider input[type=number]').value==="+beforeCount);
+ assert(await evaluate("document.querySelectorAll('.quantity-slider input[type=number]').length===1&&!document.querySelector('.quantity-slider output')"),'Quantity display duplicated');
+ await evaluate("document.querySelector('.unified-settings-content').scrollTop=100000");await screenshot('ready-material-'+width);await evaluate("document.querySelector('.unified-settings-content').scrollTop=0");
+ assert(await evaluate("(()=>{const e=document.querySelector('input[role=switch]');if(!e)return false;const before=e.checked;e.click();const changed=e.checked!==before;e.click();return changed&&e.checked===before})()"),'Caption switch failed');
+ await evaluate("(()=>{const e=[...document.querySelectorAll('select')].find(e=>[...e.options].some(o=>o.value==='lexical'));if(e){e.value='lexical';e.dispatchEvent(new Event('change',{bubbles:true}))}})()");await sleep(200);
+ await evaluate("document.querySelector('.category-picker-trigger')?.click()");
+ if(await evaluate("!!document.querySelector('.category-picker[open]')")){
+ await evaluate("document.querySelectorAll('.category-picker details').forEach(e=>e.open=true)");
+ await screenshot('categories-'+width);
+ await evaluate("document.querySelector('.category-picker[open]>.panel-scroll').scrollTop=100000");
+ assert(await evaluate("(()=>{const d=document.querySelector('.category-picker[open]'),s=d.querySelector('.panel-scroll'),a=s.getBoundingClientRect(),b=d.getBoundingClientRect(),inset=parseFloat(getComputedStyle(d).getPropertyValue('--ui-frame-inset'));return d.scrollTop===0&&s.scrollTop>0&&b.right-a.right>=inset+8&&b.bottom-a.bottom>=inset+8})()"),'Dialog scrollbar overlaps frame');
+ await screenshot('categories-'+width+'-bottom');
+ assert(await evaluate("document.querySelector('.category-picker').scrollWidth<=document.querySelector('.category-picker').clientWidth+2"),'Category overflow');
+ await evaluate("document.querySelector('.category-picker').close()");
+ }
+}
 report.push(await evaluate("(()=>{const e=document.querySelector('.unified-settings-content'),r=e.getBoundingClientRect();return {game:'"+game+"',width:innerWidth,height:innerHeight,scroll:e.scrollHeight,client:e.clientHeight,bottom:r.bottom,overflow:e.scrollWidth>e.clientWidth+2,buttons:[...e.querySelectorAll('button')].filter(b=>b.textContent.startsWith('Начать')).map(b=>({text:b.textContent,disabled:b.disabled}))}})()"));
 await evaluate("document.querySelector('.unified-settings-content').scrollTop=100000");await screenshot('audit-'+game+'-'+width+'-bottom');
 assert(await evaluate("(()=>{const e=document.querySelector('.unified-settings-content'),f=document.querySelector('.settings-frame'),a=e.getBoundingClientRect(),b=f.getBoundingClientRect();return a.bottom<=b.bottom-8&&a.right<=b.right&&e.scrollWidth<=e.clientWidth+2})()"),'Settings exceed frame: '+game+' '+width);
+assert(await evaluate("(()=>{const e=document.querySelector('.unified-settings-content'),f=document.querySelector('.settings-frame'),a=e.getBoundingClientRect(),b=f.getBoundingClientRect(),inset=parseFloat(getComputedStyle(f).getPropertyValue('--ui-frame-inset'));return b.right-a.right>=inset+8&&b.bottom-a.bottom>=inset+8})()"),'Settings scrollbar overlaps material frame: '+game+' '+width);
 if(game==='transformations'){await evaluate("[...document.querySelectorAll('button')].find(b=>b.textContent==='Начать игру')?.click()");await sleep(500);await screenshot('audit-transformations-'+width+'-play');assert(await evaluate("(()=>{const e=document.querySelector('.transformation-chamber');if(!e)return false;const r=e.getBoundingClientRect();const t=document.querySelector('.transformation-word')?.getBoundingClientRect();return r.width>0&&r.left>=0&&r.right<=innerWidth+1&&(!t||(t.left>=r.left&&t.right<=r.right))})()"),'Transformation chamber cropped: '+width);}
 }}
 
 for(const game of ['memory','sorting','matching','conveyor','transformations']){
  await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");
- await evaluate("[...document.querySelectorAll('.unified-settings-content button')].find(b=>b.textContent==='Чтение').click()");await until("!!document.querySelector('.reading-settings')");
+ await evaluate("(()=>{const e=[...document.querySelectorAll('.unified-settings-content select')].find(e=>[...e.options].some(o=>o.textContent==='Чтение'));if(!e)throw Error('Task select missing');e.value=[...e.options].find(o=>o.textContent==='Чтение').value;e.dispatchEvent(new Event('change',{bubbles:true}))})()");await until("!!document.querySelector('.reading-settings')");
  for(const label of ['Буквы','Слоги','Слова'])await evaluate("(()=>{const e=[...document.querySelectorAll('.reading-settings .reading-kinds label')].find(e=>e.textContent==='"+label+"')?.querySelector('input');if(!e)throw Error('Missing reading kind');if(!e.checked)e.click()})()");
  assert(await evaluate("[...document.querySelectorAll('.reading-settings .reading-kinds')][0].querySelectorAll('input:checked').length===3"),'Mixed reading unavailable in '+game);
  await screenshot('reading-mixed-'+game);
+}
+
+// Required selections change their state immediately after a genuine choice.
+for(const [width,height] of [[1440,900],[390,844]]){
+ await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
+ await cmd('Page.navigate',{url:origin+'?game=matching'});await until("!!document.querySelector('.category-picker-trigger')");
+ assert(await evaluate("document.querySelector('.category-picker-trigger').dataset.fieldState==='required'&&document.querySelector('select[aria-label=\"Задание\"]').getAttribute('aria-invalid')==='true'"),'Missing required state');
+ const requiredColor=await evaluate("getComputedStyle(document.querySelector('.category-picker-trigger .control-well')).backgroundColor");
+ await screenshot('required-empty-'+width);
+ await evaluate("document.querySelector('.category-picker-trigger').click()");await until("document.querySelectorAll('.category-grid>li').length>0");
+ await evaluate("(()=>{const n=[...document.querySelectorAll('.category-grid>li')].find(e=>e.querySelector('summary')?.textContent.includes('Животный мир'));n.querySelector('details').open=true;n.querySelector('input').click()})()");
+ await evaluate("document.querySelector('.category-picker[open] .primary').click()");
+ await until("document.querySelector('.category-picker-trigger').dataset.fieldState==='ready'&&document.querySelector('select[aria-label=\"Задание\"]').getAttribute('aria-invalid')!=='true'");
+ assert(await evaluate("getComputedStyle(document.querySelector('.category-picker-trigger .control-well')).backgroundColor!=="+JSON.stringify(requiredColor)),'Required color not cleared');
+ await screenshot('required-filled-'+width);
+ await cmd('Page.navigate',{url:origin+'?game=memory'});await until("!!document.querySelector('select[aria-label=\"Учебная задача\"]')");
+ await evaluate("(()=>{const e=document.querySelector('select[aria-label=\"Учебная задача\"]');e.value='automation';e.dispatchEvent(new Event('change',{bubbles:true}))})()");
+ await until("!!document.querySelector('.sound-selection>button[data-field-state=required]')");
+ await evaluate("document.querySelector('.sound-selection>button').click()");await until("!!document.querySelector('.sound-chip>button:not(:disabled)')");
+ await evaluate("document.querySelector('.sound-chip>button:not(:disabled)').click()");await evaluate("document.querySelector('.sound-workshop .primary').click()");
+ await until("!!document.querySelector('.sound-selection>button[data-field-state=ready]')");
+ assert(await evaluate("document.querySelector('.sound-selection>button').getAttribute('aria-invalid')!=='true'&&getComputedStyle(document.querySelector('.sound-selection>button')).borderColor!=='rgb(198, 59, 50)'"),'Sound selection required state did not clear');
 }
 writeFileSync(join(output,'audit.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));
 }finally{ws?.close();proc.kill('SIGTERM');server.close();await Promise.race([new Promise(r=>proc.once('exit',r)),sleep(1500)]);try{rmSync(profile,{recursive:true,force:true,maxRetries:5,retryDelay:100})}catch{}}

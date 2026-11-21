@@ -2,7 +2,7 @@ import {useEffect,useRef,useState} from 'react';
 import {Challenges,Icon} from '../GameUI.tsx';
 import {automaticLives,manualLives,spendLives,type LifeMode} from '../life-policy.ts';
 export function LifeControls({lives,mode,disabled,onSpend,onUndo}:{lives:number;mode:LifeMode;disabled:boolean;onSpend:()=>void;onUndo:()=>void}){
- return <span className="life-controls"><button type="button" className="link hearts" aria-label={'Жизни: '+lives+'; снять половину жизни'} disabled={disabled||!manualLives(mode)} onClick={onSpend}>{Array.from({length:5},(_,i)=><span key={i} className="life-heart life-heart-svg" style={{opacity:lives-i>=1?1:lives-i===.5?.5:.23}}><Icon name="Heart"/></span>)}</button><button type="button" className="icon-button" aria-label="Снять половину жизни" disabled={disabled||!manualLives(mode)} onClick={onSpend}>−</button><button type="button" className="icon-button" aria-label="Вернуть жизнь" onClick={onUndo}>↶</button></span>;
+ return <span className="life-controls"><button type="button" className="link hearts" aria-label={'Жизни: '+lives+'; снять половину жизни'} disabled={disabled||!manualLives(mode)} title="Нажатие или F8 — снять половину жизни. F9 или контекстное меню — отменить." onContextMenu={e=>{e.preventDefault();onUndo()}} onClick={onSpend}>{Array.from({length:5},(_,i)=><span key={i} className="life-heart life-heart-svg" style={{opacity:lives-i>=1?1:lives-i===.5?.5:.23}}><Icon name="Heart"/></span>)}</button></span>;
 }
 export function useGameLimits(active:boolean,paused:boolean){
  const [timed,setTimed]=useState(false),[seconds,setSeconds]=useState(120),[withLives,setWithLives]=useState(false),[mode,setMode]=useState<LifeMode>('manual');

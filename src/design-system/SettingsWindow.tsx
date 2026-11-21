@@ -3,8 +3,16 @@ import {Icon} from '../GameUI.tsx';
 /** The single settings shell for every game. Only its content varies. */
 export function SettingsWindow({game,children}:{game:string;children:ReactNode}){
  const child=Children.only(children);
+ function arrange(content:ReactNode){
+ const nodes=Children.toArray(content),left:ReactNode[]=[],right:ReactNode[]=[],footer:ReactNode[]=[],intro:ReactNode[]=[];let section=0;
+ for(const node of nodes){if(isValidElement<{className?:string;children?:ReactNode}>(node)&&node.type==='section'&&node.props.className?.includes('settings-block')){
+ const preview=Children.toArray(node.props.children).some(c=>isValidElement<{className?:string}>(c)&&c.props.className==='material-head');
+ if(preview)footer.push(node);else(section++%2?right:left).push(node);
+ }else if(!section)intro.push(node);else footer.push(node)}
+ return <>{intro}<div className="setup-columns"><div className="setup-column">{left}</div><div className="setup-column">{right}</div></div><div className="setup-footer">{footer}</div></>;
+ }
  return <div className="settings-shade"><section className="settings-frame shared-settings-window" role="dialog" aria-modal="true" aria-label={'Настройки: '+game}>
- <header className="settings-window-heading"><div><h2>Настроим игру</h2><span>{game}</span></div><a className="icon-button" href={import.meta.env.BASE_URL+'home.html'} aria-label="Домой" title="На главную"><Icon name="Home1"/></a></header>
- {isValidElement<{className?:string}>(child)?cloneElement(child,{className:(child.props.className||'')+' settings unified-settings-content'}):child}
+ <header className="settings-window-heading"><div className="settings-adventure-title"><span className="settings-adventure-emblem" aria-hidden="true"><Icon name="Star"/></span><div><p className="settings-eyebrow">Забавоград · пора играть</p><h2>{game}</h2><span>Подготовка к игре</span></div></div><a className="icon-button" href={import.meta.env.BASE_URL+'home.html'} aria-label="Домой" title="На главную"><Icon name="Home1"/></a></header>
+ {isValidElement<{className?:string;children?:ReactNode}>(child)?cloneElement(child,{className:(child.props.className||'')+' settings unified-settings-content'},/matching-setup|conveyor-settings/.test(child.props.className||'')?arrange(child.props.children):child.props.children):child}
  </section></div>;
 }

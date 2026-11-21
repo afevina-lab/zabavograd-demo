@@ -39,6 +39,12 @@ async function run(){
   assert(!source.includes('className="victory-stars"'),'Result visuals must be shared: '+p);
   assert(!/theme\s*===\s*['"](?:space|neutral|forest)['"]/.test(source),'Hardcoded theme behavior: '+p);
  }
+ const forestSurface=themeVars('forest','/'),spaceSurface=themeVars('space','/');
+ assert.notEqual(forestSurface['--ui-frame-fill'],spaceSurface['--ui-frame-fill'],'Different materials must not share a frame finish');
+ assert.notEqual(forestSurface['--ui-setup-paper'],spaceSurface['--ui-setup-paper'],'Space surfaces must have their own cold palette');
+ assert.equal(forestSurface['--ui-frame-base'],'#c28a48','Approved forest wood must remain stable');
+ assert.equal(forestSurface['--ui-required'],spaceSurface['--ui-required'],'Required-field warning is semantic across themes');
+ assert(!/var\(--ui-wood/.test(controls),'Shared controls must use material-neutral token names');
  for(const id of THEME_IDS){
   const t=THEMES[id],vars=themeVars(id,'/');
   for(const asset of [t.scene.background,t.toolbarArt,t.cards.back,t.cards.front,...t.scene.sprites.map(s=>s.src)].filter(Boolean))

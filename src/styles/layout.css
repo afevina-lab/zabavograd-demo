@@ -580,10 +580,10 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
  box-shadow:inset 0 2px 1px #ffffffa8,0 3px 0 var(--ui-outline),0 4px 9px var(--ui-shadow)!important;
  text-shadow:none!important}
 .app .primary,.app .pair-options button.selected,.app .themes button.selected{
- background:linear-gradient(145deg,var(--ui-pale),var(--ui-accent))!important;color:var(--ui-deep)!important}
+ background:var(--ui-pale)!important;color:var(--ui-deep)!important}
 .app .icon-button{display:inline-flex;align-items:center;justify-content:center;min-width:49px;min-height:49px;padding:10px!important}
 .app .icon-button .garden-icon{width:24px;height:24px}
-.app .pair-options button.selected,.app .themes button.selected{outline:2px solid var(--ui-outline);outline-offset:2px}
+.app .pair-options button.selected,.app .themes button.selected{border-color:var(--ui-deep)!important}
 .app .settings-frame,.app .settings-shade .settings-frame .settings,.app .modal,.app .overlay>div,.app .modal.gui-panel{
  background:#faf4e9!important;color:var(--ui-text)!important;border:1px solid var(--ui-outline)!important;
  box-shadow:0 12px 36px #1a29404a!important}
@@ -697,7 +697,7 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .quantity-slider>div{display:grid;grid-template-columns:42px minmax(80px,1fr) 42px 64px;align-items:center;gap:10px}
 .quantity-slider input[type=range]{width:100%;height:30px;margin:0;padding:0;accent-color:var(--ui-accent)}
 .quantity-slider input[type=number]{width:64px!important;min-width:0}
-.quantity-slider button{min-width:0;min-height:42px;font-size:24px}
+.quantity-slider button{min-width:0;min-height:36px;font-size:20px}
 .sound-workshop-body{display:grid;grid-template-columns:minmax(220px,1fr) minmax(260px,1.15fr);gap:20px;align-items:start}
 .sound-workshop .sound-bank h3{margin:12px 0 8px;font-size:16px}
 .sound-chip-row{display:flex;flex-wrap:wrap;gap:8px}
@@ -735,20 +735,20 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 
 .life-controls{display:inline-flex;align-items:center;gap:4px}.life-controls .hearts{display:inline-flex;gap:3px;padding:3px}.life-controls .icon-button{flex:none}.transformation-actions fieldset{display:contents}.matching-setup .material p{line-height:1.7}
 /* Unified workshop geometry: scroll stays inside the ornamental frame. */
-.app .settings-frame{padding:24px!important;overflow:hidden!important;max-height:94dvh!important;width:min(1180px,96vw)!important;box-sizing:border-box}
-.app .settings-shade .settings-frame .settings{max-height:calc(94dvh - 52px)!important;padding:16px!important;scrollbar-gutter:stable!important}
+
+
 .task-select-fallback{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)}
 .task-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:14px}.task-tiles button{min-width:0;min-height:56px;padding:10px!important;white-space:normal}
-.category-grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;list-style:none;padding:0!important;align-items:start}.category-grid>li{padding:14px;border:1px solid var(--ui-outline);border-radius:18px;background:var(--ui-paper)}.category-grid ul{list-style:none;padding-left:10px}.category-grid summary{padding:10px 0;cursor:pointer;font-weight:700}.category-grid .check{white-space:normal;line-height:1.4}
+.category-grid{display:grid!important;grid-template-columns:minmax(0,1fr);gap:6px;list-style:none;padding:0!important;align-items:start}.category-grid>li{padding:8px;border:1px solid var(--ui-outline);border-radius:18px;background:var(--ui-paper)}.category-grid ul{list-style:none;padding-left:10px}.category-grid summary{padding:10px 0;cursor:pointer;font-weight:700}.category-grid .check{white-space:normal;line-height:1.4}
 .sound-bank>section{min-width:0;box-sizing:border-box}.sound-chip-row{min-width:0;gap:6px}.sound-chip-row button{width:auto!important;min-width:44px!important;max-width:100%;padding:8px!important;white-space:normal;box-sizing:border-box}.sound-chip{max-width:100%;flex:none}.sound-chip .sound-gear{min-width:28px!important;width:28px!important;padding:2px!important}.sound-workshop{width:min(1050px,94vw)!important;box-sizing:border-box;overflow-x:hidden}
 .matching-setup,.conveyor-settings,.transformation-setup{width:min(1120px,96vw)!important;max-width:1120px!important;margin:20px auto!important;box-sizing:border-box}.transformation-setup>p{white-space:normal;overflow-wrap:anywhere}.transformation-setup .settings{width:100%;box-sizing:border-box}.settings .text-display-setting{margin:12px 0}.settings .panel-heading{display:flex;align-items:center;gap:12px}.panel-heading h2{flex:1}
-@media(max-width:600px){.app .settings-frame{padding:12px!important}.app .settings-shade .settings-frame .settings{max-height:calc(94dvh - 28px)!important;padding:10px!important}.task-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.category-grid{grid-template-columns:1fr}.sound-bank{grid-template-columns:1fr!important}}
+@media(max-width:600px){.app .settings-frame{padding:12px!important}.task-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.category-grid{grid-template-columns:1fr}.sound-bank{grid-template-columns:1fr!important}}
 .choice-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:8px 0 14px}.choice-tiles button{min-width:0;white-space:normal;min-height:52px;padding:10px!important}.material-head h2{font-size:20px;margin:0}.material-head>div{display:flex;gap:8px;flex-shrink:0}.category-picker{width:min(980px,94vw)!important;box-sizing:border-box}.category-picker>.sound-picker-actions{position:sticky;bottom:0;padding:12px 0;background:var(--ui-paper)}.matching-setup label.check,.conveyor-settings label.check,.transformation-setup label.check{display:flex;align-items:center;gap:10px}
 @media(min-width:900px){.matching-setup,.conveyor-settings{grid-template-columns:1fr 1fr;align-items:start}.matching-setup>h1,.matching-setup>p,.matching-setup>a,.conveyor-settings>h1,.conveyor-settings>p,.conveyor-settings>a,.matching-setup>button.primary,.conveyor-settings>button.primary{grid-column:1/-1}.matching-setup>.material,.conveyor-settings>.material{grid-column:1/-1}}
 /* Native compatibility controls must stay hidden even when themed form rules set display. */
 .app [hidden]{display:none!important}
 body:has(.settings-shade){overflow:hidden}
-.app .settings-shade .settings-frame .settings{width:calc(100% - 12px)!important;margin-right:12px!important}
+
 .math-settings .pair-options{display:flex;gap:8px;flex-wrap:wrap}.math-settings .pair-options button{flex:1;min-width:100px;min-height:48px;padding:10px}.math-settings input[type=number]{min-height:44px;padding:8px 12px;box-sizing:border-box}.math-settings{display:grid;gap:12px}
 .conveyor-card.text-card{width:max-content;min-width:110px;max-width:94vw;box-sizing:border-box;padding:18px 26px;white-space:nowrap;overflow-wrap:normal;word-break:normal}.unbroken-card-text{white-space:nowrap;word-break:normal;overflow-wrap:normal;max-width:100%}.transformation-math-card{position:relative;z-index:6;align-self:center;margin:auto;padding:24px;border:2px solid var(--ui-outline);border-radius:20px;background:var(--ui-paper);color:var(--ui-text);text-align:center;font-size:clamp(24px,5vw,48px);white-space:nowrap}.transformation-math-card h2{font:inherit}.transformation-math-card p{font:inherit;margin:12px}
 html:has(.settings-shade){overflow:hidden}
@@ -766,27 +766,27 @@ html:has(.settings-shade){overflow:hidden}
 .stage:has(>.game-dialog)>.conveyor-answer{visibility:hidden}.game-dialog .primary{margin:8px}
 /* Shared settings window overrides historical per-game page geometry. */
 .settings-window-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 16px 18px}.settings-window-heading h2{margin:0;font-size:28px}.settings-window-heading span{display:block;margin-top:4px;font-size:15px}
-.app .shared-settings-window .unified-settings-content{width:calc(100% - 12px)!important;max-width:none!important;margin:0 12px 0 0!important;max-height:calc(94dvh - 138px)!important;min-height:0;padding:16px!important;overflow:auto!important;box-sizing:border-box;display:block}
+
 .shared-settings-window .unified-settings-content>.settings{padding:0!important;max-height:none!important;overflow:visible!important;width:100%!important;margin:0!important;border:0!important;box-shadow:none!important;background:transparent!important}
 .shared-settings-window .unified-settings-content>p:first-child{margin:0 0 16px;line-height:1.5}
 .shared-settings-window .settings-block{margin:0 0 18px;padding:18px}.shared-settings-window .settings-block h2,.shared-settings-window .settings-block h3{font-size:21px;margin:0 0 18px}
 .shared-settings-window .task-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.shared-settings-window .choice-tiles{gap:8px}.shared-settings-window label{line-height:1.45}
-@media(min-width:900px){.app .shared-settings-window .matching-setup,.app .shared-settings-window .conveyor-settings{display:grid;grid-template-columns:1fr 1fr;gap:18px}.shared-settings-window .matching-setup>p,.shared-settings-window .conveyor-settings>p{grid-column:1/-1}}
-@media(max-width:600px){.settings-window-heading{padding:6px 10px 12px}.settings-window-heading h2{font-size:23px}.app .shared-settings-window .unified-settings-content{max-height:calc(94dvh - 115px)!important;padding:10px!important}.shared-settings-window .task-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:900px){.app .shared-settings-window .matching-setup,.app .shared-settings-window .conveyor-settings{display:grid;grid-template-columns:1.1fr 1fr;gap:12px 28px;align-items:start}.shared-settings-window .matching-setup>p,.shared-settings-window .conveyor-settings>p{grid-column:1/-1}}
+@media(max-width:600px){.settings-window-heading{padding:6px 10px 12px}.settings-window-heading h2{font-size:23px}.shared-settings-window .task-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* Awards sit above the result frame instead of inside its scroll clipping box. */
 .app .overlay:has(.award){padding-top:76px;padding-bottom:32px}
 .app .overlay>div:has(.award){overflow:visible;max-height:calc(100dvh - 180px)}
 .app .overlay .award{top:-46px;z-index:2;pointer-events:none}
 
 /* The shell owns height; its scroll area consumes only the remaining space. */
-.app .settings-shade .settings-frame.shared-settings-window{display:flex;flex-direction:column;height:94dvh;max-height:94dvh!important;min-height:0}
+.app .settings-shade .settings-frame.shared-settings-window{display:flex;flex-direction:column;height:auto;max-height:calc(100dvh - 32px)!important;min-height:0;padding:calc(var(--ui-frame-inset) + 8px)!important;width:min(1100px,96vw)!important;box-sizing:border-box;overflow:hidden}
 .settings-window-heading{flex:none}
-.app .settings-shade .settings-frame.shared-settings-window .unified-settings-content{flex:1 1 0;min-height:0!important;max-height:none!important;height:auto!important;overflow-y:auto!important;overflow-x:hidden!important}
+.app .settings-shade .settings-frame.shared-settings-window .unified-settings-content{width:100%!important;max-width:none!important;margin:0!important;padding:12px!important;box-sizing:border-box;scrollbar-gutter:stable;border:0!important;box-shadow:none!important;background:transparent!important;border-radius:0!important;flex:1 1 auto;min-height:0!important;max-height:none!important;height:auto!important;overflow-y:auto!important;overflow-x:hidden!important}
 .shared-settings-window .unified-settings-content>*{min-width:0;max-width:100%;box-sizing:border-box}
 .shared-settings-window .unified-settings-content>.settings{min-width:0;display:block}
 .shared-settings-window .settings-block{min-width:0;box-sizing:border-box}
 .app .transformation-scene{container-type:size;min-width:0;width:100%;overflow:hidden}
 .app .transformation-chamber{width:min(100cqw,133cqh);height:auto;max-height:none;aspect-ratio:4/3;min-width:0;justify-self:center}
-.shared-settings-window .matching-setup>.settings-block,.shared-settings-window .conveyor-settings>.settings-block{grid-column:auto;grid-row:auto}
+@media(min-width:900px){.shared-settings-window .matching-setup>.settings-block:nth-of-type(2),.shared-settings-window .conveyor-settings>.settings-block:nth-of-type(2){grid-row:span 2}}
 
 .transformation-content{container-type:inline-size;min-width:0}.transformation-word{max-width:100%}
