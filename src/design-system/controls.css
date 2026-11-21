@@ -699,3 +699,49 @@
  .app[data-theme] .settings-frame.shared-settings-window>.setup-footer{grid-template-columns:minmax(0,1fr)!important}
  .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>.setup-material-preview{max-height:64px}
 }
+
+
+/* Touch landscape has very little height: reserve space for actual settings. */
+@media (orientation:landscape) and (max-height:550px) and (min-width:600px){
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer{
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  align-items:center;gap:2px var(--zg-space-2,8px)!important;
+  padding:3px var(--zg-space-2,8px)!important;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>.setup-material-preview{
+  grid-column:1!important;grid-row:1 / span 2!important;
+  max-height:58px!important;overflow:hidden;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>button.primary{
+  grid-column:2!important;grid-row:1!important;
+  min-height:48px!important;height:48px;
+  padding:6px 12px!important;font-size:16px!important;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>p[role=status]{
+  grid-column:2!important;grid-row:2!important;
+  font-size:11px;line-height:1.1;max-height:14px;overflow:hidden;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>p:not([role=status]){display:none!important}
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head{
+  min-height:34px!important;max-height:34px;
+  padding:0!important;margin:0!important;gap:4px!important;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head h2{
+  font-size:16px!important;margin:0!important;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head>div{gap:4px!important}
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head .icon-button{
+  width:32px!important;min-width:32px!important;height:32px!important;min-height:32px!important;
+  padding:4px!important;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-material-summary{
+  font-size:12px!important;line-height:1.2;max-height:17px!important;white-space:nowrap;
+  text-overflow:ellipsis;overflow:hidden;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window>.unified-settings-content>p:first-child{
+  display:none!important;
+ }
+ .app[data-theme] .shared-settings-window .settings-window-heading{
+  padding:2px 8px 4px!important;margin-bottom:3px!important;
+ }
+}
