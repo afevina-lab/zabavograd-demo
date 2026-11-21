@@ -78,6 +78,14 @@ if(game==='matching'){
  assert(await evaluate("(()=>{const e=document.querySelector('.unified-settings-content');return e.scrollWidth<=e.clientWidth+2})()"),'Expanded settings overflow');
  await evaluate("document.querySelectorAll('.settings-disclosure').forEach(e=>e.open=false)");
 }
+if(game==='sorting'){
+ const before=await evaluate("document.querySelector('.group-count-choice button[aria-pressed=true]').textContent");
+ await evaluate("document.querySelectorAll('.group-count-choice button')[1].click()");
+ await until("document.querySelectorAll('.sort-group-settings>section').length===3");
+ assert(await evaluate("(()=>{const buttons=[...document.querySelectorAll('.group-count-choice button')],on=buttons.find(e=>e.getAttribute('aria-pressed')==='true'),off=buttons.find(e=>e.getAttribute('aria-pressed')==='false');return on.textContent==='3'&&getComputedStyle(on).backgroundColor!==getComputedStyle(off).backgroundColor})()"),'Group count must visibly latch');
+ assert(await evaluate("!!document.querySelector('.card-presentation select[aria-label=Карточки]')"),'Card mode must stay with display settings');
+ await evaluate("[...document.querySelectorAll('.group-count-choice button')].find(e=>e.textContent==="+JSON.stringify(before)+").click()");
+}
 if(game==='conveyor'){
  const beforeCount=await evaluate("+document.querySelector('.quantity-slider input[type=number]').value");
  await evaluate("document.querySelectorAll('.quantity-slider button')[1].click()");
@@ -91,6 +99,7 @@ if(game==='conveyor'){
  await evaluate("document.querySelector('.category-picker-trigger')?.click()");
  if(await evaluate("!!document.querySelector('.category-picker[open]')")){
  await evaluate("document.querySelectorAll('.category-picker details').forEach(e=>e.open=true)");
+ assert(await evaluate("[...document.querySelectorAll('.category-grid summary')].every(e=>e.querySelector('.control-well')&&getComputedStyle(e).userSelect==='none')"),'Category rows must share arrows and prevent accidental text selection');
  await screenshot('categories-'+width);
  await evaluate("document.querySelector('.category-picker[open]>.panel-scroll').scrollTop=100000");
  assert(await evaluate("(()=>{const d=document.querySelector('.category-picker[open]'),s=d.querySelector('.panel-scroll'),a=s.getBoundingClientRect(),b=d.getBoundingClientRect(),inset=parseFloat(getComputedStyle(d).getPropertyValue('--ui-frame-inset'));return d.scrollTop===0&&s.scrollTop>0&&b.right-a.right>=inset+8&&b.bottom-a.bottom>=inset+8})()"),'Dialog scrollbar overlaps frame');
