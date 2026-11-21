@@ -654,3 +654,48 @@
 .app[data-theme] .shared-settings-window .setup-add-rule .control-well{
  flex:none;margin-left:auto;width:36px;height:36px;
 }
+
+
+/* The action row belongs to the frame, never to the scrolling setup body. */
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer{
+ box-sizing:border-box;flex:0 0 auto;width:100%;min-width:0;
+ margin:0!important;padding:var(--zg-space-2,8px) var(--zg-space-3,12px) var(--zg-space-3,12px)!important;
+ background:var(--ui-setup-paper)!important;
+ border-top:1px solid var(--ui-surface-edge)!important;
+ grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+ gap:var(--zg-space-1,4px) var(--zg-space-4,16px)!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.unified-settings-content{
+ flex:1 1 auto;min-height:0!important;overflow-y:auto!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer>.setup-material-preview{
+ max-height:110px;overflow:hidden;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head{
+ min-height:40px;padding:0!important;margin:0 0 var(--zg-space-1,4px)!important;
+ flex-wrap:nowrap;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head h2{
+ font-size:18px!important;margin:0!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-material-summary{
+ margin:0!important;line-height:1.35;max-height:3.1em;overflow:hidden;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer>p[role=status]{
+ font-size:13px;line-height:1.25;overflow-wrap:anywhere;
+}
+/* Keep the existing raised Start skin after moving the action out of the scroll container. */
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer>button.primary{
+ background:var(--ui-deep)!important;color:var(--ui-paper)!important;
+ border-image:none!important;border:1px solid var(--ui-deep)!important;
+ padding:12px 20px!important;min-height:58px!important;margin:0!important;
+ font-size:19px!important;font-weight:750!important;
+ box-shadow:inset 0 3px 2px #fff7,inset 0 -5px 5px var(--ui-button-inset-strong),0 5px 0 color-mix(in srgb,var(--ui-deep) 62%,black),0 8px 10px #172a4030!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer>button.primary:active:not(:disabled){
+ transform:translateY(3px);box-shadow:inset 0 1px 3px #0002,0 2px 0 color-mix(in srgb,var(--ui-deep) 62%,black)!important;
+}
+@media(max-width:899px){
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer{grid-template-columns:minmax(0,1fr)!important}
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>.setup-material-preview{max-height:64px}
+}
