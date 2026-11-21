@@ -792,68 +792,105 @@ html:has(.settings-shade){overflow:hidden}
 .transformation-content{container-type:inline-size;min-width:0}.transformation-word{max-width:100%}
 
 
-/* Matching: fit readable cards without scaling the entire text layer.
-   Scaled headings caused stacked/blurred glyphs on desktop. */
+/* Matching: no scrolling, no page-level scale, horizontal pairs.
+   The card size and group columns are measured against the actual stage. */
 .app.game-active .stage.matching-stage{
-  overflow-y:auto!important;
-  overflow-x:hidden!important;
-  scrollbar-width:thin!important;
-  scrollbar-gutter:stable!important;
-  display:block!important;
-  padding:clamp(8px,1.4dvh,14px)!important;
+ overflow:hidden!important;
+ scrollbar-width:none!important;
+ scrollbar-gutter:auto!important;
+ display:flex!important;
+ align-items:center!important;
+ justify-content:center!important;
+ padding:clamp(6px,1dvh,12px)!important;
 }
 .app.game-active .matching-stage .matching-content{
-  transform:none!important;
-  transform-origin:initial!important;
-  width:100%;
-  max-width:1500px;
-  margin:0 auto;
-  padding:6px 12px 12px;
-  box-sizing:border-box;
-}
-.app.game-active .matching-content>h1{
-  font-family:Arial,sans-serif;
-  font-size:clamp(18px,2.2vw,26px);
-  line-height:1.25;
-  letter-spacing:normal;
-  text-shadow:none!important;
-  margin:0 0 12px;
-  padding:0;
-  position:relative;
-  transform:none!important;
+ transform:none!important;
+ width:100%;
+ height:auto;
+ max-height:100%;
+ padding:2px 8px;
+ margin:0 auto;
+ box-sizing:border-box;
+ display:flex;
+ flex-direction:column;
+ align-items:stretch;
+ justify-content:center;
+ gap:clamp(5px,1.3dvh,12px);
+ overflow:hidden!important;
 }
 .app.game-active .matching-groups{
-  grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));
-  gap:clamp(8px,1vw,14px);
+ display:grid;
+ grid-template-columns:repeat(var(--matching-columns,4),minmax(0,1fr));
+ gap:clamp(5px,1.1vw,10px);
+ width:100%;
+ flex:0 0 auto;
 }
 .app.game-active .matching-group{
-  padding:clamp(8px,1vw,12px);
-  min-width:0;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+ box-sizing:border-box;
+ min-width:0;
+ display:flex!important;
+ flex-direction:row!important;
+ justify-content:center;
+ align-items:center;
+ gap:6px;
+ padding:8px!important;
+ border-radius:12px;
 }
-.app.game-active .matching-card,
-.app.game-active .matching-slot{
-  box-sizing:border-box;
-  width:clamp(90px,8vw,135px);
-  height:clamp(104px,16dvh,148px);
-  flex:0 0 auto;
+.app.game-active .matching-anchor{margin:0!important}
+.app.game-active .matching-slots{
+ display:flex;
+ flex-direction:row;
+ align-items:center;
+ justify-content:center;
+ flex-wrap:nowrap;
+ gap:6px;
+ width:auto;
+ min-width:0;
 }
-.app.game-active .matching-anchor{margin:0 auto 10px}
-.app.game-active .matching-slots{gap:8px;width:100%}
+.app.game-active .matching-group .matching-card,
+.app.game-active .matching-group .matching-slot,
+.app.game-active .matching-bank .matching-card{
+ box-sizing:border-box;
+ width:var(--matching-card-size,100px)!important;
+ height:calc(var(--matching-card-size,100px)*1.04)!important;
+ flex:0 0 auto;
+ min-width:0;
+ padding:clamp(3px,0.55vw,8px)!important;
+ font-size:clamp(11px,1.35vw,20px)!important;
+}
 .app.game-active .matching-bank{
-  margin-top:clamp(10px,1.5dvh,18px);
-  padding:clamp(10px,1vw,14px);
+ box-sizing:border-box;
+ min-width:0;
+ margin:0!important;
+ padding:6px 10px!important;
+ flex:0 0 auto;
+ border-radius:12px;
 }
-.app.game-active .matching-bank>div{gap:8px}
-.app.game-active .matching-bank h2{margin:0 0 9px}
-@media(max-width:720px){
- .app.game-active .matching-groups{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
- .app.game-active .matching-card,.app.game-active .matching-slot{width:clamp(75px,22vw,120px);height:clamp(90px,16dvh,135px)}
- .app.game-active .matching-stage .matching-content{padding:4px}
+.app.game-active .matching-bank-heading{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:12px;
+ min-height:25px;
+ margin:0 0 4px;
 }
-@media(max-height:650px){
- .app.game-active .matching-card,.app.game-active .matching-slot{height:110px;width:105px}
- .app.game-active .matching-content>h1{margin-bottom:6px}
+.app.game-active .matching-bank-heading h2{margin:0;font-size:clamp(12px,1.2vw,16px);line-height:1.2}
+.app.game-active .matching-bank-cards{
+ display:flex;
+ justify-content:center;
+ align-content:center;
+ flex-wrap:wrap;
+ gap:8px;
+}
+.app.game-active .matching-bank-pages{display:flex;align-items:center;gap:8px;font-size:13px}
+.app.game-active .matching-bank-pages button{
+ width:30px;height:26px;min-height:26px!important;padding:0!important;
+ border-radius:7px;font-size:20px;
+}
+.app.game-active .matching-content>p[role=status]{margin:0;min-height:0;line-height:1.2;font-size:13px}
+.app.game-active .matching-content>.primary{align-self:center;min-height:38px;padding:8px 16px}
+@media(max-width:650px){
+ .app.game-active .matching-stage .matching-content{padding:2px}
+ .app.game-active .matching-group{padding:4px!important;gap:3px}
+ .app.game-active .matching-slots{gap:3px}
 }
