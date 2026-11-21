@@ -541,3 +541,62 @@
  margin:var(--zg-space-3,12px) 0;
 }
 .app .shared-settings-window .setup-column .sort-group-settings>.settings-block{min-width:0}
+
+
+/* The lexical picker owns one scroll surface; its actions never cover tree rows. */
+.app[data-theme] dialog.category-picker[open]{
+ display:flex!important;flex-direction:column;min-height:0;
+ max-height:calc(100dvh - 24px)!important;overflow:hidden!important;
+}
+.app[data-theme] dialog.category-picker>.panel-scroll{
+ flex:1 1 auto;min-height:0;max-height:none!important;overflow-y:auto;
+ padding:var(--zg-space-2,8px)!important;
+ background:var(--ui-setup-paper)!important;
+ border-radius:var(--zg-panel-radius,16px) var(--zg-panel-radius,16px) 0 0;
+}
+.app[data-theme] dialog.category-picker>.sound-picker-actions{
+ box-sizing:border-box;position:static!important;bottom:auto!important;z-index:auto;
+ flex:0 0 auto;display:flex;align-items:center;justify-content:flex-end;
+ gap:var(--zg-space-3,12px);width:100%;min-height:64px;
+ margin:0!important;padding:var(--zg-space-3,12px) var(--zg-space-2,8px)!important;
+ border-top:1px solid var(--ui-surface-edge);
+ background:var(--ui-setup-paper)!important;
+}
+/* Shared shape and shadow: confirmation and cancellation differ only in palette. */
+.app[data-theme] :is(dialog.category-picker,dialog.sound-workshop)>.sound-picker-actions>button:is(.primary,.secondary){
+ box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;
+ flex:0 0 auto;min-width:128px;min-height:var(--zg-control-height,48px)!important;
+ height:var(--zg-control-height,48px);padding:8px 18px!important;margin:0!important;
+ border-image:none!important;border:1px solid var(--ui-outline)!important;
+ border-radius:var(--zg-control-radius,12px)!important;
+ box-shadow:inset 0 2px 1px var(--ui-field-glint),inset 0 -3px 3px var(--ui-button-inset),0 3px 0 var(--ui-control-bottom),0 5px 6px var(--ui-control-shadow)!important;
+ font-size:16px!important;font-weight:700;line-height:1.2;white-space:nowrap;
+}
+.app[data-theme] :is(dialog.category-picker,dialog.sound-workshop)>.sound-picker-actions>button.primary{
+ background:var(--ui-deep)!important;color:var(--ui-paper)!important;
+}
+.app[data-theme] :is(dialog.category-picker,dialog.sound-workshop)>.sound-picker-actions>button.secondary{
+ background:var(--ui-control-face)!important;color:var(--ui-text)!important;
+}
+/* Opening a topic gives its children the full width; closed topics still tile compactly. */
+.app[data-theme] dialog.category-picker .category-grid{
+ display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))!important;
+ gap:var(--zg-space-2,8px)!important;align-items:start;
+}
+.app[data-theme] dialog.category-picker .category-grid :is(ul){
+ display:grid!important;
+ grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))!important;
+ gap:var(--zg-space-2,8px)!important;
+}
+.app[data-theme] dialog.category-picker .category-grid li.category-branch:has(>details[open]){
+ grid-column:1/-1;
+}
+.app[data-theme] dialog.category-picker .category-children{
+ margin:var(--zg-space-2,8px) 0 0!important;
+ padding:var(--zg-space-2,8px) 0 var(--zg-space-2,8px) var(--zg-space-3,12px)!important;
+}
+@media(max-width:600px){
+ .app[data-theme] dialog.category-picker .category-grid,
+ .app[data-theme] dialog.category-picker .category-grid ul{grid-template-columns:minmax(0,1fr)!important}
+ .app[data-theme] :is(dialog.category-picker,dialog.sound-workshop)>.sound-picker-actions>button:is(.primary,.secondary){min-width:0;flex:1}
+}
