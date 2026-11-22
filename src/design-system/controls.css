@@ -244,8 +244,9 @@
 .app[data-theme] .settings .category-picker-trigger{margin:0!important;padding:11px 6px 11px 14px!important}
 .app[data-theme] .settings .settings-disclosure>summary{padding:11px 6px 11px 14px!important}
 .app .control-well{width:36px;height:38px;box-sizing:border-box}
-.app .icon-button .garden-icon{width:27px!important;height:27px!important}
-@media(max-width:600px){.app.game-active .icon-button .garden-icon{width:23px!important;height:23px!important}}
+.app .icon-button{position:relative}
+.app .icon-button .garden-icon{position:absolute;inset:15%;margin:0!important;width:70%!important;height:70%!important;max-width:none;max-height:none}
+
 .app[data-theme] .overlay.result>div>.panel-scroll>button{min-height:64px!important;height:auto;font-size:18px!important;padding:14px 22px!important;box-sizing:border-box;border-radius:18px!important}
 /* Required state follows the existing selection validity, never color alone. */
 .app[data-theme] .settings .select-control[data-field-state] select{border:1px solid var(--ui-field-edge)!important;padding:13px 50px!important}
@@ -1192,11 +1193,11 @@
 }
 .app[data-theme] dialog.letter-picker-dialog .letter-picker-section h3{margin:0!important}
 .app[data-theme] dialog.letter-picker-dialog .letter-grid{
-display:grid;grid-template-columns:repeat(auto-fill,48px);justify-content:start;gap:8px;margin:0!important;
+display:grid;grid-template-columns:repeat(auto-fill,var(--zg-chip-size));justify-content:start;gap:8px;margin:0!important;
 }
 .app[data-theme] dialog.letter-picker-dialog .letter-choice{
 box-sizing:border-box;display:flex;align-items:center;justify-content:center;
- min-height:48px;padding:7px 10px!important;
+ width:var(--zg-chip-size);height:var(--zg-chip-size);min-height:var(--zg-chip-size);margin:0;padding:0 10px!important;
  border:1px solid var(--ui-field-edge)!important;border-radius:12px!important;
  background:color-mix(in srgb,var(--ui-setup-field) 64%,#a7a7a7)!important;
  color:var(--ui-muted-text)!important;font-size:18px!important;font-weight:700;line-height:1!important;
@@ -1395,7 +1396,7 @@ display:flex!important;align-items:center!important;justify-content:center!impor
  font-size:15px!important;line-height:1.35!important;
 }
 .app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid{
-display:grid;grid-template-columns:repeat(auto-fill,64px);justify-content:start;
+display:grid;grid-template-columns:repeat(auto-fill,var(--zg-chip-size));justify-content:start;
  gap:8px!important;margin:0!important;align-items:stretch;
 }
 .app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid .check{
@@ -1508,7 +1509,7 @@ display:grid;grid-template-columns:repeat(auto-fill,64px);justify-content:start;
 .app[data-theme] dialog.syllable-picker-dialog .syllable-type-option{
  position:relative;box-sizing:border-box;margin:0;
  display:flex!important;align-items:center!important;justify-content:center!important;
- min-width:0;min-height:48px!important;padding:8px!important;
+ min-width:0;height:var(--zg-chip-size);min-height:var(--zg-chip-size)!important;padding:0 10px!important;
  border:1px solid var(--ui-field-edge)!important;border-radius:12px!important;
  background:color-mix(in srgb,var(--ui-setup-field) 64%,#a7a7a7)!important;
  color:var(--ui-muted-text)!important;font-size:17px!important;font-weight:700;
@@ -1564,10 +1565,10 @@ display:grid;grid-template-columns:repeat(auto-fill,64px);justify-content:start;
 }
 @media(max-width:500px){
  .app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid{
-  grid-template-columns:repeat(auto-fill,56px);
+  grid-template-columns:repeat(auto-fill,var(--zg-chip-size));
  }
  .app[data-theme] dialog.letter-picker-dialog .letter-grid{
-  grid-template-columns:repeat(auto-fill,48px);
+  grid-template-columns:repeat(auto-fill,var(--zg-chip-size));
  }
 }
 
@@ -1604,14 +1605,6 @@ display:grid;grid-template-columns:repeat(auto-fill,64px);justify-content:start;
  }
 }
 
-.app{--selection-close-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22currentColor%22%20viewBox%3D%222.44%202.44%205.10%205.10%22%3E%3Cpath%20d%3D%22M6.344%202.667a.7.7%200%200%201%20.99.99l-.538.537c-.359.359-.538.538-.556.759a1%201%200%200%200%200%20.094c.018.22.197.4.556.76l.538.537a.701.701%200%200%201-.99.989l-.538-.538c-.36-.359-.539-.538-.76-.555a1%201%200%200%200-.093%200c-.221.017-.4.196-.76.555l-.537.538a.7.7%200%200%201-.99-.99l.538-.537c.36-.359.539-.538.556-.759a1%201%200%200%200%200-.094c-.017-.22-.197-.4-.556-.76l-.537-.537a.7.7%200%201%201%20.989-.989l.538.538c.359.359.538.538.759.555a1%201%200%200%200%20.094%200c.22-.017.4-.196.759-.555z%22%2F%3E%3C%2Fsvg%3E")}
-/* Shared selected tile affordance: the parent button owns the complete hit area. */
-.app button[aria-pressed=true]:not(.icon-button){position:relative}
-.app :is(.letter-grid,.types) button[aria-pressed=true]::after{
- content:'';position:absolute;top:-5px;right:-5px;width:18px;height:18px;background-image:var(--selection-close-icon);background-repeat:no-repeat;background-position:center;background-size:10px;
- display:grid;place-items:center;border:1px solid var(--ui-field-edge);border-radius:5px;
- background-color:var(--ui-deep);box-shadow:inset 0 1px 1px var(--ui-field-glint),0 2px 0 var(--ui-control-bottom);pointer-events:none;
-}
 .app .setup-add-rule.is-required{outline:2px solid var(--ui-danger,#b33d32);outline-offset:-2px}
 .app .material-rule-heading{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center}
 .app .material-rule-heading>strong{grid-column:2;text-align:center}

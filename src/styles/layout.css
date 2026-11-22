@@ -318,7 +318,7 @@ h1,h2,h3,.card-back{font-family:Londrina, sans-serif}
 .card-back:after{display:block;border-color:#fff5}
 .card-front{background:#fff5e8;border:2px solid #7acfd1;border-radius:14px;box-shadow:0 3px 0 #47777c}
 .icon-button .garden-icon,.material-head .garden-icon{transition:transform .25s ease}
-.icon-button:hover .garden-icon,.material-head button:hover .garden-icon{transform:scale(1.18)}
+.icon-button:hover .garden-icon,.material-head button:hover .garden-icon{transform:none}
 .picture-face.with-caption{display:grid;grid-template-rows:minmax(0,1fr) auto;gap:8px;inset:10% 10% 6%}
 .picture-face.with-caption img,.picture-face.with-caption svg{min-height:0;height:100%;width:100%}
 .picture-face.with-caption small{position:static;background:none;text-align:center;line-height:1.2;padding:0;white-space:nowrap;font-size:clamp(11px,1.4vw,20px)}
