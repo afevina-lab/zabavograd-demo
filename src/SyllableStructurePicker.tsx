@@ -28,11 +28,16 @@ export function SyllableStructurePicker({filters,onChange,words=[]}:{filters:Fil
    <span className="setup-action-copy"><strong>Выберите слоговую структуру</strong><small>{filters.types.length===defaultFilters.types.length&&filters.untyped?'Слова любой слоговой структуры':`Выбрано типов: ${filters.types.length}`}</small></span><ControlWell symbol="plus"/>
   </button>
   <dialog ref={dialog} className="sound-picker-dialog syllable-picker-dialog" aria-label="Выбор слоговой структуры" onCancel={()=>trigger.current?.focus()}>
-   <div className="panel-scroll"><h2>Слоговая структура</h2>
+   <div className="panel-scroll syllable-picker-scroll"><div className="syllable-picker-body"><h2>Слоговая структура</h2>
     <label className="check"><input type="checkbox" checked={types.length===defaultFilters.types.length&&untyped} onChange={e=>{setTypes(e.target.checked?[...defaultFilters.types]:[]);setUntyped(e.target.checked)}}/>Выбрать всё</label>
-    <div className="types syllable-picker-grid">{defaultFilters.types.map(n=><label className="check syllable-type-option" key={n} title={descriptions[n]+(words.some(w=>w.type===n)?' — Например: '+words.filter(w=>w.type===n).slice(0,2).map(w=>w.label).join(', '):'')}><input type="checkbox" checked={types.includes(n)} onChange={e=>setTypes(v=>e.target.checked?[...v,n]:v.filter(x=>x!==n))}/>{n}</label>)}</div>
-    <label className="check"><input type="checkbox" checked={untyped} onChange={e=>setUntyped(e.target.checked)}/>Без категории</label>
-   </div>
+    <div className="types syllable-picker-grid">{defaultFilters.types.map(n=>{
+     const description=descriptions[n]||'Тип слоговой структуры '+n;
+     const examples=words.filter(w=>w.type===n).slice(0,3).map(w=>w.label).join(', ');
+     const selected=types.includes(n);
+     return <button type="button" key={n} className="syllable-type-option" aria-pressed={selected} aria-label={`Тип ${n}: ${description}`} onClick={()=>setTypes(v=>selected?v.filter(x=>x!==n):[...v,n])}>{n}<span className="syllable-type-tooltip" role="tooltip"><strong>Тип {n}</strong>{description}{examples&&<small>Например: {examples}</small>}</span></button>;
+    })}</div>
+    <button type="button" className="syllable-type-option syllable-untyped" aria-pressed={untyped} onClick={()=>setUntyped(v=>!v)}>Без категории</button>
+   </div></div>
    <div className="sound-picker-actions"><button className="primary" type="button" onClick={()=>{onChange({types,untyped});close()}}>Готово</button><button className="secondary" type="button" onClick={close}>Отмена</button></div>
   </dialog>
  </>;
