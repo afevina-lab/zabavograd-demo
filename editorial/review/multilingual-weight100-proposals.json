@@ -1,0 +1,958 @@
+{
+  "purpose": "Review proposals only; not activated, not verified dictionary data",
+  "source_manifest": "editorial/review/multilingual-weight100-manifest.json",
+  "source_library_sha": "a4b8c95aebd89cd52f139d943b2bb7079387d93a",
+  "languages": [
+    "en",
+    "fr",
+    "es",
+    "de"
+  ],
+  "review_status": "suggested",
+  "records": [
+    {
+      "library_entry_id": "ru-r-001",
+      "library_sense_ids": [
+        "ru-r-001-sense"
+      ],
+      "ru_lemma": "арбуз",
+      "ru_meaning": "арбуз",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "watermelon",
+        "fr": "pastèque",
+        "es": "sandía",
+        "de": "Wassermelone"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-003",
+      "library_sense_ids": [
+        "ru-r-003-sense"
+      ],
+      "ru_lemma": "барабан",
+      "ru_meaning": "барабан",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "drum",
+        "fr": "tambour",
+        "es": "tambor",
+        "de": "Trommel"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-006",
+      "library_sense_ids": [
+        "ru-r-006-sense"
+      ],
+      "ru_lemma": "ведро",
+      "ru_meaning": "ведро",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "bucket",
+        "fr": "seau",
+        "es": "cubo",
+        "de": "Eimer"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-014",
+      "library_sense_ids": [
+        "ru-r-014-sense"
+      ],
+      "ru_lemma": "горка",
+      "ru_meaning": "детская горка на площадке",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "playground slide",
+        "fr": "toboggan",
+        "es": "tobogán",
+        "de": "Rutsche"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-016",
+      "library_sense_ids": [
+        "ru-r-016-sense"
+      ],
+      "ru_lemma": "груша",
+      "ru_meaning": "груша",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "pear",
+        "fr": "poire",
+        "es": "pera",
+        "de": "Birne"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-017",
+      "library_sense_ids": [
+        "ru-r-017-sense"
+      ],
+      "ru_lemma": "дорога",
+      "ru_meaning": "дорога",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "road",
+        "fr": "route",
+        "es": "carretera",
+        "de": "Straße"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-019",
+      "library_sense_ids": [
+        "ru-r-019-sense"
+      ],
+      "ru_lemma": "жираф",
+      "ru_meaning": "жираф",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "giraffe",
+        "fr": "girafe",
+        "es": "jirafa",
+        "de": "Giraffe"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-020",
+      "library_sense_ids": [
+        "ru-r-020-sense"
+      ],
+      "ru_lemma": "забор",
+      "ru_meaning": "забор",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "fence",
+        "fr": "clôture",
+        "es": "valla",
+        "de": "Zaun"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-025",
+      "library_sense_ids": [
+        "ru-r-025-sense"
+      ],
+      "ru_lemma": "карандаш",
+      "ru_meaning": "карандаш",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "pencil",
+        "fr": "crayon",
+        "es": "lápiz",
+        "de": "Bleistift"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-027",
+      "library_sense_ids": [
+        "ru-r-027-sense"
+      ],
+      "ru_lemma": "картошка",
+      "ru_meaning": "картошка",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "potato",
+        "fr": "pomme de terre",
+        "es": "patata",
+        "de": "Kartoffel"
+      },
+      "notes": "Check language variety, context, gender, or semantic scope before approval"
+    },
+    {
+      "library_entry_id": "ru-r-031",
+      "library_sense_ids": [
+        "ru-r-031-sense"
+      ],
+      "ru_lemma": "компьютер",
+      "ru_meaning": "компьютер",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "computer",
+        "fr": "ordinateur",
+        "es": "ordenador",
+        "de": "Computer"
+      },
+      "notes": "Check language variety, context, gender, or semantic scope before approval"
+    },
+    {
+      "library_entry_id": "ru-r-033",
+      "library_sense_ids": [
+        "ru-r-033-sense"
+      ],
+      "ru_lemma": "коробка",
+      "ru_meaning": "коробка",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "box",
+        "fr": "boîte",
+        "es": "caja",
+        "de": "Schachtel"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-034",
+      "library_sense_ids": [
+        "ru-r-034-sense"
+      ],
+      "ru_lemma": "корова",
+      "ru_meaning": "корова",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "cow",
+        "fr": "vache",
+        "es": "vaca",
+        "de": "Kuh"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-036",
+      "library_sense_ids": [
+        "ru-r-036-sense"
+      ],
+      "ru_lemma": "корона",
+      "ru_meaning": "корона",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "crown",
+        "fr": "couronne",
+        "es": "corona",
+        "de": "Krone"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-040",
+      "library_sense_ids": [
+        "ru-r-040-sense"
+      ],
+      "ru_lemma": "краски",
+      "ru_meaning": "краски",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "paints",
+        "fr": "peintures",
+        "es": "pinturas",
+        "de": "Farben"
+      },
+      "notes": "Check language variety, context, gender, or semantic scope before approval"
+    },
+    {
+      "library_entry_id": "ru-r-043",
+      "library_sense_ids": [
+        "ru-r-043-sense"
+      ],
+      "ru_lemma": "кружка",
+      "ru_meaning": "кружка",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "mug",
+        "fr": "mug",
+        "es": "taza",
+        "de": "Becher"
+      },
+      "notes": "Check language variety, context, gender, or semantic scope before approval"
+    },
+    {
+      "library_entry_id": "ru-r-045",
+      "library_sense_ids": [
+        "ru-r-045-sense"
+      ],
+      "ru_lemma": "куртка",
+      "ru_meaning": "куртка",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "jacket",
+        "fr": "veste",
+        "es": "chaqueta",
+        "de": "Jacke"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-046",
+      "library_sense_ids": [
+        "ru-r-046-sense"
+      ],
+      "ru_lemma": "морковь",
+      "ru_meaning": "морковь",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "carrot",
+        "fr": "carotte",
+        "es": "zanahoria",
+        "de": "Karotte"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-047",
+      "library_sense_ids": [
+        "ru-r-047-sense"
+      ],
+      "ru_lemma": "мороженое",
+      "ru_meaning": "мороженое",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "ice cream",
+        "fr": "glace",
+        "es": "helado",
+        "de": "Eis"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-054",
+      "library_sense_ids": [
+        "ru-r-054-sense"
+      ],
+      "ru_lemma": "подарок",
+      "ru_meaning": "подарок",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "gift",
+        "fr": "cadeau",
+        "es": "regalo",
+        "de": "Geschenk"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-055",
+      "library_sense_ids": [
+        "ru-r-055-sense"
+      ],
+      "ru_lemma": "помидор",
+      "ru_meaning": "помидор",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "tomato",
+        "fr": "tomate",
+        "es": "tomate",
+        "de": "Tomate"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-058",
+      "library_sense_ids": [
+        "ru-r-058-sense"
+      ],
+      "ru_lemma": "радуга",
+      "ru_meaning": "радуга",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "rainbow",
+        "fr": "arc-en-ciel",
+        "es": "arcoíris",
+        "de": "Regenbogen"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-060",
+      "library_sense_ids": [
+        "ru-r-060-sense"
+      ],
+      "ru_lemma": "ракета",
+      "ru_meaning": "ракета",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "rocket",
+        "fr": "fusée",
+        "es": "cohete",
+        "de": "Rakete"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-061",
+      "library_sense_ids": [
+        "pack03-119_rakovina"
+      ],
+      "ru_lemma": "раковина",
+      "ru_meaning": "умывальник",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "washbasin",
+        "fr": "lavabo",
+        "es": "lavabo",
+        "de": "Waschbecken"
+      },
+      "notes": "Check language variety, context, gender, or semantic scope before approval"
+    },
+    {
+      "library_entry_id": "ru-r-064",
+      "library_sense_ids": [
+        "ru-r-064-sense"
+      ],
+      "ru_lemma": "расчёска",
+      "ru_meaning": "расчёска",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "comb",
+        "fr": "peigne",
+        "es": "peine",
+        "de": "Kamm"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-065",
+      "library_sense_ids": [
+        "ru-r-065-sense"
+      ],
+      "ru_lemma": "робот",
+      "ru_meaning": "робот",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "robot",
+        "fr": "robot",
+        "es": "robot",
+        "de": "Roboter"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-068",
+      "library_sense_ids": [
+        "ru-r-068-sense"
+      ],
+      "ru_lemma": "рука",
+      "ru_meaning": "рука",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "hand",
+        "fr": "main",
+        "es": "mano",
+        "de": "Hand"
+      },
+      "notes": "Check language variety, context, gender, or semantic scope before approval"
+    },
+    {
+      "library_entry_id": "ru-r-071",
+      "library_sense_ids": [
+        "ru-r-071-sense"
+      ],
+      "ru_lemma": "рыба",
+      "ru_meaning": "рыба",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "fish",
+        "fr": "poisson",
+        "es": "pez",
+        "de": "Fisch"
+      },
+      "notes": "Check language variety, context, gender, or semantic scope before approval"
+    },
+    {
+      "library_entry_id": "ru-r-075",
+      "library_sense_ids": [
+        "ru-r-075-sense"
+      ],
+      "ru_lemma": "светофор",
+      "ru_meaning": "светофор",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "traffic light",
+        "fr": "feu de circulation",
+        "es": "semáforo",
+        "de": "Ampel"
+      },
+      "notes": "Check language variety, context, gender, or semantic scope before approval"
+    },
+    {
+      "library_entry_id": "ru-r-076",
+      "library_sense_ids": [
+        "ru-r-076-sense"
+      ],
+      "ru_lemma": "свитер",
+      "ru_meaning": "свитер",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "sweater",
+        "fr": "pull",
+        "es": "suéter",
+        "de": "Pullover"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-077",
+      "library_sense_ids": [
+        "ru-r-077-sense"
+      ],
+      "ru_lemma": "сковорода",
+      "ru_meaning": "сковорода",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "frying pan",
+        "fr": "poêle",
+        "es": "sartén",
+        "de": "Pfanne"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-079",
+      "library_sense_ids": [
+        "ru-r-079-sense"
+      ],
+      "ru_lemma": "сыр",
+      "ru_meaning": "сыр",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "cheese",
+        "fr": "fromage",
+        "es": "queso",
+        "de": "Käse"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-080",
+      "library_sense_ids": [
+        "ru-r-080-sense"
+      ],
+      "ru_lemma": "телевизор",
+      "ru_meaning": "телевизор",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "television",
+        "fr": "télévision",
+        "es": "televisor",
+        "de": "Fernseher"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-083",
+      "library_sense_ids": [
+        "ru-r-083-sense"
+      ],
+      "ru_lemma": "торт",
+      "ru_meaning": "торт",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "cake",
+        "fr": "gâteau",
+        "es": "tarta",
+        "de": "Torte"
+      },
+      "notes": "Check language variety, context, gender, or semantic scope before approval"
+    },
+    {
+      "library_entry_id": "ru-r-084",
+      "library_sense_ids": [
+        "ru-r-084-sense"
+      ],
+      "ru_lemma": "трава",
+      "ru_meaning": "трава",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "grass",
+        "fr": "herbe",
+        "es": "hierba",
+        "de": "Gras"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-085",
+      "library_sense_ids": [
+        "ru-r-085-sense"
+      ],
+      "ru_lemma": "трактор",
+      "ru_meaning": "трактор",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "tractor",
+        "fr": "tracteur",
+        "es": "tractor",
+        "de": "Traktor"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-094",
+      "library_sense_ids": [
+        "ru-r-094-sense"
+      ],
+      "ru_lemma": "шарф",
+      "ru_meaning": "шарф",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "scarf",
+        "fr": "écharpe",
+        "es": "bufanda",
+        "de": "Schal"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-extra-027",
+      "library_sense_ids": [
+        "pack03-098_krysha"
+      ],
+      "ru_lemma": "крыша",
+      "ru_meaning": "крыша",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "roof",
+        "fr": "toit",
+        "es": "tejado",
+        "de": "Dach"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-add-d0bad0b2d0b0d180d182d0b8d180d0b0",
+      "library_sense_ids": [],
+      "ru_lemma": "квартира",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "apartment",
+        "fr": "appartement",
+        "es": "apartamento",
+        "de": "Wohnung"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-add-d188d0bed180d182d18b",
+      "library_sense_ids": [
+        "ru-r-add-d188d0bed180d182d18b-sense"
+      ],
+      "ru_lemma": "шорты",
+      "ru_meaning": "шорты",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "shorts",
+        "fr": "short",
+        "es": "pantalones cortos",
+        "de": "Shorts"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-add-d0b3d180d183d0b7d0bed0b2d0b8d0ba",
+      "library_sense_ids": [
+        "ru-r-add-d0b3d180d183d0b7d0bed0b2d0b8d0ba-sense"
+      ],
+      "ru_lemma": "грузовик",
+      "ru_meaning": "грузовик",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "truck",
+        "fr": "camion",
+        "es": "camión",
+        "de": "Lastwagen"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-r-add-d0bad180d0bed0b2d0b0d182d18c",
+      "library_sense_ids": [
+        "ru-r-add-d0bad180d0bed0b2d0b0d182d18c-sense"
+      ],
+      "ru_lemma": "кровать",
+      "ru_meaning": "кровать",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "bed",
+        "fr": "lit",
+        "es": "cama",
+        "de": "Bett"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-new-20261102-0032",
+      "library_sense_ids": [
+        "ru-new-20261102-0032-published-sense"
+      ],
+      "ru_lemma": "зеркало",
+      "ru_meaning": "зеркало",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "mirror",
+        "fr": "miroir",
+        "es": "espejo",
+        "de": "Spiegel"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-new-20261102-0050",
+      "library_sense_ids": [
+        "ru-new-20261102-0050-published-sense"
+      ],
+      "ru_lemma": "вертолёт",
+      "ru_meaning": "вертолёт",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "helicopter",
+        "fr": "hélicoptère",
+        "es": "helicóptero",
+        "de": "Hubschrauber"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-plant-20261104-d0bed0b3d183d180d0b5d186",
+      "library_sense_ids": [
+        "ru-plant-20261104-d0bed0b3d183d180d0b5d186-published-sense"
+      ],
+      "ru_lemma": "огурец",
+      "ru_meaning": "огурец",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "cucumber",
+        "fr": "concombre",
+        "es": "pepino",
+        "de": "Gurke"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-plant-20261104-d0bad0b0d0bfd183d181d182d0b0",
+      "library_sense_ids": [],
+      "ru_lemma": "капуста",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "cabbage",
+        "fr": "chou",
+        "es": "repollo",
+        "de": "Kohl"
+      },
+      "notes": "Check language variety, context, gender, or semantic scope before approval"
+    },
+    {
+      "library_entry_id": "ru-plant-20261104-d18fd0b1d0bbd0bed0bad0be",
+      "library_sense_ids": [],
+      "ru_lemma": "яблоко",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "apple",
+        "fr": "pomme",
+        "es": "manzana",
+        "de": "Apfel"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-plant-20261104-d0b1d0b0d0bdd0b0d0bd",
+      "library_sense_ids": [
+        "ru-plant-20261104-d0b1d0b0d0bdd0b0d0bd-published-sense"
+      ],
+      "ru_lemma": "банан",
+      "ru_meaning": "банан",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "banana",
+        "fr": "banane",
+        "es": "plátano",
+        "de": "Banane"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-plant-20261104-d0b0d0bfd0b5d0bbd18cd181d0b8d0bd",
+      "library_sense_ids": [
+        "ru-plant-20261104-d0b0d0bfd0b5d0bbd18cd181d0b8d0bd-published-sense"
+      ],
+      "ru_lemma": "апельсин",
+      "ru_meaning": "апельсин",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "orange",
+        "fr": "orange",
+        "es": "naranja",
+        "de": "Orange"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-plant-20261104-d0bbd0b8d0bcd0bed0bd",
+      "library_sense_ids": [],
+      "ru_lemma": "лимон",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "lemon",
+        "fr": "citron",
+        "es": "limón",
+        "de": "Zitrone"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-plant-20261104-d0bad0bbd183d0b1d0bdd0b8d0bad0b0",
+      "library_sense_ids": [
+        "ru-plant-20261104-d0bad0bbd183d0b1d0bdd0b8d0bad0b0-published-sense"
+      ],
+      "ru_lemma": "клубника",
+      "ru_meaning": "клубника",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "strawberry",
+        "fr": "fraise",
+        "es": "fresa",
+        "de": "Erdbeere"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-plant-20261104-d0bcd0b0d0bbd0b8d0bdd0b0",
+      "library_sense_ids": [
+        "ru-plant-20261104-d0bcd0b0d0bbd0b8d0bdd0b0-published-sense"
+      ],
+      "ru_lemma": "малина",
+      "ru_meaning": "малина",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "raspberry",
+        "fr": "framboise",
+        "es": "frambuesa",
+        "de": "Himbeere"
+      },
+      "notes": null
+    },
+    {
+      "library_entry_id": "ru-plant-20261104-d0b2d0b8d188d0bdd18f",
+      "library_sense_ids": [],
+      "ru_lemma": "вишня",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "cherry",
+        "fr": "cerise",
+        "es": "cereza",
+        "de": "Kirsche"
+      },
+      "notes": null
+    }
+  ]
+}
