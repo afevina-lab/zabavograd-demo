@@ -5,6 +5,7 @@ on:
       - 'editorial/review/multilingual-weight100-*.json'
       - 'scripts/*multilingual*.cjs'
       - 'scripts/probe-kaikki-word-pages.cjs'
+      - 'scripts/probe-kaikki-weight100-next.cjs'
       - 'tests/multilingual-import.test.cjs'
       - 'schemas/multilingual-candidates.schema.json'
       - '.github/workflows/multilingual-pilot-check.yml'
@@ -24,7 +25,7 @@ jobs:
       - name: Test candidate importer and dictionary evidence
         run: node --test tests/multilingual-import.test.cjs
       - name: Collect live Kaikki evidence sample (read-only)
-        run: node scripts/probe-kaikki-word-pages.cjs kaikki-sample-report.json
+        run: node scripts/probe-kaikki-weight100-next.cjs kaikki-sample-report.json
       - name: Archive source evidence sample
         uses: actions/upload-artifact@v4
         with:
