@@ -18,7 +18,7 @@ export function SettingsWindow({game,children}:{game:string;children:ReactNode})
     seenSection=true;
     const purpose=node.props['data-setup-section'];
     const item=fieldsetDisabled?<fieldset className="setup-section-fieldset" disabled={fieldsetDisabled}>{node}</fieldset>:node;
-    else if(purpose==='material'||purpose==='rules')left.push(item);
+    if(purpose==='material'||purpose==='rules')left.push(item);
     else if(purpose==='task')right.push(item);
     else if(purpose==='appearance'){
      // Only the theme picker belongs in the independent side rail.
