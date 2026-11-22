@@ -1359,6 +1359,7 @@
 }
 .app[data-theme] dialog.sound-workshop .sound-editor{
  gap:8px!important;padding:8px 12px!important;
+ margin-top:8px!important;
 }
 .app[data-theme] dialog.sound-workshop .sound-editor>label.check{
  min-height:32px!important;padding:0!important;
