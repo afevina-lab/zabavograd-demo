@@ -539,3 +539,13 @@ test('One shared control flow owns disclosure spacing and quantity track inset',
  assert.doesNotMatch(layout,/\.app \.shared-settings-window \.quantity-slider\{margin-block:10px 12px!important\}/);
  assert.doesNotMatch(layout,/\.app \.shared-settings-window \.setup-column\{display:flex;flex-direction:column;gap:14px!important/);
 });
+
+
+test('Sorting has one editable group heading and one presentation caption per field',()=>{
+ const sorting=readFileSync('src/Sorting.tsx','utf8');
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ assert.doesNotMatch(sorting,/<h3>Группа \{i\+1\}<\/h3>/);
+ assert.match(sorting,/<div className="group-title-edit"><strong>\{groupTitle\(g\)\}<\/strong>/);
+ assert.match(sorting,/<h3>Показ карточек<\/h3><GameSelect hideLabel label="Карточки"/);
+ assert.match(css,/\.sort-group-settings \.group-title-edit strong\{font-size:16px/);
+});
