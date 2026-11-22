@@ -2876,11 +2876,11 @@
           "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "suggested",
+          "morphology_status": "partial",
           "grammatical_gender": "m",
           "indefinite_article_form": "der Kohl",
-          "plural_form": "Kohle",
-          "feature_source": "editorial_candidate_requires_dictionary_verification"
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "usage_note": "Kohl as vegetable/mass noun: plural cannot be assigned mechanically; check counted cabbage heads versus varieties."
         }
       }
     },
