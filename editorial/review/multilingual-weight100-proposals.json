@@ -940,31 +940,51 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": null,
+          "grammatical_number": "plural",
+          "citation_form": "paints",
+          "usage_note": "Plural referring to paints/sets of colours; distinguish paint (material, mass).",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": "f",
+          "grammatical_number": "plural",
+          "citation_form": "des peintures",
+          "usage_note": "May mean paintings rather than paint materials; semantic check required.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": "f",
+          "grammatical_number": "plural",
+          "citation_form": "unas pinturas",
+          "usage_note": "Can mean paintings or paint materials; sense check required.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": null,
+          "grammatical_number": "plural",
+          "citation_form": "die Farben",
+          "usage_note": "Can mean colours; distinguish paints/materials, not an exact lexical equivalent without context.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -1180,31 +1200,51 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": null,
+          "grammatical_number": "mass",
+          "citation_form": "ice cream",
+          "usage_note": "Mass noun; an ice cream can denote an individual serving.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": "f",
+          "grammatical_number": "mass",
+          "citation_form": "la glace",
+          "usage_note": "Une glace often refers to an individual serving.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": "m",
+          "grammatical_number": "mass",
+          "citation_form": "el helado",
+          "usage_note": "Un helado can denote an individual serving.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": "n",
+          "grammatical_number": "mass",
+          "citation_form": "das Eis",
+          "usage_note": "Usually a mass noun; distinguish a serving and kinds of ice cream.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -1996,31 +2036,51 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": null,
+          "grammatical_number": "mass",
+          "citation_form": "cheese",
+          "usage_note": "Cheeses denotes varieties; no universal everyday plural.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": "m",
+          "grammatical_number": "mass",
+          "citation_form": "le fromage",
+          "usage_note": "Des fromages denotes cheeses/types.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": "m",
+          "grammatical_number": "mass",
+          "citation_form": "el queso",
+          "usage_note": "Quesos denotes portions/types.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": "m",
+          "grammatical_number": "mass",
+          "citation_form": "der Käse",
+          "usage_note": "A mass noun in ordinary reference; plural depends on varieties.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -2172,31 +2232,51 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": null,
+          "grammatical_number": "mass",
+          "citation_form": "grass",
+          "usage_note": "Usually mass noun, not the plural grasses unless kinds.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": "f",
+          "grammatical_number": "mass",
+          "citation_form": "l’herbe",
+          "usage_note": "Usually mass; des herbes may mean herbs.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": "f",
+          "grammatical_number": "mass",
+          "citation_form": "la hierba",
+          "usage_note": "Hierbas may mean herbs and not grass on a lawn.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": "n",
+          "grammatical_number": "mass",
+          "citation_form": "das Gras",
+          "usage_note": "Usually mass; Gräser denotes types or individual grasses.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -2474,31 +2554,52 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": null,
+          "grammatical_number": "plural",
+          "citation_form": "shorts",
+          "usage_note": "Plural-only clothing noun.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": "m",
+          "grammatical_number": "singular",
+          "citation_form": "un short",
+          "usage_note": "Unlike Russian, commonly singular for one garment.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "plural_form": "shorts"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": "m",
+          "grammatical_number": "plural",
+          "citation_form": "unos pantalones cortos",
+          "usage_note": "Plural noun phrase; variation by region.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "partial",
+          "grammatical_gender": null,
+          "grammatical_number": "plural",
+          "citation_form": "die Shorts",
+          "usage_note": "Typically plural; use of singular Short can vary.",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
