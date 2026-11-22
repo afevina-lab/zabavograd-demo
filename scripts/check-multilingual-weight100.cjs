@@ -33,6 +33,23 @@ function validate(manifest,proposals,canonical){
   for(const id of p.library_sense_ids||[])assert(senses.has(id),'Invalid sense ID '+id);
   assert.deepEqual(Object.keys(p.translations).sort(),['de','en','es','fr']);
   for(const value of Object.values(p.translations))assert(typeof value==='string'&&value.trim(),'Empty translation');
+  assert.deepEqual(Object.keys(p.language_details||{}).sort(),['de','en','es','fr']);
+  for(const lang of ['en','fr','es','de']){
+   const detail=p.language_details[lang];
+   assert.equal(detail.part_of_speech,'noun');
+   assert(['suggested','not_imported'].includes(detail.morphology_status));
+   assert(['suggested','not_imported'].includes(detail.pronunciation_status));
+   if(detail.morphology_status==='suggested'){
+    assert.equal(detail.feature_review_status,'suggested');
+    assert(typeof detail.indefinite_article_form==='string'&&detail.indefinite_article_form);
+    assert(typeof detail.plural_form==='string'&&detail.plural_form);
+    assert(lang==='en'?detail.grammatical_gender===null:['m','f','n'].includes(detail.grammatical_gender));
+   }
+   for(const pronunciation of detail.pronunciations){
+    assert.equal(pronunciation.review_status,'suggested');
+    assert(pronunciation.ipa&&pronunciation.source?.startsWith('https://'));
+   }
+  }
  }
  return {weight100:live.length,reviewProposals:reviewIds.size,languageProposals:reviewIds.size*4};
 }
