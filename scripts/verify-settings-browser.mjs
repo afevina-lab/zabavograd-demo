@@ -199,6 +199,8 @@ for(const [width,height] of [[1440,900],[390,844]]){
  assert(await evaluate("(()=>{const e=document.querySelector('.sound-chip>button[aria-pressed=true]'),s=getComputedStyle(e);return s.transform==='none'&&s.color!==s.backgroundColor})()"),'Selected sound must stay still with contrasting text');
  await evaluate("document.querySelector('.sound-gear').click()");await sleep(400);
  assert(await evaluate("(()=>{const d=document.querySelector('.sound-workshop'),f=d.querySelector(':scope>.sound-picker-actions'),r=f.getBoundingClientRect(),b=d.getBoundingClientRect();return !!f&&r.bottom<=b.bottom&&r.top>=b.top&&f.querySelector('.primary').textContent==='Готово'})()"),'Sound footer must remain separate from scrolling and use a concise action');
+ const soundSpacing=await evaluate("(()=>{const editor=document.querySelector('.sound-editor'),labels=[...editor.querySelectorAll(':scope>label.check')].filter(e=>e.getBoundingClientRect().height>0),gaps=labels.slice(1).map((e,i)=>e.getBoundingClientRect().top-labels[i].getBoundingClientRect().bottom);return {gaps,compact:gaps.every(x=>x>=-1&&x<=12),centered:labels.every(e=>getComputedStyle(e).alignItems==='center'),checkboxMargins:labels.every(e=>{const input=e.querySelector('input');return !!input&&Math.abs(parseFloat(getComputedStyle(input).marginTop))<1})}})()");
+ assert(soundSpacing.compact&&soundSpacing.centered&&soundSpacing.checkboxMargins,'Sound editor labels must use shared compact vertically centered rows: '+JSON.stringify(soundSpacing));
  await screenshot('sound-editor-fixed-footer-'+width);
  await evaluate("document.querySelector('.sound-workshop .primary').click()");
  await until("!!document.querySelector('.sound-selection>button[data-field-state=ready]')");
