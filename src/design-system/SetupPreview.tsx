@@ -12,8 +12,8 @@ function PreviewCopy({children}:{children:ReactNode}){
    inner.style.display='block';
    inner.style.webkitLineClamp='unset';
    inner.style.overflow='visible';
-   const availableHeight=outer.clientHeight-parseFloat(getComputedStyle(outer).paddingTop)-parseFloat(getComputedStyle(outer).paddingBottom)-parseFloat(getComputedStyle(outer).borderTopWidth)-parseFloat(getComputedStyle(outer).borderBottomWidth);
-   const availableWidth=outer.clientWidth-parseFloat(getComputedStyle(outer).paddingLeft)-parseFloat(getComputedStyle(outer).paddingRight)-parseFloat(getComputedStyle(outer).borderLeftWidth)-parseFloat(getComputedStyle(outer).borderRightWidth);
+   const availableHeight=outer.clientHeight-parseFloat(getComputedStyle(outer).paddingTop)-parseFloat(getComputedStyle(outer).paddingBottom);
+   const availableWidth=outer.clientWidth-parseFloat(getComputedStyle(outer).paddingLeft)-parseFloat(getComputedStyle(outer).paddingRight);
    for(let size=16;size>=12;size--){
     inner.style.fontSize=size+'px';
     if(inner.scrollHeight<=availableHeight+1&&inner.scrollWidth<=availableWidth+1)break;
