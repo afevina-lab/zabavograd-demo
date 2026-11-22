@@ -7,11 +7,11 @@
 .app .primary:hover:not(:disabled),.app .secondary:hover:not(:disabled),.app :is(.settings,.modal,.overlay>div,dialog) .start:hover:not(:disabled){border-image-source:var(--skin-large-hover)!important}
 .app .primary:active:not(:disabled),.app .secondary:active:not(:disabled){border-image-source:var(--skin-large-pressed)!important}
 .app .primary:disabled,.app .secondary:disabled{border-image-source:var(--skin-large-disabled)!important}
-.app .icon-button,.app .material-head button,.app .pair-options button{
+.app .icon-button,.app .pair-options button{
  background:none!important;box-shadow:none!important;border:1px solid transparent!important;border-radius:0!important;
  border-image-source:var(--skin-square)!important;border-image-slice:40 fill!important;border-image-width:12px!important;border-image-repeat:stretch!important;
 }
-.app .icon-button:hover:not(:disabled),.app .material-head button:hover:not(:disabled),.app .pair-options button:hover:not(:disabled){border-image-source:var(--skin-square-hover)!important}
+.app .icon-button:hover:not(:disabled),.app .pair-options button:hover:not(:disabled){border-image-source:var(--skin-square-hover)!important}
 .app .icon-button:active:not(:disabled),.app .pair-options button:active:not(:disabled){border-image-source:var(--skin-square-pressed)!important}
 .app .themes button,.app .game-switch a{
  background:none!important;box-shadow:none!important;border:1px solid transparent!important;border-radius:0!important;
@@ -168,7 +168,7 @@
 .select-caret{right:6px}
 .select-control.is-disabled{opacity:.55}.select-control:focus-within .select-caret{filter:brightness(1.1)}
 /* Icon actions belong to the same richly colored button family. */
-.app[data-theme] .icon-button,.app[data-theme] .settings-window-heading .icon-button,.app[data-theme] .settings .material-head .icon-button{border-image:none!important;border:1px solid var(--ui-deep)!important;border-radius:13px!important;background:var(--ui-deep)!important;color:var(--ui-paper)!important;box-shadow:inset 0 2px 2px #fff6,inset 0 -3px 3px #0002,0 3px 0 color-mix(in srgb,var(--ui-deep) 65%,black),0 5px 7px #172a4020!important}
+.app[data-theme] .icon-button,.app[data-theme] .settings-window-heading .icon-button{border-image:none!important;border:1px solid var(--ui-deep)!important;border-radius:13px!important;background:var(--ui-deep)!important;color:var(--ui-paper)!important;box-shadow:inset 0 2px 2px #fff6,inset 0 -3px 3px #0002,0 3px 0 color-mix(in srgb,var(--ui-deep) 65%,black),0 5px 7px #172a4020!important}
 .app[data-theme] .icon-button:hover:not(:disabled){filter:brightness(1.1)}.app[data-theme] .icon-button:active:not(:disabled){transform:translateY(2px);box-shadow:inset 0 2px 3px #0002,0 1px 0 var(--ui-deep)!important}
 /* Compact quantity header; the track retains its broad, tactile thumb. */
 .app .quantity-slider{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 10px;align-items:center;margin:0;padding:10px 12px 17px;border:1px solid var(--ui-tray-edge);border-radius:16px;background:var(--ui-setup-field);box-shadow:inset 0 2px 3px #fff9,0 2px 0 var(--ui-tray-shadow)}
@@ -492,17 +492,6 @@
 .app .shared-settings-window .setup-column{display:flex;flex-direction:column;min-width:0}
 .app .shared-settings-window .setup-section-fieldset{border:0!important;min-inline-size:0}
 
-/* Shared material toolbar: every preview uses the same square icon action. */
-.app[data-theme] .shared-settings-window .material-head .icon-button{
- box-sizing:border-box;flex:0 0 auto;
- width:var(--zg-heading-icon-size,46px)!important;
- min-width:var(--zg-heading-icon-size,46px)!important;
- height:var(--zg-heading-icon-size,46px)!important;
- min-height:var(--zg-heading-icon-size,46px)!important;
- padding:8px!important;
- border-radius:var(--zg-control-radius,12px)!important;
-}
-
 
 /* Sorting groups are independent material panels inside one shared material column. */
 .app .shared-settings-window .setup-column .sort-group-settings{
@@ -642,13 +631,6 @@
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>.setup-material-preview{
  max-height:110px;overflow:hidden;
 }
-.app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head{
- min-height:40px;padding:0!important;margin:0 0 var(--zg-space-1,4px)!important;
- flex-wrap:nowrap;
-}
-.app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head h2{
- font-size:18px!important;margin:0!important;
-}
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-material-summary{
  margin:0!important;line-height:1.35;max-height:3.1em;overflow:hidden;
 }
@@ -693,18 +675,6 @@
   font-size:11px;line-height:1.1;max-height:14px;overflow:hidden;
  }
  .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>p:not([role=status]){display:none!important}
- .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head{
-  min-height:34px!important;max-height:34px;
-  padding:0!important;margin:0!important;gap:4px!important;
- }
- .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head h2{
-  font-size:16px!important;margin:0!important;
- }
- .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head>div{gap:4px!important}
- .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head .icon-button{
-  width:32px!important;min-width:32px!important;height:32px!important;min-height:32px!important;
-  padding:4px!important;
- }
  .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-material-summary{
   font-size:12px!important;line-height:1.2;max-height:17px!important;white-space:nowrap;
   text-overflow:ellipsis;overflow:hidden;
@@ -811,14 +781,6 @@
  grid-column:1!important;grid-row:1!important;
  align-self:center;min-height:0;max-height:64px!important;
  margin:0!important;padding:0!important;overflow:visible;
-}
-.app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head{
- min-height:36px!important;max-height:38px!important;margin:0!important;
- padding:0!important;gap:var(--zg-space-1,4px)!important;
-}
-.app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head .icon-button{
- width:36px!important;min-width:36px!important;height:36px!important;min-height:36px!important;
- padding:5px!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-material-summary{
  margin:0!important;max-height:1.3em!important;white-space:nowrap;overflow:hidden;
@@ -928,9 +890,6 @@
  }
  .app[data-theme] .settings-frame.shared-settings-window>.setup-footer{
   grid-template-columns:minmax(0,1fr) minmax(105px,.7fr)!important;
- }
- .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head .icon-button{
-  width:32px!important;min-width:32px!important;height:32px!important;min-height:32px!important;
  }
  .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>button.primary{
   font-size:14px!important;padding:5px 8px!important;
