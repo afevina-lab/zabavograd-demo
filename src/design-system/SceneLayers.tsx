@@ -6,16 +6,21 @@ import {THEMES,assetUrl,type ThemeId} from './themes.ts';
  * The card grid never changes the geometry of the scenery. */
 export function SceneLayers({theme}:{theme:ThemeId}){
  const sceneryRef=useRef<HTMLDivElement>(null);
- const [forestWidth,setForestWidth]=useState<number|null>(null);
+ const [forestFrame,setForestFrame]=useState<{width:number;scale:number}|null>(null);
  useLayoutEffect(()=>{
-  if(theme!=='forest'){setForestWidth(null);return;}
+  if(theme!=='forest'){setForestFrame(null);return;}
   const parent=sceneryRef.current?.parentElement;
   if(!parent)return;
   const update=()=>{
    const {width,height}=parent.getBoundingClientRect();
    if(width>0&&height>0){
-    const next=Math.ceil(Math.max(width,height*1.78));
-    setForestWidth(previous=>previous===next?previous:next);
+    // Keep a wide perspective canvas on desktop. On a significantly narrow
+    // viewport scale the whole arrangement from its ground line, while its
+    // side trees may still extend past the clipped screen edges.
+    const sceneWidth=Math.ceil(Math.max(width,height*1.78));
+    const scale=Math.min(1,Math.max(.68,width/(height*1.3)));
+    setForestFrame(previous=>previous?.width===sceneWidth&&Math.abs(previous.scale-scale)<.001
+      ?previous:{width:sceneWidth,scale});
    }
   };
   update();
@@ -26,8 +31,10 @@ export function SceneLayers({theme}:{theme:ThemeId}){
  const sprites=THEMES[theme].scene.sprites;
  if(!sprites.length)return null;
  const frame:CSSProperties=theme==='forest'?{
-  width:forestWidth?`${forestWidth}px`:'100%',
-  left:'50%',right:'auto',transform:'translateX(-50%)'
+  width:forestFrame?`${forestFrame.width}px`:'100%',
+  left:'50%',right:'auto',top:'auto',bottom:0,height:'100%',
+  transform:`translateX(-50%) scale(${forestFrame?.scale??1})`,
+  transformOrigin:'center bottom'
  }:{};
  return <div ref={sceneryRef} className="zg-scene-layers" style={frame} aria-hidden="true">{sprites.map(sprite=>
   <span key={sprite.id} className="zg-scene-sprite" data-zg-motion={sprite.motion}
