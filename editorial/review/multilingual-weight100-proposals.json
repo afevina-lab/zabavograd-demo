@@ -26,7 +26,53 @@
         "es": "sandía",
         "de": "Wassermelone"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a watermelon",
+          "plural_form": "watermelons",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une pastèque",
+          "plural_form": "pastèques",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una sandía",
+          "plural_form": "sandías",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Wassermelone",
+          "plural_form": "Wassermelonen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-003",
@@ -44,7 +90,53 @@
         "es": "tambor",
         "de": "Trommel"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a drum",
+          "plural_form": "drums",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un tambour",
+          "plural_form": "tambours",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un tambor",
+          "plural_form": "tambores",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Trommel",
+          "plural_form": "Trommeln",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-006",
@@ -62,7 +154,53 @@
         "es": "cubo",
         "de": "Eimer"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a bucket",
+          "plural_form": "buckets",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un seau",
+          "plural_form": "seaux",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un cubo",
+          "plural_form": "cubos",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Eimer",
+          "plural_form": "Eimer",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-014",
@@ -80,7 +218,53 @@
         "es": "tobogán",
         "de": "Rutsche"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a playground slide",
+          "plural_form": "playground slides",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un toboggan",
+          "plural_form": "toboggans",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un tobogán",
+          "plural_form": "toboganes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Rutsche",
+          "plural_form": "Rutschen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-016",
@@ -98,7 +282,53 @@
         "es": "pera",
         "de": "Birne"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a pear",
+          "plural_form": "pears",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une poire",
+          "plural_form": "poires",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una pera",
+          "plural_form": "peras",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Birne",
+          "plural_form": "Birnen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-017",
@@ -116,7 +346,53 @@
         "es": "carretera",
         "de": "Straße"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a road",
+          "plural_form": "roads",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une route",
+          "plural_form": "routes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una carretera",
+          "plural_form": "carreteras",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Straße",
+          "plural_form": "Straßen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-019",
@@ -134,7 +410,53 @@
         "es": "jirafa",
         "de": "Giraffe"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a giraffe",
+          "plural_form": "giraffes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une girafe",
+          "plural_form": "girafes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una jirafa",
+          "plural_form": "jirafas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Giraffe",
+          "plural_form": "Giraffen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-020",
@@ -152,7 +474,53 @@
         "es": "valla",
         "de": "Zaun"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a fence",
+          "plural_form": "fences",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une clôture",
+          "plural_form": "clôtures",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una valla",
+          "plural_form": "vallas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Zaun",
+          "plural_form": "Zäune",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-025",
@@ -170,7 +538,53 @@
         "es": "lápiz",
         "de": "Bleistift"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a pencil",
+          "plural_form": "pencils",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un crayon",
+          "plural_form": "crayons",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un lápiz",
+          "plural_form": "lápices",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Bleistift",
+          "plural_form": "Bleistifte",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-027",
@@ -188,7 +602,53 @@
         "es": "patata",
         "de": "Kartoffel"
       },
-      "notes": "Check language variety, context, gender, or semantic scope before approval"
+      "notes": "Check language variety, context, gender, or semantic scope before approval",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a potato",
+          "plural_form": "potatoes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une pomme de terre",
+          "plural_form": "pommes de terre",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una patata",
+          "plural_form": "patatas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Kartoffel",
+          "plural_form": "Kartoffeln",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-031",
@@ -206,7 +666,53 @@
         "es": "ordenador",
         "de": "Computer"
       },
-      "notes": "Check language variety, context, gender, or semantic scope before approval"
+      "notes": "Check language variety, context, gender, or semantic scope before approval",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a computer",
+          "plural_form": "computers",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un ordinateur",
+          "plural_form": "ordinateurs",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un ordenador",
+          "plural_form": "ordenadores",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Computer",
+          "plural_form": "Computer",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-033",
@@ -224,7 +730,53 @@
         "es": "caja",
         "de": "Schachtel"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a box",
+          "plural_form": "boxes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une boîte",
+          "plural_form": "boîtes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una caja",
+          "plural_form": "cajas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Schachtel",
+          "plural_form": "Schachteln",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-034",
@@ -242,7 +794,53 @@
         "es": "vaca",
         "de": "Kuh"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a cow",
+          "plural_form": "cows",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une vache",
+          "plural_form": "vaches",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una vaca",
+          "plural_form": "vacas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Kuh",
+          "plural_form": "Kühe",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-036",
@@ -260,7 +858,53 @@
         "es": "corona",
         "de": "Krone"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a crown",
+          "plural_form": "crowns",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une couronne",
+          "plural_form": "couronnes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una corona",
+          "plural_form": "coronas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Krone",
+          "plural_form": "Kronen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-040",
@@ -278,7 +922,37 @@
         "es": "pinturas",
         "de": "Farben"
       },
-      "notes": "Check language variety, context, gender, or semantic scope before approval"
+      "notes": "Check language variety, context, gender, or semantic scope before approval",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-043",
@@ -296,7 +970,53 @@
         "es": "taza",
         "de": "Becher"
       },
-      "notes": "Check language variety, context, gender, or semantic scope before approval"
+      "notes": "Check language variety, context, gender, or semantic scope before approval",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a mug",
+          "plural_form": "mugs",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un mug",
+          "plural_form": "mugs",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una taza",
+          "plural_form": "tazas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Becher",
+          "plural_form": "Becher",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-045",
@@ -314,7 +1034,37 @@
         "es": "chaqueta",
         "de": "Jacke"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-046",
@@ -332,7 +1082,37 @@
         "es": "zanahoria",
         "de": "Karotte"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-047",
@@ -350,7 +1130,37 @@
         "es": "helado",
         "de": "Eis"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-054",
@@ -368,7 +1178,37 @@
         "es": "regalo",
         "de": "Geschenk"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-055",
@@ -386,7 +1226,37 @@
         "es": "tomate",
         "de": "Tomate"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-058",
@@ -404,7 +1274,37 @@
         "es": "arcoíris",
         "de": "Regenbogen"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-060",
@@ -422,7 +1322,37 @@
         "es": "cohete",
         "de": "Rakete"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-061",
@@ -440,7 +1370,37 @@
         "es": "lavabo",
         "de": "Waschbecken"
       },
-      "notes": "Check language variety, context, gender, or semantic scope before approval"
+      "notes": "Check language variety, context, gender, or semantic scope before approval",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-064",
@@ -458,7 +1418,37 @@
         "es": "peine",
         "de": "Kamm"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-065",
@@ -476,7 +1466,37 @@
         "es": "robot",
         "de": "Roboter"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-068",
@@ -494,7 +1514,37 @@
         "es": "mano",
         "de": "Hand"
       },
-      "notes": "Check language variety, context, gender, or semantic scope before approval"
+      "notes": "Check language variety, context, gender, or semantic scope before approval",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-071",
@@ -512,7 +1562,37 @@
         "es": "pez",
         "de": "Fisch"
       },
-      "notes": "Check language variety, context, gender, or semantic scope before approval"
+      "notes": "Check language variety, context, gender, or semantic scope before approval",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-075",
@@ -530,7 +1610,37 @@
         "es": "semáforo",
         "de": "Ampel"
       },
-      "notes": "Check language variety, context, gender, or semantic scope before approval"
+      "notes": "Check language variety, context, gender, or semantic scope before approval",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-076",
@@ -548,7 +1658,37 @@
         "es": "suéter",
         "de": "Pullover"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-077",
@@ -566,7 +1706,37 @@
         "es": "sartén",
         "de": "Pfanne"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-079",
@@ -584,7 +1754,37 @@
         "es": "queso",
         "de": "Käse"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-080",
@@ -602,7 +1802,37 @@
         "es": "televisor",
         "de": "Fernseher"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-083",
@@ -620,7 +1850,37 @@
         "es": "tarta",
         "de": "Torte"
       },
-      "notes": "Check language variety, context, gender, or semantic scope before approval"
+      "notes": "Check language variety, context, gender, or semantic scope before approval",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-084",
@@ -638,7 +1898,37 @@
         "es": "hierba",
         "de": "Gras"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-085",
@@ -656,7 +1946,37 @@
         "es": "tractor",
         "de": "Traktor"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-094",
@@ -674,7 +1994,37 @@
         "es": "bufanda",
         "de": "Schal"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-extra-027",
@@ -692,7 +2042,37 @@
         "es": "tejado",
         "de": "Dach"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-add-d0bad0b2d0b0d180d182d0b8d180d0b0",
@@ -708,7 +2088,37 @@
         "es": "apartamento",
         "de": "Wohnung"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-add-d188d0bed180d182d18b",
@@ -726,7 +2136,37 @@
         "es": "pantalones cortos",
         "de": "Shorts"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-add-d0b3d180d183d0b7d0bed0b2d0b8d0ba",
@@ -744,7 +2184,37 @@
         "es": "camión",
         "de": "Lastwagen"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-r-add-d0bad180d0bed0b2d0b0d182d18c",
@@ -762,7 +2232,37 @@
         "es": "cama",
         "de": "Bett"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-new-20261102-0032",
@@ -780,7 +2280,37 @@
         "es": "espejo",
         "de": "Spiegel"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-new-20261102-0050",
@@ -798,7 +2328,37 @@
         "es": "helicóptero",
         "de": "Hubschrauber"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-plant-20261104-d0bed0b3d183d180d0b5d186",
@@ -816,7 +2376,37 @@
         "es": "pepino",
         "de": "Gurke"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-plant-20261104-d0bad0b0d0bfd183d181d182d0b0",
@@ -832,7 +2422,37 @@
         "es": "repollo",
         "de": "Kohl"
       },
-      "notes": "Check language variety, context, gender, or semantic scope before approval"
+      "notes": "Check language variety, context, gender, or semantic scope before approval",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-plant-20261104-d18fd0b1d0bbd0bed0bad0be",
@@ -848,7 +2468,37 @@
         "es": "manzana",
         "de": "Apfel"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-plant-20261104-d0b1d0b0d0bdd0b0d0bd",
@@ -866,7 +2516,37 @@
         "es": "plátano",
         "de": "Banane"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-plant-20261104-d0b0d0bfd0b5d0bbd18cd181d0b8d0bd",
@@ -884,7 +2564,37 @@
         "es": "naranja",
         "de": "Orange"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-plant-20261104-d0bbd0b8d0bcd0bed0bd",
@@ -900,7 +2610,37 @@
         "es": "limón",
         "de": "Zitrone"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-plant-20261104-d0bad0bbd183d0b1d0bdd0b8d0bad0b0",
@@ -918,7 +2658,37 @@
         "es": "fresa",
         "de": "Erdbeere"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-plant-20261104-d0bcd0b0d0bbd0b8d0bdd0b0",
@@ -936,7 +2706,37 @@
         "es": "frambuesa",
         "de": "Himbeere"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     },
     {
       "library_entry_id": "ru-plant-20261104-d0b2d0b8d188d0bdd18f",
@@ -952,7 +2752,38 @@
         "es": "cereza",
         "de": "Kirsche"
       },
-      "notes": null
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "feature_review_status": "not_imported",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "not_imported"
+        }
+      }
     }
-  ]
+  ],
+  "grammar_note": "All grammatical forms are unverified editorial candidates; no Wiktionary morphology/IPA has been imported yet. Missing fields mean unknown, not inapplicable. Articles are contextual phrases, not universal noun attributes."
 }
