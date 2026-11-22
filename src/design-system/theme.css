@@ -198,6 +198,7 @@
 .app[data-theme] .victory-star-shining{background-position:left center!important;filter:drop-shadow(0 0 12px #ffd86dbb) drop-shadow(0 0 22px #ffedb177)}
 .app[data-theme] .victory-star-empty{background-position:center!important;opacity:.25;filter:grayscale(1)}
 .app[data-theme] .victory-stars>span:nth-child(2){margin-top:-9px}
+.app[data-theme] .victory-stars>span:nth-child(2) .victory-star{width:clamp(68px,10.4vw,102px)}
 
 /* Keep long dynamically generated sorting-category lists from swallowing the scene.
    The full unabridged label remains in the DOM and in the native title tooltip. */
