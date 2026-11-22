@@ -76,8 +76,8 @@ async function setup(game,{timed=false}={}){
  }
  }
  if(game==='matching')await choose('select[aria-label="Учебная задача"]','math');
- await evaluate("(()=>{const d=document.querySelector('.challenge');d.open=true;const label=[...d.querySelectorAll('label')].find(e=>e.textContent==='5 жизней');const e=label.querySelector('input');if(!e.checked)e.click()})()");
- if(timed)await evaluate("(()=>{const d=document.querySelector('.challenge');const label=[...d.querySelectorAll('label')].find(e=>e.textContent==='На время');if(!label)throw Error('Missing timer toggle');const e=label.querySelector('input');if(!e.checked)e.click()})()");
+ await evaluate("(()=>{const d=document.querySelector('.challenge');d.open=true;const label=[...d.querySelectorAll('label')].find(e=>e.textContent==='Жизни');const e=label.querySelector('input');if(!e.checked)e.click()})()");
+ if(timed)await evaluate("(()=>{const d=document.querySelector('.challenge');const label=[...d.querySelectorAll('label')].find(e=>e.textContent.startsWith('На время'));if(!label)throw Error('Missing timer toggle');const e=label.querySelector('input');if(!e.checked)e.click()})()");
  await until("!![...document.querySelectorAll('.setup-footer button')].find(e=>e.textContent.startsWith('Начать')&&!e.disabled)");
  await evaluate("[...document.querySelectorAll('.setup-footer button')].find(e=>e.textContent.startsWith('Начать')&&!e.disabled).click()");
  await until("!!document.querySelector('.app.game-active')");

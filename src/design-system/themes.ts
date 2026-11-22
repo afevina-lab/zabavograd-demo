@@ -116,7 +116,7 @@ export function themeVars(id:ThemeId,base='/'):CSSProperties{
   '--zg-toolbar-image':url(t.toolbarArt,base),
   '--zg-card-back-image':url(t.cards.back,base),
   '--zg-card-front-image':url(t.cards.front,base),
-  '--zg-award-stars-image':url('assets/neutral/approved-stars.webp',base),
+  '--zg-award-stars-image':url('assets/rewards/star.webp',base),
   '--skin-panel':kit('panels',`panel-${c}-square-corners`),
   '--skin-large':kit('buttons/large',`button-large-${c}-normal`),
   '--skin-large-hover':kit('buttons/large',`button-large-${c}-hover`),

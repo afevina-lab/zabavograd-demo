@@ -190,13 +190,13 @@
  display:block;flex:none;
  width:clamp(52px,8vw,78px);aspect-ratio:1;
  background-image:var(--zg-award-stars-image)!important;
- background-size:300% 100%!important;
+ background-size:contain!important;
  background-repeat:no-repeat!important;
  background-position:left center!important;
  filter:drop-shadow(0 3px 6px #9a6a2b44);
 }
 .app[data-theme] .victory-star-shining{background-position:left center!important;filter:drop-shadow(0 0 12px #ffd86dbb) drop-shadow(0 0 22px #ffedb177)}
-.app[data-theme] .victory-star-empty{background-position:right center!important;opacity:1}
+.app[data-theme] .victory-star-empty{background-position:center!important;opacity:.25;filter:grayscale(1)}
 .app[data-theme] .victory-stars>span:nth-child(2){margin-top:-9px}
 
 /* Keep long dynamically generated sorting-category lists from swallowing the scene.

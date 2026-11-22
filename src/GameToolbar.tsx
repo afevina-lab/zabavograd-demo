@@ -18,5 +18,5 @@ export function GameToolbar({children,task='Назови верно'}:{children:
   status.push(node);
  });}
  collect(children);
- return <div className="play-toolbar shared-toolbar"><div className="toolbar-left">{controls}</div><div className="toolbar-centre"><strong className="toolbar-task">{task}</strong><div className="counters">{status}</div></div><div className="toolbar-right">{view.length?view:<button type="button" className="icon-button toolbar-mobile-fullscreen" aria-label="Полный экран" onClick={e=>{if(document.fullscreenElement)void document.exitFullscreen();else void e.currentTarget.closest('.app')?.requestFullscreen()}}><Icon name="Sight"/></button>}</div></div>;
+ return <div className="play-toolbar shared-toolbar"><div className="toolbar-left">{controls}</div><strong className="toolbar-task">{task}</strong><div className="toolbar-centre"><div className="counters">{status}</div></div><div className="toolbar-right">{view.length?view:<button type="button" className="icon-button toolbar-mobile-fullscreen" aria-label="Полный экран" onClick={e=>{if(document.fullscreenElement)void document.exitFullscreen();else void e.currentTarget.closest('.app')?.requestFullscreen()}}><Icon name="Sight"/></button>}</div></div>;
 }
