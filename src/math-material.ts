@@ -1,5 +1,5 @@
 import type {Word} from './material-types.ts';
-export type MathSettings={includeZero?:boolean;answerOnly?:boolean;kind:'composition'|'examples';target:number;add:boolean;subtract:boolean;multiply?:boolean;divide?:boolean};
+export type MathSettings={includeZero?:boolean;answerOnly?:boolean;kind:'composition'|'examples';target:number;from?:number;add:boolean;subtract:boolean;multiply?:boolean;divide?:boolean};
 export const defaultMath:MathSettings={includeZero:true,kind:'examples',target:10,add:true,subtract:true,multiply:false,divide:false};
 /** Ordered curriculum stops for the numeric slider, not a linear 1–1000 scale. */
 export const MATH_STOPS=[1,2,...Array.from({length:18},(_,i)=>i+3),25,30,35,40,45,50,60,70,80,90,100,200,300,400,500,1000];
@@ -44,7 +44,8 @@ export function mathMaterial(options:Partial<MathSettings>={}):Word[]{
   if(o.multiply)for(let d=1;d<=Math.min(32,n);d++)if(n%d===0)rows.push([d+' × '+(n/d),n]);
   if(o.divide)for(let d=1;d<=Math.min(32,Math.floor(maxMathTarget/n));d++)rows.push([(n*d)+' ÷ '+d,n]);
  }
-  const filtered=rows.filter(([label,answer])=>includeZero||answer!==0&&!/(^|\D)0(\D|$)/.test(label));
+  const lower=Math.max(0,Math.min(limit,Math.trunc(o.from??0)));
+ const filtered=rows.filter(([label,answer])=>(o.kind!=='examples'||answer>=lower)&&(includeZero||answer!==0&&!/(^|\D)0(\D|$)/.test(label)));
  const byAnswer=new Map<number,Array<[string,number]>>();
  for(const row of filtered){const group=byAnswer.get(row[1])||[];group.push(row);byAnswer.set(row[1],group);}
  const distinct=o.answerOnly&&o.kind==='examples'?[...byAnswer.values()].flat().filter(row=>row[1]===limit):[...byAnswer.entries()].map(([answer,group])=>group[answer%group.length]);

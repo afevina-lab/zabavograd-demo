@@ -51,7 +51,7 @@
 .app .victory-star .garden-icon{width:100%;height:100%}
 
 /* Shared transactional sound selection. */
-.sound-picker-dialog{width:min(900px,94vw);max-height:85dvh;overflow:auto;border:0;border-radius:24px;padding:24px;background:var(--panel,#faf7f0);color:var(--ink,#403b44)}
+.sound-picker-dialog{position:fixed;inset:16px;margin:auto;width:min(900px,94vw);max-height:85dvh;overflow:auto;border:0;border-radius:24px;padding:24px;background:var(--panel,#faf7f0);color:var(--ink,#403b44)}
 .sound-picker-dialog::backdrop{background:#24203388}
 .sound-picker-dialog .sound-group[open]{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start}
 .sound-picker-dialog .sound-group>summary{flex-basis:100%}
@@ -133,7 +133,9 @@
 @supports selector(::-webkit-scrollbar){.app .settings,.app dialog{scrollbar-width:auto!important;scrollbar-color:auto!important}}
 
 /* Theme-defined frame material around the shared inset playing surface. */
-.app[data-theme] :is(.settings-frame.shared-settings-window,.overlay>div,.modal,dialog){position:relative;isolation:isolate;background:var(--ui-frame-texture),var(--ui-frame-fill)!important;border:2px solid var(--ui-frame-dark)!important;border-radius:30px!important;box-shadow:inset 0 2px 2px var(--ui-frame-glint),0 7px 0 var(--ui-frame-dark),0 12px 0 var(--ui-frame-shadow),0 24px 48px #172a4050!important}
+.app[data-theme] :is(.settings-frame.shared-settings-window,.overlay>div,.modal,dialog){isolation:isolate;background:var(--ui-frame-texture),var(--ui-frame-fill)!important;border:2px solid var(--ui-frame-dark)!important;border-radius:30px!important;box-shadow:inset 0 2px 2px var(--ui-frame-glint),0 7px 0 var(--ui-frame-dark),0 12px 0 var(--ui-frame-shadow),0 24px 48px #172a4050!important}
+.app[data-theme] :is(.settings-frame.shared-settings-window,.overlay>div,.modal){position:relative}
+.app[data-theme] dialog{position:fixed;inset:16px;margin:auto}
 .app[data-theme] :is(.shared-settings-window,.overlay>div,.modal,dialog)::before{content:'';position:absolute;inset:var(--ui-frame-inset);z-index:-1;pointer-events:none;background:var(--ui-surface-texture),var(--ui-setup-paper);border:1px solid var(--ui-inner-edge);border-radius:18px;box-shadow:0 -2px 2px var(--ui-inner-shadow),inset 0 2px 2px var(--ui-surface-glint)}
 .app .shared-settings-window :is(h2,h3,h4){font-family:Akt,Arial,sans-serif;font-weight:750;letter-spacing:-.025em;line-height:1.25}
 .app .settings-window-heading{padding:12px 14px 16px;margin-bottom:4px}.app .settings-window-heading h2{font-size:30px}.app .settings-window-heading span{font-size:14px}
@@ -1492,7 +1494,7 @@ display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
 }
 .app[data-theme] dialog.syllable-picker-dialog>.syllable-picker-scroll{
  display:flex!important;align-items:stretch!important;
- flex:1 1 auto;min-height:0;overflow-y:auto!important;
+ flex:1 1 auto;min-height:0;overflow-y:auto!important;overflow-x:hidden;
 }
 .app[data-theme] dialog.syllable-picker-dialog .syllable-picker-body{
  box-sizing:border-box;width:100%;

@@ -34,7 +34,7 @@ export function SyllableStructurePicker({filters,onChange,words=[]}:{filters:Fil
      const description=descriptions[n]||'Тип слоговой структуры '+n;
      const examples=words.filter(w=>w.type===n).slice(0,3).map(w=>w.label).join(', ');
      const selected=types.includes(n);
-     return <button type="button" key={n} className="syllable-type-option" aria-pressed={selected} aria-label={`Тип ${n}: ${description}`} onClick={()=>setTypes(v=>selected?v.filter(x=>x!==n):[...v,n])}>{n}<span className="syllable-type-tooltip" role="tooltip"><strong>Тип {n}</strong>{description}{examples&&<small>Например: {examples}</small>}</span></button>;
+     return <button type="button" key={n} className="syllable-type-option" aria-pressed={selected} aria-label={`Тип ${n}: ${description}`} onClick={()=>setTypes(v=>selected?v.filter(x=>x!==n):[...v,n])}>{n}<span className="syllable-type-tooltip" role="tooltip">{description}{examples&&<small>Например: {examples}</small>}</span></button>;
     })}</div>
     <button type="button" className="syllable-type-option syllable-untyped" aria-pressed={untyped} onClick={()=>setUntyped(v=>!v)}>Без категории</button>
    </div></div>
