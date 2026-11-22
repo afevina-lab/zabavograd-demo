@@ -9,7 +9,11 @@ const PAIRS=[
  ['en','cat'],['en','apple'],['en','dog'],['en','house'],
  ['fr','chat'],['fr','chien'],['fr','maison'],
  ['es','gato'],['es','perro'],['es','casa'],
- ['de','Katze'],['de','Hund'],['de','Haus']
+ ['de','Katze'],['de','Hund'],['de','Haus'],
+ ['en','cow'],['en','bird'],['en','horse'],['en','tree'],['en','bread'],['en','water'],['en','window'],['en','milk'],['en','banana'],
+ ['fr','vache'],['fr','pomme'],['fr','poire'],['fr','arbre'],['fr','table'],['fr','porte'],['fr','lait'],
+ ['es','vaca'],['es','manzana'],['es','mesa'],['es','árbol'],['es','libro'],['es','ventana'],['es','caballo'],
+ ['de','Kuh'],['de','Apfel'],['de','Baum'],['de','Tisch'],['de','Brot'],['de','Milch'],['de','Fenster'],['de','Wasser']
 ];
 const names={en:'English',fr:'French',es:'Spanish',de:'German'};
 function pageUrl(lang,word){
