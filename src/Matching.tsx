@@ -1,3 +1,4 @@
+import {playGameSound,useGameSoundOutcome,resetSoundCombo} from './design-system/game-audio.ts';
 import {SetupAddButton} from './design-system/SetupAddButton.tsx';
 import {SelectControl,selectIcon} from './design-system/SelectControl.tsx';
 import {MaterialSummary} from './design-system/MaterialSummary.tsx';
@@ -93,19 +94,20 @@ export function Matching(){
  const currentPage=Math.min(bankPage,pageCount-1);
  const visibleBank=remaining.slice(currentPage*boardLayout.bankPageSize,(currentPage+1)*boardLayout.bankPageSize);
  const boardVars={'--matching-columns':String(boardLayout.columns),'--matching-card-size':boardLayout.cardWidth+'px','--matching-caption-width':Math.max(162,boardLayout.cardWidth*1.55)+'px'} as CSSProperties;
- function start(){if(setupError||prepared.busy)return;enterGameViewport();const next=groups;limits.reset();setSession(next);setBank(shuffled(next.flatMap(g=>g.elements.slice(1))));setPlacements({});setVerdict({});setSelected(null);setBankPage(0);setFinished(false);setPaused(false);setMessage('');}
+ useGameSoundOutcome(limits.lost?'lose':finished?(Object.values(checkMatching(session,placements)).filter(Boolean).length>=bank.length*.3?'win':'lose'):null);
+ function start(){if(setupError||prepared.busy)return;resetSoundCombo();enterGameViewport();const next=groups;limits.reset();setSession(next);setBank(shuffled(next.flatMap(g=>g.elements.slice(1))));setPlacements({});setVerdict({});setSelected(null);setBankPage(0);setFinished(false);setPaused(false);setMessage('');}
  function place(id:string,groupId:string){
  if(paused||finished||limits.lost)return;
  const existing=placements[groupId]||[],g=session.find(g=>g.id===groupId);
  if(!g||existing.length>=g.elements.length-1||placed.has(id))return;
  const next={...placements,[groupId]:[...existing,id]},v=checkMatching(session,next);
- if(checkMode==='instant'&&!v[id]){limits.mistake();setMessage('Попробуй другую группу.');setVerdict({[id]:false});setSelected(null);return;}
- setPlacements(next);setVerdict({});setMessage('');setSelected(null);
+ if(checkMode==='instant'&&!v[id]){playGameSound('wrong');limits.mistake();setMessage('Попробуй другую группу.');setVerdict({[id]:false});setSelected(null);return;}
+ if(checkMode==='instant')playGameSound('match');setPlacements(next);setVerdict({});setMessage('');setSelected(null);
  if(checkMode==='instant'&&Object.values(next).flat().length===bank.length){setFinished(true);setMessage('Все элементы на своих местах!');}
  }
  function check(){
  if(!complete||paused||finished||limits.lost||Object.keys(verdict).length)return;const v=checkMatching(session,placements);setVerdict(v);
- const correct=Object.values(v).filter(Boolean).length;limits.mistake(bank.length-correct);setMessage('Верно: '+correct+' из '+bank.length+'.');
+ const correct=Object.values(v).filter(Boolean).length;playGameSound(correct===bank.length?'match':'wrong');limits.mistake(bank.length-correct);setMessage('Верно: '+correct+' из '+bank.length+'.');
  if(checkMode==='finish'||correct===bank.length)setFinished(true);
  }
  function retry(){setPlacements(p=>Object.fromEntries(Object.entries(p).map(([id,ids])=>[id,ids.filter(id=>verdict[id])])));setVerdict({});setMessage('Исправьте оставшиеся соответствия.');}

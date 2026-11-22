@@ -54,9 +54,9 @@ test('BASE_URL and audio are independent of game templates',()=>{
  assert.equal(assetUrl('/assets/image.webp','/'),'/assets/image.webp');
  assert.equal(asThemeId('forest'),'forest');
  assert.equal(asThemeId('unknown'),'space');
- assert.equal(soundFile('space','flip'),'flip-space.wav');
- assert.equal(soundFile('neutral','flip'),'flip.ogg');
- assert.equal(soundFile('forest','win'),'win.wav');
+ assert.equal(soundFile('space','flip'),'click-space.mp3');
+ assert.equal(soundFile('neutral','flip'),'click.mp3');
+ assert.equal(soundFile('forest','win'),'success.mp3');
  assert(MOTION.matchMs>=1500&&MOTION.resultMs>MOTION.matchMs&&MOTION.layoutMs>0);
 });
 

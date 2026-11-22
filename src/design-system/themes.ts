@@ -62,7 +62,7 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
   ...Array.from({length:7},(_,i)=>({id:'star-'+i,src:'assets/space/star.webp',motion:'twinkle' as const,width:'42px',left:(8+i*13)+'%',top:(15+(i*23)%70)+'%',opacity:.2,durationMs:14000,delayMs:i*2000}))
  ],effects:{stars:30,comets:2}
 },
-  cards:{kind:'watercolor',back:'assets/themes/space/back.webp',front:'assets/themes/space/front.webp'},sounds:{flip:'flip-space.wav',match:'match-space.wav'}
+  cards:{kind:'watercolor',back:'assets/themes/space/back.webp',front:'assets/themes/space/front.webp'},sounds:{}
  }
 };
 export const asThemeId=(x:unknown):ThemeId=>typeof x==='string'&&(THEME_IDS as readonly string[]).includes(x)?x as ThemeId:'space';
@@ -149,8 +149,7 @@ export function themeAttributes(id:ThemeId){
  return {'data-theme':id,'data-card-style':t.cards.kind,'data-scene-motion':t.scene.motion,'data-toolbar-art':t.toolbarArt?'illustrated':'kit'} as const;
 }
 export function soundFile(id:ThemeId,event:string):string{
- const special=THEMES[id].sounds[event as 'flip'|'match'];
- return special||(['click','wrong','win','deal'].includes(event)?event+'.wav':event+'.ogg');
+ return event==='match'?'combo-1.mp3':event==='wrong'?'wrong.mp3':event==='win'?'success.mp3':event==='lose'?'failure.mp3':id==='space'?'click-space.mp3':'click.mp3';
 }
 
 /** Scene art and presentation stay outside the game rules. All layers share a canvas. */

@@ -1,3 +1,4 @@
+import {playGameSound,useGameSoundOutcome,setGameSound} from './design-system/game-audio.ts';
 import {GameDialog} from './design-system/GameDialog.tsx';
 import {SelectControl} from './design-system/SelectControl.tsx';
 import {SettingsWindow} from './design-system/SettingsWindow.tsx';
@@ -15,7 +16,7 @@ import {GameToolbar} from './GameToolbar.tsx';
 import {sortingLayout} from './board-layout.ts';
 import {useLibrary} from './useLibrary.ts';
 import {useCardMotion} from './useCardMotion.ts';
-import {soundFile,themeAttributes,themeVars} from './design-system/themes.ts';
+import {themeAttributes,themeVars} from './design-system/themes.ts';
 import {useTheme} from './design-system/useTheme.ts';
 import {CardArtwork} from './CardArtwork.tsx';
 import {MOTION} from './design-system/motion.ts';
@@ -51,6 +52,8 @@ export function Sorting(){
  const root=useRef<HTMLDivElement>(null),tray=useRef<HTMLDivElement>(null),undo=useRef<number|null>(null);
  useCardMotion(root,'[data-motion-id]',drag.suppressClick);
 
+ useEffect(()=>setGameSound(sound),[sound]);
+ useGameSoundOutcome(result?(stars>0?'win':'lose'):null);
  const clock=useElapsedTime(running&&!result,paused||checking||confirm);
  useEffect(()=>{if(!running||paused||result||checking||!timed)return;const t=setInterval(()=>setRemaining(v=>Math.max(0,v-1)),1000);return()=>clearInterval(t)},[running,paused,result,timed,checking]);
  useEffect(()=>{if(running&&!result&&((timed&&remaining===0)||(withLives&&lives===0)))setResult(timed&&remaining===0?'Время закончилось':'Жизни закончились')},[remaining,lives,running,result,timed,withLives]);
@@ -64,9 +67,9 @@ export function Sorting(){
  function applyManual(){
   try{const picked=makeSorting(pools.map(p=>p.filter(w=>chosen.includes(w.id))),groups.map(g=>g.count));setPreviewOverride({source:preparation,items:picked});window.dispatchEvent(new CustomEvent('zg:manual-word-selection',{detail:{ids:chosen}}));setPicker(false);setError('');}catch(e){setError((e as Error).message)}
  }
- function audio(name:string){if(sound){const a=new Audio(import.meta.env.BASE_URL+'assets/audio/'+soundFile(theme,name));a.volume=.3;void a.play().catch(()=>{})}}
+ function audio(name:string){playGameSound(name,theme,sound)}
  function start(){if(preparation.error)return;clock.reset();enterGameViewport();setItems(previewItems);setStars(0);setScore('');setVerdict({});setChecking(false);setPlacements({});setSelected(null);setWrong([]);setResult('');setPaused(false);setRemaining(seconds);setLives(lifeCount);undo.current=null;setRunning(true);audio('deal')}
- function place(id:string,g:number){if(paused||result||checking)return;const item=items.find(i=>i.word.id===id);if(!item)return;if(instant&&!item.accepted.includes(g)){if(withLives&&automaticLives(lifeMode)){undo.current=lives;setLives(spendLives(lives));}setWrong([id]);setSelected(null);audio('wrong');setTimeout(()=>setWrong([]),MOTION.sortRetryMs);return;}const next={...placements,[id]:g};setPlacements(next);setSelected(null);audio('click');if(instant&&items.every(i=>next[i.word.id]!==undefined)){setStars(3);setResult('Все карточки на своих местах!');audio('win')}}
+ function place(id:string,g:number){if(paused||result||checking)return;const item=items.find(i=>i.word.id===id);if(!item)return;if(instant&&!item.accepted.includes(g)){if(withLives&&automaticLives(lifeMode)){undo.current=lives;setLives(spendLives(lives));}setWrong([id]);setSelected(null);audio('wrong');setTimeout(()=>setWrong([]),MOTION.sortRetryMs);return;}const next={...placements,[id]:g};setPlacements(next);setSelected(null);audio(instant?'match':'click');if(instant&&items.every(i=>next[i.word.id]!==undefined)){setStars(3);setResult('Все карточки на своих местах!');}}
  function check(){
  if(checking||paused||result||items.some(i=>placements[i.word.id]===undefined))return;
   setChecking(true);setVerdict({});setSelected(null);
@@ -74,9 +77,9 @@ export function Sorting(){
   const ordered=groups.flatMap((_,g)=>items.filter(item=>placements[item.word.id]===g));
   let index=0;
   const reveal=()=>{
-   if(index<ordered.length){const item=ordered[index++],ok=!bad.includes(item);setVerdict(v=>({...v,[item.word.id]:ok}));root.current?.querySelector(`[data-motion-id="${CSS.escape(item.word.id)}"]`)?.scrollIntoView({block:'nearest',behavior:'smooth'});audio(ok?'click':'wrong');checkTimer.current=setTimeout(reveal,MOTION.sortVerdictMs);return;}
+   if(index<ordered.length){const item=ordered[index++],ok=!bad.includes(item);setVerdict(v=>({...v,[item.word.id]:ok}));root.current?.querySelector(`[data-motion-id="${CSS.escape(item.word.id)}"]`)?.scrollIntoView({block:'nearest',behavior:'smooth'});audio(ok?'match':'wrong');checkTimer.current=setTimeout(reveal,MOTION.sortVerdictMs);return;}
 
-   if(checkingMode==='finish'||!bad.length){setChecking(false);setStars(starsForScore(items.length-bad.length,items.length));setScore('Верно: '+(items.length-bad.length)+' из '+items.length);setResult(bad.length?'Игра завершена':'Все карточки на своих местах!');audio('win');}
+   if(checkingMode==='finish'||!bad.length){setChecking(false);setStars(starsForScore(items.length-bad.length,items.length));setScore('Верно: '+(items.length-bad.length)+' из '+items.length);setResult(bad.length?'Игра завершена':'Все карточки на своих местах!');}
    else{setWrong(bad.map(i=>i.word.id));checkTimer.current=setTimeout(()=>{setPlacements(p=>Object.fromEntries(Object.entries(p).filter(([id])=>!bad.some(i=>i.word.id===id))));setWrong([]);setVerdict({});setChecking(false);},MOTION.sortRetryMs);}
   };reveal();
  }

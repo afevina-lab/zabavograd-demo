@@ -1,3 +1,4 @@
+import {playGameSound,useGameSoundOutcome,setGameSound,resetSoundCombo} from './design-system/game-audio.ts';
 import {SelectControl,selectIcon} from './design-system/SelectControl.tsx';
 import {MaterialSummary} from './design-system/MaterialSummary.tsx';
 import {SettingsWindow} from './design-system/SettingsWindow.tsx';
@@ -18,7 +19,7 @@ import {contentKinds,generateCombinations,materialCandidates} from './reading.ts
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {useLibrary} from './useLibrary.ts';
 import {useTheme} from './design-system/useTheme.ts';
-import {themeAttributes,themeVars,soundFile} from './design-system/themes.ts';
+import {themeAttributes,themeVars} from './design-system/themes.ts';
 import {Scenery,ThemePicker,Icon,ScoreStars} from './GameUI.tsx';
 import {MaterialSettings} from './MaterialSettings.tsx';
 import {CardArtwork} from './CardArtwork.tsx';
@@ -70,13 +71,15 @@ export function Conveyor(){
    return {deck:next,error:''};
   }catch(e){return {deck:[],error:e instanceof Error?e.message:'Не удалось подобрать карточки.'}}
  },[legal,material,condition,count,max,learning,positives,negatives,words,shuffleKey,manualIds,mathKind,add,subtract,multiply,divide,includeZero]);
- function start(){if(preparation.error)return;enterGameViewport();limits.reset();setDeck(preparation.deck);setState(startConveyor(preparation.deck));setPaused(false);setMessage('');}
+ useEffect(()=>setGameSound(sound),[sound]);
+ useGameSoundOutcome(limits.lost?'lose':state?.finished?(starsForScore(state.correct,deck.length)>0?'win':'lose'):null);
+ function start(){if(preparation.error)return;resetSoundCombo();enterGameViewport();limits.reset();setDeck(preparation.deck);setState(startConveyor(preparation.deck));setPaused(false);setMessage('');}
  useEffect(()=>{
   if(!state||state.finished||paused||limits.lost)return;
   let frame=0,last=0;const move=(now:number)=>{const elapsed=last?(now-last)/1000:0;if(last)setState(s=>s?stepConveyor(s,deck,level,elapsed,condition!=='none'):s);last=now;frame=requestAnimationFrame(move)};frame=requestAnimationFrame(move);return()=>cancelAnimationFrame(frame);
  },[Boolean(state),state?.finished,paused,deck,level,condition,limits.lost]);
  useEffect(()=>{const handler=()=>{if(document.hidden)setPaused(true)};document.addEventListener('visibilitychange',handler);return()=>document.removeEventListener('visibilitychange',handler)},[]);
- function answer(yes:boolean){const current=latest.current;if(!current||paused||current.finished||limits.lost)return;const active=conveyorTarget(current);if(!active)return;const correct=condition==='none'?yes:yes===active.card.expected;if(!correct)limits.mistake();const next=answerConveyor(current,yes,condition!=='none',MOTION.conveyorFeedbackMs/1000);latest.current=next;setState(next);if(sound){const audio=new Audio(import.meta.env.BASE_URL+'assets/audio/'+soundFile(theme,correct?'match':'wrong'));audio.volume=.35;void audio.play().catch(()=>{})};}
+ function answer(yes:boolean){const current=latest.current;if(!current||paused||current.finished||limits.lost)return;const active=conveyorTarget(current);if(!active)return;const correct=condition==='none'?yes:yes===active.card.expected;if(!correct)limits.mistake();const next=answerConveyor(current,yes,condition!=='none',MOTION.conveyorFeedbackMs/1000);latest.current=next;setState(next);playGameSound(correct?'match':'wrong',theme,sound);}
  useEffect(()=>{const handler=(e:KeyboardEvent)=>{if((e.target as HTMLElement).closest('input,select,textarea,button')||e.repeat)return;if(e.key==='ArrowRight'){e.preventDefault();answer(true)}if(e.key==='ArrowLeft'){e.preventDefault();answer(false)}};window.addEventListener('keydown',handler);return()=>window.removeEventListener('keydown',handler)});
  const active=state?conveyorTarget(state):undefined;
  useGameViewport(!!state);
