@@ -27,15 +27,24 @@ export function ReadingSettings({l,setL,words,textDisplayProvided=false}:{l:Lear
   <div className="panel-scroll">
    <h2>Выберите буквы</h2>
    <section className="letter-picker-section"><h3>Доступные буквы · {draftAvailable.length} из 33</h3>
-    <label className="check"><input type="checkbox" checked={draftAvailable.length===33} onChange={e=>{setDraftAvailable(e.target.checked?[...alphabet]:[]);if(!e.target.checked)setDraftRequired([])}}/>Все буквы</label>
-    {Object.entries({'Гласные':vowels,'Согласные':consonants,'Знаки':['ь','ъ']}).map(([group,letters])=><details className="letter-group" key={group} open><summary>{group}</summary>
-     <label className="check"><input type="checkbox" checked={letters.every(c=>draftAvailable.includes(c))} onChange={e=>{setDraftAvailable(current=>e.target.checked?[...new Set([...current,...letters])]:current.filter(c=>!letters.includes(c)));if(!e.target.checked)setDraftRequired(current=>current.filter(c=>!letters.includes(c)))}}/>Выбрать всё</label>
-     <div className="letter-grid">{letters.map(c=><label key={c} className="letter-choice"><input type="checkbox" checked={draftAvailable.includes(c)} onChange={e=>{setDraftAvailable(current=>toggle(current,c,e.target.checked));if(!e.target.checked)setDraftRequired(current=>current.filter(x=>x!==c))}}/>{c.toUpperCase()}</label>)}</div>
+    <label className="check letter-select-all"><input type="checkbox" checked={draftAvailable.length===alphabet.length} onChange={e=>{setDraftAvailable(e.target.checked?[...alphabet]:[]);if(!e.target.checked)setDraftRequired([])}}/>Выбрать всё</label>
+    {Object.entries({'Гласные':vowels,'Согласные':consonants,'Знаки':['ь','ъ']}).map(([group,letters])=><details className="settings-disclosure letter-group" key={group} open>
+     <summary><span>{group}</span><ControlWell/></summary>
+     <div className="letter-group-content">
+      <label className="check letter-select-all"><input type="checkbox" checked={letters.every(c=>draftAvailable.includes(c))} onChange={e=>{setDraftAvailable(current=>e.target.checked?[...new Set([...current,...letters])]:current.filter(c=>!letters.includes(c)));if(!e.target.checked)setDraftRequired(current=>current.filter(c=>!letters.includes(c)))}}/>Выбрать всё</label>
+      <div className="letter-grid">{letters.map(c=><button type="button" key={c} className="letter-choice" aria-pressed={draftAvailable.includes(c)} onClick={()=>{const selected=!draftAvailable.includes(c);setDraftAvailable(current=>toggle(current,c,selected));if(!selected)setDraftRequired(current=>current.filter(x=>x!==c))}}>{c.toUpperCase()}</button>)}</div>
+     </div>
     </details>)}
    </section>
    <section className="letter-picker-section"><h3>Обязательные буквы · {draftRequired.length||'не выбраны'}</h3>
-    <p className="hint">В слове или сочетании должны присутствовать все отмеченные буквы.</p>
-    <div className="letter-grid">{alphabet.filter(c=>draftAvailable.includes(c)).map(c=><label className="letter-choice" key={c}><input type="checkbox" checked={draftRequired.includes(c)} onChange={e=>setDraftRequired(current=>toggle(current,c,e.target.checked))}/>{c.toUpperCase()}</label>)}</div>
+    <p className="hint">В каждом слове должны быть все отмеченные буквы.</p>
+    <details className="settings-disclosure letter-group" open>
+     <summary><span>Выберите обязательные буквы</span><ControlWell/></summary>
+     <div className="letter-group-content">
+      <label className="check letter-select-all"><input type="checkbox" checked={draftAvailable.length>0&&draftAvailable.every(c=>draftRequired.includes(c))} onChange={e=>setDraftRequired(e.target.checked?[...draftAvailable]:[])}/>Выбрать всё</label>
+      <div className="letter-grid">{alphabet.filter(c=>draftAvailable.includes(c)).map(c=><button type="button" className="letter-choice" aria-pressed={draftRequired.includes(c)} key={c} onClick={()=>setDraftRequired(current=>toggle(current,c,!current.includes(c)))}>{c.toUpperCase()}</button>)}</div>
+     </div>
+    </details>
    </section>
   </div>
   <div className="sound-picker-actions"><button type="button" className="primary" onClick={saveLetters}>Готово</button><button type="button" className="secondary" onClick={closeLetters}>Отмена</button></div>
