@@ -998,3 +998,71 @@
 .app[data-theme] dialog.saved-words-dialog .saved-words-list{display:grid;gap:6px;overflow-y:auto;max-height:36vh;min-height:80px;padding:8px 4px}
 .app[data-theme] dialog.saved-words-dialog .saved-words-list .check{min-height:30px}
 .app[data-theme] dialog.saved-words-dialog .saved-words-list small{opacity:.65}
+
+
+/* 2026-11-22: balanced geometry for setup controls, sorting groups and play header.
+   These are shared layout corrections; themes still only provide presentation. */
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer{
+ padding-block:10px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer>.setup-preview{
+ align-self:center;
+}
+.app[data-theme] .settings-frame.shared-settings-window .settings-block>label.check,
+.app[data-theme] .settings-frame.shared-settings-window .setup-dependent-field>label.check,
+.app[data-theme] .settings-frame.shared-settings-window .setup-presentation-options>label.check{
+ min-height:34px;
+ padding-block:3px!important;
+ margin-block:0!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .settings-block>label.check:has(input[role=switch]){
+ gap:8px;
+}
+.app[data-theme] .settings-frame.shared-settings-window .sort-group-settings{
+ gap:12px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .sort-group-settings>.settings-block{
+ box-sizing:border-box;display:flex!important;flex-direction:column;
+ gap:12px!important;
+ padding:12px!important;
+ margin:0!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .sort-group-settings .group-title-edit{
+ min-height:44px;align-items:center;gap:12px;
+}
+.app[data-theme] .settings-frame.shared-settings-window .sort-group-settings .group-title-edit .icon-button{
+ flex:none;margin:0!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .sort-group-settings .quantity-slider{
+ margin:0!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .sort-group-settings .settings-disclosure{
+ margin:0!important;
+}
+.app.game-active .play-toolbar.shared-toolbar{
+ --zg-toolbar-icon-width:46px;
+ --zg-toolbar-icon-height:46px;
+ --zg-toolbar-icon-min-height:46px;
+ --zg-toolbar-icon-padding:7px;
+ min-height:66px!important;
+ padding-block:10px!important;
+ align-items:center!important;
+}
+.app.game-active .play-toolbar.shared-toolbar .icon-button{
+ width:var(--zg-toolbar-icon-width)!important;
+ height:var(--zg-toolbar-icon-height)!important;
+ min-height:var(--zg-toolbar-icon-min-height)!important;
+ padding:var(--zg-toolbar-icon-padding)!important;
+ margin-block:0!important;
+}
+@media(max-width:600px){
+ .app.game-active .play-toolbar.shared-toolbar{
+  --zg-toolbar-icon-width:38px;
+  --zg-toolbar-icon-height:38px;
+  --zg-toolbar-icon-min-height:38px;
+  --zg-toolbar-icon-padding:6px;
+  min-height:54px!important;
+  padding-block:8px!important;
+ }
+ .app[data-theme] .settings-frame.shared-settings-window>.setup-footer{padding-block:7px!important}
+}
