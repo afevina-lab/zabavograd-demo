@@ -751,6 +751,7 @@
    All five games inherit these exact rules from SettingsWindow, not local game CSS. */
 .app[data-theme] .settings-frame.shared-settings-window{
  --zg-setup-gap:8px;
+ --zg-setup-section-gap:12px;
  --zg-setup-control-height:52px;
  --zg-setup-rail-width:190px;
 }
@@ -770,14 +771,18 @@
  gap:var(--zg-setup-gap)!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window .setup-column{
- gap:var(--zg-setup-gap)!important;
+ gap:var(--zg-setup-section-gap)!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window .setup-column>.settings-block,
+.app[data-theme] .settings-frame.shared-settings-window .setup-section-fieldset>.settings-block{
+ box-sizing:border-box;display:flex!important;flex-direction:column;
+ gap:var(--zg-setup-gap)!important;padding:0!important;margin:0!important;min-width:0;
+}
 .app[data-theme] .settings-frame.shared-settings-window .setup-section-fieldset{
- padding:6px 8px!important;margin:0!important;
+ padding:0!important;margin:0!important;min-width:0;
 }
 .app[data-theme] .settings-frame.shared-settings-window .settings-block :is(h2,h3){
- font-size:18px!important;line-height:1.2;margin:0 0 6px!important;
+ font-size:18px!important;line-height:1.2;margin:0!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window .settings-block label:not(.check){
  margin-block:0!important;
@@ -790,11 +795,26 @@
 }
 .app[data-theme] .settings-frame.shared-settings-window .settings :is(.category-picker-trigger,.settings-disclosure>summary){
  min-height:var(--zg-setup-control-height)!important;
- margin:0 0 var(--zg-space-1,4px)!important;
+ margin:0!important;
  padding-block:5px!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window .settings .setup-add-rule{
  min-height:var(--zg-setup-control-height)!important;
+}
+/* One inner rhythm for lesson fields, regardless of the selected game. */
+.app[data-theme] .settings-frame.shared-settings-window .setup-material-fields,
+.app[data-theme] .settings-frame.shared-settings-window .setup-dependent-field{
+ display:flex;flex-direction:column;gap:var(--zg-setup-gap)!important;
+ min-width:0;box-sizing:border-box;
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-material-fields > *,
+.app[data-theme] .settings-frame.shared-settings-window .setup-dependent-field > *,
+.app[data-theme] .settings-frame.shared-settings-window .setup-column>.settings-block > *,
+.app[data-theme] .settings-frame.shared-settings-window .setup-section-fieldset>.settings-block > *{
+ margin-top:0!important;margin-bottom:0!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-column .sort-group-settings{
+ margin:0!important;gap:var(--zg-setup-gap)!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window .settings :is(.settings-disclosure-body,.advanced-material){
  margin-block:var(--zg-space-1,4px)!important;
@@ -807,18 +827,18 @@
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer{
  box-sizing:border-box;display:grid!important;flex:0 0 auto;
  grid-template-columns:minmax(0,1.15fr) minmax(220px,.85fr)!important;
- grid-template-rows:auto min-content!important;
+ grid-template-rows:minmax(0,1fr)!important;
  align-items:center!important;gap:0 var(--zg-setup-gap)!important;
- width:100%;height:auto!important;min-height:0!important;max-height:80px;
- margin:0!important;padding:5px 8px!important;
+ width:100%;height:auto!important;min-height:0!important;max-height:82px;
+ margin:0!important;padding:8px 10px 11px!important;
  overflow:hidden;
  background:var(--ui-setup-paper)!important;
  border-top:1px solid var(--ui-surface-edge)!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>.setup-material-preview{
- grid-column:1!important;grid-row:1/span 2!important;
- align-self:start;min-height:0;max-height:64px!important;
- margin:0!important;padding:0!important;overflow:hidden;
+ grid-column:1!important;grid-row:1!important;
+ align-self:center;min-height:0;max-height:64px!important;
+ margin:0!important;padding:0!important;overflow:visible;
 }
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .material-head{
  min-height:36px!important;max-height:38px!important;margin:0!important;
@@ -966,7 +986,7 @@
 }
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-preview-meta{
  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
- min-width:0;gap:var(--zg-space-1,4px);overflow:hidden;
+ min-width:0;gap:var(--zg-space-1,4px);overflow:visible;
 }
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-preview-meta h2{
  display:block;font-size:17px!important;font-weight:750;
@@ -980,8 +1000,8 @@
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-preview-actions .icon-button{
  display:inline-flex;flex:0 0 auto;
  align-items:center;justify-content:center;
- width:34px!important;min-width:34px!important;
- height:34px!important;min-height:34px!important;
+ width:32px!important;min-width:32px!important;
+ height:32px!important;min-height:32px!important;
  margin:0!important;padding:5px!important;
  border-radius:var(--zg-control-radius,12px)!important;
 }
