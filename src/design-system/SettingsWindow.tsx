@@ -95,7 +95,7 @@ export function SettingsWindow({game,children}:{game:string;children:ReactNode})
    <label>Название набора<input value={saveName} maxLength={80} placeholder="Например, З — начало слова" autoFocus onChange={e=>setSaveName(e.target.value)}/></label>
    {candidates.length>1&&<label>Учебный материал<select value={saveSource} onChange={e=>setSaveSource(Number(e.target.value))}>{candidates.map((src,i)=><option key={i} value={i}>{src.label} · {i+1}</option>)}</select></label>}
    <p>Будут сохранены параметры отбора и выбранные вручную слова, если они есть. Наборы хранятся только в этом браузере; при очистке данных сайта они могут исчезнуть. Не указывайте личные данные детей.</p>
-   {manualWordIds?.length>0&&<p>Сохранится вручную выбранных слов: {manualWordIds.length}.</p>}
+   {manualWordIds&&manualWordIds.length>0&&<p>Сохранится вручную выбранных слов: {manualWordIds.length}.</p>}
    {saveError&&<p role="alert">{saveError}</p>}
   </div>
   <div className="sound-picker-actions"><button className="primary" type="button" onClick={saveNow}>Сохранить</button><button className="secondary" type="button" onClick={closeSave}>Отмена</button></div>
