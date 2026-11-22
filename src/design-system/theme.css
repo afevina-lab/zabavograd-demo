@@ -178,7 +178,7 @@
 }
 .app[data-theme] .overlay .award{position:absolute;top:-34px;left:0;right:0;z-index:2;overflow:visible}
 .app[data-theme] .award,.app[data-theme] .victory-stars{overflow:visible}
-.app[data-theme] .modal-backdrop,.app[data-theme] .settings-shade{background:#14233883!important}
+.app[data-theme] .modal-backdrop{background:#14233883!important}
 @media(max-width:600px){
  .app[data-theme] .play-toolbar .zg-home,.app[data-theme] .play-toolbar .zg-caption-toggle{min-width:32px!important;width:32px!important}
  .app[data-theme] .overlay .award{top:-24px}
