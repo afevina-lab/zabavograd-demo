@@ -549,3 +549,12 @@ test('Sorting has one editable group heading and one presentation caption per fi
  assert.match(sorting,/<h3>Показ карточек<\/h3><GameSelect hideLabel label="Карточки"/);
  assert.match(css,/\.sort-group-settings \.group-title-edit strong\{font-size:16px/);
 });
+
+
+test('No obsolete six-row or one-column footer fallback competes with canonical layout',()=>{
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ assert.doesNotMatch(css,/grid-row:1\/span 6/);
+ assert.doesNotMatch(css,/\.app \.shared-settings-window \.setup-footer\{grid-template-columns:minmax\(0,1fr\)!important\}/);
+ assert.doesNotMatch(css,/\.app \.shared-settings-window \.setup-footer>\.setup-material-preview\{/);
+ assert.match(css,/\.settings-frame\.shared-settings-window>\.setup-footer\{[^}]*grid-template-rows:minmax\(0,1fr\)!important/);
+});
