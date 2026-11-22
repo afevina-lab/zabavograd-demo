@@ -6468,8 +6468,8 @@
       "source_type": "editorial_translation_proposal_not_external_import",
       "translations": {
         "en": "furniture",
-        "fr": "meuble",
-        "es": "mueble",
+        "fr": "mobilier",
+        "es": "mobiliario",
         "de": "Möbel"
       },
       "notes": "English furniture, French vaisselle-like? French meuble and Spanish mueble are singular items; German Möbel often plural/collective. Do not infer exact singular-plural equivalence.",
@@ -6489,28 +6489,24 @@
         "fr": {
           "part_of_speech": "noun",
           "grammatical_gender": "m",
-          "indefinite_article_form": "un meuble",
-          "plural_form": "meubles",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
           "morphology_status": "partial",
-          "citation_form": "meuble",
-          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+          "citation_form": "le mobilier",
+          "usage_note": "Mobilier is a collective/mass noun; meuble means one piece of furniture. No ordinary plural should be assigned."
         },
         "es": {
           "part_of_speech": "noun",
           "grammatical_gender": "m",
-          "indefinite_article_form": "un mueble",
-          "plural_form": "muebles",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
           "morphology_status": "partial",
-          "citation_form": "mueble",
-          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+          "citation_form": "el mobiliario",
+          "usage_note": "Mobiliario is collective; mueble denotes an individual piece. No ordinary plural should be assigned."
         },
         "de": {
           "part_of_speech": "noun",
@@ -6608,7 +6604,7 @@
         "es": "tarro",
         "de": "Einmachglas"
       },
-      "notes": null,
+      "notes": "Glass jar assumed; may mean tin/can or glass jar. Verify illustration. French bocal and German Einmachglas denote jars.",
       "language_details": {
         "en": {
           "part_of_speech": "noun",
@@ -6734,7 +6730,7 @@
         "es": "candado",
         "de": "Schloss"
       },
-      "notes": "Assumed padlock based on household context, but Russian sense 'замок' lacks a precise gloss; might mean door lock or castle. Verify image before approval.",
+      "notes": "Unresolved Russian sense: could mean lock, padlock, or castle. Tentative padlock-type translations MUST NOT be approved before image inspection.",
       "language_details": {
         "en": {
           "part_of_speech": "noun",
@@ -10268,7 +10264,7 @@
         "en": "toy block",
         "fr": "cube de construction",
         "es": "cubo de juguete",
-        "de": "Spielwürfel"
+        "de": "Baustein"
       },
       "notes": "Toy construction block, not generic geometric cube or gaming die. German Spielwürfel may suggest die; check image before approval.",
       "language_details": {
@@ -10311,9 +10307,9 @@
         "de": {
           "part_of_speech": "noun",
           "grammatical_gender": "m",
-          "citation_form": "Spielwürfel",
-          "usage_note": "Regional usage, countability, singular/plural alignment or sense needs review.",
-          "plural_form": "Spielwürfel",
+          "citation_form": "der Baustein",
+          "usage_note": "Toy construction block; not Spielwürfel (gaming die). Verify specific image.",
+          "plural_form": "Bausteine",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
           "pronunciations": [],
