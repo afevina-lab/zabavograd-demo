@@ -541,6 +541,7 @@
  margin:var(--zg-space-3,12px) 0;
 }
 .app .shared-settings-window .setup-column .sort-group-settings>.settings-block{min-width:0}
+.app .shared-settings-window .sort-group-settings .group-title-edit strong{font-size:16px;font-weight:700;line-height:1.25}
 
 
 /* The lexical picker owns one scroll surface; its actions never cover tree rows. */
