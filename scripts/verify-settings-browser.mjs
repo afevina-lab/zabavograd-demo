@@ -76,6 +76,10 @@ if(width>=1180&&height>=560){
 if(game==='sorting'){
  const appearanceSplit=await evaluate("(()=>({railHasPresentation:!!document.querySelector('.setup-theme-rail .card-presentation'),bodyHasPresentation:!!document.querySelector('.unified-settings-content .setup-presentation-options .card-presentation'),railThemeCount:document.querySelectorAll('.setup-theme-rail .themes button').length}))()");
  assert(!appearanceSplit.railHasPresentation&&appearanceSplit.bodyHasPresentation&&appearanceSplit.railThemeCount>=3,'Non-theme presentation controls leaked into theme rail: '+width+' '+JSON.stringify(appearanceSplit));
+
+ const headings=await evaluate("(()=>{const groups=[...document.querySelectorAll('.sort-group-settings>.settings-block')],presentation=document.querySelector('.setup-presentation-options .card-presentation'),picker=presentation?.querySelector('.game-choice'),label=picker?.querySelector('.field-label');return {singleGroupTitles:groups.length>=2&&groups.every(g=>g.querySelector('.group-title-edit strong')&&!g.querySelector('h3')),oneVisiblePresentationLabel:!!presentation?.querySelector('h3')&&!!label&&getComputedStyle(label).display==='none'}})()");
+ assert(headings.singleGroupTitles&&headings.oneVisiblePresentationLabel,'Sorting repeats a group or card-type heading: '+width+' '+JSON.stringify(headings));
+
 }
 
 
