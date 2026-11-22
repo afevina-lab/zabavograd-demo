@@ -316,9 +316,34 @@
           "plural_form": "poires",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/pwaʁ/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/French/meaning/p/po/poire.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/French/meaning/p/po/poire.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "poire",
+              "plural_forms": [
+                "poires"
+              ],
+              "ipa_candidates": [
+                "/pwaʁ/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "es": {
           "part_of_speech": "noun",
@@ -817,9 +842,36 @@
           "plural_form": "cows",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/kaʊ/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/English/meaning/c/co/cow.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/English/meaning/c/co/cow.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "cow",
+              "plural_forms": [
+                "cows",
+                "cattle"
+              ],
+              "ipa_candidates": [
+                "/kaʊ/",
+                "[kʰæʊː]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "fr": {
           "part_of_speech": "noun",
@@ -828,9 +880,34 @@
           "plural_form": "vaches",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/vaʃ/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/French/meaning/v/va/vache.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/French/meaning/v/va/vache.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "vache",
+              "plural_forms": [
+                "vaches"
+              ],
+              "ipa_candidates": [
+                "/vaʃ/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "es": {
           "part_of_speech": "noun",
@@ -839,9 +916,35 @@
           "plural_form": "vacas",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/ˈbaka/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/Spanish/meaning/v/va/vaca.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/Spanish/meaning/v/va/vaca.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "vaca",
+              "plural_forms": [
+                "vacas"
+              ],
+              "ipa_candidates": [
+                "/ˈbaka/",
+                "[ˈba.ka]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "de": {
           "part_of_speech": "noun",
@@ -850,9 +953,35 @@
           "plural_form": "Kühe",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/kuː/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/German/meaning/K/Ku/Kuh.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/German/meaning/K/Ku/Kuh.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "Kuh",
+              "plural_forms": [
+                "Kühe",
+                "Kühen"
+              ],
+              "ipa_candidates": [
+                "/kuː/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         }
       }
     },
@@ -3023,7 +3152,7 @@
               "source_url": "https://kaikki.org/dictionary/English/meaning/a/ap/apple.html",
               "source_type": "Kaikki/Wiktionary JSONL live word-page",
               "retrieved_at": "2026-11-22",
-              "license": "Wiktionary-derived; per-edition license review required",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
               "part_of_speech": "noun",
               "lemma": "apple",
               "plural_forms": [
@@ -3041,35 +3170,113 @@
         "fr": {
           "part_of_speech": "noun",
           "feature_review_status": "suggested",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
+          "pronunciations": [
+            {
+              "ipa": "/pɔm/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/French/meaning/p/po/pomme.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
           "morphology_status": "suggested",
           "grammatical_gender": "f",
           "indefinite_article_form": "une pomme",
           "plural_form": "pommes",
-          "feature_source": "editorial_candidate_requires_dictionary_verification"
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/French/meaning/p/po/pomme.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "pomme",
+              "plural_forms": [
+                "pommes"
+              ],
+              "ipa_candidates": [
+                "/pɔm/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "es": {
           "part_of_speech": "noun",
           "feature_review_status": "suggested",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
+          "pronunciations": [
+            {
+              "ipa": "/manˈθana/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/Spanish/meaning/m/ma/manzana.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
           "morphology_status": "suggested",
           "grammatical_gender": "f",
           "indefinite_article_form": "una manzana",
           "plural_form": "manzanas",
-          "feature_source": "editorial_candidate_requires_dictionary_verification"
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/Spanish/meaning/m/ma/manzana.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "manzana",
+              "plural_forms": [
+                "manzanas"
+              ],
+              "ipa_candidates": [
+                "/manˈθana/",
+                "[mãn̟ˈθa.na]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "de": {
           "part_of_speech": "noun",
           "feature_review_status": "suggested",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
+          "pronunciations": [
+            {
+              "ipa": "/ˈapfəl/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/German/meaning/A/Ap/Apfel.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
           "morphology_status": "suggested",
           "grammatical_gender": "m",
           "indefinite_article_form": "der Apfel",
           "plural_form": "Äpfel",
-          "feature_source": "editorial_candidate_requires_dictionary_verification"
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/German/meaning/A/Ap/Apfel.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "Apfel",
+              "plural_forms": [
+                "Äpfel",
+                "Äpfeln"
+              ],
+              "ipa_candidates": [
+                "/ˈapfəl/",
+                "[ˈʔapfəl]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         }
       }
     },
@@ -3094,13 +3301,39 @@
         "en": {
           "part_of_speech": "noun",
           "feature_review_status": "suggested",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
+          "pronunciations": [
+            {
+              "ipa": "/bəˈnɑːnə/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/English/meaning/b/ba/banana.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
           "morphology_status": "suggested",
           "grammatical_gender": null,
           "indefinite_article_form": "a banana",
           "plural_form": "bananas",
-          "feature_source": "editorial_candidate_requires_dictionary_verification"
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/English/meaning/b/ba/banana.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "banana",
+              "plural_forms": [
+                "bananas"
+              ],
+              "ipa_candidates": [
+                "/bəˈnɑːnə/",
+                "/bəˈnænə/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "fr": {
           "part_of_speech": "noun",
@@ -4401,7 +4634,7 @@
               "source_url": "https://kaikki.org/dictionary/French/meaning/c/ch/chat.html",
               "source_type": "Kaikki/Wiktionary JSONL live word-page",
               "retrieved_at": "2026-11-22",
-              "license": "Wiktionary-derived; per-edition license review required",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
               "part_of_speech": "noun",
               "lemma": "chat",
               "plural_forms": [
@@ -4444,7 +4677,7 @@
               "source_url": "https://kaikki.org/dictionary/Spanish/meaning/g/ga/gato.html",
               "source_type": "Kaikki/Wiktionary JSONL live word-page",
               "retrieved_at": "2026-11-22",
-              "license": "Wiktionary-derived; per-edition license review required",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
               "part_of_speech": "noun",
               "lemma": "gato",
               "plural_forms": [
@@ -4482,7 +4715,7 @@
               "source_url": "https://kaikki.org/dictionary/German/meaning/K/Ka/Katze.html",
               "source_type": "Kaikki/Wiktionary JSONL live word-page",
               "retrieved_at": "2026-11-22",
-              "license": "Wiktionary-derived; per-edition license review required",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
               "part_of_speech": "noun",
               "lemma": "Katze",
               "plural_forms": [
@@ -4674,9 +4907,36 @@
           "plural_form": "caballos",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/kaˈbaʝo/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/Spanish/meaning/c/ca/caballo.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/Spanish/meaning/c/ca/caballo.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "caballo",
+              "plural_forms": [
+                "caballos",
+                "yeguas"
+              ],
+              "ipa_candidates": [
+                "/kaˈbaʝo/",
+                "[kaˈβ̞a.ʝo]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "de": {
           "part_of_speech": "noun",
@@ -5062,7 +5322,7 @@
               "source_url": "https://kaikki.org/dictionary/French/meaning/c/ch/chien.html",
               "source_type": "Kaikki/Wiktionary JSONL live word-page",
               "retrieved_at": "2026-11-22",
-              "license": "Wiktionary-derived; per-edition license review required",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
               "part_of_speech": "noun",
               "lemma": "chien",
               "plural_forms": [
@@ -5099,7 +5359,7 @@
               "source_url": "https://kaikki.org/dictionary/Spanish/meaning/p/pe/perro.html",
               "source_type": "Kaikki/Wiktionary JSONL live word-page",
               "retrieved_at": "2026-11-22",
-              "license": "Wiktionary-derived; per-edition license review required",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
               "part_of_speech": "noun",
               "lemma": "perro",
               "plural_forms": [
@@ -5143,7 +5403,7 @@
               "source_url": "https://kaikki.org/dictionary/German/meaning/H/Hu/Hund.html",
               "source_type": "Kaikki/Wiktionary JSONL live word-page",
               "retrieved_at": "2026-11-22",
-              "license": "Wiktionary-derived; per-edition license review required",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
               "part_of_speech": "noun",
               "lemma": "Hund",
               "plural_forms": [
@@ -5260,9 +5520,35 @@
           "plural_form": "arbres",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/aʁbʁ/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/French/meaning/a/ar/arbre.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/French/meaning/a/ar/arbre.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "arbre",
+              "plural_forms": [
+                "arbres"
+              ],
+              "ipa_candidates": [
+                "/aʁbʁ/",
+                "[zab]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "es": {
           "part_of_speech": "noun",
@@ -5271,9 +5557,35 @@
           "plural_form": "árboles",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/ˈaɾbol/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/Spanish/meaning/%C3%A1/%C3%A1r/%C3%A1rbol.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/Spanish/meaning/%C3%A1/%C3%A1r/%C3%A1rbol.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "árbol",
+              "plural_forms": [
+                "árboles"
+              ],
+              "ipa_candidates": [
+                "/ˈaɾbol/",
+                "[ˈaɾ.β̞ol]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "de": {
           "part_of_speech": "noun",
@@ -5282,9 +5594,36 @@
           "plural_form": "Bäume",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/baʊ̯m/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/German/meaning/B/Ba/Baum.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/German/meaning/B/Ba/Baum.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "Baum",
+              "plural_forms": [
+                "Bäume",
+                "Bäumen"
+              ],
+              "ipa_candidates": [
+                "/baʊ̯m/",
+                "[baʊ̯m]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         }
       }
     },
@@ -6260,9 +6599,34 @@
           "plural_form": "portes",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/pɔʁt/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/French/meaning/p/po/porte.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/French/meaning/p/po/porte.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "porte",
+              "plural_forms": [
+                "portes"
+              ],
+              "ipa_candidates": [
+                "/pɔʁt/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "es": {
           "part_of_speech": "noun",
@@ -6399,7 +6763,7 @@
               "source_url": "https://kaikki.org/dictionary/French/meaning/m/ma/maison.html",
               "source_type": "Kaikki/Wiktionary JSONL live word-page",
               "retrieved_at": "2026-11-22",
-              "license": "Wiktionary-derived; per-edition license review required",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
               "part_of_speech": "noun",
               "lemma": "maison",
               "plural_forms": [
@@ -6436,7 +6800,7 @@
               "source_url": "https://kaikki.org/dictionary/Spanish/meaning/c/ca/casa.html",
               "source_type": "Kaikki/Wiktionary JSONL live word-page",
               "retrieved_at": "2026-11-22",
-              "license": "Wiktionary-derived; per-edition license review required",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
               "part_of_speech": "noun",
               "lemma": "casa",
               "plural_forms": [
@@ -6473,7 +6837,7 @@
               "source_url": "https://kaikki.org/dictionary/German/meaning/H/Ha/Haus.html",
               "source_type": "Kaikki/Wiktionary JSONL live word-page",
               "retrieved_at": "2026-11-22",
-              "license": "Wiktionary-derived; per-edition license review required",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
               "part_of_speech": "noun",
               "lemma": "Haus",
               "plural_forms": [
@@ -8112,9 +8476,35 @@
           "plural_form": "windows",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/ˈwɪndəʊ/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/English/meaning/w/wi/window.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/English/meaning/w/wi/window.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "window",
+              "plural_forms": [
+                "windows"
+              ],
+              "ipa_candidates": [
+                "/ˈwɪndəʊ/",
+                "/ˈwɪndo/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "fr": {
           "part_of_speech": "noun",
@@ -8134,9 +8524,35 @@
           "plural_form": "ventanas",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/benˈtana/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/Spanish/meaning/v/ve/ventana.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/Spanish/meaning/v/ve/ventana.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "ventana",
+              "plural_forms": [
+                "ventanas"
+              ],
+              "ipa_candidates": [
+                "/benˈtana/",
+                "[bẽn̪ˈt̪a.na]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "de": {
           "part_of_speech": "noun",
@@ -8145,9 +8561,35 @@
           "plural_form": "Fenster",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/ˈfɛnstɐ/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/German/meaning/F/Fe/Fenster.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/German/meaning/F/Fe/Fenster.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "Fenster",
+              "plural_forms": [
+                "Fenster",
+                "Fenstern"
+              ],
+              "ipa_candidates": [
+                "/ˈfɛnstɐ/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         }
       }
     },
@@ -8867,9 +9309,34 @@
           "plural_form": "tables",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/tabl/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/French/meaning/t/ta/table.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/French/meaning/t/ta/table.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "table",
+              "plural_forms": [
+                "tables"
+              ],
+              "ipa_candidates": [
+                "/tabl/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "es": {
           "part_of_speech": "noun",
@@ -8878,9 +9345,35 @@
           "plural_form": "mesas",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/ˈmesa/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/Spanish/meaning/m/me/mesa.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/Spanish/meaning/m/me/mesa.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "mesa",
+              "plural_forms": [
+                "mesas"
+              ],
+              "ipa_candidates": [
+                "/ˈmesa/",
+                "[ˈme.sa]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "de": {
           "part_of_speech": "noun",
@@ -8889,9 +9382,35 @@
           "plural_form": "Tische",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/tɪʃ/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/German/meaning/T/Ti/Tisch.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/German/meaning/T/Ti/Tisch.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "Tisch",
+              "plural_forms": [
+                "Tische",
+                "Tischen"
+              ],
+              "ipa_candidates": [
+                "/tɪʃ/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         }
       }
     },
@@ -10681,9 +11200,35 @@
           "usage_note": "Regional usage, countability, singular/plural alignment or sense needs review.",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "partial"
+          "pronunciations": [
+            {
+              "ipa": "/ˈvasər/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/German/meaning/W/Wa/Wasser.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "partial",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/German/meaning/W/Wa/Wasser.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "Wasser",
+              "plural_forms": [
+                "Wasser",
+                "Wässer"
+              ],
+              "ipa_candidates": [
+                "/ˈvasər/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         }
       }
     },
@@ -10712,9 +11257,35 @@
           "usage_note": "Regional usage, countability, singular/plural alignment or sense needs review.",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "partial"
+          "pronunciations": [
+            {
+              "ipa": "/mɪlk/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/English/meaning/m/mi/milk.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "partial",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/English/meaning/m/mi/milk.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "milk",
+              "plural_forms": [
+                "milks"
+              ],
+              "ipa_candidates": [
+                "/mɪlk/",
+                "/mɛlk/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "fr": {
           "part_of_speech": "noun",
@@ -10723,9 +11294,35 @@
           "usage_note": "Regional usage, countability, singular/plural alignment or sense needs review.",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "partial"
+          "pronunciations": [
+            {
+              "ipa": "/lɛ/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/French/meaning/l/la/lait.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "partial",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/French/meaning/l/la/lait.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "lait",
+              "plural_forms": [
+                "laits"
+              ],
+              "ipa_candidates": [
+                "/lɛ/",
+                "/le/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "es": {
           "part_of_speech": "noun",
@@ -10745,9 +11342,36 @@
           "usage_note": "Regional usage, countability, singular/plural alignment or sense needs review.",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "partial"
+          "pronunciations": [
+            {
+              "ipa": "/mɪlç/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/German/meaning/M/Mi/Milch.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "partial",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/German/meaning/M/Mi/Milch.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "Milch",
+              "plural_forms": [
+                "Milchen",
+                "Milche"
+              ],
+              "ipa_candidates": [
+                "/mɪlç/",
+                "[mɪlç]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         }
       }
     },
@@ -11713,9 +12337,35 @@
           "usage_note": "Regional usage, countability, singular/plural alignment or sense needs review.",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "partial"
+          "pronunciations": [
+            {
+              "ipa": "/brɛd/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/English/meaning/b/br/bread.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "partial",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/English/meaning/b/br/bread.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "bread",
+              "plural_forms": [
+                "breads"
+              ],
+              "ipa_candidates": [
+                "/brɛd/",
+                "/brɛːd/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "fr": {
           "part_of_speech": "noun",
@@ -11749,9 +12399,35 @@
           "plural_form": "Brote",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "partial"
+          "pronunciations": [
+            {
+              "ipa": "/bʁoːt/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/German/meaning/B/Br/Brot.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "partial",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/German/meaning/B/Br/Brot.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "Brot",
+              "plural_forms": [
+                "Brote",
+                "Broten"
+              ],
+              "ipa_candidates": [
+                "/bʁoːt/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         }
       }
     },
@@ -12118,9 +12794,35 @@
           "plural_form": "libros",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/ˈlibɾo/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/Spanish/meaning/l/li/libro.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/Spanish/meaning/l/li/libro.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "libro",
+              "plural_forms": [
+                "libros"
+              ],
+              "ipa_candidates": [
+                "/ˈlibɾo/",
+                "[ˈli.β̞ɾo]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "de": {
           "part_of_speech": "noun",
@@ -12599,9 +13301,35 @@
           "usage_note": "Regional usage, countability, singular/plural alignment or sense needs review.",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "partial"
+          "pronunciations": [
+            {
+              "ipa": "/mɪlk/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/English/meaning/m/mi/milk.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "partial",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/English/meaning/m/mi/milk.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "milk",
+              "plural_forms": [
+                "milks"
+              ],
+              "ipa_candidates": [
+                "/mɪlk/",
+                "/mɛlk/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "fr": {
           "part_of_speech": "noun",
@@ -12610,9 +13338,35 @@
           "usage_note": "Regional usage, countability, singular/plural alignment or sense needs review.",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "partial"
+          "pronunciations": [
+            {
+              "ipa": "/lɛ/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/French/meaning/l/la/lait.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "partial",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/French/meaning/l/la/lait.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "lait",
+              "plural_forms": [
+                "laits"
+              ],
+              "ipa_candidates": [
+                "/lɛ/",
+                "/le/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "es": {
           "part_of_speech": "noun",
@@ -12632,9 +13386,36 @@
           "usage_note": "Regional usage, countability, singular/plural alignment or sense needs review.",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "partial"
+          "pronunciations": [
+            {
+              "ipa": "/mɪlç/",
+              "variety": "Kaikki/Wiktionary (regional variety unreviewed)",
+              "source": "https://kaikki.org/dictionary/German/meaning/M/Mi/Milch.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "partial",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/German/meaning/M/Mi/Milch.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived CC BY-SA and GFDL; publication review required",
+              "part_of_speech": "noun",
+              "lemma": "Milch",
+              "plural_forms": [
+                "Milchen",
+                "Milche"
+              ],
+              "ipa_candidates": [
+                "/mɪlç/",
+                "[mɪlç]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         }
       }
     },
