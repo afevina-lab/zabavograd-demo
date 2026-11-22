@@ -15,10 +15,10 @@ base = Path(sys.argv[1] if len(sys.argv) > 1 else "dist")
 skin_paths = [
     "assets/themes/forest/back.webp",
     "assets/themes/forest/front.webp",
-    "assets/neutral/approved-back.webp",
-    "assets/neutral/approved-front.webp",
-    "assets/space/card-back-v2.webp",
-    "assets/space/card-front-v2.webp",
+    "assets/themes/neutral/back.webp",
+    "assets/themes/neutral/front.webp",
+    "assets/themes/space/back.webp",
+    "assets/themes/space/front.webp",
 ]
 
 

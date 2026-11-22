@@ -29,8 +29,8 @@ test('Every theme has one complete, validated visual configuration',()=>{
   }
  }
  assert.equal(THEMES.neutral.scene.background,'assets/neutral/approved-paper-4k.webp');
- assert.equal(THEMES.neutral.cards.back,'assets/neutral/approved-back.webp');
- assert.equal(THEMES.neutral.cards.front,'assets/neutral/approved-front.webp');
+ assert.equal(THEMES.neutral.cards.back,'assets/themes/neutral/back.webp');
+ assert.equal(THEMES.neutral.cards.front,'assets/themes/neutral/front.webp');
  assert.equal(THEMES.space.scene.background,'assets/space/background.webp');
  assert.equal(THEMES.forest.scene.background,'assets/themes/forest/forest_background.webp');
  assert.equal(THEMES.forest.cards.back,'assets/themes/forest/back.webp');

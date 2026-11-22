@@ -1,0 +1,146 @@
+[
+  {
+    "asset": "forest/front",
+    "source": "Изображение ChatGPT 22 нояб. 2026 г., 20_38_26.png",
+    "source_sha256": "34082d801c3799f2b57f4a5168e1782d6a759eab77d0723849ed25da62f2e95b",
+    "crop": [
+      116,
+      121,
+      1134,
+      1134
+    ],
+    "size": [
+      1018,
+      1018
+    ],
+    "sha256": "24c095c13eaf5a0f44af51d7a098e3bd5b3b914bb02fdcda480087a20b352a49"
+  },
+  {
+    "asset": "forest/back",
+    "source": "Изображение ChatGPT 22 нояб. 2026 г., 20_38_14.png",
+    "source_sha256": "680c064ed6c0ae083c68c6a7cda344abedcb32343f0cee22c659442174a21c0c",
+    "crop": [
+      118,
+      117,
+      1135,
+      1133
+    ],
+    "size": [
+      1017,
+      1017
+    ],
+    "sha256": "1e1b9f28a084536e45b044a2e53319d5d0e14de2c0effa213eeb95c2610476d9"
+  },
+  {
+    "asset": "forest/header",
+    "source": "Зелёный акварельный баннер с рамкой.png",
+    "source_sha256": "7a57903b264acd273dc0b5b070c38032df239d5016f3ad0a90c41ddf91b1aa11",
+    "crop": [
+      29,
+      269,
+      2143,
+      454
+    ],
+    "size": [
+      2114,
+      185
+    ],
+    "sha256": "7ad802b4308b8a4d7739030b640afe5aecaebfa914600f980a5954c037588bc6"
+  },
+  {
+    "asset": "space/header",
+    "source": "Изображение ChatGPT 22 нояб. 2026 г., 20_35_56-1.png",
+    "source_sha256": "7fe673225fa2768029c78a6c6504b57dbabdf49c9a32673feec9e049ee35b5eb",
+    "crop": [
+      34,
+      261,
+      2139,
+      463
+    ],
+    "size": [
+      2105,
+      202
+    ],
+    "sha256": "355d93f9a42c925ce6ee8eb252add89cc8cd5d77244485e1a81ec28102a5b650"
+  },
+  {
+    "asset": "space/back",
+    "source": "Изображение ChatGPT 22 нояб. 2026 г., 20_36_03-2.png",
+    "source_sha256": "5f1cb816180dfe90e829633839fe866e410e21e59d180413b31a5fbeb23b750d",
+    "crop": [
+      112,
+      118,
+      1139,
+      1151
+    ],
+    "size": [
+      1033,
+      1033
+    ],
+    "sha256": "80260e2c049689badc28ae5c179c17610e90ceeeb8f1cb3194e650de9984a302"
+  },
+  {
+    "asset": "space/front",
+    "source": "Изображение ChatGPT 22 нояб. 2026 г., 20_36_36-3.png",
+    "source_sha256": "d2c2fb81be4494ce3484e0641c13eb97f4c3b607df613247c2a7d6cd5cc6a033",
+    "crop": [
+      129,
+      143,
+      1123,
+      1130
+    ],
+    "size": [
+      994,
+      994
+    ],
+    "sha256": "eae71d848ec4fc185913e986690569bd574b71dd2b0971a6fe747752708f6daa"
+  },
+  {
+    "asset": "neutral/front",
+    "source": "neutral_skyblue_card_front.webp",
+    "source_sha256": "453e3daf01748451f50298c907f7f39c42ffb68a3e3b7e54a446432beaeb5854",
+    "crop": [
+      8,
+      8,
+      1026,
+      1021
+    ],
+    "size": [
+      1018,
+      1018
+    ],
+    "sha256": "e7da412a9d6b23ac600ce47adc04a89172b3cf81192ffadc0153e7245a926a73"
+  },
+  {
+    "asset": "neutral/back",
+    "source": "neutral_skyblue_card_back.webp",
+    "source_sha256": "fcf12b40d3ec0d0b20f28ae7bc25d5dcd1d7e66d5175d0e7fd8d19f2cb278983",
+    "crop": [
+      8,
+      8,
+      1025,
+      1024
+    ],
+    "size": [
+      1017,
+      1017
+    ],
+    "sha256": "362827d26b82e4870e7492e528e5848417bb27da3b4c94080a886b2fcbb8210f"
+  },
+  {
+    "asset": "neutral/header",
+    "source": "neutral_skyblue_header.webp",
+    "source_sha256": "fa88f2bb88e41a1505f7e76a0daefdc12391943704a244a3e5547ff5beb3ebc6",
+    "crop": [
+      8,
+      8,
+      2002,
+      183
+    ],
+    "size": [
+      1994,
+      175
+    ],
+    "sha256": "6a49a891936c183e19e881c20c1af1c5c6233d5d5e8fcaf271fc7f8d2743712d"
+  }
+]

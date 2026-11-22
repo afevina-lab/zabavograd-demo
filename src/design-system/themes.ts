@@ -16,8 +16,8 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
  neutral:{
   label:'Нейтральное',
   palette:{accent:'#9bb8d0',deep:'#4c6c8d',pale:'#edf3f8',outline:'#97a9b8',text:'#334559',paper:'#fffdf6',page:'#f4f0e8',stageText:'#5b5059'},
-  skin:'blue',toolbarArt:null,scene:{background:'assets/neutral/approved-paper-4k.webp',fill:'#f9f2e7',motion:'drift',sprites:[],effects:{stars:0,comets:0}},
-  cards:{kind:'watercolor',back:'assets/neutral/approved-back.webp',front:'assets/neutral/approved-front.webp'},sounds:{}
+  skin:'blue',toolbarArt:'assets/themes/neutral/header.webp',scene:{background:'assets/neutral/approved-paper-4k.webp',fill:'#f9f2e7',motion:'drift',sprites:[],effects:{stars:0,comets:0}},
+  cards:{kind:'watercolor',back:'assets/themes/neutral/back.webp',front:'assets/themes/neutral/front.webp'},sounds:{}
  },
  forest:{
   label:'Лес',
@@ -62,7 +62,7 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
   ...Array.from({length:7},(_,i)=>({id:'star-'+i,src:'assets/space/star.webp',motion:'twinkle' as const,width:'42px',left:(8+i*13)+'%',top:(15+(i*23)%70)+'%',opacity:.2,durationMs:14000,delayMs:i*2000}))
  ],effects:{stars:30,comets:2}
 },
-  cards:{kind:'watercolor',back:'assets/space/card-back-v2.webp',front:'assets/space/card-front-v2.webp'},sounds:{flip:'flip-space.wav',match:'match-space.wav'}
+  cards:{kind:'watercolor',back:'assets/themes/space/back.webp',front:'assets/themes/space/front.webp'},sounds:{flip:'flip-space.wav',match:'match-space.wav'}
  }
 };
 export const asThemeId=(x:unknown):ThemeId=>typeof x==='string'&&(THEME_IDS as readonly string[]).includes(x)?x as ThemeId:'space';
@@ -155,7 +155,7 @@ export function soundFile(id:ThemeId,event:string):string{
 
 /** Scene art and presentation stay outside the game rules. All layers share a canvas. */
 export const TRANSFORMATION_SCENES:Record<ThemeId,{kind:'flip'|'depth'|'rays';background?:string;back?:string;glass?:string;frame?:string}>={
- neutral:{kind:'flip',back:'assets/flashcards/neutral-back.webp',frame:'assets/flashcards/neutral-front.webp'},
+ neutral:{kind:'flip',back:'assets/themes/neutral/back.webp',frame:'assets/themes/neutral/front.webp'},
  forest:{kind:'depth',frame:'assets/flashcards/tree-hollow.webp'},
  space:{kind:'rays',background:'assets/flashcards/space-laboratory.webp',back:'assets/flashcards/camera-back.webp',glass:'assets/flashcards/camera-glass.webp',frame:'assets/flashcards/camera-frame.webp'}
 };

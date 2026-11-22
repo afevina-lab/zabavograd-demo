@@ -92,15 +92,15 @@ try{
     assert(r.htmlScroll[0]<=width+3,JSON.stringify(r));
     assert(r.htmlScroll[1]<=height+3,JSON.stringify(r));
     if(theme==='forest'){
-      assert(r.toolbarBackground.includes('assets/themes/forest/header.webp'),JSON.stringify(r));
+      assert(r.toolbarSkin.includes('assets/themes/forest/header.webp'),JSON.stringify(r));
       assert.equal(r.spriteCount,15,JSON.stringify(r));
-    }else if(theme==='space')assert(r.toolbarBackground.includes('assets/themes/space/header.webp'),JSON.stringify(r));
-    else assert(r.toolbarBackground.includes('linear-gradient'),JSON.stringify(r));
+    }else if(theme==='space')assert(r.toolbarSkin.includes('assets/themes/space/header.webp'),JSON.stringify(r));
+    else assert(r.toolbarSkin.includes('assets/themes/neutral/header.webp'),JSON.stringify(r));
     assert(r.btnSkin.includes('theme-ui/buttons/square'),JSON.stringify(r));
     assert(r.homeHref?.endsWith('/home.html')&&r.captionButton,'Home/caption controls missing: '+JSON.stringify(r));
     assert(r.iconMask.includes('icons-new'),JSON.stringify(r));
     if(theme==='neutral'){
-      assert(r.cardBackground.includes('approved-back.webp'),JSON.stringify(r));
+      assert(r.cardBackground.includes('assets/themes/neutral/back.webp'),JSON.stringify(r));
       assert.equal(r.pan,'zg-background-drift',JSON.stringify(r));
       assert(r.panImage.includes('approved-paper-4k.webp'),JSON.stringify(r));
     }else if(theme==='space'){
@@ -108,7 +108,7 @@ try{
       assert.equal(r.spriteCount,11,JSON.stringify(r));
       assert.equal(r.pan,'zg-background-drift',JSON.stringify(r));
       assert.equal(await evaluate("getComputedStyle(document.querySelector('[data-zg-spin=true]')).animationName"),'zg-sprite-spin');
-      assert(r.cardBackground.includes('assets/space/card-back-v2.webp'),JSON.stringify(r));
+      assert(r.cardBackground.includes('assets/themes/space/back.webp'),JSON.stringify(r));
     }else{
       assert(r.panImage.includes('assets/themes/forest/forest_background.webp'),JSON.stringify(r));
       assert(r.cardBackground.includes('assets/themes/forest/back.webp'),JSON.stringify(r));
@@ -124,7 +124,7 @@ try{
         const face=card?.querySelector('.card-front');
         return {skin:face?getComputedStyle(face).backgroundImage:'',picture:!!face?.querySelector('.picture-face img, .picture-face svg')};
       })()`);
-      assert(front.skin.includes(theme==='forest'?'assets/themes/forest/front.webp':theme==='neutral'?'assets/neutral/approved-front.webp':'assets/space/card-front-v2.webp'),JSON.stringify(front));
+      assert(front.skin.includes(`assets/themes/${theme}/front.webp`),JSON.stringify(front));
       assert(front.picture,'Face-up card must show a library illustration');
       await screenshot(`${theme}-open-${width}x${height}`);
     }
@@ -195,7 +195,7 @@ try{
     assert(r.cardRects.every(b=>b.top>=r.stage.top-2&&b.bottom<=r.stage.bottom+2),'Sorting cards must fit vertically: '+JSON.stringify(r));
     assert(r.toolbar.width>=width-3,'Sorting toolbar is clipped: '+JSON.stringify(r));
     assert(r.stage.bottom>=height-3&&r.stage.bottom<=height+3,'Sorting stage does not fill viewport: '+JSON.stringify(r));
-    assert(theme==='forest'?r.toolbarBackground.includes('assets/themes/forest/header.webp'):theme==='space'?r.toolbarBackground.includes('assets/themes/space/header.webp'):r.toolbarBackground.includes('linear-gradient'),'Sorting must use shared toolbar');
+    assert(theme==='forest'?r.toolbarSkin.includes('assets/themes/forest/header.webp'):theme==='space'?r.toolbarSkin.includes('assets/themes/space/header.webp'):r.toolbarSkin.includes('assets/themes/neutral/header.webp'),'Sorting must use shared toolbar');
     const groupOpacity=await evaluate("getComputedStyle(document.querySelector('.bin-target:disabled')).opacity");
     if(groupOpacity)assert.equal(Number(groupOpacity),1,'Disabled sorting group labels must remain fully opaque');
     assert(r.homeHref?.endsWith('/home.html')&&r.captionButton,'Sorting home/caption controls missing');

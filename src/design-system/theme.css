@@ -241,3 +241,24 @@
 .app[data-theme] .choice-tiles button[aria-pressed=true]{outline:2px solid var(--ui-outline);outline-offset:1px;background:var(--ui-pale)}
 /* Pauses and results use the same double frame and palette as settings. */
 .app[data-theme] .overlay>div,.app[data-theme] .modal.gui-panel{background:var(--ui-paper);color:var(--ui-text);border:3px solid var(--ui-outline);border-radius:28px;box-shadow:inset 0 0 0 9px var(--ui-paper),inset 0 0 0 11px var(--ui-outline),0 12px 40px #0004}
+
+/* Approved November 22 artwork. Native border-image paints all slices as one
+   surface, so conveyor transforms never move individual slices independently. */
+.app[data-theme][data-toolbar-art="illustrated"] .play-toolbar{
+ background:none!important;border:12px solid transparent!important;
+ border-image:var(--zg-toolbar-image) 30 fill / 12px / 0 stretch!important;
+ box-shadow:none!important;
+}
+.app[data-theme].game-active :is(.conveyor-stage,.sorting-stage,.matching-stage) :is(.conveyor-card,.sort-card,.matching-card),
+.app[data-theme] :is(.conveyor-card,.sort-card,.matching-card){
+ background:none!important;border:18px solid transparent!important;
+ border-image:var(--zg-card-front-image) 170 fill / 18px / 0 stretch!important;
+ box-shadow:none!important;border-radius:0!important;
+}
+.app[data-theme] :is(.matching-group,.matching-bank){
+ background:transparent!important;border:0!important;box-shadow:none!important;
+}
+.app[data-theme] .matching-group-caption .matching-anchor{
+ background:none!important;border:0!important;border-image:none!important;box-shadow:none!important;
+}
+.app[data-theme] .card{aspect-ratio:1/1}

@@ -51,6 +51,8 @@ try{
     return out.result?.value;
   };
   await cmd('Page.enable');await cmd('Runtime.enable');await cmd('Network.enable');
+  // Keep focus events deterministic when several headless checks run together.
+  await cmd('Emulation.setFocusEmulationEnabled',{enabled:true});
   const failures=[];
   ws.addEventListener('message',e=>{let m;try{m=JSON.parse(e.data)}catch{return}if(m.method==='Network.responseReceived'&&m.params?.response?.status>=400&&!m.params.response.url.endsWith('/favicon.ico'))failures.push(m.params.response.url+' HTTP '+m.params.response.status)});
   async function until(predicate,timeoutMs=20000){let last;for(let i=0;i<timeoutMs/150;i++){try{last=await evaluate(predicate);if(last)return last;}catch{}await sleep(150)}throw Error('Timed out waiting for '+predicate.slice(0,150)+'; last='+last)}

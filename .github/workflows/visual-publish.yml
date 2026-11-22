@@ -98,6 +98,11 @@ jobs:
           # Legacy source-side CSS/JS patch generators are no longer used by the public build.
           rm -rf _published/release _published/scripts
           rsync -a dist/ _published/
+          # Remove superseded skins also from the persistent publication branch.
+          rm -f _published/assets/neutral/approved-back.webp _published/assets/neutral/approved-front.webp
+          rm -f _published/assets/space/card-back-v2.webp _published/assets/space/card-front-v2.webp
+          rm -f _published/assets/flashcards/neutral-back.webp _published/assets/flashcards/neutral-front.webp
+          rm -f _published/assets/themes/neutral-header.webp
           test -s _published/library.json
           test -s _published/semantic-graph.json
           test -s _published/home.html
