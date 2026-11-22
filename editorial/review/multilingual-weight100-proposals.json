@@ -3017,7 +3017,26 @@
           "grammatical_gender": null,
           "indefinite_article_form": "an apple",
           "plural_form": "apples",
-          "feature_source": "editorial_candidate_requires_dictionary_verification"
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/English/meaning/a/ap/apple.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived; per-edition license review required",
+              "part_of_speech": "noun",
+              "lemma": "apple",
+              "plural_forms": [
+                "apples"
+              ],
+              "ipa_candidates": [
+                "/ˈæpəl/",
+                "[ˈæpəl] ~ [ˈæpl̩]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "fr": {
           "part_of_speech": "noun",
@@ -4367,10 +4386,35 @@
               "variety": "France",
               "source": "https://fr.wiktionary.org/wiki/chat",
               "review_status": "suggested"
+            },
+            {
+              "ipa": "/ʃa/",
+              "variety": "Kaikki/Wiktionary (regional variant not yet selected)",
+              "source": "https://kaikki.org/dictionary/French/meaning/c/ch/chat.html",
+              "review_status": "suggested"
             }
           ],
           "pronunciation_status": "suggested",
-          "morphology_status": "suggested"
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/French/meaning/c/ch/chat.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived; per-edition license review required",
+              "part_of_speech": "noun",
+              "lemma": "chat",
+              "plural_forms": [
+                "chats"
+              ],
+              "ipa_candidates": [
+                "/ʃa/",
+                "[ʃɑ]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "es": {
           "part_of_speech": "noun",
@@ -4385,10 +4429,36 @@
               "variety": "Spain",
               "source": "https://es.wiktionary.org/wiki/gato",
               "review_status": "suggested"
+            },
+            {
+              "ipa": "/ˈɡato/",
+              "variety": "Kaikki/Wiktionary (regional variant not yet selected)",
+              "source": "https://kaikki.org/dictionary/Spanish/meaning/g/ga/gato.html",
+              "review_status": "suggested"
             }
           ],
           "pronunciation_status": "suggested",
-          "morphology_status": "suggested"
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/Spanish/meaning/g/ga/gato.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived; per-edition license review required",
+              "part_of_speech": "noun",
+              "lemma": "gato",
+              "plural_forms": [
+                "gatos",
+                "gatas"
+              ],
+              "ipa_candidates": [
+                "/ˈɡato/",
+                "[ˈɡa.t̪o]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "de": {
           "part_of_speech": "noun",
@@ -4397,9 +4467,35 @@
           "plural_form": "Katzen",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/ˈkatsə/",
+              "variety": "Kaikki/Wiktionary (regional variant not yet selected)",
+              "source": "https://kaikki.org/dictionary/German/meaning/K/Ka/Katze.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/German/meaning/K/Ka/Katze.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived; per-edition license review required",
+              "part_of_speech": "noun",
+              "lemma": "Katze",
+              "plural_forms": [
+                "Katzen"
+              ],
+              "ipa_candidates": [
+                "/ˈkatsə/",
+                "/ˈkɑtːsə/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         }
       }
     },
@@ -4951,9 +5047,35 @@
           "plural_form": "chiens",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/ʃjɛ̃/",
+              "variety": "Kaikki/Wiktionary (regional variant not yet selected)",
+              "source": "https://kaikki.org/dictionary/French/meaning/c/ch/chien.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/French/meaning/c/ch/chien.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived; per-edition license review required",
+              "part_of_speech": "noun",
+              "lemma": "chien",
+              "plural_forms": [
+                "chiens"
+              ],
+              "ipa_candidates": [
+                "/ʃjɛ̃/",
+                "/ʃjẽ/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "es": {
           "part_of_speech": "noun",
@@ -4962,9 +5084,36 @@
           "plural_form": "perros",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/ˈpero/",
+              "variety": "Kaikki/Wiktionary (regional variant not yet selected)",
+              "source": "https://kaikki.org/dictionary/Spanish/meaning/p/pe/perro.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/Spanish/meaning/p/pe/perro.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived; per-edition license review required",
+              "part_of_speech": "noun",
+              "lemma": "perro",
+              "plural_forms": [
+                "perros",
+                "perras"
+              ],
+              "ipa_candidates": [
+                "/ˈpero/",
+                "[ˈpe.ro]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "de": {
           "part_of_speech": "noun",
@@ -4979,10 +5128,35 @@
               "variety": "Standard German",
               "source": "https://de.wiktionary.org/wiki/Hund",
               "review_status": "suggested"
+            },
+            {
+              "ipa": "/hʊnt/",
+              "variety": "Kaikki/Wiktionary (regional variant not yet selected)",
+              "source": "https://kaikki.org/dictionary/German/meaning/H/Hu/Hund.html",
+              "review_status": "suggested"
             }
           ],
           "pronunciation_status": "suggested",
-          "morphology_status": "suggested"
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/German/meaning/H/Hu/Hund.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived; per-edition license review required",
+              "part_of_speech": "noun",
+              "lemma": "Hund",
+              "plural_forms": [
+                "Hunde",
+                "Hünde"
+              ],
+              "ipa_candidates": [
+                "/hʊnt/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         }
       }
     },
@@ -6210,9 +6384,35 @@
           "plural_form": "maisons",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/mɛ.zɔ̃/",
+              "variety": "Kaikki/Wiktionary (regional variant not yet selected)",
+              "source": "https://kaikki.org/dictionary/French/meaning/m/ma/maison.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/French/meaning/m/ma/maison.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived; per-edition license review required",
+              "part_of_speech": "noun",
+              "lemma": "maison",
+              "plural_forms": [
+                "maisons"
+              ],
+              "ipa_candidates": [
+                "/mɛ.zɔ̃/",
+                "/me.zɔ̃/"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "es": {
           "part_of_speech": "noun",
@@ -6221,9 +6421,35 @@
           "plural_form": "casas",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "/ˈkasa/",
+              "variety": "Kaikki/Wiktionary (regional variant not yet selected)",
+              "source": "https://kaikki.org/dictionary/Spanish/meaning/c/ca/casa.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/Spanish/meaning/c/ca/casa.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived; per-edition license review required",
+              "part_of_speech": "noun",
+              "lemma": "casa",
+              "plural_forms": [
+                "casas"
+              ],
+              "ipa_candidates": [
+                "/ˈkasa/",
+                "[ˈka.sa]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         },
         "de": {
           "part_of_speech": "noun",
@@ -6232,9 +6458,35 @@
           "plural_form": "Häuser",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "pronunciations": [
+            {
+              "ipa": "[haʊ̯s]",
+              "variety": "Kaikki/Wiktionary (regional variant not yet selected)",
+              "source": "https://kaikki.org/dictionary/German/meaning/H/Ha/Haus.html",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
+          "morphology_status": "suggested",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://kaikki.org/dictionary/German/meaning/H/Ha/Haus.html",
+              "source_type": "Kaikki/Wiktionary JSONL live word-page",
+              "retrieved_at": "2026-11-22",
+              "license": "Wiktionary-derived; per-edition license review required",
+              "part_of_speech": "noun",
+              "lemma": "Haus",
+              "plural_forms": [
+                "Häuser",
+                "Häusern"
+              ],
+              "ipa_candidates": [
+                "[haʊ̯s]"
+              ],
+              "review_status": "suggested",
+              "meaning_match_status": "not_verified"
+            }
+          ]
         }
       }
     },
