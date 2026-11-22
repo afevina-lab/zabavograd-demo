@@ -63,8 +63,13 @@
 
 
 /* Tactile setup system. Theme colors come exclusively from theme tokens. */
-.app:has(.shared-settings-window){min-height:100dvh;background:var(--zg-stage-image) center/cover fixed,var(--ui-pale)}
-.app[data-theme] .settings-shade:has(.shared-settings-window){background:#18241825!important;backdrop-filter:blur(3px)}
+/* Settings have their OWN fully opaque static scene: never show old game
+   headings, cards or imagery through a translucent/blurred modal scrim. */
+.app:has(.shared-settings-window){min-height:100dvh}
+.app[data-theme] .settings-shade:has(.shared-settings-window){
+ background:var(--zg-stage-image) center / cover no-repeat,var(--zg-stage-fill)!important;
+ backdrop-filter:none!important;-webkit-backdrop-filter:none!important
+}
 .settings-adventure-title{display:flex;align-items:center;min-width:0}
 .settings-window-heading .settings-adventure-emblem,.settings-eyebrow{display:none!important}
 .settings-window-heading{border-bottom:1px solid color-mix(in srgb,var(--ui-outline) 40%,transparent);margin:0 6px 10px}
