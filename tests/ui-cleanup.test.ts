@@ -522,6 +522,9 @@ test('Footer words use a fully framed height-matched well with measured font fit
  assert.match(preview,/ResizeObserver/);
  assert.match(preview,/for\(let size=16;size>=12;size--\)/);
  assert.match(preview,/inner\.scrollHeight<=availableHeight/);
+ assert.doesNotMatch(preview,/availableWidth=[^\n]*borderLeftWidth/);
+ assert.doesNotMatch(preview,/availableHeight=[^\n]*borderTopWidth/);
+ assert.match(preview,/for\(let size=16;size>=12;size--\)/);
  assert.match(preview,/className="setup-preview-fit"/);
  assert.match(css,/\.setup-preview-content\{[^}]*height:58px;min-height:58px;max-height:58px/);
  assert.match(css,/\.setup-preview-content\{[^}]*background:var\(--ui-setup-field\)/);
