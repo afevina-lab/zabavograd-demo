@@ -171,19 +171,19 @@
 .app[data-theme] .icon-button,.app[data-theme] .settings-window-heading .icon-button,.app[data-theme] .settings .material-head .icon-button{border-image:none!important;border:1px solid var(--ui-deep)!important;border-radius:13px!important;background:var(--ui-deep)!important;color:var(--ui-paper)!important;box-shadow:inset 0 2px 2px #fff6,inset 0 -3px 3px #0002,0 3px 0 color-mix(in srgb,var(--ui-deep) 65%,black),0 5px 7px #172a4020!important}
 .app[data-theme] .icon-button:hover:not(:disabled){filter:brightness(1.1)}.app[data-theme] .icon-button:active:not(:disabled){transform:translateY(2px);box-shadow:inset 0 2px 3px #0002,0 1px 0 var(--ui-deep)!important}
 /* Compact quantity header; the track retains its broad, tactile thumb. */
-.app .quantity-slider{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 16px;align-items:center;margin:22px 0 24px;padding:16px;border:1px solid var(--ui-tray-edge);border-radius:16px;background:var(--ui-setup-field);box-shadow:inset 0 2px 3px #fff9,0 2px 0 var(--ui-tray-shadow)}
+.app .quantity-slider{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 10px;align-items:center;margin:0;padding:10px 12px;border:1px solid var(--ui-tray-edge);border-radius:16px;background:var(--ui-setup-field);box-shadow:inset 0 2px 3px #fff9,0 2px 0 var(--ui-tray-shadow)}
 .app .quantity-slider>label{margin:0!important;font-size:15px;line-height:1.3;font-weight:650}
 .app .quantity-slider>div.quantity-stepper{display:flex;gap:0;align-items:center;justify-content:center;padding:0;overflow:hidden;border:1px solid var(--ui-deep);border-radius:11px;box-shadow:0 2px 0 color-mix(in srgb,var(--ui-deep) 70%,black)}
-.app[data-theme] .quantity-slider .quantity-stepper button{width:32px;height:36px;min-height:36px!important;min-width:0;border:0!important;border-radius:0!important;box-shadow:inset 0 1px 1px #fff5!important;font-size:22px;padding:0!important}
-.app[data-theme] .quantity-slider .quantity-stepper input[type=number]{width:44px!important;height:36px!important;min-height:36px!important;min-width:0;text-align:center;font-weight:750;appearance:textfield;-moz-appearance:textfield;border:0!important;border-radius:0!important;box-shadow:inset 0 2px 4px var(--ui-well-shadow-strong)!important;font-size:20px;padding:3px!important}
-.app .quantity-slider>input[type=range],.quantity-slider>.quantity-availability{grid-column:1/-1}.app .quantity-slider>input[type=range]{margin:6px 0 0!important}
+.app[data-theme] .quantity-slider .quantity-stepper button{width:27px;height:30px;min-height:30px!important;min-width:27px;border:0!important;border-radius:0!important;box-shadow:inset 0 1px 1px #fff5!important;font-size:19px;padding:0!important}
+.app[data-theme] .quantity-slider .quantity-stepper input[type=number]{width:36px!important;height:30px!important;min-height:30px!important;min-width:0;text-align:center;font-weight:750;appearance:textfield;-moz-appearance:textfield;border:0!important;border-radius:0!important;box-shadow:inset 0 2px 4px var(--ui-well-shadow-strong)!important;font-size:16px;padding:2px!important}
+.app .quantity-slider>input[type=range],.quantity-slider>.quantity-availability{grid-column:1/-1}.app .quantity-slider>input[type=range]{margin:2px 0 0!important}
 /* The start action has a visible lower face and a forward arrow. */
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .primary:not(.rule-delete),.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .start{box-shadow:inset 0 3px 2px #fff7,inset 0 -5px 5px var(--ui-button-inset-strong),0 7px 0 color-mix(in srgb,var(--ui-deep) 62%,black),0 11px 14px #172a4030!important;border-top-color:color-mix(in srgb,var(--ui-deep) 50%,var(--ui-paper))!important;min-height:64px;margin-bottom:8px}
 .setup-footer>button.primary,.settings>.primary:last-child{display:flex;align-items:center;justify-content:center;gap:24px}
 .setup-footer>button.primary::after,.settings>.primary:last-child::after{content:'';display:block;width:30px;height:30px;background:currentColor;clip-path:polygon(0 40%,64% 40%,40% 16%,55% 0,100% 50%,55% 100%,40% 84%,64% 60%,0 60%)}
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .primary:active:not(:disabled){transform:translateY(4px);box-shadow:inset 0 1px 3px #0002,0 3px 0 color-mix(in srgb,var(--ui-deep) 62%,black)!important}
 .setup-material-summary{font-size:15px;line-height:1.8;margin:14px 0;color:var(--ui-text);overflow-wrap:anywhere}
-@media(max-width:600px){.app .quantity-slider{padding:13px;gap:14px 8px}.app .quantity-slider>label{font-size:14px}.app .settings .select-control select{font-size:14px;padding-left:45px!important}.select-leading{left:10px;width:25px}.select-leading svg{width:21px;height:21px}}
+@media(max-width:600px){.app .quantity-slider>label{font-size:14px}.app .settings .select-control select{font-size:14px;padding-left:45px!important}.select-leading{left:10px;width:25px}.select-leading svg{width:21px;height:21px}}
 
 /* Shared wells for selects, expandable rows and category selection. */
 .control-well{display:grid;place-items:center;flex:none;width:36px;height:38px;border-radius:10px;background:var(--ui-deep);color:var(--ui-paper);border:1px solid color-mix(in srgb,var(--ui-deep) 85%,black);box-shadow:inset 0 2px 1px #fff5,inset 0 -2px 2px #0002,0 2px 0 color-mix(in srgb,var(--ui-deep) 70%,black);pointer-events:none}
@@ -231,10 +231,10 @@
 
 /* One rhythm and one action-well inset for all setup fields. */
 .app[data-theme] .settings .select-control{margin:0}
-.app[data-theme] .settings .game-choice{display:grid;gap:8px;margin:0 0 16px}
+.app[data-theme] .settings .game-choice{display:grid;gap:6px;margin:0}
 .app[data-theme] .settings .game-choice>.field-label{margin:0!important}
-.app[data-theme] .settings label:not(.check):has(>.select-control){display:grid;gap:8px;margin:0 0 16px!important}
-.app[data-theme] .settings .category-picker-trigger{margin:0 0 16px!important;padding:11px 6px 11px 14px!important}
+.app[data-theme] .settings label:not(.check):has(>.select-control){display:grid;gap:6px;margin:0!important}
+.app[data-theme] .settings .category-picker-trigger{margin:0!important;padding:11px 6px 11px 14px!important}
 .app[data-theme] .settings .settings-disclosure>summary{padding:11px 6px 11px 14px!important}
 .app .control-well{width:36px;height:38px;box-sizing:border-box}
 .app .icon-button .garden-icon{width:27px!important;height:27px!important}
@@ -468,7 +468,7 @@
 }
 .app[data-theme] .shared-settings-window .settings-disclosure-body{padding:var(--zg-space-3) var(--zg-space-2) var(--zg-space-2)!important}
 .app[data-theme] .shared-settings-window .settings-disclosure-body>section+section{margin-top:var(--zg-space-4)!important}
-.app[data-theme] .shared-settings-window .settings-block .check{margin:var(--zg-space-2) 0!important}
+.app[data-theme] .shared-settings-window .settings-block .check{margin:0!important}
 .app[data-theme] .shared-settings-window .settings-block .quantity-slider{margin:var(--zg-space-3) 0!important}
 .app[data-theme] .shared-settings-window .settings-block :is(h2,h3){margin-bottom:var(--zg-space-2)!important}
 .app[data-theme] .shared-settings-window .theme-section{margin:var(--zg-space-2) 0!important}
@@ -780,10 +780,10 @@
  font-size:18px!important;line-height:1.2;margin:0 0 6px!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window .settings-block label:not(.check){
- margin-block:6px 4px!important;
+ margin-block:0!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window .settings .game-choice{
- margin:0 0 6px!important;gap:4px!important;
+ margin:0!important;gap:4px!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window .settings .select-control select{
  min-height:var(--zg-setup-control-height)!important;
@@ -800,7 +800,7 @@
  margin-block:var(--zg-space-1,4px)!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window .settings-block .quantity-slider{
- margin:var(--zg-space-2,8px) 0!important;
+ margin:0!important;
 }
 
 /* A compact, truly independent summary/action row (no six-row spanning grid). */
@@ -958,7 +958,7 @@
 /* Canonical summary in every game: title/actions on the left, words or an error on the right. */
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>.setup-preview{
  display:grid!important;
- grid-template-columns:minmax(92px,.37fr) minmax(0,.63fr);
+ grid-template-columns:minmax(100px,max-content) minmax(0,1fr);
  grid-template-rows:minmax(0,1fr);
  align-items:center;column-gap:var(--zg-setup-gap,8px)!important;
  box-sizing:border-box;width:100%;min-width:0;min-height:0;
@@ -1005,7 +1005,7 @@
 }
 @media(max-width:600px){
  .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>.setup-preview{
-  grid-template-columns:minmax(76px,.44fr) minmax(0,.56fr);
+  grid-template-columns:minmax(84px,max-content) minmax(0,1fr);
   column-gap:4px!important;
  }
  .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-preview-meta h2{font-size:14px!important}
