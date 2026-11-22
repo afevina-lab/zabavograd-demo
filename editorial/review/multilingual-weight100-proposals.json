@@ -46,8 +46,15 @@
           "plural_form": "pastèques",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
+          "pronunciations": [
+            {
+              "ipa": "/pas.tɛk/",
+              "variety": "France",
+              "source": "https://fr.wiktionary.org/wiki/past%C3%A8que",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
           "morphology_status": "suggested"
         },
         "es": {
@@ -68,8 +75,15 @@
           "plural_form": "Wassermelonen",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
+          "pronunciations": [
+            {
+              "ipa": "[ˈvasɐmeˌloːnə]",
+              "variety": "Germany",
+              "source": "https://de.wiktionary.org/wiki/Wassermelone",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
           "morphology_status": "suggested"
         }
       }
