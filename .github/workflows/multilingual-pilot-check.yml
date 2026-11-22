@@ -1,0 +1,24 @@
+name: Validate multilingual library pilot
+on:
+  pull_request:
+    paths:
+      - 'editorial/review/multilingual-weight100-*.json'
+      - 'scripts/*multilingual*.cjs'
+      - 'tests/multilingual-import.test.cjs'
+      - 'schemas/multilingual-candidates.schema.json'
+      - '.github/workflows/multilingual-pilot-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check staged weight-100 ID coverage and grammar
+        run: node scripts/check-multilingual-weight100.cjs
+      - name: Test candidate importer and dictionary evidence
+        run: node --test tests/multilingual-import.test.cjs
