@@ -11,7 +11,7 @@ import {CategoryPicker} from './CategoryPicker.tsx';
 import {SavedMaterialSets} from './SavedMaterialSets.tsx';
 import {groups,initialLearning,type Learning} from './learning.ts';import {defaultFilters,type Filters,type Word} from './model.ts';
 export function MaterialSettings({words,f,setF,l,setL,nested=false,hideTask=false,textDisplayProvided=false}:{words:Word[];f:Filters;setF:(v:Partial<Filters>)=>void;l:Learning;setL:(v:Learning)=>void;nested?:boolean;hideTask?:boolean;textDisplayProvided?:boolean}){const [usingSaved,setUsingSaved]=useState(false);
- usePresetSource({label:l.mode==='lexical'?'Лексика':l.mode==='automation'?'Звуки':l.mode==='reading'?'Чтение':l.mode==='structure'?'Слоговая структура':'Учебный материал',learning:l,filters:f},!nested);
+ usePresetSource({label:l.mode==='lexical'?'Лексика':l.mode==='automation'?'Звуки':l.mode==='reading'?'Чтение':l.mode==='structure'?'Слоговая структура':'Учебный материал',learning:l,filters:f,wordIds:words.map(w=>w.id)},!nested);
  const changeMode=(mode:Learning['mode']|'saved')=>{
   if(mode==='saved'){setUsingSaved(true);return;}
   setUsingSaved(false);setF({topic:'',subcategory:'',noOpposition:false});

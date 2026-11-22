@@ -60,7 +60,7 @@ export function Sorting(){
  const previewItems=previewOverride?.source===preparation?previewOverride.items:preparation.items;
  const candidates=useMemo(()=>[...new Map(pools.flat().map(w=>[w.id,w])).values()],[pools]);
  function applyManual(){
-  try{const picked=makeSorting(pools.map(p=>p.filter(w=>chosen.includes(w.id))),groups.map(g=>g.count));setPreviewOverride({source:preparation,items:picked});setPicker(false);setError('');}catch(e){setError((e as Error).message)}
+  try{const picked=makeSorting(pools.map(p=>p.filter(w=>chosen.includes(w.id))),groups.map(g=>g.count));setPreviewOverride({source:preparation,items:picked});window.dispatchEvent(new CustomEvent('zg:manual-word-selection',{detail:{ids:chosen}}));setPicker(false);setError('');}catch(e){setError((e as Error).message)}
  }
  function audio(name:string){if(sound){const a=new Audio(import.meta.env.BASE_URL+'assets/audio/'+soundFile(theme,name));a.volume=.3;void a.play().catch(()=>{})}}
  function start(){if(preparation.error)return;enterGameViewport();setItems(previewItems);setStars(0);setScore('');setVerdict({});setChecking(false);setPlacements({});setSelected(null);setWrong([]);setResult('');setPaused(false);setRemaining(seconds);setLives(5);undo.current=null;setRunning(true);audio('deal')}

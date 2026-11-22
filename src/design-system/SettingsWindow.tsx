@@ -39,7 +39,8 @@ export function SettingsWindow({game,children}:{game:string;children:ReactNode})
   const source=candidates[saveSource];
   if(!source){setSaveError('Не найден учебный материал для сохранения.');return}
   try{
-   const learning=manualWordIds?.length?{...source.learning,selectionMode:'approved' as const,approvedWordIds:manualWordIds}:source.learning;
+   const approvedIds=manualWordIds?.filter(id=>source.wordIds.includes(id))||[];
+   const learning=approvedIds.length?{...source.learning,selectionMode:'approved' as const,approvedWordIds:approvedIds}:source.learning;
    saveMaterialSet({name:saveName,learning,filters:source.filters});
    bridge.refresh();closeSave();setManualWordIds(null);
   }catch(error){setSaveError((error as Error).message)}
