@@ -103,7 +103,7 @@
 
 @media(max-width:600px){.app[data-theme] .shared-settings-window .settings-block{padding:10px!important}}
 
-.app .shared-settings-window .settings-block{margin:0 0 12px!important}.app .shared-settings-window .settings-block h2{margin:0!important}.app .shared-settings-window .settings-block .check{margin-block:14px}.app .shared-settings-window .unified-settings-content>p:first-child{margin-bottom:26px}
+.app .shared-settings-window .settings-block{margin:0!important}.app .shared-settings-window .settings-block h2{margin:0!important}.app .shared-settings-window .unified-settings-content>p:first-child{margin:0!important}
 
 /* Shared expandable setup actions; native details preserves keyboard behavior. */
 .app[data-theme] .settings .settings-disclosure{padding:0!important;margin:0!important;border:0!important;background:transparent!important;box-shadow:none!important;border-radius:18px!important}
@@ -599,7 +599,7 @@
  gap:var(--zg-space-2,8px);margin-bottom:var(--zg-space-2,8px);
 }
 .app[data-theme] .shared-settings-window .material-rule-heading strong{
- color:var(--ui-text);font-size:16px;line-height:1.25;
+ color:var(--ui-text);font-size:18px;line-height:1.25;
 }
 .app[data-theme] .shared-settings-window .material-rule-heading .rule-delete{
  float:none!important;flex:0 0 auto;width:auto;
@@ -950,7 +950,7 @@
  background:var(--ui-setup-field);
  box-shadow:inset 0 1px 2px var(--ui-well-shadow);
  overflow:hidden;overflow-wrap:anywhere;
- font-size:16px;line-height:1.3;color:var(--ui-text);
+ font-size:18px;line-height:1.3;color:var(--ui-text);
 }
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-preview-fit{
  box-sizing:border-box;width:100%;min-width:0;max-width:100%;
@@ -1005,7 +1005,7 @@
    The spacing tokens here are the only source for their repeated controls. */
 .app[data-theme] .settings-frame.shared-settings-window,
 .app[data-theme] :is(.sound-workshop,.category-picker,.letter-picker-dialog,.syllable-picker-dialog,.saved-set-dialog,.material-save-dialog){
- --zg-stack-gap:12px;
+ --zg-stack-gap:8px;
  --zg-section-gap:12px;
  --zg-row-height:52px;
  --zg-row-inset:7px;
@@ -1092,7 +1092,7 @@
 }
 .app[data-theme] .settings-frame.shared-settings-window label.check{
  display:flex!important;align-items:center!important;justify-content:flex-start;
- gap:10px!important;min-height:38px;padding:0!important;margin:0!important;
+ gap:8px!important;min-height:32px;padding:0!important;margin:0!important;
  line-height:1.35!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window :is(.reading-kinds,.pair-options,.choice-tiles){
@@ -1139,7 +1139,7 @@
  padding:var(--zg-stack-gap)!important;
 }
 .app[data-theme] dialog.sound-workshop .sound-bank-column>section h3{
- margin:0 0 var(--zg-stack-gap)!important;line-height:1.3!important;
+ margin:0!important;line-height:1.3!important;
 }
 .app[data-theme] dialog.sound-workshop .sound-editor{
  display:flex!important;flex-direction:column;align-items:stretch;
@@ -1153,7 +1153,7 @@
 .app[data-theme] dialog.sound-workshop .sound-exclusion-content>label.check{
  display:flex!important;align-items:center!important;justify-content:flex-start;
  padding:0!important;margin:0!important;gap:10px!important;
- min-height:40px;line-height:1.35!important;
+ min-height:32px;line-height:1.35!important;
 }
 .app[data-theme] dialog.sound-workshop .sound-exclusion-disclosure{
  margin:0!important;
@@ -1206,8 +1206,8 @@
  gap:var(--zg-stack-gap)!important;margin:0!important;
 }
 .app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid .check{
- display:flex;align-items:center;gap:8px;min-height:44px;
- padding:8px;border-radius:10px;background:var(--ui-pale);
+ display:flex;align-items:center;gap:8px;min-height:40px;
+ padding:2px 4px;border-radius:10px;background:transparent;
 }
 .app[data-theme] dialog:is(.letter-picker-dialog,.syllable-picker-dialog,.saved-set-dialog,.saved-set-confirm,.material-save-dialog)>.sound-picker-actions{
  position:static!important;flex:0 0 auto;align-items:center;
@@ -1303,6 +1303,156 @@
 .app[data-theme] .shared-settings-window .setup-presentation-options>.card-presentation{
  margin:0!important;padding:0!important;
  border:0!important;box-shadow:none!important;background:transparent!important;
+}
+
+
+/* Spacing and component geometry are centralized here, never in individual games. */
+.app[data-theme] .settings-frame.shared-settings-window .settings .setup-add-rule>.setup-add-label{
+ padding-left:10px;display:flex;align-items:center;
+ min-height:32px;line-height:1.3;
+}
+.app[data-theme] .settings-frame.shared-settings-window .settings-disclosure-body .material-rule-heading .rule-delete{
+ display:grid!important;place-items:center;flex:none;
+ box-sizing:border-box;width:38px!important;min-width:38px!important;
+ height:38px!important;min-height:38px!important;
+ padding:0!important;margin:0!important;border-radius:11px!important;
+ font-size:24px!important;line-height:1!important;
+ background:var(--ui-control-face)!important;color:var(--ui-text)!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .settings-disclosure-body .material-rule-heading{
+ display:flex;align-items:center;justify-content:space-between;gap:8px;
+}
+.app[data-theme] .settings-frame.shared-settings-window .setup-material-fields>.reading-settings,
+.app[data-theme] .settings-frame.shared-settings-window .settings-block>.setup-material-fields,
+.app[data-theme] .settings-frame.shared-settings-window .settings-block>.setup-dependent-field{
+ gap:8px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window :is(.settings-disclosure-body,.material-rule-group){
+ gap:8px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .settings-disclosure-body:has(>.material-rule-group){
+ padding:8px 6px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window label.check input[type=checkbox],
+.app[data-theme] dialog.sound-workshop label.check input[type=checkbox]{
+ flex:none;margin:0!important;align-self:center;vertical-align:middle;
+}
+.app[data-theme] :is(.settings-frame.shared-settings-window,dialog.sound-workshop) label.check{
+ display:flex!important;align-items:center!important;
+ line-height:1.35!important;margin-block:0!important;gap:8px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window .settings-disclosure-body label.check{
+ min-height:32px!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-workshop-body{
+ margin:0!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-bank-column{
+ gap:8px!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-bank-column>section{
+ display:flex;flex-direction:column;gap:8px!important;
+ padding:10px 12px!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-bank-column>section h3{
+ margin:0!important;line-height:1.25!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-editor{
+ gap:8px!important;padding:8px 12px!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-editor>label.check{
+ min-height:32px!important;padding:0!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-chip-row{
+ margin:0!important;gap:8px!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-exclusion-disclosure>summary{
+ min-height:52px!important;
+ padding:6px 8px 6px 12px!important;gap:8px!important;
+}
+.app[data-theme] dialog.sound-workshop .sound-exclusion-content{
+ gap:8px!important;padding:8px 4px!important;
+}
+.app[data-theme] dialog.sound-workshop .excluded-sound-summary{
+ min-width:0;display:flex;flex:1;flex-direction:column;
+ justify-content:center;gap:3px;line-height:1.25;
+}
+.app[data-theme] dialog.sound-workshop .excluded-sound-summary small{
+ font-size:13px;color:var(--ui-muted-text);overflow-wrap:anywhere;
+}
+.app[data-theme] dialog.sound-workshop>.panel-scroll{
+ gap:8px!important;
+}
+.app[data-theme] dialog.sound-workshop>.sound-picker-actions{
+ box-sizing:border-box;border-top:1px solid var(--ui-surface-edge);
+ min-height:64px!important;gap:10px!important;
+ padding:8px 10px!important;
+}
+.app[data-theme] dialog.sound-workshop>.sound-picker-actions>.sound-selection-summary{
+ font-size:15px!important;line-height:1.35!important;
+}
+.app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid{
+ gap:8px!important;
+}
+.app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid .check{
+ box-sizing:border-box;position:relative;background:transparent!important;
+ border:1px solid transparent!important;border-radius:10px;
+ margin:0!important;padding:4px 6px!important;
+ display:flex;align-items:center!important;
+}
+.app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid .check:hover,
+.app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid .check:focus-within{
+ background:var(--ui-pale)!important;border-color:var(--ui-field-edge)!important;
+}
+.app[data-theme] dialog:is(.letter-picker-dialog,.syllable-picker-dialog,.saved-set-dialog,.saved-set-confirm,.material-save-dialog){
+ border:1px solid var(--ui-field-edge)!important;
+ border-radius:20px!important;
+ background:var(--ui-setup-paper)!important;
+}
+.app[data-theme] dialog:is(.letter-picker-dialog,.syllable-picker-dialog,.saved-set-dialog,.saved-set-confirm,.material-save-dialog)>.sound-picker-actions{
+ box-sizing:border-box;border-top:1px solid var(--ui-surface-edge);
+ min-height:64px!important;gap:10px!important;
+ padding:10px 2px 2px!important;
+}
+.app[data-theme] dialog:is(.letter-picker-dialog,.syllable-picker-dialog,.saved-set-dialog,.saved-set-confirm,.material-save-dialog)>.sound-picker-actions button{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ box-sizing:border-box;min-height:48px!important;
+ padding:10px 16px!important;margin:0!important;
+ font-size:16px!important;font-weight:700;line-height:1.2!important;
+ border:1px solid var(--ui-outline)!important;border-radius:12px!important;
+ box-shadow:inset 0 2px 1px var(--ui-field-glint),inset 0 -3px 3px var(--ui-button-inset),0 3px 0 var(--ui-control-bottom),0 5px 6px var(--ui-control-shadow)!important;
+}
+.app[data-theme] dialog.material-save-dialog>.sound-picker-actions button:first-child{
+ background:var(--ui-control-face)!important;color:var(--ui-text)!important;
+}
+.app[data-theme] .shared-settings-window .themes button{
+ box-sizing:border-box;border:2px solid var(--ui-field-edge)!important;
+ border-radius:13px!important;background:var(--ui-control-face)!important;
+ color:var(--ui-text)!important;box-shadow:0 3px 0 var(--ui-control-bottom)!important;
+ padding:6px!important;
+}
+.app[data-theme] .shared-settings-window .themes button[aria-pressed=true]{
+ border-color:var(--ui-deep)!important;
+ background:var(--ui-pale)!important;color:var(--ui-deep)!important;
+ box-shadow:inset 0 0 0 2px var(--ui-deep),0 3px 0 var(--ui-control-bottom)!important;
+}
+.app[data-theme] .shared-settings-window .themes button i{
+ border-radius:8px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-preview-content{
+ height:58px!important;min-height:58px!important;max-height:58px!important;
+ display:flex!important;align-items:center!important;justify-content:flex-start;
+ padding:6px 10px!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-preview-fit{
+ font-size:18px!important;line-height:1.25!important;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-preview-fit[style]{
+ font-size:inherit;
+}
+.app[data-theme] .settings-frame.shared-settings-window>.setup-footer>button.primary{
+ box-sizing:border-box!important;height:58px!important;
+ min-height:58px!important;max-height:58px!important;
 }
 
 /* Compact landscape is an intentional viewport constraint, not a game exception. */
