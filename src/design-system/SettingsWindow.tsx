@@ -18,8 +18,9 @@ export function SettingsWindow({game,children}:{game:string;children:ReactNode})
     seenSection=true;
     const purpose=node.props['data-setup-section'];
     const item=fieldsetDisabled?<fieldset className="setup-section-fieldset" disabled={fieldsetDisabled}>{node}</fieldset>:node;
-    if(purpose==='material'||purpose==='rules')left.push(item);
-    else if(purpose==='task')right.push(item);
+    if(purpose==='material'||(purpose==='rules'&&game!=='Конвейер'))left.push(item);
+    else if(purpose==='task'&&game==='Конвейер')left.push(item);
+    else if(purpose==='task'||(purpose==='rules'&&game==='Конвейер'))right.push(item);
     else if(purpose==='appearance'){
      // Only the theme picker belongs in the independent side rail.
      // Other presentation controls remain in the main task column in every game.
