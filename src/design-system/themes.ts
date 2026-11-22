@@ -33,10 +33,10 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
    {id:'tree-far-left',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(76cqh,43cqw)',left:'11%',bottom:'23%',opacity:1,layer:1,durationMs:15000,origin:'50% 94%'},
    {id:'tree-far-right',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(76cqh,43cqw)',right:'16%',bottom:'18%',opacity:1,layer:1,durationMs:17000,origin:'50% 94%'},
    // Distant low shrubs belong to the same terrain plane as their tree roots.
-   {id:'bush-back-left',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(18cqh,11cqw)',left:'0%',bottom:'35%',opacity:.9,layer:2,durationMs:28000},
-   {id:'bush-back-middle',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(11cqh,7cqw)',left:'33%',bottom:'42%',opacity:.85,layer:2,durationMs:30000},
+   {id:'bush-back-left',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(18cqh,11cqw)',left:'0%',bottom:'39%',opacity:.9,layer:2,durationMs:28000},
+   {id:'bush-back-middle',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(11cqh,7cqw)',left:'33%',bottom:'44%',opacity:.85,layer:2,durationMs:30000},
    // Flowers on the right sit in front of the middle tree, not the foreground tree.
-   {id:'flowers-right',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(43cqh,27cqw)',right:'17%',bottom:'15%',opacity:1,layer:3},
+   {id:'flowers-right',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(43cqh,27cqw)',right:'17%',bottom:'12%',opacity:1,layer:3},
    // Two tall foreground trees frame the play area, rising above the top edge.
    // Their separate ground contacts are deliberately NOT aligned.
    {id:'tree-left',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(102cqh,56cqw)',left:'-11%',bottom:'-1%',opacity:1,layer:4,durationMs:10500,origin:'50% 94%'},
