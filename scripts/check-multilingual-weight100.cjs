@@ -52,6 +52,15 @@ function validate(manifest,proposals,canonical){
    }
   }
  }
+ assert.equal(reviewIds.size,live.length,'Unfilled weight-100 Russian entries');
+ for(const e of live)assert(reviewIds.has(e.id),'Missing weight-100 Russian ID '+e.id);
+ const byId=new Map(proposals.records.map(p=>[p.library_entry_id,p]));
+ const animals=byId.get('ru-new-20261102-0321');
+ const devices=byId.get('ru-new-20261102-0322');
+ assert(animals&&devices,'Missing distinct mouse senses');
+ assert.notEqual(animals.translations.en,devices.translations.en,'Mouse senses were collapsed');
+ assert.equal(byId.get('ru-gen-20261104-furniture')?.translations.fr,'mobilier','Furniture must retain collective sense');
+ assert.equal(byId.get('ru-sense-20261105-kist-tool')?.translations.en,'paintbrush','Painting brush must not be mapped to hand');
  return {weight100:live.length,reviewProposals:reviewIds.size,languageProposals:reviewIds.size*4};
 }
 if(require.main===module)console.log('PASS multilingual weight-100:',validate(read('editorial/review/multilingual-weight100-manifest.json'),read('editorial/review/multilingual-weight100-proposals.json'),read('outputs/library-v2.json')));
