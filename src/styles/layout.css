@@ -654,20 +654,20 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .quantity-slider>label{display:flex!important;justify-content:space-between;align-items:center}
 .quantity-slider input[type=range]{width:100%;height:30px;margin:0;padding:0;accent-color:var(--ui-accent)}
 .sound-workshop-body{display:grid;grid-template-columns:minmax(220px,1fr) minmax(260px,1.15fr);gap:20px;align-items:start}
-.sound-workshop .sound-bank h3{margin:12px 0 8px;font-size:16px}
+.sound-workshop .sound-bank h3{font-size:16px}
 .sound-chip-row{display:flex;flex-wrap:wrap;gap:8px}
 .sound-chip{display:inline-flex;align-items:center;gap:2px}
 .sound-chip-row button{min-width:42px;min-height:42px;padding:8px 12px;border-radius:14px}
 .sound-chip .sound-gear{min-width:30px;width:30px;padding:3px}
 .sound-gear .garden-icon,.selected-sounds .garden-icon{width:18px;height:18px;display:inline-block}
-.sound-editor{padding:18px;border-radius:20px;position:sticky;top:0}
-.sound-editor h3,.sound-editor h4{margin:8px 0 12px}
+.sound-editor{border-radius:20px;position:sticky;top:0}
+
 .sound-workshop .sound-picker-actions{flex-wrap:wrap}
 .sound-picker-actions>.primary{white-space:normal;text-align:left}
 @media(max-width:650px){.sound-workshop-body{grid-template-columns:1fr}.sound-editor{position:static}}
 .conveyor-card:has(small){grid-template-rows:minmax(0,1fr) auto}.conveyor-card small{font-size:clamp(12px,1.4vw,19px);line-height:1.2}
 
-.sound-workshop-body{display:block!important}.sound-bank{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.sound-editor{margin-top:20px}
+.sound-workshop-body{display:block!important}.sound-bank{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--zg-stack-gap,12px)}
 @media(max-width:600px){.sound-bank{grid-template-columns:1fr}}
 
 .sort-card{touch-action:none}
@@ -1112,14 +1112,3 @@ html:has(.settings-shade){overflow:hidden}
 .app[data-theme] .shared-settings-window .math-settings .reading-kinds .check{
  white-space:nowrap;min-width:0;gap:8px!important;
 }
-/* The same spacing rules apply to arbitrary lexical disclosures and nested settings. */
-.app[data-theme] .shared-settings-window .filter-details{margin:12px 0!important;padding:0!important}
-.app[data-theme] .shared-settings-window .filter-details>summary{
- min-height:52px!important;box-sizing:border-box;margin:0!important;
- display:flex!important;align-items:center!important;
- padding:10px 14px!important;
-}
-.app[data-theme] .shared-settings-window .filter-details>summary::before{
- flex:none;margin-right:8px;
-}
-.app[data-theme] .shared-settings-window .filter-details[open]>summary{margin-bottom:12px!important}

@@ -1283,3 +1283,24 @@
   height:52px!important;min-height:52px!important;
  }
 }
+
+/* Shared alignment contract: group selectors and presentation options have no
+   per-game margin or indented secondary panel. */
+.app[data-theme] .shared-settings-window .group-count-choice{
+ margin:0!important;padding:0!important;border:0!important;
+ display:flex;flex-direction:column;align-items:flex-start;
+ gap:var(--zg-stack-gap,12px);
+}
+.app[data-theme] .shared-settings-window .group-count-choice legend{
+ box-sizing:border-box;padding:0!important;margin:0!important;
+ line-height:1.35;min-height:24px;
+}
+.app[data-theme] .shared-settings-window .group-count-choice .pair-options{
+ display:flex!important;align-items:center;justify-content:flex-start;
+ gap:var(--zg-stack-gap,12px)!important;margin:0!important;padding:0!important;
+}
+.app[data-theme] .shared-settings-window .setup-presentation-options,
+.app[data-theme] .shared-settings-window .setup-presentation-options>.card-presentation{
+ margin:0!important;padding:0!important;
+ border:0!important;box-shadow:none!important;background:transparent!important;
+}
