@@ -1,0 +1,2032 @@
+{
+  "purpose": "read-only review manifest, not an independent dictionary",
+  "source": "outputs/library-v2.json",
+  "source_blob_sha": "a4b8c95aebd89cd52f139d943b2bb7079387d93a",
+  "filter": {
+    "base_weight": 100
+  },
+  "count": 201,
+  "entries": [
+    {
+      "id": "ru-r-001",
+      "lemma": "арбуз",
+      "meaning": "арбуз",
+      "sense_ids": [
+        "ru-r-001-sense"
+      ],
+      "category_paths": [
+        "Растительный мир и грибы/Фрукты",
+        "Еда и напитки/Фрукты"
+      ]
+    },
+    {
+      "id": "ru-r-003",
+      "lemma": "барабан",
+      "meaning": "барабан",
+      "sense_ids": [
+        "ru-r-003-sense"
+      ],
+      "category_paths": [
+        "Игры, творчество и увлечения/Музыкальные инструменты/Ударные"
+      ]
+    },
+    {
+      "id": "ru-r-006",
+      "lemma": "ведро",
+      "meaning": "ведро",
+      "sense_ids": [
+        "ru-r-006-sense"
+      ],
+      "category_paths": [
+        "Дом и быт/Уборка и стирка/Инвентарь для уборки"
+      ]
+    },
+    {
+      "id": "ru-r-014",
+      "lemma": "горка",
+      "meaning": "детская горка на площадке",
+      "sense_ids": [
+        "ru-r-014-sense"
+      ],
+      "category_paths": []
+    },
+    {
+      "id": "ru-r-016",
+      "lemma": "груша",
+      "meaning": "груша",
+      "sense_ids": [
+        "ru-r-016-sense"
+      ],
+      "category_paths": [
+        "Растительный мир и грибы/Фрукты",
+        "Еда и напитки/Фрукты"
+      ]
+    },
+    {
+      "id": "ru-r-017",
+      "lemma": "дорога",
+      "meaning": "дорога",
+      "sense_ids": [
+        "ru-r-017-sense"
+      ],
+      "category_paths": []
+    },
+    {
+      "id": "ru-r-019",
+      "lemma": "жираф",
+      "meaning": "жираф",
+      "sense_ids": [
+        "ru-r-019-sense"
+      ],
+      "category_paths": [
+        "Животный мир/Дикие животные/Жарких стран и других регионов"
+      ]
+    },
+    {
+      "id": "ru-r-020",
+      "lemma": "забор",
+      "meaning": "забор",
+      "sense_ids": [
+        "ru-r-020-sense"
+      ],
+      "category_paths": []
+    },
+    {
+      "id": "ru-r-025",
+      "lemma": "карандаш",
+      "meaning": "карандаш",
+      "sense_ids": [
+        "ru-r-025-sense"
+      ],
+      "category_paths": [
+        "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+      ]
+    },
+    {
+      "id": "ru-r-027",
+      "lemma": "картошка",
+      "meaning": "картошка",
+      "sense_ids": [
+        "ru-r-027-sense"
+      ],
+      "category_paths": [
+        "Растительный мир и грибы/Овощи",
+        "Еда и напитки/Овощи"
+      ]
+    },
+    {
+      "id": "ru-r-031",
+      "lemma": "компьютер",
+      "meaning": "компьютер",
+      "sense_ids": [
+        "ru-r-031-sense"
+      ],
+      "category_paths": [
+        "Дом и быт/Бытовая техника и электроника/Электроника"
+      ]
+    },
+    {
+      "id": "ru-r-033",
+      "lemma": "коробка",
+      "meaning": "коробка",
+      "sense_ids": [
+        "ru-r-033-sense"
+      ],
+      "category_paths": [
+        "Дом и быт/Предметы домашнего обихода/Хранение вещей"
+      ]
+    },
+    {
+      "id": "ru-r-034",
+      "lemma": "корова",
+      "meaning": "корова",
+      "sense_ids": [
+        "ru-r-034-sense"
+      ],
+      "category_paths": [
+        "Животный мир/Вспомогательные/Самки",
+        "Животный мир/Домашние животные/Сельскохозяйственные животные"
+      ]
+    },
+    {
+      "id": "ru-r-036",
+      "lemma": "корона",
+      "meaning": "корона",
+      "sense_ids": [
+        "ru-r-036-sense"
+      ],
+      "category_paths": []
+    },
+    {
+      "id": "ru-r-040",
+      "lemma": "краски",
+      "meaning": "краски",
+      "sense_ids": [
+        "ru-r-040-sense"
+      ],
+      "category_paths": [
+        "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+      ]
+    },
+    {
+      "id": "ru-r-043",
+      "lemma": "кружка",
+      "meaning": "кружка",
+      "sense_ids": [
+        "ru-r-043-sense"
+      ],
+      "category_paths": [
+        "Дом и быт/Посуда и кухонные принадлежности/Чайная посуда"
+      ]
+    },
+    {
+      "id": "ru-r-045",
+      "lemma": "куртка",
+      "meaning": "куртка",
+      "sense_ids": [
+        "ru-r-045-sense"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Одежда"
+      ]
+    },
+    {
+      "id": "ru-r-046",
+      "lemma": "морковь",
+      "meaning": "морковь",
+      "sense_ids": [
+        "ru-r-046-sense"
+      ],
+      "category_paths": [
+        "Растительный мир и грибы/Овощи",
+        "Еда и напитки/Овощи"
+      ]
+    },
+    {
+      "id": "ru-r-047",
+      "lemma": "мороженое",
+      "meaning": "мороженое",
+      "sense_ids": [
+        "ru-r-047-sense"
+      ],
+      "category_paths": [
+        "Еда и напитки/Сладости"
+      ]
+    },
+    {
+      "id": "ru-r-054",
+      "lemma": "подарок",
+      "meaning": "подарок",
+      "sense_ids": [
+        "ru-r-054-sense"
+      ],
+      "category_paths": []
+    },
+    {
+      "id": "ru-r-055",
+      "lemma": "помидор",
+      "meaning": "помидор",
+      "sense_ids": [
+        "ru-r-055-sense"
+      ],
+      "category_paths": [
+        "Растительный мир и грибы/Овощи",
+        "Еда и напитки/Овощи"
+      ]
+    },
+    {
+      "id": "ru-r-058",
+      "lemma": "радуга",
+      "meaning": "радуга",
+      "sense_ids": [
+        "ru-r-058-sense"
+      ],
+      "category_paths": []
+    },
+    {
+      "id": "ru-r-060",
+      "lemma": "ракета",
+      "meaning": "ракета",
+      "sense_ids": [
+        "ru-r-060-sense"
+      ],
+      "category_paths": [
+        "Природа и окружающий мир/Космос"
+      ]
+    },
+    {
+      "id": "ru-r-061",
+      "lemma": "раковина",
+      "meaning": "умывальник",
+      "sense_ids": [
+        "pack03-119_rakovina"
+      ],
+      "category_paths": [
+        "Дом и быт/Ванная комната и гигиена/Сантехника"
+      ]
+    },
+    {
+      "id": "ru-r-064",
+      "lemma": "расчёска",
+      "meaning": "расчёска",
+      "sense_ids": [
+        "ru-r-064-sense"
+      ],
+      "category_paths": [
+        "Дом и быт/Ванная комната и гигиена/Предметы личной гигиены"
+      ]
+    },
+    {
+      "id": "ru-r-065",
+      "lemma": "робот",
+      "meaning": "робот",
+      "sense_ids": [
+        "ru-r-065-sense"
+      ],
+      "category_paths": []
+    },
+    {
+      "id": "ru-r-068",
+      "lemma": "рука",
+      "meaning": "рука",
+      "sense_ids": [
+        "ru-r-068-sense"
+      ],
+      "category_paths": [
+        "Человек/Части тела"
+      ]
+    },
+    {
+      "id": "ru-r-071",
+      "lemma": "рыба",
+      "meaning": "рыба",
+      "sense_ids": [
+        "ru-r-071-sense"
+      ],
+      "category_paths": [
+        "Обобщающие понятия"
+      ]
+    },
+    {
+      "id": "ru-r-075",
+      "lemma": "светофор",
+      "meaning": "светофор",
+      "sense_ids": [
+        "ru-r-075-sense"
+      ],
+      "category_paths": []
+    },
+    {
+      "id": "ru-r-076",
+      "lemma": "свитер",
+      "meaning": "свитер",
+      "sense_ids": [
+        "ru-r-076-sense"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Одежда"
+      ]
+    },
+    {
+      "id": "ru-r-077",
+      "lemma": "сковорода",
+      "meaning": "сковорода",
+      "sense_ids": [
+        "ru-r-077-sense"
+      ],
+      "category_paths": [
+        "Дом и быт/Посуда и кухонные принадлежности/Посуда для приготовления пищи"
+      ]
+    },
+    {
+      "id": "ru-r-079",
+      "lemma": "сыр",
+      "meaning": "сыр",
+      "sense_ids": [
+        "ru-r-079-sense"
+      ],
+      "category_paths": [
+        "Еда и напитки/Молочные продукты"
+      ]
+    },
+    {
+      "id": "ru-r-080",
+      "lemma": "телевизор",
+      "meaning": "телевизор",
+      "sense_ids": [
+        "ru-r-080-sense"
+      ],
+      "category_paths": [
+        "Дом и быт/Бытовая техника и электроника/Электроника"
+      ]
+    },
+    {
+      "id": "ru-r-083",
+      "lemma": "торт",
+      "meaning": "торт",
+      "sense_ids": [
+        "ru-r-083-sense"
+      ],
+      "category_paths": [
+        "Еда и напитки/Сладости"
+      ]
+    },
+    {
+      "id": "ru-r-084",
+      "lemma": "трава",
+      "meaning": "трава",
+      "sense_ids": [
+        "ru-r-084-sense"
+      ],
+      "category_paths": []
+    },
+    {
+      "id": "ru-r-085",
+      "lemma": "трактор",
+      "meaning": "трактор",
+      "sense_ids": [
+        "ru-r-085-sense"
+      ],
+      "category_paths": [
+        "Общество и окружающая среда/Транспорт и специальная техника/Сельскохозяйственная техника"
+      ]
+    },
+    {
+      "id": "ru-r-094",
+      "lemma": "шарф",
+      "meaning": "шарф",
+      "sense_ids": [
+        "ru-r-094-sense"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Одежда",
+        "Человек/Одежда, обувь и аксессуары/Аксессуары"
+      ]
+    },
+    {
+      "id": "ru-r-extra-027",
+      "lemma": "крыша",
+      "meaning": "крыша",
+      "sense_ids": [
+        "pack03-098_krysha"
+      ],
+      "category_paths": [
+        "Дом и быт/Жилище/Части дома"
+      ]
+    },
+    {
+      "id": "ru-r-add-d0bad0b2d0b0d180d182d0b8d180d0b0",
+      "lemma": "квартира",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Жилище/Виды жилища"
+      ]
+    },
+    {
+      "id": "ru-r-add-d188d0bed180d182d18b",
+      "lemma": "шорты",
+      "meaning": "шорты",
+      "sense_ids": [
+        "ru-r-add-d188d0bed180d182d18b-sense"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Одежда"
+      ]
+    },
+    {
+      "id": "ru-r-add-d0b3d180d183d0b7d0bed0b2d0b8d0ba",
+      "lemma": "грузовик",
+      "meaning": "грузовик",
+      "sense_ids": [
+        "ru-r-add-d0b3d180d183d0b7d0bed0b2d0b8d0ba-sense"
+      ],
+      "category_paths": [
+        "Общество и окружающая среда/Транспорт и специальная техника/Грузовой транспорт"
+      ]
+    },
+    {
+      "id": "ru-r-add-d0bad180d0bed0b2d0b0d182d18c",
+      "lemma": "кровать",
+      "meaning": "кровать",
+      "sense_ids": [
+        "ru-r-add-d0bad180d0bed0b2d0b0d182d18c-sense"
+      ],
+      "category_paths": [
+        "Дом и быт/Мебель"
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0001",
+      "lemma": "вечер",
+      "meaning": "вечер",
+      "sense_ids": [
+        "ru-new-20261102-0001-published-sense"
+      ],
+      "category_paths": [
+        "Время и календарь/Части суток"
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0008",
+      "lemma": "прогулка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Человек/Повседневная жизнь/Отдых"
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0031",
+      "lemma": "игрушка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Обобщающие понятия"
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0032",
+      "lemma": "зеркало",
+      "meaning": "зеркало",
+      "sense_ids": [
+        "ru-new-20261102-0032-published-sense"
+      ],
+      "category_paths": [
+        "Дом и быт/Интерьер и украшения"
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0035",
+      "lemma": "розетка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Предметы домашнего обихода/Освещение и электричество/Электрические принадлежности"
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0038",
+      "lemma": "кроссовки",
+      "meaning": "кроссовки",
+      "sense_ids": [
+        "ru-new-20261102-0038-published-sense"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Обувь"
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0041",
+      "lemma": "квадрат",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Математические представления/Геометрические фигуры/Плоские фигуры"
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0044",
+      "lemma": "фломастер",
+      "meaning": "фломастер",
+      "sense_ids": [
+        "ru-new-20261102-0044-published-sense"
+      ],
+      "category_paths": [
+        "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0050",
+      "lemma": "вертолёт",
+      "meaning": "вертолёт",
+      "sense_ids": [
+        "ru-new-20261102-0050-published-sense"
+      ],
+      "category_paths": [
+        "Общество и окружающая среда/Транспорт и специальная техника/Воздушный транспорт"
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0320",
+      "lemma": "кран",
+      "meaning": "водопроводный кран",
+      "sense_ids": [
+        "ru-r-039-water"
+      ],
+      "category_paths": [
+        "Дом и быт/Ванная комната и гигиена/Сантехника"
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0321",
+      "lemma": "мышь",
+      "meaning": "небольшое млекопитающее — мышь",
+      "sense_ids": [
+        "ru-new-20261102-0321-published-sense"
+      ],
+      "category_paths": [
+        "Животный мир/Дикие животные/Лесные"
+      ]
+    },
+    {
+      "id": "ru-new-20261102-0322",
+      "lemma": "мышь",
+      "meaning": "компьютерная мышь",
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Бытовая техника и электроника/Электроника"
+      ]
+    },
+    {
+      "id": "lex-v2-d0b1d0b5d0bbd0bad0b0",
+      "lemma": "белка",
+      "meaning": "белка",
+      "sense_ids": [
+        "lex-v2-d0b1d0b5d0bbd0bad0b0-published-sense"
+      ],
+      "category_paths": [
+        "Животный мир/Вспомогательные/Самки",
+        "Животный мир/Дикие животные/Лесные"
+      ]
+    },
+    {
+      "id": "lex-v2-d0b2d0bed0bbd0ba",
+      "lemma": "волк",
+      "meaning": "волк",
+      "sense_ids": [
+        "lex-v2-d0b2d0bed0bbd0ba-published-sense"
+      ],
+      "category_paths": [
+        "Животный мир/Дикие животные/Лесные"
+      ]
+    },
+    {
+      "id": "lex-v2-d191d0b6",
+      "lemma": "ёж",
+      "meaning": "ёж",
+      "sense_ids": [
+        "lex-v2-d191d0b6-published-sense"
+      ],
+      "category_paths": [
+        "Животный мир/Дикие животные/Лесные"
+      ]
+    },
+    {
+      "id": "lex-v2-d0b7d0b0d18fd186",
+      "lemma": "заяц",
+      "meaning": "заяц",
+      "sense_ids": [
+        "lex-v2-d0b7d0b0d18fd186-published-sense"
+      ],
+      "category_paths": [
+        "Животный мир/Дикие животные/Лесные"
+      ]
+    },
+    {
+      "id": "lex-v2-d0b7d0bcd0b5d18f",
+      "lemma": "змея",
+      "meaning": "змея",
+      "sense_ids": [
+        "lex-v2-d0b7d0bcd0b5d18f-published-sense"
+      ],
+      "category_paths": [
+        "Животный мир/Пресмыкающиеся и земноводные"
+      ]
+    },
+    {
+      "id": "lex-v2-d0bad0b8d181d182d18c",
+      "lemma": "кисть",
+      "meaning": "кисть руки",
+      "sense_ids": [],
+      "category_paths": [
+        "Человек/Части тела"
+      ]
+    },
+    {
+      "id": "lex-v2-d0bad0bed182",
+      "lemma": "кот",
+      "meaning": "кот",
+      "sense_ids": [
+        "pack03-163_kot"
+      ],
+      "category_paths": [
+        "Животный мир/Домашние животные/Домашние питомцы"
+      ]
+    },
+    {
+      "id": "lex-v2-d0bad0bed188d0bad0b0",
+      "lemma": "кошка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Животный мир/Вспомогательные/Самки",
+        "Животный мир/Домашние животные/Домашние питомцы"
+      ]
+    },
+    {
+      "id": "lex-v2-d0bbd0b5d0b2",
+      "lemma": "лев",
+      "meaning": "лев",
+      "sense_ids": [
+        "lex-v2-d0bbd0b5d0b2-published-sense"
+      ],
+      "category_paths": [
+        "Животный мир/Дикие животные/Жарких стран и других регионов"
+      ]
+    },
+    {
+      "id": "lex-v2-d0bbd0b8d181d0b0",
+      "lemma": "лиса",
+      "meaning": "лиса",
+      "sense_ids": [
+        "pack03-169_lisa"
+      ],
+      "category_paths": [
+        "Животный мир/Вспомогательные/Самки",
+        "Животный мир/Дикие животные/Лесные"
+      ]
+    },
+    {
+      "id": "lex-v2-d0bbd0bed188d0b0d0b4d18c",
+      "lemma": "лошадь",
+      "meaning": "лошадь",
+      "sense_ids": [
+        "pack03-155_loshad"
+      ],
+      "category_paths": [
+        "Животный мир/Домашние животные/Сельскохозяйственные животные"
+      ]
+    },
+    {
+      "id": "lex-v2-d0bbd18fd0b3d183d188d0bad0b0",
+      "lemma": "лягушка",
+      "meaning": "лягушка",
+      "sense_ids": [
+        "pack03-165_lyagushka"
+      ],
+      "category_paths": [
+        "Животный мир/Пресмыкающиеся и земноводные"
+      ]
+    },
+    {
+      "id": "lex-v2-d0bcd0b5d0b4d0b2d0b5d0b4d18c",
+      "lemma": "медведь",
+      "meaning": "медведь",
+      "sense_ids": [
+        "lex-v2-d0bcd0b5d0b4d0b2d0b5d0b4d18c-published-sense"
+      ],
+      "category_paths": [
+        "Животный мир/Дикие животные/Лесные"
+      ]
+    },
+    {
+      "id": "lex-v2-d0bed0b1d0b5d0b7d18cd18fd0bdd0b0",
+      "lemma": "обезьяна",
+      "meaning": "обезьяна",
+      "sense_ids": [
+        "lex-v2-d0bed0b1d0b5d0b7d18cd18fd0bdd0b0-published-sense"
+      ],
+      "category_paths": [
+        "Животный мир/Дикие животные/Жарких стран и других регионов"
+      ]
+    },
+    {
+      "id": "lex-v2-d181d0b2d0b8d0bdd18cd18f",
+      "lemma": "свинья",
+      "meaning": "свинья",
+      "sense_ids": [
+        "pack03-157_svinya"
+      ],
+      "category_paths": [
+        "Животный мир/Вспомогательные/Самки",
+        "Животный мир/Домашние животные/Сельскохозяйственные животные"
+      ]
+    },
+    {
+      "id": "lex-v2-d181d0bbd0bed0bd",
+      "lemma": "слон",
+      "meaning": "слон",
+      "sense_ids": [
+        "pack03-170_slon"
+      ],
+      "category_paths": [
+        "Животный мир/Дикие животные/Жарких стран и других регионов"
+      ]
+    },
+    {
+      "id": "lex-v2-d181d0bed0b1d0b0d0bad0b0",
+      "lemma": "собака",
+      "meaning": "собака",
+      "sense_ids": [
+        "pack03-162_sobaka"
+      ],
+      "category_paths": [
+        "Животный мир/Домашние животные/Домашние питомцы"
+      ]
+    },
+    {
+      "id": "lex-v2-d187d0b5d180d0b5d0bfd0b0d185d0b0",
+      "lemma": "черепаха",
+      "meaning": "черепаха",
+      "sense_ids": [
+        "lex-v2-d187d0b5d180d0b5d0bfd0b0d185d0b0-published-sense"
+      ],
+      "category_paths": [
+        "Животный мир/Пресмыкающиеся и земноводные"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0b4d0b5d180d0b5d0b2d0be",
+      "lemma": "дерево",
+      "meaning": "дерево",
+      "sense_ids": [
+        "ru-plant-20261104-d0b4d0b5d180d0b5d0b2d0be-published-sense"
+      ],
+      "category_paths": [
+        "Обобщающие понятия"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d186d0b2d0b5d182d0bed0ba",
+      "lemma": "цветок",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Обобщающие понятия"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d180d0b0d181d182d0b5d0bdd0b8d0b5",
+      "lemma": "растение",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Обобщающие понятия"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bed0b2d0bed189",
+      "lemma": "овощ",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Обобщающие понятия"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bed0b3d183d180d0b5d186",
+      "lemma": "огурец",
+      "meaning": "огурец",
+      "sense_ids": [
+        "ru-plant-20261104-d0bed0b3d183d180d0b5d186-published-sense"
+      ],
+      "category_paths": [
+        "Растительный мир и грибы/Овощи",
+        "Еда и напитки/Овощи"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bad0b0d0bfd183d181d182d0b0",
+      "lemma": "капуста",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Растительный мир и грибы/Овощи",
+        "Еда и напитки/Овощи"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bbd183d0ba3ad180d0b5d0bfd187d0b0d182d18bd0b920d0bbd183d0ba2028d0bed0b2d0bed18929",
+      "lemma": "лук",
+      "meaning": "репчатый лук (овощ)",
+      "sense_ids": [
+        "ru-plant-20261104-d0bbd183d0ba3ad180d0b5d0bfd187d0b0d182d18bd0b920d0bbd183d0ba2028d0bed0b2d0bed18929-published-sense"
+      ],
+      "category_paths": [
+        "Растительный мир и грибы/Овощи",
+        "Еда и напитки/Овощи"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d18fd0b1d0bbd0bed0bad0be",
+      "lemma": "яблоко",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Растительный мир и грибы/Фрукты",
+        "Еда и напитки/Фрукты"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0b1d0b0d0bdd0b0d0bd",
+      "lemma": "банан",
+      "meaning": "банан",
+      "sense_ids": [
+        "ru-plant-20261104-d0b1d0b0d0bdd0b0d0bd-published-sense"
+      ],
+      "category_paths": [
+        "Растительный мир и грибы/Фрукты",
+        "Еда и напитки/Фрукты"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0b0d0bfd0b5d0bbd18cd181d0b8d0bd",
+      "lemma": "апельсин",
+      "meaning": "апельсин",
+      "sense_ids": [
+        "ru-plant-20261104-d0b0d0bfd0b5d0bbd18cd181d0b8d0bd-published-sense"
+      ],
+      "category_paths": [
+        "Растительный мир и грибы/Фрукты",
+        "Еда и напитки/Фрукты"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bcd0b0d0bdd0b4d0b0d180d0b8d0bd",
+      "lemma": "мандарин",
+      "meaning": "мандарин",
+      "sense_ids": [
+        "ru-plant-20261104-d0bcd0b0d0bdd0b4d0b0d180d0b8d0bd-published-sense"
+      ],
+      "category_paths": [
+        "Растительный мир и грибы/Фрукты",
+        "Еда и напитки/Фрукты"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bbd0b8d0bcd0bed0bd",
+      "lemma": "лимон",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Растительный мир и грибы/Фрукты",
+        "Еда и напитки/Фрукты"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bad0bbd183d0b1d0bdd0b8d0bad0b0",
+      "lemma": "клубника",
+      "meaning": "клубника",
+      "sense_ids": [
+        "ru-plant-20261104-d0bad0bbd183d0b1d0bdd0b8d0bad0b0-published-sense"
+      ],
+      "category_paths": [
+        "Растительный мир и грибы/Ягоды/Садовые",
+        "Еда и напитки/Ягоды"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0bcd0b0d0bbd0b8d0bdd0b0",
+      "lemma": "малина",
+      "meaning": "малина",
+      "sense_ids": [
+        "ru-plant-20261104-d0bcd0b0d0bbd0b8d0bdd0b0-published-sense"
+      ],
+      "category_paths": [
+        "Растительный мир и грибы/Ягоды/Садовые",
+        "Еда и напитки/Ягоды"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0b2d0b8d188d0bdd18f",
+      "lemma": "вишня",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Растительный мир и грибы/Ягоды/Садовые",
+        "Еда и напитки/Ягоды"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d18fd0b3d0bed0b4d0b0",
+      "lemma": "ягода",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Обобщающие понятия"
+      ]
+    },
+    {
+      "id": "ru-plant-20261104-d0b3d180d0b8d0b1",
+      "lemma": "гриб",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Обобщающие понятия"
+      ]
+    },
+    {
+      "id": "ru-gen-20261104-animal",
+      "lemma": "животное",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Обобщающие понятия"
+      ]
+    },
+    {
+      "id": "ru-gen-20261104-bird",
+      "lemma": "птица",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Обобщающие понятия"
+      ]
+    },
+    {
+      "id": "ru-gen-20261104-furniture",
+      "lemma": "мебель",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Обобщающие понятия"
+      ]
+    },
+    {
+      "id": "ru-gen-20261104-dishes",
+      "lemma": "посуда",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Обобщающие понятия"
+      ]
+    },
+    {
+      "id": "ru-images-20261105-158_lampa",
+      "lemma": "лампа",
+      "meaning": "лампа",
+      "sense_ids": [
+        "pack03-158_lampa"
+      ],
+      "category_paths": [
+        "Дом и быт/Предметы домашнего обихода/Освещение и электричество/Осветительные приборы"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-5db28abf",
+      "lemma": "банка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Посуда и кухонные принадлежности/Ёмкости для хранения"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-fab42c9f",
+      "lemma": "бутылка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Посуда и кухонные принадлежности/Ёмкости для хранения"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-57fec3cd",
+      "lemma": "ванна",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Ванная комната и гигиена/Сантехника"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-1166080b",
+      "lemma": "веник",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Уборка и стирка/Инвентарь для уборки"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-5eb96006",
+      "lemma": "вилка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Посуда и кухонные принадлежности/Столовые приборы"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-5a54a27c",
+      "lemma": "выключатель",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Предметы домашнего обихода/Освещение и электричество/Электрические принадлежности"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-e3e0c479",
+      "lemma": "гвоздь",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Инструменты/Крепёжные и вспомогательные материалы",
+        "Игры, творчество и увлечения/Инструменты/Крепёжные и вспомогательные материалы"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-f31fd446",
+      "lemma": "дверь",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Жилище/Части дома"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-c54e368a",
+      "lemma": "диван",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Мебель"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-8bcb0907",
+      "lemma": "дом",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Жилище/Виды жилища"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-966495cc",
+      "lemma": "душ",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Ванная комната и гигиена/Сантехника"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-dfa4b2aa",
+      "lemma": "замок",
+      "meaning": "замок",
+      "sense_ids": [
+        "ru-home-20261105-dfa4b2aa-sense"
+      ],
+      "category_paths": [
+        "Дом и быт/Предметы домашнего обихода/Прочие бытовые предметы"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-4a814f4",
+      "lemma": "зубная паста",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Ванная комната и гигиена/Предметы личной гигиены"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-92d7e826",
+      "lemma": "зубная щётка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Ванная комната и гигиена/Предметы личной гигиены"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-e02fd2f5",
+      "lemma": "иголка",
+      "meaning": "швейная иголка",
+      "sense_ids": [],
+      "category_paths": [
+        "Игры, творчество и увлечения/Шитьё и рукоделие"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-67d50378",
+      "lemma": "кастрюля",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Посуда и кухонные принадлежности/Посуда для приготовления пищи"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-8224c0b5",
+      "lemma": "клавиатура",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Бытовая техника и электроника/Электроника"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-de0741f",
+      "lemma": "ключ",
+      "meaning": "ключ",
+      "sense_ids": [
+        "ru-home-20261105-de0741f-sense"
+      ],
+      "category_paths": [
+        "Дом и быт/Предметы домашнего обихода/Прочие бытовые предметы"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-adca2d8a",
+      "lemma": "лампочка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Предметы домашнего обихода/Освещение и электричество/Осветительные приборы"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-5423908",
+      "lemma": "ложка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Посуда и кухонные принадлежности/Столовые приборы"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-85858c77",
+      "lemma": "лопата",
+      "meaning": "лопата",
+      "sense_ids": [
+        "ru-home-20261105-85858c77-sense"
+      ],
+      "category_paths": [
+        "Дом и быт/Инструменты/Садовые инструменты",
+        "Игры, творчество и увлечения/Инструменты/Садовые инструменты"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-21314a78",
+      "lemma": "молоток",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Инструменты/Ручные инструменты",
+        "Игры, творчество и увлечения/Инструменты/Ручные инструменты"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-b1462dee",
+      "lemma": "монитор",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Бытовая техника и электроника/Электроника"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-383c63b3",
+      "lemma": "мыло",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Ванная комната и гигиена/Предметы личной гигиены"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-31574f40",
+      "lemma": "нитка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Игры, творчество и увлечения/Шитьё и рукоделие"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-a7f282c0",
+      "lemma": "нож",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Посуда и кухонные принадлежности/Столовые приборы"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-62ced432",
+      "lemma": "ножницы",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Игры, творчество и увлечения/Шитьё и рукоделие"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-aad3efca",
+      "lemma": "одеяло",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Предметы домашнего обихода/Постельные принадлежности"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-35ae72a6",
+      "lemma": "окно",
+      "meaning": "окно",
+      "sense_ids": [
+        "ru-home-20261105-35ae72a6-sense"
+      ],
+      "category_paths": [
+        "Дом и быт/Жилище/Части дома"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-3dd17450",
+      "lemma": "отвёртка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Инструменты/Ручные инструменты",
+        "Игры, творчество и увлечения/Инструменты/Ручные инструменты"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-99b706d7",
+      "lemma": "пила",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Инструменты/Ручные инструменты",
+        "Игры, творчество и увлечения/Инструменты/Ручные инструменты"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-239dbff9",
+      "lemma": "плита",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Бытовая техника и электроника/Кухонная техника"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-cdcc6283",
+      "lemma": "подушка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Предметы домашнего обихода/Постельные принадлежности"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-7f2d4b7",
+      "lemma": "пол",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Жилище/Части дома"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-9ee9a0f2",
+      "lemma": "полотенце",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Предметы домашнего обихода/Домашний текстиль"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-298f060d",
+      "lemma": "пылесос",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Бытовая техника и электроника/Техника для дома"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-691e73d6",
+      "lemma": "разделочная доска",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Посуда и кухонные принадлежности/Кухонные инструменты"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-1e2c3905",
+      "lemma": "стакан",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Посуда и кухонные принадлежности/Столовая посуда"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-accfb2b4",
+      "lemma": "стена",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Жилище/Части дома"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-5e049672",
+      "lemma": "стиральная машина",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Бытовая техника и электроника/Техника для дома"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-9769581b",
+      "lemma": "стол",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Мебель"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-83f6f264",
+      "lemma": "стул",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Мебель"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-bd699907",
+      "lemma": "сумка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Предметы домашнего обихода/Хранение вещей"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-259cc695",
+      "lemma": "тарелка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Посуда и кухонные принадлежности/Столовая посуда"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-99e06d53",
+      "lemma": "телефон",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Бытовая техника и электроника/Электроника"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-8022030e",
+      "lemma": "унитаз",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Ванная комната и гигиена/Сантехника"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-d616cb35",
+      "lemma": "утюг",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Бытовая техника и электроника/Техника для дома"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-8c94dacc",
+      "lemma": "фонарик",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Предметы домашнего обихода/Освещение и электричество/Осветительные приборы"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-3cc18977",
+      "lemma": "холодильник",
+      "meaning": "холодильник",
+      "sense_ids": [
+        "ru-home-20261105-3cc18977-sense"
+      ],
+      "category_paths": [
+        "Дом и быт/Бытовая техника и электроника/Кухонная техника"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-444ca938",
+      "lemma": "чайник",
+      "meaning": "заварочный чайник",
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Посуда и кухонные принадлежности/Чайная посуда"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-e096449e",
+      "lemma": "часы",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Интерьер и украшения"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-6f1d7df8",
+      "lemma": "чашка",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Посуда и кухонные принадлежности/Чайная посуда"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-89ad3e8",
+      "lemma": "шампунь",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Ванная комната и гигиена/Предметы личной гигиены"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-f2834e7d",
+      "lemma": "шкаф",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Мебель"
+      ]
+    },
+    {
+      "id": "ru-home-20261105-f7cfdfb1",
+      "lemma": "ящик",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Предметы домашнего обихода/Хранение вещей"
+      ]
+    },
+    {
+      "id": "ru-sense-20261105-kist-tool",
+      "lemma": "кисть",
+      "meaning": "кисть для рисования или окрашивания",
+      "sense_ids": [],
+      "category_paths": [
+        "Дом и быт/Инструменты/Малярные и измерительные инструменты",
+        "Игры, творчество и увлечения/Инструменты/Малярные и измерительные инструменты"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0001",
+      "lemma": "платье",
+      "meaning": "платье",
+      "sense_ids": [
+        "ru-noun-20261109-0001-published-alias-ru-new-20261108-0ca50229c2"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Одежда"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0003",
+      "lemma": "брюки",
+      "meaning": "брюки",
+      "sense_ids": [
+        "ru-noun-20261109-0003-sense"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Одежда"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0005",
+      "lemma": "футболка",
+      "meaning": "футболка",
+      "sense_ids": [
+        "ru-noun-20261109-0005-published-alias-ru-new-20261108-6ce7e80f4f"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Одежда"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0007",
+      "lemma": "кофта",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Одежда"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0011",
+      "lemma": "шапка",
+      "meaning": "шапка",
+      "sense_ids": [
+        "ru-noun-20261109-0011-published-alias-ru-new-20261108-70c372449f"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Одежда"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0016",
+      "lemma": "ботинок",
+      "meaning": "ботинок",
+      "sense_ids": [
+        "ru-noun-20261109-0016-published-alias-ru-new-20261108-7f2d7d1d30"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Обувь"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0017",
+      "lemma": "сапог",
+      "meaning": "сапог",
+      "sense_ids": [
+        "ru-noun-20261109-0017-published-alias-ru-new-20261108-c17d585bac"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Обувь"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0023",
+      "lemma": "варежка",
+      "meaning": "варежка",
+      "sense_ids": [
+        "ru-noun-20261109-0023-published-alias-ru-new-20261108-d34a9acbe5"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Аксессуары"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0029",
+      "lemma": "носок",
+      "meaning": "носок",
+      "sense_ids": [
+        "ru-noun-20261109-0029-published-alias-ru-new-20261108-370345bb3c"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Аксессуары",
+        "Человек/Одежда, обувь и аксессуары/Одежда"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0030",
+      "lemma": "кукла",
+      "meaning": "кукла",
+      "sense_ids": [
+        "ru-noun-20261109-0030-published-alias-ru-new-20261108-2bac6d3523"
+      ],
+      "category_paths": [
+        "Игры, творчество и увлечения/Игрушки"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0031",
+      "lemma": "мяч",
+      "meaning": "мяч",
+      "sense_ids": [
+        "ru-noun-20261109-0031-published-alias-ru-new-20261108-84653d88d9"
+      ],
+      "category_paths": [
+        "Игры, творчество и увлечения/Игрушки",
+        "Игры, творчество и увлечения/Спортивный инвентарь"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0032",
+      "lemma": "кубик",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Игры, творчество и увлечения/Игрушки"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0055",
+      "lemma": "вода",
+      "meaning": "вода",
+      "sense_ids": [
+        "ru-noun-20261109-0055-sense"
+      ],
+      "category_paths": [
+        "Еда и напитки/Напитки"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0056",
+      "lemma": "молоко",
+      "meaning": "молоко",
+      "sense_ids": [
+        "ru-noun-20261109-0056-published-alias-ru-new-20261108-b8f6c0f802"
+      ],
+      "category_paths": [
+        "Еда и напитки/Напитки"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0057",
+      "lemma": "сок",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Еда и напитки/Напитки"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0061",
+      "lemma": "суп",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Еда и напитки/Готовые блюда"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0062",
+      "lemma": "каша",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Еда и напитки/Готовые блюда"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0067",
+      "lemma": "автомобиль",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Транспорт и специальная техника/Личный транспорт"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0068",
+      "lemma": "автобус",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Транспорт и специальная техника/Общественный транспорт"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0069",
+      "lemma": "поезд",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Транспорт и специальная техника/Железнодорожный транспорт"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0070",
+      "lemma": "велосипед",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Транспорт и специальная техника/Личный транспорт"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0079",
+      "lemma": "улица",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Город и село/Улицы и общественные пространства"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0085",
+      "lemma": "магазин",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Город и село/Здания и учреждения"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0091",
+      "lemma": "лес",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Природа и окружающий мир/Природные объекты"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0094",
+      "lemma": "река",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Природа и окружающий мир/Природные объекты"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0095",
+      "lemma": "песок",
+      "meaning": "сыпучий природный материал",
+      "sense_ids": [],
+      "category_paths": [
+        "Природа и окружающий мир/Природные объекты"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0096",
+      "lemma": "море",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Природа и окружающий мир/Природные объекты"
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0100",
+      "lemma": "камень",
+      "meaning": "отдельный кусок горной породы",
+      "sense_ids": [],
+      "category_paths": [
+        "Природа и окружающий мир/Природные объекты"
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-004",
+      "lemma": "макароны",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Еда и напитки/Готовые блюда"
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-008",
+      "lemma": "хлеб",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Еда и напитки/Выпечка"
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-016",
+      "lemma": "конфета",
+      "meaning": "конфета",
+      "sense_ids": [
+        "ru-noun-extra-20261109-016-sense"
+      ],
+      "category_paths": [
+        "Еда и напитки/Сладости"
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-025",
+      "lemma": "школа",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Город и село"
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-026",
+      "lemma": "детский сад",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Город и село"
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-029",
+      "lemma": "снег",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Природа и окружающий мир/Погодные явления"
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-030",
+      "lemma": "дождь",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Природа и окружающий мир/Погодные явления"
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-040",
+      "lemma": "книга",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-041",
+      "lemma": "пенал",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-042",
+      "lemma": "ластик",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-044",
+      "lemma": "пластилин",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-047",
+      "lemma": "бумага",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-048",
+      "lemma": "самолёт",
+      "meaning": null,
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Транспорт и специальная техника/Воздушный транспорт"
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-049",
+      "lemma": "машина",
+      "meaning": "легковой автомобиль; не игрушечная машинка",
+      "sense_ids": [],
+      "category_paths": [
+        "Общество и окружающая среда/Транспорт и специальная техника/Личный транспорт"
+      ]
+    },
+    {
+      "id": "ru-new-20261108-2bac6d3523",
+      "lemma": "кукла",
+      "meaning": "кукла",
+      "sense_ids": [
+        "ru-new-20261108-2bac6d3523-published-sense"
+      ],
+      "category_paths": [
+        "Игры, творчество и увлечения/Игрушки"
+      ]
+    },
+    {
+      "id": "ru-new-20261108-b8f6c0f802",
+      "lemma": "молоко",
+      "meaning": "молоко",
+      "sense_ids": [
+        "ru-new-20261108-b8f6c0f802-published-sense"
+      ],
+      "category_paths": [
+        "Еда и напитки/Молочные продукты"
+      ]
+    },
+    {
+      "id": "ru-new-20261108-84653d88d9",
+      "lemma": "мяч",
+      "meaning": "мяч",
+      "sense_ids": [
+        "ru-new-20261108-84653d88d9-published-sense"
+      ],
+      "category_paths": [
+        "Игры, творчество и увлечения/Спортивный инвентарь"
+      ]
+    },
+    {
+      "id": "ru-new-20261108-97b71638c2",
+      "lemma": "облако",
+      "meaning": "облако",
+      "sense_ids": [
+        "ru-new-20261108-97b71638c2-published-sense"
+      ],
+      "category_paths": [
+        "Природа и окружающий мир/Погодные явления"
+      ]
+    },
+    {
+      "id": "ru-new-20261108-0ca50229c2",
+      "lemma": "платье",
+      "meaning": "платье",
+      "sense_ids": [
+        "ru-new-20261108-0ca50229c2-published-sense"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Одежда"
+      ]
+    },
+    {
+      "id": "ru-new-20261108-6ce7e80f4f",
+      "lemma": "футболка",
+      "meaning": "футболка",
+      "sense_ids": [
+        "ru-new-20261108-6ce7e80f4f-published-sense"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Одежда"
+      ]
+    },
+    {
+      "id": "ru-new-20261108-70c372449f",
+      "lemma": "шапка",
+      "meaning": "шапка",
+      "sense_ids": [
+        "ru-new-20261108-70c372449f-published-sense"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Одежда"
+      ]
+    },
+    {
+      "id": "ru-new-20261108-53796f6d09",
+      "lemma": "штаны",
+      "meaning": "штаны",
+      "sense_ids": [
+        "ru-new-20261108-53796f6d09-published-sense"
+      ],
+      "category_paths": [
+        "Человек/Одежда, обувь и аксессуары/Одежда"
+      ]
+    },
+    {
+      "id": "ru-new-20261108-a88df7da50",
+      "lemma": "яйцо",
+      "meaning": "яйцо",
+      "sense_ids": [
+        "ru-new-20261108-a88df7da50-published-sense"
+      ],
+      "category_paths": [
+        "Еда и напитки/Прочие продукты"
+      ]
+    }
+  ]
+}
