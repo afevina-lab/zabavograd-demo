@@ -1,9 +1,23 @@
 import {useRef,useState} from 'react';
 import {ControlWell} from './design-system/ControlWell.tsx';
-import {defaultFilters,type Filters} from './model.ts';
+import {defaultFilters,type Filters,type Word} from './model.ts';
 
 /** Transactional lexical syllable-structure selection: no large inline grid. */
-export function SyllableStructurePicker({filters,onChange}:{filters:Filters;onChange:(update:Partial<Filters>)=>void}){
+export function SyllableStructurePicker({filters,onChange,words=[]}:{filters:Filters;onChange:(update:Partial<Filters>)=>void;words?:Word[]}){
+ const descriptions:Record<number,string>={
+  1:'Двусложные слова из открытых слогов',2:'Трёхсложные слова из открытых слогов',
+  3:'Односложные слова',4:'Двусложные слова с закрытым слогом',
+  5:'Двусложные слова со стечением согласных в середине',
+  6:'Двусложные слова с закрытым слогом и стечением',
+  7:'Трёхсложные слова с закрытым слогом',
+  8:'Трёхсложные слова со стечением в середине',
+  9:'Трёхсложные слова со стечением и закрытым слогом',
+  10:'Трёхсложные слова с двумя стечениями согласных',
+  11:'Односложные слова со стечением согласных',
+  12:'Двусложные слова с двумя стечениями',
+  13:'Четырёхсложные слова из открытых слогов',
+  14:'Четырёхсложные слова со сложной слоговой структурой'
+ };
  const dialog=useRef<HTMLDialogElement>(null),trigger=useRef<HTMLButtonElement>(null);
  const [types,setTypes]=useState<number[]>(filters.types),[untyped,setUntyped]=useState(filters.untyped);
  const open=()=>{setTypes([...filters.types]);setUntyped(filters.untyped);dialog.current?.showModal()};
@@ -16,7 +30,7 @@ export function SyllableStructurePicker({filters,onChange}:{filters:Filters;onCh
   <dialog ref={dialog} className="sound-picker-dialog syllable-picker-dialog" aria-label="Выбор слоговой структуры" onCancel={()=>trigger.current?.focus()}>
    <div className="panel-scroll"><h2>Слоговая структура</h2>
     <label className="check"><input type="checkbox" checked={types.length===defaultFilters.types.length&&untyped} onChange={e=>{setTypes(e.target.checked?[...defaultFilters.types]:[]);setUntyped(e.target.checked)}}/>Выбрать всё</label>
-    <div className="types syllable-picker-grid">{defaultFilters.types.map(n=><label className="check" key={n}><input type="checkbox" checked={types.includes(n)} onChange={e=>setTypes(v=>e.target.checked?[...v,n]:v.filter(x=>x!==n))}/>{n}</label>)}</div>
+    <div className="types syllable-picker-grid">{defaultFilters.types.map(n=><label className="check syllable-type-option" key={n} title={descriptions[n]+(words.some(w=>w.type===n)?' — Например: '+words.filter(w=>w.type===n).slice(0,2).map(w=>w.label).join(', '):'')}><input type="checkbox" checked={types.includes(n)} onChange={e=>setTypes(v=>e.target.checked?[...v,n]:v.filter(x=>x!==n))}/>{n}</label>)}</div>
     <label className="check"><input type="checkbox" checked={untyped} onChange={e=>setUntyped(e.target.checked)}/>Без категории</label>
    </div>
    <div className="sound-picker-actions"><button className="primary" type="button" onClick={()=>{onChange({types,untyped});close()}}>Готово</button><button className="secondary" type="button" onClick={close}>Отмена</button></div>
