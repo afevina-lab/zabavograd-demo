@@ -1100,31 +1100,47 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a carrot",
+          "plural_form": "carrots",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une carotte",
+          "plural_form": "carottes",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una zanahoria",
+          "plural_form": "zanahorias",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Karotte",
+          "plural_form": "Karotten",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -1196,31 +1212,47 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a gift",
+          "plural_form": "gifts",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un cadeau",
+          "plural_form": "cadeaux",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un regalo",
+          "plural_form": "regalos",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Geschenk",
+          "plural_form": "Geschenke",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -1244,31 +1276,47 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a tomato",
+          "plural_form": "tomatoes",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une tomate",
+          "plural_form": "tomates",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un tomate",
+          "plural_form": "tomates",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Tomate",
+          "plural_form": "Tomaten",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -1292,31 +1340,47 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a rainbow",
+          "plural_form": "rainbows",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un arc-en-ciel",
+          "plural_form": "arcs-en-ciel",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un arcoíris",
+          "plural_form": "arcoíris",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Regenbogen",
+          "plural_form": "Regenbögen",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -1340,31 +1404,47 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a rocket",
+          "plural_form": "rockets",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une fusée",
+          "plural_form": "fusées",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un cohete",
+          "plural_form": "cohetes",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Rakete",
+          "plural_form": "Raketen",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -1388,31 +1468,47 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a washbasin",
+          "plural_form": "washbasins",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un lavabo",
+          "plural_form": "lavabos",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un lavabo",
+          "plural_form": "lavabos",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Waschbecken",
+          "plural_form": "Waschbecken",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -1436,31 +1532,47 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a comb",
+          "plural_form": "combs",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un peigne",
+          "plural_form": "peignes",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un peine",
+          "plural_form": "peines",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Kamm",
+          "plural_form": "Kämme",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -1484,31 +1596,47 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a robot",
+          "plural_form": "robots",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un robot",
+          "plural_form": "robots",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un robot",
+          "plural_form": "robots",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Roboter",
+          "plural_form": "Roboter",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -1532,31 +1660,47 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a hand",
+          "plural_form": "hands",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une main",
+          "plural_form": "mains",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una mano",
+          "plural_form": "manos",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Hand",
+          "plural_form": "Hände",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -1580,31 +1724,47 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a fish",
+          "plural_form": "fish",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un poisson",
+          "plural_form": "poissons",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un pez",
+          "plural_form": "peces",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Fisch",
+          "plural_form": "Fische",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -1628,31 +1788,47 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a traffic light",
+          "plural_form": "traffic lights",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un feu de circulation",
+          "plural_form": "feux de circulation",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un semáforo",
+          "plural_form": "semáforos",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Ampel",
+          "plural_form": "Ampeln",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -1676,31 +1852,47 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a sweater",
+          "plural_form": "sweaters",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un pull",
+          "plural_form": "pulls",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un suéter",
+          "plural_form": "suéteres",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Pullover",
+          "plural_form": "Pullover",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
@@ -1724,31 +1916,47 @@
       "language_details": {
         "en": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a frying pan",
+          "plural_form": "frying pans",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "fr": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une poêle",
+          "plural_form": "poêles",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "es": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una sartén",
+          "plural_form": "sartenes",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         },
         "de": {
           "part_of_speech": "noun",
-          "feature_review_status": "not_imported",
+          "feature_review_status": "suggested",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "not_imported"
+          "morphology_status": "suggested",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Pfanne",
+          "plural_form": "Pfannen",
+          "feature_source": "editorial_candidate_requires_dictionary_verification"
         }
       }
     },
