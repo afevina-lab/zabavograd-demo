@@ -138,7 +138,7 @@ test('Shared material actions use the design-system button variants',()=>{
  assert.match(memory,/<button type="button" className="icon-button" title="Перемешать состав"/);
  assert.match(memory,/<button type="button" className="icon-button" title="Выбрать слова вручную"/);
  assert.match(picker,/<button type="button" className="secondary" onClick={close}>Отмена<\/button>/);
- assert.match(material,/<button type="button" className="setup-add-rule" onClick=\{\(\)=>setL\(/);
+ assert.match(material,/<SetupAddButton onClick=\{\(\)=>setL\(/);
  assert.match(theme,/<button type="button" key=\{id\} onClick=\{\(\)=>setTheme\(id\)\}/);
 });
 
@@ -374,8 +374,10 @@ test('Nested supplementary material uses icon wells and does not float delete ac
  const material=readFileSync('src/MaterialSettings.tsx','utf8');
  const css=readFileSync('src/design-system/controls.css','utf8');
  const layout=readFileSync('src/styles/layout.css','utf8');
- assert.match(material, /<ControlWell symbol="plus"\/>/);
- assert.match(material, /className="setup-add-rule"/);
+ const addButton=readFileSync('src/design-system/SetupAddButton.tsx','utf8');
+ assert.match(material, /<SetupAddButton onClick=/);
+ assert.match(addButton, /<ControlWell symbol="plus"\/>/);
+ assert.match(addButton, /className=\{\['setup-add-rule'/);
  assert.match(material, /className="material-rule-heading"/);
  assert.match(material,/<GameSelect hideLabel label="Учебная задача"/);
  assert.doesNotMatch(layout,/\.material-rule>button\{float:right\}/);
@@ -502,4 +504,35 @@ test('Numeric quantity stepper is compact in all settings, with unchanged direct
  assert.match(css,/\.quantity-slider \.quantity-stepper input\[type=number\]\{width:36px!important;height:30px/);
  assert.match(slider,/type="number"[^>]*value=\{value\}/);
  assert.match(slider,/type="range"/);
+});
+
+
+test('Sorting and supplementary lesson rules share the same icon-plus button',()=>{
+ const sorting=readFileSync('src/Sorting.tsx','utf8');
+ const material=readFileSync('src/MaterialSettings.tsx','utf8');
+ const button=readFileSync('src/design-system/SetupAddButton.tsx','utf8');
+ assert.match(sorting,/<SetupAddButton onClick=\{\(\)=>setExclusions/);
+ assert.match(material,/<SetupAddButton onClick=\{\(\)=>setL/);
+ assert.match(button,/<ControlWell symbol="plus"\/>/);
+ assert.doesNotMatch(sorting,/<button className="secondary"[^>]*>Добавить исключение<\/button>/);
+});
+test('Footer words use a fully framed height-matched well with measured font fitting',()=>{
+ const preview=readFileSync('src/design-system/SetupPreview.tsx','utf8');
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ assert.match(preview,/ResizeObserver/);
+ assert.match(preview,/for\(let size=16;size>=12;size--\)/);
+ assert.match(preview,/inner\.scrollHeight<=availableHeight/);
+ assert.match(preview,/className="setup-preview-fit"/);
+ assert.match(css,/\.setup-preview-content\{[^}]*height:58px;min-height:58px;max-height:58px/);
+ assert.match(css,/\.setup-preview-content\{[^}]*background:var\(--ui-setup-field\)/);
+ assert.match(css,/\.setup-footer>button\.primary\{[^}]*align-self:center!important/);
+});
+test('One shared control flow owns disclosure spacing and quantity track inset',()=>{
+ const controls=readFileSync('src/design-system/controls.css','utf8');
+ const layout=readFileSync('src/styles/layout.css','utf8');
+ assert.match(controls,/\.settings \.settings-disclosure\{padding:0!important;margin:0!important/);
+ assert.match(controls,/\.settings :is\(\.settings-disclosure-body,\.advanced-material\)\{\s*margin-block:0!important/);
+ assert.match(controls,/\.quantity-slider\{display:grid;[^}]*padding:10px 12px 17px/);
+ assert.doesNotMatch(layout,/\.app \.shared-settings-window \.quantity-slider\{margin-block:10px 12px!important\}/);
+ assert.doesNotMatch(layout,/\.app \.shared-settings-window \.setup-column\{display:flex;flex-direction:column;gap:14px!important/);
 });
