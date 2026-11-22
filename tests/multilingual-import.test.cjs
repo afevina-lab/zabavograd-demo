@@ -30,7 +30,7 @@ test('post-processing merges duplicate lemma POS without approving records',asyn
    {lang_code:'en',word:'bat',pos:'noun',senses:[{glosses:['sport equipment']}]},
    {lang_code:'fr',word:'chat',pos:'noun',senses:[{glosses:['animal']}]},
    {lang_code:'xx',word:'bad',pos:'noun',senses:[{glosses:['skip']}]}
-  ].map(x=>JSON.stringify(x)).join('\\n'));
+  ].map(x=>JSON.stringify(x)).join('\n'));
   const {result,report}=await importJsonl(file,meta);
   assert.equal(report.staged,2);assert.equal(report.approved,0);
   assert.equal(result.records.find(e=>e.lemma==='bat').meanings.length,2);
