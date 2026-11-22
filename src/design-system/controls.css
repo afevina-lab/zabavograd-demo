@@ -1246,8 +1246,8 @@ display:flex!important;align-items:center!important;justify-content:center!impor
  min-height:48px;box-sizing:border-box;width:100%;
 }
 .app.game-active .play-toolbar.shared-toolbar{
- box-sizing:border-box!important;height:68px!important;min-height:68px!important;
- padding:0 14px!important;display:grid!important;align-items:center!important;
+ box-sizing:border-box!important;height:86px!important;min-height:86px!important;max-height:none!important;
+ padding:14px 22px!important;display:grid!important;align-items:center!important;
 }
 .app.game-active .play-toolbar.shared-toolbar :is(.toolbar-left,.toolbar-centre,.toolbar-right){
  align-self:center!important;align-items:center!important;min-height:0!important;
@@ -1273,7 +1273,7 @@ display:flex!important;align-items:center!important;justify-content:center!impor
 }
 @media(max-width:600px){
  .app.game-active .play-toolbar.shared-toolbar{
-  height:56px!important;min-height:56px!important;padding:0 8px!important;
+  height:68px!important;min-height:68px!important;padding:12px 18px!important;
  }
  .app.game-active .play-toolbar.shared-toolbar .icon-button{
   width:38px!important;height:38px!important;min-height:38px!important;
@@ -1619,3 +1619,5 @@ display:grid;grid-template-columns:repeat(auto-fill,var(--zg-chip-size));justify
 
 .app .icon-button:hover .garden-icon{transform:scale(1.4)}
 @media(prefers-reduced-motion:reduce){.app .icon-button .garden-icon{transition:none}}
+
+.app[data-theme] .settings-frame.shared-settings-window .card-presentation label.check{margin-block:12px!important}

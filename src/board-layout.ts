@@ -8,7 +8,7 @@ export function sortingLayout(width:number,height:number,tray:number,groups:numb
  const columns=Math.max(1,Math.min(groups.length,width<700?2:groups.length));
  const inner=Math.max(1,width-24),binWidth=(inner-(columns-1)*8)/columns;
  for(let card=220;card>=16;card--){
-  const cardHeight=card*1.08;
+  const cardHeight=card;
   const trayColumns=Math.max(1,Math.floor((inner+8)/(card+8)));
   const perBin=Math.max(1,Math.floor((binWidth-16+6)/(card+6)));
   let binsHeight=0;

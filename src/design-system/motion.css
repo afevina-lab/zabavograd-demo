@@ -136,6 +136,13 @@
 .transformation-scene[data-phase=transforming] .transformation-content{animation:zg-transform-fade var(--zg-match-duration) ease-in-out both}
 .transformation-scene[data-scene=depth][data-phase=transforming] .transformation-content{animation:zg-transform-depth var(--zg-match-duration) ease-in-out both}
 .transformation-scene[data-scene=flip][data-phase=transforming] .transformation-chamber{animation:zg-transform-flip var(--zg-match-duration) ease-in-out both}
+.transformation-flip-front{visibility:hidden}
+.transformation-scene[data-phase=answer] .transformation-flip-front{visibility:visible}
+.transformation-scene[data-phase=answer] .transformation-flip-back{visibility:hidden}
+.transformation-scene[data-phase=transforming] .transformation-flip-front{animation:zg-flip-front var(--zg-match-duration) steps(1,end) both}
+.transformation-scene[data-phase=transforming] .transformation-flip-back{animation:zg-flip-back var(--zg-match-duration) steps(1,end) both}
+@keyframes zg-flip-front{0%{visibility:hidden}50%,100%{visibility:visible}}
+@keyframes zg-flip-back{0%{visibility:visible}50%,100%{visibility:hidden}}
 .transformation-scene[data-scene=rays][data-phase=transforming] .transformation-rays{animation:zg-transform-rays var(--zg-match-duration) ease-in-out both}
 .transformation-scene[data-phase=answer] .transformation-content{animation:zg-transform-appear var(--zg-flip-duration) ease-out both}
 @keyframes zg-transform-fade{0%,20%{opacity:1}60%,100%{opacity:0}}

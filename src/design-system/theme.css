@@ -245,14 +245,15 @@
 /* Approved November 22 artwork. Native border-image paints all slices as one
    surface, so conveyor transforms never move individual slices independently. */
 .app[data-theme][data-toolbar-art="illustrated"] .play-toolbar{
- background:none!important;border:12px solid transparent!important;
- border-image:var(--zg-toolbar-image) 30 fill / 12px / 0 stretch!important;
- box-shadow:none!important;
+ background:none!important;border:0!important;
+ border-image:var(--zg-toolbar-image) 30 fill / 10px / 0 stretch!important;
+ box-shadow:none!important;outline:none!important;
+ padding:14px 22px!important;min-height:86px!important;
 }
-.app[data-theme].game-active :is(.conveyor-stage,.sorting-stage,.matching-stage) :is(.conveyor-card,.sort-card,.matching-card),
-.app[data-theme] :is(.conveyor-card,.sort-card,.matching-card){
+.app[data-theme].game-active :is(.conveyor-stage,.matching-stage) :is(.conveyor-card,.matching-card),
+.app[data-theme] :is(.conveyor-card,.matching-card){
  background:none!important;border:18px solid transparent!important;
- border-image:var(--zg-card-front-image) 170 fill / 18px / 0 stretch!important;
+ border-image:var(--zg-card-front-image) 210 fill / 38px / 0 stretch!important;
  box-shadow:none!important;border-radius:0!important;
 }
 .app[data-theme] :is(.matching-group,.matching-bank){
@@ -262,3 +263,31 @@
  background:none!important;border:0!important;border-image:none!important;box-shadow:none!important;
 }
 .app[data-theme] .card{aspect-ratio:1/1}
+.app[data-theme] .card .card-front{padding:11%!important}
+.app[data-theme].game-active :is(.sort-card,.sorted-cards .sort-card){
+ height:var(--sort-card-size)!important;aspect-ratio:1;
+ border:0!important;border-image:none!important;border-radius:0!important;
+ background:var(--zg-card-front-image) center/100% 100% no-repeat!important;
+ padding:calc(var(--sort-card-size)*.105)!important;box-shadow:none!important;
+}
+.app[data-theme].game-active .sorting-stage{height:0;min-height:0;flex:1;overflow:hidden}
+.app[data-theme].game-active .sorting-content{display:flex;flex-direction:column;min-width:0}
+.app[data-theme].game-active .sorting-bins{min-height:0;flex:1;align-items:stretch}
+.app[data-theme].game-active .sort-bin{
+ min-width:0;min-height:0;background:rgb(12 22 32 / .42)!important;
+ overflow:auto;box-sizing:border-box;
+}
+.app[data-theme].game-active .sort-bin .bin-target{width:100%;min-width:0;box-sizing:border-box}
+.app[data-theme].game-active .sort-bin h3{white-space:normal;overflow-wrap:anywhere}
+.app[data-theme] .settings .card-presentation label.check{margin-block:12px!important}
+.app[data-theme] .card-back>span,.app[data-theme] .transformation-word{
+ paint-order:stroke fill;-webkit-text-stroke:3px #fff9e9;text-shadow:0 1px 2px #fff9e9;
+}
+.app[data-theme] .transformation-object{left:50%;top:50%;translate:-50% -50%}
+.app[data-theme] .transformation-content{inset:20% 16%;}
+.app[data-theme] .matching-group-caption{min-width:0;max-width:100%;overflow:hidden}
+.app[data-theme] .matching-group-caption .matching-slots{min-width:0;box-sizing:border-box;padding:6px}
+.app[data-theme] .matching-group-caption .matching-slots>*{max-width:100%!important;min-width:0!important;box-sizing:border-box}
+@media(max-width:600px),(max-height:500px){
+ .app[data-theme][data-toolbar-art="illustrated"] .play-toolbar{padding:12px 18px!important;min-height:68px!important}
+}
