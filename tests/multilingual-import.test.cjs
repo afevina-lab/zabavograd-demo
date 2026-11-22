@@ -48,3 +48,22 @@ test('refuses unlicensed data and invented approved links',async()=>{
   assert.throws(()=>validateCandidates(result));
  }finally{fs.rmSync(folder,{recursive:true,force:true});}
 });
+
+
+test('source enrichment preserves editor proposals and stages IPA/gender evidence only',async()=>{
+ const {annotate}=require('../scripts/enrich-multilingual-kaikki.cjs');
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'zabavograd-enrich-'));
+ const file=path.join(dir,'source.jsonl');
+ try{
+  const doc={languages:['en','fr','es','de'],records:[{translations:{en:'cat',fr:'chat',es:'gato',de:'Katze'},language_details:{en:{part_of_speech:'noun',morphology_status:'not_imported'},fr:{part_of_speech:'noun',morphology_status:'not_imported'},es:{part_of_speech:'noun',morphology_status:'not_imported'},de:{part_of_speech:'noun',morphology_status:'not_imported'}}}]};
+  fs.writeFileSync(file,JSON.stringify({word:'chat',lang_code:'fr',pos:'noun',tags:['masculine'],forms:[{form:'chats',tags:['plural']}],sounds:[{ipa:'/ʃa/'}]}));
+  const report=await annotate(doc,file,{source_url:'https://kaikki.org/dictionary/',license:'CC BY-SA',retrieved_at:'2026-11-22'});
+  assert.equal(report.evidence_added,1);
+  assert.equal(report.approved,0);
+  const fr=doc.records[0].language_details.fr;
+  assert.equal(fr.dictionary_evidence[0].sounds[0].ipa,'/ʃa/');
+  assert.deepEqual(fr.dictionary_evidence[0].gender_tags,['masculine']);
+  assert.equal(fr.morphology_status,'not_imported');
+  assert.equal(fr.dictionary_evidence[0].review_status,'suggested');
+ }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});
