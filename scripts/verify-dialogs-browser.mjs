@@ -185,6 +185,7 @@ await evaluate("(()=>{const s=[...document.querySelectorAll('select')].find(s=>[
 await until("!!document.querySelector('.syllable-picker-trigger')");
 await evaluate("document.querySelector('.syllable-picker-trigger').click()");
 await until("!!document.querySelector('.syllable-picker-dialog[open]')");
+console.log(await evaluate("(()=>{const e=document.querySelector('.syllable-picker-dialog[open]'),s=getComputedStyle(e);return {rect:e.getBoundingClientRect().toJSON(),inset:s.inset,margin:s.margin,position:s.position,height:s.height,transform:s.transform,viewport:[innerWidth,innerHeight]}})()"));
 assert(await evaluate("(()=>{const r=document.querySelector('.syllable-picker-dialog[open]').getBoundingClientRect();return Math.abs(r.x+r.width/2-innerWidth/2)<3&&Math.abs(r.y+r.height/2-innerHeight/2)<3})()"),'Syllable dialog centered on both viewport axes');
 await evaluate("document.querySelector('.syllable-type-option').focus()");
 assert(await evaluate("(()=>{const e=document.querySelector('.syllable-type-tooltip:popover-open');if(!e)return false;const r=e.getBoundingClientRect();return r.x>=0&&r.y>=0&&r.right<=innerWidth&&r.bottom<=innerHeight})()"),'Syllable help stays inside viewport');
