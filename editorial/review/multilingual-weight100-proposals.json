@@ -6263,6 +6263,3284 @@
           "morphology_status": "suggested"
         }
       }
+    },
+    {
+      "library_entry_id": "ru-new-20261102-0038",
+      "library_sense_ids": [
+        "ru-new-20261102-0038-published-sense"
+      ],
+      "ru_lemma": "кроссовки",
+      "ru_meaning": "кроссовки",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "sneakers",
+        "fr": "baskets",
+        "es": "zapatillas deportivas",
+        "de": "Turnschuhe"
+      },
+      "notes": "Russian plural; French/Spanish/German plural items may imply a pair; shoe type and regional usage need verification.",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "citation_form": "sneakers",
+          "plural_form": "sneakers",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "citation_form": "baskets",
+          "plural_form": "baskets",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "citation_form": "zapatillas deportivas",
+          "plural_form": "zapatillas deportivas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "citation_form": "Turnschuhe",
+          "plural_form": "Turnschuhe",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-new-20261102-0321",
+      "library_sense_ids": [
+        "ru-new-20261102-0321-published-sense"
+      ],
+      "ru_lemma": "мышь",
+      "ru_meaning": "небольшое млекопитающее — мышь",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "mouse",
+        "fr": "souris",
+        "es": "ratón",
+        "de": "Maus"
+      },
+      "notes": "Animal; do not merge with computer peripheral.",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a mouse",
+          "plural_form": "mice",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une souris",
+          "plural_form": "souris",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un ratón",
+          "plural_form": "ratones",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Maus",
+          "plural_form": "Mäuse",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-new-20261102-0322",
+      "library_sense_ids": [],
+      "ru_lemma": "мышь",
+      "ru_meaning": "компьютерная мышь",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "computer mouse",
+        "fr": "souris informatique",
+        "es": "ratón de ordenador",
+        "de": "Computermaus"
+      },
+      "notes": "Computer peripheral; do not merge with animal sense.",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a computer mouse",
+          "plural_form": "computer mice",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une souris informatique",
+          "plural_form": "souris informatiques",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un ratón de ordenador",
+          "plural_form": "ratones de ordenador",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Computermaus",
+          "plural_form": "Computermäuse",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-gen-20261104-furniture",
+      "library_sense_ids": [],
+      "ru_lemma": "мебель",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "furniture",
+        "fr": "meuble",
+        "es": "mueble",
+        "de": "Möbel"
+      },
+      "notes": "English furniture, French vaisselle-like? French meuble and Spanish mueble are singular items; German Möbel often plural/collective. Do not infer exact singular-plural equivalence.",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a furniture",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "furniture",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un meuble",
+          "plural_form": "meubles",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "meuble",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un mueble",
+          "plural_form": "muebles",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "mueble",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Möbel",
+          "plural_form": "Möbel",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "Möbel",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-gen-20261104-dishes",
+      "library_sense_ids": [],
+      "ru_lemma": "посуда",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "tableware",
+        "fr": "vaisselle",
+        "es": "vajilla",
+        "de": "Geschirr"
+      },
+      "notes": "Collective category, not a single plate; French vaisselle, German Geschirr are often mass nouns.",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a tableware",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "tableware",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une vaisselle",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "vaisselle",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una vajilla",
+          "plural_form": "vajillas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "vajilla",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Geschirr",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "Geschirr",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-5db28abf",
+      "library_sense_ids": [],
+      "ru_lemma": "банка",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "jar",
+        "fr": "bocal",
+        "es": "tarro",
+        "de": "Einmachglas"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a jar",
+          "plural_form": "jars",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un bocal",
+          "plural_form": "bocaux",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un tarro",
+          "plural_form": "tarros",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Einmachglas",
+          "plural_form": "Einmachgläser",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-1166080b",
+      "library_sense_ids": [],
+      "ru_lemma": "веник",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "broom",
+        "fr": "balai",
+        "es": "escoba",
+        "de": "Besen"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a broom",
+          "plural_form": "brooms",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un balai",
+          "plural_form": "balais",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una escoba",
+          "plural_form": "escobas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Besen",
+          "plural_form": "Besen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-dfa4b2aa",
+      "library_sense_ids": [
+        "ru-home-20261105-dfa4b2aa-sense"
+      ],
+      "ru_lemma": "замок",
+      "ru_meaning": "замок",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "lock",
+        "fr": "cadenas",
+        "es": "candado",
+        "de": "Schloss"
+      },
+      "notes": "Assumed padlock based on household context, but Russian sense 'замок' lacks a precise gloss; might mean door lock or castle. Verify image before approval.",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a lock",
+          "plural_form": "locks",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un cadenas",
+          "plural_form": "cadenas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un candado",
+          "plural_form": "candados",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Schloss",
+          "plural_form": "Schlösser",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-4a814f4",
+      "library_sense_ids": [],
+      "ru_lemma": "зубная паста",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "toothpaste",
+        "fr": "dentifrice",
+        "es": "pasta de dientes",
+        "de": "Zahnpasta"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a toothpaste",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "toothpaste",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un dentifrice",
+          "plural_form": "dentifrices",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una pasta de dientes",
+          "plural_form": "pastas de dientes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Zahnpasta",
+          "plural_form": "Zahnpasten",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-92d7e826",
+      "library_sense_ids": [],
+      "ru_lemma": "зубная щётка",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "toothbrush",
+        "fr": "brosse à dents",
+        "es": "cepillo de dientes",
+        "de": "Zahnbürste"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a toothbrush",
+          "plural_form": "toothbrushes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une brosse à dents",
+          "plural_form": "brosses à dents",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un cepillo de dientes",
+          "plural_form": "cepillos de dientes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Zahnbürste",
+          "plural_form": "Zahnbürsten",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-e02fd2f5",
+      "library_sense_ids": [],
+      "ru_lemma": "иголка",
+      "ru_meaning": "швейная иголка",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "sewing needle",
+        "fr": "aiguille à coudre",
+        "es": "aguja de coser",
+        "de": "Nähnadel"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a sewing needle",
+          "plural_form": "sewing needles",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une aiguille à coudre",
+          "plural_form": "aiguilles à coudre",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una aguja de coser",
+          "plural_form": "agujas de coser",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Nähnadel",
+          "plural_form": "Nähnadeln",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-67d50378",
+      "library_sense_ids": [],
+      "ru_lemma": "кастрюля",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "cooking pot",
+        "fr": "casserole",
+        "es": "olla",
+        "de": "Kochtopf"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a cooking pot",
+          "plural_form": "cooking pots",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une casserole",
+          "plural_form": "casseroles",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una olla",
+          "plural_form": "ollas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Kochtopf",
+          "plural_form": "Kochtöpfe",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-8224c0b5",
+      "library_sense_ids": [],
+      "ru_lemma": "клавиатура",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "keyboard",
+        "fr": "clavier",
+        "es": "teclado",
+        "de": "Tastatur"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a keyboard",
+          "plural_form": "keyboards",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un clavier",
+          "plural_form": "claviers",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un teclado",
+          "plural_form": "teclados",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Tastatur",
+          "plural_form": "Tastaturen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-de0741f",
+      "library_sense_ids": [
+        "ru-home-20261105-de0741f-sense"
+      ],
+      "ru_lemma": "ключ",
+      "ru_meaning": "ключ",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "key",
+        "fr": "clé",
+        "es": "llave",
+        "de": "Schlüssel"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a key",
+          "plural_form": "keys",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une clé",
+          "plural_form": "clés",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una llave",
+          "plural_form": "llaves",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Schlüssel",
+          "plural_form": "Schlüssel",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-adca2d8a",
+      "library_sense_ids": [],
+      "ru_lemma": "лампочка",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "light bulb",
+        "fr": "ampoule",
+        "es": "bombilla",
+        "de": "Glühbirne"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a light bulb",
+          "plural_form": "light bulbs",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une ampoule",
+          "plural_form": "ampoules",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una bombilla",
+          "plural_form": "bombillas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Glühbirne",
+          "plural_form": "Glühbirnen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-5423908",
+      "library_sense_ids": [],
+      "ru_lemma": "ложка",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "spoon",
+        "fr": "cuillère",
+        "es": "cuchara",
+        "de": "Löffel"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a spoon",
+          "plural_form": "spoons",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une cuillère",
+          "plural_form": "cuillères",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una cuchara",
+          "plural_form": "cucharas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Löffel",
+          "plural_form": "Löffel",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-85858c77",
+      "library_sense_ids": [
+        "ru-home-20261105-85858c77-sense"
+      ],
+      "ru_lemma": "лопата",
+      "ru_meaning": "лопата",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "shovel",
+        "fr": "pelle",
+        "es": "pala",
+        "de": "Schaufel"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a shovel",
+          "plural_form": "shovels",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une pelle",
+          "plural_form": "pelles",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una pala",
+          "plural_form": "palas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Schaufel",
+          "plural_form": "Schaufeln",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-21314a78",
+      "library_sense_ids": [],
+      "ru_lemma": "молоток",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "hammer",
+        "fr": "marteau",
+        "es": "martillo",
+        "de": "Hammer"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a hammer",
+          "plural_form": "hammers",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un marteau",
+          "plural_form": "marteaux",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un martillo",
+          "plural_form": "martillos",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Hammer",
+          "plural_form": "Hämmer",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-b1462dee",
+      "library_sense_ids": [],
+      "ru_lemma": "монитор",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "computer monitor",
+        "fr": "écran d'ordinateur",
+        "es": "monitor",
+        "de": "Monitor"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a computer monitor",
+          "plural_form": "computer monitors",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un écran d'ordinateur",
+          "plural_form": "écrans d'ordinateur",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un monitor",
+          "plural_form": "monitores",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Monitor",
+          "plural_form": "Monitore",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-383c63b3",
+      "library_sense_ids": [],
+      "ru_lemma": "мыло",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "soap",
+        "fr": "savon",
+        "es": "jabón",
+        "de": "Seife"
+      },
+      "notes": "Soap mass noun vs bar of soap; count use differs.",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a soap",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "soap",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un savon",
+          "plural_form": "savons",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un jabón",
+          "plural_form": "jabones",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Seife",
+          "plural_form": "Seifen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-31574f40",
+      "library_sense_ids": [],
+      "ru_lemma": "нитка",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "thread",
+        "fr": "fil",
+        "es": "hilo",
+        "de": "Faden"
+      },
+      "notes": "Thread material vs individual strand.",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a thread",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "thread",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un fil",
+          "plural_form": "fils",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un hilo",
+          "plural_form": "hilos",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Faden",
+          "plural_form": "Fäden",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-a7f282c0",
+      "library_sense_ids": [],
+      "ru_lemma": "нож",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "knife",
+        "fr": "couteau",
+        "es": "cuchillo",
+        "de": "Messer"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a knife",
+          "plural_form": "knives",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un couteau",
+          "plural_form": "couteaux",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un cuchillo",
+          "plural_form": "cuchillos",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Messer",
+          "plural_form": "Messer",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-62ced432",
+      "library_sense_ids": [],
+      "ru_lemma": "ножницы",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "scissors",
+        "fr": "ciseaux",
+        "es": "tijeras",
+        "de": "Schere"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "citation_form": "scissors",
+          "plural_form": "scissors",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "citation_form": "ciseaux",
+          "plural_form": "ciseaux",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "citation_form": "tijeras",
+          "plural_form": "tijeras",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "citation_form": "Schere",
+          "plural_form": "Scheren",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-aad3efca",
+      "library_sense_ids": [],
+      "ru_lemma": "одеяло",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "blanket",
+        "fr": "couverture",
+        "es": "manta",
+        "de": "Decke"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a blanket",
+          "plural_form": "blankets",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une couverture",
+          "plural_form": "couvertures",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una manta",
+          "plural_form": "mantas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Decke",
+          "plural_form": "Decken",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-35ae72a6",
+      "library_sense_ids": [
+        "ru-home-20261105-35ae72a6-sense"
+      ],
+      "ru_lemma": "окно",
+      "ru_meaning": "окно",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "window",
+        "fr": "fenêtre",
+        "es": "ventana",
+        "de": "Fenster"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a window",
+          "plural_form": "windows",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une fenêtre",
+          "plural_form": "fenêtres",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una ventana",
+          "plural_form": "ventanas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Fenster",
+          "plural_form": "Fenster",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-3dd17450",
+      "library_sense_ids": [],
+      "ru_lemma": "отвёртка",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "screwdriver",
+        "fr": "tournevis",
+        "es": "destornillador",
+        "de": "Schraubendreher"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a screwdriver",
+          "plural_form": "screwdrivers",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un tournevis",
+          "plural_form": "tournevis",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un destornillador",
+          "plural_form": "destornilladores",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Schraubendreher",
+          "plural_form": "Schraubendreher",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-99b706d7",
+      "library_sense_ids": [],
+      "ru_lemma": "пила",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "saw",
+        "fr": "scie",
+        "es": "sierra",
+        "de": "Säge"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a saw",
+          "plural_form": "saws",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une scie",
+          "plural_form": "scies",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una sierra",
+          "plural_form": "sierras",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Säge",
+          "plural_form": "Sägen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-239dbff9",
+      "library_sense_ids": [],
+      "ru_lemma": "плита",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "stove",
+        "fr": "cuisinière",
+        "es": "cocina",
+        "de": "Herd"
+      },
+      "notes": "Stove/cooker as kitchen appliance, not stone slab.",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a stove",
+          "plural_form": "stoves",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une cuisinière",
+          "plural_form": "cuisinières",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una cocina",
+          "plural_form": "cocinas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Herd",
+          "plural_form": "Herde",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-cdcc6283",
+      "library_sense_ids": [],
+      "ru_lemma": "подушка",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "pillow",
+        "fr": "oreiller",
+        "es": "almohada",
+        "de": "Kissen"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a pillow",
+          "plural_form": "pillows",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un oreiller",
+          "plural_form": "oreillers",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una almohada",
+          "plural_form": "almohadas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Kissen",
+          "plural_form": "Kissen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-7f2d4b7",
+      "library_sense_ids": [],
+      "ru_lemma": "пол",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "floor",
+        "fr": "sol",
+        "es": "suelo",
+        "de": "Fußboden"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a floor",
+          "plural_form": "floors",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un sol",
+          "plural_form": "sols",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un suelo",
+          "plural_form": "suelos",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Fußboden",
+          "plural_form": "Fußböden",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-9ee9a0f2",
+      "library_sense_ids": [],
+      "ru_lemma": "полотенце",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "towel",
+        "fr": "serviette",
+        "es": "toalla",
+        "de": "Handtuch"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a towel",
+          "plural_form": "towels",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une serviette",
+          "plural_form": "serviettes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una toalla",
+          "plural_form": "toallas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Handtuch",
+          "plural_form": "Handtücher",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-298f060d",
+      "library_sense_ids": [],
+      "ru_lemma": "пылесос",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "vacuum cleaner",
+        "fr": "aspirateur",
+        "es": "aspiradora",
+        "de": "Staubsauger"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a vacuum cleaner",
+          "plural_form": "vacuum cleaners",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un aspirateur",
+          "plural_form": "aspirateurs",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una aspiradora",
+          "plural_form": "aspiradoras",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Staubsauger",
+          "plural_form": "Staubsauger",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-691e73d6",
+      "library_sense_ids": [],
+      "ru_lemma": "разделочная доска",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "cutting board",
+        "fr": "planche à découper",
+        "es": "tabla de cortar",
+        "de": "Schneidebrett"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a cutting board",
+          "plural_form": "cutting boards",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une planche à découper",
+          "plural_form": "planches à découper",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una tabla de cortar",
+          "plural_form": "tablas de cortar",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Schneidebrett",
+          "plural_form": "Schneidebretter",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-1e2c3905",
+      "library_sense_ids": [],
+      "ru_lemma": "стакан",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "drinking glass",
+        "fr": "verre",
+        "es": "vaso",
+        "de": "Trinkglas"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a drinking glass",
+          "plural_form": "drinking glasses",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un verre",
+          "plural_form": "verres",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un vaso",
+          "plural_form": "vasos",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Trinkglas",
+          "plural_form": "Trinkgläser",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-accfb2b4",
+      "library_sense_ids": [],
+      "ru_lemma": "стена",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "wall",
+        "fr": "mur",
+        "es": "pared",
+        "de": "Wand"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a wall",
+          "plural_form": "walls",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un mur",
+          "plural_form": "murs",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una pared",
+          "plural_form": "paredes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Wand",
+          "plural_form": "Wände",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-5e049672",
+      "library_sense_ids": [],
+      "ru_lemma": "стиральная машина",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "washing machine",
+        "fr": "machine à laver",
+        "es": "lavadora",
+        "de": "Waschmaschine"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a washing machine",
+          "plural_form": "washing machines",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une machine à laver",
+          "plural_form": "machines à laver",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una lavadora",
+          "plural_form": "lavadoras",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Waschmaschine",
+          "plural_form": "Waschmaschinen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-9769581b",
+      "library_sense_ids": [],
+      "ru_lemma": "стол",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "table",
+        "fr": "table",
+        "es": "mesa",
+        "de": "Tisch"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a table",
+          "plural_form": "tables",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une table",
+          "plural_form": "tables",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una mesa",
+          "plural_form": "mesas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Tisch",
+          "plural_form": "Tische",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-83f6f264",
+      "library_sense_ids": [],
+      "ru_lemma": "стул",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "chair",
+        "fr": "chaise",
+        "es": "silla",
+        "de": "Stuhl"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a chair",
+          "plural_form": "chairs",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une chaise",
+          "plural_form": "chaises",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una silla",
+          "plural_form": "sillas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Stuhl",
+          "plural_form": "Stühle",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-bd699907",
+      "library_sense_ids": [],
+      "ru_lemma": "сумка",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "bag",
+        "fr": "sac",
+        "es": "bolso",
+        "de": "Tasche"
+      },
+      "notes": "Bag vs handbag: check illustration.",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a bag",
+          "plural_form": "bags",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un sac",
+          "plural_form": "sacs",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un bolso",
+          "plural_form": "bolsos",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Tasche",
+          "plural_form": "Taschen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-259cc695",
+      "library_sense_ids": [],
+      "ru_lemma": "тарелка",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "plate",
+        "fr": "assiette",
+        "es": "plato",
+        "de": "Teller"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a plate",
+          "plural_form": "plates",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une assiette",
+          "plural_form": "assiettes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un plato",
+          "plural_form": "platos",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Teller",
+          "plural_form": "Teller",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-99e06d53",
+      "library_sense_ids": [],
+      "ru_lemma": "телефон",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "telephone",
+        "fr": "téléphone",
+        "es": "teléfono",
+        "de": "Telefon"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a telephone",
+          "plural_form": "telephones",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un téléphone",
+          "plural_form": "téléphones",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un teléfono",
+          "plural_form": "teléfonos",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Telefon",
+          "plural_form": "Telefone",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-8022030e",
+      "library_sense_ids": [],
+      "ru_lemma": "унитаз",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "toilet",
+        "fr": "toilettes",
+        "es": "inodoro",
+        "de": "Toilette"
+      },
+      "notes": "French toilettes is generally plural; exact fixture translation may be cuvette des toilettes; must validate.",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a toilet",
+          "plural_form": "toilets",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "toilet",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une toilettes",
+          "plural_form": "toilettes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "toilettes",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un inodoro",
+          "plural_form": "inodoros",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "inodoro",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Toilette",
+          "plural_form": "Toiletten",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "Toilette",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-d616cb35",
+      "library_sense_ids": [],
+      "ru_lemma": "утюг",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "iron",
+        "fr": "fer à repasser",
+        "es": "plancha",
+        "de": "Bügeleisen"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "an iron",
+          "plural_form": "irons",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un fer à repasser",
+          "plural_form": "fers à repasser",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una plancha",
+          "plural_form": "planchas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Bügeleisen",
+          "plural_form": "Bügeleisen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-8c94dacc",
+      "library_sense_ids": [],
+      "ru_lemma": "фонарик",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "flashlight",
+        "fr": "lampe de poche",
+        "es": "linterna",
+        "de": "Taschenlampe"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a flashlight",
+          "plural_form": "flashlights",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une lampe de poche",
+          "plural_form": "lampes de poche",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una linterna",
+          "plural_form": "linternas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Taschenlampe",
+          "plural_form": "Taschenlampen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-3cc18977",
+      "library_sense_ids": [
+        "ru-home-20261105-3cc18977-sense"
+      ],
+      "ru_lemma": "холодильник",
+      "ru_meaning": "холодильник",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "refrigerator",
+        "fr": "réfrigérateur",
+        "es": "frigorífico",
+        "de": "Kühlschrank"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a refrigerator",
+          "plural_form": "refrigerators",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un réfrigérateur",
+          "plural_form": "réfrigérateurs",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un frigorífico",
+          "plural_form": "frigoríficos",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Kühlschrank",
+          "plural_form": "Kühlschränke",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-444ca938",
+      "library_sense_ids": [],
+      "ru_lemma": "чайник",
+      "ru_meaning": "заварочный чайник",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "teapot",
+        "fr": "théière",
+        "es": "tetera",
+        "de": "Teekanne"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a teapot",
+          "plural_form": "teapots",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une théière",
+          "plural_form": "théières",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una tetera",
+          "plural_form": "teteras",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Teekanne",
+          "plural_form": "Teekannen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-e096449e",
+      "library_sense_ids": [],
+      "ru_lemma": "часы",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "clock",
+        "fr": "horloge",
+        "es": "reloj",
+        "de": "Uhr"
+      },
+      "notes": "Assumed clock, not wristwatch. Verify image/sense.",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a clock",
+          "plural_form": "clocks",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "clock",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une horloge",
+          "plural_form": "horloges",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "horloge",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un reloj",
+          "plural_form": "relojes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "reloj",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Uhr",
+          "plural_form": "Uhren",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "Uhr",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-6f1d7df8",
+      "library_sense_ids": [],
+      "ru_lemma": "чашка",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "cup",
+        "fr": "tasse",
+        "es": "taza",
+        "de": "Tasse"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a cup",
+          "plural_form": "cups",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une tasse",
+          "plural_form": "tasses",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una taza",
+          "plural_form": "tazas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Tasse",
+          "plural_form": "Tassen",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-89ad3e8",
+      "library_sense_ids": [],
+      "ru_lemma": "шампунь",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "shampoo",
+        "fr": "shampoing",
+        "es": "champú",
+        "de": "Shampoo"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a shampoo",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "partial",
+          "citation_form": "shampoo",
+          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un shampoing",
+          "plural_form": "shampoings",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un champú",
+          "plural_form": "champús",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "n",
+          "indefinite_article_form": "das Shampoo",
+          "plural_form": "Shampoos",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-f2834e7d",
+      "library_sense_ids": [],
+      "ru_lemma": "шкаф",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "wardrobe",
+        "fr": "armoire",
+        "es": "armario",
+        "de": "Kleiderschrank"
+      },
+      "notes": "Wardrobe chosen, generic шкаф can be cabinet/cupboard; verify image.",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a wardrobe",
+          "plural_form": "wardrobes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une armoire",
+          "plural_form": "armoires",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un armario",
+          "plural_form": "armarios",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Kleiderschrank",
+          "plural_form": "Kleiderschränke",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-home-20261105-f7cfdfb1",
+      "library_sense_ids": [],
+      "ru_lemma": "ящик",
+      "ru_meaning": null,
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "box",
+        "fr": "boîte",
+        "es": "caja",
+        "de": "Kiste"
+      },
+      "notes": "Chosen storage box; could be drawer. Verify image.",
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a box",
+          "plural_form": "boxes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "une boîte",
+          "plural_form": "boîtes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "una caja",
+          "plural_form": "cajas",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "f",
+          "indefinite_article_form": "die Kiste",
+          "plural_form": "Kisten",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
+    },
+    {
+      "library_entry_id": "ru-sense-20261105-kist-tool",
+      "library_sense_ids": [],
+      "ru_lemma": "кисть",
+      "ru_meaning": "кисть для рисования или окрашивания",
+      "selection_weight": 100,
+      "review_status": "suggested",
+      "source_type": "editorial_translation_proposal_not_external_import",
+      "translations": {
+        "en": "paintbrush",
+        "fr": "pinceau",
+        "es": "pincel",
+        "de": "Pinsel"
+      },
+      "notes": null,
+      "language_details": {
+        "en": {
+          "part_of_speech": "noun",
+          "grammatical_gender": null,
+          "indefinite_article_form": "a paintbrush",
+          "plural_form": "paintbrushes",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "fr": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un pinceau",
+          "plural_form": "pinceaux",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "es": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "un pincel",
+          "plural_form": "pinceles",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        },
+        "de": {
+          "part_of_speech": "noun",
+          "grammatical_gender": "m",
+          "indefinite_article_form": "der Pinsel",
+          "plural_form": "Pinsel",
+          "feature_review_status": "suggested",
+          "feature_source": "editorial_candidate_requires_dictionary_verification",
+          "pronunciations": [],
+          "pronunciation_status": "not_imported",
+          "morphology_status": "suggested"
+        }
+      }
     }
   ],
   "grammar_note": "All grammatical forms are unverified editorial candidates; no Wiktionary morphology/IPA has been imported yet. Missing fields mean unknown, not inapplicable. Articles are contextual phrases, not universal noun attributes."
