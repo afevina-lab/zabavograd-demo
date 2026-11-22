@@ -1523,8 +1523,8 @@ display:grid;grid-template-columns:repeat(auto-fill,64px);justify-content:start;
  align-self:flex-start;min-width:170px;padding-inline:16px!important;
 }
 .app[data-theme] dialog.syllable-picker-dialog .syllable-type-tooltip{
- position:absolute;bottom:calc(100% + 8px);left:50%;
- transform:translateX(-50%) translateY(4px);
+ position:fixed;inset:auto;margin:0;
+ transform:none;
  width:max-content;max-width:min(290px,65vw);
  box-sizing:border-box;display:flex;flex-direction:column;gap:5px;
  padding:12px 14px!important;border:1px solid var(--ui-field-edge)!important;
