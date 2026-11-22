@@ -179,8 +179,10 @@ await evaluate("(()=>{const s=[...document.querySelectorAll('select')].find(s=>[
 await until("!!document.querySelector('.syllable-picker-trigger')");
 await evaluate("document.querySelector('.syllable-picker-trigger').click()");
 await until("!!document.querySelector('.syllable-picker-dialog[open]')");
+assert(await evaluate("(()=>{const r=document.querySelector('.syllable-picker-dialog[open]').getBoundingClientRect();return Math.abs(r.x+r.width/2-innerWidth/2)<3&&Math.abs(r.y+r.height/2-innerHeight/2)<3})()"),'Syllable dialog centered on both viewport axes');
 await evaluate("document.querySelector('.syllable-type-option').focus()");
 assert(await evaluate("(()=>{const e=document.querySelector('.syllable-type-tooltip:popover-open');if(!e)return false;const r=e.getBoundingClientRect();return r.x>=0&&r.y>=0&&r.right<=innerWidth&&r.bottom<=innerHeight})()"),'Syllable help stays inside viewport');
+assert(await evaluate("(()=>{const t=document.querySelector('.syllable-type-tooltip:popover-open').getBoundingClientRect(),b=document.querySelector('.syllable-type-option').getBoundingClientRect();return Math.min(Math.abs(t.top-b.bottom),Math.abs(b.top-t.bottom))<20})()"),'Syllable tooltip stays adjacent to its tile');
 await screenshot('syllable-help-unclipped');
 
 writeFileSync(join(output,'dialogs.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));

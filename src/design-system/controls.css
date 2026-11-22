@@ -135,7 +135,7 @@
 /* Theme-defined frame material around the shared inset playing surface. */
 .app[data-theme] :is(.settings-frame.shared-settings-window,.overlay>div,.modal,dialog){isolation:isolate;background:var(--ui-frame-texture),var(--ui-frame-fill)!important;border:2px solid var(--ui-frame-dark)!important;border-radius:30px!important;box-shadow:inset 0 2px 2px var(--ui-frame-glint),0 7px 0 var(--ui-frame-dark),0 12px 0 var(--ui-frame-shadow),0 24px 48px #172a4050!important}
 .app[data-theme] :is(.settings-frame.shared-settings-window,.overlay>div,.modal){position:relative}
-.app[data-theme] dialog{position:fixed;inset:16px;margin:auto}
+.app[data-theme] dialog{position:fixed;inset:0;margin:auto;height:fit-content}
 .app[data-theme] :is(.shared-settings-window,.overlay>div,.modal,dialog)::before{content:'';position:absolute;inset:var(--ui-frame-inset);z-index:-1;pointer-events:none;background:var(--ui-surface-texture),var(--ui-setup-paper);border:1px solid var(--ui-inner-edge);border-radius:18px;box-shadow:0 -2px 2px var(--ui-inner-shadow),inset 0 2px 2px var(--ui-surface-glint)}
 .app .shared-settings-window :is(h2,h3,h4){font-family:Akt,Arial,sans-serif;font-weight:750;letter-spacing:-.025em;line-height:1.25}
 .app .settings-window-heading{padding:12px 14px 16px;margin-bottom:4px}.app .settings-window-heading h2{font-size:30px}.app .settings-window-heading span{font-size:14px}
@@ -185,7 +185,7 @@
 .app[data-theme] .quantity-slider .quantity-stepper input[type=number]{width:36px!important;height:30px!important;min-height:30px!important;min-width:0;text-align:center;font-weight:750;appearance:textfield;-moz-appearance:textfield;border:0!important;border-radius:0!important;box-shadow:inset 0 2px 4px var(--ui-well-shadow-strong)!important;font-size:16px;padding:2px!important}
 .app .quantity-slider>input[type=range],.quantity-slider>.quantity-availability{grid-column:1/-1}.app .quantity-slider>input[type=range]{margin:2px 0 0!important}
 /* The start action has a visible lower face and a forward arrow. */
-.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .primary:not(.rule-delete),.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .start{box-shadow:inset 0 3px 2px #fff7,inset 0 -5px 5px var(--ui-button-inset-strong),0 7px 0 color-mix(in srgb,var(--ui-deep) 62%,black),0 11px 14px #172a4030!important;border-top-color:color-mix(in srgb,var(--ui-deep) 50%,var(--ui-paper))!important;min-height:64px;margin-bottom:8px}
+.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .primary:not(.rule-delete),.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .start{box-shadow:inset 0 3px 2px #fff7,inset 0 -5px 5px var(--ui-button-inset-strong),0 3px 0 var(--ui-control-bottom),0 5px 7px #172a4020!important;border-top-color:color-mix(in srgb,var(--ui-deep) 50%,var(--ui-paper))!important;min-height:64px;margin-bottom:8px}
 .setup-footer>button.primary,.settings>.primary:last-child{display:flex;align-items:center;justify-content:center;gap:24px}
 .setup-footer>button.primary::after,.settings>.primary:last-child::after{content:'';display:block;width:30px;height:30px;background:currentColor;clip-path:polygon(0 40%,64% 40%,40% 16%,55% 0,100% 50%,55% 100%,40% 84%,64% 60%,0 60%)}
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .primary:active:not(:disabled){transform:translateY(4px);box-shadow:inset 0 1px 3px #0002,0 3px 0 color-mix(in srgb,var(--ui-deep) 62%,black)!important}
@@ -650,7 +650,7 @@
  border-image:none!important;border:1px solid var(--ui-deep)!important;
  padding:12px 20px!important;min-height:58px!important;margin:0!important;
  font-size:19px!important;font-weight:750!important;
- box-shadow:inset 0 3px 2px #fff7,inset 0 -5px 5px var(--ui-button-inset-strong),0 5px 0 color-mix(in srgb,var(--ui-deep) 62%,black),0 8px 10px #172a4030!important;
+ box-shadow:inset 0 3px 2px #fff7,inset 0 -5px 5px var(--ui-button-inset-strong),0 3px 0 var(--ui-control-bottom),0 5px 7px #172a4020!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>button.primary:active:not(:disabled){
  transform:translateY(3px);box-shadow:inset 0 1px 3px #0002,0 2px 0 color-mix(in srgb,var(--ui-deep) 62%,black)!important;
@@ -1192,7 +1192,7 @@
 }
 .app[data-theme] dialog.letter-picker-dialog .letter-picker-section h3{margin:0!important}
 .app[data-theme] dialog.letter-picker-dialog .letter-grid{
-display:grid;grid-template-columns:repeat(auto-fill,minmax(56px,1fr));gap:8px;margin:0!important;
+display:grid;grid-template-columns:repeat(auto-fill,48px);justify-content:start;gap:8px;margin:0!important;
 }
 .app[data-theme] dialog.letter-picker-dialog .letter-choice{
 box-sizing:border-box;display:flex;align-items:center;justify-content:center;
@@ -1395,7 +1395,7 @@ display:flex!important;align-items:center!important;justify-content:center!impor
  font-size:15px!important;line-height:1.35!important;
 }
 .app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid{
-display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
+display:grid;grid-template-columns:repeat(auto-fill,64px);justify-content:start;
  gap:8px!important;margin:0!important;align-items:stretch;
 }
 .app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid .check{
@@ -1564,10 +1564,10 @@ display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
 }
 @media(max-width:500px){
  .app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid{
-  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-template-columns:repeat(auto-fill,56px);
  }
  .app[data-theme] dialog.letter-picker-dialog .letter-grid{
-  grid-template-columns:repeat(auto-fill,minmax(48px,1fr));
+  grid-template-columns:repeat(auto-fill,48px);
  }
 }
 
@@ -1604,12 +1604,13 @@ display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
  }
 }
 
+.app{--selection-close-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22currentColor%22%20viewBox%3D%222.44%202.44%205.10%205.10%22%3E%3Cpath%20d%3D%22M6.344%202.667a.7.7%200%200%201%20.99.99l-.538.537c-.359.359-.538.538-.556.759a1%201%200%200%200%200%20.094c.018.22.197.4.556.76l.538.537a.701.701%200%200%201-.99.989l-.538-.538c-.36-.359-.539-.538-.76-.555a1%201%200%200%200-.093%200c-.221.017-.4.196-.76.555l-.537.538a.7.7%200%200%201-.99-.99l.538-.537c.36-.359.539-.538.556-.759a1%201%200%200%200%200-.094c-.017-.22-.197-.4-.556-.76l-.537-.537a.7.7%200%201%201%20.989-.989l.538.538c.359.359.538.538.759.555a1%201%200%200%200%20.094%200c.22-.017.4-.196.759-.555z%22%2F%3E%3C%2Fsvg%3E")}
 /* Shared selected tile affordance: the parent button owns the complete hit area. */
 .app button[aria-pressed=true]:not(.icon-button){position:relative}
-.app :is(.pair-options,.letter-grid,.types,.themes) button[aria-pressed=true]::after{
- content:'×';position:absolute;top:2px;right:2px;width:18px;height:18px;
+.app :is(.letter-grid,.types) button[aria-pressed=true]::after{
+ content:'';position:absolute;top:-5px;right:-5px;width:18px;height:18px;background-image:var(--selection-close-icon);background-repeat:no-repeat;background-position:center;background-size:10px;
  display:grid;place-items:center;border:1px solid var(--ui-field-edge);border-radius:5px;
- background:var(--ui-control-face);color:var(--ui-text);font-size:16px;line-height:1;pointer-events:none;
+ background-color:var(--ui-deep);box-shadow:inset 0 1px 1px var(--ui-field-glint),0 2px 0 var(--ui-control-bottom);pointer-events:none;
 }
 .app .setup-add-rule.is-required{outline:2px solid var(--ui-danger,#b33d32);outline-offset:-2px}
 .app .material-rule-heading{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center}

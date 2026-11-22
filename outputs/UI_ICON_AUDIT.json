@@ -1,0 +1,58 @@
+[
+  {
+    "name": "settings.svg",
+    "source": "no-padding/8-ui/settings.svg"
+  },
+  {
+    "name": "save.svg",
+    "source": "no-padding/8-ui/save.svg"
+  },
+  {
+    "name": "trash.svg",
+    "source": "no-padding/9-media/trash.svg"
+  },
+  {
+    "name": "pause.svg",
+    "source": "no-padding/9-media/pause.svg"
+  },
+  {
+    "name": "arrow-right.svg",
+    "source": "no-padding/8-ui/arrow-right.svg"
+  },
+  {
+    "name": "house.svg",
+    "source": "no-padding/6-buildings/house.svg"
+  },
+  {
+    "name": "question-mark.svg",
+    "source": "no-padding/8-ui/question-mark.svg"
+  },
+  {
+    "name": "star.svg",
+    "source": "no-padding/4-nature/star.svg"
+  },
+  {
+    "name": "cross.svg",
+    "source": "no-padding/8-ui/cross.svg"
+  },
+  {
+    "name": "expand.svg",
+    "source": "no-padding/8-ui/expand.svg"
+  },
+  {
+    "name": "refresh.svg",
+    "source": "no-padding/8-ui/refresh.svg"
+  },
+  {
+    "name": "volume.svg",
+    "source": "no-padding/9-media/volume.svg"
+  },
+  {
+    "name": "mute.svg",
+    "source": "no-padding/9-media/mute.svg"
+  },
+  {
+    "name": "heart.svg",
+    "source": "no-padding/1-game/heart.svg"
+  }
+]
