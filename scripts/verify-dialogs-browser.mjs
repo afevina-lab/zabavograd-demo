@@ -188,6 +188,7 @@ await until("!!document.querySelector('.syllable-picker-dialog[open]')");
 assert(await evaluate("[...document.querySelectorAll('.syllable-picker-grid>.syllable-type-option')].every(e=>{const r=e.getBoundingClientRect();return Math.abs(r.width-r.height)<1&&getComputedStyle(e,'::after').content==='none'})"),'Syllable tiles must be square and have no selection crosses');
 console.log(await evaluate("(()=>{const e=document.querySelector('.syllable-picker-dialog[open]'),s=getComputedStyle(e);return {rect:e.getBoundingClientRect().toJSON(),inset:s.inset,margin:s.margin,position:s.position,height:s.height,transform:s.transform,viewport:[innerWidth,innerHeight]}})()"));
 assert(await evaluate("(()=>{const r=document.querySelector('.syllable-picker-dialog[open]').getBoundingClientRect();return Math.abs(r.x+r.width/2-innerWidth/2)<3&&Math.abs(r.y+r.height/2-innerHeight/2)<3})()"),'Syllable dialog centered on both viewport axes');
+await evaluate("document.querySelector('.syllable-picker-dialog input').focus()");
 await evaluate("document.querySelector('.syllable-type-option').focus()");
 await until("!!document.querySelector('.syllable-type-tooltip:popover-open')");
 console.log(await evaluate("[document.querySelector('.syllable-type-option'),document.querySelector('.syllable-type-tooltip')].map(e=>({rect:e.getBoundingClientRect().toJSON(),open:e.matches(':popover-open'),style:e.getAttribute('style'),position:getComputedStyle(e).position,margin:getComputedStyle(e).margin,transform:getComputedStyle(e).transform,focus:e===document.activeElement}))"));
