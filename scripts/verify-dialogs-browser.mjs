@@ -159,11 +159,11 @@ assert(await evaluate("(()=>{const r=document.querySelector('.overlay.result>div
 // Complete Transformations through its visible controls.
 await setup('transformations');
 for(let i=0;i<10;i++){
- await evaluate("[...document.querySelectorAll('.transformation-actions button')].find(e=>/^Показать/.test(e.textContent)).click()");
- await until("[...document.querySelectorAll('.transformation-actions button')].some(e=>e.textContent==='Пропустить анимацию'||e.textContent==='Следующая карточка'||e.textContent==='Завершить')");
- await evaluate("[...document.querySelectorAll('.transformation-actions button')].find(e=>e.textContent==='Пропустить анимацию')?.click()");
- await until("[...document.querySelectorAll('.transformation-actions button')].some(e=>e.textContent==='Следующая карточка'||e.textContent==='Завершить')");
- await evaluate("[...document.querySelectorAll('.transformation-actions button')].find(e=>e.textContent==='Следующая карточка'||e.textContent==='Завершить').click()");
+ await evaluate("[...document.querySelectorAll('.transformation-actions button')].find(e=>/^Показать/.test(e.getAttribute('aria-label')||e.textContent)).click()");
+ await until("[...document.querySelectorAll('.transformation-actions button')].some(e=>(e.getAttribute('aria-label')||e.textContent)==='Пропустить анимацию'||(e.getAttribute('aria-label')||e.textContent)==='Следующая карточка'||(e.getAttribute('aria-label')||e.textContent)==='Завершить')");
+ await evaluate("[...document.querySelectorAll('.transformation-actions button')].find(e=>(e.getAttribute('aria-label')||e.textContent)==='Пропустить анимацию')?.click()");
+ await until("[...document.querySelectorAll('.transformation-actions button')].some(e=>(e.getAttribute('aria-label')||e.textContent)==='Следующая карточка'||(e.getAttribute('aria-label')||e.textContent)==='Завершить')");
+ await evaluate("[...document.querySelectorAll('.transformation-actions button')].find(e=>(e.getAttribute('aria-label')||e.textContent)==='Следующая карточка'||(e.getAttribute('aria-label')||e.textContent)==='Завершить').click()");
 }
 await until("document.querySelector('.game-dialog')?.textContent.includes('Игра завершена')");await sleep(250);await screenshot('transformations-completed');
 assert(await evaluate("![...document.querySelectorAll('.game-dialog button')].some(e=>e.textContent==='Продолжить')"),'Completed transformation must not resume');

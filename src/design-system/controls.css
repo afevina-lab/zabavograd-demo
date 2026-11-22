@@ -1621,3 +1621,24 @@ display:grid;grid-template-columns:repeat(auto-fill,var(--zg-chip-size));justify
 @media(prefers-reduced-motion:reduce){.app .icon-button .garden-icon{transition:none}}
 
 .app[data-theme] .settings-frame.shared-settings-window .card-presentation label.check{margin-block:12px!important}
+
+/* One compact toolbar: artwork side rails sit outside the viewport. */
+.app[data-theme].game-active .play-toolbar.shared-toolbar{
+ --toolbar-height:64px;height:var(--toolbar-height)!important;min-height:var(--toolbar-height)!important;
+ max-height:var(--toolbar-height)!important;padding:0 16px!important;
+ border-image-outset:0 24px!important;
+}
+.app[data-theme].game-active .play-toolbar.shared-toolbar .icon-button{
+ width:calc(var(--toolbar-height)*.7)!important;height:calc(var(--toolbar-height)*.7)!important;
+ min-height:calc(var(--toolbar-height)*.7)!important;align-self:center!important;
+}
+.app[data-theme].game-active .play-toolbar.shared-toolbar .toolbar-centre{
+ flex-direction:column;justify-content:center;gap:2px;
+}
+.toolbar-task{font-size:clamp(12px,1.4vw,20px);line-height:1.15;text-align:center}
+.app[data-theme] .icon-button.answer-no{background:#b83e45!important;border-color:#8e2931!important;color:#fff!important;box-shadow:inset 0 2px 2px #ffffff66,0 3px 0 #7d242a!important}
+.app[data-theme] :is(.answer-yes,.answer-no){display:inline-grid!important;place-items:center;min-width:56px!important;width:64px!important;height:64px!important;padding:14px!important}
+.app[data-theme] :is(.answer-yes,.answer-no) .garden-icon{display:block;width:100%;height:100%;background:currentColor}
+
+.toolbar-task{paint-order:stroke fill;-webkit-text-stroke:2px #fff9e9}
+.app[data-theme] :is(.conveyor-answer,.transformation-actions) .icon-button{margin:0!important}

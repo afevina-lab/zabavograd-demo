@@ -274,9 +274,19 @@
 .app[data-theme].game-active .sorting-content{display:flex;flex-direction:column;min-width:0}
 .app[data-theme].game-active .sorting-bins{min-height:0;flex:1;align-items:stretch}
 .app[data-theme].game-active .sort-bin{
- min-width:0;min-height:0;background:rgb(12 22 32 / .42)!important;
+ min-width:0;min-height:0;background:color-mix(in srgb,var(--ui-paper) 35%,transparent)!important;
  overflow:auto;box-sizing:border-box;
 }
+.app[data-theme].game-active .conveyor-stage{display:flex;flex-direction:column;justify-content:center;gap:16px;min-height:0}
+.app[data-theme].game-active .conveyor-belt{height:66.666%;flex:0 0 66.666%;min-height:0}
+.app[data-theme].game-active .conveyor-card:not(.text-card){height:82%;width:auto;aspect-ratio:1;max-width:80vw;box-sizing:border-box}
+.app[data-theme].game-active .conveyor-answer{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;display:flex;gap:18px;justify-content:center;align-items:center}
+.app[data-theme].game-active .transformation-stage{display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px}
+.app[data-theme].game-active .transformation-scene{height:100%;min-width:0}
+.app[data-theme].game-active .transformation-prompt{grid-column:2;grid-row:1;background:none!important;border:0!important;box-shadow:none!important;padding:8px!important;align-self:center}
+.app[data-theme].game-active .transformation-actions{flex-direction:column;align-items:center;flex-wrap:nowrap}
+.app[data-theme].game-active .transformation-actions .answer-yes{order:-1}
+.app[data-theme].game-active .transformation-actions fieldset{display:contents}
 .app[data-theme].game-active .sort-bin .bin-target{width:100%;min-width:0;box-sizing:border-box}
 .app[data-theme].game-active .sort-bin h3{white-space:normal;overflow-wrap:anywhere}
 .app[data-theme] .settings .card-presentation label.check{margin-block:12px!important}
