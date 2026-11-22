@@ -15,4 +15,4 @@ export function transformationEligibility(word:Word,mode:TransformationMode,lear
  return 'eligible';
 }
 export function transformationWords(words:Word[]){return availableMaterial(words,true)}
-export function transformationResult(mode:TransformationMode,answer:boolean){return {kind:mode==='reading'&&!answer?'word':'image',scale:mode==='small'&&answer?.5:1,count:mode==='many'&&answer?6:1} as const}
+export function transformationResult(mode:TransformationMode,answer:boolean){return {kind:mode==='reading'&&!answer?'word':'image',scale:mode==='small'&&answer?.5:1,count:mode==='many'&&answer?7:1} as const}
