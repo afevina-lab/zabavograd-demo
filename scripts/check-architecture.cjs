@@ -4,10 +4,11 @@ const root=path.resolve(__dirname,'..'),source=path.join(root,'src');
 const domain=new Set(['material-types.ts','material-policy.ts','material-selection.ts','model.ts','learning.ts','reading.ts','sorting.ts','transformations.ts','counting.ts']);
 const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):/\.tsx?$/.test(e.name)?[path.join(dir,e.name)]:[]);
 const graph=new Map();
+// Browser-facing adapters (including saved material sets in localStorage) are not pure domain modules.
 // New plain TypeScript modules are domain code unless explicitly assigned to an adapter layer.
 for(const file of walk(source)){
  const rel=path.relative(source,file).replaceAll('\\','/');
- if(rel.endsWith('.ts')&&!rel.endsWith('.d.ts')&&!rel.startsWith('design-system/')&&!['library-loader.ts','useLibrary.ts','useCardMotion.ts'].includes(rel))domain.add(rel);
+ if(rel.endsWith('.ts')&&!rel.endsWith('.d.ts')&&!rel.startsWith('design-system/')&&!['library-loader.ts','useLibrary.ts','useCardMotion.ts','saved-material-sets.ts'].includes(rel))domain.add(rel);
 }
 for(const file of walk(source)){
  const rel=path.relative(source,file).replaceAll('\\','/'),text=fs.readFileSync(file,'utf8');
