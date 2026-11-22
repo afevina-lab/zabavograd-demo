@@ -1190,25 +1190,22 @@
 }
 .app[data-theme] dialog.letter-picker-dialog .letter-picker-section h3{margin:0!important}
 .app[data-theme] dialog.letter-picker-dialog .letter-grid{
- display:grid;grid-template-columns:repeat(auto-fill,minmax(56px,1fr));
- gap:8px;margin:0!important;
+display:grid;grid-template-columns:repeat(auto-fill,minmax(56px,1fr));gap:8px;margin:0!important;
 }
 .app[data-theme] dialog.letter-picker-dialog .letter-choice{
- box-sizing:border-box;min-height:44px;padding:6px 4px;
- border:1px solid var(--ui-field-edge);background:var(--ui-setup-paper);
- border-radius:10px;color:var(--ui-text);
+box-sizing:border-box;display:flex;align-items:center;justify-content:center;
+ min-height:48px;padding:7px 10px!important;
+ border:1px solid var(--ui-field-edge)!important;border-radius:12px!important;
+ background:color-mix(in srgb,var(--ui-setup-field) 64%,#a7a7a7)!important;
+ color:var(--ui-muted-text)!important;font-size:18px!important;font-weight:700;line-height:1!important;
+ box-shadow:inset 0 1px 2px var(--ui-well-shadow)!important;
 }
-.app[data-theme] dialog.letter-picker-dialog .letter-choice:has(input:checked){
- border-color:var(--ui-deep);background:var(--ui-pale);
-}
+
 .app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid{
  display:grid;grid-template-columns:repeat(auto-fit,minmax(85px,1fr));
  gap:var(--zg-stack-gap)!important;margin:0!important;
 }
-.app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid .check{
- display:flex;align-items:center;gap:8px;min-height:40px;
- padding:2px 4px;border-radius:10px;background:transparent;
-}
+
 .app[data-theme] dialog:is(.letter-picker-dialog,.syllable-picker-dialog,.saved-set-dialog,.saved-set-confirm,.material-save-dialog)>.sound-picker-actions{
  position:static!important;flex:0 0 auto;align-items:center;
  padding:var(--zg-stack-gap,12px) 0 0!important;margin:0!important;
@@ -1234,7 +1231,10 @@
  display:flex;flex-direction:column;justify-content:center;gap:4px;
 }
 .app[data-theme] dialog.saved-set-dialog .saved-set-row .saved-set-remove{
- min-height:42px!important;margin:0!important;padding:8px 12px!important;
+display:flex!important;align-items:center!important;justify-content:center!important;
+ box-sizing:border-box;flex:none;width:44px!important;min-width:44px!important;
+ height:44px!important;min-height:44px!important;padding:10px!important;
+ margin:0!important;border-radius:12px!important;
 }
 .app[data-theme] dialog.material-save-dialog .panel-scroll label{
  display:flex;flex-direction:column;gap:6px;
@@ -1393,7 +1393,8 @@
  font-size:15px!important;line-height:1.35!important;
 }
 .app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid{
- gap:8px!important;
+display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
+ gap:8px!important;margin:0!important;align-items:stretch;
 }
 .app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid .check{
  box-sizing:border-box;position:relative;background:transparent!important;
@@ -1401,10 +1402,7 @@
  margin:0!important;padding:4px 6px!important;
  display:flex;align-items:center!important;
 }
-.app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid .check:hover,
-.app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid .check:focus-within{
- background:var(--ui-pale)!important;border-color:var(--ui-field-edge)!important;
-}
+
 .app[data-theme] dialog:is(.letter-picker-dialog,.syllable-picker-dialog,.saved-set-dialog,.saved-set-confirm,.material-save-dialog){
  border:1px solid var(--ui-field-edge)!important;
  border-radius:20px!important;
@@ -1451,6 +1449,124 @@
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>button.primary{
  box-sizing:border-box!important;height:58px!important;
  min-height:58px!important;max-height:58px!important;
+}
+
+
+/* One modal control family: letter tiles, syllable tiles and disclosure groups. */
+.app[data-theme] dialog.letter-picker-dialog .letter-group{
+ border:0!important;background:transparent!important;
+ margin:0!important;padding:0!important;
+}
+.app[data-theme] dialog.letter-picker-dialog .letter-group>summary{
+ list-style:none;box-sizing:border-box;display:flex!important;
+ align-items:center!important;justify-content:space-between;
+ gap:8px;min-height:52px!important;
+ padding:6px 8px 6px 14px!important;
+ border:1px solid var(--ui-field-edge)!important;border-radius:15px!important;
+ background:var(--ui-control-face)!important;color:var(--ui-text)!important;
+ box-shadow:inset 0 1px 2px var(--ui-field-glint),0 3px 0 var(--ui-control-bottom),0 5px 7px var(--ui-control-shadow)!important;
+ cursor:pointer;
+}
+.app[data-theme] dialog.letter-picker-dialog .letter-group>summary::-webkit-details-marker{display:none}
+.app[data-theme] dialog.letter-picker-dialog .letter-group>summary::marker{content:''}
+.app[data-theme] dialog.letter-picker-dialog .letter-group[open]>summary>.control-well svg{transform:rotate(180deg)}
+.app[data-theme] dialog.letter-picker-dialog .letter-group-content{
+ box-sizing:border-box;display:flex;flex-direction:column;
+ gap:8px;padding:12px 2px 6px;
+}
+.app[data-theme] dialog.letter-picker-dialog .letter-picker-section{
+ gap:10px;padding:12px!important;
+}
+.app[data-theme] dialog.letter-picker-dialog .letter-choice[aria-pressed=true]{
+ border-color:var(--ui-deep)!important;background:var(--ui-deep)!important;
+ color:var(--ui-paper)!important;
+ box-shadow:inset 0 2px 3px var(--ui-field-glint),0 3px 0 var(--ui-control-bottom)!important;
+}
+.app[data-theme] dialog.letter-picker-dialog .letter-choice:hover:not(:disabled){
+ filter:brightness(1.06);
+}
+.app[data-theme] dialog.letter-picker-dialog .letter-select-all,
+.app[data-theme] dialog.syllable-picker-dialog .syllable-picker-body>.check{
+ display:flex;align-items:center;gap:8px;
+ min-height:36px;margin:0!important;line-height:1.35;
+}
+.app[data-theme] dialog.syllable-picker-dialog>.syllable-picker-scroll{
+ display:flex!important;align-items:stretch!important;
+ flex:1 1 auto;min-height:0;overflow-y:auto!important;
+}
+.app[data-theme] dialog.syllable-picker-dialog .syllable-picker-body{
+ box-sizing:border-box;width:100%;
+ display:flex;flex-direction:column;justify-content:center;
+ gap:14px;margin:auto;
+ padding:8px 6px;
+}
+.app[data-theme] dialog.syllable-picker-dialog .syllable-picker-body h2{
+ margin:0!important;
+}
+.app[data-theme] dialog.syllable-picker-dialog .syllable-type-option{
+ position:relative;box-sizing:border-box;
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ min-width:0;min-height:48px!important;padding:8px!important;
+ border:1px solid var(--ui-field-edge)!important;border-radius:12px!important;
+ background:color-mix(in srgb,var(--ui-setup-field) 64%,#a7a7a7)!important;
+ color:var(--ui-muted-text)!important;font-size:17px!important;font-weight:700;
+ box-shadow:inset 0 1px 2px var(--ui-well-shadow)!important;
+}
+.app[data-theme] dialog.syllable-picker-dialog .syllable-type-option[aria-pressed=true]{
+ background:var(--ui-deep)!important;color:var(--ui-paper)!important;
+ border-color:var(--ui-deep)!important;
+ box-shadow:inset 0 2px 3px var(--ui-field-glint),0 3px 0 var(--ui-control-bottom)!important;
+}
+.app[data-theme] dialog.syllable-picker-dialog .syllable-untyped{
+ align-self:flex-start;min-width:170px;padding-inline:16px!important;
+}
+.app[data-theme] dialog.syllable-picker-dialog .syllable-type-tooltip{
+ position:absolute;bottom:calc(100% + 8px);left:50%;
+ transform:translateX(-50%) translateY(4px);
+ width:max-content;max-width:min(290px,65vw);
+ box-sizing:border-box;display:flex;flex-direction:column;gap:5px;
+ padding:12px 14px!important;border:1px solid var(--ui-field-edge)!important;
+ border-radius:13px!important;background:var(--ui-setup-paper)!important;
+ box-shadow:0 6px 16px var(--ui-control-shadow)!important;
+ color:var(--ui-text)!important;font-size:14px!important;
+ font-weight:500!important;line-height:1.4!important;
+ white-space:normal;text-align:left;opacity:0;visibility:hidden;
+ pointer-events:none;transition:opacity .12s ease,transform .12s ease;
+ z-index:50;
+}
+.app[data-theme] dialog.syllable-picker-dialog .syllable-type-tooltip strong{
+ font-weight:750;font-size:15px;color:var(--ui-deep);
+}
+.app[data-theme] dialog.syllable-picker-dialog .syllable-type-tooltip small{font-size:13px;color:var(--ui-muted-text)}
+.app[data-theme] dialog.syllable-picker-dialog .syllable-type-option:is(:hover,:focus-visible) .syllable-type-tooltip{
+ opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);
+}
+.app[data-theme] dialog.saved-set-dialog .saved-set-row .saved-set-remove .garden-icon{
+ width:23px;height:23px;
+}
+.app[data-theme] dialog.saved-set-confirm .saved-set-confirm-delete{
+ background:var(--ui-control-face)!important;color:var(--ui-text)!important;
+ display:inline-flex;align-items:center;justify-content:center;gap:8px!important;
+}
+.app[data-theme] dialog.saved-set-confirm .saved-set-confirm-delete .garden-icon{width:21px;height:21px}
+.app[data-theme] dialog:is(.letter-picker-dialog,.syllable-picker-dialog,.saved-set-dialog,.saved-set-confirm,.material-save-dialog)>.sound-picker-actions{
+ box-sizing:border-box;flex:0 0 auto;
+ min-height:68px!important;padding:10px 10px 10px!important;
+ display:flex!important;align-items:center!important;justify-content:flex-end!important;
+ gap:12px!important;margin:0!important;
+}
+.app[data-theme] dialog:is(.letter-picker-dialog,.syllable-picker-dialog,.saved-set-dialog,.saved-set-confirm,.material-save-dialog)>.sound-picker-actions>button{
+ box-sizing:border-box;height:48px!important;min-height:48px!important;max-height:48px!important;
+ min-width:126px;padding:8px 15px!important;flex:none;align-self:center!important;
+ font-size:16px!important;line-height:1.2!important;white-space:nowrap;
+}
+@media(max-width:500px){
+ .app[data-theme] dialog.syllable-picker-dialog .syllable-picker-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+ }
+ .app[data-theme] dialog.letter-picker-dialog .letter-grid{
+  grid-template-columns:repeat(auto-fill,minmax(48px,1fr));
+ }
 }
 
 /* Compact landscape is an intentional viewport constraint, not a game exception. */
