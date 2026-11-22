@@ -3004,8 +3004,15 @@
         "en": {
           "part_of_speech": "noun",
           "feature_review_status": "suggested",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
+          "pronunciations": [
+            {
+              "ipa": "/ˈæpəl/",
+              "variety": "Received Pronunciation / General American",
+              "source": "https://en.wiktionary.org/wiki/apple",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
           "morphology_status": "suggested",
           "grammatical_gender": null,
           "indefinite_article_form": "an apple",
@@ -4336,8 +4343,15 @@
           "plural_form": "cats",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
+          "pronunciations": [
+            {
+              "ipa": "/ˈkæt/",
+              "variety": "Received Pronunciation / General American",
+              "source": "https://en.wiktionary.org/wiki/cat",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
           "morphology_status": "suggested"
         },
         "fr": {
@@ -4347,8 +4361,15 @@
           "plural_form": "chats",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
+          "pronunciations": [
+            {
+              "ipa": "[ʃa]",
+              "variety": "France",
+              "source": "https://fr.wiktionary.org/wiki/chat",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
           "morphology_status": "suggested"
         },
         "es": {
@@ -4358,8 +4379,15 @@
           "plural_form": "gatos",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
+          "pronunciations": [
+            {
+              "ipa": "[ˈgat̪o]",
+              "variety": "Spain",
+              "source": "https://es.wiktionary.org/wiki/gato",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
           "morphology_status": "suggested"
         },
         "de": {
@@ -4945,8 +4973,15 @@
           "plural_form": "Hunde",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
-          "pronunciations": [],
-          "pronunciation_status": "not_imported",
+          "pronunciations": [
+            {
+              "ipa": "[hʊnt]",
+              "variety": "Standard German",
+              "source": "https://de.wiktionary.org/wiki/Hund",
+              "review_status": "suggested"
+            }
+          ],
+          "pronunciation_status": "suggested",
           "morphology_status": "suggested"
         }
       }
