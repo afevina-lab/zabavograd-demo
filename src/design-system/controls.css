@@ -1008,7 +1008,7 @@
  --zg-stack-gap:12px;
  --zg-section-gap:12px;
  --zg-row-height:52px;
- --zg-row-inset:10px;
+ --zg-row-inset:8px;
 }
 .app[data-theme] .settings-frame.shared-settings-window{
  --zg-setup-gap:var(--zg-stack-gap);
