@@ -67,3 +67,18 @@ test('source enrichment preserves editor proposals and stages IPA/gender evidenc
   assert.equal(fr.dictionary_evidence[0].review_status,'suggested');
  }finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
+
+
+test('Kaikki probe only follows approved host and separates language/part of speech',()=>{
+ const {pageUrl,findDownload,normalizeRow}=require('../scripts/probe-kaikki-word-pages.cjs');
+ assert.equal(pageUrl('en','cat'),'https://kaikki.org/dictionary/English/meaning/c/ca/cat.html');
+ assert.equal(pageUrl('de','Katze'),'https://kaikki.org/dictionary/German/meaning/K/Ka/Katze.html');
+ assert.throws(()=>pageUrl('ru','кот'));
+ const sample='<a href="../../cat.jsonl">JSONL</a><a href="https://evil.example/cat.jsonl">Bad</a>';
+ assert.equal(findDownload(sample,'https://kaikki.org/dictionary/English/meaning/c/ca/cat.html'),
+ 'https://kaikki.org/dictionary/English/meaning/cat.jsonl');
+ assert.equal(normalizeRow({lang_code:'fr',word:'chat',pos:'verb'},'fr','chat'),null);
+ const e=normalizeRow({lang_code:'fr',word:'chat',pos:'noun',sounds:[{ipa:'/ʃa/'}],forms:[{form:'chats',tags:['plural']}]},'fr','chat');
+ assert.equal(e.ipa[0],'/ʃa/');
+ assert.equal(e.plural_forms[0],'chats');
+});
