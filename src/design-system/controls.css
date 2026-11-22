@@ -1445,10 +1445,7 @@
  padding:6px 10px!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-preview-fit{
- font-size:18px!important;line-height:1.25!important;
-}
-.app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-preview-fit[style]{
- font-size:inherit;
+ font-size:18px;line-height:1.25;
 }
 .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>button.primary{
  box-sizing:border-box!important;height:58px!important;
