@@ -1,3 +1,4 @@
+import {Icon} from './GameUI.tsx';
 import {useContext,useEffect,useRef,useState} from 'react';
 import {ControlWell} from './design-system/ControlWell.tsx';
 import {MaterialPresetContext} from './design-system/MaterialPresetContext.tsx';
@@ -50,7 +51,7 @@ export function SavedMaterialSets({words,learning,filters,setLearning,setFilters
     {sets.length===0?<p>Сохранённых наборов пока нет. Настройте учебный материал и нажмите кнопку сохранения в верхней панели.</p>:
     <div className="saved-set-list">{sets.map(set=><div className="saved-set-row" key={set.id}>
      <label className="check"><input type="checkbox" checked={chosen.includes(set.id)} onChange={e=>setChosen(ids=>e.target.checked?[...ids,set.id]:ids.filter(x=>x!==set.id))}/><span><strong>{set.name}</strong><small>{set.learning.approvedWordIds?.length?'Одобренных слов: '+set.learning.approvedWordIds.length+' · ':''}{new Date(set.updatedAt).toLocaleDateString('ru-RU')}</small></span></label>
-     <button type="button" className="secondary saved-set-remove" aria-label={'Удалить набор '+set.name} onClick={()=>askDelete(set.id)}>Удалить</button>
+     <button type="button" className="icon-button saved-set-remove" title="Удалить набор" aria-label={'Удалить набор '+set.name} onClick={()=>askDelete(set.id)}><Icon name="Trash"/></button>
     </div>)}</div>}
     {message&&<p role="status">{message}</p>}
     <p className="hint">Можно отметить несколько наборов одной учебной задачи. Содержимое хранится в браузере.</p>
@@ -59,7 +60,7 @@ export function SavedMaterialSets({words,learning,filters,setLearning,setFilters
   </dialog>
   <dialog className="sound-picker-dialog saved-set-confirm" ref={confirmation} aria-label="Подтвердить удаление" onCancel={()=>setPendingDelete(null)}>
    <div className="panel-scroll"><h2>Удалить набор?</h2><p>Это действие удалит сохранённые настройки и список слов с этого устройства. Отменить его нельзя.</p></div>
-   <div className="sound-picker-actions"><button type="button" className="primary" onClick={confirmDelete}>Удалить</button><button type="button" className="secondary" onClick={cancelDelete}>Отмена</button></div>
+   <div className="sound-picker-actions"><button type="button" className="secondary saved-set-confirm-delete" onClick={confirmDelete}><Icon name="Trash"/> Удалить</button><button type="button" className="secondary" onClick={cancelDelete}>Отмена</button></div>
   </dialog>
  </div>;
 }
