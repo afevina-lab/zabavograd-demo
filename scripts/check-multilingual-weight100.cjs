@@ -84,6 +84,10 @@ function validate(manifest,proposals,canonical){
  assert.equal(get('посуда','fr')?.citation_form,'la vaisselle');
  assert.equal(get('птица','es')?.grammatical_gender,'f');
  assert.equal(get('птица','es')?.indefinite_article_form,'un ave');
+ const road=proposals.records.find(p=>p.ru_lemma==='дорога')?.language_details?.en;
+ assert(road,'Missing English road');
+ assert(!(road.pronunciations||[]).some(p=>p.ipa==='/ɾoːɖ/'),'Suspicious road transcription must not be promoted');
+
 
  return {weight100:live.length,reviewProposals:reviewIds.size,languageProposals:reviewIds.size*4};
 }
