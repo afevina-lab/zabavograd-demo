@@ -1,10 +1,49 @@
-import {Children,cloneElement,isValidElement,useState,type ReactNode} from 'react';
+import {Children,cloneElement,isValidElement,useCallback,useEffect,useMemo,useRef,useState,type ReactNode} from 'react';
+import {MaterialPresetContext,type PresetSource} from './MaterialPresetContext.tsx';
+import {saveMaterialSet} from '../saved-material-sets.ts';
 import {Icon,ThemePicker} from '../GameUI.tsx';
 import {SetupPreview} from './SetupPreview.tsx';
 /** The single settings shell for every game. Only its content varies. */
 export function SettingsWindow({game,children}:{game:string;children:ReactNode}){
  const child=Children.only(children);
  const [themeOpen,setThemeOpen]=useState(false);
+ const registry=useRef(new Map<string,()=>PresetSource>());
+ const [revision,setRevision]=useState(0);
+ const [candidates,setCandidates]=useState<PresetSource[]>([]);
+ const [saveName,setSaveName]=useState('');
+ const [saveSource,setSaveSource]=useState(0);
+ const [saveError,setSaveError]=useState('');
+ const [manualWordIds,setManualWordIds]=useState<string[]|null>(null);
+ const saveDialog=useRef<HTMLDialogElement>(null);
+ const saveTrigger=useRef<HTMLButtonElement>(null);
+ const register=useCallback((id:string,getSource:()=>PresetSource)=>{
+  registry.current.set(id,getSource);
+  return ()=>{if(registry.current.get(id)===getSource)registry.current.delete(id)};
+ },[]);
+ const bridge=useMemo(()=>({register,revision,refresh:()=>setRevision(n=>n+1)}),[register,revision]);
+ useEffect(()=>{
+  const update=(event:Event)=>{
+   const ids=(event as CustomEvent<{ids:string[]}>).detail?.ids;
+   if(Array.isArray(ids))setManualWordIds([...new Set(ids)]);
+  };
+  window.addEventListener('zg:manual-word-selection',update);
+  return ()=>window.removeEventListener('zg:manual-word-selection',update);
+ },[]);
+ const openSave=()=>{
+  const current=[...registry.current.values()].map(getSource=>getSource());
+  setCandidates(current);setSaveSource(0);setSaveName('');setSaveError('');
+  saveDialog.current?.showModal();
+ };
+ const closeSave=()=>{saveDialog.current?.close();saveTrigger.current?.focus()};
+ const saveNow=()=>{
+  const source=candidates[saveSource];
+  if(!source){setSaveError('Не найден учебный материал для сохранения.');return}
+  try{
+   const learning=manualWordIds?.length?{...source.learning,selectionMode:'approved' as const,approvedWordIds:manualWordIds}:source.learning;
+   saveMaterialSet({name:saveName,learning,filters:source.filters});
+   bridge.refresh();closeSave();setManualWordIds(null);
+  }catch(error){setSaveError((error as Error).message)}
+ };
  function arrange(content:ReactNode){
   const nodes=Children.toArray(content),left:ReactNode[]=[],right:ReactNode[]=[],footer:ReactNode[]=[],intro:ReactNode[]=[],appearance:ReactNode[]=[],extras:ReactNode[]=[];
   let section=0,seenSection=false;
@@ -43,8 +82,23 @@ export function SettingsWindow({game,children}:{game:string;children:ReactNode})
    footer:<div className="setup-footer">{footer}</div>};
  }
  const assembled=isValidElement<{className?:string;children?:ReactNode}>(child)?arrange(child.props.children):null;
- return <div className="settings-shade"><section className="settings-frame shared-settings-window" role="dialog" aria-modal="true" aria-label={'Настройки: '+game}>
- <header className="settings-window-heading"><div className="settings-adventure-title"><span className="settings-adventure-emblem" aria-hidden="true"><Icon name="Star"/></span><div><p className="settings-eyebrow">Забавоград · пора играть</p><h2>{game}</h2><span>Подготовка к игре</span></div></div><a className="icon-button" href={import.meta.env.BASE_URL+'home.html'} aria-label="Домой" title="На главную"><Icon name="Home1"/></a></header>
+ return <MaterialPresetContext.Provider value={bridge}><div className="settings-shade"><section className="settings-frame shared-settings-window" role="dialog" aria-modal="true" aria-label={'Настройки: '+game}>
+ <header className="settings-window-heading"><div className="settings-adventure-title"><span className="settings-adventure-emblem" aria-hidden="true"><Icon name="Star"/></span><div><p className="settings-eyebrow">Забавоград · пора играть</p><h2>{game}</h2><span>Подготовка к игре</span></div></div><div className="settings-header-actions">
+ <button type="button" ref={saveTrigger} className="icon-button" aria-label="Сохранить набор" title="Сохранить учебный набор" onClick={openSave}><Icon name="Star"/></button>
+ <a className="icon-button" href={import.meta.env.BASE_URL+'home.html'} aria-label="Домой" title="На главную"><Icon name="Home1"/></a>
+ </div></header>
  {assembled&&isValidElement<{className?:string;children?:ReactNode}>(child)?<><div className="setup-workspace">{cloneElement(child,{className:(child.props.className||'')+' settings unified-settings-content'},assembled.body)}{assembled.theme}</div>{assembled.footer}</>:child}
- </section></div>;
+ </section>
+ <dialog ref={saveDialog} className="sound-picker-dialog material-save-dialog" aria-label="Сохранить набор" onCancel={()=>saveTrigger.current?.focus()}>
+  <div className="panel-scroll">
+   <h2>Сохранить учебный набор</h2>
+   <label>Название набора<input value={saveName} maxLength={80} placeholder="Например, З — начало слова" autoFocus onChange={e=>setSaveName(e.target.value)}/></label>
+   {candidates.length>1&&<label>Учебный материал<select value={saveSource} onChange={e=>setSaveSource(Number(e.target.value))}>{candidates.map((src,i)=><option key={i} value={i}>{src.label} · {i+1}</option>)}</select></label>}
+   <p>Будут сохранены параметры отбора и выбранные вручную слова, если они есть. Наборы хранятся только в этом браузере; при очистке данных сайта они могут исчезнуть. Не указывайте личные данные детей.</p>
+   {manualWordIds?.length>0&&<p>Сохранится вручную выбранных слов: {manualWordIds.length}.</p>}
+   {saveError&&<p role="alert">{saveError}</p>}
+  </div>
+  <div className="sound-picker-actions"><button className="primary" type="button" onClick={saveNow}>Сохранить</button><button className="secondary" type="button" onClick={closeSave}>Отмена</button></div>
+ </dialog>
+ </div></MaterialPresetContext.Provider>;
 }

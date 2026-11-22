@@ -1,106 +1,65 @@
-import {useEffect,useMemo,useRef,useState} from 'react';
-import {SelectControl} from './design-system/SelectControl.tsx';
-import {learningPool,type Learning} from './learning.ts';
+import {useContext,useEffect,useRef,useState} from 'react';
+import {ControlWell} from './design-system/ControlWell.tsx';
+import {MaterialPresetContext} from './design-system/MaterialPresetContext.tsx';
+import type {Learning} from './learning.ts';
 import type {Filters,Word} from './material-types.ts';
-import {deleteMaterialSet,readMaterialSets,saveMaterialSet,type SavedMaterialSet} from './saved-material-sets.ts';
+import {deleteMaterialSet,readMaterialSets,type SavedMaterialSet} from './saved-material-sets.ts';
 
-/** One library of teacher presets, shared by every game's material settings. */
+/** Browser-local material bank: selection is transactional; no duplicate inline settings. */
 export function SavedMaterialSets({words,learning,filters,setLearning,setFilters}:{
  words:Word[];learning:Learning;filters:Filters;
  setLearning:(value:Learning)=>void;setFilters:(value:Partial<Filters>)=>void;
 }){
+ const bridge=useContext(MaterialPresetContext);
  const [sets,setSets]=useState<SavedMaterialSet[]>([]);
- const [selected,setSelected]=useState(''),[name,setName]=useState('');
- const [status,setStatus]=useState(''),[deletePending,setDeletePending]=useState(false);
- const [draft,setDraft]=useState<string[]>([]),[search,setSearch]=useState(''),[pickedOnly,setPickedOnly]=useState(false);
- const dialog=useRef<HTMLDialogElement>(null),wordTrigger=useRef<HTMLButtonElement>(null);
- useEffect(()=>{try{setSets(readMaterialSets())}catch(error){setStatus((error as Error).message)}},[]);
- const approved=learning.approvedWordIds||[];
- const wordIds=useMemo(()=>new Set(words.map(w=>w.id)),[words]);
- // Do not offer transient generated syllables or maths IDs: saved word references
- // must resolve to stable canonical catalogue IDs across releases.
- const eligible=useMemo(()=>learning.mode==='math'?[]:learningPool(words,filters,{...learning,selectionMode:'automatic'},false)
-  .filter(w=>wordIds.has(w.id)),[words,filters,learning,wordIds]);
- const eligibleIds=useMemo(()=>new Set(eligible.map(w=>w.id)),[eligible]);
- const catalogue=useMemo(()=>new Map(words.map(w=>[w.id,w])),[words]);
- const availableApproved=approved.filter(id=>eligibleIds.has(id)).length;
- const list=useMemo(()=>{
-  const base=pickedOnly?draft.map(id=>catalogue.get(id)).filter((w):w is Word=>!!w):eligible;
-  return base.filter(w=>w.label.toLocaleLowerCase('ru').includes(search.toLocaleLowerCase('ru')))
-   .slice(0,120);
- },[eligible,catalogue,pickedOnly,draft,search]);
- const selectSet=(id:string)=>{setSelected(id);setName(sets.find(s=>s.id===id)?.name||'');setStatus('');setDeletePending(false)};
- const load=()=>{
-  const item=sets.find(s=>s.id===selected);
-  if(!item)return setStatus('Выберите сохранённый набор.');
-  setFilters(structuredClone(item.filters));setLearning(structuredClone(item.learning));
-  setName(item.name);setStatus('Набор «'+item.name+'» загружен.');
+ const [chosen,setChosen]=useState<string[]>([]);
+ const [pendingDelete,setPendingDelete]=useState<string|null>(null);
+ const [message,setMessage]=useState('');
+ const picker=useRef<HTMLDialogElement>(null),confirmation=useRef<HTMLDialogElement>(null),trigger=useRef<HTMLButtonElement>(null);
+ const refresh=()=>{try{setSets(readMaterialSets())}catch(e){setMessage((e as Error).message)}};
+ useEffect(()=>{refresh()},[bridge?.revision]);
+ const close=()=>{picker.current?.close();trigger.current?.focus()};
+ const open=()=>{refresh();setMessage('');picker.current?.showModal()};
+ const apply=()=>{
+  const selected=chosen.map(id=>sets.find(s=>s.id===id)).filter((s):s is SavedMaterialSet=>!!s);
+  if(!selected.length){setMessage('Отметьте хотя бы один набор.');return;}
+  const modes=new Set(selected.map(s=>s.learning.mode));
+  if(modes.size>1){setMessage('Для объединения выберите наборы одной учебной задачи.');return;}
+  const first=selected[0],other=selected.slice(1);
+  const approved=[...new Set(selected.flatMap(s=>s.learning.approvedWordIds||[]))];
+  const learningNext:Learning={...structuredClone(first.learning),
+   additional:[...(first.learning.additional||[]),...other.map(s=>({learning:structuredClone(s.learning),filters:structuredClone(s.filters)}))],
+   ...(approved.length?{approvedWordIds:approved,selectionMode:'approved' as const}:{})
+  };
+  setFilters(structuredClone(first.filters));setLearning(learningNext);close();
  };
- const save=(asNew:boolean)=>{
-  try{
-   const next=saveMaterialSet({name,learning,filters},asNew?undefined:selected||undefined);
-   setSets(next);const saved=asNew||!selected?next[next.length-1]:next.find(s=>s.id===selected)!;
-   setSelected(saved.id);setName(saved.name);setStatus('Набор сохранён в этом браузере.');
-   setDeletePending(false);
-  }catch(error){setStatus((error as Error).message)}
+ const askDelete=(id:string)=>{setPendingDelete(id);confirmation.current?.showModal()};
+ const cancelDelete=()=>{confirmation.current?.close();setPendingDelete(null)};
+ const confirmDelete=()=>{
+  if(!pendingDelete)return;
+  try{setSets(deleteMaterialSet(pendingDelete));setChosen(ids=>ids.filter(id=>id!==pendingDelete));setMessage('Набор удалён.');bridge?.refresh();cancelDelete();}
+  catch(error){setMessage((error as Error).message);cancelDelete();}
  };
- const remove=()=>{
-  if(!selected)return;
-  if(!deletePending){setDeletePending(true);setStatus('Нажмите «Подтвердить удаление», чтобы удалить набор.');return}
-  try{setSets(deleteMaterialSet(selected));setSelected('');setName('');setStatus('Набор удалён.');setDeletePending(false)}
-  catch(error){setStatus((error as Error).message)}
- };
- const openWords=()=>{setDraft([...approved]);setSearch('');setPickedOnly(false);dialog.current?.showModal()};
- const closeWords=()=>{dialog.current?.close();wordTrigger.current?.focus()};
- return <details className="filter-details saved-material-sets">
-  <summary>Мои наборы · {sets.length} сохранено</summary>
-  <div className="saved-material-sets-body">
-   <p className="saved-material-sets-hint">Сохраните учебные правила и список одобренных слов. Наборы доступны в других играх на этом устройстве.</p>
-   <label>Сохранённые наборы
-    <SelectControl aria-label="Сохранённый набор" value={selected} onChange={e=>selectSet(e.target.value)}>
-     <option value="">Новый набор</option>{sets.map(s=><option key={s.id} value={s.id}>{s.name}</option>)}
-    </SelectControl>
-   </label>
-   <label>Название набора
-    <input value={name} maxLength={80} placeholder="Например, С — начало слова" aria-label="Название набора" onChange={e=>setName(e.target.value)}/>
-   </label>
-   {learning.mode!=='math'&&<div className="saved-material-bank">
-    <label className="check"><input type="checkbox" role="switch" checked={learning.selectionMode==='approved'}
-      onChange={e=>setLearning({...learning,selectionMode:e.target.checked?'approved':'automatic'})}/>
-     Только вручную одобренные слова
-    </label>
-    <button type="button" className="secondary" ref={wordTrigger} onClick={openWords}>Выбрать слова · {approved.length}</button>
-    {approved.length>0&&<p>По текущим условиям подходят {availableApproved} из {approved.length}. Остальные сохраняются в наборе, но не выдаются.</p>}
-   </div>}
-   <div className="saved-material-actions">
-    <button type="button" className="secondary" disabled={!selected} onClick={load}>Загрузить</button>
-    <button type="button" className="primary" onClick={()=>save(false)}>{selected?'Обновить набор':'Сохранить набор'}</button>
-    {selected&&<button type="button" className="secondary" onClick={()=>save(true)}>Как новый</button>}
-    <button type="button" className="secondary" disabled={!selected} onClick={remove}>{deletePending?'Подтвердить удаление':'Удалить'}</button>
+ return <div className="saved-set-picker">
+  <button type="button" ref={trigger} className="category-picker-trigger saved-set-trigger" onClick={open}>
+   <span className="setup-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 5h16v15H4zM8 9h8M8 13h8M8 17h5"/></svg></span>
+   <span className="setup-action-copy"><strong>Выберите набор</strong><small>{chosen.length?'Отмечено: '+chosen.length:'Мои сохранённые учебные наборы'}</small></span><ControlWell symbol="plus"/>
+  </button>
+  <dialog className="sound-picker-dialog saved-set-dialog" ref={picker} aria-label="Выбрать набор" onCancel={()=>trigger.current?.focus()}>
+   <div className="panel-scroll"><h2>Выберите набор</h2>
+    {sets.length===0?<p>Сохранённых наборов пока нет. Настройте учебный материал и нажмите кнопку сохранения в верхней панели.</p>:
+    <div className="saved-set-list">{sets.map(set=><div className="saved-set-row" key={set.id}>
+     <label className="check"><input type="checkbox" checked={chosen.includes(set.id)} onChange={e=>setChosen(ids=>e.target.checked?[...ids,set.id]:ids.filter(x=>x!==set.id))}/><span><strong>{set.name}</strong><small>{set.learning.approvedWordIds?.length?'Одобренных слов: '+set.learning.approvedWordIds.length+' · ':''}{new Date(set.updatedAt).toLocaleDateString('ru-RU')}</small></span></label>
+     <button type="button" className="secondary saved-set-remove" aria-label={'Удалить набор '+set.name} onClick={()=>askDelete(set.id)}>Удалить</button>
+    </div>)}</div>}
+    {message&&<p role="status">{message}</p>}
+    <p className="hint">Можно отметить несколько наборов одной учебной задачи. Содержимое хранится в браузере.</p>
    </div>
-   {status&&<p className="saved-material-status" role="status">{status}</p>}
-   <p className="saved-material-sets-hint">Хранится в браузере, без регистрации. При очистке данных сайта наборы могут исчезнуть. Не используйте в названиях личные данные детей.</p>
-  </div>
-  <dialog className="sound-picker-dialog saved-words-dialog" ref={dialog} aria-label="Выбор одобренных слов" onCancel={()=>wordTrigger.current?.focus()}>
-   <div className="panel-scroll">
-    <h2>Одобренные слова</h2>
-    <p>Отберите слова для своих занятий. В списке только материал из текущей библиотеки, подходящий под выбранные правила.</p>
-    <label>Найти слово<input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Поиск по названию"/></label>
-    <label className="check"><input type="checkbox" checked={pickedOnly} onChange={e=>setPickedOnly(e.target.checked)}/>Показывать только выбранные</label>
-    <p>Выбрано: {draft.length}. {list.length===120?'Показаны первые 120 совпадений — уточните поиск.':''}</p>
-    <div className="saved-words-list">{list.map(w=><label className="check" key={w.id}>
-     <input type="checkbox" checked={draft.includes(w.id)}
-       onChange={e=>setDraft(ids=>e.target.checked?[...ids,w.id]:ids.filter(id=>id!==w.id))}/>
-     {w.label}{!eligibleIds.has(w.id)&&<small> · не подходит под текущие условия</small>}
-    </label>)}</div>
-    <div className="sound-picker-actions">
-     <button type="button" className="primary" disabled={!draft.length} onClick={()=>{
-      setLearning({...learning,approvedWordIds:[...new Set(draft)],selectionMode:'approved'});closeWords();
-     }}>Применить · {draft.length}</button>
-     <button type="button" className="secondary" onClick={()=>{setLearning({...learning,approvedWordIds:[],selectionMode:'automatic'});closeWords()}}>Сбросить список</button>
-     <button type="button" className="secondary" onClick={closeWords}>Отмена</button>
-    </div>
-   </div>
+   <div className="sound-picker-actions"><button type="button" className="primary" disabled={!chosen.length} onClick={apply}>Применить · {chosen.length}</button><button type="button" className="secondary" onClick={close}>Отмена</button></div>
   </dialog>
- </details>;
+  <dialog className="sound-picker-dialog saved-set-confirm" ref={confirmation} aria-label="Подтвердить удаление" onCancel={()=>setPendingDelete(null)}>
+   <div className="panel-scroll"><h2>Удалить набор?</h2><p>Это действие удалит сохранённые настройки и список слов с этого устройства. Отменить его нельзя.</p></div>
+   <div className="sound-picker-actions"><button type="button" className="primary" onClick={confirmDelete}>Удалить</button><button type="button" className="secondary" onClick={cancelDelete}>Отмена</button></div>
+  </dialog>
+ </div>;
 }
