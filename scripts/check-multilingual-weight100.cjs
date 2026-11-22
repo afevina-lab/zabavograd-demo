@@ -61,6 +61,20 @@ function validate(manifest,proposals,canonical){
  assert.notEqual(animals.translations.en,devices.translations.en,'Mouse senses were collapsed');
  assert.equal(byId.get('ru-gen-20261104-furniture')?.translations.fr,'mobilier','Furniture must retain collective sense');
  assert.equal(byId.get('ru-sense-20261105-kist-tool')?.translations.en,'paintbrush','Painting brush must not be mapped to hand');
+ // Targeted safeguards for previous false friends and mass-noun article errors.
+ const get=(lemma,lang)=>proposals.records.find(p=>p.ru_lemma===lemma)?.language_details?.[lang];
+ for(const [lemma,lang] of [['мебель','en'],['посуда','en'],['посуда','fr'],['зубная паста','en'],['мыло','en'],['шампунь','en']]){
+  const detail=get(lemma,lang);
+  assert(detail,'Missing audited word '+lemma+' '+lang);
+  assert(!detail.indefinite_article_form,'Invalid indefinite article on mass noun '+lemma+' '+lang);
+  assert.equal(detail.morphology_status,'partial','Countability not represented: '+lemma+' '+lang);
+ }
+ assert.equal(get('мебель','de')?.citation_form,'die Möbel','German collective furniture must be plural');
+ assert.equal(get('мебель','de')?.grammatical_number,'plural');
+ assert.equal(get('посуда','fr')?.citation_form,'la vaisselle');
+ assert.equal(get('птица','es')?.grammatical_gender,'f');
+ assert.equal(get('птица','es')?.indefinite_article_form,'un ave');
+
  return {weight100:live.length,reviewProposals:reviewIds.size,languageProposals:reviewIds.size*4};
 }
 if(require.main===module)console.log('PASS multilingual weight-100:',validate(read('editorial/review/multilingual-weight100-manifest.json'),read('editorial/review/multilingual-weight100-proposals.json'),read('outputs/library-v2.json')));
