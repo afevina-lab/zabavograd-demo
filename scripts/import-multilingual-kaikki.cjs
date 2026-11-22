@@ -49,14 +49,14 @@ function validateCandidates(data){
   if(e.review_status!=='suggested')throw Error('Import cannot approve entries');
   if(!e.meanings?.length||!e.provenance?.length)throw Error('Missing senses or provenance');
   for(const s of e.meanings)if(s.review_status!=='suggested'||s.links.length)throw Error('Imported sense cannot have approved or guessed links');
-  for(const p of e.provenance)if(!p.license||!p.source_url||!/^\\d{4}-\\d{2}-\\d{2}$/.test(p.retrieved_at))throw Error('Incomplete provenance');
+  for(const p of e.provenance)if(!p.license||!p.source_url||!/^\d{4}-\d{2}-\d{2}$/.test(p.retrieved_at))throw Error('Incomplete provenance');
   for(const f of e.forms||[])if(f.review_status!=='suggested')throw Error('Unexpected approved form');
   for(const f of e.pronunciations||[])if(f.review_status!=='suggested')throw Error('Unexpected approved pronunciation');
  }
  return true;
 }
 async function importJsonl(input,meta,{limit=0}={}){
- if(!meta.sourceUrl?.startsWith('https://')||!meta.license||!/^\\d{4}-\\d{2}-\\d{2}$/.test(meta.retrievedAt))throw Error('Explicit HTTPS source, license and ISO date required');
+ if(!meta.sourceUrl?.startsWith('https://')||!meta.license||!/^\d{4}-\d{2}-\d{2}$/.test(meta.retrievedAt))throw Error('Explicit HTTPS source, license and ISO date required');
  const byId=new Map();let scanned=0,filtered=0,malformed=0;
  const stream=readline.createInterface({input:fs.createReadStream(input,{encoding:'utf8'}),crlfDelay:Infinity});
  for await(const line of stream){
@@ -94,8 +94,8 @@ if(require.main===module){
   const limit=lim===null?0:Number(lim);
   if(!Number.isSafeInteger(limit)||limit<0)throw Error('Invalid --limit');
   const {result,report}=await importJsonl(input,meta,{limit});
-  fs.writeFileSync(output,JSON.stringify(result,null,2)+'\\n',{flag:'wx'});
-  process.stdout.write(JSON.stringify(report)+'\\n');
+  fs.writeFileSync(output,JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+  process.stdout.write(JSON.stringify(report)+'\n');
  })().catch(e=>{console.error(e.message);process.exitCode=1;});
 }
 module.exports={convert,validateCandidates,importJsonl,stableId};
