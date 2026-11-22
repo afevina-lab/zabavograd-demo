@@ -99,7 +99,7 @@ export function SettingsWindow({game,children}:{game:string;children:ReactNode})
    {manualWordIds&&manualWordIds.length>0&&<p>Сохранится вручную выбранных слов: {manualWordIds.length}.</p>}
    {saveError&&<p role="alert">{saveError}</p>}
   </div>
-  <div className="sound-picker-actions"><button className="primary" type="button" onClick={saveNow}>Сохранить</button><button className="secondary" type="button" onClick={closeSave}>Отмена</button></div>
+  <div className="sound-picker-actions"><button className="secondary" type="button" onClick={saveNow}>Сохранить</button><button className="secondary" type="button" onClick={closeSave}>Отмена</button></div>
  </dialog>
  </div></MaterialPresetContext.Provider>;
 }

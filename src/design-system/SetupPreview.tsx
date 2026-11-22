@@ -1,6 +1,6 @@
 import {useLayoutEffect,useRef,type ReactNode} from 'react';
 
-/** Fit the actual word list into two lines. Default to 16px, shrink only when needed. */
+/** Fit the actual word list into two lines. Default to 18px, shrink only when needed. */
 function PreviewCopy({children}:{children:ReactNode}){
  const well=useRef<HTMLDivElement>(null),text=useRef<HTMLDivElement>(null);
  useLayoutEffect(()=>{
@@ -14,7 +14,7 @@ function PreviewCopy({children}:{children:ReactNode}){
    inner.style.overflow='visible';
    const availableHeight=outer.clientHeight-parseFloat(getComputedStyle(outer).paddingTop)-parseFloat(getComputedStyle(outer).paddingBottom);
    const availableWidth=outer.clientWidth-parseFloat(getComputedStyle(outer).paddingLeft)-parseFloat(getComputedStyle(outer).paddingRight);
-   for(let size=16;size>=12;size--){
+   for(let size=18;size>=12;size--){
     inner.style.fontSize=size+'px';
     if(inner.scrollHeight<=availableHeight+1&&inner.scrollWidth<=availableWidth+1)break;
    }
