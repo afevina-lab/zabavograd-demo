@@ -756,10 +756,10 @@
  display:flex;flex-direction:column;gap:var(--zg-setup-gap)!important;
  min-width:0;box-sizing:border-box;
 }
-.app[data-theme] .settings-frame.shared-settings-window .setup-material-fields > *,
-.app[data-theme] .settings-frame.shared-settings-window .setup-dependent-field > *,
-.app[data-theme] .settings-frame.shared-settings-window .setup-column>.settings-block > *,
-.app[data-theme] .settings-frame.shared-settings-window .setup-section-fieldset>.settings-block > *{
+.app[data-theme] .settings-frame.shared-settings-window .setup-material-fields > :not(dialog),
+.app[data-theme] .settings-frame.shared-settings-window .setup-dependent-field > :not(dialog),
+.app[data-theme] .settings-frame.shared-settings-window .setup-column>.settings-block > :not(dialog),
+.app[data-theme] .settings-frame.shared-settings-window .setup-section-fieldset>.settings-block > :not(dialog){
  margin-top:0!important;margin-bottom:0!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window .setup-column .sort-group-settings{
@@ -1029,7 +1029,7 @@
  gap:var(--zg-stack-gap)!important;min-width:0;
  margin:0!important;padding-block:0!important;
 }
-.app[data-theme] .settings-frame.shared-settings-window .setup-column>.settings-block>*,
+.app[data-theme] .settings-frame.shared-settings-window .setup-column>.settings-block>:not(dialog),
 .app[data-theme] .settings-frame.shared-settings-window :is(.setup-material-fields,.setup-dependent-field,.reading-settings,.math-settings)>:not(dialog),
 .app[data-theme] .settings-frame.shared-settings-window .settings-disclosure-body>:not(dialog){
  margin-block:0!important;
