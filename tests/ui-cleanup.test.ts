@@ -559,3 +559,27 @@ test('No obsolete six-row or one-column footer fallback competes with canonical 
  assert.doesNotMatch(css,/\.app \.shared-settings-window \.setup-footer>\.setup-material-preview\{/);
  assert.match(css,/\.settings-frame\.shared-settings-window>\.setup-footer\{[^}]*grid-template-rows:minmax\(0,1fr\)!important/);
 });
+
+
+test('Letter and syllable modal selectors share button tiles with checkbox-only Select all',()=>{
+ const reading=readFileSync('src/ReadingSettings.tsx','utf8');
+ const syllables=readFileSync('src/SyllableStructurePicker.tsx','utf8');
+ const styles=readFileSync('src/design-system/controls.css','utf8');
+ assert.match(reading,/className="letter-choice" aria-pressed=/);
+ assert.doesNotMatch(reading,/<label[^>]*className="letter-choice"/);
+ assert.match(reading,/className="settings-disclosure letter-group"/);
+ assert.match(syllables,/className="syllable-type-option" aria-pressed=/);
+ assert.match(syllables,/className="syllable-type-option syllable-untyped" aria-pressed=/);
+ assert.doesNotMatch(syllables,/title=\{descriptions/);
+ assert.match(syllables,/className="syllable-type-tooltip" role="tooltip"/);
+ assert.match(styles,/dialog\.letter-picker-dialog \.letter-choice\[aria-pressed=true\]/);
+});
+test('Saved-set removal is a shared icon action and forest scenery respects ground depth',()=>{
+ const sets=readFileSync('src/SavedMaterialSets.tsx','utf8');
+ const themes=readFileSync('src/design-system/themes.ts','utf8');
+ assert.match(sets,/<Icon name="Trash"\/>/);
+ assert.match(sets,/className="icon-button saved-set-remove"/);
+ assert.match(themes,/id:'bush-back-middle'[^\n]*bottom:'41%'/);
+ assert.match(themes,/id:'flowers-left'[^\n]*bottom:'6%'/);
+ assert.match(themes,/id:'bush-front-right'[^\n]*bottom:'6%'/);
+});
