@@ -1308,7 +1308,7 @@
 /* Compact landscape is an intentional viewport constraint, not a game exception. */
 @media(orientation:landscape) and (max-height:550px) and (min-width:600px){
  .app[data-theme] .settings-frame.shared-settings-window>.setup-footer{
-  min-height:0!important;height:64px!important;max-height:64px!important;
+  min-height:0!important;height:68px!important;max-height:68px!important;
   padding:3px 8px!important;
  }
  .app[data-theme] .settings-frame.shared-settings-window>.setup-footer>button.primary{
