@@ -33,17 +33,17 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
    {id:'tree-far-left',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(76cqh,43cqw)',left:'11%',bottom:'23%',opacity:1,layer:1,durationMs:15000,origin:'50% 94%'},
    {id:'tree-far-right',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(76cqh,43cqw)',right:'16%',bottom:'18%',opacity:1,layer:1,durationMs:17000,origin:'50% 94%'},
    // Distant low shrubs belong to the same terrain plane as their tree roots.
-   {id:'bush-back-left',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(18cqh,11cqw)',left:'0%',bottom:'16%',opacity:.9,layer:2,durationMs:28000},
-   {id:'bush-back-middle',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(11cqh,7cqw)',left:'33%',bottom:'14%',opacity:.85,layer:2,durationMs:30000},
+   {id:'bush-back-left',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(25cqh,15cqw)',left:'0%',bottom:'14%',opacity:.9,layer:2,durationMs:28000},
+   {id:'bush-back-middle',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(8cqh,5cqw)',left:'35%',bottom:'41%',opacity:.85,layer:2,durationMs:30000},
    // Flowers on the right sit in front of the middle tree, not the foreground tree.
-   {id:'flowers-right',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(43cqh,27cqw)',right:'17%',bottom:'12%',opacity:1,layer:3},
+   {id:'flowers-right',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(49cqh,30cqw)',right:'17%',bottom:'8%',opacity:1,layer:3},
    // Two tall foreground trees frame the play area, rising above the top edge.
    // Their separate ground contacts are deliberately NOT aligned.
-   {id:'tree-left',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(102cqh,56cqw)',left:'-11%',bottom:'3%',opacity:1,layer:4,durationMs:10500,origin:'50% 94%'},
-   {id:'tree-right',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(100cqh,56cqw)',right:'-10%',bottom:'3%',opacity:1,layer:4,durationMs:12400,delayMs:-4500,origin:'50% 94%'},
+   {id:'tree-left',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(102cqh,56cqw)',left:'-11%',bottom:'11%',opacity:1,layer:4,durationMs:10500,origin:'50% 94%'},
+   {id:'tree-right',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(100cqh,56cqw)',right:'-10%',bottom:'11%',opacity:1,layer:4,durationMs:12400,delayMs:-4500,origin:'50% 94%'},
    // Grounded small plants, in front of the appropriate trunks only.
-   {id:'flowers-left',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(43cqh,26cqw)',left:'5%',bottom:'-5%',opacity:1,layer:5},
-   {id:'bush-front-right',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(26cqh,16cqw)',right:'1%',bottom:'-4%',opacity:1,layer:5,durationMs:26000},
+   {id:'flowers-left',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(48cqh,29cqw)',left:'5%',bottom:'6%',opacity:1,layer:5},
+   {id:'bush-front-right',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(34cqh,20cqw)',right:'1%',bottom:'6%',opacity:1,layer:5,durationMs:26000},
    {id:'leaf-birch',src:'assets/themes/forest/forest_leaf_birch.webp',motion:'fall',width:'clamp(26px,3vw,44px)',left:'13%',top:'-12%',opacity:.8,durationMs:17000,delayMs:-2200},
    {id:'leaf-oak',src:'assets/themes/forest/forest_leaf_oak.webp',motion:'fall',width:'clamp(30px,3.2vw,49px)',left:'69%',top:'-11%',opacity:.85,durationMs:21500,delayMs:-9100},
    {id:'leaf-oval',src:'assets/themes/forest/forest_leaf_oval.webp',motion:'fall',width:'clamp(25px,2.8vw,43px)',left:'42%',top:'-13%',opacity:.8,durationMs:18800,delayMs:-13900}
