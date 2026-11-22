@@ -164,5 +164,24 @@ if(await evaluate("CSS.supports('appearance','base-select')"))assert(await evalu
 for(const key of ['ArrowDown','Enter']){await cmd('Input.dispatchKeyEvent',{type:'keyDown',key,code:key});await cmd('Input.dispatchKeyEvent',{type:'keyUp',key,code:key});}
 await until("!document.querySelector('select:open')");
 assert(await evaluate("document.querySelector('select[aria-label=\"Режим карточек\"]').value==='word-word'"),'Keyboard selection failed');
+
+// Regression coverage for the teacher's reported dialog and help geometry.
+await cmd('Page.navigate',{url:origin+'?game=matching'});
+await until("!!document.querySelector('select[aria-label=\"Задание\"]')");
+await evaluate("(()=>{const s=document.querySelector('select[aria-label=\"Задание\"]');Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(s,'manual');s.dispatchEvent(new Event('change',{bubbles:true}))})()");
+await until("[...document.querySelectorAll('.setup-add-rule')].some(b=>b.textContent.includes('Настроить группы'))");
+await evaluate("[...document.querySelectorAll('.setup-add-rule')].find(b=>b.textContent.includes('Настроить группы')).click()");
+await until("!!document.querySelector('dialog[open]')");
+assert(await evaluate("(()=>{const r=document.querySelector('dialog[open]').getBoundingClientRect();return Math.abs(r.y+r.height/2-innerHeight/2)<3&&r.y>=0})()"),'Manual group dialog must be vertically centered');
+await screenshot('manual-groups-centered');
+await evaluate("document.querySelector('dialog[open]').close()");
+await evaluate("(()=>{const s=[...document.querySelectorAll('select')].find(s=>[...s.options].some(o=>o.value==='structure'));Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(s,'structure');s.dispatchEvent(new Event('change',{bubbles:true}))})()");
+await until("!!document.querySelector('.syllable-picker-trigger')");
+await evaluate("document.querySelector('.syllable-picker-trigger').click()");
+await until("!!document.querySelector('.syllable-picker-dialog[open]')");
+await evaluate("document.querySelector('.syllable-type-option').focus()");
+assert(await evaluate("(()=>{const e=document.querySelector('.syllable-type-tooltip:popover-open');if(!e)return false;const r=e.getBoundingClientRect();return r.x>=0&&r.y>=0&&r.right<=innerWidth&&r.bottom<=innerHeight})()"),'Syllable help stays inside viewport');
+await screenshot('syllable-help-unclipped');
+
 writeFileSync(join(output,'dialogs.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));
 }finally{ws?.close();proc.kill('SIGTERM');server.close();await Promise.race([new Promise(r=>proc.once('exit',r)),sleep(1500)]);try{rmSync(profile,{recursive:true,force:true,maxRetries:5,retryDelay:100})}catch{}}
