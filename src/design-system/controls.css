@@ -982,3 +982,19 @@
  }
  .app[data-theme] .settings-frame.shared-settings-window>.setup-footer .setup-preview-content{padding-inline:6px}
 }
+
+
+/* Shared teacher material presets — a compact disclosure, not a second settings UI. */
+.app[data-theme] .saved-material-sets .saved-material-sets-body{display:grid;gap:10px;min-width:0}
+.app[data-theme] .saved-material-sets .saved-material-sets-body>label{display:grid;gap:6px;min-width:0}
+.app[data-theme] .saved-material-sets :is(input:not([type=checkbox]),select){min-width:0;width:100%;box-sizing:border-box}
+.app[data-theme] .saved-material-sets .saved-material-sets-hint{font-size:13px;line-height:1.4;opacity:.86;margin:0}
+.app[data-theme] .saved-material-sets .saved-material-bank{display:grid;justify-items:start;gap:8px;min-width:0}
+.app[data-theme] .saved-material-sets .saved-material-bank p{font-size:13px;line-height:1.4;margin:0}
+.app[data-theme] .saved-material-sets .saved-material-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.app[data-theme] .saved-material-sets .saved-material-actions button{min-height:36px}
+.app[data-theme] .saved-material-sets .saved-material-status{font-size:13px;line-height:1.4;margin:0}
+.app[data-theme] dialog.saved-words-dialog{width:min(620px,calc(100vw - 24px));max-height:min(85vh,820px)}
+.app[data-theme] dialog.saved-words-dialog .saved-words-list{display:grid;gap:6px;overflow-y:auto;max-height:36vh;min-height:80px;padding:8px 4px}
+.app[data-theme] dialog.saved-words-dialog .saved-words-list .check{min-height:30px}
+.app[data-theme] dialog.saved-words-dialog .saved-words-list small{opacity:.65}
