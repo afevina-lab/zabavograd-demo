@@ -21,6 +21,8 @@ for(let i=0;i<expected;i++){
  const n=archive.readUInt16LE(off+28),extra=archive.readUInt16LE(off+30),comment=archive.readUInt16LE(off+32),local=archive.readUInt32LE(off+42);
  const name=archive.subarray(off+46,off+46+n).toString('utf8');off+=46+n+extra+comment;
  if(!/^(theme-ui\/[a-z0-9-]+(?:\/[a-z0-9-]+)*\.(?:webp|json)|neutral\/(?:background-v2|card-front-v2|card-back-v2)\.webp)$/.test(name))throw Error('Unsafe UI asset path: '+name);
+ // Historical archive remains checksum-verifiable; retired skins must not return.
+ if(/^neutral\/card-(front|back)-v2\.webp$/.test(name))continue;
  if(archive.readUInt32LE(local)!==0x04034b50)throw Error('Bad ZIP local header');
  const localName=archive.readUInt16LE(local+26),localExtra=archive.readUInt16LE(local+28),from=local+30+localName+localExtra;
  const source=archive.subarray(from,from+compressed);

@@ -38,7 +38,8 @@ for(const color of colors){
  exists('theme-ui/radio/radio-'+color+'-empty.webp');
  exists('theme-ui/radio/radio-'+color+'-checked.webp');
 }
-for(const card of ['background-v2','card-front-v2','card-back-v2'])exists('neutral/'+card+'.webp');
+exists('neutral/background-v2.webp');
+for(const theme of ['neutral','forest','space'])for(const surface of ['header','front','back'])exists('themes/'+theme+'/'+surface+'.webp');
 for(const name of ['settings','pause','play','volume','mute','arrow-right','house','question-mark','star','cross','expand','refresh','heart']){
  const full=file('icons-new/'+name+'.svg');
  const text=fs.readFileSync(full,'utf8');

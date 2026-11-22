@@ -103,6 +103,7 @@ jobs:
           rm -f _published/assets/space/card-back-v2.webp _published/assets/space/card-front-v2.webp
           rm -f _published/assets/flashcards/neutral-back.webp _published/assets/flashcards/neutral-front.webp
           rm -f _published/assets/themes/neutral-header.webp
+          rm -f _published/assets/neutral/card-back-v2.webp _published/assets/neutral/card-front-v2.webp
           test -s _published/library.json
           test -s _published/semantic-graph.json
           test -s _published/home.html
