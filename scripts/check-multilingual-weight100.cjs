@@ -37,12 +37,12 @@ function validate(manifest,proposals,canonical){
   for(const lang of ['en','fr','es','de']){
    const detail=p.language_details[lang];
    assert.equal(detail.part_of_speech,'noun');
-   assert(['suggested','not_imported'].includes(detail.morphology_status));
+   assert(['suggested','partial','not_imported'].includes(detail.morphology_status));
    assert(['suggested','not_imported'].includes(detail.pronunciation_status));
-   if(detail.morphology_status==='suggested'){
+   if(detail.morphology_status==='suggested'||detail.morphology_status==='partial'){
     assert.equal(detail.feature_review_status,'suggested');
     assert(typeof detail.indefinite_article_form==='string'&&detail.indefinite_article_form);
-    assert(typeof detail.plural_form==='string'&&detail.plural_form);
+    if(detail.morphology_status==='suggested')assert(typeof detail.plural_form==='string'&&detail.plural_form);
     assert(lang==='en'?detail.grammatical_gender===null:['m','f','n'].includes(detail.grammatical_gender));
    }
    for(const pronunciation of detail.pronunciations){
