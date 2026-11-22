@@ -1006,7 +1006,7 @@
 .app[data-theme] .settings-frame.shared-settings-window,
 .app[data-theme] :is(.sound-workshop,.category-picker,.letter-picker-dialog,.syllable-picker-dialog,.saved-set-dialog,.material-save-dialog){
  --zg-stack-gap:12px;
- --zg-section-gap:16px;
+ --zg-section-gap:12px;
  --zg-row-height:52px;
  --zg-row-inset:10px;
 }
