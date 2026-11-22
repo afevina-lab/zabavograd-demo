@@ -3,6 +3,8 @@ import {ControlWell} from './design-system/ControlWell.tsx';
 import {defaultFilters,type Filters,type Word} from './model.ts';
 
 /** Transactional lexical syllable-structure selection: no large inline grid. */
+function showHelp(button:HTMLButtonElement){const tip=button.querySelector<HTMLElement>('[popover]');if(!tip)return;tip.showPopover();const r=button.getBoundingClientRect(),t=tip.getBoundingClientRect();tip.style.left=Math.max(8,Math.min(innerWidth-t.width-8,r.x+(r.width-t.width)/2))+'px';tip.style.top=Math.max(8,Math.min(innerHeight-t.height-8,r.y>=t.height+12?r.y-t.height-8:r.bottom+8))+'px';}
+function hideHelp(button:HTMLButtonElement){button.querySelector<HTMLElement>('[popover]')?.hidePopover();}
 export function SyllableStructurePicker({filters,onChange,words=[]}:{filters:Filters;onChange:(update:Partial<Filters>)=>void;words?:Word[]}){
  const descriptions:Record<number,string>={
   1:'Двусложные слова из открытых слогов',2:'Трёхсложные слова из открытых слогов',
@@ -34,7 +36,7 @@ export function SyllableStructurePicker({filters,onChange,words=[]}:{filters:Fil
      const description=descriptions[n]||'Тип слоговой структуры '+n;
      const examples=words.filter(w=>w.type===n).slice(0,3).map(w=>w.label).join(', ');
      const selected=types.includes(n);
-     return <button type="button" key={n} className="syllable-type-option" aria-pressed={selected} aria-label={`Тип ${n}: ${description}`} onClick={()=>setTypes(v=>selected?v.filter(x=>x!==n):[...v,n])}>{n}<span className="syllable-type-tooltip" role="tooltip">{description}{examples&&<small>Например: {examples}</small>}</span></button>;
+     return <button type="button" key={n} className="syllable-type-option" aria-pressed={selected} onMouseEnter={e=>showHelp(e.currentTarget)} onMouseLeave={e=>hideHelp(e.currentTarget)} onFocus={e=>showHelp(e.currentTarget)} onBlur={e=>hideHelp(e.currentTarget)} aria-label={`Тип ${n}: ${description}`} onClick={()=>setTypes(v=>selected?v.filter(x=>x!==n):[...v,n])}>{n}<span popover="manual" className="syllable-type-tooltip" role="tooltip">{description}{examples&&<small>Например: {examples}</small>}</span></button>;
     })}</div>
     <button type="button" className="syllable-type-option syllable-untyped" aria-pressed={untyped} onClick={()=>setUntyped(v=>!v)}>Без категории</button>
    </div></div>

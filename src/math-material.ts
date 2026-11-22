@@ -2,7 +2,7 @@ import type {Word} from './material-types.ts';
 export type MathSettings={includeZero?:boolean;answerOnly?:boolean;kind:'composition'|'examples';target:number;from?:number;add:boolean;subtract:boolean;multiply?:boolean;divide?:boolean};
 export const defaultMath:MathSettings={includeZero:true,kind:'examples',target:10,add:true,subtract:true,multiply:false,divide:false};
 /** Ordered curriculum stops for the numeric slider, not a linear 1–1000 scale. */
-export const MATH_STOPS=[1,2,...Array.from({length:18},(_,i)=>i+3),25,30,35,40,45,50,60,70,80,90,100,200,300,400,500,1000];
+export const MATH_STOPS=[...Array.from({length:20},(_,i)=>i+1),30,40,50,60,70,80,90,100,200,300,400,500,1000];
 export const maxMathTarget=1000;
 export function mathMaterial(options:Partial<MathSettings>={}):Word[]{
  const o={...defaultMath,...options},limit=Math.max(1,Math.min(maxMathTarget,Number.isFinite(o.target)?Math.trunc(o.target):defaultMath.target));

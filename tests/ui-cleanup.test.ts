@@ -162,8 +162,8 @@ test('Reading length is one shared two-ended range, not separate QuantitySliders
  assert.doesNotMatch(css,/reading-length-sliders|reading-length-range/);
  assert.match(range,/role="group" aria-label=\{label\}/);
  assert.equal([...range.matchAll(/type="range"/g)].length,2,'two accessible thumbs share one track');
- assert.match(range,/Math.min\(\+event.target.value,upper\)/);
- assert.match(range,/Math.max\(\+event.target.value,lower\)/);
+ assert.match(range,/Math.min\(value\(\+event.target.value\),upper\)/);
+ assert.match(range,/Math.max\(value\(\+event.target.value\),lower\)/);
  assert.match(css,/\.range-slider-track::before/);
  assert.match(css,/\.range-slider-track input:focus-visible/);
 });

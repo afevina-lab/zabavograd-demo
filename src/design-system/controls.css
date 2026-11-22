@@ -51,7 +51,7 @@
 .app .victory-star .garden-icon{width:100%;height:100%}
 
 /* Shared transactional sound selection. */
-.sound-picker-dialog{position:fixed;inset:16px;margin:auto;width:min(900px,94vw);max-height:85dvh;overflow:auto;border:0;border-radius:24px;padding:24px;background:var(--panel,#faf7f0);color:var(--ink,#403b44)}
+.sound-picker-dialog{position:fixed;inset:0;margin:auto;width:min(900px,94vw);max-height:85dvh;overflow:auto;border:0;border-radius:24px;padding:24px;background:var(--panel,#faf7f0);color:var(--ink,#403b44)}
 .sound-picker-dialog::backdrop{background:#24203388}
 .sound-picker-dialog .sound-group[open]{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start}
 .sound-picker-dialog .sound-group>summary{flex-basis:100%}
@@ -88,8 +88,8 @@
 .app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .primary,.app[data-theme] :is(.settings,.modal,.overlay>div,dialog) .start{min-height:62px;padding:14px 28px!important;background:var(--ui-deep)!important;color:var(--ui-paper)!important;border-color:var(--ui-deep)!important;border-radius:18px!important;box-shadow:inset 0 2px 3px #ffffff70,inset 0 -4px 6px #172a4030,0 5px 0 color-mix(in srgb,var(--ui-deep) 75%,black),0 9px 13px #172a4030!important;font-size:22px;font-weight:750;justify-self:stretch}
 .app .quantity-slider button{width:38px;height:38px;min-height:38px!important;padding:0!important;border-radius:50%!important;font-size:24px}
 .app .settings input[type=range]{height:12px!important;background:var(--ui-pale)!important;border:1px solid var(--ui-field-edge)!important;border-radius:20px;box-shadow:inset 0 2px 4px #172a4030}
-.app .settings input[type=range]::-webkit-slider-thumb{width:26px;height:26px;border:1px solid var(--ui-outline);border-radius:50%;background:var(--ui-accent);box-shadow:inset 0 2px 2px #fff9,0 2px 3px #172a4040}
-.app .settings input[type=range]::-moz-range-thumb{width:26px;height:26px;border:1px solid var(--ui-outline);border-radius:50%;background:var(--ui-accent);box-shadow:inset 0 2px 2px #fff9,0 2px 3px #172a4040}
+.app .settings input[type=range]::-webkit-slider-thumb{width:32px;height:32px;border:1px solid var(--ui-outline);border-radius:50%;background:var(--ui-accent);box-shadow:inset 0 2px 2px #fff9,0 2px 3px #172a4040}
+.app .settings input[type=range]::-moz-range-thumb{width:32px;height:32px;border:1px solid var(--ui-outline);border-radius:50%;background:var(--ui-accent);box-shadow:inset 0 2px 2px #fff9,0 2px 3px #172a4040}
 .app input[type=checkbox][role=switch]{position:relative;width:52px!important;height:30px!important;min-width:52px;min-height:30px;background:var(--ui-pale)!important;border:1px solid var(--ui-field-edge)!important;border-radius:20px!important;box-shadow:inset 0 2px 4px #172a4035;cursor:pointer}
 .app input[type=checkbox][role=switch]::after{content:'';position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:var(--ui-paper);box-shadow:inset 0 2px 1px #fff,0 2px 4px #172a4050}
 .app input[type=checkbox][role=switch]:checked{background:var(--ui-deep)!important}
@@ -200,7 +200,7 @@
 .app[data-theme] :is(.overlay>div,.modal,dialog) :is(h2,h3){font-family:Akt,Arial,sans-serif;line-height:1.25;letter-spacing:-.025em;color:var(--ui-text)}
 .app[data-theme] .overlay>div{width:min(500px,calc(100vw - 28px));text-align:center}
 .app[data-theme] :is(.overlay>div,.modal,dialog) button{margin:6px;min-height:44px}
-.app[data-theme] :is(.overlay>div,.modal,dialog) button.primary{padding:13px 22px;font-weight:750;font-size:18px;background:var(--ui-deep)!important;color:var(--ui-paper)!important;box-shadow:inset 0 2px 2px #fff6,inset 0 -3px 4px #0002,0 4px 0 color-mix(in srgb,var(--ui-deep) 60%,black)!important}
+.app[data-theme] :is(.overlay>div,.modal,dialog) button.primary{padding:13px 22px;font-weight:750;font-size:18px;background:var(--ui-deep)!important;color:var(--ui-paper)!important;box-shadow:inset 0 2px 2px #fff6,inset 0 -3px 4px #0002,0 3px 0 var(--ui-control-bottom),0 5px 6px var(--ui-control-shadow)!important}
 .app[data-theme] :is(.overlay>div,.modal,dialog) button.link{background:var(--ui-control-face)!important;color:var(--ui-deep)!important;border-color:var(--ui-outline)!important}
 .app[data-theme] :is(.settings,.modal,dialog) input:not([type=checkbox]):not([type=radio]):not([type=range]){background-color:var(--ui-setup-field);color:var(--ui-text);border-radius:12px;padding:10px 12px;border:1px solid var(--ui-outline);box-shadow:inset 0 2px 4px var(--ui-well-shadow)}
 /* Set membership keeps checkbox semantics, including partially selected parents. */
@@ -211,7 +211,7 @@
 .app[data-theme] :is(.settings,.modal,dialog) input[type=radio]{border-radius:50%!important}.app[data-theme] :is(.settings,.modal,dialog) input[type=radio]:checked::after{content:'';width:12px;height:12px;border-radius:50%;background:var(--ui-deep)}
 .app[data-theme] :is(.settings,.modal,dialog) input:disabled{opacity:.5;cursor:not-allowed}
 .app[data-theme] .settings-disclosure-body :is(.material-rule,.settings-block){padding:14px!important;margin:10px 0!important;border:1px solid var(--ui-surface-edge)!important;border-radius:14px!important;background:var(--ui-setup-field)!important}
-.app[data-theme] :is(.sound-picker-dialog,.category-picker){background:var(--ui-frame-base)!important}.app[data-theme] .sound-picker-actions{background:var(--ui-setup-paper)!important;border-top:1px solid var(--ui-surface-edge)}
+.app[data-theme] :is(.sound-picker-dialog,.category-picker){background:var(--ui-frame-base)!important}.app[data-theme] .sound-picker-actions{background:var(--ui-setup-paper)!important;border-top:1px solid var(--ui-surface-edge);border-radius:0 0 16px 16px}
 
 @supports (appearance:base-select){
  .app[data-theme] .select-control select,.app[data-theme] .select-control select::picker(select){appearance:base-select}
@@ -351,19 +351,19 @@
 .app[data-theme] dialog.sound-workshop[open]{display:flex;flex-direction:column;max-height:calc(100dvh - 32px)!important}
 .app[data-theme] .sound-workshop>.panel-scroll{flex:1;min-height:0;overflow:auto;max-height:none}
 .app[data-theme] .sound-workshop>.sound-picker-actions{position:relative;bottom:auto;flex:none;margin:0;padding:12px 8px 4px;box-sizing:border-box;width:100%;background:var(--ui-setup-paper)!important}
-.app[data-theme] dialog.sound-workshop[open]{position:fixed!important;inset:16px 0!important;margin:auto!important;height:calc(100dvh - 32px);max-height:calc(100dvh - 32px)!important}
+.app[data-theme] dialog.sound-workshop[open]{position:fixed!important;inset:0!important;margin:auto!important;height:fit-content;max-height:calc(100dvh - 32px)!important}
 
 
 /* A single range track with two accessible handles; all games use the same control. */
-.app .range-slider{min-width:0;margin:var(--zg-space-3,12px) 0 var(--zg-space-4,16px);padding:var(--zg-space-4,16px);border:1px solid var(--ui-tray-edge);border-radius:var(--zg-control-radius,12px);background:var(--ui-setup-field)}
+.app .range-slider{min-width:0;margin:0;padding:10px 12px 17px;border:1px solid var(--ui-tray-edge);border-radius:16px;background:var(--ui-setup-field);box-shadow:inset 0 2px 3px #fff9,0 2px 0 var(--ui-tray-shadow)}
 .app .range-slider-heading,.app .range-slider-ends{display:flex;align-items:center;justify-content:space-between;gap:var(--zg-space-3,12px)}
 .app .range-slider-heading{font-size:15px;line-height:1.4;margin-bottom:10px}
 .app .range-slider-heading output{font-weight:750;color:var(--ui-deep);white-space:nowrap}
 .app .range-slider-track{height:38px;position:relative;isolation:isolate}
-.app .range-slider-track::before{content:'';position:absolute;left:0;right:0;top:15px;height:8px;border:1px solid var(--ui-field-edge);border-radius:99px;background:linear-gradient(to right,var(--ui-setup-paper) 0 var(--range-start),var(--ui-deep) var(--range-start) var(--range-end),var(--ui-setup-paper) var(--range-end) 100%);box-shadow:inset 0 2px 3px var(--ui-well-shadow)}
+.app .range-slider-track::before{content:'';position:absolute;left:0;right:0;top:9px;height:20px;border:1px solid var(--ui-field-edge);border-radius:99px;background:linear-gradient(to right,var(--ui-setup-paper) 0 var(--range-start),var(--ui-deep) var(--range-start) var(--range-end),var(--ui-setup-paper) var(--range-end) 100%);box-shadow:inset 0 2px 3px var(--ui-well-shadow)}
 .app[data-theme] .settings .range-slider-track input[type=range]{position:absolute;inset:0;width:100%;height:38px!important;margin:0!important;padding:0!important;appearance:none;-webkit-appearance:none;pointer-events:none;background:transparent!important;border:0!important;box-shadow:none!important;cursor:pointer}
-.app[data-theme] .settings .range-slider-track input[type=range]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;pointer-events:auto;width:26px;height:26px;border:1px solid var(--ui-thumb-edge);border-radius:50%;background:var(--ui-highlight);box-shadow:inset 0 2px 2px #fff9,0 3px 0 var(--ui-thumb-base)}
-.app[data-theme] .settings .range-slider-track input[type=range]::-moz-range-thumb{pointer-events:auto;width:26px;height:26px;border:1px solid var(--ui-thumb-edge);border-radius:50%;background:var(--ui-highlight);box-shadow:inset 0 2px 2px #fff9,0 3px 0 var(--ui-thumb-base)}
+.app[data-theme] .settings .range-slider-track input[type=range]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;pointer-events:auto;width:32px;height:32px;border:1px solid var(--ui-thumb-edge);border-radius:50%;background:var(--ui-highlight);box-shadow:inset 0 2px 2px #fff9,0 3px 0 var(--ui-thumb-base)}
+.app[data-theme] .settings .range-slider-track input[type=range]::-moz-range-thumb{pointer-events:auto;width:32px;height:32px;border:1px solid var(--ui-thumb-edge);border-radius:50%;background:var(--ui-highlight);box-shadow:inset 0 2px 2px #fff9,0 3px 0 var(--ui-thumb-base)}
 .app .range-slider-track input:first-child{z-index:1}.app .range-slider-track input:last-child{z-index:2}
 .app .range-slider-track input:focus-visible{z-index:3!important;outline:2px solid var(--ui-deep);outline-offset:3px;border-radius:8px}
 .app .range-slider-ends{font-size:12px;color:var(--ui-muted-text);margin-top:2px}
@@ -1477,7 +1477,7 @@ display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
  gap:8px;padding:12px 2px 6px;
 }
 .app[data-theme] dialog.letter-picker-dialog .letter-picker-section{
- gap:10px;padding:12px!important;
+ gap:8px;padding:8px!important;
 }
 .app[data-theme] dialog.letter-picker-dialog .letter-choice[aria-pressed=true]{
  border-color:var(--ui-deep)!important;background:var(--ui-deep)!important;
@@ -1490,7 +1490,7 @@ display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
 .app[data-theme] dialog.letter-picker-dialog .letter-select-all,
 .app[data-theme] dialog.syllable-picker-dialog .syllable-picker-body>.check{
  display:flex;align-items:center;gap:8px;
- min-height:36px;margin:0!important;line-height:1.35;
+ min-height:24px;margin:0!important;line-height:1.35;
 }
 .app[data-theme] dialog.syllable-picker-dialog>.syllable-picker-scroll{
  display:flex!important;align-items:stretch!important;
@@ -1532,7 +1532,7 @@ display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
  box-shadow:0 6px 16px var(--ui-control-shadow)!important;
  color:var(--ui-text)!important;font-size:14px!important;
  font-weight:500!important;line-height:1.4!important;
- white-space:normal;text-align:left;opacity:0;visibility:hidden;
+ white-space:normal;text-align:left;
  pointer-events:none;transition:opacity .12s ease,transform .12s ease;
  z-index:50;
 }
@@ -1541,7 +1541,7 @@ display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
 }
 .app[data-theme] dialog.syllable-picker-dialog .syllable-type-tooltip small{font-size:13px;color:var(--ui-muted-text)}
 .app[data-theme] dialog.syllable-picker-dialog .syllable-type-option:is(:hover,:focus-visible) .syllable-type-tooltip{
- opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);
+ transform:none;
 }
 .app[data-theme] dialog.saved-set-dialog .saved-set-row .saved-set-remove .garden-icon{
  width:23px;height:23px;
@@ -1603,3 +1603,22 @@ display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
   height:46px!important;min-height:46px!important;
  }
 }
+
+/* Shared selected tile affordance: the parent button owns the complete hit area. */
+.app button[aria-pressed=true]:not(.icon-button){position:relative}
+.app :is(.pair-options,.letter-grid,.types,.themes) button[aria-pressed=true]::after{
+ content:'×';position:absolute;top:2px;right:2px;width:18px;height:18px;
+ display:grid;place-items:center;border:1px solid var(--ui-field-edge);border-radius:5px;
+ background:var(--ui-control-face);color:var(--ui-text);font-size:16px;line-height:1;pointer-events:none;
+}
+.app .setup-add-rule.is-required{outline:2px solid var(--ui-danger,#b33d32);outline-offset:-2px}
+.app .material-rule-heading{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center}
+.app .material-rule-heading>strong{grid-column:2;text-align:center}
+.app .material-rule-heading>.rule-delete{grid-column:3}
+.app dialog .modal-title>h2{flex:1;text-align:center}
+.app dialog :is(h2,h3){text-align:center}
+.app dialog.letter-picker-dialog .letter-group>summary>span:first-child{flex:1}
+
+.app dialog.letter-picker-dialog .letter-picker-section>.hint{margin:0;line-height:1.35}
+.app dialog .sound-picker-actions{border-bottom-left-radius:16px;border-bottom-right-radius:16px}
+.app dialog.syllable-picker-dialog .syllable-type-tooltip:not(:popover-open){display:none}

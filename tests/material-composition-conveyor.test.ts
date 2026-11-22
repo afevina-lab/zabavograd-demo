@@ -115,9 +115,9 @@ test('lexical distractors come mostly from adjacent topics, not unrelated vocabu
 test('Mathematical target slider stops match the curriculum up to 1000',async()=>{
  const {MATH_STOPS,mathMaterial}=await import('../src/math-material.ts');
  assert.deepEqual(MATH_STOPS.slice(0,20),Array.from({length:20},(_,i)=>i+1));
- assert.deepEqual(MATH_STOPS.slice(20,26),[25,30,35,40,45,50]);
- assert.deepEqual(MATH_STOPS.slice(26,31),[60,70,80,90,100]);
- assert.deepEqual(MATH_STOPS.slice(31),[200,300,400,500,1000]);
+ assert.deepEqual(MATH_STOPS.slice(20,28),[30,40,50,60,70,80,90,100]);
+
+ assert.deepEqual(MATH_STOPS.slice(28),[200,300,400,500,1000]);
  const division=mathMaterial({target:1000,add:false,subtract:false,multiply:false,divide:true,includeZero:false});
  assert(division.length>900);
  assert(division.every(w=>{const [a,b]=w.label.split(' ÷ ').map(Number);return Number.isInteger(a/b)&&a/b===Number(w.answer)&&a<=1000&&b>0;}));

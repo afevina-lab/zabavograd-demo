@@ -29,9 +29,9 @@ export function ReadingSettings({l,setL,words,textDisplayProvided=false}:{l:Lear
    <section className="letter-picker-section"><h3>Доступные буквы · {draftAvailable.length} из 33</h3>
     <label className="check letter-select-all"><input type="checkbox" checked={draftAvailable.length===alphabet.length} onChange={e=>{setDraftAvailable(e.target.checked?[...alphabet]:[]);if(!e.target.checked)setDraftRequired([])}}/>Выбрать всё</label>
     {Object.entries({'Гласные':vowels,'Согласные':consonants,'Знаки':['ь','ъ']}).map(([group,letters])=><details className="settings-disclosure letter-group" key={group} open>
-     <summary><span>{group}</span><ControlWell/></summary>
+     <summary><span>{group}</span><label className="check letter-select-all" onClick={e=>e.stopPropagation()}><input type="checkbox" checked={letters.every(c=>draftAvailable.includes(c))} onChange={e=>{setDraftAvailable(current=>e.target.checked?[...new Set([...current,...letters])]:current.filter(c=>!letters.includes(c)));if(!e.target.checked)setDraftRequired(current=>current.filter(c=>!letters.includes(c)))}} aria-label={'Выбрать всё: '+group}/></label><ControlWell/></summary>
      <div className="letter-group-content">
-      <label className="check letter-select-all"><input type="checkbox" checked={letters.every(c=>draftAvailable.includes(c))} onChange={e=>{setDraftAvailable(current=>e.target.checked?[...new Set([...current,...letters])]:current.filter(c=>!letters.includes(c)));if(!e.target.checked)setDraftRequired(current=>current.filter(c=>!letters.includes(c)))}}/>Выбрать всё</label>
+
       <div className="letter-grid">{letters.map(c=><button type="button" key={c} className="letter-choice" aria-pressed={draftAvailable.includes(c)} onClick={()=>{const selected=!draftAvailable.includes(c);setDraftAvailable(current=>toggle(current,c,selected));if(!selected)setDraftRequired(current=>current.filter(x=>x!==c))}}>{c.toUpperCase()}</button>)}</div>
      </div>
     </details>)}
