@@ -50,6 +50,7 @@ jobs:
         run: node scripts/check-offline-release.cjs dist
       - name: Browser smoke test across games, themes, sizes
         run: |
+          GEOMETRY_ONLY=1 node scripts/verify-dialogs-browser.mjs
           for theme in neutral forest space; do
             UI_THEME="$theme" node scripts/verify-settings-browser.mjs
             UI_THEME="$theme" node scripts/verify-dialogs-browser.mjs
