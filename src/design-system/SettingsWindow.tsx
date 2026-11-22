@@ -17,10 +17,7 @@ export function SettingsWindow({game,children}:{game:string;children:ReactNode})
    if(isValidElement<{className?:string;children?:ReactNode;'data-setup-section'?:string}>(node)&&node.type==='section'&&node.props.className?.includes('settings-block')){
     seenSection=true;
     const purpose=node.props['data-setup-section'];
-    const preview=purpose==='preview'||(!purpose&&Children.toArray(node.props.children).some(c=>isValidElement<{className?:string}>(c)&&c.props.className==='material-head'));
-    const element=preview?cloneElement(node,{className:[node.props.className,'setup-material-preview'].filter(Boolean).join(' ')}):node;
-    const item=fieldsetDisabled?<fieldset className="setup-section-fieldset" disabled={fieldsetDisabled}>{element}</fieldset>:element;
-    if(preview)footer.push(item);
+    const item=fieldsetDisabled?<fieldset className="setup-section-fieldset" disabled={fieldsetDisabled}>{node}</fieldset>:node;
     else if(purpose==='material'||purpose==='rules')left.push(item);
     else if(purpose==='task')right.push(item);
     else if(purpose==='appearance'){
