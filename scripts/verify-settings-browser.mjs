@@ -91,6 +91,13 @@ if(game==='conveyor'){
 const previewLayout=await evaluate("(()=>{const footer=document.querySelector('.settings-frame.shared-settings-window>.setup-footer'),preview=footer.querySelector(':scope>.setup-preview'),meta=preview?.querySelector('.setup-preview-meta'),title=meta?.querySelector('h2'),actions=meta?.querySelector('.setup-preview-actions'),content=preview?.querySelector('.setup-preview-content'),icons=[...actions?.querySelectorAll('.icon-button')||[]],h=title?.getBoundingClientRect(),a=actions?.getBoundingClientRect(),c=content?.getBoundingClientRect(),p=preview?.getBoundingClientRect(),lineHeight=parseFloat(getComputedStyle(content).lineHeight)||16;return {exists:!!preview&&!!title&&!!actions&&!!content,title:title?.textContent==='В этой игре',controlsBelow:!!a&&a.top>=h.bottom-1,wordsOnRight:!!c&&c.left>=h.right-2,twoLines:!!c&&c.height<=lineHeight*2.8,iconsEqual:icons.length<2||icons.every(e=>Math.abs(e.getBoundingClientRect().height-icons[0].getBoundingClientRect().height)<1),statusInside:!footer.querySelector(':scope>p[role=status]')&&[...footer.querySelectorAll('[role=status]')].every(e=>!!e.closest('.setup-preview-content')),contained:!!p&&p.width>0&&p.height<=70}})()");
 assert(Object.values(previewLayout).every(Boolean),'Shared preview layout failed '+game+' '+width+' '+JSON.stringify(previewLayout));
 
+const previewPolish=await evaluate("(()=>{const footer=document.querySelector('.setup-footer'),preview=footer.querySelector('.setup-preview'),well=preview.querySelector('.setup-preview-content'),fit=well.querySelector('.setup-preview-fit'),start=footer.querySelector('button.primary'),r=preview.getBoundingClientRect(),w=well.getBoundingClientRect(),b=start.getBoundingClientRect(),style=getComputedStyle(well),font=parseFloat(getComputedStyle(fit).fontSize),sliders=[...document.querySelectorAll('.quantity-slider')],clearances=sliders.map(s=>s.getBoundingClientRect().bottom-s.querySelector(':scope>input[type=range]').getBoundingClientRect().bottom);return {wordWell:!!fit&&w.height>=48&&w.width>70,framed:style.borderTopStyle==='solid'&&style.backgroundColor!=='rgba(0, 0, 0, 0)',fontWithinRange:font>=12&&font<=16,launchCentered:Math.abs(b.top+b.height/2-(r.top+r.height/2))<=4,slidersPadded:clearances.every(v=>v>=12)}})()");
+assert(Object.values(previewPolish).every(Boolean),'Preview well, adaptive text, slider clearance or start alignment: '+game+' '+width+' '+JSON.stringify(previewPolish));
+if(game==='sorting'){
+ assert(await evaluate("!!document.querySelector('[data-setup-section=rules] .setup-add-rule .control-well')"),'Sorting exclusion action must use shared plus-icon control');
+}
+
+
 if(width===844&&height===390)assert(actualLayout.bodyClientHeight>=120&&actualLayout.footerHeight<=105,'Landscape footer hides the learning settings: '+game+' '+JSON.stringify(actualLayout));
 assert(actualLayout.footerHeight<=84,'Shared footer too tall: '+game+' '+width+' '+JSON.stringify(actualLayout));
 if(width>=900)assert(setupGeometry.twoColumns&&setupGeometry.aligned,'Preview and Start must share one footer row: '+game+' '+width+' '+JSON.stringify(setupGeometry));
@@ -196,6 +203,10 @@ await evaluate("(()=>{const e=document.querySelector('select[aria-label=\"Уче
 await until("!!document.querySelector('.setup-column [data-setup-section=material] .category-picker-trigger')");
 const dependent=await evaluate("(()=>{const m=document.querySelector('[data-setup-section=material]'),a=m.querySelector('select[aria-label=\"Учебная задача\"]').getBoundingClientRect(),b=m.querySelector('.category-picker-trigger').getBoundingClientRect();return {below:b.top>=a.bottom-1,adjacent:b.top-a.bottom<=90,label:m.querySelector('.category-picker-trigger .setup-action-copy strong')?.textContent}})()");
 assert(dependent.below&&dependent.adjacent&&dependent.label==='Выберите тему','Dependent picker is not immediately below learning task: '+JSON.stringify(dependent));
+
+const detailSpacing=await evaluate("(()=>{const m=document.querySelector('[data-setup-section=material]'),a=m.querySelector('.game-choice').getBoundingClientRect(),b=m.querySelector('.category-picker-trigger').getBoundingClientRect(),c=m.querySelector('.advanced-material').getBoundingClientRect();return {before:b.top-a.bottom,after:c.top-b.bottom}})()");
+assert(Math.abs(detailSpacing.before-detailSpacing.after)<=2&&detailSpacing.before>=6&&detailSpacing.before<=12,'Material dependent actions must have equal gaps: '+JSON.stringify(detailSpacing));
+
 await evaluate("document.querySelector('.advanced-material').open=true");
 await evaluate("document.querySelector('.material-rule-group .setup-add-rule').click()");
 await until("!!document.querySelector('.material-rule')");
