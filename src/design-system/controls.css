@@ -1506,7 +1506,7 @@ display:grid;grid-template-columns:repeat(auto-fill,64px);justify-content:start;
  margin:0!important;
 }
 .app[data-theme] dialog.syllable-picker-dialog .syllable-type-option{
- position:relative;box-sizing:border-box;
+ position:relative;box-sizing:border-box;margin:0;
  display:flex!important;align-items:center!important;justify-content:center!important;
  min-width:0;min-height:48px!important;padding:8px!important;
  border:1px solid var(--ui-field-edge)!important;border-radius:12px!important;

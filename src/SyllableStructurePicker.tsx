@@ -22,7 +22,7 @@ export function SyllableStructurePicker({filters,onChange,words=[]}:{filters:Fil
  };
  const dialog=useRef<HTMLDialogElement>(null),trigger=useRef<HTMLButtonElement>(null);
  const [types,setTypes]=useState<number[]>(filters.types),[untyped,setUntyped]=useState(filters.untyped);
- const open=()=>{setTypes([...filters.types]);setUntyped(filters.untyped);dialog.current?.showModal()};
+ const open=()=>{setTypes([...filters.types]);setUntyped(filters.untyped);dialog.current?.showModal();requestAnimationFrame(()=>{const active=document.activeElement;if(active instanceof HTMLButtonElement&&active.classList.contains('syllable-type-option'))showHelp(active)})};
  const close=()=>{dialog.current?.close();trigger.current?.focus()};
  return <>
   <button type="button" className="category-picker-trigger syllable-picker-trigger" ref={trigger} onClick={open}>
