@@ -67,6 +67,12 @@ assert(setupGeometry.notOverflowing,'Shared settings horizontally overflow: '+ga
 const railLayout=await evaluate("(()=>{const workspace=document.querySelector('.setup-workspace'),body=workspace.querySelector('.unified-settings-content'),rail=workspace.querySelector('.setup-theme-rail'),scroll=rail.querySelector('.setup-theme-scroll'),themeButtons=[...scroll.querySelectorAll('.themes button')],toggle=rail.querySelector('.setup-theme-toggle'),w=workspace.getBoundingClientRect(),b=body.getBoundingClientRect(),r=rail.getBoundingClientRect(),wide=innerWidth>=1180&&innerHeight>=560;return {hasThemes:themeButtons.length>=3,railRight:!wide||r.left>=b.right-1,railNarrow:!wide||r.width>=155&&r.width<=230,ownScroll:!wide||getComputedStyle(scroll).overflowY==='auto',vertical:!wide||themeButtons[1].getBoundingClientRect().top>themeButtons[0].getBoundingClientRect().bottom,bodyInside:b.left>=w.left-1&&b.right<=w.right+1,toggleVisible:wide?getComputedStyle(toggle).display==='none':getComputedStyle(toggle).display!=='none'}})()");
 assert(Object.values(railLayout).every(Boolean),'Shared theme rail layout failed '+game+' '+width+' '+JSON.stringify(railLayout));
 
+if(width>=1180&&height>=560){
+ const gutters=await evaluate("(()=>{const body=document.querySelector('.unified-settings-content'),cols=[...document.querySelectorAll('.setup-columns>.setup-column')],rail=document.querySelector('.setup-theme-rail'),b=body.getBoundingClientRect(),a=cols[0].getBoundingClientRect(),c=cols[1].getBoundingClientRect(),r=rail.getBoundingClientRect(),scrollbar=body.offsetWidth-body.clientWidth;return {left:a.left-b.left,middle:c.left-a.right,right:r.left-c.right-scrollbar,scrollbar}})()");
+ assert(Math.abs(gutters.left-gutters.middle)<=2&&Math.abs(gutters.middle-gutters.right)<=2,'Wide layout must use identical gutters on both sides of its two columns: '+game+' '+JSON.stringify(gutters));
+}
+
+
 if(game==='sorting'){
  const appearanceSplit=await evaluate("(()=>({railHasPresentation:!!document.querySelector('.setup-theme-rail .card-presentation'),bodyHasPresentation:!!document.querySelector('.unified-settings-content .setup-presentation-options .card-presentation'),railThemeCount:document.querySelectorAll('.setup-theme-rail .themes button').length}))()");
  assert(!appearanceSplit.railHasPresentation&&appearanceSplit.bodyHasPresentation&&appearanceSplit.railThemeCount>=3,'Non-theme presentation controls leaked into theme rail: '+width+' '+JSON.stringify(appearanceSplit));
