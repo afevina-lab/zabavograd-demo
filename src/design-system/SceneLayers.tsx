@@ -1,11 +1,35 @@
-import type {CSSProperties} from 'react';
+import {useLayoutEffect,useRef,useState,type CSSProperties} from 'react';
 import {THEMES,assetUrl,type ThemeId} from './themes.ts';
 
-/** Universal scene sprite renderer: themes only supply assets and placement data. */
+/** Universal scene renderer. Forest has a height-based minimum composition width:
+ * wide viewports spread side trees apart; narrow ones crop their outer edges.
+ * The card grid never changes the geometry of the scenery. */
 export function SceneLayers({theme}:{theme:ThemeId}){
+ const sceneryRef=useRef<HTMLDivElement>(null);
+ const [forestWidth,setForestWidth]=useState<number|null>(null);
+ useLayoutEffect(()=>{
+  if(theme!=='forest'){setForestWidth(null);return;}
+  const parent=sceneryRef.current?.parentElement;
+  if(!parent)return;
+  const update=()=>{
+   const {width,height}=parent.getBoundingClientRect();
+   if(width>0&&height>0){
+    const next=Math.ceil(Math.max(width,height*1.78));
+    setForestWidth(previous=>previous===next?previous:next);
+   }
+  };
+  update();
+  const observer=new ResizeObserver(update);
+  observer.observe(parent);
+  return ()=>observer.disconnect();
+ },[theme]);
  const sprites=THEMES[theme].scene.sprites;
  if(!sprites.length)return null;
- return <div className="zg-scene-layers" aria-hidden="true">{sprites.map(sprite=>
+ const frame:CSSProperties=theme==='forest'?{
+  width:forestWidth?`${forestWidth}px`:'100%',
+  left:'50%',right:'auto',transform:'translateX(-50%)'
+ }:{};
+ return <div ref={sceneryRef} className="zg-scene-layers" style={frame} aria-hidden="true">{sprites.map(sprite=>
   <span key={sprite.id} className="zg-scene-sprite" data-zg-motion={sprite.motion}
     style={{
       width:sprite.width,left:sprite.left,right:sprite.right,top:sprite.top,bottom:sprite.bottom,
