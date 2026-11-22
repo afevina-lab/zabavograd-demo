@@ -85,7 +85,7 @@ export function SettingsWindow({game,children}:{game:string;children:ReactNode})
  const assembled=isValidElement<{className?:string;children?:ReactNode}>(child)?arrange(child.props.children):null;
  return <MaterialPresetContext.Provider value={bridge}><div className="settings-shade"><section className="settings-frame shared-settings-window" role="dialog" aria-modal="true" aria-label={'Настройки: '+game}>
  <header className="settings-window-heading"><div className="settings-adventure-title"><span className="settings-adventure-emblem" aria-hidden="true"><Icon name="Star"/></span><div><p className="settings-eyebrow">Забавоград · пора играть</p><h2>{game}</h2><span>Подготовка к игре</span></div></div><div className="settings-header-actions">
- <button type="button" ref={saveTrigger} className="icon-button" aria-label="Сохранить набор" title="Сохранить учебный набор" onClick={openSave}><Icon name="Star"/></button>
+ <button type="button" ref={saveTrigger} className="icon-button" aria-label="Сохранить набор" title="Сохранить учебный набор" onClick={openSave}><Icon name="Save"/></button>
  <a className="icon-button" href={import.meta.env.BASE_URL+'home.html'} aria-label="Домой" title="На главную"><Icon name="Home1"/></a>
  </div></header>
  {assembled&&isValidElement<{className?:string;children?:ReactNode}>(child)?<><div className="setup-workspace">{cloneElement(child,{className:(child.props.className||'')+' settings unified-settings-content'},assembled.body)}{assembled.theme}</div>{assembled.footer}</>:child}
