@@ -166,8 +166,11 @@ await until("!document.querySelector('select:open')");
 assert(await evaluate("document.querySelector('select[aria-label=\"Режим карточек\"]').value==='word-word'"),'Keyboard selection failed');
 
 // Regression coverage for the teacher's reported dialog and help geometry.
+await cmd('Emulation.setDeviceMetricsOverride',{width:1920,height:900,deviceScaleFactor:1,mobile:false});
 await cmd('Page.navigate',{url:origin+'?game=matching'});
 await until("!!document.querySelector('select[aria-label=\"Задание\"]')");
+assert(await evaluate("(()=>{const a=document.querySelector('.setup-footer .setup-preview-content'),b=document.querySelector('.setup-footer>button.primary');const ar=a.getBoundingClientRect(),br=b.getBoundingClientRect();const edges=e=>getComputedStyle(e).boxShadow.split(/,(?![^()]*\\))/).filter(s=>!s.includes('inset')).join(',');return Math.abs(ar.height-br.height)<1&&Math.abs(ar.y-br.y)<1&&edges(a)===edges(b)})()"),'Preview and start must have identical bounds and raised outer edges');
+await screenshot('footer-equal-visible-edges');
 await evaluate("(()=>{const s=document.querySelector('select[aria-label=\"Задание\"]');Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(s,'manual');s.dispatchEvent(new Event('change',{bubbles:true}))})()");
 await until("[...document.querySelectorAll('.setup-add-rule')].some(b=>b.textContent.includes('Настроить группы'))");
 await evaluate("[...document.querySelectorAll('.setup-add-rule')].find(b=>b.textContent.includes('Настроить группы')).click()");
