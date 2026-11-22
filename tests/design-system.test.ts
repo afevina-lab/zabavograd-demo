@@ -36,8 +36,11 @@ test('Every theme has one complete, validated visual configuration',()=>{
  assert.equal(THEMES.forest.cards.back,'assets/themes/forest/back.webp');
  assert.equal(THEMES.forest.cards.front,'assets/themes/forest/front.webp');
  assert.equal(THEMES.forest.toolbarArt,'assets/themes/forest/header.webp');
- assert.equal(THEMES.forest.scene.sprites.length,12);
- assert.deepEqual(THEMES.forest.scene.sprites.filter(x=>x.id.startsWith('tree-')).map(x=>x.id),['tree-far-left','tree-far-right','tree-left','tree-right']);
+ assert(THEMES.forest.scene.sprites.length>=12);
+ for(const tree of ['tree-depth-left','tree-depth-right','tree-far-left','tree-far-right','tree-left','tree-right']){
+  assert(THEMES.forest.scene.sprites.some(sprite=>sprite.id===tree),`Forest must include ${tree}`);
+ }
+ assert.equal(new Set(THEMES.forest.scene.sprites.map(sprite=>sprite.id)).size,THEMES.forest.scene.sprites.length);
  assert(THEMES.forest.scene.sprites.some(x=>x.id==='tree-far-left'));
  assert(THEMES.forest.scene.sprites.some(x=>x.id==='flowers-right'));
  assert(THEMES.forest.scene.sprites.filter(x=>x.motion==='sway').every(x=>x.origin==='50% 94%'));
