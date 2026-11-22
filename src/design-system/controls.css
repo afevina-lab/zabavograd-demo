@@ -751,6 +751,7 @@
    All five games inherit these exact rules from SettingsWindow, not local game CSS. */
 .app[data-theme] .settings-frame.shared-settings-window{
  --zg-setup-gap:8px;
+ --zg-setup-column-gap:12px;
  --zg-setup-section-gap:12px;
  --zg-setup-control-height:52px;
  --zg-setup-rail-width:190px;
@@ -764,11 +765,11 @@
 .app[data-theme] .settings-frame.shared-settings-window>.setup-workspace>.unified-settings-content{
  box-sizing:border-box;min-width:0;min-height:0!important;max-height:100%;height:auto;
  overflow-x:hidden!important;overflow-y:auto!important;
- padding:var(--zg-space-2,8px)!important;
+ padding:var(--zg-space-2,8px) var(--zg-setup-column-gap)!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window .setup-columns{
  grid-template-columns:repeat(2,minmax(0,1fr))!important;
- gap:var(--zg-setup-gap)!important;
+ gap:var(--zg-setup-column-gap)!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window .setup-column{
  gap:var(--zg-setup-section-gap)!important;
@@ -920,7 +921,7 @@
  .app[data-theme] .settings-frame.shared-settings-window>.setup-workspace{
   grid-template-columns:minmax(0,1fr) var(--zg-setup-rail-width);
   grid-template-rows:minmax(0,1fr);
-  gap:var(--zg-space-3,12px);
+  gap:0;
  }
  .app[data-theme] .settings-frame.shared-settings-window .setup-theme-rail{
   display:flex;flex-direction:column;grid-column:2;grid-row:1;
