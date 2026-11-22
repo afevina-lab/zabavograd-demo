@@ -285,7 +285,8 @@ test('All five setups use one semantic two-column arrangement and common preview
  assert.match(shell,/purpose==='material'\|\|purpose==='rules'/);
  assert.match(shell,/purpose==='task'/);
  assert.match(shell,/purpose==='appearance'/);
- assert.match(shell,/purpose==='preview'/);
+ assert.match(shell,/node\.type===SetupPreview/);
+ assert.doesNotMatch(shell,/material-head/);
  assert.match(shell,/setup-section-fieldset/);
  assert.doesNotMatch(shell,/matching-setup\\|conveyor-settings\\|transformation-setup\\|sort-settings/);
  assert.match(shell,/arrange\(child\.props\.children\)/);
