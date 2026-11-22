@@ -46,6 +46,16 @@ function validate(manifest,proposals,canonical){
     if(detail.morphology_status==='suggested')assert(typeof detail.plural_form==='string'&&detail.plural_form);
     assert(lang==='en'?detail.grammatical_gender===null:(detail.morphology_status==='partial'&&detail.grammatical_number==='plural'&&detail.grammatical_gender===null)||['m','f','n'].includes(detail.grammatical_gender));
    }
+   for(const evidence of detail.dictionary_evidence||[]){
+    assert(evidence.review_status==='suggested'||evidence.checked_field,'Evidence cannot silently become approved');
+    assert(typeof evidence.source_url==='string'&&evidence.source_url.startsWith('https://'),'External evidence must cite source');
+    if(evidence.source_type==='Kaikki/Wiktionary JSONL live word-page'){
+     assert.equal(evidence.meaning_match_status,'not_verified','Do not equate dictionary lemma and Russian meaning automatically');
+     assert.equal(evidence.part_of_speech,'noun');
+     assert.equal(evidence.lemma,p.translations[lang],'Evidence cannot be silently applied to another lexeme');
+     assert(evidence.retrieved_at&&evidence.license,'Wiktionary evidence requires retrieval and license metadata');
+    }
+   }
    for(const pronunciation of detail.pronunciations){
     assert.equal(pronunciation.review_status,'suggested');
     assert(pronunciation.ipa&&pronunciation.source?.startsWith('https://'));
