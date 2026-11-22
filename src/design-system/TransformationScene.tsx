@@ -11,7 +11,7 @@ export function TransformationScene({theme,word,mode,phase}:{theme:ThemeId;word:
   <div className="transformation-chamber">
    {scene.kind==='flip'?<><img className="transformation-back transformation-flip-back" src={url(scene.back!)} alt=""/><img className="transformation-back transformation-flip-front" src={url(scene.frame!)} alt=""/></>:scene.back&&<img className="transformation-back" src={url(scene.back)} alt=""/>}
    <div className="transformation-content" data-count={result.count} data-small={result.scale===.5} aria-live="polite">
-    {(result.kind==='word'||word.materialKind)?<span className="transformation-word" style={{whiteSpace: 'nowrap', overflowWrap: 'normal', fontSize: `min(64px, ${90/Math.max(1,word.label.length*.7)}cqw)`}}>{word.label.toLocaleUpperCase('ru')}</span>:<div className="transformation-object"><CardArtwork image={word.variants![0]} label={word.label} number={result.count===7?'plural':'singular'}/></div>
+    {(result.kind==='word'||word.materialKind)?<span className="transformation-word" style={{whiteSpace: 'nowrap', overflowWrap: 'normal', fontSize: `min(64px, ${90/Math.max(1,word.label.length*.7)}cqw)`}}>{word.label.toLocaleUpperCase('ru')}</span>:<div className="transformation-object"><CardArtwork image={word.variants![0]} label={word.label} number={result.count===7?'plural':'singular'}/></div>}
    </div>
    {scene.kind==='rays'&&<div className="transformation-rays" aria-hidden="true"/>}
    {scene.glass&&<img className="transformation-glass" src={url(scene.glass)} alt=""/>}
