@@ -347,11 +347,12 @@ test('Conveyor keeps material-dependent choices adjacent and all game limits in 
  const material=setup.slice(setup.indexOf('data-setup-section="material"'),setup.indexOf('data-setup-section="task"'));
  const task=setup.slice(setup.indexOf('data-setup-section="task"'),setup.indexOf('data-setup-section="rules"'));
  const rules=setup.slice(setup.indexOf('data-setup-section="rules"'),setup.indexOf('<SetupPreview'));
- assert.match(material,/<GameSelect label="Учебная задача"/);
+ assert.match(material,/<GameSelect label="Учебная задача" hideLabel/);
  assert.match(material,/<MaterialSettings/);
  assert.ok(material.indexOf('<MaterialSettings')>material.indexOf('</GameSelect>'));
  assert.doesNotMatch(material,/<label>Карточки/);
- assert.match(task,/<label>Карточки/);
+ assert.match(task,/<GameSelect label="Карточки"[^>]*hideLabel/);
+ assert.ok(task.indexOf('<GameSelect label="Карточки"')<task.indexOf('Показывать подписи')&&task.indexOf('Показывать подписи')<task.indexOf('<QuantitySlider label="Карточек"'));
  assert.match(task,/<QuantitySlider label="Карточек"/);
  assert.match(rules,/<label>Проверка/);
  assert.match(rules, /\{limits\.settings\}/);
@@ -376,7 +377,7 @@ test('Nested supplementary material uses icon wells and does not float delete ac
  assert.match(material, /<ControlWell symbol="plus"\/>/);
  assert.match(material, /className="setup-add-rule"/);
  assert.match(material, /className="material-rule-heading"/);
- assert.match(material,/hideLabel=\{!nested\}/);
+ assert.match(material,/<GameSelect hideLabel label="Учебная задача"/);
  assert.doesNotMatch(layout,/\.material-rule>button\{float:right\}/);
  assert.doesNotMatch(layout,/\.material-rule \.rule-delete\{float:right/);
  assert.match(css,/\.shared-settings-window \.material-rule-heading\{/);
@@ -399,7 +400,7 @@ test('Shared settings footer stays outside the independently scrolling body',()=
 test('Lesson task selectors are not laid out as a three-column button tile group',()=>{
  const material=readFileSync('src/MaterialSettings.tsx','utf8');
  assert.doesNotMatch(material,/choiceClassName="task-tiles"/);
- assert.match(material,/<GameSelect hideLabel=\{!nested\} label="Учебная задача"/);
+ assert.match(material,/<GameSelect hideLabel label="Учебная задача"/);
 });
 
 
@@ -433,9 +434,9 @@ test('Shared setup footer contains only preview, main action and status, not ove
  const controls=readFileSync('src/design-system/controls.css','utf8');
  assert.match(shell,/else extras\.push\(node\)/);
  assert.match(shell,/className="setup-extra-notes"/);
- assert.match(controls,/grid-template-rows:auto min-content!important/);
- assert.match(controls,/\.setup-footer>\.setup-material-preview\{[^}]*grid-row:1\/span 2!important/);
- assert.match(controls,/\.setup-footer\{[^}]*max-height:80px/);
+ assert.match(controls,/grid-template-rows:minmax\(0,1fr\)!important/);
+ assert.match(controls,/\.setup-footer>\.setup-material-preview\{[^}]*grid-row:1!important/);
+ assert.match(controls,/\.setup-footer\{[^}]*max-height:82px/);
  assert.match(controls,/--zg-setup-control-height:52px/);
 });
 
@@ -461,7 +462,7 @@ test('All five setup previews share one word-and-status layout with no sub-CTA l
  assert.match(preview,/className="setup-preview-message" role="status"/);
  assert.match(window,/node\.type===SetupPreview/);
  assert.doesNotMatch(window,/node\.type==='p'&&node\.props\.role==='status'/);
- assert.match(css,/grid-template-columns:minmax\(92px,\.37fr\) minmax\(0,\.63fr\)/);
+ assert.match(css,/grid-template-columns:minmax\(100px,max-content\) minmax\(0,1fr\)/);
  assert.match(css,/-webkit-line-clamp:2/);
  for(const file of ['main.tsx','Matching.tsx','Sorting.tsx','Conveyor.tsx','Transformations.tsx']){
   const source=readFileSync('src/'+file,'utf8');
@@ -475,4 +476,30 @@ test('All five setup previews share one word-and-status layout with no sub-CTA l
  assert.doesNotMatch(conveyor,/<p role="status">\{error\|\|message/);
  assert.doesNotMatch(transformations,/Ребёнок отвечает вслух\. Взрослый запускает превращение/);
  assert.match(transformations,/<GameSelect label="Задание" hideLabel/);
+});
+
+
+test('All games use the shared measured field/section spacing, with no adjacent margins',()=>{
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ const material=readFileSync('src/MaterialSettings.tsx','utf8');
+ const memory=readFileSync('src/main.tsx','utf8');
+ const conveyor=readFileSync('src/Conveyor.tsx','utf8');
+ assert.match(css,/--zg-setup-gap:8px/);
+ assert.match(css,/--zg-setup-section-gap:12px/);
+ assert.match(css,/\.setup-column\{\s*gap:var\(--zg-setup-section-gap\)!important/);
+ assert.match(css,/\.setup-column>\.settings-block,\s*\.app\[data-theme\] \.settings-frame\.shared-settings-window \.setup-section-fieldset>\.settings-block\{[^}]*display:flex!important;flex-direction:column/);
+ assert.match(css,/\.setup-material-fields,[^}]*display:flex;flex-direction:column;gap:var\(--zg-setup-gap\)!important/);
+ assert.match(material,/className="setup-material-fields"/);
+ assert.match(material,/<GameSelect hideLabel label="Учебная задача"/);
+ assert.doesNotMatch(memory,/Сначала запомним расположение/);
+ assert.match(conveyor,/<GameSelect label="Учебная задача" hideLabel/);
+ assert.match(conveyor,/<GameSelect label="Карточки"[^>]*hideLabel/);
+});
+test('Numeric quantity stepper is compact in all settings, with unchanged direct-input semantics',()=>{
+ const css=readFileSync('src/design-system/controls.css','utf8');
+ const slider=readFileSync('src/QuantitySlider.tsx','utf8');
+ assert.match(css,/\.quantity-slider \.quantity-stepper button\{width:27px;height:30px/);
+ assert.match(css,/\.quantity-slider \.quantity-stepper input\[type=number\]\{width:36px!important;height:30px/);
+ assert.match(slider,/type="number"[^>]*value=\{value\}/);
+ assert.match(slider,/type="range"/);
 });
