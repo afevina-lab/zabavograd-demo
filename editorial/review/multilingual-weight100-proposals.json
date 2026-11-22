@@ -4201,7 +4201,7 @@
         "es": "mano",
         "de": "Hand"
       },
-      "notes": "Translation approximates hand; Russian кисть is the hand part, distinct from рука/arm and brush.",
+      "notes": "Кисть руки is the hand region, while рука may denote the whole upper limb; foreign 'hand/main/mano/Hand' overlaps with translations of рука. Semantic equivalence must not be marked exact automatically.",
       "language_details": {
         "en": {
           "part_of_speech": "noun",
@@ -5627,7 +5627,8 @@
           "feature_source": "editorial_candidate_requires_dictionary_verification",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
-          "morphology_status": "suggested"
+          "morphology_status": "suggested",
+          "usage_note": "ave is grammatically feminine, but singular indefinite article is un before stressed initial a; compare un ave / las aves."
         },
         "de": {
           "part_of_speech": "noun",
@@ -6477,14 +6478,21 @@
         "en": {
           "part_of_speech": "noun",
           "grammatical_gender": null,
-          "indefinite_article_form": "a furniture",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
           "morphology_status": "partial",
           "citation_form": "furniture",
-          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+          "usage_note": "Uncountable: no a furniture or regular plural; one piece of furniture.",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://dictionary.cambridge.org/grammar/british-grammar/countability-furniture",
+              "review_status": "suggested",
+              "checked_field": "countability_and_citation_form",
+              "checked_at": "2026-11-22"
+            }
+          ]
         },
         "fr": {
           "part_of_speech": "noun",
@@ -6511,15 +6519,23 @@
         "de": {
           "part_of_speech": "noun",
           "grammatical_gender": "n",
-          "indefinite_article_form": "das Möbel",
           "plural_form": "Möbel",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
           "morphology_status": "partial",
-          "citation_form": "Möbel",
-          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+          "citation_form": "die Möbel",
+          "usage_note": "Collective plural die Möbel; das Möbel denotes a single piece, not equivalent to Russian mass furniture.",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://de.wiktionary.org/wiki/M%C3%B6bel",
+              "review_status": "suggested",
+              "checked_field": "countability_and_citation_form",
+              "checked_at": "2026-11-22"
+            }
+          ],
+          "grammatical_number": "plural"
         }
       }
     },
@@ -6542,26 +6558,32 @@
         "en": {
           "part_of_speech": "noun",
           "grammatical_gender": null,
-          "indefinite_article_form": "a tableware",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
           "morphology_status": "partial",
           "citation_form": "tableware",
-          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+          "usage_note": "Uncountable collective: no a tableware."
         },
         "fr": {
           "part_of_speech": "noun",
           "grammatical_gender": "f",
-          "indefinite_article_form": "une vaisselle",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
           "morphology_status": "partial",
-          "citation_form": "vaisselle",
-          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+          "citation_form": "la vaisselle",
+          "usage_note": "Normally uncountable feminine noun for tableware/dishes.",
+          "dictionary_evidence": [
+            {
+              "source_url": "https://en.wiktionary.org/wiki/vaisselle",
+              "review_status": "suggested",
+              "checked_field": "countability_and_citation_form",
+              "checked_at": "2026-11-22"
+            }
+          ]
         },
         "es": {
           "part_of_speech": "noun",
@@ -6579,14 +6601,13 @@
         "de": {
           "part_of_speech": "noun",
           "grammatical_gender": "n",
-          "indefinite_article_form": "das Geschirr",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
           "morphology_status": "partial",
-          "citation_form": "Geschirr",
-          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+          "citation_form": "das Geschirr",
+          "usage_note": "Collective mass noun, not a count noun in this sense."
         }
       }
     },
@@ -6730,7 +6751,7 @@
         "es": "candado",
         "de": "Schloss"
       },
-      "notes": "Unresolved Russian sense: could mean lock, padlock, or castle. Tentative padlock-type translations MUST NOT be approved before image inspection.",
+      "notes": "Russian sense is not disambiguated (lock, padlock, castle); foreign translations not approved until linked image/sense verified. French cadenas and Spanish candado mean padlock, not general door lock.",
       "language_details": {
         "en": {
           "part_of_speech": "noun",
@@ -6797,14 +6818,13 @@
         "en": {
           "part_of_speech": "noun",
           "grammatical_gender": null,
-          "indefinite_article_form": "a toothpaste",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
           "morphology_status": "partial",
           "citation_form": "toothpaste",
-          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+          "usage_note": "Normally a mass noun; a tube of toothpaste is a countable unit."
         },
         "fr": {
           "part_of_speech": "noun",
@@ -7484,14 +7504,13 @@
         "en": {
           "part_of_speech": "noun",
           "grammatical_gender": null,
-          "indefinite_article_form": "a soap",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
           "morphology_status": "partial",
           "citation_form": "soap",
-          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+          "usage_note": "Ordinarily mass when describing substance; a bar of soap is a countable unit."
         },
         "fr": {
           "part_of_speech": "noun",
@@ -9308,14 +9327,13 @@
         "en": {
           "part_of_speech": "noun",
           "grammatical_gender": null,
-          "indefinite_article_form": "a shampoo",
           "feature_review_status": "suggested",
           "feature_source": "editorial_candidate_requires_dictionary_verification",
           "pronunciations": [],
           "pronunciation_status": "not_imported",
           "morphology_status": "partial",
           "citation_form": "shampoo",
-          "usage_note": "Plural-only, collective, mass noun or semantic/grammatical variation; check before approval."
+          "usage_note": "Normally mass as the substance; a bottle of shampoo is a countable unit."
         },
         "fr": {
           "part_of_speech": "noun",
