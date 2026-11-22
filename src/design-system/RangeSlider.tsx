@@ -22,6 +22,5 @@ export function RangeSlider({label,min,max,from,to,onChange,disabled=false}:{lab
    <input id={id+'-from'} type="range" min={min} max={max} step={1} value={lower} disabled={disabled||min>=max} aria-label={label+': от'} aria-valuetext={'От '+lower} onChange={event=>onChange(Math.min(+event.target.value,upper),upper)}/>
    <input id={id+'-to'} type="range" min={min} max={max} step={1} value={upper} disabled={disabled||min>=max} aria-label={label+': до'} aria-valuetext={'До '+upper} onChange={event=>onChange(lower,Math.max(+event.target.value,lower))}/>
   </div>
-  <div className="range-slider-ends"><span>{min}</span><span>{max}</span></div>
  </div>;
 }
