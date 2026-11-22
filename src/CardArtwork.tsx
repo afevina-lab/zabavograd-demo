@@ -65,7 +65,16 @@ function autoBounds(src:string):Promise<Bounds|null>{
  pending.set(src,promise);return promise;
 }
 
-export function CardArtwork({image,label}:{image:ImageVariant;label:string}){
+/** Shared artwork interface for every game; grammatical number controls composition. */
+export function CardArtwork({image,label,number='singular'}:{image:ImageVariant;label:string;number?:'singular'|'plural'}){
+ return number==='plural'?<PluralArtwork image={image} label={label}/>:<SingleArtwork image={image} label={label}/>;
+}
+export function PluralArtwork({image,label}:{image:ImageVariant;label:string}){
+ return <div className="plural-artwork" role="img" aria-label={label}>
+  {Array.from({length:7},(_,i)=><div className="plural-artwork-object" key={i} aria-hidden="true"><SingleArtwork image={image} label=""/></div>)}
+ </div>;
+}
+function SingleArtwork({image,label}:{image:ImageVariant;label:string}){
  const src=import.meta.env.BASE_URL+image.src.replace(/^\//,'');
  const [detected,setDetected]=useState<Bounds|null>(()=>boundsCache.get(src)||null);
  useEffect(()=>{
