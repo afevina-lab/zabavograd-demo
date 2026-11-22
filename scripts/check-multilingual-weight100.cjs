@@ -44,7 +44,7 @@ function validate(manifest,proposals,canonical){
     if(detail.morphology_status==='suggested')assert(typeof detail.indefinite_article_form==='string'&&detail.indefinite_article_form);
     if(detail.morphology_status==='partial')assert(typeof detail.citation_form==='string'||typeof detail.indefinite_article_form==='string','Partial paradigm needs a citation or article form');
     if(detail.morphology_status==='suggested')assert(typeof detail.plural_form==='string'&&detail.plural_form);
-    assert(lang==='en'?detail.grammatical_gender===null:['m','f','n'].includes(detail.grammatical_gender));
+    assert(lang==='en'?detail.grammatical_gender===null:(detail.morphology_status==='partial'&&detail.grammatical_number==='plural'&&detail.grammatical_gender===null)||['m','f','n'].includes(detail.grammatical_gender));
    }
    for(const pronunciation of detail.pronunciations){
     assert.equal(pronunciation.review_status,'suggested');
