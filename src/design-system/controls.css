@@ -1030,8 +1030,8 @@
  margin:0!important;padding-block:0!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window .setup-column>.settings-block>*,
-.app[data-theme] .settings-frame.shared-settings-window :is(.setup-material-fields,.setup-dependent-field,.reading-settings,.math-settings)>*,
-.app[data-theme] .settings-frame.shared-settings-window .settings-disclosure-body>*{
+.app[data-theme] .settings-frame.shared-settings-window :is(.setup-material-fields,.setup-dependent-field,.reading-settings,.math-settings)>:not(dialog),
+.app[data-theme] .settings-frame.shared-settings-window .settings-disclosure-body>:not(dialog){
  margin-block:0!important;
 }
 .app[data-theme] .settings-frame.shared-settings-window .settings-block :is(h2,h3),
