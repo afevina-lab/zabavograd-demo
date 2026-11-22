@@ -297,9 +297,9 @@ test('All five setups use one semantic two-column arrangement and common preview
   }
   assert.match(setup,/<SetupPreview\s+/,file+': shared preview');
  }
- assert.match(css,/\.app \.shared-settings-window \.setup-columns\{display:grid;grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
+ assert.match(css,/\.settings-frame\.shared-settings-window \.setup-columns\{\s*grid-template-columns:repeat\(2,minmax\(0,1fr\)\)!important/);
  assert.match(css,/\.setup-footer>\.setup-material-preview\{/);
- assert.match(css,/\.setup-footer>:is\(button.primary,button.start\)\{/);
+ assert.match(css,/\.settings-frame\.shared-settings-window>\.setup-footer>button\.primary\{/);
 });
 
 test('Deprecated game-specific setup grids cannot override shared semantic columns',()=>{
