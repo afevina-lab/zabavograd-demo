@@ -1008,10 +1008,10 @@ html:has(.settings-shade){overflow:hidden}
  padding:2px 0!important;
 }
 .app .shared-settings-window .math-settings>.check{margin:0!important}
-.app .shared-settings-window .setup-columns{align-items:start;row-gap:14px!important}
-.app .shared-settings-window .setup-column{display:flex;flex-direction:column;gap:14px!important;min-width:0}
+
+
 .app .shared-settings-window .setup-column>.settings-block{margin:0!important}
-.app .shared-settings-window .quantity-slider{margin-block:10px 12px!important}
+
 @media(max-width:600px){
  .app.game-active .play-toolbar.shared-toolbar{min-height:54px!important}
  .app .shared-settings-window .math-settings .reading-kinds{gap:4px 8px!important}
