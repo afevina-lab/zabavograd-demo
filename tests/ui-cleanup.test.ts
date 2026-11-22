@@ -327,7 +327,7 @@ test('All setup labels inherit the shared control rules, never per-game geometry
 test('Destructive setup edits do not borrow the primary Start-game button skin',()=>{
  const material=readFileSync('src/MaterialSettings.tsx','utf8');
  const sorting=readFileSync('src/Sorting.tsx','utf8');
- assert.match(material,/className="secondary rule-delete"/);
+ assert.match(material,/className="icon-button rule-delete"/);
  assert.doesNotMatch(material,/className="primary rule-delete"/);
  assert.match(sorting,/<button className="secondary" type="button" onClick=\{\(\)=>setExclusions/);
 });
@@ -521,11 +521,11 @@ test('Footer words use a fully framed height-matched well with measured font fit
  const preview=readFileSync('src/design-system/SetupPreview.tsx','utf8');
  const css=readFileSync('src/design-system/controls.css','utf8');
  assert.match(preview,/ResizeObserver/);
- assert.match(preview,/for\(let size=16;size>=12;size--\)/);
+ assert.match(preview,/for\(let size=18;size>=12;size--\)/);
  assert.match(preview,/inner\.scrollHeight<=availableHeight/);
  assert.doesNotMatch(preview,/availableWidth=[^\n]*borderLeftWidth/);
  assert.doesNotMatch(preview,/availableHeight=[^\n]*borderTopWidth/);
- assert.match(preview,/for\(let size=16;size>=12;size--\)/);
+ assert.match(preview,/for\(let size=18;size>=12;size--\)/);
  assert.match(preview,/className="setup-preview-fit"/);
  assert.match(css,/\.setup-preview-content\{[^}]*height:58px;min-height:58px;max-height:58px/);
  assert.match(css,/\.setup-preview-content\{[^}]*background:var\(--ui-setup-field\)/);
