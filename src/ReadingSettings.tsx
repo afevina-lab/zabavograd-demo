@@ -1,3 +1,5 @@
+import {useRef,useState} from 'react';
+import {ControlWell} from './design-system/ControlWell.tsx';
 import {RangeSlider} from './design-system/RangeSlider.tsx';
 import {alphabet,vowels,consonants,readingOptions,contentKinds,effectivePatterns,syllablePatterns,maxWordLength,type ContentKind,type Pattern} from './reading.ts';
 import type {Learning} from './learning.ts';
@@ -7,15 +9,37 @@ export function ReadingSettings({l,setL,words,textDisplayProvided=false}:{l:Lear
  const r=readingOptions(l),kinds=contentKinds(l),patterns=effectivePatterns(l),maximum=maxWordLength(words);
  const update=(part:Partial<typeof r>)=>setL({...l,reading:{...r,...part}});
  const toggle=(values:string[],v:string,on:boolean)=>on?[...new Set([...values,v])]:values.filter(x=>x!==v);
+ const letterDialog=useRef<HTMLDialogElement>(null),letterTrigger=useRef<HTMLButtonElement>(null);
+ const [draftAvailable,setDraftAvailable]=useState<string[]>(r.available);
+ const [draftRequired,setDraftRequired]=useState<string[]>(r.required);
+ const openLetters=()=>{setDraftAvailable([...r.available]);setDraftRequired([...r.required]);letterDialog.current?.showModal()};
+ const closeLetters=()=>{letterDialog.current?.close();letterTrigger.current?.focus()};
+ const saveLetters=()=>{update({available:draftAvailable,required:draftRequired.filter(c=>draftAvailable.includes(c))});closeLetters()};
  return <div className="reading-settings">
  <div className="field-label">{l.mode==='reading'?'Что читаем':'Материал для задания'}</div>
- {l.mode==='reading'&&<p className="hint">Можно выбрать несколько видов материала для одной игры.</p>}<div className="reading-kinds">{([...(l.mode==='reading'?[['letters','Буквы']]:[]),['syllables','Слоги'],['words','Слова']] as [ContentKind,string][]).map(([kind,label])=><label className="check" key={kind}><input type="checkbox" checked={kinds.includes(kind)} onChange={e=>setL({...l,contentKinds:toggle(kinds,kind,e.target.checked) as ContentKind[]})}/>{label}</label>)}</div>
+ <div className="reading-kinds">{([...(l.mode==='reading'?[['letters','Буквы']]:[]),['syllables','Слоги'],['words','Слова']] as [ContentKind,string][]).map(([kind,label])=><label className="check" key={kind}><input type="checkbox" checked={kinds.includes(kind)} onChange={e=>setL({...l,contentKinds:toggle(kinds,kind,e.target.checked) as ContentKind[]})}/>{label}</label>)}</div>
  {l.mode==='reading'&&<>{!textDisplayProvided&&<label className="check"><input type="checkbox" role="switch" checked={!!r.splitSyllables} onChange={e=>update({splitSyllables:e.target.checked})}/>Разделить на слоги</label>}
- <details className="filter-details"><summary>Доступные буквы · {r.available.length} из 33</summary>
- <label className="check"><input type="checkbox" checked={r.available.length===33} onChange={e=>update({available:e.target.checked?alphabet:[],required:[]})}/>Все буквы</label>
- {Object.entries({'Гласные':vowels,'Согласные':consonants,'Знаки': ['ь','ъ']}).map(([group,letters])=><details className="letter-group" key={group} open><summary>{group}</summary><label className="check"><input type="checkbox" checked={letters.every(c=>r.available.includes(c))} onChange={e=>update({available:e.target.checked?[...new Set([...r.available,...letters])]:r.available.filter(c=>!letters.includes(c)),required:e.target.checked?r.required:r.required.filter(c=>!letters.includes(c))})}/>Выбрать всё</label><div className="letter-grid">{letters.map(c=><label key={c} className="letter-choice"><input type="checkbox" checked={r.available.includes(c)} onChange={e=>update({available:toggle(r.available,c,e.target.checked),required:e.target.checked?r.required:r.required.filter(x=>x!==c)})}/>{c.toUpperCase()}</label>)}</div></details>)}
- </details>
- <details className="filter-details"><summary>Обязательные буквы: {r.required.map(c=>c.toUpperCase()).join(', ')||'не выбраны'}</summary><p className="hint">В каждом слове или сочетании должны быть все отмеченные буквы.</p><div className="letter-grid">{alphabet.map(c=><label className="letter-choice" key={c}><input type="checkbox" checked={r.required.includes(c)} disabled={!r.available.includes(c)} onChange={e=>update({required:toggle(r.required,c,e.target.checked)})}/>{c.toUpperCase()}</label>)}</div></details>
+ <button type="button" className="category-picker-trigger letter-picker-trigger" ref={letterTrigger} onClick={openLetters}>
+  <span className="setup-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16v16H4zM7 16l3-8 3 8m-5-2h4M16 8v8m-2-4h4"/></svg></span>
+  <span className="setup-action-copy"><strong>Выберите буквы</strong><small>Доступные: {r.available.length} из 33 · Обязательные: {r.required.length||'нет'}</small></span><ControlWell symbol="plus"/>
+ </button>
+ <dialog ref={letterDialog} className="sound-picker-dialog letter-picker-dialog" aria-label="Выбор букв" onCancel={()=>letterTrigger.current?.focus()}>
+  <div className="panel-scroll">
+   <h2>Выберите буквы</h2>
+   <section className="letter-picker-section"><h3>Доступные буквы · {draftAvailable.length} из 33</h3>
+    <label className="check"><input type="checkbox" checked={draftAvailable.length===33} onChange={e=>{setDraftAvailable(e.target.checked?[...alphabet]:[]);if(!e.target.checked)setDraftRequired([])}}/>Все буквы</label>
+    {Object.entries({'Гласные':vowels,'Согласные':consonants,'Знаки':['ь','ъ']}).map(([group,letters])=><details className="letter-group" key={group} open><summary>{group}</summary>
+     <label className="check"><input type="checkbox" checked={letters.every(c=>draftAvailable.includes(c))} onChange={e=>{setDraftAvailable(current=>e.target.checked?[...new Set([...current,...letters])]:current.filter(c=>!letters.includes(c)));if(!e.target.checked)setDraftRequired(current=>current.filter(c=>!letters.includes(c)))}}/>Выбрать всё</label>
+     <div className="letter-grid">{letters.map(c=><label key={c} className="letter-choice"><input type="checkbox" checked={draftAvailable.includes(c)} onChange={e=>{setDraftAvailable(current=>toggle(current,c,e.target.checked));if(!e.target.checked)setDraftRequired(current=>current.filter(x=>x!==c))}}/>{c.toUpperCase()}</label>)}</div>
+    </details>)}
+   </section>
+   <section className="letter-picker-section"><h3>Обязательные буквы · {draftRequired.length||'не выбраны'}</h3>
+    <p className="hint">В слове или сочетании должны присутствовать все отмеченные буквы.</p>
+    <div className="letter-grid">{alphabet.filter(c=>draftAvailable.includes(c)).map(c=><label className="letter-choice" key={c}><input type="checkbox" checked={draftRequired.includes(c)} onChange={e=>setDraftRequired(current=>toggle(current,c,e.target.checked))}/>{c.toUpperCase()}</label>)}</div>
+   </section>
+  </div>
+  <div className="sound-picker-actions"><button type="button" className="primary" onClick={saveLetters}>Готово</button><button type="button" className="secondary" onClick={closeLetters}>Отмена</button></div>
+ </dialog>
  {kinds.includes('words')&&<RangeSlider label="Длина слова, букв" min={3} max={Math.max(3,maximum)} from={Math.max(3,Math.min(r.min,maximum))} to={Math.max(3,Math.min(r.max,maximum))} onChange={(min,max)=>update({min,max})}/>}
  <label className="check"><input type="checkbox" role="switch" checked={r.excludeClusters} onChange={e=>setL({...l,reading:{...r,excludeClusters:e.target.checked},syllablePatterns:e.target.checked?patterns.filter(p=>p!=='CCV'&&p!=='VCC'):patterns})}/>Исключить стечения согласных</label>
  </>}
