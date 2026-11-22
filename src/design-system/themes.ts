@@ -24,24 +24,26 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
   palette:{accent:'#80b84c',deep:'#3f782f',pale:'#edf4e5',outline:'#7c9b72',text:'#304d38',paper:'#fffaf0',page:'#eef2e6',stageText:'#344a39'},
   skin:'sage',toolbarArt:'assets/themes/forest/header.webp',
   scene:{background:'assets/themes/forest/forest_background.webp',fill:'#d5e7bf',motion:'static',sprites:[
-   // Approved four-tree composition, shared by every game. Distances are relative
-   // to the scenery viewport (cqh/cqw), never to the number or size of cards.
-   // BACK: tree 1 behind the left foreground tree; its roots sit further uphill.
-   {id:'tree-far-left',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(59cqh,34cqw)',left:'10%',bottom:'24%',opacity:1,layer:1,durationMs:15000,origin:'50% 94%'},
-   // BACK: tree 2 between the clearing and the right foreground trunk.
-   {id:'tree-far-right',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(61cqh,34cqw)',right:'16%',bottom:'18%',opacity:1,layer:1,durationMs:17000,origin:'50% 94%'},
-   // Small shrubs are grounded in the middle distance, never floating above it.
-   {id:'bush-back-left',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(19cqh,12cqw)',left:'0%',bottom:'34%',opacity:.94,layer:2,durationMs:28000},
-   {id:'bush-back-middle',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(12cqh,8cqw)',left:'32%',bottom:'42%',opacity:.85,layer:2,durationMs:30000},
-   // RIGHT midground flowers sit in front of the distant tree but behind the near one.
-   {id:'flowers-right',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(45cqh,27cqw)',right:'17%',bottom:'15%',opacity:1,layer:3},
-   // FRONT: rounded-leaf tree on the left, lobed-leaf tree on the right.
-   // Their separate ground contacts match the perspective in the reference.
-   {id:'tree-left',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(80cqh,46cqw)',left:'-9%',bottom:'-1%',opacity:1,layer:4,durationMs:10500,origin:'50% 94%'},
-   {id:'tree-right',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(79cqh,46cqw)',right:'-8%',bottom:'3%',opacity:1,layer:4,durationMs:12400,delayMs:-4500,origin:'50% 94%'},
-   // Foreground flowers and shrub cover tree feet, keeping the clearing empty.
-   {id:'flowers-left',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(43cqh,25cqw)',left:'5%',bottom:'2%',opacity:1,layer:5},
-   {id:'bush-front-right',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(27cqh,16cqw)',right:'1%',bottom:'0%',opacity:1,layer:5,durationMs:26000},
+   // One shared six-tree composition. Distances follow the actual scene height;
+   // the SceneLayers viewport extends beyond narrow screens instead of shrinking.
+   // Deep side trees provide canopy density without closing the central clearing.
+   {id:'tree-depth-left',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(66cqh,39cqw)',left:'-9%',bottom:'31%',opacity:.78,layer:0,durationMs:18000,origin:'50% 94%'},
+   {id:'tree-depth-right',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(65cqh,39cqw)',right:'-8%',bottom:'32%',opacity:.78,layer:0,durationMs:19000,origin:'50% 94%'},
+   // The two middle-distance trunks reach different elevations on the meadow.
+   {id:'tree-far-left',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(76cqh,43cqw)',left:'11%',bottom:'23%',opacity:1,layer:1,durationMs:15000,origin:'50% 94%'},
+   {id:'tree-far-right',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(76cqh,43cqw)',right:'16%',bottom:'18%',opacity:1,layer:1,durationMs:17000,origin:'50% 94%'},
+   // Distant low shrubs belong to the same terrain plane as their tree roots.
+   {id:'bush-back-left',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(18cqh,11cqw)',left:'0%',bottom:'35%',opacity:.9,layer:2,durationMs:28000},
+   {id:'bush-back-middle',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(11cqh,7cqw)',left:'33%',bottom:'42%',opacity:.85,layer:2,durationMs:30000},
+   // Flowers on the right sit in front of the middle tree, not the foreground tree.
+   {id:'flowers-right',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(43cqh,27cqw)',right:'17%',bottom:'15%',opacity:1,layer:3},
+   // Two tall foreground trees frame the play area, rising above the top edge.
+   // Their separate ground contacts are deliberately NOT aligned.
+   {id:'tree-left',src:'assets/themes/forest/forest_tree_2.webp',motion:'sway',width:'min(102cqh,56cqw)',left:'-11%',bottom:'-1%',opacity:1,layer:4,durationMs:10500,origin:'50% 94%'},
+   {id:'tree-right',src:'assets/themes/forest/forest_tree_1.webp',motion:'sway',width:'min(100cqh,56cqw)',right:'-10%',bottom:'3%',opacity:1,layer:4,durationMs:12400,delayMs:-4500,origin:'50% 94%'},
+   // Grounded small plants, in front of the appropriate trunks only.
+   {id:'flowers-left',src:'assets/themes/forest/forest_flower_patch.webp',motion:'none',width:'min(43cqh,26cqw)',left:'5%',bottom:'2%',opacity:1,layer:5},
+   {id:'bush-front-right',src:'assets/themes/forest/forest_bush.webp',motion:'breathe',width:'min(26cqh,16cqw)',right:'1%',bottom:'0%',opacity:1,layer:5,durationMs:26000},
    {id:'leaf-birch',src:'assets/themes/forest/forest_leaf_birch.webp',motion:'fall',width:'clamp(26px,3vw,44px)',left:'13%',top:'-12%',opacity:.8,durationMs:17000,delayMs:-2200},
    {id:'leaf-oak',src:'assets/themes/forest/forest_leaf_oak.webp',motion:'fall',width:'clamp(30px,3.2vw,49px)',left:'69%',top:'-11%',opacity:.85,durationMs:21500,delayMs:-9100},
    {id:'leaf-oval',src:'assets/themes/forest/forest_leaf_oval.webp',motion:'fall',width:'clamp(25px,2.8vw,43px)',left:'42%',top:'-13%',opacity:.8,durationMs:18800,delayMs:-13900}
