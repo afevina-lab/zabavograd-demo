@@ -245,7 +245,7 @@
 .app[data-theme] .settings .settings-disclosure>summary{padding:11px 6px 11px 14px!important}
 .app .control-well{width:36px;height:38px;box-sizing:border-box}
 .app .icon-button{position:relative}
-.app .icon-button .garden-icon{position:absolute;inset:15%;margin:0!important;width:70%!important;height:70%!important;max-width:none;max-height:none}
+.app .icon-button .garden-icon{position:absolute;inset:25%;margin:0!important;width:50%!important;height:50%!important;max-width:none;max-height:none;transition:transform .16s ease;transform-origin:center}
 
 .app[data-theme] .overlay.result>div>.panel-scroll>button{min-height:64px!important;height:auto;font-size:18px!important;padding:14px 22px!important;box-sizing:border-box;border-radius:18px!important}
 /* Required state follows the existing selection validity, never color alone. */
@@ -1616,3 +1616,6 @@ display:grid;grid-template-columns:repeat(auto-fill,var(--zg-chip-size));justify
 .app dialog.letter-picker-dialog .letter-picker-section>.hint{margin:0;line-height:1.35}
 .app dialog .sound-picker-actions{border-bottom-left-radius:16px;border-bottom-right-radius:16px}
 .app dialog.syllable-picker-dialog .syllable-type-tooltip:not(:popover-open){display:none}
+
+.app .icon-button:hover .garden-icon{transform:scale(1.4)}
+@media(prefers-reduced-motion:reduce){.app .icon-button .garden-icon{transition:none}}

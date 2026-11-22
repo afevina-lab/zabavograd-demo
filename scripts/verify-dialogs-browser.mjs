@@ -85,6 +85,11 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
  await cmd('Emulation.setTouchEmulationEnabled',{enabled:width<=844,maxTouchPoints:1});
  for(const game of ['memory','sorting','matching','conveyor','transformations']){
  await setup(game);
+ if(width===1440&&game!=='memory'){
+  const before=await evaluate("document.querySelector('[aria-label=\"Прошло времени\"]').textContent");
+  await sleep(1200);
+  assert.notEqual(await evaluate("document.querySelector('[aria-label=\"Прошло времени\"]').textContent"),before,'Elapsed time advances in '+game);
+ }
  if(width<=844){
   const compact=await evaluate("(()=>{const bar=document.querySelector('.play-toolbar.shared-toolbar'),left=[...bar.querySelectorAll('.toolbar-left>button,.toolbar-left>a')],right=[...bar.querySelectorAll('.toolbar-right>button,.toolbar-right>a')],shown=e=>getComputedStyle(e).display!=='none'&&e.getBoundingClientRect().width>0,counters=bar.querySelector('.toolbar-centre>.counters'),lives=counters.querySelector('.life-controls'),pause=left.filter(shown),view=right.filter(shown),b=bar.getBoundingClientRect();return {pause:pause.map(e=>e.getAttribute('aria-label')),view:view.map(e=>e.getAttribute('aria-label')),hasLives:!!lives&&shown(lives),hasTimer:!!counters.querySelector('.toolbar-timer'),row:getComputedStyle(counters).flexDirection,scroll:getComputedStyle(bar.querySelector('.toolbar-left')).overflowX,within:b.left>=0&&b.right<=innerWidth+1,overlap:(()=>{const p=pause[0]?.getBoundingClientRect(),v=view[0]?.getBoundingClientRect(),l=lives?.getBoundingClientRect();return !!p&&!!v&&!!l&&(p.right>l.left+1||l.right>v.left+1||p.right>v.left+1)})()}})()");
   assert.deepEqual(compact.pause,['Пауза'],'Compact toolbar must show only pause: '+game+' '+width);
@@ -103,6 +108,11 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
  await until("!!document.querySelector('button[aria-label=Пауза]')");
  await evaluate("document.querySelector('button[aria-label=Пауза]').click()");await until("!!document.querySelector('.overlay')");await sleep(350);assert(await evaluate("(()=>{const e=document.querySelector('.play-toolbar .garden-icon'),b=e.closest('button,a');return getComputedStyle(e).backgroundColor!==getComputedStyle(b).backgroundColor})()"),'Toolbar icon contrast');await screenshot(game+'-pause-'+width);
  assert(await evaluate("(()=>{const e=document.querySelector('.overlay>div'),r=e.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1&&r.top>=0&&r.bottom<=innerHeight+1})()"),'Pause overflow '+game);
+ if(width===1440&&game!=='memory'){
+  const frozen=await evaluate("document.querySelector('[aria-label=\"Прошло времени\"]').textContent");
+  await sleep(1200);
+  assert.equal(await evaluate("document.querySelector('[aria-label=\"Прошло времени\"]').textContent"),frozen,'Elapsed time freezes on pause in '+game);
+ }
  await evaluate("[...document.querySelectorAll('.overlay button')].find(e=>e.textContent==='Продолжить').click()");await until("!document.querySelector('.overlay')");
 
  if(game==='memory'||game==='sorting'){
