@@ -205,7 +205,7 @@
 .app[data-theme] :is(.settings,.modal,dialog) input:not([type=checkbox]):not([type=radio]):not([type=range]){background-color:var(--ui-setup-field);color:var(--ui-text);border-radius:12px;padding:10px 12px;border:1px solid var(--ui-outline);box-shadow:inset 0 2px 4px var(--ui-well-shadow)}
 /* Set membership keeps checkbox semantics, including partially selected parents. */
 .app[data-theme] :is(.settings,.modal,dialog) input[type=checkbox]:not([role=switch]),.app[data-theme] :is(.settings,.modal,dialog) input[type=radio]{position:relative;display:inline-grid;place-items:center;width:24px!important;height:24px!important;min-width:24px;appearance:none!important;background:var(--ui-setup-field)!important;border:1px solid var(--ui-field-edge)!important;border-radius:6px!important;box-shadow:inset 0 2px 3px var(--ui-well-shadow-strong);vertical-align:middle;cursor:pointer}
-.app[data-theme] :is(.settings,.modal,dialog) input[type=checkbox]:checked:not([role=switch]),.app[data-theme] :is(.settings,.modal,dialog) input[type=checkbox]:indeterminate{background:var(--ui-deep)!important;color:var(--ui-paper)}
+.app[data-theme] :is(.settings,.modal,dialog) input[type=checkbox]:checked:not([role=switch]),.app[data-theme] :is(.settings,.modal,dialog) input[type=checkbox]:indeterminate{background:var(--ui-deep)!important;color:var(--ui-paper) !important}
 .app[data-theme] :is(.settings,.modal,dialog) input[type=checkbox]:checked:not([role=switch])::after{content:'✓';font-size:18px;font-weight:800;line-height:1}
 .app[data-theme] :is(.settings,.modal,dialog) input[type=checkbox]:indeterminate::after{content:'−';font-size:20px;font-weight:800;line-height:1}
 .app[data-theme] :is(.settings,.modal,dialog) input[type=radio]{border-radius:50%!important}.app[data-theme] :is(.settings,.modal,dialog) input[type=radio]:checked::after{content:'';width:12px;height:12px;border-radius:50%;background:var(--ui-deep)}
@@ -234,7 +234,7 @@
 
 .app[data-theme] .quantity-slider .quantity-stepper button{background:var(--ui-deep)!important;color:var(--ui-paper)!important}
 
-@media(max-height:550px){.app .overlay{padding:12px!important}.app[data-theme] .overlay>div:has(.award){overflow:auto!important;max-height:calc(100dvh - 24px)!important;padding:18px 26px!important}.app[data-theme] .overlay .award{position:relative!important;top:auto!important;left:auto;right:auto;margin:0 auto 12px!important}.app[data-theme] .overlay p{font-size:14px;margin:10px 0 14px}.app[data-theme] .overlay h2{font-size:23px;margin-block:10px}}
+@media(max-height:550px){.app .overlay{padding:12px!important}.app[data-theme] .overlay p{font-size:14px;margin:10px 0 14px}.app[data-theme] .overlay h2{font-size:23px;margin-block:10px}}
 
 /* One rhythm and one action-well inset for all setup fields. */
 .app[data-theme] .settings .select-control{margin:0}
@@ -246,8 +246,6 @@
 .app .control-well{width:36px;height:38px;box-sizing:border-box}
 .app .icon-button{position:relative}
 .app .icon-button .garden-icon{position:absolute;inset:25%;margin:0!important;width:50%!important;height:50%!important;max-width:none;max-height:none;transition:transform .16s ease;transform-origin:center}
-
-.app[data-theme] .overlay.result>div>.panel-scroll>button{min-height:64px!important;height:auto;font-size:18px!important;padding:14px 22px!important;box-sizing:border-box;border-radius:18px!important}
 /* Required state follows the existing selection validity, never color alone. */
 .app[data-theme] .settings .select-control[data-field-state] select{border:1px solid var(--ui-field-edge)!important;padding:13px 50px!important}
 
@@ -285,12 +283,10 @@
 /* Fixed material frame with a separate, fully inset scrolling body. */
 .app[data-theme] :is(.modal,dialog,.overlay>div){overflow:hidden!important;padding:calc(var(--ui-frame-inset) + 8px)!important;box-sizing:border-box;max-height:calc(100dvh - 32px)!important}
 .app[data-theme] :is(.modal,dialog,.overlay>div)>.panel-scroll{max-height:calc(100dvh - 52px - var(--ui-frame-inset) - var(--ui-frame-inset));overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:8px;min-width:0;box-sizing:border-box}
-.app[data-theme] .overlay>div:has(.award){overflow:visible!important}
 .app .panel-scroll{scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--ui-outline) 48%,var(--ui-setup-paper)) transparent}
 .app .panel-scroll::-webkit-scrollbar{width:8px;height:8px}.app .panel-scroll::-webkit-scrollbar-track{background:transparent;border-radius:20px;margin:12px 0}.app .panel-scroll::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--ui-outline) 48%,var(--ui-setup-paper));border:2px solid var(--ui-setup-paper);border-radius:20px}.app .panel-scroll::-webkit-scrollbar-button{display:none;width:0;height:0}
 @supports selector(::-webkit-scrollbar){.app .panel-scroll{scrollbar-width:auto;scrollbar-color:auto}}
 .app[data-theme] .overlay .panel-scroll>button{max-width:100%;min-width:0}
-@media(max-height:550px){.app[data-theme] .overlay>div:has(.award)>.panel-scroll{max-height:calc(100dvh - 140px - var(--ui-frame-inset) - var(--ui-frame-inset))}}
 
 /* Compact category tree: branches retain hierarchy, leaves share available columns. */
 .app .category-grid,.app .category-grid ul{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:10px;list-style:none;margin:0;padding:0!important;border:0}
@@ -341,9 +337,9 @@
 .sound-selection-summary{flex:1;min-width:0;max-height:3em;overflow:auto;font-size:13px;line-height:1.4;margin:0}
 .app .sound-workshop .sound-picker-actions button{flex:none;margin:0!important;white-space:nowrap}
 .app[data-theme] .overlay>div>.panel-scroll>button:not(.primary){background:var(--ui-control-face)!important;color:var(--ui-text)!important;border:1px solid var(--ui-field-edge)!important;box-shadow:inset 0 2px 1px #fff9,0 3px 0 var(--ui-control-bottom)!important}
-.app.game-active .play-toolbar{box-sizing:border-box!important;min-height:56px!important;height:auto!important;overflow:visible;--zg-toolbar-icon-width:40px;--zg-toolbar-icon-height:40px;--zg-toolbar-icon-min-height:36px;--zg-toolbar-icon-padding:6px}
-.app.game-active .play-toolbar .icon-button{box-sizing:border-box;min-height:var(--zg-toolbar-icon-min-height)!important;height:var(--zg-toolbar-icon-height)!important;max-height:100%;width:var(--zg-toolbar-icon-width)!important;min-width:32px!important;padding:var(--zg-toolbar-icon-padding)!important}
-@media(max-width:600px){.app .sound-bank>section{grid-column:1!important;grid-row:auto!important}.sound-selection-summary{flex-basis:100%}.app.game-active .play-toolbar{--zg-toolbar-icon-width:32px;--zg-toolbar-icon-height:34px;--zg-toolbar-icon-min-height:32px;--zg-toolbar-icon-padding:4px}}
+.app.game-active .play-toolbar{box-sizing:border-box!important;overflow:visible}
+.app.game-active .play-toolbar .icon-button{box-sizing:border-box}
+@media(max-width:600px){.app .sound-bank>section{grid-column:1!important;grid-row:auto!important}.sound-selection-summary{flex-basis:100%}}
 .app .sound-bank{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
 .sound-bank-column{display:flex;flex-direction:column;gap:14px;min-width:0}
 .sound-bank-column>section{padding:14px;border:1px solid var(--ui-field-edge);border-radius:16px;background:var(--ui-setup-field)}
@@ -1035,12 +1031,10 @@
 .app[data-theme] .settings-frame.shared-settings-window .settings-disclosure-body>:not(dialog){
  margin-block:0!important;
 }
-.app[data-theme] .settings-frame.shared-settings-window .settings-block :is(h2,h3),
-.app[data-theme] .settings-frame.shared-settings-window :is(.field-label,.range-slider-heading){
+.app[data-theme] .settings-frame.shared-settings-window .settings-block :is(h2,h3),.app[data-theme] .settings-frame.shared-settings-window :is(.field-label,.range-slider-heading){
  line-height:1.35!important;margin:0!important;
 }
-.app[data-theme] .settings-frame.shared-settings-window .settings :is(.category-picker-trigger,.settings-disclosure>summary),
-.app[data-theme] .settings-frame.shared-settings-window .setup-add-rule{
+.app[data-theme] .settings-frame.shared-settings-window .settings :is(.category-picker-trigger,.settings-disclosure>summary),.app[data-theme] .settings-frame.shared-settings-window .setup-add-rule{
  box-sizing:border-box!important;
  min-height:var(--zg-row-height)!important;
  padding:6px var(--zg-row-inset)!important;
@@ -1245,40 +1239,7 @@ display:flex!important;align-items:center!important;justify-content:center!impor
 .app[data-theme] dialog.material-save-dialog :is(input,select){
  min-height:48px;box-sizing:border-box;width:100%;
 }
-.app.game-active .play-toolbar.shared-toolbar{
- box-sizing:border-box!important;height:86px!important;min-height:86px!important;max-height:none!important;
- padding:14px 22px!important;display:grid!important;align-items:center!important;
-}
-.app.game-active .play-toolbar.shared-toolbar :is(.toolbar-left,.toolbar-centre,.toolbar-right){
- align-self:center!important;align-items:center!important;min-height:0!important;
- padding:0!important;margin:0!important;
-}
-.app.game-active .play-toolbar.shared-toolbar .icon-button{
- display:inline-flex!important;align-items:center!important;justify-content:center!important;
- flex-shrink:0;align-self:center!important;vertical-align:middle!important;
- width:46px!important;height:46px!important;min-height:46px!important;
- padding:7px!important;margin:0!important;
-}
-.app.game-active .play-toolbar.shared-toolbar .garden-icon{
- display:block!important;align-self:center!important;margin:auto!important;
-}
-.app[data-theme] .game-dialog .panel-scroll{
- display:flex;flex-direction:column;align-items:stretch;gap:12px;
- padding:16px!important;
-}
-.app[data-theme] .game-dialog .panel-scroll>*{margin:0!important}
-.app[data-theme] .game-dialog .panel-scroll :is(.primary,.secondary){
- display:flex;justify-content:center;align-items:center;
- width:100%;min-height:52px!important;
-}
 @media(max-width:600px){
- .app.game-active .play-toolbar.shared-toolbar{
-  height:68px!important;min-height:68px!important;padding:12px 18px!important;
- }
- .app.game-active .play-toolbar.shared-toolbar .icon-button{
-  width:38px!important;height:38px!important;min-height:38px!important;
-  padding:6px!important;
- }
  .app[data-theme] .settings-frame.shared-settings-window>.setup-footer{
   min-height:68px!important;padding:8px!important;
  }
@@ -1622,34 +1583,11 @@ display:grid;grid-template-columns:repeat(auto-fill,var(--zg-chip-size));justify
 
 .app[data-theme] .settings-frame.shared-settings-window .card-presentation label.check{margin-block:12px!important}
 
-/* One compact toolbar: artwork side rails sit outside the viewport. */
-.app[data-theme].game-active .play-toolbar.shared-toolbar{
- --toolbar-height:64px;height:var(--toolbar-height)!important;min-height:var(--toolbar-height)!important;
- max-height:var(--toolbar-height)!important;padding:0 16px!important;
- border-image-outset:0 24px!important;
-}
-.app[data-theme].game-active .play-toolbar.shared-toolbar .icon-button{
- width:calc(var(--toolbar-height)*.6)!important;height:calc(var(--toolbar-height)*.6)!important;
- min-height:calc(var(--toolbar-height)*.6)!important;align-self:center!important;
-}
-.app[data-theme].game-active .play-toolbar.shared-toolbar .toolbar-centre{
- flex-direction:column;justify-content:center;gap:2px;
-}
-.toolbar-task{font-size:clamp(12px,1.4vw,20px);line-height:1.15;text-align:center}
+
 .app[data-theme] .icon-button.answer-no{background:#b83e45!important;border-color:#8e2931!important;color:#fff!important;box-shadow:inset 0 2px 2px #ffffff66,0 3px 0 #7d242a!important}
 .app[data-theme] :is(.answer-yes,.answer-no){--answer-size:clamp(80px,11vmin,120px);display:inline-grid!important;place-items:center;min-width:var(--answer-size)!important;min-height:var(--answer-size)!important;width:var(--answer-size)!important;height:var(--answer-size)!important;padding:calc(var(--answer-size)*.22)!important}
 .app[data-theme] :is(.answer-yes,.answer-no) .garden-icon{display:block;width:100%;height:100%;background:currentColor}
-
-.toolbar-task{paint-order:stroke fill;-webkit-text-stroke:2px #fff9e9}
 .app[data-theme] :is(.conveyor-answer,.transformation-actions) .icon-button{margin:0!important}
-
-.app[data-theme].game-active .play-toolbar.shared-toolbar{
- grid-template-columns:auto minmax(90px,1fr) auto auto!important;column-gap:18px!important;
-}
-.app[data-theme].game-active .play-toolbar.shared-toolbar>.toolbar-task{
- justify-self:start;min-width:0;text-align:left;overflow-wrap:anywhere;padding-inline:8px;
-}
-.app[data-theme].game-active .play-toolbar.shared-toolbar .counters{gap:12px!important;flex-wrap:nowrap!important}
 .app[data-theme] .life-controls{flex:none;max-width:100%;padding-inline:6px}
 .app[data-theme] .hearts{display:flex!important;align-items:center;gap:2px!important;padding:3px!important;min-width:0;line-height:1}
 .app[data-theme] .hearts .life-heart-art{
@@ -1660,28 +1598,14 @@ display:grid;grid-template-columns:repeat(auto-fill,var(--zg-chip-size));justify
 .life-heart-art img.heart-half{width:56%;object-position:left center}
 .garden-art-icon{background:none!important;mask:none!important;object-fit:contain}
 @media(max-width:700px){
- .app[data-theme].game-active .play-toolbar.shared-toolbar{grid-template-columns:auto minmax(64px,1fr) auto auto!important;gap:4px!important;padding-inline:8px!important}
- .app[data-theme].game-active .play-toolbar.shared-toolbar>.toolbar-task{font-size:12px;padding-inline:4px}
- .app[data-theme].game-active .play-toolbar.shared-toolbar .counters{gap:4px!important}
  .app[data-theme] .life-controls{padding-inline:2px}
  .app[data-theme] .hearts{gap:1px!important}
  .app[data-theme] .hearts .life-heart-art{width:12px!important;height:20px!important}
 }
 
 /* Header actions share the exact header centre and 60% height in every theme. */
-.app[data-theme].game-active .play-toolbar.shared-toolbar{box-sizing:border-box;align-content:center!important;align-items:center!important;grid-template-rows:minmax(0,1fr);padding-block:0!important}
-.app[data-theme].game-active .play-toolbar.shared-toolbar .icon-button{box-sizing:border-box;min-width:calc(var(--toolbar-height)*.6)!important;max-height:calc(var(--toolbar-height)*.6)!important;padding:6px!important;transform:none!important}
 /* Pauses must never distribute spare height between actions. */
-.app[data-theme] .game-dialog .panel-scroll{height:auto!important;min-height:0!important;justify-content:flex-start!important;align-content:start!important;gap:var(--zg-space-3,12px)!important}
-.app[data-theme] .game-dialog .panel-scroll>button{flex:none;margin:0!important}
 /* Results are bounded by the viewport, including the award above their frame. */
-.app[data-theme] .overlay.result{position:fixed!important;inset:0!important;box-sizing:border-box;min-width:0;padding:80px 16px 24px!important;overflow:auto;z-index:20}
-.app[data-theme] .overlay.result>div:has(.award){display:flex;flex-direction:column;min-width:0;max-width:min(480px,100%);width:100%;max-height:100%!important;overflow:visible!important}
-.app[data-theme] .overlay.result .award{position:relative!important;top:auto!important;left:auto!important;right:auto!important;flex:none;margin:-64px 0 24px!important;line-height:1}
-.app[data-theme] .overlay.result>div>.panel-scroll{min-height:0;max-height:none!important;overflow:auto;flex:0 1 auto;display:flex;flex-direction:column;gap:12px;align-items:stretch;justify-content:flex-start;scrollbar-gutter:auto}
-.app[data-theme] .overlay.result .panel-scroll>*{flex:none;margin:0!important;overflow-wrap:anywhere}
-.app[data-theme] .overlay.result h2{font-size:clamp(22px,4vw,29px)}
-@media(max-height:450px){.app[data-theme] .overlay.result{padding-top:56px!important;padding-bottom:12px!important}.app[data-theme] .overlay.result .award{margin-top:-48px!important;margin-bottom:20px!important}.app[data-theme] .overlay.result .victory-star{width:48px}.app[data-theme] .overlay.result .victory-stars>span:nth-child(2) .victory-star{width:64px}}
 /* Word selection uses the ordinary checkbox skin and common field spacing. */
 .app[data-theme] .word-selection{display:flex;flex-direction:column;gap:16px;min-width:0;align-items:stretch;margin-block:16px}
 .app[data-theme] .word-selection>.settings-search-field{position:static!important;flex:none!important;align-self:flex-start;max-width:100%;width:min(100%,360px)!important;min-height:48px;margin:0!important}
@@ -1699,10 +1623,38 @@ display:grid;grid-template-columns:repeat(auto-fill,var(--zg-chip-size));justify
 .app[data-theme].game-active .sorted-cards{display:flex!important;flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:6px;min-width:0;margin:0!important;width:100%!important}
 .app[data-theme].game-active .sorted-cards .sort-card{--sort-card-size:var(--sort-placed-card-size);width:var(--sort-placed-card-size)!important;height:var(--sort-placed-card-size)!important;flex:0 0 var(--sort-placed-card-size)!important}
 .app[data-theme] .overlay.game-dialog>div>.panel-scroll>button{margin:0!important}
-.app[data-theme] .overlay.result>div>.panel-scroll>button{margin:0!important}
 .app.game-active{max-width:100vw!important;box-sizing:border-box}
-.app[data-theme] .overlay.result{grid-template-rows:minmax(0,1fr);align-items:center}
-.app[data-theme] .overlay.result>div:has(.award){min-height:0!important;max-height:calc(100dvh - 120px)!important}
-.app.game-active:has(.overlay.result) .stage{z-index:5!important}
-@media(max-height:450px){.app[data-theme] .overlay.result>div:has(.award){max-height:calc(100dvh - 88px)!important}.app[data-theme] .overlay.result>div>.panel-scroll>button{min-height:48px!important;padding:10px 16px!important;font-size:16px!important}.app[data-theme] .overlay.result .panel-scroll{gap:10px}.app[data-theme] .overlay.result .panel-scroll p{line-height:1.4}}
 .app[data-theme].game-active .sorting-tray{max-height:max(104px,40%)}
+
+/* Canonical game navigation: pause, audio, hint / task + status / fullscreen. */
+.app[data-theme].game-active .play-toolbar.shared-toolbar{--toolbar-height:64px;display:grid!important;grid-template-columns:auto minmax(0,1fr) auto!important;grid-template-rows:minmax(0,1fr);align-items:center!important;align-content:center!important;height:var(--toolbar-height)!important;min-height:var(--toolbar-height)!important;max-height:var(--toolbar-height)!important;width:100%!important;box-sizing:border-box;gap:12px!important;padding:0 16px!important;border-image-outset:0 24px!important}
+.app[data-theme] .shared-toolbar :is(.toolbar-left,.toolbar-right){display:flex;align-items:center;align-self:center;gap:8px;min-width:0;margin:0}
+.app[data-theme] .shared-toolbar .toolbar-centre{display:flex;flex-direction:column;align-items:center;justify-content:center;align-self:center;gap:2px;min-width:0;text-align:center}
+.app[data-theme] .shared-toolbar .toolbar-task{font-size:clamp(11px,1.3vw,18px);line-height:1.15;min-width:0;max-width:100%;overflow-wrap:anywhere;paint-order:stroke fill;-webkit-text-stroke:2px #fff9e9}
+.app[data-theme] .shared-toolbar .counters{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;min-width:0;max-width:100%;line-height:1.15}
+.app[data-theme].game-active .shared-toolbar .icon-button{box-sizing:border-box;display:inline-flex!important;align-items:center!important;justify-content:center!important;align-self:center!important;flex:none!important;width:calc(var(--toolbar-height)*.6)!important;min-width:calc(var(--toolbar-height)*.6)!important;height:calc(var(--toolbar-height)*.6)!important;min-height:calc(var(--toolbar-height)*.6)!important;max-height:calc(var(--toolbar-height)*.6)!important;padding:6px!important;margin:0!important;transform:none!important}
+.app[data-theme] .shared-toolbar .garden-icon{display:block;margin:auto;width:100%;height:100%}
+.toolbar-hint{position:absolute;top:100%;left:16px;right:16px;padding:12px;background:var(--ui-paper);color:var(--ui-text);border-radius:12px;box-shadow:0 4px 12px #0003}
+@media(max-width:700px){.app[data-theme].game-active .shared-toolbar{gap:4px!important;padding-inline:6px!important}.app[data-theme] .shared-toolbar .toolbar-left{gap:3px}.app[data-theme] .shared-toolbar .toolbar-task{font-size:11px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.app[data-theme] .shared-toolbar .counters{gap:2px;font-size:10px}.app[data-theme] .shared-toolbar .counters>:not(.toolbar-timer):not(.life-controls){display:none}.app[data-theme] .shared-toolbar .toolbar-timer{font-size:10px}.app[data-theme] .shared-toolbar .hearts .life-heart-art{width:8px!important;height:16px!important}}
+/* One icon action row for pauses and final results. */
+.app[data-theme] .overlay.game-dialog .panel-scroll{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;gap:12px;height:auto;min-height:0;padding:16px!important}
+.app[data-theme] .overlay.game-dialog .panel-scroll>*{margin:0!important}
+.app[data-theme] .dialog-actions{display:flex;align-items:center;justify-content:center;gap:16px;padding-block:4px}
+.app[data-theme] .dialog-actions>:is(button,a){box-sizing:border-box;display:inline-flex!important;align-items:center;justify-content:center;flex:none;width:52px!important;min-width:52px!important;max-width:52px!important;height:52px!important;min-height:52px!important;padding:12px!important;margin:0!important;transform:none!important}
+.app[data-theme] .dialog-actions .garden-icon{width:100%;height:100%}
+.app[data-theme] .overlay.result{position:fixed!important;inset:0!important;display:grid;grid-template-rows:minmax(0,1fr);align-items:center;box-sizing:border-box;min-width:0;padding:80px 16px 24px!important;overflow:auto;z-index:20}
+.app[data-theme] .overlay.result>div:has(.award){display:flex;flex-direction:column;min-width:0;min-height:0!important;max-width:min(480px,100%);width:100%;max-height:calc(100dvh - 120px)!important;overflow:visible!important}
+.app[data-theme] .overlay.result .award{position:relative!important;top:auto!important;left:auto!important;right:auto!important;flex:none;margin:-64px 0 12px!important;line-height:1}
+.app[data-theme] .overlay.result>div>.panel-scroll{min-height:0;max-height:none!important;overflow:auto;flex:0 1 auto;display:flex;flex-direction:column;gap:12px;align-items:stretch;justify-content:flex-start;scrollbar-gutter:auto}
+.app[data-theme] .overlay.result .panel-scroll>*{flex:none;margin:0!important;overflow-wrap:anywhere}
+.app[data-theme] .overlay.result h2{font-size:clamp(22px,4vw,29px)}
+.app.game-active:has(.overlay.result) .stage{z-index:5!important}
+@media(max-height:450px){.app[data-theme] .overlay.result{padding-top:56px!important;padding-bottom:12px!important}.app[data-theme] .overlay.result>div:has(.award){max-height:calc(100dvh - 88px)!important}.app[data-theme] .overlay.result .award{margin-top:-48px!important;margin-bottom:10px!important}.app[data-theme] .overlay.result .victory-star{width:48px}.app[data-theme] .overlay.result .victory-stars>span:nth-child(2) .victory-star{width:64px}}
+.app[data-theme] .word-selection-dialog>.panel-scroll{display:flex;flex-direction:column;gap:12px;padding-bottom:0!important}
+.app[data-theme] .word-selection-dialog>.panel-scroll>:is(h2,p){margin:0!important}
+.app[data-theme] .word-selection-dialog .sound-picker-actions{bottom:0!important;margin-bottom:0!important}
+.app[data-theme] .round-plan-actions{display:flex;flex-direction:column;gap:12px}
+.app[data-theme] .word-selection-dialog{width:min(900px,calc(100vw - 32px))!important;max-width:calc(100vw - 32px)!important}
+.app[data-theme] .word-selection-dialog>.panel-scroll>h2{font-size:20px!important;text-align:center}
+.app[data-theme] .word-selection-dialog>.panel-scroll>p{font-size:14px!important;line-height:1.35}
+.app[data-theme] .word-selection-dialog .word-selection{margin-block:4px 0}

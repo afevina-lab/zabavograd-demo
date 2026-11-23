@@ -129,9 +129,7 @@
  background:var(--zg-toolbar-image) center / 100% 100% no-repeat!important;
  background-color:var(--zg-stage-fill)!important;
 }
-.app[data-theme] .play-toolbar .icon-button{
- display:inline-flex;align-items:center;justify-content:center;
- flex:none;text-decoration:none;
+.app[data-theme] .play-toolbar .icon-button{text-decoration:none;
 }
 .app[data-theme] .play-toolbar .zg-caption-toggle[aria-pressed="true"]{
  border-image-source:none!important;
@@ -143,7 +141,9 @@
 .app[data-theme] .settings-frame,
 
 .app[data-theme] .modal,
+
 .app[data-theme] .modal.gui-panel,
+
 .app[data-theme] .overlay>div{
  color:var(--ui-text)!important;
  background:var(--ui-paper)!important;
@@ -158,31 +158,20 @@
  border:1px solid color-mix(in srgb,var(--ui-outline) 55%,var(--ui-paper))!important;
  color:var(--ui-text)!important;
 }
-.app[data-theme] .settings-block h3,.app[data-theme] .settings h2,
-.app[data-theme] .overlay h2,.app[data-theme] .modal h2,
-.app[data-theme] .modal.gui-panel h2,.app[data-theme] .welcome h2{
+.app[data-theme] .settings-block h3,.app[data-theme] .settings h2,.app[data-theme] .overlay h2,.app[data-theme] .modal h2,.app[data-theme] .modal.gui-panel h2,.app[data-theme] .welcome h2{
  color:var(--ui-deep)!important;text-shadow:none!important;
 }
-.app[data-theme] .overlay p,.app[data-theme] .gui-panel p,
-.app[data-theme] .modal p,.app[data-theme] .modal ol,
-.app[data-theme] .settings .material p,
-.app[data-theme] .settings .filter-details summary{
+.app[data-theme] .overlay p,.app[data-theme] .gui-panel p,.app[data-theme] .modal p,.app[data-theme] .modal ol,.app[data-theme] .settings .material p,.app[data-theme] .settings .filter-details summary{
  color:var(--ui-text)!important;
 }
-.app[data-theme] .overlay .link,.app[data-theme] .modal .link,
-.app[data-theme] .gui-panel .link{color:var(--ui-deep)!important}
+.app[data-theme] .overlay .link,.app[data-theme] .modal .link,.app[data-theme] .gui-panel .link{color:var(--ui-deep)!important}
 .app[data-theme] .overlay .eyebrow{color:var(--ui-deep)!important}
 .app[data-theme] .welcome h2{color:var(--zg-stage-text)!important}
 .app[data-theme] .welcome>p,.app[data-theme] .welcome .eyebrow{
  color:var(--zg-stage-text)!important;
 }
-.app[data-theme] .overlay .award{position:absolute;top:-34px;left:0;right:0;z-index:2;overflow:visible}
 .app[data-theme] .award,.app[data-theme] .victory-stars{overflow:visible}
 .app[data-theme] .modal-backdrop{background:#14233883!important}
-@media(max-width:600px){
- .app[data-theme] .play-toolbar .zg-home,.app[data-theme] .play-toolbar .zg-caption-toggle{min-width:32px!important;width:32px!important}
- .app[data-theme] .overlay .award{top:-24px}
-}
 
 /* Approved 2172×724 watercolor atlas: filled / glowing / empty, three 724px cells.
    Use the source artwork directly, never recolor a UI glyph as a reward. */
@@ -249,10 +238,8 @@
  background:none!important;border:0!important;
  border-image:var(--zg-toolbar-image) 30 fill / 10px / 0 stretch!important;
  box-shadow:none!important;outline:none!important;
- padding:14px 22px!important;min-height:86px!important;
 }
-.app[data-theme].game-active :is(.conveyor-stage,.matching-stage) :is(.conveyor-card,.matching-card),
-.app[data-theme] :is(.conveyor-card,.matching-card){
+.app[data-theme].game-active :is(.conveyor-stage,.matching-stage) :is(.conveyor-card,.matching-card),.app[data-theme] :is(.conveyor-card,.matching-card){
  background:none!important;border:18px solid transparent!important;
  border-image:var(--zg-card-front-image) 210 fill / 38px / 0 stretch!important;
  box-shadow:none!important;border-radius:0!important;
@@ -299,6 +286,3 @@
 .app[data-theme] .matching-group-caption{min-width:0;max-width:100%;overflow:hidden}
 .app[data-theme] .matching-group-caption .matching-slots{min-width:0;box-sizing:border-box;padding:6px}
 .app[data-theme] .matching-group-caption .matching-slots>*{max-width:100%!important;min-width:0!important;box-sizing:border-box}
-@media(max-width:600px),(max-height:500px){
- .app[data-theme][data-toolbar-art="illustrated"] .play-toolbar{padding:12px 18px!important;min-height:68px!important}
-}

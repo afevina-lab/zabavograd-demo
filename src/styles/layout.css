@@ -52,7 +52,7 @@ select{display:block;width:100%;padding:11px 26px 11px 12px;border:1px solid #dd
 .small-label{display:block;font-size:10px;margin:14px 0 7px;color:#65705f}
 .small-label select{margin-top:6px}
 .check{display:flex;gap:8px;align-items:flex-start;font-size:11px;line-height:1.5;margin:14px 0;cursor:pointer}
-.check input,.types input,.word-picker input{accent-color:#56775b;width:15px;height:15px;margin:1px 0 0;flex-shrink:0}
+.check input,.types input{accent-color:#56775b;width:15px;height:15px;margin:1px 0 0;flex-shrink:0}
 .check small{display:block;color:#8c9183;font-size:9px;margin-top:4px}
 .types{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;font-size:11px}
 .types label{display:flex;gap:3px}
@@ -76,7 +76,7 @@ select{display:block;width:100%;padding:11px 26px 11px 12px;border:1px solid #dd
 .start{width:100%;margin-top:22px}
 .footnote{font-size:9px;line-height:1.7;color:#989c8d;margin-bottom:0}
 .play-area{border:1px solid #d9dfcf;border-radius:22px;overflow:hidden;background:#e8eddf;position:sticky;top:18px;box-shadow:0 5px 30px #344a2b05}
-.play-toolbar{height:65px;padding:0 25px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d4ddc9}
+.play-toolbar{border-bottom:1px solid #d4ddc9}
 .lesson-tag{display:flex;gap:7px;align-items:center;font-size:10px;color:#62775b}
 .lesson-tag i{width:6px;height:6px;border-radius:100%;background:#88a476}
 .counters{display:flex;align-items:center;gap:20px;font-size:10px;color:#7f8976}
@@ -126,9 +126,6 @@ footer{padding:23px 0 5px;display:flex;justify-content:space-between;font-size:9
 .modal-title button{border:0;background:#f0f1e7;border-radius:50%;width:32px;height:32px;font-size:23px}
 .modal p,.modal ol{font-size:12px;line-height:1.9;color:#7b8571}
 .modal>input{width:100%;border:1px solid #ccd6c1;border-radius:9px;padding:12px;font-size:13px;margin:8px 0 16px}
-.word-picker{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-height:330px;overflow:auto;padding:3px}
-.word-picker label{font-size:12px;display:flex;align-items:center;gap:7px;border:1px solid #e2e7d8;border-radius:6px;padding:9px;cursor:pointer}
-.word-picker small{margin-left:auto;font-size:9px;color:#a2a88f}
 .modal-footer{display:flex;align-items:center;justify-content:space-between;margin-top:22px;font-size:12px}
 .help li{padding:8px 0}
 .help{max-width:490px}
@@ -138,7 +135,6 @@ main{padding:25px}
 .settings{padding:18px}
 .stage{padding:18px}
 .counters{gap:10px}
-.play-toolbar{padding:0 15px}
 .card-back small{display:none}
 .toplinks>span{display:none}
 .stage-footer{padding:15px 12px}
@@ -158,7 +154,6 @@ h1{font-size:44px}
 .stage{padding:18px}
 .card-front{font-size:13px}
 .card-back>span{font-size:26px}
-.word-picker{grid-template-columns:repeat(2,1fr)}
 .modal-backdrop{padding:12px}
 .sample-cards{transform:scale(.9);margin-bottom:14px}
 .stage-footer{font-size:8px}
@@ -207,7 +202,6 @@ footer span{display:none}
 .card-back{border-width:2px}
 .card-back:after{inset:4px}
 .heart{font-size:16px}
-.play-toolbar{padding:0 10px}
 .counters{gap:7px}
 .lesson-tag{font-size:8px}
 .settings-shade{padding:10px}
@@ -367,7 +361,6 @@ h1,h2,h3,.card-back{font-family:Londrina, sans-serif}
 .overlay>div,.modal.gui-panel{position:relative;width:min(100%,480px);max-width:480px;background:transparent none center/100% 100% no-repeat;color:#fff5e8;border:0;box-shadow:none;border-radius:0;text-align:center}
 .overlay p,.gui-panel p{color:#d9d9ed}
 .overlay h2,.gui-panel h2{color:#fff5e8;margin-top:12px}
-.overlay .award{position:absolute;top:-27px;left:0;right:0;margin:0;z-index:1}
 .overlay .primary,.gui-panel .primary{max-width:100%;min-width:200px;display:block;margin:10px auto}
 .gui-panel .primary{font-size:16px}
 .overlay .eyebrow{color:#e9c96c}
@@ -381,7 +374,6 @@ h1,h2,h3,.card-back{font-family:Londrina, sans-serif}
 .settings .theme-section{clear:both}
 .settings>p[role=status]:empty{display:none}
 @media(max-width:600px){
-.play-toolbar{gap:6px;flex-wrap:wrap}
 .counters{gap:8px;flex-wrap:wrap}
 .preview-banner{gap:4px;font-size:14px}
 
@@ -456,7 +448,6 @@ h1,h2,h3,.card-back{font-family:Londrina, sans-serif}
 .sorting-bins{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 .sort-bin{padding:7px}
 .sorted-cards .sort-card{width:65px;height:75px}
-.play-toolbar{flex-wrap:wrap;height:auto;min-height:75px}
 
 }
 
@@ -491,7 +482,6 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .app.game-active .workspace{flex:1;min-height:0;width:100%}
 .app.game-active .play-area{display:flex;flex-direction:column;height:100%;min-height:0!important;max-width:100%;overflow:hidden}
 .app.game-active .stage,.app.game-active:fullscreen .stage{flex:1;height:auto!important;min-height:0!important;overflow:hidden!important;overscroll-behavior:contain;scrollbar-width:none!important;scrollbar-gutter:auto!important}
-.app.game-active .play-toolbar,.app.game-active .stage-footer,.app.game-active .time-track{flex-shrink:0}
 .app.game-active .game-actions{flex-wrap:wrap}
 .app.game-active .stage>.overlay{position:fixed;inset:0;z-index:9;padding:24px;overflow:auto}
 .app.game-active .sorting-content{max-width:1200px;margin:auto}
@@ -563,13 +553,11 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .app.game-active>main,.app.game-active:fullscreen>main{width:100%!important;max-width:none!important;padding:0!important;margin:0!important;height:100%!important;display:flex;flex-direction:column}
 .app.game-active .workspace{margin:0!important;width:100%!important;max-width:none!important;min-height:0!important;flex:1}
 .app.game-active .play-area{width:100%!important;min-height:0!important;max-height:100%!important;flex:1;display:flex;flex-direction:column}
-.app.game-active .play-toolbar{height:clamp(60px,9dvh,88px)!important;min-height:0!important;flex:0 0 auto;display:flex;flex-wrap:nowrap!important;padding:8px clamp(8px,2vw,28px)!important}
 .app.game-active .stage{height:auto!important;flex:1 1 auto;min-height:0!important;overflow:hidden!important;scrollbar-width:none!important;scrollbar-gutter:auto!important}
 .app.game-active .stage-footer{display:none!important}
 .app.game-active .cards{max-height:100%!important}
 
 @media(max-width:760px){
-.app.game-active .play-toolbar{gap:7px!important;padding:6px!important}
 .app .icon-button{min-width:38px;min-height:38px;padding:7px!important}
 .app.game-active .counters{font-size:clamp(11px,2vw,15px)}
 .app.game-active .lesson-tag{max-width:22vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -587,9 +575,7 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .app.game-active .stage,.app.game-active:fullscreen .stage{background-clip:border-box!important}
 .app.game-active .play-area{margin:0!important;border:0!important;outline:0!important;border-radius:0!important}
 .app.game-active .workspace{gap:0!important}
-.app.game-active .play-toolbar{min-width:0!important;width:100%!important}
 @media(max-width:600px){
-.app.game-active .play-toolbar{height:56px!important;padding:4px 6px!important;gap:4px!important}
 .app.game-active .game-actions{flex-wrap:nowrap!important;gap:4px!important}
 .app.game-active .icon-button{min-width:34px!important;width:34px!important;min-height:34px!important;height:34px!important;padding:5px!important}
 .app.game-active .icon-button .garden-icon{width:19px!important;height:19px!important}
@@ -659,11 +645,6 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .conveyor-answer button{min-width:100px;font-size:32px;margin:0 8px}
 
 /* One toolbar geometry for every game. */
-.toolbar-left,.toolbar-right{display:flex;align-items:center;gap:8px;min-width:0}
-.toolbar-right{justify-content:flex-end}
-.toolbar-centre{display:flex;align-items:center;justify-content:center;gap:12px;min-width:0;text-align:center}
-.toolbar-centre>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.toolbar-left .zg-caption-toggle:disabled{display:none}
 .quantity-slider>label{display:flex!important;justify-content:space-between;align-items:center}
 .quantity-slider input[type=range]{width:100%;height:30px;margin:0;padding:0;accent-color:var(--ui-accent)}
 .sound-workshop-body{display:grid;grid-template-columns:minmax(220px,1fr) minmax(260px,1.15fr);gap:20px;align-items:start}
@@ -712,7 +693,6 @@ html,body,#root{min-width:0;width:100%;max-width:100%;overflow-x:clip}
 .transformation-setup>p{white-space:normal;overflow-wrap:anywhere}.settings .text-display-setting{margin:12px 0}.settings .panel-heading{display:flex;align-items:center;gap:12px}.panel-heading h2{flex:1}
 @media(max-width:600px){.app .settings-frame{padding:12px!important}.task-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.category-grid{grid-template-columns:1fr}.sound-bank{grid-template-columns:1fr!important}}
 .choice-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:8px 0 14px}.choice-tiles button{min-width:0;white-space:normal;min-height:52px;padding:10px!important}.material-head h2{font-size:20px;margin:0}.material-head>div{display:flex;gap:8px;flex-shrink:0}.category-picker{width:min(980px,94vw)!important;box-sizing:border-box}.category-picker>.sound-picker-actions{position:sticky;bottom:0;padding:12px 0;background:var(--ui-paper)}
-@media(min-width:900px){}
 /* Native compatibility controls must stay hidden even when themed form rules set display. */
 .app [hidden]{display:none!important}
 body:has(.settings-shade){overflow:hidden}
@@ -739,12 +719,8 @@ html:has(.settings-shade){overflow:hidden}
 .shared-settings-window .unified-settings-content>p:first-child{margin:0 0 16px;line-height:1.5}
 .shared-settings-window .settings-block h3{font-size:21px;margin:0 0 18px}
 .shared-settings-window .task-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.shared-settings-window .choice-tiles{gap:8px}.shared-settings-window label{line-height:1.45}
-@media(min-width:900px){}
 @media(max-width:600px){.shared-settings-window .task-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* Awards sit above the result frame instead of inside its scroll clipping box. */
-.app .overlay:has(.award){padding-top:76px;padding-bottom:32px}
-.app .overlay>div:has(.award){overflow:visible;max-height:calc(100dvh - 180px)}
-.app .overlay .award{top:-46px;z-index:2;pointer-events:none}
 
 /* The shell owns height; its scroll area consumes only the remaining space. */
 .app .settings-shade .settings-frame.shared-settings-window{display:flex;flex-direction:column;height:auto;max-height:calc(100dvh - 32px)!important;min-height:0;padding:calc(var(--ui-frame-inset) + 8px)!important;width:min(1100px,96vw)!important;box-sizing:border-box;overflow:hidden}
@@ -755,7 +731,6 @@ html:has(.settings-shade){overflow:hidden}
 .shared-settings-window .settings-block{min-width:0;box-sizing:border-box}
 .app .transformation-scene{container-type:size;min-width:0;width:100%;overflow:hidden}
 .app .transformation-chamber{width:min(100cqw,133cqh);height:auto;max-height:none;aspect-ratio:4/3;min-width:0;justify-self:center}
-@media(min-width:900px){}
 
 .transformation-content{container-type:inline-size;min-width:0}.transformation-word{max-width:100%}
 
@@ -930,58 +905,8 @@ html:has(.settings-shade){overflow:hidden}
 .app.game-active .matching-stage .matching-bank-heading:empty{display:none}
 .app.game-active .matching-stage .matching-bank-heading{min-height:0!important;margin:0 0 4px}
 .app.game-active .matching-stage .matching-bank-pages{margin-left:auto}
-/* Keep navigation arrangement, align each control vertically inside the top bar. */
-.app.game-active .play-toolbar.shared-toolbar{
- display:grid!important;
- grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
- --zg-toolbar-layout-gap:12px;
- gap:var(--zg-toolbar-layout-gap)!important;
- align-items:center!important;
- min-height:66px!important;
- padding-block:6px!important;
-}
-.app.game-active .play-toolbar.shared-toolbar .toolbar-left,
-.app.game-active .play-toolbar.shared-toolbar .toolbar-centre,
-.app.game-active .play-toolbar.shared-toolbar .toolbar-right{
- align-self:center!important;
- display:flex;
- align-items:center!important;
- margin-top:0!important;
- margin-bottom:0!important;
-}
-.app.game-active .play-toolbar.shared-toolbar .toolbar-left{justify-content:flex-start;gap:9px}
-.app.game-active .play-toolbar.shared-toolbar .toolbar-centre{justify-content:center;min-width:0}
-.app.game-active .play-toolbar.shared-toolbar .toolbar-centre>.counters{
- display:flex;flex:0 1 auto;flex-direction:row;flex-wrap:nowrap;
- align-items:center;justify-content:center;gap:var(--zg-space-2,8px);
- min-width:0;max-width:100%;
-}
-.app.game-active .play-toolbar.shared-toolbar .toolbar-right{justify-content:flex-end}
-.app.game-active .play-toolbar.shared-toolbar .icon-button{vertical-align:middle;margin-block:0!important;flex:0 0 auto}
-/* Compact touch play: pause + fullscreen + optional timer/lives, never scroll the toolbar. */
-@media (pointer:coarse), (max-width:650px){
- .app.game-active .play-toolbar.shared-toolbar{
-  --zg-toolbar-layout-gap:var(--zg-space-2,8px);
-  grid-template-columns:max-content minmax(0,1fr) max-content;
- }
- .app.game-active .play-toolbar.shared-toolbar .toolbar-left{
-  gap:0;
-  min-width:0;
-  overflow:visible!important;
-  flex-wrap:nowrap!important;
- }
- .app.game-active .play-toolbar.shared-toolbar .toolbar-left>:not(.toolbar-mobile-pause){display:none!important}
- .app.game-active .play-toolbar.shared-toolbar .toolbar-centre{min-width:0;max-width:none;width:100%;overflow:hidden}
- .app.game-active .play-toolbar.shared-toolbar .toolbar-centre .counters{
-  display:flex!important;flex-direction:row!important;min-width:0;max-width:100%;width:100%;
-  justify-content:center!important;align-items:center;gap:var(--zg-space-2,8px)!important;
-  flex-wrap:nowrap!important;overflow:hidden;white-space:nowrap;
- }
- .app.game-active .play-toolbar.shared-toolbar .toolbar-centre .counters>:not(.toolbar-timer):not(.life-controls){display:none!important}
- .app.game-active .play-toolbar.shared-toolbar .toolbar-centre .counters>.toolbar-timer{display:inline-flex;min-width:0;flex:none}
- .app.game-active .play-toolbar.shared-toolbar .toolbar-centre .counters>.life-controls{display:inline-flex;min-width:0;flex:0 1 auto}
- .app.game-active .play-toolbar.shared-toolbar .toolbar-right{min-width:0}
-}
+
+
 /* Preview controls cannot overhang the content area. */
 .app .shared-settings-window .material-head{
  position:relative!important;
@@ -1024,7 +949,6 @@ html:has(.settings-shade){overflow:hidden}
 .app .shared-settings-window .setup-column>.settings-block{margin:0!important}
 
 @media(max-width:600px){
- .app.game-active .play-toolbar.shared-toolbar{min-height:54px!important}
  .app .shared-settings-window .math-settings .reading-kinds{gap:4px 8px!important}
 }
 

@@ -8,7 +8,7 @@ import {THEMES,THEME_IDS,type ThemeId} from './design-system/themes.ts';
 import {SceneLayers} from './design-system/SceneLayers.tsx';
 import {MOTION} from './design-system/motion.ts';
 const iconFiles:Record<string,string> = {
- Settings:'settings.svg',Save:'save.svg',Trash:'trash.svg',Pause:'pause.svg',RightArrow1:'arrow-right.svg',
+ Play:'play.svg',Settings:'settings.svg',Save:'save.svg',Trash:'trash.svg',Pause:'pause.svg',RightArrow1:'arrow-right.svg',
  Home1:'house.svg',Question:'question-mark.svg',Star:'star.svg',
  X:'cross.svg',Check:'tick.svg',Sight:'expand.svg',Return1:'refresh.svg',
  Sound:'volume.svg',SoundOff:'mute.svg',Heart:'heart.svg'

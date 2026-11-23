@@ -46,14 +46,10 @@ test('Game stage never restores legacy scrolling or discarded card layouts',()=>
 });
 
 
-test('Only canonical shared toolbar grid is defined',()=>{
- const css=readFileSync('src/styles/layout.css','utf8');
- const grids=[...css.matchAll(/\.app\.game-active \.play-toolbar\.shared-toolbar\s*\{([^}]*)\}/g)].filter(match=>match[1].includes('grid-template-columns:'));
- assert.equal(grids.length,2,'shared toolbar must define one desktop grid and one compact touch grid');
- assert.match(grids[0][1],/grid-template-columns:\s*minmax\(0,1fr\) auto minmax\(0,1fr\)/);
- assert.match(grids[1][1],/grid-template-columns:\s*max-content minmax\(0,1fr\) max-content/);
- assert.doesNotMatch(css,/\.app\.game-active \.play-toolbar\s*\{gap:12px;flex-wrap:wrap/);
- assert.doesNotMatch(css,/\.quantity-slider>div\s*\{\s*gap:5px;grid-template-columns:/);
+test('Shared toolbar geometry has one owner',()=>{
+ const layout=readFileSync('src/styles/layout.css','utf8'),controls=readFileSync('src/design-system/controls.css','utf8');
+ assert.doesNotMatch(layout,/shared-toolbar/);
+ assert.equal([...controls.matchAll(/shared-toolbar\{[^}]*grid-template-columns:/g)].length,1);
 });
 
 
@@ -104,8 +100,6 @@ test('Modal frames take scrolling and spacing from the canonical control rule',(
  const inner=controls.match(/\.app\[data-theme\] :is\(\.modal,dialog,\.overlay>div\)>\.panel-scroll\{([^}]*)\}/)?.[1]||'';
  assert.match(inner,/overflow:auto/);
  assert.match(inner,/overscroll-behavior:contain/);
- assert.match(controls,/\.app\[data-theme\] \.overlay>div:has\(\.award\)\{overflow:visible!important\}/);
- assert.match(controls,/@media\(max-height:550px\)\{\.app \.overlay\{padding:12px!important\}/);
 });
 
 
@@ -137,7 +131,7 @@ test('Shared material actions use the design-system button variants',()=>{
  const theme=readFileSync('src/GameUI.tsx','utf8');
  assert.match(memory,/<button type="button" className="icon-button" title="Перемешать состав"/);
  assert.match(memory,/<button type="button" className="icon-button" title="Выбрать слова вручную"/);
- assert.match(picker,/<button type="button" className="secondary" onClick={close}>Отмена<\/button>/);
+ assert.match(picker,/<button type="button" className="secondary" onClick={onCancel}>Отмена<\/button>/);
  assert.match(material,/<SetupAddButton onClick=\{\(\)=>setL\(/);
  assert.match(theme,/<button type="button" key=\{id\} onClick=\{\(\)=>setTheme\(id\)\}/);
 });
@@ -217,28 +211,17 @@ test('Shared settings use their final heading and label rhythm without shadowed 
 });
 
 
-test('Toolbar icon sizes come from one responsive token contract',()=>{
+test('Header navigation uses the same relative size at every width',()=>{
  const css=readFileSync('src/design-system/controls.css','utf8');
- const toolbar=readFileSync('src/GameToolbar.tsx','utf8');
- assert.match(css,/\.app\.game-active \.play-toolbar\{[^}]*--zg-toolbar-icon-width:40px;--zg-toolbar-icon-height:40px;--zg-toolbar-icon-min-height:36px;--zg-toolbar-icon-padding:6px/);
- assert.match(css,/\.app\.game-active \.play-toolbar \.icon-button\{[^}]*width:var\(--zg-toolbar-icon-width\)!important/);
- assert.match(css,/\.app\.game-active \.play-toolbar\{--zg-toolbar-icon-width:32px;--zg-toolbar-icon-height:34px;--zg-toolbar-icon-min-height:32px;--zg-toolbar-icon-padding:4px\}/);
- assert.equal([...css.matchAll(/\.app\.game-active \.play-toolbar \.icon-button\{/g)].length,1);
- assert.match(toolbar,/<button type="button" className="icon-button toolbar-mobile-fullscreen" aria-label="Полный экран"/);
+ assert.doesNotMatch(css,/--zg-toolbar-icon-width/);
+ assert.match(css,/height:calc\(var\(--toolbar-height\)\*\.6\)/);
 });
 
 
-test('Compact touch toolbar has no scrolling and only essential controls',()=>{
- const css=readFileSync('src/styles/layout.css','utf8');
- const toolbar=readFileSync('src/GameToolbar.tsx','utf8');
- assert.match(css,/@media \(pointer:coarse\), \(max-width:650px\)/);
- assert.match(css,/grid-template-columns:max-content minmax\(0,1fr\) max-content/);
- assert.match(css,/\.toolbar-left\{[^}]*overflow:visible!important/);
- assert.match(css,/\.toolbar-left>:not\(\.toolbar-mobile-pause\)\{display:none!important\}/);
- assert.match(css,/\.counters>:not\(\.toolbar-timer\):not\(\.life-controls\)\{display:none!important\}/);
- assert.doesNotMatch(css,/\.toolbar-left\{[^}]*overflow-x:auto/);
- assert.match(toolbar,/toolbar-mobile-pause/);
- assert.match(toolbar,/toolbar-mobile-fullscreen/);
+test('Navigation is never hidden by the obsolete compact-only toolbar rule',()=>{
+ const css=readFileSync('src/styles/layout.css','utf8')+readFileSync('src/design-system/controls.css','utf8');
+ assert.doesNotMatch(css,/toolbar-mobile-pause|toolbar-mobile-fullscreen/);
+ assert.doesNotMatch(css,/toolbar-left>:not/);
 });
 
 test('Every game requests touch fullscreen directly from Start action',()=>{
@@ -259,18 +242,16 @@ test('Every game requests touch fullscreen directly from Start action',()=>{
 });
 
 
-test('All game counters use one centered desktop row and no obsolete mobile column',()=>{
- const css=readFileSync('src/styles/layout.css','utf8');
- assert.match(css,/\.app\.game-active \.play-toolbar\.shared-toolbar \.toolbar-centre>\.counters\{[^}]*flex:0 1 auto;flex-direction:row;flex-wrap:nowrap/);
- assert.match(css,/\.app\.game-active \.play-toolbar\.shared-toolbar \.toolbar-centre>\.counters\{[^}]*justify-content:center/);
- assert.doesNotMatch(css,/\.toolbar-centre \.counters\{flex-direction:column/);
+test('Round controls and dialogs are shared across games',()=>{
+ for(const name of ['main','Sorting','Matching','Conveyor','Transformations'])assert.match(readFileSync('src/'+name+'.tsx','utf8'),/useRoundPlan/);
+ const dialog=readFileSync('src/design-system/GameDialog.tsx','utf8');assert.match(dialog,/DialogActions/);assert.match(dialog,/name=\{onContinue\?'Play':'Return1'\}/);
 });
 
 test('Chromium smoke covers compact and desktop counters in all five games',()=>{
  const script=readFileSync('scripts/verify-dialogs-browser.mjs','utf8');
  assert.match(script,/Emulation\.setTouchEmulationEnabled/);
  assert.match(script,/for\(const game of \['memory','sorting','matching','conveyor','transformations'\]\)/);
- assert.match(script,/Compact toolbar must show only pause/);
+ assert.match(script,/Shared toolbar must keep three actions/);
  assert.match(script,/Desktop counter contract failed/);
  assert.match(script,/Compact timed toolbar geometry failed/);
  assert.match(script,/game\+'-toolbar-timed-844'/);
