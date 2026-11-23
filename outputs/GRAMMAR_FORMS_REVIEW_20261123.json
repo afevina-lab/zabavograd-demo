@@ -1,0 +1,248 @@
+{
+  "schema": "grammar_forms_expansion_report_v1",
+  "source": "pymorphy3",
+  "status": "review_only",
+  "usable_for_generation": false,
+  "statistics": {
+    "additional_form_keys": 6382,
+    "already_complete_or_no_inflections": 19,
+    "enriched_entries": 1344,
+    "forms_ADJF": 876,
+    "forms_INFN": 2399,
+    "forms_NOUN": 3098,
+    "forms_VERB": 9,
+    "protected_or_no_proposal": 617
+  },
+  "issues": [],
+  "examples": [
+    {
+      "id": "ru-r-add-d0b4d180d183d0b7d18cd18f",
+      "lemma": "друг",
+      "added": {
+        "datv_plur": "друзьям",
+        "ablt_plur": "друзьями",
+        "loct_plur": "друзьях"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0001",
+      "lemma": "вечер",
+      "added": {
+        "datv_plur": "вечерам",
+        "ablt_plur": "вечерами",
+        "loct_plur": "вечерах"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0002",
+      "lemma": "день",
+      "added": {
+        "datv_plur": "дням",
+        "ablt_plur": "днями",
+        "loct_plur": "днях",
+        "loct2_sing": "дню"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0003",
+      "lemma": "ночь",
+      "added": {
+        "datv_plur": "ночам",
+        "ablt_plur": "ночами",
+        "loct_plur": "ночах",
+        "loct2_sing": "ночи"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0007",
+      "lemma": "праздник",
+      "added": {
+        "datv_plur": "праздникам",
+        "ablt_plur": "праздниками",
+        "loct_plur": "праздниках"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0008",
+      "lemma": "прогулка",
+      "added": {
+        "datv_plur": "прогулкам",
+        "ablt_plur": "прогулками",
+        "loct_plur": "прогулках"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0009",
+      "lemma": "гроза",
+      "added": {
+        "datv_plur": "грозам",
+        "ablt_plur": "грозами",
+        "loct_plur": "грозах"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0010",
+      "lemma": "сугроб",
+      "added": {
+        "datv_plur": "сугробам",
+        "ablt_plur": "сугробами",
+        "loct_plur": "сугробах"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0013",
+      "lemma": "берлога",
+      "added": {
+        "datv_plur": "берлогам",
+        "ablt_plur": "берлогами",
+        "loct_plur": "берлогах"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0014",
+      "lemma": "крона",
+      "added": {
+        "datv_plur": "кронам",
+        "ablt_plur": "кронами",
+        "loct_plur": "кронах"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0015",
+      "lemma": "родник",
+      "added": {
+        "datv_plur": "родникам",
+        "ablt_plur": "родниками",
+        "loct_plur": "родниках"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0016",
+      "lemma": "крокодил",
+      "added": {
+        "datv_plur": "крокодилам",
+        "ablt_plur": "крокодилами",
+        "loct_plur": "крокодилах"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0017",
+      "lemma": "гепард",
+      "added": {
+        "datv_plur": "гепардам",
+        "ablt_plur": "гепардами",
+        "loct_plur": "гепардах"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0018",
+      "lemma": "леопард",
+      "added": {
+        "datv_plur": "леопардам",
+        "ablt_plur": "леопардами",
+        "loct_plur": "леопардах"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0019",
+      "lemma": "барс",
+      "added": {
+        "datv_plur": "барсам",
+        "ablt_plur": "барсами",
+        "loct_plur": "барсах"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0020",
+      "lemma": "бурундук",
+      "added": {
+        "datv_plur": "бурундукам",
+        "ablt_plur": "бурундуками",
+        "loct_plur": "бурундуках"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0021",
+      "lemma": "коршун",
+      "added": {
+        "datv_plur": "коршунам",
+        "ablt_plur": "коршунами",
+        "loct_plur": "коршунах"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0022",
+      "lemma": "рог",
+      "added": {
+        "datv_plur": "рогам",
+        "ablt_plur": "рогами",
+        "loct_plur": "рогах",
+        "loct2_sing": "рогу"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0023",
+      "lemma": "крыло",
+      "added": {
+        "datv_plur": "крыльям",
+        "ablt_plur": "крыльями",
+        "loct_plur": "крыльях"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0024",
+      "lemma": "баранка",
+      "added": {
+        "datv_plur": "баранкам",
+        "ablt_plur": "баранками",
+        "loct_plur": "баранках"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0025",
+      "lemma": "сырник",
+      "added": {
+        "datv_plur": "сырникам",
+        "ablt_plur": "сырниками",
+        "loct_plur": "сырниках"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0026",
+      "lemma": "морс",
+      "added": {
+        "datv_plur": "морсам",
+        "ablt_plur": "морсами",
+        "loct_plur": "морсах",
+        "gent2_sing": "морсу"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0027",
+      "lemma": "бутерброд",
+      "added": {
+        "datv_plur": "бутербродам",
+        "ablt_plur": "бутербродами",
+        "loct_plur": "бутербродах"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0028",
+      "lemma": "крупа",
+      "added": {
+        "datv_plur": "крупам",
+        "ablt_plur": "крупами",
+        "loct_plur": "крупах"
+      }
+    },
+    {
+      "id": "ru-new-20261102-0029",
+      "lemma": "икра",
+      "added": {
+        "datv_plur": "икрам",
+        "ablt_plur": "икрами",
+        "loct_plur": "икрах"
+      }
+    }
+  ]
+}
