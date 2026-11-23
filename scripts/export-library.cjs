@@ -71,6 +71,14 @@ const entries=db.entries.map(e=>{
   id:e.id,label:e.lemma,meaning:e.meaning||null,
   suggestedForms:{diminutive:e.morphology?.data?.diminutive,plural:e.morphology?.data?.plural_nominative},
   verifiedForms:['verified','approved','editorial_verified'].includes(e.morphology?.data?.review_status)?{diminutive:e.morphology.data.diminutive,plural:e.morphology.data.plural_nominative}:{},
+  // Exact-paradigm forms are active only when separately admitted. Original
+  // machine proposals remain unverified; external research is never exported.
+  inflections:(e.morphology?.data?.approved_form_subset?.status==='machine_checked'&&
+    e.morphology?.data?.approved_form_subset?.usable_for_generation===true)?
+    e.morphology.data.approved_form_subset.forms:{},
+  inflectionStatus:e.morphology?.data?.approved_form_subset?.status==='machine_checked'?
+    'machine_checked':'not_available',
+  inflectionAutomaticCounting:e.morphology?.data?.approved_form_subset?.automatic_counting_allowed===true,
   categories:e.categories.filter(c=>(c.default_selection||e.lexical_eligible_by_default===false)&&!c.path.includes('/Вспомогательные')).map(c=>c.path),
   phonemes:tokens.length?tokens.map(t=>t==='й'?"й'":t):null,
   ...cat,position:editorial?.selection_position||'',
