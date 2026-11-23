@@ -7,13 +7,10 @@ export function memoryLayout(count:number,width:number,height:number){
 export function sortingLayout(width:number,height:number,tray:number,groups:number[]){
  const columns=Math.max(1,Math.min(groups.length,width<700?2:groups.length));
  const inner=Math.max(1,width-24),binWidth=(inner-(columns-1)*8)/columns;
- for(let card=220;card>=16;card--){
-  const cardHeight=card;
-  const trayColumns=Math.max(1,Math.floor((inner+8)/(card+8)));
-  const perBin=Math.max(1,Math.floor((binWidth-16+6)/(card+6)));
-  let binsHeight=0;
-  for(let i=0;i<groups.length;i+=columns)binsHeight+=Math.max(...groups.slice(i,i+columns).map(n=>44+Math.ceil(n/perBin)*(cardHeight+6)))+8;
-  if(Math.ceil(tray/trayColumns)*(cardHeight+8)+binsHeight+48<=height)return {card,columns};
- }
- return {card:16,columns};
+ // The bank stays readable; placed cards yield space first. Overflow scrolls locally.
+ const card=Math.max(96,Math.min(180,Math.floor(height*.4-16),Math.floor((inner-16)/Math.min(3,Math.max(1,tray)))));
+ const binRows=Math.ceil(groups.length/columns),available=Math.max(64,(height*.55)/binRows-52);
+ let placedCard=Math.min(card,96);
+ while(placedCard>48){const perRow=Math.max(1,Math.floor((binWidth-16+6)/(placedCard+6)));if(Math.ceil(Math.max(...groups,1)/perRow)*(placedCard+6)<=available)break;placedCard--;}
+ return {card,placedCard,columns};
 }

@@ -166,3 +166,7 @@
 @keyframes zg-conveyor-correct{from{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.12);filter:drop-shadow(0 0 12px #ffe7a5)}to{transform:translate(-50%,-50%) scale(1);opacity:1}}
 @keyframes zg-conveyor-wrong{0%,100%{transform:translate(-50%,-50%) rotate(0)}25%{transform:translate(-50%,-50%) rotate(-6deg)}75%{transform:translate(-50%,-50%) rotate(6deg)}}
 @media(prefers-reduced-motion:reduce){.conveyor-correct,.conveyor-wrong{animation:none!important}}
+
+.app[data-theme] .life-heart-art .heart-leaving{animation:zg-heart-leave var(--zg-life-loss-duration,560ms) cubic-bezier(.2,.7,.3,1) both;pointer-events:none;transform-origin:center}
+@keyframes zg-heart-leave{0%{opacity:1;transform:scale(1)}25%{opacity:.9;transform:translateY(-3px) scale(1.12) rotate(-6deg)}100%{opacity:0;transform:translateY(-18px) scale(.45) rotate(12deg)}}
+@media(prefers-reduced-motion:reduce){.app[data-theme] .life-heart-art .heart-leaving{animation:none;opacity:0}}

@@ -1,5 +1,6 @@
 import type React from 'react';
 import {useEffect,useRef,useState} from 'react';
+import {MOTION} from './motion.ts';
 import {Challenges} from '../GameUI.tsx';
 import {automaticLives,manualLives,spendLives,type LifeMode} from '../life-policy.ts';
 export function useElapsedTime(active:boolean,paused:boolean){
@@ -8,7 +9,9 @@ export function useElapsedTime(active:boolean,paused:boolean){
  return {reset:()=>setElapsed(0),status:<span className="toolbar-session-progress" aria-label="Прошло времени">Время <b>{Math.floor(elapsed/60)}:{String(elapsed%60).padStart(2,'0')}</b></span>};
 }
 export function LifeControls({lives,mode,disabled,onSpend,onUndo,maximum=5}:{maximum?:number;lives:number;mode:LifeMode;disabled:boolean;onSpend:()=>void;onUndo:()=>void}){
- return <span className="life-controls"><button type="button" className="link hearts" aria-label={'Жизни: '+lives+'; снять половину жизни'} disabled={disabled||!manualLives(mode)} title="Нажатие или F8 — снять половину жизни. F9 или контекстное меню — отменить." onContextMenu={e=>{e.preventDefault();onUndo()}} onClick={onSpend}>{Array.from({length:maximum},(_,i)=>{const amount=Math.max(0,Math.min(1,lives-i));return <span key={i} className="life-heart life-heart-art" style={{opacity:amount?1:.2} as React.CSSProperties}><img alt="" className={amount===.5?'heart-half':'heart-full'} src={import.meta.env.BASE_URL+'assets/rewards/'+(amount===.5?'heart-half':'heart')+'.webp'}/></span>})}</button></span>;
+ const previous=useRef(lives),[fading,setFading]=useState<{index:number;amount:number;key:number}[]>([]);
+ useEffect(()=>{const before=previous.current;previous.current=lives;if(lives>=before){setFading([]);return;}setFading(Array.from({length:maximum},(_,index)=>({index,amount:Math.max(0,Math.min(1,before-index)),key:Date.now()})).filter(v=>v.amount>Math.max(0,Math.min(1,lives-v.index))));const timer=setTimeout(()=>setFading([]),MOTION.lifeLossMs);return()=>clearTimeout(timer)},[lives,maximum]);
+ return <span className="life-controls"><button type="button" className="link hearts" aria-label={'Жизни: '+lives+'; снять половину жизни'} disabled={disabled||!manualLives(mode)} title="Нажатие или F8 — снять половину жизни. F9 или контекстное меню — отменить." onContextMenu={e=>{e.preventDefault();onUndo()}} onClick={onSpend}>{Array.from({length:maximum},(_,i)=>{const amount=Math.max(0,Math.min(1,lives-i));return <span key={i} className="life-heart life-heart-art">{amount>0&&<img alt="" className={amount===.5?'heart-half':'heart-full'} src={import.meta.env.BASE_URL+'assets/rewards/'+(amount===.5?'heart-half':'heart')+'.webp'}/>} {fading.filter(f=>f.index===i).map(f=><img key={f.key} alt="" className={'heart-leaving '+(f.amount===.5?'heart-half':'heart-full')} style={{'--zg-life-loss-duration':MOTION.lifeLossMs+'ms'} as React.CSSProperties} src={import.meta.env.BASE_URL+'assets/rewards/'+(f.amount===.5?'heart-half':'heart')+'.webp'}/>)}</span>})}</button></span>;
 }
 export function useGameLimits(active:boolean,paused:boolean){
  const [lifeCount,setLifeCount]=useState(5);
