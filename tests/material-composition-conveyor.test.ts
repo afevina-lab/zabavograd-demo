@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {balancedPick,changeTargetSound,defaultOpposition,initialLearning,type Learning} from '../src/learning.ts';
-import {arithmeticDeck,conveyorIncorrectCount,conveyorConditions,isCloseConveyorDistractor,materialConveyorDeck} from '../src/conveyor.ts';
+import {arithmeticDeck,conveyorIncorrectCount,conveyorConditions,isCloseConveyorDistractor,materialConveyorDeck,validConveyorNegative} from '../src/conveyor.ts';
 import type {Word} from '../src/material-types.ts';
 
 function word(id:string,category='Животный мир/Домашние животные',phonemes:string[]=['л'],kind?:'syllables'):Word{
@@ -124,4 +124,16 @@ test('Mathematical target slider stops match the curriculum up to 1000',async()=
  const products=mathMaterial({target:1000,add:false,subtract:false,multiply:true,divide:false,includeZero:false});
  assert(products.length>900);
  assert(products.every(w=>{const [a,b]=w.label.split(' × ').map(Number);return a*b===Number(w.answer)&&a*b<=1000;}));
+});
+
+test('Conveyor never presents a word with the target sound as NO, even when therapy eligibility is missing',()=>{
+ const l:Learning={...initialLearning,mode:'automation',sounds:['р']};
+ const flagged:Word={...word('расчёска'),phonemes:['р','а',"щ'",'о','с','к','а'],
+  sounds:{р:[{position:'начало',before:null,after:null,eligibility:'needs_review'}]}};
+ assert.equal(validConveyorNegative(flagged,l),false,
+  'Unverified alignment does not mean sound is absent');
+ const withoutR={...word('кошка'),phonemes:['к','о','ш','к','а']};
+ assert.equal(validConveyorNegative(withoutR,l),true);
+ const withLetter:Word={...word('расчёска'),letters:{р:[{index:0,position:'начало'}]}};
+ assert.equal(validConveyorNegative(withLetter,{...l,mode:'search',searchTarget:'letter'}),false);
 });
