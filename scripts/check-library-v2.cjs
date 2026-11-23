@@ -208,8 +208,8 @@ if(v.provenance.action_lexicon?.revision==='verbs-20261109-v1'){
  const verbs=v.entries.filter(e=>e.part_of_speech==='verb');
  const added=v.entries.filter(e=>e.id.startsWith('ru-action-20261109-'));
  assert.equal(added.length,v.provenance.action_lexicon.created,'New verb records missing');
- assert.equal(verbs.length,v.provenance.action_lexicon.verb_senses,'Verb-sense count drift');
- assert.equal(new Set(verbs.map(e=>e.lemma)).size,v.provenance.action_lexicon.verb_lemmas,'Verb-lemma count drift');
+ assert.equal(verbs.length,v.provenance.action_lexicon.verb_senses+(v.provenance.editorial_gap_completion_20261123?.new_verbs||0),'Verb-sense count drift');
+ assert.equal(new Set(verbs.map(e=>e.lemma)).size,v.provenance.action_lexicon.verb_lemmas+(v.provenance.editorial_gap_completion_20261123?.new_verbs||0),'Verb-lemma count drift');
  const scale=new Set([100,70,50,30,20,10]);
  for(const e of verbs){
   assert(scale.has(e.selection.task_overrides?.action_generation),'No action priority: '+e.lemma);
