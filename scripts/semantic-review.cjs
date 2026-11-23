@@ -79,7 +79,7 @@ function validateExport(db){
    if(r.approval?.status!=='verified'||r.approval?.usable_for_generation!==true||r.approval?.sense_checked!==true||r.approval?.typical_for_children!==true)throw Error('Unreviewed semantic edge');
    const clearedExternal=r.provenance?.source==='wikidata'&&r.provenance.license==='CC0';
    const originalEditorial=r.provenance?.source==='zabavograd_editorial'&&
-    r.provenance.authorship==='independent'&&['v2-obvious-relations-20261109-v1','v2-attribute-relations-20261109-v1'].includes(r.provenance.revision)&&
+    r.provenance.authorship==='independent'&&['v2-obvious-relations-20261109-v1','v2-attribute-relations-20261109-v1','v2-obvious-relations-20261123-v1'].includes(r.provenance.revision)&&
     r.approval?.review_method==='independent_explicit_pair'&&r.approval?.typical_for_children===true;
    if(!clearedExternal&&!originalEditorial)throw Error('Non-cleared external relation');
    relations.push({id:r.id,type:r.type,subject_id:r.subject.id,object_id:r.object.id,inverse_type:inverse[r.type],provenance:r.provenance});
