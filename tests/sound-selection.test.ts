@@ -1,5 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
 import {createRequire} from 'node:module';
 import {initialLearning,matchesSound,learningPool,type Learning} from '../src/learning.ts';
 import {defaultFilters,type Word} from '../src/model.ts';
@@ -107,4 +108,26 @@ test('automation and differentiation reject sound-letter substitutions',()=>{
  assert.equal(matchesSound(example('арбуз',['а','р','б','у','с']),'с',l),false);
  assert.equal(matchesSound(example('счастье',["щ'",'а','с',"т'","й'",'э']),"щ'",l),false);
  }
+});
+
+test('СЧ fused into [Щ\x27] must not invalidate a separate word-initial Р',()=>{
+ const sounds=soundIndex('расчёска',['р','а',"щ'",'о','с','к','а'],{approved:true})!;
+ assert.equal(sounds.р[0].position,'начало');
+ assert.equal(sounds.р[0].letter,'р');
+ assert.equal(sounds.р[0].eligibility,'eligible');
+ assert.equal(sounds["щ'"][0].eligibility,'letter_sound_mismatch',
+  'Do not claim that written Ч is the letter Щ');
+ const selected={...initialLearning,mode:'automation' as const,sounds:['р']};
+ assert(matchesSound(example('расчёска',['р','а',"щ'",'о','с','к','а']),'р',selected));
+});
+test('real published library classifies расчёска as containing eligible Р',()=>{
+ const library=JSON.parse(readFileSync(new URL('../public/library.json',import.meta.url),'utf8')) as Word[];
+ const brush=library.find(word=>word.id==='ru-r-064');
+ assert(brush,'Expected the canonical hairbrush entry');
+ assert.equal(brush.label,'расчёска');
+ assert(brush.phonemes?.includes('р'),'R must be present in phonetic transcription');
+ assert.equal(brush.sounds?.р[0]?.eligibility,'eligible');
+ const selected={...initialLearning,mode:'automation' as const,sounds:['р']};
+ assert(matchesSound(brush,'р',selected),'R at the beginning qualifies');
+ assert(learningPool([brush],defaultFilters,selected).some(word=>word.id===brush.id));
 });
