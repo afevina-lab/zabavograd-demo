@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initialLearning,learningPool} from '../src/learning.ts';
 import {defaultFilters,type Word} from '../src/model.ts';
-import {generateCombinations,effectivePatterns,compatibleMemoryMode} from '../src/reading.ts';
+import {generateCombinations,effectivePatterns,compatibleMemoryMode,divideIntoSyllables,readingLabel} from '../src/reading.ts';
 const word=(label:string):Word=>({id:label,label,topic:null,subcategory:null,position:'',type:null,opposition:[],weight:100,images:0});
 test('reading uses letters and requires all selected letters',()=>{
  const l={...initialLearning,mode:'reading' as const,reading:{available:[...'котсыр'],required:['к','о'],min:3,max:3}};
@@ -30,4 +30,31 @@ test('assimilation is opt-in and target slots constrain generated combinations',
  const pool=learningPool([],defaultFilters,{...l,contentKinds:['syllables'],syllablePatterns:['CCV'],targetSlots:{CCV:[1]}});
  assert.ok(pool.length>0);
  assert.ok(pool.every(w=>w.phonemes?.[1]==='р'));
+});
+
+test('written syllables use hyphens and safe Russian syllable boundaries',()=>{
+ const cases:[string,string][]=[
+  ['дельфин','дель-фин'],['подсолнух','под-сол-нух'],
+  ['пальто','паль-то'],['письмо','пись-мо'],['коньки','конь-ки'],
+  ['майка','май-ка'],['чайник','чай-ник'],['семья','се-мья'],
+  ['подъезд','подъ-езд'],['корзина','кор-зи-на'],['картошка','кар-тош-ка'],
+  ['кошка','кош-ка'],['доска','дос-ка'],['сестра','се-стра'],
+  ['капуста','ка-пу-ста'],['арбуз','ар-буз'],['корова','ко-ро-ва'],
+  ['машина','ма-ши-на'],['аист','а-ист'],['кот','кот'],
+  ['вьюга','вью-га']
+ ];
+ for(const [word,expected] of cases){
+  assert.equal(divideIntoSyllables(word),expected,word);
+  assert.equal(divideIntoSyllables(word.toLocaleUpperCase('ru')),expected.toLocaleUpperCase('ru'),word+' uppercase');
+  assert.equal(expected.replaceAll('-',''),word);
+  assert.equal((expected.match(/-/g)||[]).length,([...word].filter(c=>'аеёиоуыэюя'.includes(c)).length-1),word+' vowel count');
+ }
+});
+test('syllable display works in reading and in other tasks without changing stored text',()=>{
+ const l={...initialLearning,mode:'reading' as const,reading:{splitSyllables:true}};
+ assert.equal(readingLabel('дельфин, подсолнух!',l),'ДЕЛЬ-ФИН, ПОД-СОЛ-НУХ!');
+ assert.equal(readingLabel('подсолнух',initialLearning),'подсолнух');
+ assert.equal(readingLabel('подсолнух',{...initialLearning,mode:'reading'}),'ПОДСОЛНУХ');
+ assert.equal(readingLabel('дельфин',{...initialLearning,mode:'lexical',reading:{splitSyllables:true}}),'ДЕЛЬ-ФИН');
+ assert.equal(readingLabel('со\u0301ва',l),'СО\u0301-ВА');
 });
