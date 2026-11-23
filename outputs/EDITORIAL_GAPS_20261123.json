@@ -1,0 +1,459 @@
+{
+  "schema": "editorial_gaps_publish_report_v1",
+  "revision": "editorial-gaps-20261123-v1",
+  "words_added": 22,
+  "relation_count_added": 56,
+  "relation_count_reused": 9,
+  "unresolved": 0,
+  "new_words": [
+    {
+      "id": "ru-editorial-gap-20261123-2ba91fdab4a76ca8",
+      "lemma": "дверца",
+      "category": "Дом и быт/Мебель/Вспомогательные/Части мебели"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-edf837b9e99a588d",
+      "lemma": "сиденье",
+      "category": "Дом и быт/Мебель/Вспомогательные/Части мебели"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-435ddffa8137120a",
+      "lemma": "спинка",
+      "category": "Дом и быт/Мебель/Вспомогательные/Части мебели"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-ca0f1043a4221ecf",
+      "lemma": "подлокотник",
+      "category": "Дом и быт/Мебель/Вспомогательные/Части мебели"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-f544370d096c311e",
+      "lemma": "ножка",
+      "category": "Дом и быт/Мебель/Вспомогательные/Части мебели"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-f64e065e73be6f67",
+      "lemma": "буфет",
+      "category": "Дом и быт/Мебель"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-1b794ffe762af4ac",
+      "lemma": "сервант",
+      "category": "Дом и быт/Мебель"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-7ac5f106aab9ccda",
+      "lemma": "бельё",
+      "category": "Дом и быт/Предметы домашнего обихода"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-5c3fa7dc418a782c",
+      "lemma": "хранить",
+      "category": "Действия/Вспомогательные/Действия с предметами"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-e77ad0485e6c6c5c",
+      "lemma": "смотреться",
+      "category": "Действия/Вспомогательные/Действия с предметами"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-4aa311850100a8de",
+      "lemma": "будка",
+      "category": "Животный мир/Вспомогательные/Места содержания животных"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-c12cd41bb4f37ba3",
+      "lemma": "курятник",
+      "category": "Животный мир/Вспомогательные/Места содержания животных"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-0b20e47d49172509",
+      "lemma": "конюшня",
+      "category": "Животный мир/Вспомогательные/Места содержания животных"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-d84927bcdfaf8b76",
+      "lemma": "коровник",
+      "category": "Животный мир/Вспомогательные/Места содержания животных"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-fccbd49255fd8455",
+      "lemma": "свинарник",
+      "category": "Животный мир/Вспомогательные/Места содержания животных"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-50b5335ce0f9d9dd",
+      "lemma": "крольчатник",
+      "category": "Животный мир/Вспомогательные/Места содержания животных"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-4b2dab1fc64f76df",
+      "lemma": "улей",
+      "category": "Животный мир/Вспомогательные/Места содержания животных"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-7d873ad573e2697f",
+      "lemma": "муравейник",
+      "category": "Животный мир/Вспомогательные/Места содержания животных"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-540ace8499d262d2",
+      "lemma": "скворечник",
+      "category": "Животный мир/Вспомогательные/Места содержания животных"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-e443e93fdf99178f",
+      "lemma": "мёд",
+      "category": "Еда и напитки/Продукты"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-2d7a9783377d7d54",
+      "lemma": "шерсть",
+      "category": "Животный мир/Вспомогательные/Продукты животного происхождения"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-13649451c9948c3f",
+      "lemma": "яичница",
+      "category": "Еда и напитки/Готовые блюда"
+    }
+  ],
+  "new_relations": [
+    {
+      "id": "semantic-editorial-b0de3a3dab57835acd068b",
+      "type": "part_of",
+      "subject": "полка",
+      "object": "стеллаж"
+    },
+    {
+      "id": "semantic-editorial-87acf6e85f6de0de00c58c",
+      "type": "part_of",
+      "subject": "полка",
+      "object": "шкаф"
+    },
+    {
+      "id": "semantic-editorial-06d6940c0d73297d13faa5",
+      "type": "part_of",
+      "subject": "ящик",
+      "object": "комод"
+    },
+    {
+      "id": "semantic-editorial-f01de0b877d5a39ec8ad5b",
+      "type": "part_of",
+      "subject": "дверца",
+      "object": "шкаф"
+    },
+    {
+      "id": "semantic-editorial-4478f9ce87fce4374e355f",
+      "type": "part_of",
+      "subject": "дверца",
+      "object": "буфет"
+    },
+    {
+      "id": "semantic-editorial-594b7918823ee89c2a9768",
+      "type": "part_of",
+      "subject": "сиденье",
+      "object": "стул"
+    },
+    {
+      "id": "semantic-editorial-bc4b9caecc36ee5a19dcdd",
+      "type": "part_of",
+      "subject": "спинка",
+      "object": "стул"
+    },
+    {
+      "id": "semantic-editorial-539710ac9bf09fc05bf219",
+      "type": "part_of",
+      "subject": "спинка",
+      "object": "кресло"
+    },
+    {
+      "id": "semantic-editorial-f74a98237d9819b90e00ef",
+      "type": "part_of",
+      "subject": "подлокотник",
+      "object": "кресло"
+    },
+    {
+      "id": "semantic-editorial-353263792eb5fcc4f1bc47",
+      "type": "part_of",
+      "subject": "ножка",
+      "object": "стул"
+    },
+    {
+      "id": "semantic-editorial-ec01ed9f4789a2b71ee563",
+      "type": "part_of",
+      "subject": "ножка",
+      "object": "стол"
+    },
+    {
+      "id": "semantic-editorial-1653088c9267dc112d4ecb",
+      "type": "part_of",
+      "subject": "дверца",
+      "object": "тумбочка"
+    },
+    {
+      "id": "semantic-editorial-f2c93c2f6a8e53029bb358",
+      "type": "typically_contains",
+      "subject": "комод",
+      "object": "одежда"
+    },
+    {
+      "id": "semantic-editorial-a632e06701feaddb3bf62c",
+      "type": "typically_contains",
+      "subject": "комод",
+      "object": "бельё"
+    },
+    {
+      "id": "semantic-editorial-a7674d1358049850af4645",
+      "type": "typically_contains",
+      "subject": "буфет",
+      "object": "посуда"
+    },
+    {
+      "id": "semantic-editorial-169b976c1ce6a04dfb1355",
+      "type": "typically_contains",
+      "subject": "сервант",
+      "object": "посуда"
+    },
+    {
+      "id": "semantic-editorial-5ffea18461c86829846bd8",
+      "type": "typically_contains",
+      "subject": "стеллаж",
+      "object": "книга"
+    },
+    {
+      "id": "semantic-editorial-82d492c4425411a7d7b3a4",
+      "type": "typically_contains",
+      "subject": "тумбочка",
+      "object": "книга"
+    },
+    {
+      "id": "semantic-editorial-4d58cc8ae32b1b4188e9ad",
+      "type": "typically_contains",
+      "subject": "письменный стол",
+      "object": "тетрадь"
+    },
+    {
+      "id": "semantic-editorial-126934b6fc2f561bd8eed4",
+      "type": "typically_contains",
+      "subject": "письменный стол",
+      "object": "ручка"
+    },
+    {
+      "id": "semantic-editorial-3153f08001dc5be0ff56e5",
+      "type": "typically_contains",
+      "subject": "книжный шкаф",
+      "object": "книга"
+    },
+    {
+      "id": "semantic-editorial-916ea972474024f54b91ac",
+      "type": "typically_contains",
+      "subject": "шкаф",
+      "object": "пальто"
+    },
+    {
+      "id": "semantic-editorial-9069e3672a3d17c1d7fd64",
+      "type": "typically_contains",
+      "subject": "шкаф",
+      "object": "рубашка"
+    },
+    {
+      "id": "semantic-editorial-5aae91e002165f595afee1",
+      "type": "typically_contains",
+      "subject": "полка",
+      "object": "книга"
+    },
+    {
+      "id": "semantic-editorial-8b3e221e1b33e38f875a38",
+      "type": "used_for",
+      "subject": "кресло",
+      "object": "сидеть"
+    },
+    {
+      "id": "semantic-editorial-5f78fa1826ffaa592eb592",
+      "type": "used_for",
+      "subject": "диван",
+      "object": "сидеть"
+    },
+    {
+      "id": "semantic-editorial-fb798bbecf31860fdc6593",
+      "type": "used_for",
+      "subject": "диван",
+      "object": "спать"
+    },
+    {
+      "id": "semantic-editorial-aaa0ad33c3da5dd05050fe",
+      "type": "used_for",
+      "subject": "табурет",
+      "object": "сидеть"
+    },
+    {
+      "id": "semantic-editorial-f887ec8b1572618b402dc9",
+      "type": "used_for",
+      "subject": "скамейка",
+      "object": "сидеть"
+    },
+    {
+      "id": "semantic-editorial-d66e2562cdde4fccdbb4db",
+      "type": "used_for",
+      "subject": "письменный стол",
+      "object": "писать"
+    },
+    {
+      "id": "semantic-editorial-912067b9644415180c20b9",
+      "type": "used_for",
+      "subject": "письменный стол",
+      "object": "рисовать"
+    },
+    {
+      "id": "semantic-editorial-74eea487782812ddfc09ae",
+      "type": "used_for",
+      "subject": "комод",
+      "object": "хранить"
+    },
+    {
+      "id": "semantic-editorial-fff5a8c9e8bcb09481a689",
+      "type": "used_for",
+      "subject": "шкаф",
+      "object": "хранить"
+    },
+    {
+      "id": "semantic-editorial-7f3437f224b59717c27fa2",
+      "type": "used_for",
+      "subject": "стеллаж",
+      "object": "хранить"
+    },
+    {
+      "id": "semantic-editorial-3759c1c6d7be45d27f0af9",
+      "type": "used_for",
+      "subject": "зеркало",
+      "object": "смотреться"
+    },
+    {
+      "id": "semantic-editorial-6c8c440be892ad0e18d66a",
+      "type": "dwells_in",
+      "subject": "собака",
+      "object": "будка"
+    },
+    {
+      "id": "semantic-editorial-f006b35479c410f74e5c27",
+      "type": "dwells_in",
+      "subject": "курица",
+      "object": "курятник"
+    },
+    {
+      "id": "semantic-editorial-f0d63fbf63afafcfbce6a9",
+      "type": "dwells_in",
+      "subject": "лошадь",
+      "object": "конюшня"
+    },
+    {
+      "id": "semantic-editorial-91b74cf2a3f49908d41d7e",
+      "type": "dwells_in",
+      "subject": "корова",
+      "object": "коровник"
+    },
+    {
+      "id": "semantic-editorial-8bf3773eba615a17a2582d",
+      "type": "dwells_in",
+      "subject": "свинья",
+      "object": "свинарник"
+    },
+    {
+      "id": "semantic-editorial-a29c5a8232b8607e93c52e",
+      "type": "dwells_in",
+      "subject": "кролик",
+      "object": "крольчатник"
+    },
+    {
+      "id": "semantic-editorial-fb81627f74cda3ed9da277",
+      "type": "dwells_in",
+      "subject": "пчела",
+      "object": "улей"
+    },
+    {
+      "id": "semantic-editorial-ec5fe41d277b1c4149f69d",
+      "type": "dwells_in",
+      "subject": "муравей",
+      "object": "муравейник"
+    },
+    {
+      "id": "semantic-editorial-ec5d457e9c7f0564f2b425",
+      "type": "dwells_in",
+      "subject": "скворец",
+      "object": "скворечник"
+    },
+    {
+      "id": "semantic-editorial-84896a810d50d8a7041319",
+      "type": "produces",
+      "subject": "курица",
+      "object": "яйцо"
+    },
+    {
+      "id": "semantic-editorial-02f9ac591da0306ba530a1",
+      "type": "produces",
+      "subject": "утка",
+      "object": "яйцо"
+    },
+    {
+      "id": "semantic-editorial-79683b64e03c00fbefb440",
+      "type": "produces",
+      "subject": "гусь",
+      "object": "яйцо"
+    },
+    {
+      "id": "semantic-editorial-0b23afb0fb91f57dbc5c1c",
+      "type": "produces",
+      "subject": "пчела",
+      "object": "мёд"
+    },
+    {
+      "id": "semantic-editorial-98b97f8f370719cdf08d46",
+      "type": "produces",
+      "subject": "овца",
+      "object": "шерсть"
+    },
+    {
+      "id": "semantic-editorial-7361d549fc48670b4b4796",
+      "type": "made_from",
+      "subject": "хлеб",
+      "object": "мука"
+    },
+    {
+      "id": "semantic-editorial-e90b04942e99ee455eb303",
+      "type": "made_from",
+      "subject": "омлет",
+      "object": "яйцо"
+    },
+    {
+      "id": "semantic-editorial-80addfd88981781124377f",
+      "type": "made_from",
+      "subject": "яичница",
+      "object": "яйцо"
+    },
+    {
+      "id": "semantic-editorial-1b9df59b56e4c1c9ec78ba",
+      "type": "made_from",
+      "subject": "компот",
+      "object": "ягода"
+    },
+    {
+      "id": "semantic-editorial-59229be7be74f5dcfdd4d1",
+      "type": "made_from",
+      "subject": "сок",
+      "object": "фрукт"
+    },
+    {
+      "id": "semantic-editorial-0ac6b102fb3d1708cab93d",
+      "type": "made_from",
+      "subject": "пирог",
+      "object": "мука"
+    },
+    {
+      "id": "semantic-editorial-38bb0db7ba75dd0acb0781",
+      "type": "antonym",
+      "subject": "громкий",
+      "object": "тихий"
+    }
+  ],
+  "unresolved_pairs": []
+}

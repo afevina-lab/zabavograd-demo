@@ -1,0 +1,106 @@
+{
+  "schema": "active_form_audit_v1",
+  "revision": "safe-local-morphology-20261123-v1",
+  "active_status": "machine_checked_not_human_reviewed",
+  "not_activated": [
+    "unmatched_lemmas",
+    "ambiguous_analyses",
+    "semantic_countability",
+    "restricted_external_source_frames",
+    "unreviewed_original_analyses"
+  ],
+  "statistics": {
+    "preserved_legacy": 409,
+    "existing_words_with_active_forms": 1149,
+    "active_forms_existing": 14198,
+    "excluded_risk_flags": 95,
+    "no_morphology_data": 76,
+    "excluded_part_of_speech_mismatch": 1,
+    "protected_or_not_a_candidate": 228,
+    "new_words_with_active_forms": 22,
+    "active_forms_new": 246
+  },
+  "examples": [
+    {
+      "lemma": "аист",
+      "forms": {
+        "nomn_sing": "аист",
+        "gent_sing": "аиста",
+        "datv_sing": "аисту",
+        "accs_sing": "аиста",
+        "ablt_sing": "аистом"
+      }
+    },
+    {
+      "lemma": "аистёнок",
+      "forms": {
+        "nomn_sing": "аистёнок",
+        "gent_sing": "аистёнка",
+        "datv_sing": "аистёнку",
+        "accs_sing": "аистёнка",
+        "ablt_sing": "аистёнком"
+      }
+    },
+    {
+      "lemma": "актёр",
+      "forms": {
+        "nomn_sing": "актёр",
+        "gent_sing": "актёра",
+        "datv_sing": "актёру",
+        "accs_sing": "актёра",
+        "ablt_sing": "актёром"
+      }
+    },
+    {
+      "lemma": "акула",
+      "forms": {
+        "nomn_sing": "акула",
+        "gent_sing": "акулы",
+        "datv_sing": "акуле",
+        "accs_sing": "акулу",
+        "ablt_sing": "акулой"
+      }
+    },
+    {
+      "lemma": "аллигатор",
+      "forms": {
+        "nomn_sing": "аллигатор",
+        "gent_sing": "аллигатора",
+        "datv_sing": "аллигатору",
+        "accs_sing": "аллигатора",
+        "ablt_sing": "аллигатором"
+      }
+    },
+    {
+      "lemma": "антилопа",
+      "forms": {
+        "nomn_sing": "антилопа",
+        "gent_sing": "антилопы",
+        "datv_sing": "антилопе",
+        "accs_sing": "антилопу",
+        "ablt_sing": "антилопой"
+      }
+    },
+    {
+      "lemma": "археолог",
+      "forms": {
+        "nomn_sing": "археолог",
+        "gent_sing": "археолога",
+        "datv_sing": "археологу",
+        "accs_sing": "археолога",
+        "ablt_sing": "археологом"
+      }
+    },
+    {
+      "lemma": "бабочка",
+      "forms": {
+        "nomn_sing": "бабочка",
+        "gent_sing": "бабочки",
+        "datv_sing": "бабочке",
+        "accs_sing": "бабочку",
+        "ablt_sing": "бабочкой"
+      }
+    }
+  ],
+  "unresolved": []
+}

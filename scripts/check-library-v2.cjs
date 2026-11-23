@@ -25,7 +25,7 @@ for(const sense of img.senses){
 }
 assert.equal(v.provenance.legacy_entry_count,legacy.length);
 assert.equal(v.provenance.merged+v.provenance.created,v.provenance.editorial_input_count);
-assert.equal(v.entries.length,legacy.length+v.provenance.created+(v.provenance.plant_world?.created||0)+(v.provenance.generalization_audit?.created||0)+(v.provenance.webp_assets?.created_word_entries||0)+(v.provenance.public_reconciliation?.imported_entries||0)+(v.provenance.sense_separation?.created||0)+(v.provenance.action_lexicon?.created||0)+(v.provenance.noun_expansion_20261109?.added_entry_count||0)+(v.provenance.public_noun_additions_20261109?.created||0)+(v.provenance.attribute_lexicon_20261109?.created||0)+(v.provenance.public_only_20261112?.public_only_imported||0)+(v.provenance.useful_words_20261113?.created||0)+(v.provenance.image_pack_20261114?.created||0)+(v.provenance.image_pack_20261120?.created||0)+(v.provenance.image_pack_20261123?.created||0));
+assert.equal(v.entries.length,legacy.length+v.provenance.created+(v.provenance.plant_world?.created||0)+(v.provenance.generalization_audit?.created||0)+(v.provenance.webp_assets?.created_word_entries||0)+(v.provenance.public_reconciliation?.imported_entries||0)+(v.provenance.sense_separation?.created||0)+(v.provenance.action_lexicon?.created||0)+(v.provenance.noun_expansion_20261109?.added_entry_count||0)+(v.provenance.public_noun_additions_20261109?.created||0)+(v.provenance.attribute_lexicon_20261109?.created||0)+(v.provenance.public_only_20261112?.public_only_imported||0)+(v.provenance.useful_words_20261113?.created||0)+(v.provenance.image_pack_20261114?.created||0)+(v.provenance.image_pack_20261120?.created||0)+(v.provenance.image_pack_20261123?.created||0)+(v.provenance.editorial_gap_completion_20261123?.created||0));
 const familyRelations=v.relations.filter(r=>r.type!=='is_a'&&!r.subject&&!r.object);
 assert.equal(familyRelations.length,40,'Original animal-family relations must be preserved');
 const genusRelations=v.relations.filter(r=>r.type==='is_a'&&r.child&&r.parent);
@@ -193,7 +193,7 @@ assert(v.categories.every(c=>!["Семья","Семья и люди","Мебел
 if(v.provenance.public_reconciliation){
  assert.equal(v.provenance.public_reconciliation.imported_entries,301,'Published-only word import was changed');
  assert.equal(v.provenance.public_reconciliation.added_is_a,76,'Published semantic links were lost');
- assert.equal(v.entries.length,1288+(v.provenance.sense_separation?.created||0)+(v.provenance.action_lexicon?.created||0)+(v.provenance.noun_expansion_20261109?.added_entry_count||0)+(v.provenance.public_noun_additions_20261109?.created||0)+(v.provenance.attribute_lexicon_20261109?.created||0)+(v.provenance.public_only_20261112?.public_only_imported||0)+(v.provenance.useful_words_20261113?.created||0)+(v.provenance.image_pack_20261114?.created||0)+(v.provenance.image_pack_20261120?.created||0)+(v.provenance.image_pack_20261123?.created||0),'Published and private word IDs must include subsequent sense separation and noun expansion');
+ assert.equal(v.entries.length,1288+(v.provenance.sense_separation?.created||0)+(v.provenance.action_lexicon?.created||0)+(v.provenance.noun_expansion_20261109?.added_entry_count||0)+(v.provenance.public_noun_additions_20261109?.created||0)+(v.provenance.attribute_lexicon_20261109?.created||0)+(v.provenance.public_only_20261112?.public_only_imported||0)+(v.provenance.useful_words_20261113?.created||0)+(v.provenance.image_pack_20261114?.created||0)+(v.provenance.image_pack_20261120?.created||0)+(v.provenance.image_pack_20261123?.created||0)+(v.provenance.editorial_gap_completion_20261123?.created||0),'Published and private word IDs must include subsequent sense separation and noun expansion');
  const released=v.entries.filter(e=>e.selection.weight_source==='public_reconciliation_20261105');
  assert.equal(released.length,301,'Some published-only records disappeared');
  assert.equal(new Set(released.map(e=>e.id)).size,301,'Duplicate published IDs');
@@ -208,8 +208,8 @@ if(v.provenance.action_lexicon?.revision==='verbs-20261109-v1'){
  const verbs=v.entries.filter(e=>e.part_of_speech==='verb');
  const added=v.entries.filter(e=>e.id.startsWith('ru-action-20261109-'));
  assert.equal(added.length,v.provenance.action_lexicon.created,'New verb records missing');
- assert.equal(verbs.length,v.provenance.action_lexicon.verb_senses,'Verb-sense count drift');
- assert.equal(new Set(verbs.map(e=>e.lemma)).size,v.provenance.action_lexicon.verb_lemmas,'Verb-lemma count drift');
+ assert.equal(verbs.length,v.provenance.action_lexicon.verb_senses+(v.provenance.editorial_gap_completion_20261123?.new_verbs||0),'Verb-sense count drift');
+ assert.equal(new Set(verbs.map(e=>e.lemma)).size,v.provenance.action_lexicon.verb_lemmas+(v.provenance.editorial_gap_completion_20261123?.new_verbs||0),'Verb-lemma count drift');
  const scale=new Set([100,70,50,30,20,10]);
  for(const e of verbs){
   assert(scale.has(e.selection.task_overrides?.action_generation),'No action priority: '+e.lemma);
