@@ -14,7 +14,7 @@ const spec=JSON.parse(fs.readFileSync(reviewSource,'utf8'));
 const revision='editorial-gaps-20261123-v1';
 assert.equal(spec.schema,'zabavograd_editorial_relation_draft_v1');
 const noun=(weight,meaning,category,secondary=[],show=true)=>({part_of_speech:'noun',weight,meaning,category,secondary,show});
-const verb=(meaning)=>({part_of_speech:'verb',weight:50,meaning,category:'Действия',show:false});
+const verb=(meaning)=>({part_of_speech:'verb',weight:0,meaning,category:'Действия/Вспомогательные/Действия с предметами',show:false});
 const furniture='Дом и быт/Мебель',parts=furniture+'/Вспомогательные/Части мебели';
 const places='Животный мир/Вспомогательные/Места содержания животных';
 const product='Еда и напитки/Продукты',byproducts='Животный мир/Вспомогательные/Продукты животного происхождения';
@@ -75,7 +75,8 @@ for(const [lemma,definition] of Object.entries(missing)){
  paths.forEach(ensureCategory);
  const row={id,lemma,language:'ru',meaning:definition.meaning,kind:'word',
   part_of_speech:definition.part_of_speech,
-  selection:{base_weight:definition.weight,scope:'general',weight_source:revision},
+  selection:{base_weight:definition.weight,scope:'general',weight_source:revision,
+   ...(definition.part_of_speech==='verb'?{task_overrides:{action_generation:50}}:{})},
   categories:paths.map(path=>({path,default_selection:Boolean(definition.show)})),
   phonetic_tags:{status:'pending_automatic_analysis',data:null},
   morphology:{status:'pending_automatic_analysis',data:{review_status:'suggested'}},
@@ -128,7 +129,9 @@ for(const [type,raw] of Object.entries(spec.pairs)){
 const old=db.provenance.editorial_gap_completion_20261123;
 if(old&&old.revision!==revision)throw Error('Conflicting prior migration');
 db.provenance.editorial_gap_completion_20261123={
- revision,created:(old?.created||0)+newWords.length,links_added:(old?.links_added||0)+newLinks.length,
+ revision,created:(old?.created||0)+newWords.length,
+ new_verbs:(old?.new_verbs||0)+newWords.filter(x=>byId.get(x.id).part_of_speech==='verb').length,
+ links_added:(old?.links_added||0)+newLinks.length,
  status:'author_approved_lexical_and_semantic_editorial_batch',human_pair_review:false};
 validateExport(db);
 fs.writeFileSync(source,JSON.stringify(db,null,2)+'\n');
