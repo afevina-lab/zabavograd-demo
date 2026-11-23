@@ -127,16 +127,19 @@ function writtenSyllableCut(chars:string[],leftVowel:number,rightVowel:number):n
  return rightVowel-1;
 }
 export function divideIntoSyllables(word:string):string{
- const chars=[...word];
+ const original=[...word];
+ // Keep acute stress marks attached to the preceding vowel if present.
+ const indexed=original.flatMap((c,i)=>c==='\u0301'?[]:[{char:c.toLocaleUpperCase('ru'),index:i}]);
+ const chars=indexed.map(c=>c.char);
  const vowels=chars.flatMap((c,i)=>syllableVowels.includes(c)?[i]:[]);
  if(vowels.length<2)return word;
- const cuts=new Set(vowels.slice(0,-1).map((v,i)=>writtenSyllableCut(chars,v,vowels[i+1])));
- return chars.map((c,i)=>(cuts.has(i)?'-':'')+c).join('');
+ const cuts=new Set(vowels.slice(0,-1).map((v,i)=>indexed[writtenSyllableCut(chars,v,vowels[i+1])].index));
+ return original.map((c,i)=>(cuts.has(i)?'-':'')+c).join('');
 }
 /** Display-only syllable support; never changes spelling used by filters or IDs. */
 export function readingLabel(text:string,l:Learning):string{
  if(!includesReading(l)&&!l.reading?.splitSyllables)return text;
  const upper=text.toLocaleUpperCase('ru');
  if(!l.reading?.splitSyllables)return upper;
- return upper.replace(/[А-ЯЁ]+/g,divideIntoSyllables);
+ return upper.replace(/[А-ЯЁ\u0301]+/g,divideIntoSyllables);
 }
