@@ -53,6 +53,18 @@ export function conveyorConditions(count:number,conditional:boolean,rng=Math.ran
  for(let i=flags.length-1;i>0;i--){const j=Math.min(i,Math.floor(rng()*(i+1)));[flags[i],flags[j]]=[flags[j],flags[i]];}
  return flags;
 }
+/**
+ * When children answer whether a target sound is present, never teach that a
+ * word with that phoneme is a negative. The lesson may reject it for another
+ * reason (unverified alignment, unsuitable position, exclusion), but it
+ * must then be omitted from this binary sound-present exercise, not marked NO.
+ */
+export function validConveyorNegative(word:Word,learning:Learning):boolean{
+ if(!['automation','differentiation','search'].includes(learning.mode))return true;
+ if(learning.searchTarget==='letter')
+  return !learning.sounds.some(letter=>Boolean(word.letters?.[letter]?.length));
+ return !learning.sounds.some(sound=>containsExcludedSound(word,sound));
+}
 export function isCloseConveyorDistractor(word:Word,learning:Learning):boolean{
  if(['automation','differentiation','search'].includes(learning.mode)){
   const confusions=[...new Set(learning.sounds.flatMap(typicalConfusions))].filter(s=>!learning.sounds.includes(s));
