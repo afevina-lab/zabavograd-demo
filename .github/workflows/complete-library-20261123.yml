@@ -9,6 +9,7 @@ on:
       - 'scripts/extend-morphology-20261123.py'
       - 'scripts/activate-safe-forms-20261123.py'
       - 'scripts/data/relation-draft-20261123.json'
+      - 'scripts/check-library-v2.cjs'
       - 'scripts/semantic-review.cjs'
       - 'scripts/export-library.cjs'
       - 'tests/editorial-gaps-published.test.ts'
@@ -53,7 +54,6 @@ jobs:
       - name: Test active runtime forms and typed semantic graph
         run: |
           npm test
-          node scripts/check-offline-release.cjs dist || true
           npm run check:design-system
           npm run build
           node scripts/check-offline-release.cjs dist
