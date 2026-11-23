@@ -87,11 +87,56 @@ export function materialCandidates(words:Word[],l:Learning):Word[]{
  for(const w of generated)unique.set(w.label,w);
  return [...words,...unique.values()];
 }
+/**
+ * Written syllables for beginner reading, not line-break hyphenation.
+ * Each syllable contains exactly one vowel. A soft/hard sign cannot start a
+ * syllable, Й belongs to the previous syllable, and consonant clusters are
+ * kept together only when they form a familiar Russian onset (ве-сна,
+ * се-стра). This avoids unreadable groups such as по-дсо-лнух.
+ *
+ * Some Russian words admit more than one phonetic segmentation; use a
+ * predictable, child-readable spelling here rather than changing word data.
+ */
+const syllableVowels='АЕЁИОУЫЭЮЯ';
+const readableOnsets=new Set([
+ 'БЛ','БР','ВЗ','ВЛ','ВН','ВР','ГЛ','ГН','ГР','ДВ','ДР','ЖД',
+ 'ЗВ','ЗД','ЗЛ','ЗН','КВ','КЛ','КР','ПЛ','ПР',
+ 'СВ','СЛ','СМ','СН','СП','СТ','СТВ','СТЛ','СТН','СТР',
+ 'ТВ','ТР','ФЛ','ФР','ХВ','ХЛ','ХР','ЧТ','ШЛ','ШН',
+ 'СКВ','СКЛ','СКР','СПЛ','СПР','ВСТ','ВСТР'
+]);
+function writtenSyllableCut(chars:string[],leftVowel:number,rightVowel:number):number{
+ const start=leftVowel+1;
+ const between=chars.slice(start,rightVowel);
+ if(between.length===0)return rightVowel; // а-ист, по-эт
+ // Ъ is a separator; Ь before another consonant closes the previous
+ // syllable (дель-фин, паль-то). Before a vowel Ь stays with its onset
+ // (се-мья, во-ро-бьи) instead of becoming a syllable's first letter.
+ const hard=between.lastIndexOf('Ъ');
+ if(hard!==-1)return start+hard+1;
+ const soft=between.lastIndexOf('Ь');
+ if(soft!==-1)return soft===between.length-1?start:start+soft+1;
+ const glide=between.lastIndexOf('Й');
+ if(glide!==-1)return start+glide+1; // май-ка, чай-ник
+ if(between.length===1)return start; // во-да
+ // Prefer a pronounceable onset; otherwise close the previous syllable
+ // before the last consonant: под-сол-нух, кош-ка, кор-зина.
+ for(let i=0;i<between.length-1;i++){
+  if(readableOnsets.has(between.slice(i).join('')))return start+i;
+ }
+ return rightVowel-1;
+}
+export function divideIntoSyllables(word:string):string{
+ const chars=[...word];
+ const vowels=chars.flatMap((c,i)=>syllableVowels.includes(c)?[i]:[]);
+ if(vowels.length<2)return word;
+ const cuts=new Set(vowels.slice(0,-1).map((v,i)=>writtenSyllableCut(chars,v,vowels[i+1])));
+ return chars.map((c,i)=>(cuts.has(i)?'-':'')+c).join('');
+}
 /** Display-only syllable support; never changes spelling used by filters or IDs. */
 export function readingLabel(text:string,l:Learning):string{
  if(!includesReading(l)&&!l.reading?.splitSyllables)return text;
- const upper=text.toLocaleUpperCase('ru');if(!l.reading?.splitSyllables)return upper;
- return upper.replace(/[А-ЯЁ]+/g,word=>{const indices=[...word].flatMap((c,i)=>'АЕЁИОУЫЭЮЯ'.includes(c)?[i]:[]);const cuts:number[]=[];
- for(let j=0;j<indices.length-1;j++){let cut=indices[j]+1;const next=indices[j+1];if(cut<next&&'ЙЬЪ'.includes(word[cut]))cut++;if(next-cut>1&&'ЛМНР'.includes(word[cut])&&!'ЛМНРЙ'.includes(word[cut+1]))cut++;cuts.push(cut)}
- return [...word].map((c,i)=>(cuts.includes(i)?'·':'')+c).join('');});
+ const upper=text.toLocaleUpperCase('ru');
+ if(!l.reading?.splitSyllables)return upper;
+ return upper.replace(/[А-ЯЁ]+/g,divideIntoSyllables);
 }
