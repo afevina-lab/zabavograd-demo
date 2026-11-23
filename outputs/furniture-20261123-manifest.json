@@ -1,0 +1,162 @@
+[
+  {
+    "word": "шкаф",
+    "src": "/assets/words/furniture-20261123-0.webp",
+    "width": 1254,
+    "height": 1254,
+    "category": "Дом и быт/Мебель",
+    "reviewed": true
+  },
+  {
+    "word": "комод",
+    "src": "/assets/words/furniture-20261123-1.webp",
+    "width": 1254,
+    "height": 1254,
+    "category": "Дом и быт/Мебель",
+    "reviewed": true
+  },
+  {
+    "word": "полка",
+    "src": "/assets/words/furniture-20261123-2.webp",
+    "width": 1774,
+    "height": 887,
+    "category": "Дом и быт/Мебель",
+    "reviewed": true
+  },
+  {
+    "word": "тумбочка",
+    "src": "/assets/words/furniture-20261123-3.webp",
+    "width": 1254,
+    "height": 1254,
+    "category": "Дом и быт/Мебель",
+    "reviewed": true
+  },
+  {
+    "word": "кресло",
+    "src": "/assets/words/furniture-20261123-4.webp",
+    "width": 1254,
+    "height": 1254,
+    "category": "Дом и быт/Мебель",
+    "reviewed": true
+  },
+  {
+    "word": "диван",
+    "src": "/assets/words/furniture-20261123-5.webp",
+    "width": 1536,
+    "height": 1024,
+    "category": "Дом и быт/Мебель",
+    "reviewed": true
+  },
+  {
+    "word": "стул",
+    "src": "/assets/words/furniture-20261123-6.webp",
+    "width": 1254,
+    "height": 1254,
+    "category": "Дом и быт/Мебель",
+    "reviewed": true
+  },
+  {
+    "word": "стол",
+    "src": "/assets/words/furniture-20261123-7.webp",
+    "width": 1254,
+    "height": 1254,
+    "category": "Дом и быт/Мебель",
+    "reviewed": true
+  },
+  {
+    "word": "пуф",
+    "src": "/assets/words/furniture-20261123-8.webp",
+    "width": 1254,
+    "height": 1254,
+    "category": "Дом и быт/Мебель",
+    "reviewed": true
+  },
+  {
+    "word": "торшер",
+    "src": "/assets/words/furniture-20261123-9.webp",
+    "width": 1254,
+    "height": 1254,
+    "category": "Дом и быт/Предметы домашнего обихода/Освещение и электричество/Осветительные приборы",
+    "reviewed": true
+  },
+  {
+    "word": "вешалка",
+    "src": "/assets/words/furniture-20261123-10.webp",
+    "width": 1254,
+    "height": 1254,
+    "category": "Дом и быт/Предметы домашнего обихода/Хранение вещей",
+    "reviewed": true
+  },
+  {
+    "word": "арка",
+    "src": "/assets/words/furniture-20261123-11.webp",
+    "width": 1254,
+    "height": 1254,
+    "category": "Общество и окружающая среда/Город и село/Улицы и общественные пространства",
+    "reviewed": true
+  },
+  {
+    "word": "очки",
+    "src": "/assets/words/furniture-20261123-12.webp",
+    "width": 1536,
+    "height": 1024,
+    "category": "Человек/Одежда, обувь и аксессуары/Аксессуары",
+    "reviewed": true
+  },
+  {
+    "word": "стеллаж",
+    "src": "/assets/words/furniture-20261123-13.webp",
+    "width": 1199,
+    "height": 1312,
+    "category": "Дом и быт/Мебель",
+    "reviewed": true
+  },
+  {
+    "word": "табурет",
+    "src": "/assets/words/furniture-20261123-14.webp",
+    "width": 1312,
+    "height": 1199,
+    "category": "Дом и быт/Мебель",
+    "reviewed": true
+  },
+  {
+    "word": "вентилятор",
+    "src": "/assets/words/furniture-20261123-15.webp",
+    "width": 1254,
+    "height": 1254,
+    "category": "Дом и быт/Бытовая техника и электроника/Техника для дома",
+    "reviewed": true
+  },
+  {
+    "word": "книжный шкаф",
+    "src": "/assets/words/furniture-20261123-16.webp",
+    "width": 1024,
+    "height": 1536,
+    "category": "Дом и быт/Мебель",
+    "reviewed": true
+  },
+  {
+    "word": "скамейка",
+    "src": "/assets/words/furniture-20261123-17.webp",
+    "width": 1536,
+    "height": 1024,
+    "category": "Дом и быт/Мебель",
+    "reviewed": true
+  },
+  {
+    "word": "статуя",
+    "src": "/assets/words/furniture-20261123-18.webp",
+    "width": 1024,
+    "height": 1536,
+    "category": "Общество и окружающая среда/Город и село/Улицы и общественные пространства",
+    "reviewed": true
+  },
+  {
+    "word": "письменный стол",
+    "src": "/assets/words/furniture-20261123-19.webp",
+    "width": 1536,
+    "height": 1024,
+    "category": "Дом и быт/Мебель",
+    "reviewed": true
+  }
+]

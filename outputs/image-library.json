@@ -7437,6 +7437,386 @@
           "format": "webp"
         }
       ]
+    },
+    {
+      "id": "ru-home-20261105-f2834e7d-sense",
+      "word_id": "ru-home-20261105-f2834e7d",
+      "label": "шкаф",
+      "meaning": "шкаф",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-home-20261105-f2834e7d",
+          "label": "шкаф",
+          "src": "/assets/words/furniture-20261123-0.webp",
+          "sha256": "1b6a7fa0d9cd8287f2260088b706b0d99d68ce683c58e2fa32678f2c2a922e7e",
+          "width": 1254,
+          "height": 1254,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-f84c356b-sense",
+      "word_id": "ru-home-20261105-f84c356b",
+      "label": "комод",
+      "meaning": "комод",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-home-20261105-f84c356b",
+          "label": "комод",
+          "src": "/assets/words/furniture-20261123-1.webp",
+          "sha256": "54d3443ffc1637fd08359b4e4daf9af72a6da9bf31bfaaa66970d0942430c929",
+          "width": 1254,
+          "height": 1254,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-8330865d-sense",
+      "word_id": "ru-home-20261105-8330865d",
+      "label": "полка",
+      "meaning": "полка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-home-20261105-8330865d",
+          "label": "полка",
+          "src": "/assets/words/furniture-20261123-2.webp",
+          "sha256": "00ee6030587d47fb63df767e14e66a6e620186f5489c5fcfa9e9eafc10e9dcb1",
+          "width": 1774,
+          "height": 887,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-f197418-sense",
+      "word_id": "ru-home-20261105-f197418",
+      "label": "тумбочка",
+      "meaning": "тумбочка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-home-20261105-f197418",
+          "label": "тумбочка",
+          "src": "/assets/words/furniture-20261123-3.webp",
+          "sha256": "8105cde29ef6cf776a02d5a43f686017b5fb5a40b7de8d4230e7154b7735252d",
+          "width": 1254,
+          "height": 1254,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-7074370-sense",
+      "word_id": "ru-home-20261105-7074370",
+      "label": "кресло",
+      "meaning": "кресло",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-home-20261105-7074370",
+          "label": "кресло",
+          "src": "/assets/words/furniture-20261123-4.webp",
+          "sha256": "9b06c3eb303059f81aca6eb7084beb55dfa70d6e9db47fe8829e418b69a4a79c",
+          "width": 1254,
+          "height": 1254,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-c54e368a-sense",
+      "word_id": "ru-home-20261105-c54e368a",
+      "label": "диван",
+      "meaning": "диван",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-home-20261105-c54e368a",
+          "label": "диван",
+          "src": "/assets/words/furniture-20261123-5.webp",
+          "sha256": "5fdb5fea4df7f0ae5130c1cf47e2bfa48bd860881dda7dc099fc2436a5c35b93",
+          "width": 1536,
+          "height": 1024,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-83f6f264-sense",
+      "word_id": "ru-home-20261105-83f6f264",
+      "label": "стул",
+      "meaning": "стул",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-home-20261105-83f6f264",
+          "label": "стул",
+          "src": "/assets/words/furniture-20261123-6.webp",
+          "sha256": "314227700ba6cd90262c655f1a0d343589e068dd4640e5feff8766ba89814e79",
+          "width": 1254,
+          "height": 1254,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-9769581b-sense",
+      "word_id": "ru-home-20261105-9769581b",
+      "label": "стол",
+      "meaning": "стол",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-home-20261105-9769581b",
+          "label": "стол",
+          "src": "/assets/words/furniture-20261123-7.webp",
+          "sha256": "50be498450266261367584b380c7da38fd0d94660eaf2ce4e916476f83c26365",
+          "width": 1254,
+          "height": 1254,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-723ab1af-sense",
+      "word_id": "ru-home-20261105-723ab1af",
+      "label": "пуф",
+      "meaning": "пуф",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-home-20261105-723ab1af",
+          "label": "пуф",
+          "src": "/assets/words/furniture-20261123-8.webp",
+          "sha256": "e306a23c2e1dd04d420ad16c444a29b6c6400261f0a793b63116126954fbbf8c",
+          "width": 1254,
+          "height": 1254,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-76b58058-sense",
+      "word_id": "ru-home-20261105-76b58058",
+      "label": "торшер",
+      "meaning": "торшер",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-home-20261105-76b58058",
+          "label": "торшер",
+          "src": "/assets/words/furniture-20261123-9.webp",
+          "sha256": "6ebdcbb6f02b74cd7f5905047cc34c22cb0e302e87d8a0bb9c97dff9ebcae40b",
+          "width": 1254,
+          "height": 1254,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-442b0155-sense",
+      "word_id": "ru-home-20261105-442b0155",
+      "label": "вешалка",
+      "meaning": "вешалка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-home-20261105-442b0155",
+          "label": "вешалка",
+          "src": "/assets/words/furniture-20261123-10.webp",
+          "sha256": "f5c36725582b172be8415e175dcc44905f04099c90cb837bc543e42d29329dd2",
+          "width": 1254,
+          "height": 1254,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "image-pack-20261123-30fa6e611a11-sense",
+      "word_id": "image-pack-20261123-30fa6e611a11",
+      "label": "арка",
+      "meaning": "арка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-image-pack-20261123-30fa6e611a11",
+          "label": "арка",
+          "src": "/assets/words/furniture-20261123-11.webp",
+          "sha256": "ace033f962409663e349dbff15166da6eb43093495466ebbd0a0fdc45b840a4c",
+          "width": 1254,
+          "height": 1254,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0028-sense",
+      "word_id": "ru-noun-20261109-0028",
+      "label": "очки",
+      "meaning": "очки",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-noun-20261109-0028",
+          "label": "очки",
+          "src": "/assets/words/furniture-20261123-12.webp",
+          "sha256": "f506e261b897e549bd7921d476bc9163181f00b246b8193a304359e7d18e1bbb",
+          "width": 1536,
+          "height": 1024,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-c3f14a3b-sense",
+      "word_id": "ru-home-20261105-c3f14a3b",
+      "label": "стеллаж",
+      "meaning": "стеллаж",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-home-20261105-c3f14a3b",
+          "label": "стеллаж",
+          "src": "/assets/words/furniture-20261123-13.webp",
+          "sha256": "8d7f36e748866e0a6c74a288bef1911c09b1f2867e2ef037b79c67cbc9664d1c",
+          "width": 1199,
+          "height": 1312,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-217a4612-sense",
+      "word_id": "ru-home-20261105-217a4612",
+      "label": "табурет",
+      "meaning": "табурет",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-home-20261105-217a4612",
+          "label": "табурет",
+          "src": "/assets/words/furniture-20261123-14.webp",
+          "sha256": "1c03a0b87b796ab09c23641d7e5a1b2f60f8814ea5d386495e502c26c60cc972",
+          "width": 1312,
+          "height": 1199,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-a5703d77-sense",
+      "word_id": "ru-home-20261105-a5703d77",
+      "label": "вентилятор",
+      "meaning": "вентилятор",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-ru-home-20261105-a5703d77",
+          "label": "вентилятор",
+          "src": "/assets/words/furniture-20261123-15.webp",
+          "sha256": "c4d9d4c75562915779e04fb4604c952454dc2e9bf171325fc668c431a8cea2a9",
+          "width": 1254,
+          "height": 1254,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "image-pack-20261123-58f5ba4e43f3-sense",
+      "word_id": "image-pack-20261123-58f5ba4e43f3",
+      "label": "книжный шкаф",
+      "meaning": "книжный шкаф",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-image-pack-20261123-58f5ba4e43f3",
+          "label": "книжный шкаф",
+          "src": "/assets/words/furniture-20261123-16.webp",
+          "sha256": "61f08ecf0f73195a7e8988919e0570a9aa6f4b66951155b6c3a3509dfbce573a",
+          "width": 1024,
+          "height": 1536,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "image-pack-20261123-1b7d9df0e6b5-sense",
+      "word_id": "image-pack-20261123-1b7d9df0e6b5",
+      "label": "скамейка",
+      "meaning": "скамейка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-image-pack-20261123-1b7d9df0e6b5",
+          "label": "скамейка",
+          "src": "/assets/words/furniture-20261123-17.webp",
+          "sha256": "dc3f9d7dbf44ecb05be2742547af0661508479487febd9d6834988ff5e3f4464",
+          "width": 1536,
+          "height": 1024,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "image-pack-20261123-f20acaf756df-sense",
+      "word_id": "image-pack-20261123-f20acaf756df",
+      "label": "статуя",
+      "meaning": "статуя",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-image-pack-20261123-f20acaf756df",
+          "label": "статуя",
+          "src": "/assets/words/furniture-20261123-18.webp",
+          "sha256": "92ec2b51f291b96d28203fe473b3082abd5a6d93013e0923b77b9ffcf082e546",
+          "width": 1024,
+          "height": 1536,
+          "format": "webp"
+        }
+      ]
+    },
+    {
+      "id": "image-pack-20261123-c5fa0717ea6d-sense",
+      "word_id": "image-pack-20261123-c5fa0717ea6d",
+      "label": "письменный стол",
+      "meaning": "письменный стол",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-20261123-image-pack-20261123-c5fa0717ea6d",
+          "label": "письменный стол",
+          "src": "/assets/words/furniture-20261123-19.webp",
+          "sha256": "8953862723d71cf9aa21c376fa9d2bc6def2b6f44b8ed384dae60ffacb28e8b0",
+          "width": 1536,
+          "height": 1024,
+          "format": "webp"
+        }
+      ]
     }
   ]
 }
