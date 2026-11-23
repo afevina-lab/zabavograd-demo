@@ -55,6 +55,13 @@ function alignSoundLetters(word,tokens){
   const letter=letters[i];
   const sound=tokens[j];
   if(SOFT_MARKS.has(letter))update(i,j,i+1,j,0,[]);
+  // The spelling СЧ is commonly pronounced as a single [Щ']: расчёска,
+  // счастье. Consume both letters together so unrelated unambiguous sounds
+  // (particularly word-initial Р) retain their own safe alignment. The
+  // fused [Щ'] still gets the letter Ч, and remains ineligible as an
+  // automation target because its spoken phoneme differs from that letter.
+  if(letter==='с'&&letters[i+1]==='ч'&&['щ',"щ'"].includes(sound))
+   update(i,j,i+2,j+1,0.5,[j]);
   // Some consonants are silent, or merged with a doubled grapheme.
   else if(j<m&&i+1<n&&letters[i+1]===letter&&SOUND_TO_LETTER(sound)===letter)
    update(i,j,i+1,j,3,[]);
