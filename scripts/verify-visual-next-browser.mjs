@@ -13,6 +13,11 @@ await runBrowserProbe({theme,outputDirectory:output,rootDirectory:'dist-visual'}
    await evaluate("document.querySelector('button[aria-label=\"Увеличить: Количество элементов\"]').click()");
    await until("document.querySelector('.v-quantity input[type=number]').value==='9'");
    assert(await evaluate("document.querySelector('.v-quantity input[type=range]').value==='9'"),'Quantity range mismatch');
+   await evaluate("[...document.querySelectorAll('.v-disclosure>summary')].find(e=>e.textContent==='Правила игры').click()");
+   assert(await evaluate("(()=>{const e=[...document.querySelectorAll('.v-range-track input')],a=e[0].getBoundingClientRect(),b=e[1].getBoundingClientRect();return e.length===2&&a.width>0&&Math.abs(a.left-b.left)<1&&Math.abs(a.top-b.top)<1&&Math.abs(a.width-b.width)<1})()"),'Range must use one shared track');
+   await evaluate("document.querySelector('.v-range-track input').focus()");
+   await cmd('Input.dispatchKeyEvent',{type:'keyDown',key:'ArrowRight',code:'ArrowRight',windowsVirtualKeyCode:39});await cmd('Input.dispatchKeyEvent',{type:'keyUp',key:'ArrowRight',code:'ArrowRight',windowsVirtualKeyCode:39});
+   await until("document.querySelector('.v-range-track input').value==='2'");
    await screenshot(`${game}-${width}-settings`);
    await evaluate("[...document.querySelectorAll('button')].find(e=>e.textContent==='Начать игру').click()");await until("!!document.querySelector('.v-toolbar')");
    assert(await evaluate("(()=>{const bar=document.querySelector('.v-toolbar').getBoundingClientRect();return [...document.querySelectorAll('.v-toolbar .v-icon-button')].every(e=>{const r=e.getBoundingClientRect();return Math.abs(r.height/bar.height-.6)<.02&&Math.abs(r.top+r.height/2-bar.top-bar.height/2)<1&&r.left>=0&&r.right<=innerWidth})})()"),'Toolbar geometry '+game+' '+width);

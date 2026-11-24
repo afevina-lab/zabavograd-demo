@@ -1,0 +1,8 @@
+import {useId} from 'react';
+import {THEMES,THEME_IDS,type ThemeId} from '../../design-system/themes.ts';
+export function ThemeChoice({value,onChange}:{value:ThemeId;onChange:(value:ThemeId)=>void}){return <div className="v-theme-choice" role="group" aria-label="Оформление игры">{THEME_IDS.map(id=><button key={id} type="button" aria-pressed={value===id} onClick={()=>onChange(id)}><span className="v-theme-thumbnail" style={{backgroundImage:THEMES[id].scene.background?`url("${import.meta.env.BASE_URL+THEMES[id].scene.background}")`:undefined}} aria-hidden="true"/><span>{THEMES[id].label}</span></button>)}</div>}
+export function Range({label,value,min,max,onChange,disabled=false}:{label:string;value:readonly [number,number];min:number;max:number;onChange:(next:[number,number])=>void;disabled?:boolean}){
+ const id=useId();
+ const change=(which:0|1,n:number)=>{if(!Number.isFinite(n))return;const next:[number,number]=[...value];next[which]=Math.max(min,Math.min(max,Math.round(n)));if(which===0)next[0]=Math.min(next[0],next[1]);else next[1]=Math.max(next[0],next[1]);onChange(next)};
+ return <fieldset className="v-range"><legend>{label}</legend><div className="v-range-track"><input id={id+'-min'} aria-label={label+' — от'} type="range" min={min} max={max} value={value[0]} disabled={disabled} onChange={e=>change(0,+e.target.value)}/><input id={id+'-max'} aria-label={label+' — до'} type="range" min={min} max={max} value={value[1]} disabled={disabled} onChange={e=>change(1,+e.target.value)}/></div><div className="v-range-values"><output htmlFor={id+'-min'}>От {value[0]}</output><output htmlFor={id+'-max'}>До {value[1]}</output></div></fieldset>;
+}
