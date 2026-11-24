@@ -22,7 +22,8 @@ await runBrowserProbe({theme,outputDirectory:output,rootDirectory:'dist-visual'}
    await until("document.querySelector('dialog[open] [role=alert]')?.textContent==='Введите название набора.'");
    await evaluate("document.querySelector('dialog[open] input').focus()");
    await cmd('Input.insertText',{text:setName});
-   await cmd('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});await cmd('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});
+   assert.equal(await evaluate("document.querySelector('dialog[open] input').value"),setName,'Keyboard input must reach save form');
+   await cmd('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',windowsVirtualKeyCode:13,text:'\r',unmodifiedText:'\r'});await cmd('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});
    await until("!document.querySelector('dialog[open]')");
    assert(await evaluate("(()=>{const doc=JSON.parse(localStorage.getItem('zabavograd.material-sets.v1'));return doc.version===1&&doc.sets.some(s=>s.name==="+JSON.stringify(setName)+"&&s.id&&s.learning.mode==='any')&&document.activeElement?.getAttribute('aria-label')==='Сохранить набор'})()"),'Canonical saved set or restored focus missing');
    await evaluate("[...document.querySelectorAll('.v-disclosure>summary')].find(e=>e.textContent==='Правила игры').click()");
