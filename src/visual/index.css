@@ -4,9 +4,15 @@
 @import './primitives/icons.css' layer(primitives);
 @import './primitives/buttons.css' layer(primitives);
 @import './primitives/controls.css' layer(primitives);
+@import './primitives/select.css' layer(primitives);
+@import './primitives/disclosure.css' layer(primitives);
+@import './primitives/quantity.css' layer(primitives);
+@import './primitives/range.css' layer(primitives);
 @import './primitives/selection.css' layer(primitives);
 @import './compositions/layouts.css' layer(compositions);
 @import './games/boards.css' layer(games);
 @layer motion{
  @media(prefers-reduced-motion:reduce){.v-root *,.v-root *::before,.v-root *::after{animation-duration:0s;transition-duration:0s;scroll-behavior:auto}}
 }
+
+
