@@ -1,0 +1,52 @@
+name: Visual architecture baseline (no deployment)
+on:
+  push:
+    branches: [visual/composition-architecture-20261124]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        theme: [neutral, forest, space]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: tools
+      - uses: actions/checkout@v4
+        with:
+          ref: 953797fdc6969bbd3ae939e970ea57a2a596c619
+          path: baseline
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build immutable baseline
+        working-directory: baseline
+        run: |
+          npm install --no-package-lock --ignore-scripts
+          python -m pip install --disable-pip-version-check pillow
+          node scripts/sync-runtime.cjs
+          ./node_modules/.bin/tsc --noEmit
+          ./node_modules/.bin/vite build
+          python scripts/prepare-card-skins.py dist
+          printf '%s' '953797fdc6969bbd3ae939e970ea57a2a596c619' > source.sha
+      - name: Capture settings, expanded panels, game, pause and result
+        working-directory: baseline
+        env:
+          UI_THEME: ${{ matrix.theme }}
+        run: node ../tools/scripts/capture-visual-baseline.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: visual-baseline-${{ matrix.theme }}
+          path: |
+            baseline/ui-smoke/
+            baseline/source.sha
+          retention-days: 90
