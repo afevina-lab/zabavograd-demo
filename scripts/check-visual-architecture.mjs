@@ -17,6 +17,8 @@ for(const file of files){const source=readFileSync(file,'utf8');
 }
 const realShell=readFileSync('src/design-system/SettingsWindow.tsx','utf8');
 assert(!/\bChildren\b|cloneElement|\barrange\b|game===/.test(realShell),'Real settings shell must use explicit slots');
+const realToolbar=readFileSync('src/GameToolbar.tsx','utf8');
+assert(!/\bChildren\b|cloneElement|isValidElement|\bcollect\b/.test(realToolbar),'Real toolbar must use explicit action slots');
 const entry=readFileSync('src/visual/index.css','utf8');assert(entry.includes('@layer reset, foundation, primitives, compositions, games, motion;'),'Missing declared cascade order');
 assert(!readFileSync('src/main.tsx','utf8').includes('./visual/'),'Production entry must remain unchanged before migration acceptance');
 const styles=validateVisualStyles(files.filter(file=>file.endsWith('.css')).map(file=>({file,source:readFileSync(file,'utf8'),layer:file.endsWith('/reset.css')?'reset':file.split('/')[2]})));

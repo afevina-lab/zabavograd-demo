@@ -29,10 +29,13 @@ class VisualComparisonTests(unittest.TestCase):
         result, data = self.run_comparison()
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(data['results'][0]['changedPixels'], 0)
+        self.assertTrue(data['results'][0]['exactMatch'])
 
     def test_small_channel_noise_is_tolerated(self):
-        result, _ = self.run_comparison(changed=(108, 108, 108))
+        result, data = self.run_comparison(changed=(108, 108, 108))
         self.assertEqual(result.returncode, 0, result.stderr)
+
+        self.assertFalse(data['results'][0]['exactMatch'])
 
     def test_significant_change_fails(self):
         result, data = self.run_comparison(changed=(255, 0, 0))

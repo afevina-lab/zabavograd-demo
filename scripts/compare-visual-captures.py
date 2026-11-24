@@ -33,7 +33,7 @@ for candidate in files:
     changed = mask.histogram()[255]
     ratio = changed / (before.width * before.height)
     passed = ratio <= args.max_changed_ratio
-    results.append({'file': candidate.name, 'passed': passed, 'changedPixels': changed, 'changedRatio': ratio})
+    results.append({'file': candidate.name, 'passed': passed, 'exactMatch': delta.getbbox() is None, 'maxChannelDifference': greatest.getextrema()[1], 'changedPixels': changed, 'changedRatio': ratio})
     if not passed:
         before.save(args.report / ('before-' + candidate.name))
         after.save(args.report / ('after-' + candidate.name))
@@ -42,6 +42,6 @@ for candidate in files:
         highlighted.save(args.report / ('diff-' + candidate.name))
 (args.report / 'comparison.json').write_text(json.dumps({'pixelTolerance': args.pixel_tolerance, 'maxChangedRatio': args.max_changed_ratio, 'results': results}, indent=2), encoding='utf-8')
 failed = [r for r in results if not r['passed']]
-print(json.dumps({'screenshots': len(results), 'failed': len(failed), 'largestChangedRatio': max(r.get('changedRatio', 1) for r in results)}))
+print(json.dumps({'screenshots': len(results), 'failed': len(failed), 'exactMatches': sum(r.get('exactMatch', False) for r in results), 'largestChangedRatio': max(r.get('changedRatio', 1) for r in results)}))
 if failed:
     raise SystemExit('Visual differences need review; reference was not changed')
