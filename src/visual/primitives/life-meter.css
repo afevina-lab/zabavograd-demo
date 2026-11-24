@@ -1,0 +1,4 @@
+.v-life-meter{display:inline-flex;align-items:center;min-width:0}
+.v-life-button{display:inline-flex;align-items:center;justify-content:center;gap:2px;border:0;padding:0;background:none;color:inherit;min-height:var(--v-target);line-height:1}
+.v-life-heart{position:relative;display:block;width:22px;height:24px;flex:none}
+.v-life-heart>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}

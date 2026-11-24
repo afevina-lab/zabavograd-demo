@@ -11,3 +11,7 @@ export {PickerDialog} from './compositions/PickerDialog.tsx';
 export {BoundedArtwork} from './primitives/BoundedArtwork.tsx';
 export {SoundChoice} from './primitives/SoundChoice.tsx';
 export {MaterialPreview} from './compositions/MaterialPreview.tsx';
+export {LifeMeter} from './primitives/LifeMeter.tsx';
+export {SortingLayout} from './games/SortingLayout.tsx';
+export {MatchingLayout} from './games/MatchingLayout.tsx';
+export {ConveyorTrack} from './games/ConveyorTrack.tsx';
