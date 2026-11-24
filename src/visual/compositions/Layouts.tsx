@@ -1,14 +1,11 @@
-import {useId,useState,type ReactNode} from 'react';
+import {useId,type ReactNode} from 'react';
 import {Surface} from '../primitives/Controls.tsx';
-import {IconButton} from '../primitives/Buttons.tsx';
-export type SettingsSlots={title:string;headerActions?:ReactNode;leading?:ReactNode;primary:ReactNode;secondary?:ReactNode;appearance?:ReactNode;footer:ReactNode;supplementary?:ReactNode};
-/** Explicit slots: ownership and column order belong to the caller. */
-export function SettingsLayout({title,headerActions,leading,primary,secondary,appearance,footer,supplementary}:SettingsSlots){
- const [expanded,setExpanded]=useState(false),appearanceId=useId(),titleId=useId();
- return <div className="v-settings-backdrop"><section className="v-settings v-surface--panel" role="dialog" aria-modal="true" aria-labelledby={titleId}><header className="v-settings-heading"><div><h1 id={titleId}>{title}</h1><p className="v-settings-subtitle">Подготовка к игре</p></div><div className="v-action-row">{headerActions}</div></header><div className="v-settings-workspace"><div className="v-settings-scroll">{leading}<div className="v-settings-columns"><div className="v-stack">{primary}</div>{secondary&&<div className="v-stack">{secondary}</div>}</div>{supplementary}</div>{appearance&&<aside className="v-settings-appearance"><button type="button" className="v-appearance-toggle" aria-expanded={expanded} aria-controls={appearanceId} onClick={()=>setExpanded(v=>!v)}>Оформление</button><div id={appearanceId} className="v-appearance-scroll" data-expanded={expanded}>{appearance}</div></aside>}</div><footer className="v-settings-footer">{footer}</footer></section></div>;
-}
-export function Toolbar({pause,sound,hint,task,counters,fullscreen}:{pause:ReactNode;sound:ReactNode;hint:ReactNode;task:ReactNode;counters?:ReactNode;fullscreen:ReactNode}){return <header className="v-toolbar"><nav className="v-toolbar-navigation" aria-label="Управление игрой">{pause}{sound}{hint}</nav><div className="v-toolbar-status"><strong>{task}</strong><div className="v-toolbar-counters">{counters}</div></div><div className="v-toolbar-view">{fullscreen}</div></header>}
+import {DialogContent} from './DialogContent.tsx';
+export {DialogActions} from './DialogActions.tsx';
+export {SettingsLayout,type SettingsSlots} from './SettingsLayout.tsx';
+export {Toolbar} from './Toolbar.tsx';
 export function GameLayout({toolbar,scene,board,overlay}:{toolbar:ReactNode;scene?:ReactNode;board:ReactNode;overlay?:ReactNode}){return <div className="v-game">{toolbar}<main className="v-game-stage"><div className="v-game-scene" aria-hidden="true">{scene}</div><div className="v-game-board">{board}</div></main>{overlay}</div>}
-export function DialogActions({onSettings,onHome,action}:{onSettings:()=>void;onHome:()=>void;action:{kind:'continue'|'repeat';onClick:()=>void}}){return <div className="v-dialog-actions"><IconButton label="Настройки" icon="Settings" onClick={onSettings}/><IconButton label="Домой" icon="Home1" onClick={onHome}/><IconButton label={action.kind==='continue'?'Продолжить':'Ещё раз'} icon={action.kind==='continue'?'Play':'Return1'} onClick={action.onClick}/></div>}
 /** Native dialog provides focus containment, inert background and Escape semantics. */
-export function GameDialog({title,description,award,actions,onClose}:{title:string;description?:ReactNode;award?:ReactNode;actions:ReactNode;onClose:()=>void}){const id=useId();return <dialog className="v-game-dialog" aria-labelledby={id} ref={node=>{if(node&&!node.open)node.showModal()}} onCancel={e=>{e.preventDefault();onClose()}}><Surface>{award&&<div className="v-dialog-award">{award}</div>}<div className="v-dialog-scroll"><h2 id={id}>{title}</h2>{description&&<div>{description}</div>}{actions}</div></Surface></dialog>}
+export function GameDialog({title,description,award,actions,onClose}:{title:string;description?:ReactNode;award?:ReactNode;actions:ReactNode;onClose:()=>void}){const id=useId();return <dialog className="v-game-dialog" aria-labelledby={id} ref={node=>{if(node&&!node.open)node.showModal()}} onCancel={e=>{e.preventDefault();onClose()}}><Surface><DialogContent title={title} titleId={id} description={description} award={award} actions={actions}/></Surface></dialog>}
+
+

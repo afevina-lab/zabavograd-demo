@@ -1,0 +1,4 @@
+.v-game{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
+.v-game-stage{flex:1;min-width:0;min-height:0;position:relative;isolation:isolate;background:var(--zg-stage-fill)}
+.v-game-scene{position:absolute;inset:0;z-index:var(--v-layer-scene);pointer-events:none;background:var(--zg-stage-image) center/cover no-repeat;overflow:hidden}
+.v-game-board{position:relative;z-index:var(--v-layer-board);height:100%;min-height:0;min-width:0;padding:var(--v-space-4);overflow:auto}

@@ -1,0 +1,7 @@
+.v-game-dialog{border:0;padding:0;background:transparent;color:var(--ui-text);width:min(var(--v-dialog-width),calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:visible}
+.v-game-dialog::backdrop{background:#15202266}
+.v-dialog-scroll{display:flex;flex-direction:column;gap:var(--v-space-3);max-height:calc(100dvh - 120px);overflow:auto;min-height:0;text-align:center;padding:var(--v-space-4);overflow-wrap:anywhere}
+.v-dialog-actions{display:flex;gap:var(--v-space-4);justify-content:center;align-items:center;padding-block:var(--v-space-1)}
+.v-dialog-award{margin-top:-64px;margin-bottom:var(--v-space-3);display:flex;justify-content:center;position:relative}
+.v-dialog-content{position:relative;min-width:0;min-height:0}
+@media(max-height:500px){.v-dialog-scroll{padding:var(--v-space-2);gap:var(--v-space-2)}}

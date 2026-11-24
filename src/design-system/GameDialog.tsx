@@ -1,5 +1,13 @@
-import {IconButton,IconLink} from '../visual/primitives/Buttons.tsx';
+import {DialogActions as Actions} from '../visual/compositions/DialogActions.tsx';
+import {DialogContent} from '../visual/compositions/DialogContent.tsx';
 import {ScoreStars} from '../visual/primitives/ScoreStars.tsx';
-export function DialogActions({onSettings,onContinue,onRepeat}:{onSettings:()=>void;onContinue?:()=>void;onRepeat?:()=>void}){return <div className="dialog-actions"><IconButton className="icon-button" label="Настройки" icon="Settings" onClick={onSettings}/><IconLink className="icon-button" label="Домой" icon="Home1" href={import.meta.env.BASE_URL+'home.html'}/><IconButton className="icon-button primary" label={onContinue?'Продолжить':'Ещё раз'} icon={onContinue?'Play':'Return1'} onClick={onContinue||onRepeat||onSettings}/></div>}
-export function GameDialog({title,onContinue,onSettings,onRepeat,description,stars}:{title:string;onContinue?:()=>void;onSettings:()=>void;onRepeat?:()=>void;description?:string;stars?:number}){return <div className={'overlay '+(stars===undefined?'game-dialog':'result')} role="dialog" aria-modal="true" aria-label={title}><div>{stars!==undefined&&<div className="award"><ScoreStars value={stars}/></div>}<div className="panel-scroll"><h2>{title}</h2>{description&&<p>{description}</p>}<DialogActions onContinue={onContinue} onSettings={onSettings} onRepeat={onRepeat}/></div></div></div>}
-
+const actionClasses={root:'dialog-actions',button:'icon-button',primary:'primary'};
+const contentClasses={root:'',award:'award',scroll:'panel-scroll'};
+export function DialogActions({onSettings,onContinue,onRepeat}:{onSettings:()=>void;onContinue?:()=>void;onRepeat?:()=>void}){
+ return <Actions classNames={actionClasses} onSettings={onSettings} action={{kind:onContinue?'continue':'repeat',onClick:onContinue||onRepeat||onSettings}}/>;
+}
+export function GameDialog({title,onContinue,onSettings,onRepeat,description,stars}:{title:string;onContinue?:()=>void;onSettings:()=>void;onRepeat?:()=>void;description?:string;stars?:number}){
+ return <div className={'overlay '+(stars===undefined?'game-dialog':'result')} role="dialog" aria-modal="true" aria-label={title}>
+  <DialogContent classNames={contentClasses} title={title} description={description} award={stars!==undefined?<ScoreStars value={stars}/>:undefined} actions={<DialogActions onContinue={onContinue} onSettings={onSettings} onRepeat={onRepeat}/>}/>
+ </div>;
+}
