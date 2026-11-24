@@ -4,6 +4,11 @@
 @import './primitives/icons.css' layer(primitives);
 @import './primitives/buttons.css' layer(primitives);
 @import './primitives/controls.css' layer(primitives);
+@import './primitives/surface.css' layer(primitives);
+@import './primitives/field.css' layer(primitives);
+@import './primitives/chip.css' layer(primitives);
+@import './primitives/tooltip.css' layer(primitives);
+@import './primitives/toggle-group.css' layer(primitives);
 @import './primitives/card.css' layer(primitives);
 @import './primitives/flip-faces.css' layer(primitives);
 @import './primitives/bounded-artwork.css' layer(primitives);
@@ -37,6 +42,7 @@
 @layer motion{
  @media(prefers-reduced-motion:reduce){.v-root *,.v-root *::before,.v-root *::after{animation-duration:0s;transition-duration:0s;scroll-behavior:auto}}
 }
+
 
 
 

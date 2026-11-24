@@ -1,0 +1,4 @@
+.v-input{border:1px solid var(--ui-outline);border-radius:12px;background:var(--ui-setup-field,var(--ui-paper));padding:var(--v-space-3);width:100%;min-width:0;min-height:var(--v-control)}
+.v-field{display:flex;flex-direction:column;gap:var(--v-space-3);min-width:0}
+.v-field-label{line-height:1.4}
+.v-field-description{font-size:14px;line-height:1.4}

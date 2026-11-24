@@ -1,2 +1,3 @@
+import {Choice} from './visual/primitives/Choice.tsx';
 import type {Learning} from './learning.ts';
-export function TextDisplaySettings({l,setL}:{l:Learning;setL:(l:Learning)=>void}){return <label className="check text-display-setting"><input type="checkbox" role="switch" checked={!!l.reading?.splitSyllables} onChange={e=>setL({...l,reading:{...l.reading,splitSyllables:e.target.checked}})}/>Разделить на слоги</label>}
+export function TextDisplaySettings({l,setL}:{l:Learning;setL:(l:Learning)=>void}){return <Choice className="check text-display-setting" kind="switch" label="Разделить на слоги" checked={!!l.reading?.splitSyllables} onChange={splitSyllables=>setL({...l,reading:{...l.reading,splitSyllables}})}/>}

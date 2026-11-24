@@ -21,3 +21,4 @@ export {SceneSprites} from './compositions/SceneSprites.tsx';
 export {SceneCamera} from './compositions/SceneCamera.tsx';
 export {AmbientEffects} from './compositions/AmbientEffects.tsx';
 export {TimeBar} from './primitives/TimeBar.tsx';
+export {ToggleGroup} from './primitives/ToggleGroup.tsx';
