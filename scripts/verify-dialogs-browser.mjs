@@ -9,7 +9,7 @@ import {createServer} from 'node:http';
 const selectedTheme=process.env.UI_THEME||'forest';
 assert(['neutral','forest','space'].includes(selectedTheme),'Unknown UI_THEME');
 const themeIndex=['neutral','forest','space'].indexOf(selectedTheme);
-const root=resolve('dist');
+const root=resolve(process.env.UI_DIST_ROOT||'dist');
 const output=resolve(selectedTheme==='forest'?'ui-smoke/dialogs':'ui-smoke/'+selectedTheme+'/dialogs');
 mkdirSync(output,{recursive:true});
 const contentTypes={'.html':'text/html','.js':'text/javascript','.css':'text/css','.webp':'image/webp','.png':'image/png','.svg':'image/svg+xml','.json':'application/json'};

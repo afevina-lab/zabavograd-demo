@@ -1,11 +1,11 @@
-import {useId,type ButtonHTMLAttributes,type ReactNode,type CSSProperties} from 'react';
+import {useId,type ButtonHTMLAttributes,type ReactNode,type CSSProperties,type Ref} from 'react';
 import {Icon} from '../../GameUI.tsx';
 export type ButtonSize='standard'|'stepper'|'launch';
 export type IconButtonSize='standard'|'toolbar'|'heading';
 export function Button({tone='primary',size='standard',children,className='',...props}:ButtonHTMLAttributes<HTMLButtonElement>&{tone?:'primary'|'secondary'|'quiet';size?:ButtonSize}){
  return <button type="button" {...props} data-size={size} className={`v-control-button v-button v-button--${tone} ${className}`}>{children}</button>;
 }
-export function IconButton({label,icon,size='standard',...props}:Omit<ButtonHTMLAttributes<HTMLButtonElement>,'children'|'aria-label'>&{label:string;icon:string;size?:IconButtonSize}){
+export function IconButton({label,icon,size='standard',...props}:Omit<ButtonHTMLAttributes<HTMLButtonElement>,'children'|'aria-label'>&{label:string;icon:string;size?:IconButtonSize;ref?:Ref<HTMLButtonElement>}){
  return <button type="button" {...props} data-size={size} className={`v-control-button v-icon-button ${props.className||''}`} aria-label={label} title={label}><Icon name={icon}/></button>;
 }
 export function Surface({kind='panel',children,className=''}:{kind?:'panel'|'field';children:ReactNode;className?:string}){return <div className={`v-surface v-surface--${kind} ${className}`}>{children}</div>}

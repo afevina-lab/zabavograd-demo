@@ -1,11 +1,21 @@
 import {createRoot} from 'react-dom/client';
-import {useState} from 'react';
-import {ThemeChoice,Range,VisualRoot,SettingsLayout,Button,IconButton,Select,Disclosure,Choice,Chip,Quantity,Card,Artwork,GameLayout,Toolbar,GameDialog,DialogActions,MemoryBoard,SortingBoard,MatchingBoard,ConveyorBoard,TransformationBoard} from './index.tsx';
+import {useMemo,useState} from 'react';
+import {MaterialSettingsShell} from '../design-system/MaterialSettingsShell.tsx';
+import {usePresetSource} from '../design-system/MaterialPresetContext.tsx';
+import {useLibrary} from '../useLibrary.ts';
+import {initialLearning} from '../learning.ts';
+import {defaultFilters} from '../model.ts';
+import {ThemeChoice,Range,VisualRoot,Button,IconButton,Select,Disclosure,Choice,Chip,Quantity,Card,Artwork,GameLayout,Toolbar,GameDialog,DialogActions,MemoryBoard,SortingBoard,MatchingBoard,ConveyorBoard,TransformationBoard} from './index.tsx';
 import {THEME_IDS,type ThemeId} from '../design-system/themes.ts';
 import './index.css';
 const games=['memory','sorting','matching','conveyor','transformations'] as const;
 type Game=typeof games[number];
 const names:Record<Game,string>={memory:'Мемори',sorting:'Сортировка',matching:'Соотнесение',conveyor:'Конвейер',transformations:'Превращения'};
+function LabMaterialSource(){
+ const {words}=useLibrary(),learning=useMemo(()=>({...initialLearning}),[words]);
+ usePresetSource({label:'Материал стенда',learning,filters:defaultFilters,wordIds:words.slice(0,6).map(word=>word.id)},words.length>0);
+ return <span hidden data-material-source-ready={words.length>0}/>;
+}
 function Lab(){
  const params=new URLSearchParams(location.search),initial=params.get('theme') as ThemeId;
  const [theme,setTheme]=useState<ThemeId>(THEME_IDS.includes(initial)?initial:'neutral');
@@ -19,6 +29,6 @@ function Lab(){
  const board=game==='sorting'?<SortingBoard bank={cards} groups={[{id:'a',title:'Первая группа',content:cards.slice(0,2)},{id:'b',title:'Вторая группа',content:cards.slice(2,4)}]}/>:game==='matching'?<MatchingBoard>{cards}</MatchingBoard>:game==='conveyor'?<ConveyorBoard>{cards}</ConveyorBoard>:game==='transformations'?<TransformationBoard>{cards[0]}</TransformationBoard>:<MemoryBoard>{cards}</MemoryBoard>;
  const primary=<><Select label="Игра" value={game} onChange={value=>setGame(value as Game)} options={games.map(value=>({value,label:names[value]}))}/><Disclosure title="Учебный материал" open><label className="v-field">Поиск<input className="v-input" type="search" placeholder="Поиск" value={query} onChange={e=>setQuery(e.target.value)}/></label><div className="v-word-list">{words.filter(w=>w.toLocaleLowerCase('ru').includes(query.toLocaleLowerCase('ru'))).map(word=><Choice key={word} label={word} checked={selected.includes(word)} onChange={checked=>setSelected(old=>checked?[...old,word]:old.filter(w=>w!==word))}/>)}</div></Disclosure></>;
  const secondary=<><Quantity label="Количество элементов" min={2} max={20} value={count} onChange={setCount}/><Quantity label="Количество раундов" min={1} max={10} value={rounds} onChange={setRounds}/><Choice label="Подписи" kind="switch" checked={captions} onChange={setCaptions}/><Disclosure title="Правила игры"><Choice label="Звук" checked={sound} onChange={setSound}/><Range label="Длина слова" value={range} min={1} max={12} onChange={setRange}/><Button tone="quiet">Тихое действие</Button><Button disabled>Недоступное действие</Button><Chip selected={hint} onClick={()=>setHint(v=>!v)}>Подсказка</Chip></Disclosure></>;
- return <VisualRoot theme={theme}>{screen==='settings'?<SettingsLayout title={names[game]} headerActions={<IconButton size="heading" label="Домой" icon="Home1" onClick={()=>setScreen('settings')}/>} primary={primary} secondary={secondary} appearance={<ThemeChoice value={theme} onChange={setTheme}/>} footer={<><p>Материал: {count} · Раундов: {rounds}</p><Button size="launch" onClick={()=>setScreen('play')}>Начать игру</Button></>}/>:<GameLayout toolbar={toolbar} board={<>{board}<Button onClick={()=>setScreen('result')}>Показать итог</Button></>} overlay={(screen==='pause'||screen==='result')&&<GameDialog title={screen==='pause'?'Пауза':'Отлично!'} award={screen==='result'?<img width="96" height="96" src={import.meta.env.BASE_URL+'assets/rewards/star.webp'} alt="Звезда"/>:undefined} onClose={()=>setScreen('play')} actions={<DialogActions onSettings={()=>setScreen('settings')} onHome={()=>setScreen('settings')} action={{kind:screen==='pause'?'continue':'repeat',onClick:()=>setScreen('play')}}/>}/>}/>}</VisualRoot>;
+ return <VisualRoot theme={theme}>{screen==='settings'?<MaterialSettingsShell title={names[game]} onHome={()=>setScreen('settings')} leading={<LabMaterialSource/>} primary={primary} secondary={secondary} appearance={<ThemeChoice value={theme} onChange={setTheme}/>} footer={<><p>Материал: {count} · Раундов: {rounds}</p><Button size="launch" onClick={()=>setScreen('play')}>Начать игру</Button></>}/>:<GameLayout toolbar={toolbar} board={<>{board}<Button onClick={()=>setScreen('result')}>Показать итог</Button></>} overlay={(screen==='pause'||screen==='result')&&<GameDialog title={screen==='pause'?'Пауза':'Отлично!'} award={screen==='result'?<img width="96" height="96" src={import.meta.env.BASE_URL+'assets/rewards/star.webp'} alt="Звезда"/>:undefined} onClose={()=>setScreen('play')} actions={<DialogActions onSettings={()=>setScreen('settings')} onHome={()=>setScreen('settings')} action={{kind:screen==='pause'?'continue':'repeat',onClick:()=>setScreen('play')}}/>}/>}/>}</VisualRoot>;
 }
 createRoot(document.getElementById('root')!).render(<Lab/>);

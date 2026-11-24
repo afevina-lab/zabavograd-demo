@@ -14,6 +14,17 @@ await runBrowserProbe({theme,outputDirectory:output,rootDirectory:'dist-visual'}
    await evaluate("document.querySelector('button[aria-label=\"Увеличить: Количество элементов\"]').click()");
    await until("document.querySelector('.v-quantity input[type=number]').value==='9'");
    assert(await evaluate("document.querySelector('.v-quantity input[type=range]').value==='9'"),'Quantity range mismatch');
+   await until("!!document.querySelector('[data-material-source-ready=true]')");
+   const setName=`Архитектура ${game} ${width}`;
+   await evaluate("document.querySelector('button[aria-label=\"Сохранить набор\"]').click()");
+   await until("!!document.querySelector('dialog[open] form')");
+   await evaluate("document.querySelector('dialog[open] button[type=submit]').click()");
+   await until("document.querySelector('dialog[open] [role=alert]')?.textContent==='Введите название набора.'");
+   await evaluate("document.querySelector('dialog[open] input').focus()");
+   await cmd('Input.insertText',{text:setName});
+   await cmd('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});await cmd('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});
+   await until("!document.querySelector('dialog[open]')");
+   assert(await evaluate("(()=>{const doc=JSON.parse(localStorage.getItem('zabavograd.material-sets.v1'));return doc.version===1&&doc.sets.some(s=>s.name==="+JSON.stringify(setName)+"&&s.id&&s.learning.mode==='any')&&document.activeElement?.getAttribute('aria-label')==='Сохранить набор'})()"),'Canonical saved set or restored focus missing');
    await evaluate("[...document.querySelectorAll('.v-disclosure>summary')].find(e=>e.textContent==='Правила игры').click()");
    assert(await evaluate("(()=>{const e=[...document.querySelectorAll('.v-range-track input')],a=e[0].getBoundingClientRect(),b=e[1].getBoundingClientRect();return e.length===2&&a.width>0&&Math.abs(a.left-b.left)<1&&Math.abs(a.top-b.top)<1&&Math.abs(a.width-b.width)<1})()"),'Range must use one shared track');
    await evaluate("document.querySelector('.v-range-track input').focus()");
@@ -32,7 +43,7 @@ await runBrowserProbe({theme,outputDirectory:output,rootDirectory:'dist-visual'}
    assert(await evaluate("(()=>{const d=document.querySelector('dialog[open]'),r=d.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1&&r.top>=0&&r.bottom<=innerHeight+1&&d.contains(document.activeElement)})()"),'Native dialog bounds/focus '+game+' '+width);
    await screenshot(`${game}-${width}-pause`);
    await cmd('Input.dispatchKeyEvent',{type:'keyDown',key:'Escape',code:'Escape',windowsVirtualKeyCode:27});await cmd('Input.dispatchKeyEvent',{type:'keyUp',key:'Escape',code:'Escape',windowsVirtualKeyCode:27});await until("!document.querySelector('dialog[open]')");
-   report.push({theme,game,width,height,settings:true,quantity:true,toolbar:true,pauseFocus:true,escape:true});
+   report.push({theme,game,width,height,settings:true,quantity:true,savedSet:true,toolbar:true,pauseFocus:true,escape:true});
   }
  }
 });

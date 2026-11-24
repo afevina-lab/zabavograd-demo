@@ -88,6 +88,7 @@ jobs:
         run: |
           ./node_modules/.bin/vite build --config vite.visual.config.mjs
           python scripts/prepare-card-skins.py dist-visual
+          node scripts/check-offline-release.cjs dist-visual
       - uses: actions/upload-artifact@v4
         with:
           name: visual-next-build
@@ -114,6 +115,13 @@ jobs:
         env:
           UI_THEME: ${{ matrix.theme }}
         run: node scripts/verify-visual-next-browser.mjs
+      - name: Verify current games still preserve settings behavior
+        env:
+          UI_THEME: ${{ matrix.theme }}
+          UI_DIST_ROOT: dist-visual
+        run: |
+          node scripts/verify-settings-browser.mjs
+          node scripts/verify-dialogs-browser.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
