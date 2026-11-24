@@ -17,3 +17,7 @@ export {MatchingLayout} from './games/MatchingLayout.tsx';
 export {ConveyorTrack} from './games/ConveyorTrack.tsx';
 export {SelectionTree} from './compositions/SelectionTree.tsx';
 export {SavedSetList} from './compositions/SavedSetList.tsx';
+export {SceneSprites} from './compositions/SceneSprites.tsx';
+export {SceneCamera} from './compositions/SceneCamera.tsx';
+export {AmbientEffects} from './compositions/AmbientEffects.tsx';
+export {TimeBar} from './primitives/TimeBar.tsx';
