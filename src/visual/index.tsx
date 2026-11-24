@@ -9,3 +9,5 @@ export {ThemeChoice,Range} from './primitives/Selection.tsx';
 export {PickerTrigger} from './primitives/PickerTrigger.tsx';
 export {PickerDialog} from './compositions/PickerDialog.tsx';
 export {BoundedArtwork} from './primitives/BoundedArtwork.tsx';
+export {SoundChoice} from './primitives/SoundChoice.tsx';
+export {MaterialPreview} from './compositions/MaterialPreview.tsx';

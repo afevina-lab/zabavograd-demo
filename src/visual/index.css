@@ -7,6 +7,8 @@
 @import './primitives/card.css' layer(primitives);
 @import './primitives/bounded-artwork.css' layer(primitives);
 @import './primitives/choice.css' layer(primitives);
+@import './primitives/sound-choice.css' layer(primitives);
+@import './primitives/fit-copy.css' layer(primitives);
 @import './primitives/add-action.css' layer(primitives);
 @import './primitives/picker-trigger.css' layer(primitives);
 @import './primitives/select.css' layer(primitives);
@@ -15,6 +17,7 @@
 @import './primitives/range.css' layer(primitives);
 @import './primitives/selection.css' layer(primitives);
 @import './compositions/settings.css' layer(compositions);
+@import './compositions/material-preview.css' layer(compositions);
 @import './compositions/search-choices.css' layer(compositions);
 @import './compositions/picker-dialog.css' layer(compositions);
 @import './compositions/toolbar.css' layer(compositions);
@@ -24,6 +27,7 @@
 @layer motion{
  @media(prefers-reduced-motion:reduce){.v-root *,.v-root *::before,.v-root *::after{animation-duration:0s;transition-duration:0s;scroll-behavior:auto}}
 }
+
 
 
 
