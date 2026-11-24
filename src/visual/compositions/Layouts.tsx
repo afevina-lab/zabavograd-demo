@@ -1,5 +1,6 @@
 import {useId,useState,type ReactNode} from 'react';
-import {Surface,IconButton} from '../primitives/Controls.tsx';
+import {Surface} from '../primitives/Controls.tsx';
+import {IconButton} from '../primitives/Buttons.tsx';
 export type SettingsSlots={title:string;headerActions?:ReactNode;leading?:ReactNode;primary:ReactNode;secondary?:ReactNode;appearance?:ReactNode;footer:ReactNode;supplementary?:ReactNode};
 /** Explicit slots: ownership and column order belong to the caller. */
 export function SettingsLayout({title,headerActions,leading,primary,secondary,appearance,footer,supplementary}:SettingsSlots){

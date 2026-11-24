@@ -7,17 +7,8 @@ import {Effects} from './Effects.tsx';
 import {THEMES,THEME_IDS,type ThemeId} from './design-system/themes.ts';
 import {SceneLayers} from './design-system/SceneLayers.tsx';
 import {MOTION} from './design-system/motion.ts';
-const iconFiles:Record<string,string> = {
- Play:'play.svg',Settings:'settings.svg',Save:'save.svg',Trash:'trash.svg',Pause:'pause.svg',RightArrow1:'arrow-right.svg',
- Home1:'house.svg',Question:'question-mark.svg',Star:'star.svg',
- X:'cross.svg',Check:'tick.svg',Sight:'expand.svg',Return1:'refresh.svg',
- Sound:'volume.svg',SoundOff:'mute.svg',Heart:'heart.svg'
-};
-export function Icon({name}:{name:string}){
- if(name==='Heart'||name==='Star')return <img className="garden-icon garden-art-icon" aria-hidden="true" alt="" src={import.meta.env.BASE_URL+'assets/rewards/'+(name==='Heart'?'heart':'star')+'.webp'}/>;
- const src=import.meta.env.BASE_URL+'assets/icons-new/'+(iconFiles[name]||'star.svg');
- return <span className="garden-icon" aria-hidden="true" style={{maskImage:`url("${src}")`,WebkitMaskImage:`url("${src}")`}}/>;
-}
+import {Icon} from './visual/primitives/Icon.tsx';
+export {Icon} from './visual/primitives/Icon.tsx';
 /** Single result-award illustration: same timing and shape in every game. */
 export function ScoreStars({value}:{value:number}){
  const score=Math.max(0,Math.min(3,Math.round(value)));

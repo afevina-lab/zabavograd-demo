@@ -244,7 +244,7 @@ test('Every game requests touch fullscreen directly from Start action',()=>{
 
 test('Round controls and dialogs are shared across games',()=>{
  for(const name of ['main','Sorting','Matching','Conveyor','Transformations'])assert.match(readFileSync('src/'+name+'.tsx','utf8'),/useRoundPlan/);
- const dialog=readFileSync('src/design-system/GameDialog.tsx','utf8');assert.match(dialog,/DialogActions/);assert.match(dialog,/name=\{onContinue\?'Play':'Return1'\}/);
+ const dialog=readFileSync('src/design-system/GameDialog.tsx','utf8');assert.match(dialog,/DialogActions/);assert.match(dialog,/icon=\{onContinue\?'Play':'Return1'\}/);
 });
 
 test('Chromium smoke covers compact and desktop counters in all five games',()=>{

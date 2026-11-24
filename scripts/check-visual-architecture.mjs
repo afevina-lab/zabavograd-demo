@@ -11,6 +11,7 @@ for(const file of files){const source=readFileSync(file,'utf8');
  }
  if(/\.tsx?$/.test(file)&&!file.endsWith('/lab.tsx')){
   assert(!/\bChildren\b|\bcloneElement\b|querySelector|textContent/.test(source),'Visual composition must use explicit slots: '+file);
+  assert(!/from ['"][^'"]*GameUI\.tsx['"]/.test(source),'Visual primitive imports the legacy component hub: '+file);
   assert(!/from ['"][^'"]*(?:learning|model|material-policy|library-loader|sorting|counting)\./.test(source),'Visual components must not own gameplay: '+file);
  }
  assert(!/import[^;]*['"][^'"]*(?:style\.css|design-system\/(?:theme|controls|motion)\.css)['"]/.test(source),'Legacy stylesheet import: '+file);
@@ -20,7 +21,7 @@ assert(!/\bChildren\b|cloneElement|\barrange\b|game===/.test(realShell),'Real se
 const realToolbar=readFileSync('src/GameToolbar.tsx','utf8');
 assert(!/\bChildren\b|cloneElement|isValidElement|\bcollect\b/.test(realToolbar),'Real toolbar must use explicit action slots');
 const entry=readFileSync('src/visual/index.css','utf8');assert(entry.includes('@layer reset, foundation, primitives, compositions, games, motion;'),'Missing declared cascade order');
-assert(!readFileSync('src/main.tsx','utf8').includes('./visual/'),'Production entry must remain unchanged before migration acceptance');
+assert(!readFileSync('src/main.tsx','utf8').includes('visual/index.css'),'Current games must not mix legacy and replacement stylesheets');
 const styles=validateVisualStyles(files.filter(file=>file.endsWith('.css')).map(file=>({file,source:readFileSync(file,'utf8'),layer:file.endsWith('/reset.css')?'reset':file.split('/')[2]})));
 console.log(JSON.stringify(styles));
-console.log('Standalone visual architecture: '+files.length+' files; explicit slots, no legacy CSS, no priority patches, production entry unchanged');
+console.log('Standalone visual architecture: '+files.length+' files; explicit slots, no legacy CSS, no priority patches, replacement CSS isolated from current games');
