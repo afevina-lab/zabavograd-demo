@@ -19,6 +19,7 @@ export function planChecks(paths,requested='AUTO'){
   raise('FULL','Unclassified path: '+p);
  }
  if(requested!=='AUTO'&&rank[requested]>rank[mode]){mode=requested;reasons.push('Manual escalation: '+requested);}
+ if(mode==='TARGETED'&&!affected.size){games.forEach(g=>affected.add(g));reasons.push('Manual targeted scope has no inferred consumer: include all games');}
  if(mode==='FULL'){games.forEach(g=>affected.add(g));themes.forEach(t=>skins.add(t));}
  const selected=mode==='FAST'?['memory']:[...affected].sort();
  return {schema:1,mode,requested,reasons,games:selected,themes:skins.size?[...skins].sort():mode==='FAST'?['neutral']:themes,sizes:mode==='FULL'?[[1440,900],[1024,768],[768,1024],[390,844],[844,390]]:mode==='FAST'?[[390,844]]:[[1440,900],[390,844],[844,390]],mandatory:['architecture','library-integrity','unit','typescript','build-once','offline','critical-route-and-resources'],deploymentEnabled:false};

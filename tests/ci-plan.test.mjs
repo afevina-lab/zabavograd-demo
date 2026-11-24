@@ -11,3 +11,5 @@ test('missing diff fails closed and explicit FULL escalates documentation',()=>{
 import {execFileSync} from 'node:child_process';
 test('command-line planner emits machine-readable JSON',()=>{const p=JSON.parse(execFileSync(process.execPath,['scripts/ci-plan.mjs','tests/fixtures/ci-doc-paths.json'],{encoding:'utf8'}));assert.equal(p.mode,'FAST')});
 test('shared model changes cover every consumer',()=>{assert.equal(planChecks(['src/model.ts']).games.length,5)});
+
+test('manual TARGETED on documentation never produces an empty browser scope',()=>{const p=planChecks(['docs/guide.md'],'TARGETED');assert.equal(p.mode,'TARGETED');assert.equal(p.games.length,5);assert.equal(p.themes.length,3)});
