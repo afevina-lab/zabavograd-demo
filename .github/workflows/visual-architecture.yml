@@ -82,7 +82,7 @@ jobs:
           node scripts/sync-runtime.cjs
           node scripts/check-library-v2.cjs
           node scripts/check-design-system.cjs
-          node --experimental-strip-types --test tests/*.test.ts tests/ci-plan.test.mjs
+          node --experimental-strip-types --test tests/*.test.ts tests/*.test.mjs
           ./node_modules/.bin/tsc --noEmit
       - name: Build standalone replacement preview
         run: |

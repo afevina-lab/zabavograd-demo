@@ -3,6 +3,7 @@ import {writeFileSync} from 'node:fs';
 import {runBrowserProbe} from './browser-probe.mjs';
 const theme=process.env.UI_THEME||'neutral',report=[],output=`ui-smoke/visual-next/${theme}`;
 await runBrowserProbe({theme,outputDirectory:output,rootDirectory:'dist-visual'},async({cmd,evaluate,until,screenshot,origin})=>{
+ await cmd('DOM.enable');await cmd('CSS.enable');
  for(const [width,height] of [[1440,900],[1024,768],[768,1024],[390,844],[844,390]]){
   await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600||width===844});
   for(const game of ['memory','sorting','matching','conveyor','transformations']){
@@ -18,6 +19,11 @@ await runBrowserProbe({theme,outputDirectory:output,rootDirectory:'dist-visual'}
    await evaluate("document.querySelector('.v-range-track input').focus()");
    await cmd('Input.dispatchKeyEvent',{type:'keyDown',key:'ArrowRight',code:'ArrowRight',windowsVirtualKeyCode:39});await cmd('Input.dispatchKeyEvent',{type:'keyUp',key:'ArrowRight',code:'ArrowRight',windowsVirtualKeyCode:39});
    await until("document.querySelector('.v-range-track input').value==='2'");
+   const {root:dom}=await cmd('DOM.getDocument');
+   const {nodeId:quiet}=await cmd('DOM.querySelector',{nodeId:dom.nodeId,selector:'.v-button--quiet'});
+   await cmd('CSS.forcePseudoState',{nodeId:quiet,forcedPseudoClasses:['active','hover']});
+   assert(await evaluate("(()=>{const s=getComputedStyle(document.querySelector('.v-button--quiet'));return s.boxShadow==='none'&&s.transform==='none'})()"),'Quiet action must stay flat while active');
+   await cmd('CSS.forcePseudoState',{nodeId:quiet,forcedPseudoClasses:[]});
    await screenshot(`${game}-${width}-settings`);
    await evaluate("[...document.querySelectorAll('button')].find(e=>e.textContent==='Начать игру').click()");await until("!!document.querySelector('.v-toolbar')");
    assert(await evaluate("(()=>{const bar=document.querySelector('.v-toolbar').getBoundingClientRect();return [...document.querySelectorAll('.v-toolbar .v-icon-button')].every(e=>{const r=e.getBoundingClientRect();return Math.abs(r.height/bar.height-.6)<.02&&Math.abs(r.top+r.height/2-bar.top-bar.height/2)<1&&r.left>=0&&r.right<=innerWidth})})()"),'Toolbar geometry '+game+' '+width);

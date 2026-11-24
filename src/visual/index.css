@@ -1,6 +1,7 @@
 @layer reset, foundation, primitives, compositions, games, motion;
 @import './foundation/reset.css' layer(reset);
 @import './foundation/tokens.css' layer(foundation);
+@import './primitives/buttons.css' layer(primitives);
 @import './primitives/controls.css' layer(primitives);
 @import './primitives/selection.css' layer(primitives);
 @import './compositions/layouts.css' layer(compositions);

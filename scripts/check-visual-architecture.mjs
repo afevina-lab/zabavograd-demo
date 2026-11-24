@@ -1,3 +1,4 @@
+import {validateVisualStyles} from './visual-style-contract.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
 const walk=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(dir+'/'+e.name):[dir+'/'+e.name]);
@@ -16,4 +17,6 @@ for(const file of files){const source=readFileSync(file,'utf8');
 }
 const entry=readFileSync('src/visual/index.css','utf8');assert(entry.includes('@layer reset, foundation, primitives, compositions, games, motion;'),'Missing declared cascade order');
 assert(!readFileSync('src/main.tsx','utf8').includes('./visual/'),'Production entry must remain unchanged before migration acceptance');
+const styles=validateVisualStyles(files.filter(file=>file.endsWith('.css')).map(file=>({file,source:readFileSync(file,'utf8'),layer:file.endsWith('/reset.css')?'reset':file.split('/')[2]})));
+console.log(JSON.stringify(styles));
 console.log('Standalone visual architecture: '+files.length+' files; explicit slots, no legacy CSS, no priority patches, production entry unchanged');
