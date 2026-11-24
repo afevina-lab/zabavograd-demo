@@ -1,5 +1,20 @@
+import {Choice} from './visual/primitives/Choice.tsx';
 import {RangeSlider} from './design-system/RangeSlider.tsx';
 import type {Learning} from './learning.ts';
 import {defaultMath,MATH_STOPS} from './math-material.ts';
 import {QuantitySlider} from './QuantitySlider.tsx';
-export function MathSettingsPanel({l,setL}:{l:Learning;setL:(l:Learning)=>void}){const m={...defaultMath,...l.math};const update=(p:Partial<typeof m>)=>setL({...l,math:{...m,...p}});return <section className="math-settings"><div className="pair-options">{(['examples','composition'] as const).map(kind=><button type="button" key={kind} aria-pressed={m.kind===kind} onClick={()=>update({kind})}>{kind==='examples'?'Примеры':'Состав числа'}</button>)}</div>{m.kind==='examples'&&!m.answerOnly?<RangeSlider values={[0,...MATH_STOPS]} label="Ответы в диапазоне" min={m.includeZero!==false?0:1} max={1000} from={m.from??0} to={m.target} onChange={(from,target)=>update({from,target})}/>:<QuantitySlider label={m.kind==='composition'?'Состав числа':m.answerOnly?'Ответ в этой группе':'Числа в пределах'} value={m.target} min={1} max={1000} values={MATH_STOPS} onChange={target=>update({target})}/>}{m.kind==='examples'&&<div className="reading-kinds"><label className="check"><input type="checkbox" checked={m.add} onChange={e=>update({add:e.target.checked})}/>Сложение</label><label className="check"><input type="checkbox" checked={m.subtract} onChange={e=>update({subtract:e.target.checked})}/>Вычитание</label><label className="check"><input type="checkbox" checked={m.multiply===true} onChange={e=>update({multiply:e.target.checked})}/>Умножение</label><label className="check"><input type="checkbox" checked={m.divide===true} onChange={e=>update({divide:e.target.checked})}/>Деление</label></div>}<label className="check"><input type="checkbox" role="switch" checked={m.includeZero!==false} onChange={e=>update({includeZero:e.target.checked})}/>Включить 0</label></section>}
+export function MathSettingsPanel({l,setL}:{l:Learning;setL:(l:Learning)=>void}){
+ const m={...defaultMath,...l.math};
+ const update=(patch:Partial<typeof m>)=>setL({...l,math:{...m,...patch}});
+ return <section className="math-settings">
+  <div className="pair-options">{(['examples','composition'] as const).map(kind=><button type="button" key={kind} aria-pressed={m.kind===kind} onClick={()=>update({kind})}>{kind==='examples'?'Примеры':'Состав числа'}</button>)}</div>
+  {m.kind==='examples'&&!m.answerOnly?<RangeSlider values={[0,...MATH_STOPS]} label="Ответы в диапазоне" min={m.includeZero!==false?0:1} max={1000} from={m.from??0} to={m.target} onChange={(from,target)=>update({from,target})}/>:<QuantitySlider label={m.kind==='composition'?'Состав числа':m.answerOnly?'Ответ в этой группе':'Числа в пределах'} value={m.target} min={1} max={1000} values={MATH_STOPS} onChange={target=>update({target})}/>}
+  {m.kind==='examples'&&<div className="reading-kinds">
+   <Choice className="check" label="Сложение" checked={m.add} onChange={add=>update({add})}/>
+   <Choice className="check" label="Вычитание" checked={m.subtract} onChange={subtract=>update({subtract})}/>
+   <Choice className="check" label="Умножение" checked={m.multiply===true} onChange={multiply=>update({multiply})}/>
+   <Choice className="check" label="Деление" checked={m.divide===true} onChange={divide=>update({divide})}/>
+  </div>}
+  <Choice className="check" kind="switch" label="Включить 0" checked={m.includeZero!==false} onChange={includeZero=>update({includeZero})}/>
+ </section>;
+}

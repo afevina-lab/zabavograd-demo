@@ -1,9 +1,4 @@
-import {ControlWell} from './ControlWell.tsx';
-import type {ButtonHTMLAttributes,ReactNode} from 'react';
-
-/** One standard add-rule / add-exclusion action across all game setup screens. */
-export function SetupAddButton({children,...props}:ButtonHTMLAttributes<HTMLButtonElement>&{children:ReactNode}){
- return <button {...props} type="button" className={['setup-add-rule',props.className].filter(Boolean).join(' ')}>
-  <span className="setup-add-label">{children}</span><ControlWell symbol="plus"/>
- </button>;
-}
+import {AddAction} from '../visual/primitives/AddAction.tsx';
+import type {ComponentProps} from 'react';
+const classes={root:'setup-add-rule',label:'setup-add-label',well:'control-well'};
+export function SetupAddButton(props:Omit<ComponentProps<typeof AddAction>,'classNames'>){return <AddAction {...props} classNames={classes}/>}

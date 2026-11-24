@@ -1,0 +1,5 @@
+.v-choice{display:flex;align-items:center;gap:10px;min-height:var(--v-target);padding:6px var(--v-space-2);overflow-wrap:anywhere}
+.v-choice input{appearance:auto;accent-color:var(--ui-accent);width:22px;height:22px;margin:0;flex:none}
+
+.v-choice>span{min-width:0;line-height:1.4}
+.v-choice:has(>input:disabled){opacity:.5}
