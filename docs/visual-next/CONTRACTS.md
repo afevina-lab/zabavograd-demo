@@ -22,7 +22,7 @@ GameDialog принимает title, description, award, actions. DialogActions 
 
 - Button: tone, disabled, pressed, type; все состояния берутся из общего набора скинов.
 - IconButton: обязательное доступное имя, icon, pressed, disabled. Существующий Icon остаётся единственным набором пиктограмм.
-- Surface: panel/card/field. Panel использует nine-slice; card — цельное изображение с сохранением прозрачных углов.
+- Surface: panel/card/field. Panel воспроизводит текущую объёмную рамку из существующих токенов поверхностей; card — цельное изображение с сохранением прозрачных углов. Nine-slice применяется только там, где его использование подтверждено эталоном.
 - Field/Select/Disclosure: видимая подпись и корректная связь label/id; нативное управление клавиатурой.
 - Choice: checkbox/radio/switch; настоящие input, без подмены состояния нарисованной галочкой.
 - Quantity: один источник value; number/range/stepper синхронны, возможны дискретные stops.
