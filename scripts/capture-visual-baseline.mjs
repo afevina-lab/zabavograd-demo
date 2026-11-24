@@ -1,3 +1,4 @@
+import {installCaptureClock} from './visual-capture-environment.mjs';
 import {writeFileSync,mkdirSync} from 'node:fs';
 import {runBrowserProbe} from './browser-probe.mjs';
 import {createGameSetup} from './browser-game-setup.mjs';
@@ -6,13 +7,15 @@ const sizes=[[1440,900],[1024,768],[768,1024],[390,844],[844,390]],allGames=['me
 const games=process.env.VISUAL_CAPTURE_GAMES?process.env.VISUAL_CAPTURE_GAMES.split(','):allGames;if(!games.length||games.some(game=>!allGames.includes(game)))throw Error('Unknown capture game');
 const measurements=[];
 await runBrowserProbe({theme,outputDirectory:directory,rootDirectory:process.env.UI_DIST_ROOT||'dist'},async({cmd,evaluate,until,screenshot,origin,themeIndex})=>{
- await cmd('Page.addScriptToEvaluateOnNewDocument',{source:`let seed=17123;Math.random=()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483646};localStorage.clear();`});
+ await cmd('Page.addScriptToEvaluateOnNewDocument',{source:`(${installCaptureClock.toString()})();`});
  const setup=createGameSetup({cmd,evaluate,until,origin,themeIndex});
  const capture=async(name)=>{
   await evaluate(`document.fonts.ready`);
-  await evaluate(`(()=>{if(!document.getElementById('baseline-motion')){const s=document.createElement('style');s.id='baseline-motion';s.textContent='*,*::before,*::after{animation:none!important;transition:none!important;caret-color:transparent!important}';document.head.append(s)}})()`);
   await until("[...document.images].filter(e=>e.getBoundingClientRect().width>0).every(e=>e.complete&&e.naturalWidth>0)");
-  measurements.push({name,theme,metrics:await evaluate(`(()=>{const selectors=['.shared-settings-window','.settings-window-heading','.setup-workspace','.setup-columns','.setup-theme-rail','.setup-footer','.setup-footer>.primary','.quantity-slider','.shared-toolbar','.toolbar-left','.toolbar-centre','.toolbar-right','.overlay>div','.transformation-chamber'];return selectors.flatMap(selector=>[...document.querySelectorAll(selector)].map((e,index)=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {selector,index,bounds:{x:r.x,y:r.y,width:r.width,height:r.height},styles:Object.fromEntries(['display','position','gap','padding','margin','fontFamily','fontSize','lineHeight','backgroundImage','borderImageSource','borderImageSlice','zIndex','overflow','maxHeight'].map(k=>[k,s[k]]))}}))})()`)});
+  if(name.endsWith('-play'))await evaluate("globalThis.__visualCaptureClock.advance(1000)");
+  await evaluate("(async()=>{for(let frame=0;frame<3;frame++){for(const animation of document.getAnimations()){const timing=animation.effect?.getComputedTiming();if(timing&&Number.isFinite(timing.endTime))animation.finish();else{animation.pause();animation.currentTime=0}}await new Promise(resolve=>requestAnimationFrame(resolve))}})()");
+  if(name.endsWith('-pause')||name.endsWith('-result'))await until("getComputedStyle(document.querySelector('.overlay')).opacity==='1'");
+  measurements.push({name,theme,captureVersion:2,metrics:await evaluate(`(()=>{const selectors=['.shared-settings-window','.settings-window-heading','.setup-workspace','.setup-columns','.setup-theme-rail','.setup-footer','.setup-footer>.primary','.quantity-slider','.shared-toolbar','.toolbar-left','.toolbar-centre','.toolbar-right','.overlay>div','.transformation-chamber'];return selectors.flatMap(selector=>[...document.querySelectorAll(selector)].map((e,index)=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {selector,index,bounds:{x:r.x,y:r.y,width:r.width,height:r.height},styles:Object.fromEntries(['display','position','gap','padding','margin','fontFamily','fontSize','lineHeight','backgroundImage','borderImageSource','borderImageSlice','zIndex','overflow','maxHeight'].map(k=>[k,s[k]]))}}))})()`)});
   await screenshot(name);
  };
  for(const [width,height] of sizes){
