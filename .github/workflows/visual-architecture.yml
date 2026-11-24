@@ -78,6 +78,7 @@ jobs:
           python -m pip install --disable-pip-version-check pillow
           node scripts/check-architecture.cjs
           node scripts/check-visual-architecture.mjs
+          node scripts/check-browser-syntax.cjs scripts/verify-visual-next-browser.mjs scripts/capture-visual-baseline.mjs
           node scripts/sync-runtime.cjs
           node scripts/check-library-v2.cjs
           node scripts/check-design-system.cjs

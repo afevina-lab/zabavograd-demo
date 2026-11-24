@@ -1,8 +1,8 @@
 .v-settings-backdrop{position:fixed;inset:0;display:grid;place-items:center;padding:16px;background:var(--zg-stage-fill);background-image:var(--zg-stage-image);background-size:cover;overflow:hidden}
-.v-settings{display:flex;flex-direction:column;width:min(var(--v-settings-width),96vw);max-height:calc(100dvh - 32px);min-width:0;min-height:0;overflow:hidden;padding:calc(var(--v-frame-inset) + 8px);border:1px solid transparent;border-image:var(--skin-panel) 96 fill / var(--v-frame-inset) / 0 stretch}
+.v-settings{display:flex;flex-direction:column;width:min(1100px,calc(100vw - 32px));max-height:calc(100dvh - 32px);min-width:0;min-height:0;overflow:hidden;padding:calc(var(--v-frame-inset) + 8px)}
 .v-settings-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 12px 16px;flex:none}
-.v-settings-heading h1{font-family:var(--v-font-display);font-size:clamp(24px,4vw,36px);line-height:1.1}
-.v-settings-heading p{font-size:12px}
+.v-settings-heading h1{font-family:var(--v-font-display);font-size:30px;line-height:1.1}
+.v-settings-heading p{font-size:14px}.v-settings-heading p:first-child{display:none}
 .v-action-row{display:flex;gap:8px;align-items:center}
 .v-settings-workspace{display:grid;grid-template-columns:minmax(0,1fr) var(--v-rail);gap:12px;flex:1 1 auto;min-width:0;min-height:0;overflow:hidden}
 .v-settings-scroll{min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:8px 16px;display:flex;flex-direction:column;gap:16px}
@@ -28,6 +28,8 @@
 .v-dialog-scroll{display:flex;flex-direction:column;gap:12px;max-height:calc(100dvh - 120px);overflow:auto;min-height:0;text-align:center;padding:16px;overflow-wrap:anywhere}
 .v-dialog-actions{display:flex;gap:16px;justify-content:center;align-items:center;padding-block:4px}
 .v-dialog-award{margin-top:-64px;margin-bottom:12px;display:flex;justify-content:center;position:relative}
-@media(max-width:900px){.v-settings-workspace{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}.v-settings-appearance{max-height:180px}.v-appearance-toggle{display:block;min-height:44px;border:0;background:none;color:inherit;text-align:left;padding:8px}.v-appearance-scroll[data-expanded=false]{display:none}.v-appearance-scroll{flex-direction:row}.v-settings-columns{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:1179px),(max-height:559px){.v-settings-workspace{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}.v-settings-appearance{max-height:180px}.v-appearance-toggle{display:block;min-height:44px;border:0;background:none;color:inherit;text-align:left;padding:8px}.v-appearance-scroll[data-expanded=false]{display:none}.v-appearance-scroll{flex-direction:row}.v-settings-columns{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:700px){.v-toolbar{gap:4px;padding-inline:6px}.v-toolbar-navigation{gap:3px}.v-toolbar-counters{font-size:10px;gap:2px}.v-settings-footer{flex-wrap:wrap}.v-settings-heading{padding:4px 8px 12px}.v-settings-heading .v-icon-button{width:44px;height:44px}}
 @media(max-height:500px){.v-settings-heading>div>p{display:none}.v-settings-heading{padding-block:0}.v-settings-appearance{max-height:96px}.v-settings-footer{padding:4px 8px}.v-settings-footer>.v-button{min-height:44px}.v-dialog-scroll{padding:8px;gap:8px}}
+
+@media(min-width:1180px) and (min-height:560px){.v-settings{width:min(var(--v-settings-width),calc(100vw - 28px))}}
