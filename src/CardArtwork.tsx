@@ -1,3 +1,4 @@
+import {BoundedArtwork} from './visual/primitives/BoundedArtwork.tsx';
 import {useEffect,useState} from 'react';
 import type {ImageVariant} from './model.ts';
 
@@ -85,8 +86,5 @@ function SingleArtwork({image,label}:{image:ImageVariant;label:string}){
   return()=>{current=false};
  },[src,image.bounds]);
  const bounds=image.bounds||detected;
- return bounds?<svg className="bounded-image" viewBox={`${bounds.x} ${bounds.y} ${bounds.width} ${bounds.height}`}
-  preserveAspectRatio="xMidYMid meet" role="img" aria-label={label}>
-  <image href={src} width={bounds.sourceWidth} height={bounds.sourceHeight}/>
- </svg>:<img src={src} alt={label}/>;
+ return <BoundedArtwork src={src} label={label} bounds={bounds} className="bounded-image" fallbackClassName=""/>;
 }

@@ -1,3 +1,4 @@
+import {BoundedArtwork} from '../visual/primitives/BoundedArtwork.tsx';
 import {fillPrepared} from '../prepared-selection.ts';
 import {useEffect,useState} from 'react';
 import {artworkMask,maskPixels} from '../artwork-mask.ts';
@@ -43,5 +44,6 @@ export function DerivedArtwork({image,outline,onReady}:{image:ImageVariant;outli
  setPrepared(undefined);void derive(url,outline).then(value=>{if(current){setPrepared(value);onReady?.(!!value)}});return()=>{current=false}
  },[url,outline,onReady,image.derived,image.bounds,kind]);
  const value=embedded||prepared;
- return value?<svg className="bounded-image" viewBox={[value.bounds.x,value.bounds.y,value.bounds.width,value.bounds.height].join(' ')} preserveAspectRatio="xMidYMid meet" role="img" aria-label={outline?'Контур предмета':'Силуэт предмета'}><image href={value.src} width={value.bounds.sourceWidth} height={value.bounds.sourceHeight}/></svg>:<span role="status">{prepared===undefined?'Подготовка изображения…':'Не удалось отделить фон. Выберите другое изображение.'}</span>;
+ return value?<BoundedArtwork src={value.src} bounds={value.bounds} label={outline?"Контур предмета":"Силуэт предмета"} className="bounded-image"/>:<span role="status">{prepared===undefined?'Подготовка изображения…':'Не удалось отделить фон. Выберите другое изображение.'}</span>;
 }
+

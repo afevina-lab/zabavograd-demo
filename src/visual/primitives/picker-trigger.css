@@ -1,0 +1,6 @@
+.v-picker-trigger{display:flex;align-items:center;gap:var(--v-space-3);width:100%;min-width:0;min-height:var(--v-control);padding:var(--v-space-2) var(--v-space-3);border:1px solid var(--ui-field-edge);border-radius:14px;background:var(--ui-control-face);color:var(--ui-text);font:inherit;text-align:start;box-shadow:inset 0 2px 1px var(--ui-field-glint),inset 0 -3px 4px var(--ui-button-inset),0 3px 0 var(--ui-control-bottom)}
+.v-picker-trigger-icon{display:inline-flex;align-items:center;justify-content:center;flex:none;width:28px;height:28px;color:var(--ui-deep)}
+.v-picker-trigger-icon>svg{width:100%;height:100%}
+.v-picker-trigger-copy{display:flex;flex:1;flex-direction:column;justify-content:center;gap:var(--v-space-1);min-width:0;line-height:1.4;overflow-wrap:anywhere}
+.v-picker-trigger-copy>small{font-size:14px}
+.v-picker-trigger[data-field-state=required]{border-color:var(--ui-required)}

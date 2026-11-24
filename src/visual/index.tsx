@@ -6,3 +6,6 @@ export {SettingsLayout,Toolbar,GameLayout,GameDialog,DialogActions,type Settings
 export {MemoryBoard,SortingBoard,MatchingBoard,ConveyorBoard,TransformationBoard} from './games/Boards.tsx';
 
 export {ThemeChoice,Range} from './primitives/Selection.tsx';
+export {PickerTrigger} from './primitives/PickerTrigger.tsx';
+export {PickerDialog} from './compositions/PickerDialog.tsx';
+export {BoundedArtwork} from './primitives/BoundedArtwork.tsx';
