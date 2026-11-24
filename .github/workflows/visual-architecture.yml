@@ -123,7 +123,6 @@ jobs:
         env:
           UI_THEME: ${{ matrix.theme }}
           UI_DIST_ROOT: dist-visual
-          VISUAL_CAPTURE_GAMES: transformations
           VISUAL_CAPTURE_OUTPUT: ui-smoke/migration
         run: node scripts/capture-visual-baseline.mjs
       - name: Compare immutable before and after images
@@ -131,7 +130,7 @@ jobs:
           UI_THEME: ${{ matrix.theme }}
         run: |
           python -m pip install --disable-pip-version-check pillow
-          python scripts/compare-visual-captures.py ".reference/ui-smoke/baseline/$UI_THEME" "ui-smoke/migration/$UI_THEME" "ui-smoke/comparison/$UI_THEME" --expected 25
+          python scripts/compare-visual-captures.py ".reference/ui-smoke/baseline/$UI_THEME" "ui-smoke/migration/$UI_THEME" "ui-smoke/comparison/$UI_THEME" --expected 125
       - name: Exercise standalone visual compositions
         env:
           UI_THEME: ${{ matrix.theme }}

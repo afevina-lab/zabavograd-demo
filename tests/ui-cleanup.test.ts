@@ -263,17 +263,20 @@ test('Chromium smoke covers compact and desktop counters in all five games',()=>
 test('All five setups use one semantic two-column arrangement and common preview footer',()=>{
  const shell=readFileSync('src/design-system/SettingsWindow.tsx','utf8');
  const css=readFileSync('src/design-system/controls.css','utf8');
- assert.match(shell,/purpose==='material'\|\|purpose==='rules'/);
- assert.match(shell,/purpose==='task'/);
- assert.match(shell,/purpose==='appearance'/);
- assert.match(shell,/node\.type===SetupPreview/);
+ assert.match(shell,/layout\.primary/);
+ assert.doesNotMatch(shell,/\bChildren\b|cloneElement|\barrange\b|game===/);
+ assert.match(shell,/layout\.secondary/);
+ assert.match(shell,/layout\.appearance/);
+ assert.match(shell,/layout\.footer/);
  assert.doesNotMatch(shell,/material-head/);
  assert.match(shell,/setup-section-fieldset/);
  assert.doesNotMatch(shell,/matching-setup\\|conveyor-settings\\|transformation-setup\\|sort-settings/);
- assert.match(shell,/arrange\(child\.props\.children\)/);
+ assert.match(shell,/layout:ExplicitSettingsSlots/);
  for(const file of ['main.tsx','Matching.tsx','Sorting.tsx','Conveyor.tsx','Transformations.tsx']){
   const source=readFileSync('src/'+file,'utf8');
-  const setup=source.slice(source.indexOf('<SettingsWindow'),source.indexOf('</SettingsWindow>'));
+  const setup=source.slice(source.indexOf('<SettingsWindow'));
+  assert.match(setup,/<SettingsWindow[^>]+layout=\{\{/);
+  for(const slot of ['primary','secondary','appearance','footer'])assert.match(setup,new RegExp('\\b'+slot+':'),file+': explicit '+slot);
   for(const slot of ['material','rules','task','appearance']){
    assert.match(setup,new RegExp('data-setup-section="'+slot+'"'),file+': '+slot);
   }
@@ -373,9 +376,9 @@ test('Shared settings footer stays outside the independently scrolling body',()=
  const shell=readFileSync('src/design-system/SettingsWindow.tsx','utf8');
  const css=readFileSync('src/design-system/controls.css','utf8');
  const script=readFileSync('scripts/verify-settings-browser.mjs','utf8');
- assert.match(shell,/return \{body:<>,?\{?intro\}?/);
- assert.match(shell,/footer:<div className="setup-footer">\{footer\}<\/div>/);
- assert.match(shell,/cloneElement\(child,\{className:[^}]+\},assembled\.body\)/);
+ assert.match(shell,/body:<>\{layout\.intro\}/);
+ assert.match(shell,/footer:<div className="setup-footer">\{layout\.footer\}<\/div>/);
+ assert.match(shell,/<Content className=[^>]+>\{assembled\.body\}<\/Content>/);
  assert.match(shell,/\{assembled\.footer\}/);
  assert.match(css,/\.settings-frame\.shared-settings-window>\.setup-footer\{/);
  assert.match(script,/Shared footer\/select geometry failed/);
@@ -401,9 +404,9 @@ test('Landscape mobile settings retain a usable scrolling area above the pinned 
 test('All games inherit a third, independently scrolling theme rail rather than separate theme grids',()=>{
  const shell=readFileSync('src/design-system/SettingsWindow.tsx','utf8');
  const controls=readFileSync('src/design-system/controls.css','utf8');
- assert.match(shell,/else if\(purpose==='appearance'\)\{/);
- assert.match(shell,/part\.type===ThemePicker/);
- assert.match(shell,/className="settings-block setup-presentation-options"/);
+ assert.match(shell,/theme:renderAppearance\(layout\.appearance\)/);
+ assert.doesNotMatch(shell,/part\.type|cloneElement|Children/);
+ assert.match(readFileSync('src/Sorting.tsx','utf8'),/className="settings-block setup-presentation-options"/);
  assert.match(shell,/className="setup-workspace"/);
  assert.match(shell,/className="setup-theme-rail"/);
  assert.match(shell,/className=\{'setup-theme-scroll'/);
@@ -416,7 +419,7 @@ test('All games inherit a third, independently scrolling theme rail rather than 
 test('Shared setup footer contains only preview, main action and status, not oversized information blocks',()=>{
  const shell=readFileSync('src/design-system/SettingsWindow.tsx','utf8');
  const controls=readFileSync('src/design-system/controls.css','utf8');
- assert.match(shell,/else extras\.push\(node\)/);
+ assert.match(shell,/layout\.supplementary&&/);
  assert.match(shell,/className="setup-extra-notes"/);
  assert.match(controls,/grid-template-rows:minmax\(0,1fr\)!important/);
  assert.match(controls,/\.setup-footer>\.setup-material-preview\{[^}]*grid-row:1!important/);
@@ -428,9 +431,9 @@ test('Shared setup footer contains only preview, main action and status, not ove
 test('Only themes enter shared rail; other appearance controls stay in main task column',()=>{
  const shell=readFileSync('src/design-system/SettingsWindow.tsx','utf8');
  const sorting=readFileSync('src/Sorting.tsx','utf8');
- assert.match(shell,/presentationParts=parts\.filter/);
- assert.match(shell,/right\.push\(<section className="settings-block setup-presentation-options">\{presentationParts\}<\/section>\)/);
- assert.match(shell,/appearance\.push\(cloneElement\(node,\{\},\.\.\.themeParts\)\)/);
+ assert.doesNotMatch(shell,/presentationParts|parts\.filter/);
+ assert.match(sorting,/<section className="settings-block setup-presentation-options"><section className="card-presentation settings-block">/);
+ assert.match(shell,/renderAppearance\(layout\.appearance\)/);
  assert.match(sorting,/className="card-presentation settings-block"/);
 });
 
@@ -444,7 +447,7 @@ test('All five setup previews share one word-and-status layout with no sub-CTA l
  assert.match(preview,/className="setup-preview-actions"/);
  assert.match(preview,/className="setup-preview-content"/);
  assert.match(preview,/className="setup-preview-message" role="status"/);
- assert.match(window,/node\.type===SetupPreview/);
+ assert.match(window,/layout\.footer/);
  assert.doesNotMatch(window,/node\.type==='p'&&node\.props\.role==='status'/);
  assert.match(css,/grid-template-columns:minmax\(100px,max-content\) minmax\(0,1fr\)/);
  assert.match(css,/-webkit-line-clamp:2/);
