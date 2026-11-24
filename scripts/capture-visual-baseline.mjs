@@ -1,10 +1,11 @@
 import {writeFileSync,mkdirSync} from 'node:fs';
 import {runBrowserProbe} from './browser-probe.mjs';
 import {createGameSetup} from './browser-game-setup.mjs';
-const theme=process.env.UI_THEME||'neutral',directory=`ui-smoke/baseline/${theme}`;
-const sizes=[[1440,900],[1024,768],[768,1024],[390,844],[844,390]],games=['memory','sorting','matching','conveyor','transformations'];
+const theme=process.env.UI_THEME||'neutral',directory=`${process.env.VISUAL_CAPTURE_OUTPUT||'ui-smoke/baseline'}/${theme}`;
+const sizes=[[1440,900],[1024,768],[768,1024],[390,844],[844,390]],allGames=['memory','sorting','matching','conveyor','transformations'];
+const games=process.env.VISUAL_CAPTURE_GAMES?process.env.VISUAL_CAPTURE_GAMES.split(','):allGames;if(!games.length||games.some(game=>!allGames.includes(game)))throw Error('Unknown capture game');
 const measurements=[];
-await runBrowserProbe({theme,outputDirectory:directory},async({cmd,evaluate,until,screenshot,origin,themeIndex})=>{
+await runBrowserProbe({theme,outputDirectory:directory,rootDirectory:process.env.UI_DIST_ROOT||'dist'},async({cmd,evaluate,until,screenshot,origin,themeIndex})=>{
  await cmd('Page.addScriptToEvaluateOnNewDocument',{source:`let seed=17123;Math.random=()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483646};localStorage.clear();`});
  const setup=createGameSetup({cmd,evaluate,until,origin,themeIndex});
  const capture=async(name)=>{
@@ -30,4 +31,4 @@ await runBrowserProbe({theme,outputDirectory:directory},async({cmd,evaluate,unti
   }
  }
 });
-mkdirSync(directory,{recursive:true});writeFileSync(directory+'/measurements.json',JSON.stringify(measurements,null,2));console.log(JSON.stringify({theme,combinations:25,screenshots:measurements.length}));
+mkdirSync(directory,{recursive:true});writeFileSync(directory+'/measurements.json',JSON.stringify(measurements,null,2));console.log(JSON.stringify({theme,combinations:games.length*sizes.length,screenshots:measurements.length}));

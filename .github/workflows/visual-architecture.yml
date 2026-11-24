@@ -76,6 +76,7 @@ jobs:
         run: |
           npm install --no-package-lock --ignore-scripts
           python -m pip install --disable-pip-version-check pillow
+          python -m unittest discover -s tests -p visual_compare_test.py
           node scripts/check-architecture.cjs
           node scripts/check-visual-architecture.mjs
           node scripts/check-browser-syntax.cjs scripts/verify-visual-next-browser.mjs scripts/capture-visual-baseline.mjs
@@ -95,7 +96,7 @@ jobs:
           path: dist-visual/
           retention-days: 30
   candidate:
-    needs: candidate-build
+    needs: [candidate-build, baseline]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -111,6 +112,26 @@ jobs:
         with:
           name: visual-next-build
           path: dist-visual
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: visual-baseline-${{ matrix.theme }}
+          path: .reference
+      - name: Capture migrated real settings and gameplay
+        env:
+          UI_THEME: ${{ matrix.theme }}
+          UI_DIST_ROOT: dist-visual
+          VISUAL_CAPTURE_GAMES: transformations
+          VISUAL_CAPTURE_OUTPUT: ui-smoke/migration
+        run: node scripts/capture-visual-baseline.mjs
+      - name: Compare immutable before and after images
+        env:
+          UI_THEME: ${{ matrix.theme }}
+        run: |
+          python -m pip install --disable-pip-version-check pillow
+          python scripts/compare-visual-captures.py ".reference/ui-smoke/baseline/$UI_THEME" "ui-smoke/migration/$UI_THEME" "ui-smoke/comparison/$UI_THEME" --expected 25
       - name: Exercise standalone visual compositions
         env:
           UI_THEME: ${{ matrix.theme }}

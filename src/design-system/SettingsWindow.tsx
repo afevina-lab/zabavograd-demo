@@ -3,11 +3,17 @@ import {MaterialPresetContext} from './MaterialPresetContext.tsx';
 import {useMaterialPresets} from './useMaterialPresets.tsx';
 import {Icon,ThemePicker} from '../GameUI.tsx';
 import {SetupPreview} from './SetupPreview.tsx';
-/** The single settings shell for every game. Only its content varies. */
-export function SettingsWindow({game,children}:{game:string;children:ReactNode}){
- const child=Children.only(children);
+export type ExplicitSettingsSlots={primary:ReactNode;secondary:ReactNode;appearance:ReactNode;footer:ReactNode;intro?:ReactNode;supplementary?:ReactNode;contentClassName?:string;contentAs?:'main'|'div'};
+type SettingsWindowProps={game:string}&({children:ReactNode;layout?:never}|{layout:ExplicitSettingsSlots;children?:never});
+/** Transitional shell: migrated callers supply explicit slots; legacy callers keep their markup. */
+export function SettingsWindow({game,children,layout}:SettingsWindowProps){
+ const child=layout?null:Children.only(children);
  const [themeOpen,setThemeOpen]=useState(false);
  const {bridge,candidates,saveName,setSaveName,saveSource,setSaveSource,saveError,manualWordIds,saveDialog,saveTrigger,openSave,closeSave,saveNow}=useMaterialPresets();
+ function renderAppearance(appearance:ReactNode){return <aside className="setup-theme-rail" aria-label="Оформление игры">
+    <button type="button" className="setup-theme-toggle" aria-expanded={themeOpen} aria-controls="setup-theme-list" onClick={()=>setThemeOpen(v=>!v)}>Оформление <span aria-hidden="true">{themeOpen?'▴':'▾'}</span></button>
+    <div className={'setup-theme-scroll'+(themeOpen?' is-expanded':'')} id="setup-theme-list">{appearance}</div>
+   </aside>;}
  function arrange(content:ReactNode){
   const nodes=Children.toArray(content),left:ReactNode[]=[],right:ReactNode[]=[],footer:ReactNode[]=[],intro:ReactNode[]=[],appearance:ReactNode[]=[],extras:ReactNode[]=[];
   let section=0,seenSection=false;
@@ -39,19 +45,20 @@ export function SettingsWindow({game,children}:{game:string;children:ReactNode})
   }
   nodes.forEach(node=>place(node));
   return {body:<>{intro}<div className="setup-columns"><div className="setup-column">{left}</div><div className="setup-column">{right}</div></div>{extras.length>0&&<div className="setup-extra-notes">{extras}</div>}</>,
-   theme:<aside className="setup-theme-rail" aria-label="Оформление игры">
-    <button type="button" className="setup-theme-toggle" aria-expanded={themeOpen} aria-controls="setup-theme-list" onClick={()=>setThemeOpen(v=>!v)}>Оформление <span aria-hidden="true">{themeOpen?'▴':'▾'}</span></button>
-    <div className={'setup-theme-scroll'+(themeOpen?' is-expanded':'')} id="setup-theme-list">{appearance}</div>
-   </aside>,
+   theme:renderAppearance(appearance),
    footer:<div className="setup-footer">{footer}</div>};
  }
- const assembled=isValidElement<{className?:string;children?:ReactNode}>(child)?arrange(child.props.children):null;
+ const Content=layout?.contentAs||'div';
+ const assembled=layout?{
+  body:<>{layout.intro}<div className="setup-columns"><div className="setup-column">{layout.primary}</div><div className="setup-column">{layout.secondary}</div></div>{layout.supplementary&&<div className="setup-extra-notes">{layout.supplementary}</div>}</>,
+  theme:renderAppearance(layout.appearance),footer:<div className="setup-footer">{layout.footer}</div>
+ }:isValidElement<{className?:string;children?:ReactNode}>(child)?arrange(child.props.children):null;
  return <MaterialPresetContext.Provider value={bridge}><div className="settings-shade"><section className="settings-frame shared-settings-window" role="dialog" aria-modal="true" aria-label={'Настройки: '+game}>
  <header className="settings-window-heading"><div className="settings-adventure-title"><span className="settings-adventure-emblem" aria-hidden="true"><Icon name="Star"/></span><div><p className="settings-eyebrow">Забавоград · пора играть</p><h2>{game}</h2><span>Подготовка к игре</span></div></div><div className="settings-header-actions">
  <button type="button" ref={saveTrigger} className="icon-button" aria-label="Сохранить набор" title="Сохранить учебный набор" onClick={openSave}><Icon name="Save"/></button>
  <a className="icon-button" href={import.meta.env.BASE_URL+'home.html'} aria-label="Домой" title="На главную"><Icon name="Home1"/></a>
  </div></header>
- {assembled&&isValidElement<{className?:string;children?:ReactNode}>(child)?<><div className="setup-workspace">{cloneElement(child,{className:(child.props.className||'')+' settings unified-settings-content'},assembled.body)}{assembled.theme}</div>{assembled.footer}</>:child}
+ {assembled?<><div className="setup-workspace">{layout?<Content className={(layout.contentClassName||'')+' settings unified-settings-content'}>{assembled.body}</Content>:isValidElement<{className?:string;children?:ReactNode}>(child)?cloneElement(child,{className:(child.props.className||'')+' settings unified-settings-content'},assembled.body):child}{assembled.theme}</div>{assembled.footer}</>:child}
  </section>
  <dialog ref={saveDialog} className="sound-picker-dialog material-save-dialog" aria-label="Сохранить набор" onCancel={()=>saveTrigger.current?.focus()}>
   <div className="panel-scroll">
