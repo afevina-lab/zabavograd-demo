@@ -73,7 +73,6 @@ jobs:
       - name: Build public-base UI from this very same source
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: |
-          node scripts/sync-runtime.cjs
           ./node_modules/.bin/vite build --base /zabavograd-demo/
           python scripts/prepare-card-skins.py dist
           python - <<'PY'
