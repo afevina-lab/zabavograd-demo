@@ -145,6 +145,13 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
+          name: visual-comparison-report-${{ matrix.theme }}
+          path: ui-smoke/comparison/**/*.json
+          if-no-files-found: ignore
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
           name: visual-next-${{ matrix.theme }}
           path: ui-smoke/
           retention-days: 30

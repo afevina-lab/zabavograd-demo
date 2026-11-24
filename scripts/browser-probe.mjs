@@ -1,3 +1,5 @@
+import {withReadyFonts} from './visual-html-bootstrap.mjs';
+import {captureStableFrame} from './settle-visual-frame.mjs';
 import assert from 'node:assert/strict';
 import {spawn} from 'node:child_process';
 import {mkdtempSync,readFileSync,existsSync,writeFileSync,mkdirSync,rmSync} from 'node:fs';
@@ -5,7 +7,7 @@ import {tmpdir} from 'node:os';
 import {join,resolve,extname,sep} from 'node:path';
 import {createServer} from 'node:http';
 
-export async function runBrowserProbe({theme='neutral',outputDirectory='ui-smoke/critical',rootDirectory='dist'}={},probe){
+export async function runBrowserProbe({theme='neutral',outputDirectory='ui-smoke/critical',rootDirectory='dist',warmFontsBeforeBoot=false}={},probe){
 const selectedTheme=theme;
 assert(['neutral','forest','space'].includes(selectedTheme),'Unknown UI_THEME');
 const themeIndex=['neutral','forest','space'].indexOf(selectedTheme);
@@ -18,7 +20,7 @@ const server=createServer((req,res)=>{
   const file=resolve(root,'.'+pathname);
   if(file!==root&&!file.startsWith(root+sep)){res.writeHead(403).end();return;}
   const path=pathname==='/'?join(root,'index.html'):file;
-  try{const content=readFileSync(path);res.writeHead(200,{'Content-Type':contentTypes[extname(path)]||'application/octet-stream','Cache-Control':'no-store'}).end(content)}catch{res.writeHead(404).end('Not found')}
+  try{let content=readFileSync(path);if(warmFontsBeforeBoot&&extname(path)==='.html')content=Buffer.from(withReadyFonts(content.toString('utf8')));res.writeHead(200,{'Content-Type':contentTypes[extname(path)]||'application/octet-stream','Cache-Control':'no-store'}).end(content)}catch{res.writeHead(404).end('Not found')}
 });
 await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const origin=`http://127.0.0.1:${server.address().port}/`;
@@ -57,7 +59,7 @@ try{
   ws.addEventListener('message',e=>{const m=JSON.parse(e.data);if(m.method==='Runtime.exceptionThrown')exceptions.push(m.params.exceptionDetails.text+': '+(m.params.exceptionDetails.exception?.description||''))});
   ws.addEventListener('message',e=>{let m;try{m=JSON.parse(e.data)}catch{return}if(m.method==='Network.responseReceived'&&m.params?.response?.status>=400&&!m.params.response.url.endsWith('/favicon.ico'))failures.push(m.params.response.url+' HTTP '+m.params.response.status)});
   async function until(predicate,timeoutMs=20000){let last;for(let i=0;i<timeoutMs/150;i++){try{last=await evaluate(predicate);if(last)return last;}catch{}await sleep(150)}throw Error('Timed out waiting for '+predicate.slice(0,150)+'; last='+last)}
-  async function screenshot(name){const out=await cmd('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});writeFileSync(join(output,name+'.png'),Buffer.from(out.data,'base64'))}
+  async function screenshot(name,{quietMs=0}={}){const capture=async()=>(await cmd('Page.captureScreenshot',{format:'png',captureBeyondViewport:false})).data;const data=quietMs?await captureStableFrame({capture,sleep,quietMs}):await capture();writeFileSync(join(output,name+'.png'),Buffer.from(data,'base64'))}
 
 await probe({cmd,evaluate,until,screenshot,failures,origin,themeIndex});
 assert.deepEqual(failures,[],'Missing HTTP resources');

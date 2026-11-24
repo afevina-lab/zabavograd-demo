@@ -6,7 +6,7 @@ const theme=process.env.UI_THEME||'neutral',directory=`${process.env.VISUAL_CAPT
 const sizes=[[1440,900],[1024,768],[768,1024],[390,844],[844,390]],allGames=['memory','sorting','matching','conveyor','transformations'];
 const games=process.env.VISUAL_CAPTURE_GAMES?process.env.VISUAL_CAPTURE_GAMES.split(','):allGames;if(!games.length||games.some(game=>!allGames.includes(game)))throw Error('Unknown capture game');
 const measurements=[];
-await runBrowserProbe({theme,outputDirectory:directory,rootDirectory:process.env.UI_DIST_ROOT||'dist'},async({cmd,evaluate,until,screenshot,origin,themeIndex})=>{
+await runBrowserProbe({theme,outputDirectory:directory,rootDirectory:process.env.UI_DIST_ROOT||'dist',warmFontsBeforeBoot:true},async({cmd,evaluate,until,screenshot,origin,themeIndex})=>{
  await cmd('Page.addScriptToEvaluateOnNewDocument',{source:`(${installCaptureClock.toString()})();`});
  await cmd('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
  const setup=createGameSetup({cmd,evaluate,until,origin,themeIndex});
@@ -20,8 +20,8 @@ await runBrowserProbe({theme,outputDirectory:directory,rootDirectory:process.env
   }
   await evaluate("(async()=>{for(let frame=0;frame<3;frame++){for(const animation of document.getAnimations()){const timing=animation.effect?.getComputedTiming();if(timing&&Number.isFinite(timing.endTime))animation.finish();else{animation.pause();await animation.ready;animation.currentTime=0}}await new Promise(resolve=>requestAnimationFrame(resolve))}})()");
   if(name.endsWith('-pause')||name.endsWith('-result'))await until("getComputedStyle(document.querySelector('.overlay')).opacity==='1'");
-  measurements.push({name,theme,captureVersion:3,captureMotion:'reduced',metrics:await evaluate(`(()=>{const selectors=['.shared-settings-window','.settings-window-heading','.setup-workspace','.setup-columns','.setup-theme-rail','.setup-footer','.setup-footer>.primary','.quantity-slider','.shared-toolbar','.toolbar-left','.toolbar-centre','.toolbar-right','.overlay>div','.transformation-chamber'];return selectors.flatMap(selector=>[...document.querySelectorAll(selector)].map((e,index)=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {selector,index,bounds:{x:r.x,y:r.y,width:r.width,height:r.height},styles:Object.fromEntries(['display','position','gap','padding','margin','fontFamily','fontSize','lineHeight','backgroundImage','borderImageSource','borderImageSlice','zIndex','overflow','maxHeight'].map(k=>[k,s[k]]))}}))})()`)});
-  await screenshot(name);
+  measurements.push({name,theme,captureVersion:4,fontsBeforeBoot:true,captureMotion:'reduced',metrics:await evaluate(`(()=>{const selectors=['.shared-settings-window','.settings-window-heading','.setup-workspace','.setup-columns','.setup-theme-rail','.setup-footer','.setup-footer>.primary','.quantity-slider','.shared-toolbar','.toolbar-left','.toolbar-centre','.toolbar-right','.overlay>div','.transformation-chamber','.zg-scene-layers','.zg-scene-sprite'];return selectors.flatMap(selector=>[...document.querySelectorAll(selector)].map((e,index)=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {selector,index,bounds:{x:r.x,y:r.y,width:r.width,height:r.height},styles:Object.fromEntries(['display','position','gap','padding','margin','fontFamily','fontSize','lineHeight','backgroundImage','borderImageSource','borderImageSlice','zIndex','overflow','maxHeight','transform'].map(k=>[k,s[k]]))}}))})()`)});
+  await screenshot(name,{quietMs:1000});
  };
  for(const [width,height] of sizes){
   await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600||width===844});

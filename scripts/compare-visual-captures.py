@@ -44,4 +44,5 @@ for candidate in files:
 failed = [r for r in results if not r['passed']]
 print(json.dumps({'screenshots': len(results), 'failed': len(failed), 'exactMatches': sum(r.get('exactMatch', False) for r in results), 'largestChangedRatio': max(r.get('changedRatio', 1) for r in results)}))
 if failed:
+    print(json.dumps({'differences': failed}))
     raise SystemExit('Visual differences need review; reference was not changed')
