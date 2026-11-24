@@ -3,3 +3,5 @@ dist/
 ui-smoke/
 public/library.json
 .DS_Store
+
+dist-visual/

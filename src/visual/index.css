@@ -1,0 +1,9 @@
+@layer reset, foundation, primitives, compositions, games, motion;
+@import './foundation/reset.css' layer(reset);
+@import './foundation/tokens.css' layer(foundation);
+@import './primitives/controls.css' layer(primitives);
+@import './compositions/layouts.css' layer(compositions);
+@import './games/boards.css' layer(games);
+@layer motion{
+ @media(prefers-reduced-motion:reduce){.v-root *,.v-root *::before,.v-root *::after{animation-duration:0s;transition-duration:0s;scroll-behavior:auto}}
+}

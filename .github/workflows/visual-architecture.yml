@@ -1,4 +1,4 @@
-name: Visual architecture baseline (no deployment)
+name: Visual architecture (no deployment)
 on:
   push:
     branches: [visual/composition-architecture-20261124]
@@ -6,29 +6,19 @@ on:
 permissions:
   contents: read
 jobs:
-  baseline:
+  baseline-build:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      max-parallel: 3
-      matrix:
-        theme: [neutral, forest, space]
     steps:
       - uses: actions/checkout@v4
         with:
-          path: tools
-      - uses: actions/checkout@v4
-        with:
           ref: 953797fdc6969bbd3ae939e970ea57a2a596c619
-          path: baseline
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build immutable baseline
-        working-directory: baseline
+      - name: Build immutable reference once
         run: |
           npm install --no-package-lock --ignore-scripts
           python -m pip install --disable-pip-version-check pillow
@@ -37,16 +27,95 @@ jobs:
           ./node_modules/.bin/vite build
           python scripts/prepare-card-skins.py dist
           printf '%s' '953797fdc6969bbd3ae939e970ea57a2a596c619' > source.sha
-      - name: Capture settings, expanded panels, game, pause and result
-        working-directory: baseline
+      - uses: actions/upload-artifact@v4
+        with:
+          name: immutable-reference-build
+          path: |
+            dist/
+            source.sha
+          retention-days: 90
+  baseline:
+    needs: baseline-build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        theme: [neutral, forest, space]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          name: immutable-reference-build
+      - name: Capture reference states
         env:
           UI_THEME: ${{ matrix.theme }}
-        run: node ../tools/scripts/capture-visual-baseline.mjs
+        run: node scripts/capture-visual-baseline.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: visual-baseline-${{ matrix.theme }}
           path: |
-            baseline/ui-smoke/
-            baseline/source.sha
+            ui-smoke/
+            source.sha
           retention-days: 90
+  candidate-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate boundaries and existing functionality
+        run: |
+          npm install --no-package-lock --ignore-scripts
+          python -m pip install --disable-pip-version-check pillow
+          node scripts/check-architecture.cjs
+          node scripts/check-visual-architecture.mjs
+          node scripts/sync-runtime.cjs
+          node scripts/check-library-v2.cjs
+          node scripts/check-design-system.cjs
+          node --experimental-strip-types --test tests/*.test.ts tests/ci-plan.test.mjs
+          ./node_modules/.bin/tsc --noEmit
+      - name: Build standalone replacement preview
+        run: |
+          ./node_modules/.bin/vite build --config vite.visual.config.mjs
+          python scripts/prepare-card-skins.py dist-visual
+      - uses: actions/upload-artifact@v4
+        with:
+          name: visual-next-build
+          path: dist-visual/
+          retention-days: 30
+  candidate:
+    needs: candidate-build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        theme: [neutral, forest, space]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          name: visual-next-build
+          path: dist-visual
+      - name: Exercise standalone visual compositions
+        env:
+          UI_THEME: ${{ matrix.theme }}
+        run: node scripts/verify-visual-next-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: visual-next-${{ matrix.theme }}
+          path: ui-smoke/
+          retention-days: 30
