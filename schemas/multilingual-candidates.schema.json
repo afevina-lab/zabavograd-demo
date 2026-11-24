@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Zabavograd multilingual lexical candidates (staging only)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source_library",
+    "languages",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "source_library": {
+      "const": "outputs/library-v2.json"
+    },
+    "languages": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "en",
+          "fr",
+          "es",
+          "de"
+        ]
+      },
+      "minItems": 1
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "language",
+          "lemma",
+          "part_of_speech",
+          "meanings",
+          "review_status",
+          "provenance"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "language": {
+            "enum": [
+              "en",
+              "fr",
+              "es",
+              "de"
+            ]
+          },
+          "lemma": {
+            "type": "string",
+            "minLength": 1
+          },
+          "part_of_speech": {
+            "type": "string",
+            "minLength": 1
+          },
+          "meanings": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "sense_id",
+                "review_status",
+                "links"
+              ],
+              "properties": {
+                "sense_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "gloss": {
+                  "type": "string"
+                },
+                "review_status": {
+                  "enum": [
+                    "suggested",
+                    "verified",
+                    "rejected"
+                  ]
+                },
+                "links": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "relation",
+                      "target",
+                      "review_status"
+                    ],
+                    "properties": {
+                      "relation": {
+                        "enum": [
+                          "exact",
+                          "broader",
+                          "narrower",
+                          "related"
+                        ]
+                      },
+                      "target": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "library_entry_id"
+                        ],
+                        "properties": {
+                          "library_entry_id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "library_sense_id": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "review_status": {
+                        "enum": [
+                          "suggested",
+                          "verified",
+                          "rejected"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "forms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "form",
+                "features",
+                "review_status"
+              ],
+              "properties": {
+                "form": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "features": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "review_status": {
+                  "enum": [
+                    "suggested",
+                    "verified",
+                    "rejected"
+                  ]
+                }
+              }
+            }
+          },
+          "pronunciations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "ipa",
+                "review_status"
+              ],
+              "properties": {
+                "ipa": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "variety": {
+                  "type": "string"
+                },
+                "review_status": {
+                  "enum": [
+                    "suggested",
+                    "verified",
+                    "rejected"
+                  ]
+                }
+              }
+            }
+          },
+          "review_status": {
+            "enum": [
+              "suggested",
+              "verified",
+              "rejected"
+            ]
+          },
+          "provenance": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "source",
+                "license",
+                "retrieved_at"
+              ],
+              "properties": {
+                "source": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source_record_id": {
+                  "type": "string"
+                },
+                "license": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source_url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "retrieved_at": {
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
