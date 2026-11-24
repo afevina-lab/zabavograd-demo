@@ -15,3 +15,5 @@ export {LifeMeter} from './primitives/LifeMeter.tsx';
 export {SortingLayout} from './games/SortingLayout.tsx';
 export {MatchingLayout} from './games/MatchingLayout.tsx';
 export {ConveyorTrack} from './games/ConveyorTrack.tsx';
+export {SelectionTree} from './compositions/SelectionTree.tsx';
+export {SavedSetList} from './compositions/SavedSetList.tsx';

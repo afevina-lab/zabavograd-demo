@@ -1,6 +1,8 @@
-import {Icon} from './GameUI.tsx';
+import {Icon} from './visual/primitives/Icon.tsx';
+import {SavedSetList} from './visual/compositions/SavedSetList.tsx';
+import {PickerTrigger} from './design-system/PickerTrigger.tsx';
+import {PickerDialog} from './design-system/PickerDialog.tsx';
 import {useContext,useEffect,useRef,useState} from 'react';
-import {ControlWell} from './design-system/ControlWell.tsx';
 import {MaterialPresetContext} from './design-system/MaterialPresetContext.tsx';
 import type {Learning} from './learning.ts';
 import type {Filters,Word} from './material-types.ts';
@@ -42,25 +44,15 @@ export function SavedMaterialSets({words,learning,filters,setLearning,setFilters
   catch(error){setMessage((error as Error).message);cancelDelete();}
  };
  return <div className="saved-set-picker">
-  <button type="button" ref={trigger} className="category-picker-trigger saved-set-trigger" onClick={open}>
-   <span className="setup-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 5h16v15H4zM8 9h8M8 13h8M8 17h5"/></svg></span>
-   <span className="setup-action-copy"><strong>Выберите набор</strong><small>{chosen.length?'Отмечено: '+chosen.length:'Мои сохранённые учебные наборы'}</small></span><ControlWell symbol="plus"/>
-  </button>
-  <dialog className="sound-picker-dialog saved-set-dialog" ref={picker} aria-label="Выбрать набор" onCancel={()=>trigger.current?.focus()}>
-   <div className="panel-scroll"><h2>Выберите набор</h2>
-    {sets.length===0?<p>Сохранённых наборов пока нет. Настройте учебный материал и нажмите кнопку сохранения в верхней панели.</p>:
-    <div className="saved-set-list">{sets.map(set=><div className="saved-set-row" key={set.id}>
-     <label className="check"><input type="checkbox" checked={chosen.includes(set.id)} onChange={e=>setChosen(ids=>e.target.checked?[...ids,set.id]:ids.filter(x=>x!==set.id))}/><span><strong>{set.name}</strong><small>{set.learning.approvedWordIds?.length?'Одобренных слов: '+set.learning.approvedWordIds.length+' · ':''}{new Date(set.updatedAt).toLocaleDateString('ru-RU')}</small></span></label>
-     <button type="button" className="icon-button saved-set-remove" title="Удалить набор" aria-label={'Удалить набор '+set.name} onClick={()=>askDelete(set.id)}><Icon name="Trash"/></button>
-    </div>)}</div>}
-    {message&&<p role="status">{message}</p>}
-    <p className="hint">Можно отметить несколько наборов одной учебной задачи. Содержимое хранится в браузере.</p>
-   </div>
-   <div className="sound-picker-actions"><button type="button" className="primary" disabled={!chosen.length} onClick={apply}>Применить · {chosen.length}</button><button type="button" className="secondary" onClick={close}>Отмена</button></div>
-  </dialog>
-  <dialog className="sound-picker-dialog saved-set-confirm" ref={confirmation} aria-label="Подтвердить удаление" onCancel={()=>setPendingDelete(null)}>
-   <div className="panel-scroll"><h2>Удалить набор?</h2><p>Это действие удалит сохранённые настройки и список слов с этого устройства. Отменить его нельзя.</p></div>
-   <div className="sound-picker-actions"><button type="button" className="secondary saved-set-confirm-delete" onClick={confirmDelete}><Icon name="Trash"/> Удалить</button><button type="button" className="secondary" onClick={cancelDelete}>Отмена</button></div>
-  </dialog>
+  <PickerTrigger className="saved-set-trigger" ref={trigger} onClick={open} title="Выберите набор" description={chosen.length?'Отмечено: '+chosen.length:'Мои сохранённые учебные наборы'} icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 5h16v15H4zM8 9h8M8 13h8M8 17h5"/></svg>}/>
+  <PickerDialog className="saved-set-dialog" ref={picker} label="Выбрать набор" onDismiss={()=>trigger.current?.focus()} onConfirm={apply} onCancel={close} confirmDisabled={!chosen.length} confirmLabel={'Применить · '+chosen.length}>
+   <h2>Выберите набор</h2>
+   {sets.length===0?<p>Сохранённых наборов пока нет. Настройте учебный материал и нажмите кнопку сохранения в верхней панели.</p>:<SavedSetList items={sets.map(set=>({id:set.id,name:set.name,description:(set.learning.approvedWordIds?.length?'Одобренных слов: '+set.learning.approvedWordIds.length+' · ':'')+new Date(set.updatedAt).toLocaleDateString('ru-RU')}))} selected={chosen} onChange={(id,checked)=>setChosen(ids=>checked?[...ids,id]:ids.filter(value=>value!==id))} onRemove={askDelete} classNames={{root:'saved-set-list',row:'saved-set-row',choice:'check',remove:'icon-button saved-set-remove'}}/>}
+   {message&&<p role="status">{message}</p>}
+   <p className="hint">Можно отметить несколько наборов одной учебной задачи. Содержимое хранится в браузере.</p>
+  </PickerDialog>
+  <PickerDialog className="saved-set-confirm" ref={confirmation} label="Подтвердить удаление" onDismiss={()=>setPendingDelete(null)} onConfirm={confirmDelete} onCancel={cancelDelete} confirmLabel={<><Icon name="Trash"/> Удалить</>}>
+   <h2>Удалить набор?</h2><p>Это действие удалит сохранённые настройки и список слов с этого устройства. Отменить его нельзя.</p>
+  </PickerDialog>
  </div>;
 }

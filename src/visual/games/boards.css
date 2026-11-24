@@ -1,9 +1,9 @@
 .v-memory-board{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,96px),1fr));gap:var(--v-space-3);align-content:center;max-width:1100px;margin:auto;min-height:100%}
 .v-sorting-board{display:grid;grid-template-rows:minmax(112px,35%) minmax(0,1fr);gap:var(--v-space-4);height:100%;min-height:0}
-.v-sorting-bank{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:var(--v-space-3);overflow:auto;min-height:0;align-content:start;padding:var(--v-space-2)}
+.v-sorting-bank{display:grid;grid-template-columns:repeat(auto-fit,minmax(var(--v-bank-card-min),1fr));gap:var(--v-space-3);overflow:auto;min-height:0;align-content:start;padding:var(--v-space-2)}
 .v-sorting-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:var(--v-space-3);overflow:auto;min-height:0}
 .v-sorting-group{min-width:0;min-height:0;display:flex;flex-direction:column;gap:var(--v-space-2)}
-.v-sorting-group>div{display:grid;grid-template-columns:repeat(auto-fit,minmax(64px,1fr));gap:var(--v-space-2);overflow:auto;min-height:0;padding:var(--v-space-1)}
+.v-sorting-group>div{display:grid;grid-template-columns:repeat(auto-fit,minmax(var(--v-placed-card-min),1fr));gap:var(--v-space-2);overflow:auto;min-height:0;padding:var(--v-space-1)}
 .v-sorting-group h2{font-size:18px}
 .v-matching-board{display:flex;flex-wrap:wrap;align-content:center;justify-content:center;gap:var(--v-space-3);min-height:100%}
 .v-matching-board>.v-card{width:clamp(96px,16vw,180px);flex:none}
@@ -11,3 +11,4 @@
 .v-conveyor-board>.v-card{width:clamp(120px,25vw,240px);flex:none;scroll-snap-align:center}
 .v-transformation-board{display:grid;place-items:center;height:100%;min-height:0;overflow:hidden}
 .v-transformation-board>.v-card{width:min(100%,300px);max-height:100%;aspect-ratio:3/4}
+
