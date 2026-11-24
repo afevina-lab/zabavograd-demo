@@ -1,0 +1,37 @@
+name: CI routing prototype (no deployment)
+on:
+  push:
+    branches: [ci/risk-based-checks-20261124]
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [AUTO, FAST, TARGETED, FULL]
+        default: AUTO
+permissions:
+  contents: read
+jobs:
+  routing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Test safe routing
+        run: node --test tests/ci-plan.test.mjs
+      - name: Explain proposed scope (does not execute deployment)
+        env:
+          REQUESTED_MODE: ${{ inputs.mode || 'AUTO' }}
+        run: |
+          git diff --name-only HEAD~1 HEAD -z > /tmp/changed-paths
+          node -e "const fs=require('fs');fs.writeFileSync('/tmp/changed.json',JSON.stringify(fs.readFileSync('/tmp/changed-paths','utf8').split('\0').filter(Boolean)))"
+          node scripts/ci-plan.mjs /tmp/changed.json "$REQUESTED_MODE" > ci-plan.json
+          echo '### Proposed checks — deployment disabled' >> "$GITHUB_STEP_SUMMARY"
+          cat ci-plan.json >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: proposed-ci-plan
+          path: ci-plan.json
