@@ -1,3 +1,5 @@
+import {decodeCaptureImage} from './visual-capture-images.mjs';
+import {setTimeout as waitForImage} from 'node:timers/promises';
 import {installCaptureClock} from './visual-capture-environment.mjs';
 import {writeFileSync,mkdirSync} from 'node:fs';
 import {runBrowserProbe} from './browser-probe.mjs';
@@ -13,7 +15,12 @@ await runBrowserProbe({theme,outputDirectory:directory,rootDirectory:process.env
  const capture=async(name)=>{
   await evaluate(`document.fonts.ready`);
   await until("[...document.images].filter(e=>e.getBoundingClientRect().width>0).every(e=>e.complete&&e.naturalWidth>0)");
-  await evaluate("Promise.all([...document.images].map(async img=>{try{await img.decode()}catch(error){if(img.isConnected)throw error}}))");
+  for(let attempt=0;;attempt++){
+   const ready=await evaluate(`(async()=>{const decode=${decodeCaptureImage.toString()};const images=[...document.images].filter(img=>{const r=img.getBoundingClientRect();return r.width>0&&r.height>0});return (await Promise.all(images.map(decode))).every(Boolean)})()`);
+   if(ready)break;
+   if(attempt>=20)throw Error('Visible image source never settled: '+name);
+   await waitForImage(100);
+  }
   if(name.endsWith('-play')){
    await evaluate("new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)))");
    await evaluate("globalThis.__visualCaptureClock.advance(1000)");
@@ -22,6 +29,7 @@ await runBrowserProbe({theme,outputDirectory:directory,rootDirectory:process.env
   if(name.endsWith('-pause')||name.endsWith('-result'))await until("getComputedStyle(document.querySelector('.overlay')).opacity==='1'");
   measurements.push({name,theme,captureVersion:4,fontsBeforeBoot:true,captureMotion:'reduced',metrics:await evaluate(`(()=>{const selectors=['.shared-settings-window','.settings-window-heading','.setup-workspace','.setup-columns','.setup-theme-rail','.setup-footer','.setup-footer>.primary','.quantity-slider','.shared-toolbar','.toolbar-left','.toolbar-centre','.toolbar-right','.overlay>div','.transformation-chamber','.zg-scene-layers','.zg-scene-sprite'];return selectors.flatMap(selector=>[...document.querySelectorAll(selector)].map((e,index)=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {selector,index,bounds:{x:r.x,y:r.y,width:r.width,height:r.height},styles:Object.fromEntries(['display','position','gap','padding','margin','fontFamily','fontSize','lineHeight','backgroundImage','borderImageSource','borderImageSlice','zIndex','overflow','maxHeight','transform'].map(k=>[k,s[k]]))}}))})()`)});
   await screenshot(name,{quietMs:1000});
+  await until("[...document.images].filter(img=>{const r=img.getBoundingClientRect();return r.width>0&&r.height>0}).every(img=>img.complete&&img.naturalWidth>0)");
  };
  for(const [width,height] of sizes){
   await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600||width===844});
