@@ -1,0 +1,5 @@
+.v-flip-inner{position:relative;display:block;width:100%;height:100%;transform-style:preserve-3d;transform:rotateY(0deg)}
+.v-flip-inner[data-revealed=true]{transform:rotateY(180deg)}
+.v-flip-back,.v-flip-front{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;padding:11%;background-position:center;background-size:100% 100%;background-repeat:no-repeat}
+.v-flip-back{background-image:var(--zg-card-back-image)}
+.v-flip-front{background-image:var(--zg-card-front-image);transform:rotateY(180deg)}
