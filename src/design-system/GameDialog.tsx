@@ -8,6 +8,7 @@ export function DialogActions({onSettings,onContinue,onRepeat}:{onSettings:()=>v
 }
 export function GameDialog({title,onContinue,onSettings,onRepeat,description,stars}:{title:string;onContinue?:()=>void;onSettings:()=>void;onRepeat?:()=>void;description?:string;stars?:number}){
  return <div className={'overlay '+(stars===undefined?'game-dialog':'result')} role="dialog" aria-modal="true" aria-label={title}>
-  <DialogContent classNames={contentClasses} title={title} description={description} award={stars!==undefined?<ScoreStars value={stars}/>:undefined} actions={<DialogActions onContinue={onContinue} onSettings={onSettings} onRepeat={onRepeat}/>}/>
+  <DialogContent classNames={contentClasses} title={title} description={description} award={stars!==undefined?<ScoreStars value={stars} classNames={{root:"victory-stars",star:"victory-star",empty:"victory-star-empty",shining:"victory-star-shining"}}/>:undefined} actions={<DialogActions onContinue={onContinue} onSettings={onSettings} onRepeat={onRepeat}/>}/>
  </div>;
 }
+

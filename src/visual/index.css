@@ -9,6 +9,7 @@
 @import './primitives/bounded-artwork.css' layer(primitives);
 @import './primitives/choice.css' layer(primitives);
 @import './primitives/life-meter.css' layer(primitives);
+@import './primitives/score-stars.css' layer(primitives);
 @import './primitives/sound-choice.css' layer(primitives);
 @import './primitives/fit-copy.css' layer(primitives);
 @import './primitives/add-action.css' layer(primitives);
@@ -34,6 +35,7 @@
 @layer motion{
  @media(prefers-reduced-motion:reduce){.v-root *,.v-root *::before,.v-root *::after{animation-duration:0s;transition-duration:0s;scroll-behavior:auto}}
 }
+
 
 
 

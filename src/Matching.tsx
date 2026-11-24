@@ -122,7 +122,7 @@ export function Matching(){
  function retry(){setPlacements(p=>Object.fromEntries(Object.entries(p).map(([id,ids])=>[id,ids.filter(id=>verdict[id])])));setVerdict({});setMessage('Исправьте оставшиеся соответствия.');}
  function remove(id:string){if(paused||finished||limits.lost)return;setPlacements(p=>Object.fromEntries(Object.entries(p).map(([g,ids])=>[g,ids.filter(x=>x!==id)])));setVerdict({});setSelected(null);}
  function artwork(e:MatchElement){const image=e.appearance==='word'?undefined:e.word.variants?.[0];return <>{image?(e.appearance==='silhouette'||e.appearance==='outline'?<DerivedArtwork image={image} outline={e.appearance==='outline'}/>:<CardArtwork image={image} label={e.word.label}/>):<span className="matching-word-text" style={{fontSize:Math.max(12,Math.min(20,280/Math.max(9,readingLabel(e.word.label,learning).length)))+'px'}}>{readingLabel(e.word.label,learning)}</span>}{captions&&displayMode==='image-image'&&!kind&&image&&e.appearance==='original'&&<small>{readingLabel(e.word.label,learning)}</small>}</>;}
- function card(e:MatchElement,isPlaced=false){return <CardButton frame="sliced" type="button" key={e.id} data-match-card={e.id} disabled={paused||finished||!!limits.lost} className={'matching-card '+(e.appearance==='word'?'matching-word-card ':'')+(selected===e.id?'chosen ':'')+(verdict[e.id]===false?'verdict-bad':verdict[e.id]===true?'verdict-good':'')} aria-label={e.appearance==='original'?e.word.label:e.appearance==='outline'?'Контур':'Тень'} onClick={()=>{if(drag.suppressClick())return;if(isPlaced)remove(e.id);else setSelected(e.id)}} onPointerDown={event=>{if(!isPlaced)drag.begin(event,'[data-match-group]',target=>place(e.id,target.dataset.matchGroup!));}}>{artwork(e)}</CardButton>;}
+ function card(e:MatchElement,isPlaced=false){return <CardButton feedback={verdict[e.id]===false?"wrong":verdict[e.id]===true?"correct":"idle"} frame="sliced" type="button" key={e.id} data-match-card={e.id} disabled={paused||finished||!!limits.lost} className={'matching-card '+(e.appearance==='word'?'matching-word-card ':'')+(selected===e.id?'chosen ':'')+(verdict[e.id]===false?'verdict-bad':verdict[e.id]===true?'verdict-good':'')} aria-label={e.appearance==='original'?e.word.label:e.appearance==='outline'?'Контур':'Тень'} onClick={()=>{if(drag.suppressClick())return;if(isPlaced)remove(e.id);else setSelected(e.id)}} onPointerDown={event=>{if(!isPlaced)drag.begin(event,'[data-match-group]',target=>place(e.id,target.dataset.matchGroup!));}}>{artwork(e)}</CardButton>;}
  function resize(n:number){setSize(n);setManual(rows=>rows.map(row=>Array.from({length:n},(_,i)=>row[i]||'')));if(n>3)setMode('manual');}
  useGameViewport(session.length>0);
  return <div className={'app '+(session.length?'game-active':'')} {...themeAttributes(theme)} style={themeVars(theme,import.meta.env.BASE_URL)}>
@@ -151,6 +151,7 @@ export function Matching(){
 </>}/></div></section>}
  </div>;
 }
+
 
 
 
