@@ -56,10 +56,11 @@ try{
   async function until(predicate,timeoutMs=20000){let last;for(let i=0;i<timeoutMs/150;i++){try{last=await evaluate(predicate);if(last)return last;}catch{}await sleep(150)}throw Error('Timed out waiting for '+predicate.slice(0,150)+'; last='+last)}
   async function screenshot(name){const out=await cmd('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});writeFileSync(join(output,name+'.png'),Buffer.from(out.data,'base64'))}
 
+const scope=process.env.CI_PLAN_FILE?JSON.parse(readFileSync(process.env.CI_PLAN_FILE,'utf8')):null;
 const report=[];
-for(const [width,height] of [[1440,900],[1024,768],[768,1024],[390,844],[844,390]]){
+for(const [width,height] of (scope?.sizes||[[1440,900],[1024,768],[768,1024],[390,844],[844,390]])){
 await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
-for(const game of ['memory','sorting','matching','conveyor','transformations']){
+for(const game of (scope?.games||['memory','sorting','matching','conveyor','transformations'])){
 await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");await evaluate("document.querySelectorAll('.themes button')["+themeIndex+"]?.click()");await sleep(800);
 // Regression: an opaque themed backdrop must completely cover the legacy
 // game page, including its titles/cards, in every game's settings screen.
@@ -143,7 +144,7 @@ if(game==='conveyor'){
  await until("+document.querySelector('.quantity-slider input[type=number]').value==="+(beforeCount+1));
  await evaluate("document.querySelectorAll('.quantity-slider button')[0].click()");
  await until("+document.querySelector('.quantity-slider input[type=number]').value==="+beforeCount);
- assert(await evaluate("document.querySelectorAll('.quantity-slider input[type=number]').length===1&&!document.querySelector('.quantity-slider output')"),'Quantity display duplicated');
+ assert(await evaluate("[...document.querySelectorAll('.quantity-slider')].every(e=>e.querySelectorAll('input[type=number]').length===1&&e.querySelectorAll('input[type=range]').length===1&&!e.querySelector('output')&&e.querySelector('input[type=number]').value===e.querySelector('input[type=range]').value)"),'Quantity display duplicated');
  await evaluate("document.querySelector('.unified-settings-content').scrollTop=100000");await screenshot('ready-material-'+width);await evaluate("document.querySelector('.unified-settings-content').scrollTop=0");
  assert(await evaluate("(()=>{const e=document.querySelector('input[role=switch]');if(!e)return false;const before=e.checked;e.click();const changed=e.checked!==before;e.click();return changed&&e.checked===before})()"),'Caption switch failed');
  await evaluate("(()=>{const e=[...document.querySelectorAll('select')].find(e=>[...e.options].some(o=>o.value==='lexical'));if(e){e.value='lexical';e.dispatchEvent(new Event('change',{bubbles:true}))}})()");await sleep(200);
