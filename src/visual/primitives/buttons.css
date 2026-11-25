@@ -9,3 +9,5 @@
 .v-icon-button[data-size=toolbar]{--v-icon-size:calc(var(--v-toolbar)*.6);--v-icon-padding:6px}
 .v-icon-button[data-size=heading]{--v-icon-size:var(--v-heading-control);--v-icon-padding:var(--v-space-2)}
 
+.v-icon-button[data-size=answer]{--v-icon-size:clamp(48px,8vmin,72px);--v-icon-padding:var(--v-space-3)}
+.v-icon-button[data-size=answer][data-answer=negative]{background:var(--ui-required);border-color:var(--ui-required-dark)}
