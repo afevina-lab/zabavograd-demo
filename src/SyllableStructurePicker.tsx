@@ -29,15 +29,15 @@ export function SyllableStructurePicker({filters,onChange,words=[]}:{filters:Fil
  return <>
   <PickerTrigger className="syllable-picker-trigger" ref={trigger} onClick={open} title="Выберите слоговую структуру" description={filters.types.length===defaultFilters.types.length&&filters.untyped?'Слова любой слоговой структуры':`Выбрано типов: ${filters.types.length}`} icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 6h16M4 12h16M4 18h16M8 3v6m8 0v6"/></svg>}/>
   <PickerDialog ref={dialog} className="syllable-picker-dialog" scrollClassName="syllable-picker-scroll" label="Выбор слоговой структуры" onDismiss={()=>trigger.current?.focus()} onConfirm={()=>{onChange({types,untyped});close()}} onCancel={close}>
-   <div className="syllable-picker-body"><h2>Слоговая структура</h2>
-    <Choice className="check" label="Выбрать всё" checked={types.length===defaultFilters.types.length&&untyped} onChange={checked=>{setTypes(checked?[...defaultFilters.types]:[]);setUntyped(checked)}}/>
-    <div className="types syllable-picker-grid">{defaultFilters.types.map(n=>{
+   <div className="v-syllable-body syllable-picker-body"><h2>Слоговая структура</h2>
+    <Choice className="v-choice check" label="Выбрать всё" checked={types.length===defaultFilters.types.length&&untyped} onChange={checked=>{setTypes(checked?[...defaultFilters.types]:[]);setUntyped(checked)}}/>
+    <div className="v-syllable-grid types syllable-picker-grid">{defaultFilters.types.map(n=>{
      const description=descriptions[n]||'Тип слоговой структуры '+n;
      const examples=words.filter(w=>w.type===n).slice(0,3).map(w=>w.label).join(', ');
      const selected=types.includes(n);
-     return <button type="button" key={n} className="syllable-type-option" aria-pressed={selected} onMouseEnter={e=>showHelp(e.currentTarget,e.clientX,e.clientY)} onMouseMove={e=>showHelp(e.currentTarget,e.clientX,e.clientY)} onMouseLeave={e=>hideHelp(e.currentTarget)} onFocus={e=>showHelp(e.currentTarget)} onBlur={e=>hideHelp(e.currentTarget)} aria-label={`Тип ${n}: ${description}`} onClick={()=>setTypes(v=>selected?v.filter(x=>x!==n):[...v,n])}>{n}<span popover="manual" className="syllable-type-tooltip" role="tooltip">{description}{examples&&<small>Например: {examples}</small>}</span></button>;
+     return <button type="button" key={n} className="v-syllable-option syllable-type-option" aria-pressed={selected} onMouseEnter={e=>showHelp(e.currentTarget,e.clientX,e.clientY)} onMouseMove={e=>showHelp(e.currentTarget,e.clientX,e.clientY)} onMouseLeave={e=>hideHelp(e.currentTarget)} onFocus={e=>showHelp(e.currentTarget)} onBlur={e=>hideHelp(e.currentTarget)} aria-label={`Тип ${n}: ${description}`} onClick={()=>setTypes(v=>selected?v.filter(x=>x!==n):[...v,n])}>{n}<span popover="manual" className="syllable-type-tooltip" role="tooltip">{description}{examples&&<small>Например: {examples}</small>}</span></button>;
     })}</div>
-    <button type="button" className="syllable-type-option syllable-untyped" aria-pressed={untyped} onClick={()=>setUntyped(v=>!v)}>Без категории</button>
+    <button type="button" className="v-syllable-option syllable-type-option syllable-untyped" aria-pressed={untyped} onClick={()=>setUntyped(v=>!v)}>Без категории</button>
    </div>
   </PickerDialog>
  </>;

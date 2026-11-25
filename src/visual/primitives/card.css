@@ -8,3 +8,7 @@
 
 
 .v-card:disabled{opacity:1;cursor:default}
+.v-card[data-card-key]{width:var(--v-memory-card-width);aspect-ratio:1;padding:0;perspective:1000px;overflow:visible}
+.v-card[data-motion-id]{width:var(--v-sort-card-size,var(--sort-card-size));height:var(--v-sort-card-size,var(--sort-card-size));aspect-ratio:1;padding:calc(var(--v-sort-card-size,var(--sort-card-size))*.105)}
+.v-card[data-match-card]{width:var(--matching-card-size,120px);aspect-ratio:1;flex:none}
+.v-conveyor-card{position:absolute;left:0;top:50%;translate:-50% -50%;width:clamp(120px,20vw,240px);aspect-ratio:1;flex:none}

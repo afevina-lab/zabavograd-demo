@@ -49,7 +49,7 @@ export function SavedMaterialSets({words,learning,filters,setLearning,setFilters
    <h2>Выберите набор</h2>
    {sets.length===0?<p>Сохранённых наборов пока нет. Настройте учебный материал и нажмите кнопку сохранения в верхней панели.</p>:<SavedSetList items={sets.map(set=>({id:set.id,name:set.name,description:(set.learning.approvedWordIds?.length?'Одобренных слов: '+set.learning.approvedWordIds.length+' · ':'')+new Date(set.updatedAt).toLocaleDateString('ru-RU')}))} selected={chosen} onChange={(id,checked)=>setChosen(ids=>checked?[...ids,id]:ids.filter(value=>value!==id))} onRemove={askDelete} classNames={{root:'saved-set-list',row:'saved-set-row',choice:'check',remove:'icon-button saved-set-remove'}}/>}
    {message&&<p role="status">{message}</p>}
-   <p className="hint">Можно отметить несколько наборов одной учебной задачи. Содержимое хранится в браузере.</p>
+   <p className="v-help-copy hint">Можно отметить несколько наборов одной учебной задачи. Содержимое хранится в браузере.</p>
   </PickerDialog>
   <PickerDialog className="saved-set-confirm" ref={confirmation} label="Подтвердить удаление" onDismiss={()=>setPendingDelete(null)} onConfirm={confirmDelete} onCancel={cancelDelete} confirmLabel={<><Icon name="Trash"/> Удалить</>}>
    <h2>Удалить набор?</h2><p>Это действие удалит сохранённые настройки и список слов с этого устройства. Отменить его нельзя.</p>

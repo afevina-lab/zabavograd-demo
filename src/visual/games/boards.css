@@ -13,3 +13,4 @@
 .v-transformation-board>.v-card{width:min(100%,300px);max-height:100%;aspect-ratio:3/4}
 
 
+.v-memory-board[data-measured=true]{grid-template-columns:repeat(calc(var(--v-memory-columns)*2),minmax(0,1fr));width:min(100%,calc(var(--v-memory-columns)*(var(--v-memory-card-width) + 12px)));column-gap:0;row-gap:var(--v-space-3);align-content:center}
