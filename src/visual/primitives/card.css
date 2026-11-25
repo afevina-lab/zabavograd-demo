@@ -12,3 +12,5 @@
 .v-card[data-motion-id]{width:var(--v-sort-card-size,var(--sort-card-size));height:var(--v-sort-card-size,var(--sort-card-size));aspect-ratio:1;padding:calc(var(--v-sort-card-size,var(--sort-card-size))*.105)}
 .v-card[data-match-card]{width:var(--matching-card-size,120px);aspect-ratio:1;flex:none}
 .v-conveyor-card{position:absolute;left:0;top:50%;translate:-50% -50%;width:clamp(120px,20vw,240px);aspect-ratio:1;flex:none}
+.v-matching-group>.v-card-surface{width:var(--matching-card-size,120px);aspect-ratio:1;flex:none}
+.v-card-surface[data-caption=true]{width:min(100%,var(--matching-caption-width,180px));min-height:var(--v-target);aspect-ratio:auto;padding:var(--v-space-2);background:none;border:0;border-image:none;box-shadow:none;text-align:center;line-height:1.4}
