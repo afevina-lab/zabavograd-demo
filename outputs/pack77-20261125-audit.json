@@ -1,0 +1,609 @@
+{
+  "count": 77,
+  "linked": 24,
+  "already_linked": 53,
+  "created_entries": 3,
+  "entries": [
+    {
+      "word": "барсук",
+      "word_id": "ru-r-add-d0b1d0b0d180d181d183d0ba",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/barsuk-20261115.webp",
+        "/assets/words/barsuk.webp"
+      ]
+    },
+    {
+      "word": "батарейка",
+      "word_id": "ru-home-20261105-dc3c0696",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/batareyka-20261115.webp"
+      ]
+    },
+    {
+      "word": "берёза",
+      "word_id": "ru-plant-20261104-d0b1d0b5d180d191d0b7d0b0",
+      "status": "linked",
+      "src": "/assets/words/bereza-pack77.webp",
+      "git_blob_sha": "d17d0438b4e2ae3b8e1fce218b549ff2c383df70"
+    },
+    {
+      "word": "бутылка",
+      "word_id": "ru-home-20261105-fab42c9f",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/butylka-20261115.webp"
+      ]
+    },
+    {
+      "word": "ванна",
+      "word_id": "ru-home-20261105-57fec3cd",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/vanna-20261115.webp"
+      ]
+    },
+    {
+      "word": "василёк",
+      "word_id": "ru-plant-20261104-d0b2d0b0d181d0b8d0bbd191d0ba",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/vasilek-20261115.webp"
+      ]
+    },
+    {
+      "word": "велосипед",
+      "word_id": "ru-noun-20261109-0070",
+      "status": "linked",
+      "src": "/assets/words/velosiped-pack77.webp",
+      "git_blob_sha": "c46be94fffc19b7f0fa89b5d8b09010983a173ca"
+    },
+    {
+      "word": "вилка",
+      "word_id": "ru-home-20261105-5eb96006",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/vilka-20261115.webp"
+      ]
+    },
+    {
+      "word": "гусёнок",
+      "word_id": "lex-v2-d0b3d183d181d191d0bdd0bed0ba",
+      "status": "linked",
+      "src": "/assets/words/gusenok-pack77.webp",
+      "git_blob_sha": "e8e7875d200e64db9766a703eba5550187b98edf"
+    },
+    {
+      "word": "гусь",
+      "word_id": "lex-v2-d0b3d183d181d18c",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/гусь.webp"
+      ]
+    },
+    {
+      "word": "диван",
+      "word_id": "ru-home-20261105-c54e368a",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/furniture-20261123-5.webp",
+        "/assets/words/divan-20261115.webp"
+      ]
+    },
+    {
+      "word": "дождевик",
+      "word_id": "ru-noun-extra-20261109-024",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/dozhdevik-20261115.webp"
+      ]
+    },
+    {
+      "word": "дуб",
+      "word_id": "ru-plant-20261104-d0b4d183d0b1",
+      "status": "linked",
+      "src": "/assets/words/dub-pack77.webp",
+      "git_blob_sha": "10b8becae72855fb559414e5c80fdd7a0e95820c"
+    },
+    {
+      "word": "ель",
+      "word_id": "ru-plant-20261104-d0b5d0bbd18c",
+      "status": "linked",
+      "src": "/assets/words/el-pack77.webp",
+      "git_blob_sha": "48a34709b6ea37e9aaae5433b98e3874f4b939da"
+    },
+    {
+      "word": "енот",
+      "word_id": "lex-v2-d0b5d0bdd0bed182",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/enot-20261115.webp"
+      ]
+    },
+    {
+      "word": "жеребёнок",
+      "word_id": "lex-v2-d0b6d0b5d180d0b5d0b1d191d0bdd0bed0ba",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/zherebenok-20261115.webp"
+      ]
+    },
+    {
+      "word": "завод",
+      "word_id": "ru-noun-import-20261115-zavod",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/zavod-20261115.webp"
+      ]
+    },
+    {
+      "word": "индюк",
+      "word_id": "lex-v2-d0b8d0bdd0b4d18ed0ba",
+      "status": "linked",
+      "src": "/assets/words/indyuk-pack77.webp",
+      "git_blob_sha": "14b019043d33b07bf8e4b405c5714610525f2c7d"
+    },
+    {
+      "word": "календарь",
+      "word_id": "ru-noun-import-20261115-kalendar",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/kalendar-20261115.webp"
+      ]
+    },
+    {
+      "word": "капля",
+      "word_id": "ru-noun-import-20261115-kaplya",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/kaplya-20261115.webp"
+      ]
+    },
+    {
+      "word": "кастрюля",
+      "word_id": "ru-home-20261105-67d50378",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/kastryulya-20261115.webp"
+      ]
+    },
+    {
+      "word": "кепка",
+      "word_id": "ru-noun-20261109-0012",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/kepka-20261115.webp"
+      ]
+    },
+    {
+      "word": "кипарис",
+      "word_id": "ru-plant-20261104-d0bad0b8d0bfd0b0d180d0b8d181",
+      "status": "linked",
+      "src": "/assets/words/kiparis-pack77.webp",
+      "git_blob_sha": "544f2e07c599a83bbaab58339945fd03a8ea83d6"
+    },
+    {
+      "word": "клён",
+      "word_id": "ru-plant-20261104-d0bad0bbd191d0bd",
+      "status": "linked",
+      "src": "/assets/words/klen-pack77.webp",
+      "git_blob_sha": "ebd776c8f4318ab21bd9a477423bb87f8dd724df"
+    },
+    {
+      "word": "книга",
+      "word_id": "ru-noun-extra-20261109-040",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/kniga-20261115.webp"
+      ]
+    },
+    {
+      "word": "коала",
+      "word_id": "lex-v2-d0bad0bed0b0d0bbd0b0",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/koala-20261115.webp"
+      ]
+    },
+    {
+      "word": "козлёнок",
+      "word_id": "lex-v2-d0bad0bed0b7d0bbd191d0bdd0bed0ba",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/kozlenok-20261115.webp"
+      ]
+    },
+    {
+      "word": "комод",
+      "word_id": "ru-home-20261105-f84c356b",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/furniture-20261123-1.webp",
+        "/assets/words/komod-20261115.webp"
+      ]
+    },
+    {
+      "word": "котёнок",
+      "word_id": "lex-v2-d0bad0bed182d191d0bdd0bed0ba",
+      "status": "linked",
+      "src": "/assets/words/kotenok-pack77.webp",
+      "git_blob_sha": "3649720250641de8defacf5a4de23a2313ed201e"
+    },
+    {
+      "word": "креветка",
+      "word_id": "lex-v2-d0bad180d0b5d0b2d0b5d182d0bad0b0",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/krevetka-20261115.webp"
+      ]
+    },
+    {
+      "word": "кресло",
+      "word_id": "ru-home-20261105-7074370",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/furniture-20261123-4.webp",
+        "/assets/words/kreslo-20261115.webp"
+      ]
+    },
+    {
+      "word": "крыльцо",
+      "word_id": "ru-r-add-d0bad180d18bd0bbd18cd186d0be",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/kryltso-20261115.webp"
+      ]
+    },
+    {
+      "word": "крючок",
+      "word_id": "ru-noun-import-20261115-kryuchok",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/kryuchok-20261115.webp"
+      ]
+    },
+    {
+      "word": "кувшин",
+      "word_id": "ru-home-20261105-8a46549",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/kuvshin-20261115.webp"
+      ]
+    },
+    {
+      "word": "кукушка",
+      "word_id": "lex-v2-d0bad183d0bad183d188d0bad0b0",
+      "status": "linked",
+      "src": "/assets/words/kukushka-pack77.webp",
+      "git_blob_sha": "e50cc3ee927dd36315ac8d32ebc2befd1edd9a61"
+    },
+    {
+      "word": "курица",
+      "word_id": "lex-v2-d0bad183d180d0b8d186d0b0",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/kuritsa-20261115.webp"
+      ]
+    },
+    {
+      "word": "лапа",
+      "word_id": "ru-noun-import-20261115-lapa",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/lapa-20261115.webp"
+      ]
+    },
+    {
+      "word": "лифт",
+      "word_id": "ru-home-20261105-e1299fb0",
+      "status": "linked",
+      "src": "/assets/words/lift-pack77.webp",
+      "git_blob_sha": "a481a38de03affa821169526ba5a519987c7eae2"
+    },
+    {
+      "word": "ложка",
+      "word_id": "ru-home-20261105-5423908",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/lozhka-20261115.webp"
+      ]
+    },
+    {
+      "word": "мешок",
+      "word_id": "ru-noun-import-20261115-meshok",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/meshok-20261115.webp"
+      ]
+    },
+    {
+      "word": "миска",
+      "word_id": "ru-home-20261105-6a956b2a",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/miska-20261115.webp"
+      ]
+    },
+    {
+      "word": "нож",
+      "word_id": "ru-home-20261105-a7f282c0",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/nozh-20261115.webp"
+      ]
+    },
+    {
+      "word": "овца",
+      "word_id": "lex-v2-d0bed0b2d186d0b0",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/ovtsa-20261115.webp"
+      ]
+    },
+    {
+      "word": "остановка",
+      "word_id": "ru-noun-20261109-0082",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/ostanovka-20261115.webp"
+      ]
+    },
+    {
+      "word": "панда",
+      "word_id": "ru-noun-import-20261115-panda",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/panda-20261115.webp"
+      ]
+    },
+    {
+      "word": "парк",
+      "word_id": "ru-noun-20261109-0084",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/park-20261115.webp"
+      ]
+    },
+    {
+      "word": "парта",
+      "word_id": "ru-new-20261102-0042",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/parta-20261115.webp"
+      ]
+    },
+    {
+      "word": "перекрёсток",
+      "word_id": "ru-noun-20261109-0083",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/perekrestok-20261115.webp"
+      ]
+    },
+    {
+      "word": "петух",
+      "word_id": "lex-v2-d0bfd0b5d182d183d185",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/petukh-20261115.webp"
+      ]
+    },
+    {
+      "word": "письмо",
+      "word_id": "ru-pack77-20261125-pismo",
+      "status": "linked",
+      "src": "/assets/words/pismo-pack77.webp",
+      "git_blob_sha": "af49db8ab375f8453438ca4bf25942457653bd1d"
+    },
+    {
+      "word": "полка",
+      "word_id": "ru-home-20261105-8330865d",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/furniture-20261123-2.webp",
+        "/assets/words/polka-20261115.webp"
+      ]
+    },
+    {
+      "word": "попугай",
+      "word_id": "lex-v2-d0bfd0bed0bfd183d0b3d0b0d0b9",
+      "status": "linked",
+      "src": "/assets/words/popugay-pack77.webp",
+      "git_blob_sha": "396824f250196a0c040c8f636db5fda44ecacc66"
+    },
+    {
+      "word": "поросёнок",
+      "word_id": "ru-r-add-d0bfd0bed180d0bed181d191d0bdd0bed0ba",
+      "status": "linked",
+      "src": "/assets/words/porosenok-pack77.webp",
+      "git_blob_sha": "a1b42705096698330734cee318456efc2381b5ad"
+    },
+    {
+      "word": "посылка",
+      "word_id": "ru-pack77-20261125-posylka",
+      "status": "linked",
+      "src": "/assets/words/posylka-pack77.webp",
+      "git_blob_sha": "ed989c6a2319add0e52e7565dbc37967ba4828b2"
+    },
+    {
+      "word": "ролики",
+      "word_id": "ru-pack77-20261125-roliki",
+      "status": "linked",
+      "src": "/assets/words/roliki-pack77.webp",
+      "git_blob_sha": "b3273eae5700e4562606f26f7d9645fe46a7153d"
+    },
+    {
+      "word": "самокат",
+      "word_id": "ru-noun-20261109-0071",
+      "status": "linked",
+      "src": "/assets/words/samokat-pack77.webp",
+      "git_blob_sha": "c39f423d2b3e918e352e97742c6a8661785a710c"
+    },
+    {
+      "word": "скакалка",
+      "word_id": "ru-noun-20261109-0042",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/skakalka-20261115.webp"
+      ]
+    },
+    {
+      "word": "снеговик",
+      "word_id": "ru-noun-import-20261115-snegovik",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/snegovik-20261115.webp"
+      ]
+    },
+    {
+      "word": "сок",
+      "word_id": "ru-noun-20261109-0057",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/sok-20261115.webp"
+      ]
+    },
+    {
+      "word": "стол",
+      "word_id": "ru-home-20261105-9769581b",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/furniture-20261123-7.webp",
+        "/assets/words/stol-20261115.webp"
+      ]
+    },
+    {
+      "word": "стул",
+      "word_id": "ru-home-20261105-83f6f264",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/furniture-20261123-6.webp",
+        "/assets/words/stul-20261115.webp"
+      ]
+    },
+    {
+      "word": "сумка",
+      "word_id": "ru-home-20261105-bd699907",
+      "status": "linked",
+      "src": "/assets/words/sumka-pack77.webp",
+      "git_blob_sha": "6b44441f3e301a0b30598576a624461ae06827c7"
+    },
+    {
+      "word": "тёрка",
+      "word_id": "ru-r-add-d182d191d180d0bad0b0",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/terka-20261115.webp"
+      ]
+    },
+    {
+      "word": "табурет",
+      "word_id": "ru-home-20261105-217a4612",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/furniture-20261123-14.webp",
+        "/assets/words/taburet-20261115.webp"
+      ]
+    },
+    {
+      "word": "тарелка",
+      "word_id": "ru-home-20261105-259cc695",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/tarelka-20261115.webp"
+      ]
+    },
+    {
+      "word": "телёнок",
+      "word_id": "lex-v2-d182d0b5d0bbd191d0bdd0bed0ba",
+      "status": "linked",
+      "src": "/assets/words/telenok-pack77.webp",
+      "git_blob_sha": "b939fedde33e026fef9b64b4f68a3303039dee75"
+    },
+    {
+      "word": "тополь",
+      "word_id": "ru-plant-20261104-d182d0bed0bfd0bed0bbd18c",
+      "status": "linked",
+      "src": "/assets/words/topol-pack77.webp",
+      "git_blob_sha": "7b16fd97e569ab364dae61dcae152cc5a3bd3647"
+    },
+    {
+      "word": "тумбочка",
+      "word_id": "ru-home-20261105-f197418",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/furniture-20261123-3.webp",
+        "/assets/words/tumbochka-20261115.webp"
+      ]
+    },
+    {
+      "word": "удочка",
+      "word_id": "ru-noun-import-20261115-udochka",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/udochka-20261115.webp"
+      ]
+    },
+    {
+      "word": "утёнок",
+      "word_id": "lex-v2-d183d182d191d0bdd0bed0ba",
+      "status": "linked",
+      "src": "/assets/words/utenok-pack77.webp",
+      "git_blob_sha": "ee032d24d7837bda1dd935604eb493249584f1f1"
+    },
+    {
+      "word": "утка",
+      "word_id": "lex-v2-d183d182d0bad0b0",
+      "status": "linked",
+      "src": "/assets/words/utka-pack77.webp",
+      "git_blob_sha": "5bbeff772705cc1a78113510674f6429f5e90431"
+    },
+    {
+      "word": "хомяк",
+      "word_id": "lex-v2-d185d0bed0bcd18fd0ba",
+      "status": "linked",
+      "src": "/assets/words/khomyak-pack77.webp",
+      "git_blob_sha": "d9a1cfc1d8551fd0ad37be36cc973e82f9120466"
+    },
+    {
+      "word": "ценник",
+      "word_id": "ru-noun-import-20261115-tsennik",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/tsennik-20261115.webp"
+      ]
+    },
+    {
+      "word": "цыплёнок",
+      "word_id": "lex-v2-d186d18bd0bfd0bbd191d0bdd0bed0ba",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/tsyplenok-20261115.webp"
+      ]
+    },
+    {
+      "word": "щенок",
+      "word_id": "lex-v2-d189d0b5d0bdd0bed0ba",
+      "status": "linked",
+      "src": "/assets/words/shchenok-pack77.webp",
+      "git_blob_sha": "c57df3b66697987647fa7ee275b047a10d11c00b"
+    },
+    {
+      "word": "ягнёнок",
+      "word_id": "lex-v2-d18fd0b3d0bdd191d0bdd0bed0ba",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/yagnenok-20261115.webp"
+      ]
+    },
+    {
+      "word": "ящерица",
+      "word_id": "lex-v2-d18fd189d0b5d180d0b8d186d0b0",
+      "status": "already_linked",
+      "sources": [
+        "/assets/words/yashcheritsa-20261115.webp"
+      ]
+    }
+  ]
+}
