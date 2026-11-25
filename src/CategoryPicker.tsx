@@ -21,7 +21,7 @@ export function CategoryPicker({words,selected,onChange}:{words:Word[];selected:
  return <>
   <PickerTrigger ref={trigger} title="Выберите тему" description={selected.length>0?('Выбрано: '+selected.length+' — '+selected.slice(0,2).map(path=>path.split('/').at(-1)).join(', ')+(selected.length>2?` +${selected.length-2}`:'')):undefined} data-field-state={selected.length?'ready':'required'} aria-invalid={!selected.length||undefined} aria-label="Выбрать лексические темы" onClick={()=>{setDraft([...selected]);dialog.current?.showModal()}} icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 5h7l2 3h9v12H3Z"/><path d="M7 12h10M7 16h6"/></svg>}/>
   <PickerDialog ref={dialog} className="category-picker" label="Лексические темы" onConfirm={()=>{onChange(draft);close()}} onCancel={close} onDismiss={()=>trigger.current?.focus()}>
-   <h2>Выберите тему</h2><SelectionTree nodes={ordered(roots).map(treeNode)} onChange={changeBranch} classNames={{root:"category-grid",branch:"category-branch",leaf:"category-leaf",name:"category-name",count:"category-count",children:"category-children",choice:"check",well:"control-well category-well"}}/>
+   <h2>Выберите тему</h2><SelectionTree nodes={ordered(roots).map(treeNode)} onChange={changeBranch}/>
   </PickerDialog>
  </>;
 }

@@ -67,7 +67,7 @@ test('Incomplete sorting rows are centered deterministically',()=>{
  const grid=balancedGrid(5,500,100);assert.equal(grid.columns,3);assert.equal(balancedCardStyle(3,5,500,100).gridColumn,'2 / span 2');assert.equal(balancedCardStyle(4,5,500,100).gridColumn,'4 / span 2');
 });
 test('Material actions and destructive edits use common component owners',()=>{
- assert.match(read('src/MaterialSettings.tsx'),/<MaterialRule/);assert.match(visual('compositions/MaterialRule.tsx'),/icon="Trash"/);assert.match(read('src/design-system/SetupAddButton.tsx'),/<AddAction/);assert.match(visual('primitives/AddAction.tsx'),/symbol="plus"/);
+ assert.match(read('src/MaterialSettings.tsx'),/<MaterialRule/);assert.match(visual('compositions/MaterialRule.tsx'),/icon="Trash"/);assert.match(read('src/design-system/SetupAddButton.tsx'),/export \{AddAction as SetupAddButton\}/);assert.match(visual('primitives/AddAction.tsx'),/symbol="plus"/);
 });
 test('Lexical categories and saved sets use shared modals and selection controls',()=>{
  for(const file of ['src/CategoryPicker.tsx','src/SavedMaterialSets.tsx'])assert.match(read(file),/<PickerDialog/);
@@ -77,7 +77,7 @@ test('Letter and syllable choices remain button tiles with checkbox Select all',
  const reading=read('src/ReadingSettings.tsx'),syllables=read('src/SyllableStructurePicker.tsx');assert.match(reading,/v-letter-choice/);assert.match(reading,/aria-pressed=/);assert.match(reading,/Выбрать всё/);assert.match(syllables,/v-syllable-option/);assert.match(syllables,/<PopoverTip/);assert.doesNotMatch(syllables,/title=\{descriptions/);
 });
 test('Footer previews share one framed well and measured text fitting',()=>{
- assert.match(read('src/design-system/SetupPreview.tsx'),/<MaterialPreview/);const fit=visual('primitives/FitCopy.tsx');assert.match(fit,/ResizeObserver/);assert.match(fit,/for\(let size=18;size>=12;size--\)/);assert.match(fit,/inner\.scrollHeight<=availableHeight/);assert.match(fit,/document.fonts/);assert.match(visual('primitives/fit-copy.css'),/height:var\(--v-preview-height\)/);
+ assert.match(read('src/design-system/SetupPreview.tsx'),/export \{MaterialPreview as SetupPreview\}/);const fit=visual('primitives/FitCopy.tsx');assert.match(fit,/ResizeObserver/);assert.match(fit,/for\(let size=18;size>=12;size--\)/);assert.match(fit,/inner\.scrollHeight<=availableHeight/);assert.match(fit,/document.fonts/);assert.match(visual('primitives/fit-copy.css'),/height:var\(--v-preview-height\)/);
 });
 test('Theme switching uses one registry-backed choice list',()=>{
  assert.match(visual('primitives/ThemeChoice.tsx'),/THEME_IDS\.map/);assert.match(visual('primitives/ThemeChoice.tsx'),/onChange\(id\)/);assert.match(visual('primitives/selection.css'),/repeat\(3,minmax\(0,1fr\)\)/);
@@ -97,3 +97,4 @@ test('Touch fullscreen keeps orientation lock and failure fallback',()=>{
  for(const game of ['main','Sorting'])assert.match(read('src/'+game+'.tsx'),/toolbar-timer/);
  assert.match(read('src/design-system/GameLimits.tsx'),/toolbar-timer/);
 });
+

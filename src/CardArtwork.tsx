@@ -72,7 +72,7 @@ export function CardArtwork({image,label,number='singular'}:{image:ImageVariant;
  return number==='plural'?<PluralArtwork image={image} label={label}/>:<SingleArtwork image={image} label={label}/>;
 }
 export function PluralArtwork({image,label}:{image:ImageVariant;label:string}){
- return <ArtworkGroup label={label} classNames={{root:'plural-artwork',item:'plural-artwork-object'}}><SingleArtwork image={image} label=""/></ArtworkGroup>;
+ return <ArtworkGroup label={label}><SingleArtwork image={image} label=""/></ArtworkGroup>;
 }
 function SingleArtwork({image,label}:{image:ImageVariant;label:string}){
  const src=import.meta.env.BASE_URL+image.src.replace(/^\//,'');

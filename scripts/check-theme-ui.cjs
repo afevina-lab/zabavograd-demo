@@ -45,7 +45,7 @@ for(const name of ['settings','pause','play','volume','mute','arrow-right','hous
  const text=fs.readFileSync(full,'utf8');
  assert(text.includes('<svg')&&text.includes('</svg>'),'Malformed SVG icon: '+name);
 }
-exists('space/background.png');
+exists('space/background.webp');
 const walkCss=dir=>fs.readdirSync(path.join(root,dir),{withFileTypes:true}).flatMap(entry=>entry.isDirectory()?walkCss(dir+'/'+entry.name):entry.name.endsWith('.css')?[dir+'/'+entry.name]:[]);
 const css=walkCss('src/visual').map(file=>fs.readFileSync(path.join(root,file),'utf8')).join('\n');
 assert(css.includes('var(--zg-stage-image)'),'Theme scene no longer uses registry');
@@ -54,4 +54,5 @@ for(const relative of refs)exists(relative);
 assert(css.includes('v-background-drift')&&css.includes('prefers-reduced-motion'),'Shared background motion/reduced-motion support missing');
 assert(!fs.readFileSync(path.join(root,'src/main.tsx'),'utf8').includes('stage-footer'),'Retired bottom filler returned');
 console.log('UI pack verified: '+all.length+' WebP assets, 13 SVG icons, '+refs.length+' CSS asset references.');
+
 

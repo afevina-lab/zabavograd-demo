@@ -74,7 +74,7 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
   assert.notEqual(await evaluate("document.querySelector('[aria-label=\"Прошло времени\"]').textContent"),before,'Elapsed time advances in '+game);
  }
  if(width<=844){
-  const compact=await evaluate("(()=>{const bar=document.querySelector('.play-toolbar.shared-toolbar'),left=[...bar.querySelectorAll('.toolbar-left>button,.toolbar-left>a')],right=[...bar.querySelectorAll('.toolbar-right>button,.toolbar-right>a')],shown=e=>getComputedStyle(e).display!=='none'&&e.getBoundingClientRect().width>0,counters=bar.querySelector('.toolbar-centre>.counters'),lives=counters.querySelector('.life-controls'),pause=left.filter(shown),view=right.filter(shown),b=bar.getBoundingClientRect();return {pause:pause.map(e=>e.getAttribute('aria-label')),view:view.map(e=>e.getAttribute('aria-label')),hasLives:!!lives&&shown(lives),hasTimer:!!counters.querySelector('.toolbar-timer'),row:getComputedStyle(counters).flexDirection,scroll:getComputedStyle(bar.querySelector('.toolbar-left')).overflowX,within:b.left>=0&&b.right<=innerWidth+1,overlap:(()=>{const p=pause[0]?.getBoundingClientRect(),v=view[0]?.getBoundingClientRect(),l=lives?.getBoundingClientRect();return !!p&&!!v&&!!l&&(p.right>l.left+1||l.right>v.left+1||p.right>v.left+1)})()}})()");
+  const compact=await evaluate("(()=>{const bar=document.querySelector(':is(.v-toolbar,.play-toolbar):is(.v-toolbar,.shared-toolbar)'),left=[...bar.querySelectorAll(':is(.v-toolbar-navigation,.toolbar-left)>button,:is(.v-toolbar-navigation,.toolbar-left)>a')],right=[...bar.querySelectorAll(':is(.v-toolbar-view,.toolbar-right)>button,:is(.v-toolbar-view,.toolbar-right)>a')],shown=e=>getComputedStyle(e).display!=='none'&&e.getBoundingClientRect().width>0,counters=bar.querySelector(':is(.v-toolbar-status,.toolbar-centre)>:is(.v-toolbar-counters,.counters)'),lives=counters.querySelector(':is(.v-life-meter,.life-controls)'),pause=left.filter(shown),view=right.filter(shown),b=bar.getBoundingClientRect();return {pause:pause.map(e=>e.getAttribute('aria-label')),view:view.map(e=>e.getAttribute('aria-label')),hasLives:!!lives&&shown(lives),hasTimer:!!counters.querySelector('.toolbar-timer'),row:getComputedStyle(counters).flexDirection,scroll:getComputedStyle(bar.querySelector(':is(.v-toolbar-navigation,.toolbar-left)')).overflowX,within:b.left>=0&&b.right<=innerWidth+1,overlap:(()=>{const p=pause[0]?.getBoundingClientRect(),v=view[0]?.getBoundingClientRect(),l=lives?.getBoundingClientRect();return !!p&&!!v&&!!l&&(p.right>l.left+1||l.right>v.left+1||p.right>v.left+1)})()}})()");
   assert.equal(compact.pause.length,3,'Shared toolbar must keep three actions: '+game+' '+width);assert.equal(compact.pause[0],'Пауза');assert(/звук/i.test(compact.pause[1]));assert(/подпис|подсказ/i.test(compact.pause[2]));
   assert.deepEqual(compact.view,['Полный экран'],'Compact toolbar must show only fullscreen: '+game+' '+width);
   assert(compact.hasLives&&!compact.hasTimer,'Only enabled lives should appear: '+game+' '+width);
@@ -83,14 +83,14 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
   assert(compact.within&&!compact.overlap,'Mobile toolbar elements overflow or overlap: '+game+' '+width);
   await screenshot(game+'-toolbar-'+width);
  }else{
-  const desktop=await evaluate("(()=>{const bar=document.querySelector('.play-toolbar.shared-toolbar'),center=bar.querySelector('.toolbar-centre'),counts=center.querySelector('.counters'),r=center.getBoundingClientRect(),b=bar.getBoundingClientRect();return {row:getComputedStyle(counts).flexDirection,inside:r.left>=b.left&&r.right<=b.right+1,life:!!counts.querySelector('.life-controls'),fullscreen:!!bar.querySelector('.toolbar-right .icon-button')}})()");
+  const desktop=await evaluate("(()=>{const bar=document.querySelector(':is(.v-toolbar,.play-toolbar):is(.v-toolbar,.shared-toolbar)'),center=bar.querySelector(':is(.v-toolbar-status,.toolbar-centre)'),counts=center.querySelector(':is(.v-toolbar-counters,.counters)'),r=center.getBoundingClientRect(),b=bar.getBoundingClientRect();return {row:getComputedStyle(counts).flexDirection,inside:r.left>=b.left&&r.right<=b.right+1,life:!!counts.querySelector(':is(.v-life-meter,.life-controls)'),fullscreen:!!bar.querySelector(':is(.v-toolbar-view,.toolbar-right) :is(.v-icon-button,.icon-button)')}})()");
   assert(desktop.row==='row'&&desktop.inside&&desktop.life&&desktop.fullscreen,'Desktop counter contract failed '+game+': '+JSON.stringify(desktop));
   await screenshot(game+'-toolbar-desktop-'+width);
  }
- assert(await evaluate("!document.querySelector('.play-toolbar .lesson-tag')&&document.querySelectorAll('.life-controls .icon-button').length===0"),'Toolbar clutter remains');
- assert(await evaluate("(()=>{const bar=document.querySelector('.shared-toolbar').getBoundingClientRect();return [...document.querySelectorAll('.shared-toolbar .icon-button')].filter(e=>e.getBoundingClientRect().width>0).every(e=>{const r=e.getBoundingClientRect();return Math.abs(r.height/bar.height-.6)<.02&&Math.abs(r.top+r.height/2-bar.top-bar.height/2)<1})})()"),'Header action size/centring '+game+' '+width);
+ assert(await evaluate("!document.querySelector(':is(.v-toolbar,.play-toolbar) .lesson-tag')&&document.querySelectorAll(':is(.v-life-meter,.life-controls) :is(.v-icon-button,.icon-button)').length===0"),'Toolbar clutter remains');
+ assert(await evaluate("(()=>{const bar=document.querySelector(':is(.v-toolbar,.shared-toolbar)').getBoundingClientRect();return [...document.querySelectorAll(':is(.v-toolbar,.shared-toolbar) :is(.v-icon-button,.icon-button)')].filter(e=>e.getBoundingClientRect().width>0).every(e=>{const r=e.getBoundingClientRect();return Math.abs(r.height/bar.height-.6)<.02&&Math.abs(r.top+r.height/2-bar.top-bar.height/2)<1})})()"),'Header action size/centring '+game+' '+width);
  await until("!!document.querySelector('button[aria-label=Пауза]')");
- await evaluate("document.querySelector('button[aria-label=Пауза]').click()");await until("!!document.querySelector('.overlay')");await sleep(350);assert(await evaluate("(()=>{const e=document.querySelector('.play-toolbar .garden-icon'),b=e.closest('button,a');return getComputedStyle(e).backgroundColor!==getComputedStyle(b).backgroundColor})()"),'Toolbar icon contrast');await screenshot(game+'-pause-'+width);
+ await evaluate("document.querySelector('button[aria-label=Пауза]').click()");await until("!!document.querySelector('.overlay')");await sleep(350);assert(await evaluate("(()=>{const e=document.querySelector(':is(.v-toolbar,.play-toolbar) .garden-icon'),b=e.closest('button,a');return getComputedStyle(e).backgroundColor!==getComputedStyle(b).backgroundColor})()"),'Toolbar icon contrast');await screenshot(game+'-pause-'+width);
  assert(await evaluate("(()=>{const e=document.querySelector('.overlay>div'),r=e.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1&&r.top>=0&&r.bottom<=innerHeight+1})()"),'Pause overflow '+game);
  if(width===1440&&game!=='memory'){
   const frozen=await evaluate("document.querySelector('[aria-label=\"Прошло времени\"]').textContent");
@@ -107,9 +107,9 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
  for(let i=0;i<10;i++){await cmd('Input.dispatchKeyEvent',{type:'keyDown',key:'F8',code:'F8',windowsVirtualKeyCode:119});await cmd('Input.dispatchKeyEvent',{type:'keyUp',key:'F8',code:'F8',windowsVirtualKeyCode:119});await sleep(60)}
  await until("!!document.querySelector('.overlay')");await until("getComputedStyle(document.querySelector('.overlay')).opacity==='1'");await sleep(600);await screenshot(game+'-ended-'+width);
  assert(await evaluate("document.querySelector('.overlay').textContent.includes('Жизни')||document.querySelector('.overlay').textContent.includes('жизни')"),'Loss result missing '+game);
- assert.equal(await evaluate("document.querySelectorAll('.life-heart-art>img:not(.heart-leaving)').length"),0,'Spent hearts remain visible');
+ assert.equal(await evaluate("document.querySelectorAll(':is(.v-life-heart,.life-heart-art)>img:not(:is(.v-heart-leaving,.heart-leaving))').length"),0,'Spent hearts remain visible');
  await evaluate("document.querySelector('.overlay button[aria-label=Настройки]').click()");
- await until("!!document.querySelector('.modal,.settings-shade')");await screenshot(game+'-settings-'+width);
+ await until("!!document.querySelector('.modal,:is(.v-settings-backdrop,.settings-shade)')");await screenshot(game+'-settings-'+width);
  report.push({game,width,pause:true,ended:true,settings:true});
  }
 }
@@ -118,8 +118,8 @@ await cmd('Emulation.setDeviceMetricsOverride',{width:844,height:390,deviceScale
 await cmd('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:1});
 for(const game of ['memory','sorting','matching','conveyor','transformations']){
  await setup(game,{timed:true});
- await until("!!document.querySelector('.play-toolbar .toolbar-timer')");
- const measured=await evaluate("(()=>{const bar=document.querySelector('.play-toolbar.shared-toolbar'),timer=bar.querySelector('.toolbar-timer'),life=bar.querySelector('.life-controls'),pause=bar.querySelector('.toolbar-pause'),full=bar.querySelector('.toolbar-right .icon-button'),counters=bar.querySelector('.toolbar-centre .counters'),visible=e=>!!e&&getComputedStyle(e).display!=='none'&&e.getBoundingClientRect().width>0;const rects=[pause,timer,life,full].map(e=>e?.getBoundingClientRect());return {visible:[pause,timer,life,full].every(visible),inOrder:rects.every((r,i)=>r&&r.left>=0&&r.right<=innerWidth+1&&(i===0||rects[i-1].right<=r.left+1)),row:getComputedStyle(counters).flexDirection}})()");
+ await until("!!document.querySelector(':is(.v-toolbar,.play-toolbar) .toolbar-timer')");
+ const measured=await evaluate("(()=>{const bar=document.querySelector(':is(.v-toolbar,.play-toolbar):is(.v-toolbar,.shared-toolbar)'),timer=bar.querySelector('.toolbar-timer'),life=bar.querySelector(':is(.v-life-meter,.life-controls)'),pause=bar.querySelector('.toolbar-pause'),full=bar.querySelector(':is(.v-toolbar-view,.toolbar-right) :is(.v-icon-button,.icon-button)'),counters=bar.querySelector(':is(.v-toolbar-status,.toolbar-centre) :is(.v-toolbar-counters,.counters)'),visible=e=>!!e&&getComputedStyle(e).display!=='none'&&e.getBoundingClientRect().width>0;const rects=[pause,timer,life,full].map(e=>e?.getBoundingClientRect());return {visible:[pause,timer,life,full].every(visible),inOrder:rects.every((r,i)=>r&&r.left>=0&&r.right<=innerWidth+1&&(i===0||rects[i-1].right<=r.left+1)),row:getComputedStyle(counters).flexDirection}})()");
  assert(measured.visible&&measured.inOrder&&measured.row==='row','Compact timed toolbar geometry failed '+game+': '+JSON.stringify(measured));
  await screenshot(game+'-toolbar-timed-844');
 }
@@ -130,7 +130,7 @@ await setup('memory');await until("!!document.querySelector('.card:not(:disabled
 const pairs=await evaluate("(()=>{const m={};for(const e of document.querySelectorAll('[data-card-key]')){const k=e.dataset.cardKey,id=k.slice(0,k.lastIndexOf(':'));(m[id]||=[]).push(k)}return Object.values(m)})()");
 for(const pair of pairs){for(const key of pair){await evaluate("document.querySelector('[data-card-key=\""+key+"\"]').click()");await sleep(80)}await until("document.querySelector('[data-card-key=\""+pair[0]+"\"]').classList.contains('found')")}
 await until("!!document.querySelector('.overlay.result')");await until("getComputedStyle(document.querySelector('.overlay.result')).opacity==='1'");await sleep(1000);await screenshot('memory-completed');
-assert(await evaluate("(()=>{const b=[...document.querySelectorAll('.overlay.result .dialog-actions>:is(button,a)')].map(e=>e.getBoundingClientRect());return b.length===3&&Math.abs(b[0].width-b[1].width)<1&&Math.abs(b[0].height-b[1].height)<1})()"),'Result buttons differ in size');
+assert(await evaluate("(()=>{const b=[...document.querySelectorAll('.overlay.result :is(.v-dialog-actions,.dialog-actions)>:is(button,a)')].map(e=>e.getBoundingClientRect());return b.length===3&&Math.abs(b[0].width-b[1].width)<1&&Math.abs(b[0].height-b[1].height)<1})()"),'Result buttons differ in size');
 assert(await evaluate("(()=>{const r=document.querySelector('.overlay.result>div').getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&r.bottom<=innerHeight})()"),'Completion panel overflow');
 
 // Award and result frame must fit short screens, including the raised central star.
@@ -151,11 +151,11 @@ for(let r=0;r<2;r++){
  await until("!!document.querySelector('.card:not(:disabled)')",20000);
  const pairs=await evaluate("(()=>{const m={};for(const e of document.querySelectorAll('[data-card-key]')){const k=e.dataset.cardKey,id=k.slice(0,k.lastIndexOf(':'));(m[id]||=[]).push(k)}return Object.values(m)})()");
  for(const pair of pairs){for(const key of pair){await until("!document.querySelector('[data-card-key=\""+key+"\"]').disabled");await evaluate("document.querySelector('[data-card-key=\""+key+"\"]').click()");}await until("document.querySelector('[data-card-key=\""+pair[0]+"\"]').classList.contains('found')")}
- if(r===0){assert(await evaluate("!document.querySelector('.overlay.result,.victory-stars')"),'Intermediate award leaked');await until("!!document.querySelector('.card:not(:disabled)')",20000);}
+ if(r===0){assert(await evaluate("!document.querySelector('.overlay.result,:is(.v-score-stars,.victory-stars)')"),'Intermediate award leaked');await until("!!document.querySelector('.card:not(:disabled)')",20000);}
 }
 await until("!!document.querySelector('.overlay.result')");
 assert(await evaluate("!document.querySelector('.overlay.result').textContent.includes('Раунд')"),'Redundant round count in result');
-assert.equal(await evaluate("document.querySelectorAll('.overlay.result .dialog-actions>*').length"),3);
+assert.equal(await evaluate("document.querySelectorAll('.overlay.result :is(.v-dialog-actions,.dialog-actions)>*').length"),3);
 await screenshot('memory-two-rounds-completed');
 
 // Complete Transformations through its visible controls.
@@ -169,7 +169,7 @@ for(let i=0;i<10;i++){
 }
 await until("document.querySelector('.overlay.result')?.textContent.includes('Игра завершена')");await sleep(250);await screenshot('transformations-completed');
 assert(await evaluate("!document.querySelector('.overlay.result button[aria-label=Продолжить]')"),'Completed transformation must not resume');
-await evaluate("document.querySelector('.overlay.result button[aria-label=Настройки]').click()");await until("!!document.querySelector('.unified-settings-content')");
+await evaluate("document.querySelector('.overlay.result button[aria-label=Настройки]').click()");await until("!!document.querySelector(':is(.v-settings-scroll,.unified-settings-content)')");
 // Exercise the real native customizable picker with pointer and keyboard input.
 await cmd('Page.navigate',{url:origin+'?game=matching'});await until("!!document.querySelector('select[aria-label=\"Режим карточек\"]')");
 const rect=await evaluate("(()=>{const r=document.querySelector('select[aria-label=\"Режим карточек\"]').getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}})()");
@@ -185,12 +185,12 @@ assert(await evaluate("document.querySelector('select[aria-label=\"Режим к
 await cmd('Emulation.setDeviceMetricsOverride',{width:1920,height:900,deviceScaleFactor:1,mobile:false});
 await cmd('Page.navigate',{url:origin+'?game=matching'});
 await until("!!document.querySelector('select[aria-label=\"Задание\"]')");
-console.log(await evaluate("[document.querySelector('.setup-footer .setup-preview-content'),document.querySelector('.setup-footer>button.primary')].map(e=>({rect:e.getBoundingClientRect().toJSON(),shadow:getComputedStyle(e).boxShadow,box:getComputedStyle(e).boxSizing}))"));
-assert(await evaluate("(()=>{const a=document.querySelector('.setup-footer .setup-preview-content'),b=document.querySelector('.setup-footer>button.primary');const ar=a.getBoundingClientRect(),br=b.getBoundingClientRect();const edges=e=>getComputedStyle(e).boxShadow.split(/,(?![^()]*\\))/).filter(s=>!s.includes('inset')).join(',');return Math.abs(ar.height-br.height)<1&&Math.abs(ar.y-br.y)<1&&edges(a)===edges(b)})()"),'Preview and start must have identical bounds and raised outer edges');
+console.log(await evaluate("[document.querySelector(':is(.v-settings-footer,.setup-footer) :is(.v-fit-copy,.setup-preview-content)'),document.querySelector(':is(.v-settings-footer,.setup-footer)>button:is(.v-button--primary,.primary)')].map(e=>({rect:e.getBoundingClientRect().toJSON(),shadow:getComputedStyle(e).boxShadow,box:getComputedStyle(e).boxSizing}))"));
+assert(await evaluate("(()=>{const a=document.querySelector(':is(.v-settings-footer,.setup-footer) :is(.v-fit-copy,.setup-preview-content)'),b=document.querySelector(':is(.v-settings-footer,.setup-footer)>button:is(.v-button--primary,.primary)');const ar=a.getBoundingClientRect(),br=b.getBoundingClientRect();const edges=e=>getComputedStyle(e).boxShadow.split(/,(?![^()]*\\))/).filter(s=>!s.includes('inset')).join(',');return Math.abs(ar.height-br.height)<1&&Math.abs(ar.y-br.y)<1&&edges(a)===edges(b)})()"),'Preview and start must have identical bounds and raised outer edges');
 await screenshot('footer-equal-visible-edges');
 await evaluate("(()=>{const s=document.querySelector('select[aria-label=\"Задание\"]');Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(s,'manual');s.dispatchEvent(new Event('change',{bubbles:true}))})()");
-await until("[...document.querySelectorAll('.setup-add-rule')].some(b=>b.textContent.includes('Настроить группы'))");
-await evaluate("[...document.querySelectorAll('.setup-add-rule')].find(b=>b.textContent.includes('Настроить группы')).click()");
+await until("[...document.querySelectorAll(':is(.v-add-action,.setup-add-rule)')].some(b=>b.textContent.includes('Настроить группы'))");
+await evaluate("[...document.querySelectorAll(':is(.v-add-action,.setup-add-rule)')].find(b=>b.textContent.includes('Настроить группы')).click()");
 await until("!!document.querySelector('dialog[open]')");
 assert(await evaluate("(()=>{const r=document.querySelector('dialog[open]').getBoundingClientRect();return Math.abs(r.y+r.height/2-innerHeight/2)<3&&r.y>=0})()"),'Manual group dialog must be vertically centered');
 await screenshot('manual-groups-centered');

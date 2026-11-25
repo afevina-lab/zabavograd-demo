@@ -8,6 +8,6 @@ export function SelectControl({icon='choices',children,...props}:SelectHTMLAttri
  collect(children);
  const value=String(props.value??props.defaultValue??options[0]?.value??''),option=options.find(o=>o.value===value);
  const missing=!props.disabled&&(props['aria-invalid']===true||!!option?.disabled||(value===''&&(!!props.required||/выбер|не выбран/i.test(option?.label||''))));
- return <SelectPrimitive {...props} icon={icon} fieldState={missing?'required':'ready'} classNames={{root:'select-control',leading:'select-leading',caret:'select-caret'}} required={props.required||missing} aria-required={props.required||missing||undefined} aria-invalid={missing||props['aria-invalid']||undefined}>{children}</SelectPrimitive>;
+ return <SelectPrimitive {...props} icon={icon} fieldState={missing?'required':'ready'} required={props.required||missing} aria-required={props.required||missing||undefined} aria-invalid={missing||props['aria-invalid']||undefined}>{children}</SelectPrimitive>;
 }
 

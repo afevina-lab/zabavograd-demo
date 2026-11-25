@@ -9,7 +9,7 @@ export function useElapsedTime(active:boolean,paused:boolean){
  return {reset:()=>setElapsed(0),status:<SessionTime seconds={elapsed} className="toolbar-session-progress"/>};
 }
 export function LifeControls({lives,mode,disabled,onSpend,onUndo,maximum=5}:{maximum?:number;lives:number;mode:LifeMode;disabled:boolean;onSpend:()=>void;onUndo:()=>void}){
- return <LifeMeter lives={lives} maximum={maximum} disabled={disabled} manual={manualLives(mode)} onSpend={onSpend} onUndo={onUndo} classNames={{root:'life-controls',button:'link hearts',heart:'life-heart life-heart-art',full:'heart-full',half:'heart-half',leaving:'heart-leaving'}}/>;
+ return <LifeMeter lives={lives} maximum={maximum} disabled={disabled} manual={manualLives(mode)} onSpend={onSpend} onUndo={onUndo}/>;
 }
 export function useGameLimits(active:boolean,paused:boolean){
  const [lifeCount,setLifeCount]=useState(5);
