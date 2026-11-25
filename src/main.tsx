@@ -7,7 +7,7 @@ import {MemoryBoard} from './visual/games/Boards.tsx';
 import {useRoundPlan} from './design-system/useRoundPlan.tsx';
 import {WordSelectionBody} from './WordPicker.tsx';
 import {playGameSound,useGameSoundOutcome,setGameSound,installGameAudio} from './design-system/game-audio.ts';
-import {GameDialog,DialogActions} from './design-system/GameDialog.tsx';
+import {GameDialog} from './design-system/GameDialog.tsx';
 import {SelectControl} from './design-system/SelectControl.tsx';
 import {SettingsWindow,SettingsGroup} from './design-system/SettingsWindow.tsx';
 import {SetupPreview} from './design-system/SetupPreview.tsx';
@@ -169,6 +169,7 @@ function App(){
 {showHelp&&<div className="modal-backdrop"><section className="modal help" role="dialog" aria-modal="true" aria-label="Как играть"><div className="panel-scroll"><div className="modal-title"><h2>Как играть в мемори</h2><button type="button" className="icon-button" aria-label="Закрыть инструкцию" onClick={()=>setShowHelp(false)}><Icon name="X"/></button></div><ol><li>Откройте карточку и назовите слово.</li><li>Откройте вторую. Если слова совпали, пара остаётся открытой.</li><li>Если нет — запомните расположение и попробуйте ещё.</li></ol><p>Соберите все пары. Произношение оценивает педагог; игра не распознаёт речь.</p><button className="primary" onClick={()=>{setShowHelp(false);setPaused(false)}}>Понятно, играем</button></div></section></div>}</div>;
 }
 (installGameAudio(),createRoot(document.getElementById('root')!)).render(new URLSearchParams(location.search).get('game')==='matching'?<Matching/>:new URLSearchParams(location.search).get('game')==='conveyor'?<Conveyor/>:new URLSearchParams(location.search).get('game')==='transformations'?<Transformations/>:new URLSearchParams(location.search).get('game')==='sorting'?<Sorting/>:<App/>);
+
 
 
 
