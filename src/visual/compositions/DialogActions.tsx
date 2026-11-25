@@ -1,8 +1,10 @@
+import {visualClasses} from '../primitives/classNames.ts';
 import {IconButton,IconLink} from '../primitives/Buttons.tsx';
 export type DialogActionClasses={root:string;button:string;primary:string};
 const classes:DialogActionClasses={root:'v-dialog-actions',button:'',primary:''};
 export type DialogActionsProps={onSettings:()=>void;onHome?:()=>void;homeHref?:string;action:{kind:'continue'|'repeat';onClick:()=>void};classNames?:DialogActionClasses};
 export function DialogActions({onSettings,onHome,homeHref=import.meta.env.BASE_URL+'home.html',action,classNames=classes}:DialogActionsProps){
+ classNames=visualClasses(classes,classNames);
  return <div className={classNames.root}>
   <IconButton className={classNames.button} label="Настройки" icon="Settings" onClick={onSettings}/>
   {onHome?<IconButton className={classNames.button} label="Домой" icon="Home1" onClick={onHome}/>:<IconLink className={classNames.button} label="Домой" icon="Home1" href={homeHref}/>}

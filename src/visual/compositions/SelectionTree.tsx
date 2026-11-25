@@ -1,3 +1,4 @@
+import {visualClasses} from '../primitives/classNames.ts';
 import type {ReactNode} from 'react';
 import {Choice} from '../primitives/Choice.tsx';
 import {ControlWell} from '../primitives/ControlWell.tsx';
@@ -6,6 +7,7 @@ export type SelectionTreeClasses={root:string;branch:string;leaf:string;name:str
 const classes:SelectionTreeClasses={root:'v-selection-tree',branch:'v-tree-branch',leaf:'v-tree-leaf',name:'v-tree-name',count:'v-tree-count',children:'v-tree-children',choice:'v-choice',well:'v-tree-well'};
 /** The caller supplies category relationships and selection state; this owns only the tree UI. */
 export function SelectionTree({nodes,onChange,classNames=classes}:{nodes:readonly SelectionTreeNode[];onChange:(id:string,checked:boolean)=>void;classNames?:SelectionTreeClasses}){
+ classNames=visualClasses(classes,classNames);
  function render(node:SelectionTreeNode):ReactNode{
   const mark=(element:HTMLInputElement|null)=>{if(element)element.indeterminate=node.partial};
   return <li key={node.id} className={node.children.length?classNames.branch:classNames.leaf}>

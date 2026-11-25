@@ -1,8 +1,10 @@
+import {visualClasses} from './classNames.ts';
 import {useEffect,useRef,useState,type CSSProperties} from 'react';
 import {MOTION} from '../../design-system/motion.ts';
 export type LifeMeterClasses={root:string;button:string;heart:string;full:string;half:string;leaving:string};
 const classes:LifeMeterClasses={root:'v-life-meter',button:'v-life-button',heart:'v-life-heart',full:'v-heart-full',half:'v-heart-half',leaving:'v-heart-leaving'};
 export function LifeMeter({lives,maximum=5,disabled,manual,onSpend,onUndo,classNames=classes}:{lives:number;maximum?:number;disabled:boolean;manual:boolean;onSpend:()=>void;onUndo:()=>void;classNames?:LifeMeterClasses}){
+ classNames=visualClasses(classes,classNames);
  const previous=useRef(lives),[fading,setFading]=useState<{index:number;amount:number;key:number}[]>([]);
  useEffect(()=>{
   const before=previous.current;previous.current=lives;

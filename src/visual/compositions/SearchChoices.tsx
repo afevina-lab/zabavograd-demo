@@ -1,3 +1,4 @@
+import {visualClasses} from '../primitives/classNames.ts';
 import {Choice} from '../primitives/Choice.tsx';
 export type SearchChoice={id:string;label:string};
 export type SearchChoiceClasses={root:string;search:string;list:string;choice:string};
@@ -5,6 +6,7 @@ const classes:SearchChoiceClasses={root:'v-search-choices',search:'v-search-inpu
 export type SearchChoicesProps={items:readonly SearchChoice[];selected:readonly string[];onChange:(ids:string[])=>void;search:string;setSearch:(value:string)=>void;max?:number;disabled?:boolean;classNames?:SearchChoiceClasses};
 /** Item order is supplied by the caller; the visual component does not rank teaching material. */
 export function SearchChoices({items,selected,onChange,search,setSearch,max=Infinity,disabled=false,classNames=classes}:SearchChoicesProps){
+ classNames=visualClasses(classes,classNames);
  const query=search.trim().toLocaleLowerCase('ru'),chosen=new Set(selected);
  const visible=items.filter(item=>item.label.toLocaleLowerCase('ru').includes(query));
  return <div className={classNames.root}>

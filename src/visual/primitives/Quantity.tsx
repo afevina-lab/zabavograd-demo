@@ -1,3 +1,4 @@
+import {visualClasses} from './classNames.ts';
 import {useId,type CSSProperties} from 'react';
 import {Button} from './Buttons.tsx';
 import {numericScale} from './numericScale.ts';
@@ -8,6 +9,7 @@ const classes:QuantityClasses={root:'v-quantity',stepper:'v-stepper'};
 
 /** Shared production renderer; adapters may supply classes while their CSS is migrated. */
 export function Quantity({label,value,min,max,onChange,disabled=false,stops,classNames=classes}:{classNames?:QuantityClasses}&QuantityProps){
+ classNames=visualClasses(classes,classNames);
  const id=useId(),scale=numericScale(min,max,stops),current=scale.index(value);
  const change=(next:number)=>{if(Number.isFinite(next))onChange(scale.clamp(next))};
  const style={'--quantity-fill':scale.percent(value)+'%'} as CSSProperties;

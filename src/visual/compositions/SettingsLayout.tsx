@@ -1,3 +1,4 @@
+import {visualClasses} from '../primitives/classNames.ts';
 import {useId,useState,type ReactNode} from 'react';
 
 export type SettingsSlots={title:string;headerActions?:ReactNode;leading?:ReactNode;primary:ReactNode;secondary?:ReactNode;appearance?:ReactNode;footer:ReactNode;supplementary?:ReactNode};
@@ -7,6 +8,7 @@ export type SettingsLayoutProps=SettingsSlots&{classNames?:SettingsClasses;headi
 
 /** One structure for production and the replacement entry; adapters only name legacy classes. */
 export function SettingsLayout({title,headerActions,heading,leading,primary,secondary,appearance,footer,supplementary,classNames=classes,contentAs:Content='div',contentClassName='',overlay}:SettingsLayoutProps){
+ classNames=visualClasses(classes,classNames);
  const [expanded,setExpanded]=useState(false),appearanceId=useId(),titleId=useId();
  return <div className={classNames.backdrop}>
   <section className={classNames.frame} role="dialog" aria-modal="true" aria-label={heading?'Настройки: '+title:undefined} aria-labelledby={heading?undefined:titleId}>

@@ -1,3 +1,4 @@
+import {visualClasses} from './classNames.ts';
 import type {SelectHTMLAttributes} from 'react';
 import {ControlWell} from './ControlWell.tsx';
 export type SelectIcon='task'|'cards'|'check'|'speed'|'group'|'match'|'time'|'letters'|'choices';
@@ -6,6 +7,7 @@ export type SelectClasses={root:string;leading:string;caret:string};
 const classes:SelectClasses={root:'v-select',leading:'v-select-leading',caret:'v-select-caret'};
 /** Native select semantics; required state is explicit, never inferred from visible wording. */
 export function SelectControl({icon='choices',children,classNames=classes,fieldState='ready',...props}:SelectHTMLAttributes<HTMLSelectElement>&{icon?:SelectIcon;classNames?:SelectClasses;fieldState?:'required'|'ready'}){
+ classNames=visualClasses(classes,classNames);
  return <span data-field-state={fieldState} className={classNames.root+(props.disabled?' is-disabled':'')}>
   <span className={classNames.leading} aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d={paths[icon]}/></svg></span>
   <select {...props}>{children}</select>

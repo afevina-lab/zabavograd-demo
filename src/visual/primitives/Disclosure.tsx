@@ -1,3 +1,4 @@
+import {visualClasses} from './classNames.ts';
 import type {ReactNode} from 'react';
 import {ControlWell} from './ControlWell.tsx';
 
@@ -6,6 +7,7 @@ const classes:DisclosureClasses={root:'v-disclosure',icon:'v-disclosure-icon',co
 export type DisclosureProps={title:string;description?:string;icon?:ReactNode;children:ReactNode;open?:boolean;className?:string;classNames?:DisclosureClasses};
 
 export function Disclosure({title,description,icon,children,open,className='',classNames=classes}:DisclosureProps){
+ classNames=visualClasses(classes,classNames);
  return <details className={classNames.root+' '+className} open={open}>
   <summary>
    {icon&&<span className={classNames.icon} aria-hidden="true">{icon}</span>}

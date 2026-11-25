@@ -1,3 +1,4 @@
+import {visualClasses} from './classNames.ts';
 import {useId,type CSSProperties} from 'react';
 import {numericScale} from './numericScale.ts';
 export type RangeClasses={root:string;heading:string;track:string};
@@ -5,6 +6,7 @@ const classes:RangeClasses={root:'v-range',heading:'v-range-heading',track:'v-ra
 
 /** One shared track with two independently accessible endpoints. */
 export function RangeControl({label,min,max,from,to,onChange,disabled=false,values,classNames=classes}:{label:string;min:number;max:number;from:number;to:number;onChange:(from:number,to:number)=>void;disabled?:boolean;values?:readonly number[];classNames?:RangeClasses}){
+ classNames=visualClasses(classes,classNames);
  const id=useId();
  const scale=numericScale(min,max,values);
  const {index,at:value,start:trackMin,end:trackMax}=scale;
