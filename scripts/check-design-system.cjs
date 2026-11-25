@@ -1,64 +1,48 @@
 'use strict';
-/** Enforce the current visual architecture. Run after extracting the UI pack. */
-const fs=require('node:fs');
-const path=require('node:path');
-const assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..');
-const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+/** Validate the replacement visual source and the approved registry, not retired patches. */
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const walk=dir=>fs.readdirSync(path.join(root,dir),{withFileTypes:true}).flatMap(entry=>entry.isDirectory()?walk(dir+'/'+entry.name):[dir+'/'+entry.name]);
 async function run(){
  const {THEMES,THEME_IDS,themeVars}=await import('../src/design-system/themes.ts');
- const layout=read('src/styles/layout.css'),controls=read('src/design-system/controls.css');
- assert(!fs.existsSync(path.join(root,'src/styles/legacy.css')),'Old visual CSS must not reappear');
- assert(!/\.(?:space|neutral|forest)(?![\w-])/.test(layout),'Theme-specific legacy layout rules must be removed');
- assert(!/border-image-slice:\s*72/.test(layout),'Obsolete watercolor nine-slice card borders forbidden');
- assert(!/\/assets\/ui\/square\.png/.test(layout),'Obsolete icon sprite forbidden');
- assert(controls.includes('var(--skin-square)'),'Universal watercolor controls must be separate');
- assert(!/saturate\s*\(/.test(layout+read('src/design-system/motion.css')),'Animations must never desaturate');
- assert(read('src/design-system/theme.css').includes('border-image:none!important'),'Full-bleed toolbar is required');
- assert(read('src/design-system/motion.css').includes('zg-pigment-bloom'),'Synchronized watercolor pop is required');
- assert(read('src/design-system/motion.css').includes('zg-camera-zoom'),'Scene zoom must include the illustrated background');
- assert(read('src/main.tsx').includes('className="zg-scene-camera" ref={cameraRef}'),'Memory must use one shared scene camera');
- assert(read('src/GameUI.tsx').includes('victory-star-shining'),'Reward must use the approved watercolor star atlas');
- assert(fs.existsSync(path.join(root,'public/assets/neutral/approved-stars.webp')),'Missing approved watercolor star atlas');
- assert(read('src/main.tsx').includes('zg-caption-toggle')&&read('src/Sorting.tsx').includes('zg-caption-toggle'),'Shared caption controls missing');
- assert.equal(read('src/style.css').trim(),`/* Shared source order: layout, theme surfaces, control skins, motion. */
-@import './styles/layout.css';
-@import './design-system/theme.css';
-@import './design-system/controls.css';
-@import './design-system/motion.css';`.trim(),'CSS imports must remain layered');
- for(const p of ['src/design-system/theme.css','src/design-system/controls.css','src/design-system/motion.css']){
-  const css=read(p);
-  assert(!/\.(?:space|neutral|forest)(?=[\s.#:[>])/.test(css),'Theme selectors forbidden in '+p);
-  assert(!/\/assets\/(?:space|neutral|forest)\//.test(css),'Theme asset URLs forbidden in '+p);
+ const files=walk('src/visual').filter(file=>file.endsWith('.css'));
+ const css=files.map(file=>read(file)).join('\n'),animation=read('src/visual/motion/motion.css');
+ assert(!fs.existsSync(path.join(root,'src/styles/legacy.css')),'Retired legacy CSS must not return');
+ for(const file of files){const source=read(file);
+  assert(!/!important/.test(source),'Priority patch in '+file);
+  assert(!/\.(?:app|space|neutral|forest)(?![\w-])/.test(source),'Legacy/theme selector in '+file);
+  assert(!/border-image-slice:\s*72|\/assets\/ui\/square\.png/.test(source),'Obsolete sprite or slicing in '+file);
  }
- for(const p of ['src/main.tsx','src/Sorting.tsx']){
-  const source=read(p);
-  assert(source.includes('themeAttributes(theme)')&&source.includes('themeVars(theme,'),'Shared skin missing: '+p);
-  assert(source.includes('useTheme()'),'Shared theme persistence missing: '+p);
-  assert(source.includes('<ScoreStars '),'Shared score animation missing: '+p);
-  assert(!source.includes('className="victory-stars"'),'Result visuals must be shared: '+p);
-  assert(!/theme\s*===\s*['"](?:space|neutral|forest)['"]/.test(source),'Hardcoded theme behavior: '+p);
+ assert(!/saturate\s*\(/.test(css),'Interaction feedback must preserve artwork colors');
+ assert(animation.includes('v-pigment-bloom'),'Watercolor match feedback missing');
+ assert(animation.includes('v-camera-zoom'),'Shared scene camera motion missing');
+ assert(animation.includes('prefers-reduced-motion'),'Reduced motion support missing');
+ assert(animation.includes('var(--zg-match-duration)'),'Registry motion timing missing');
+ assert(read('src/main.tsx').includes('<SceneCamera '),'Memory must use the shared camera');
+ assert(read('src/visual/primitives/score-stars.css').includes('var(--zg-award-stars-image)'),'Approved award artwork missing');
+ assert(fs.existsSync(path.join(root,'public/assets/neutral/approved-stars.webp')),'Missing approved star atlas');
+ const entry=read('src/main.tsx');
+ assert(entry.includes("import './visual/index.css'"),'Real games must import the replacement cascade');
+ assert(!entry.includes("import './style.css'"),'Retired stylesheet entry is still loaded');
+ assert(read('src/visual/index.css').includes('@layer reset, foundation, primitives, compositions, games, motion;'),'Missing explicit cascade order');
+ for(const file of ['src/main.tsx','src/Sorting.tsx','src/Matching.tsx','src/Conveyor.tsx','src/Transformations.tsx']){
+  const source=read(file);
+  assert(source.includes('themeAttributes(theme)')&&source.includes('visualThemeVars(theme,'),'Registry-backed visual root missing: '+file);
+  assert(source.includes('useTheme()'),'Shared theme persistence missing: '+file);
+  assert(source.includes('<GameDialog '),'Shared game dialog missing: '+file);
+  assert(!/theme\s*===\s*['"](?:space|neutral|forest)['"]/.test(source),'Theme-specific gameplay behavior: '+file);
  }
- const forestSurface=themeVars('forest','/'),spaceSurface=themeVars('space','/');
- assert.notEqual(forestSurface['--ui-frame-fill'],spaceSurface['--ui-frame-fill'],'Different materials must not share a frame finish');
- assert.notEqual(forestSurface['--ui-setup-paper'],spaceSurface['--ui-setup-paper'],'Space surfaces must have their own cold palette');
- assert.equal(forestSurface['--ui-frame-base'],'#c28a48','Approved forest wood must remain stable');
- assert.equal(forestSurface['--ui-required'],spaceSurface['--ui-required'],'Required-field warning is semantic across themes');
- assert(!/var\(--ui-wood/.test(controls),'Shared controls must use material-neutral token names');
- for(const id of THEME_IDS){
-  const t=THEMES[id],vars=themeVars(id,'/');
-  for(const asset of [t.scene.background,t.toolbarArt,t.cards.back,t.cards.front,...t.scene.sprites.map(s=>s.src)].filter(Boolean))
-   assert(fs.existsSync(path.join(root,'public',asset)),'Missing theme image: '+asset);
-  for(const [name,value] of Object.entries(vars)){
-   if(!name.startsWith('--skin-'))continue;
-   const match=String(value).match(/^url\("\/(assets\/[^"]+)"\)$/);
-   assert(match,'Malformed theme UI path: '+id+' '+name);
-   assert(fs.existsSync(path.join(root,'public',match[1])),'Missing theme UI: '+id+' '+match[1]);
+ const forest=themeVars('forest','/'),space=themeVars('space','/');
+ assert.notEqual(forest['--ui-frame-fill'],space['--ui-frame-fill'],'Distinct frame finishes must remain');
+ assert.notEqual(forest['--ui-setup-paper'],space['--ui-setup-paper'],'Distinct surface palettes must remain');
+ assert.equal(forest['--ui-frame-base'],'#c28a48','Approved forest wood changed');
+ assert.equal(forest['--ui-required'],space['--ui-required'],'Required state must remain semantic');
+ for(const id of THEME_IDS){const theme=THEMES[id];
+  for(const asset of [theme.scene.background,theme.toolbarArt,theme.cards.back,theme.cards.front,...theme.scene.sprites.map(sprite=>sprite.src)].filter(Boolean))assert(fs.existsSync(path.join(root,'public',asset)),'Missing artwork: '+asset);
+  for(const [name,value] of Object.entries(themeVars(id,'/'))){if(!name.startsWith('--skin-'))continue;
+   const match=String(value).match(/^url\("\/(assets\/[^"]+)"\)$/);assert(match,'Malformed skin path: '+name);assert(fs.existsSync(path.join(root,'public',match[1])),'Missing skin: '+match[1]);
   }
  }
- const animation=read('src/design-system/motion.css');
- assert(animation.includes('prefers-reduced-motion'),'Reduced motion must be tested and supported');
- assert(animation.includes('var(--zg-match-duration)'),'Shared animation timings missing');
- console.log('Validated visual contract:',THEME_IDS.join(', '));
+ console.log('Validated replacement visual registry and contracts:',THEME_IDS.join(', '));
 }
-run().catch(e=>{console.error(e);process.exitCode=1});
+run().catch(error=>{console.error(error);process.exitCode=1});

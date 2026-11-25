@@ -46,11 +46,12 @@ for(const name of ['settings','pause','play','volume','mute','arrow-right','hous
  assert(text.includes('<svg')&&text.includes('</svg>'),'Malformed SVG icon: '+name);
 }
 exists('space/background.png');
-const css=fs.readFileSync(path.join(root,'src/styles/layout.css'),'utf8')+'\n'+fs.readFileSync(path.join(root,'src/design-system/controls.css'),'utf8');
-const current=fs.readFileSync(path.join(root,'src/design-system/theme.css'),'utf8');
-assert(current.includes('var(--zg-stage-image)'),'Theme scene no longer uses registry');
-const refs=[...css.matchAll(/\/assets\/(theme-ui\/[^\s\x27\x22\)]+\.webp|neutral\/[^\s\x27\x22\)]+\.webp)/g)].map(m=>m[1]);
+const walkCss=dir=>fs.readdirSync(path.join(root,dir),{withFileTypes:true}).flatMap(entry=>entry.isDirectory()?walkCss(dir+'/'+entry.name):entry.name.endsWith('.css')?[dir+'/'+entry.name]:[]);
+const css=walkCss('src/visual').map(file=>fs.readFileSync(path.join(root,file),'utf8')).join('\n');
+assert(css.includes('var(--zg-stage-image)'),'Theme scene no longer uses registry');
+const refs=[...css.matchAll(/\/assets\/(theme-ui\/[^\s\x27\x22\)]+\.webp|neutral\/[^\s\x27\x22\)]+\.webp)/g)].map(match=>match[1]);
 for(const relative of refs)exists(relative);
-assert(current.includes('zg-background-drift')&&current.includes('scale(1.1111)'),'Shared drifting background missing');
-assert(css.includes('.app.game-active .stage-footer{display:none'),'Full-screen bottom filler not hidden');
+assert(css.includes('v-background-drift')&&css.includes('prefers-reduced-motion'),'Shared background motion/reduced-motion support missing');
+assert(!fs.readFileSync(path.join(root,'src/main.tsx'),'utf8').includes('stage-footer'),'Retired bottom filler returned');
 console.log('UI pack verified: '+all.length+' WebP assets, 13 SVG icons, '+refs.length+' CSS asset references.');
+

@@ -128,12 +128,12 @@ test('Shared material actions use the design-system button variants',()=>{
  const memory=readFileSync('src/main.tsx','utf8');
  const picker=readFileSync('src/WordPicker.tsx','utf8');
  const material=readFileSync('src/MaterialSettings.tsx','utf8');
- const theme=readFileSync('src/GameUI.tsx','utf8');
+ const theme=readFileSync('src/visual/primitives/ThemeChoice.tsx','utf8');
  assert.match(memory,/<button type="button" className="icon-button" title="Перемешать состав"/);
  assert.match(memory,/<button type="button" className="icon-button" title="Выбрать слова вручную"/);
  assert.match(picker,/<button type="button" className="secondary" onClick={onCancel}>Отмена<\/button>/);
  assert.match(material,/<SetupAddButton onClick=\{\(\)=>setL\(/);
- assert.match(theme,/<button type="button" key=\{id\} onClick=\{\(\)=>setTheme\(id\)\}/);
+ assert.match(theme,/onClick=\{\(\)=>onChange\(id\)\}/);
 });
 
 test('All five game setups use the shared settings shell and select implementations',()=>{
@@ -567,3 +567,4 @@ test('Saved-set removal is a shared icon action and forest scenery respects grou
  assert.match(themes,/id:'flowers-left'[^\n]*bottom:'6%'/);
  assert.match(themes,/id:'bush-front-right'[^\n]*bottom:'6%'/);
 });
+

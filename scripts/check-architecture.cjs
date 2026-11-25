@@ -8,7 +8,7 @@ const graph=new Map();
 // New plain TypeScript modules are domain code unless explicitly assigned to an adapter layer.
 for(const file of walk(source)){
  const rel=path.relative(source,file).replaceAll('\\','/');
- if(rel.endsWith('.ts')&&!rel.endsWith('.d.ts')&&!rel.startsWith('design-system/')&&!['library-loader.ts','useLibrary.ts','useCardMotion.ts','saved-material-sets.ts'].includes(rel))domain.add(rel);
+ if(rel.endsWith('.ts')&&!rel.endsWith('.d.ts')&&!rel.startsWith('design-system/')&&!rel.startsWith('visual/')&&!['library-loader.ts','useLibrary.ts','useCardMotion.ts','saved-material-sets.ts','board-layout.ts'].includes(rel))domain.add(rel);
 }
 for(const file of walk(source)){
  const rel=path.relative(source,file).replaceAll('\\','/'),text=fs.readFileSync(file,'utf8');
@@ -55,3 +55,4 @@ assert(visualPublish.includes("if: github.event_name == 'pull_request' || github
 const publishingSteps=visualPublish.match(/if: github.ref == 'refs\/heads\/main' && github.event_name != 'pull_request'/g)||[];
 assert(publishingSteps.length>=4,'Every deployment and verification step must enforce main-only publishing');
 console.log(`Architecture verified: ${graph.size} modules, pure domain, no runtime cycles, one active publisher`);
+

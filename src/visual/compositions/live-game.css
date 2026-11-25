@@ -3,12 +3,10 @@
 .v-game-screen.game-active>main{display:flex;flex:1;flex-direction:column;min-width:0;min-height:0}
 .v-play-area{display:flex;flex-direction:column;min-width:0;min-height:0;flex:1}
 .v-live-stage{position:relative;display:flex;flex:1;flex-direction:column;min-width:0;min-height:0;isolation:isolate;overflow:hidden;background:var(--zg-stage-image) center/cover no-repeat,var(--zg-stage-fill)}
-.v-stage-footer{display:flex;align-items:center;justify-content:space-between;gap:var(--v-space-3);flex:none;min-width:0;padding:var(--v-space-2) var(--v-space-4);font-size:14px;line-height:1.4}
-.v-stage-footer>span{display:inline-flex;align-items:center;gap:var(--v-space-2);min-width:0}
 .v-preview-banner{position:relative;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:var(--v-space-3);flex:none;min-height:var(--v-control);padding:var(--v-space-2) var(--v-space-4);background:var(--ui-paper);color:var(--ui-text);text-align:center;z-index:var(--v-layer-toolbar)}
 .v-welcome{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--v-space-4);height:100%;min-width:0;padding:var(--v-space-6);text-align:center;z-index:var(--v-layer-board);overflow:auto}
 .v-welcome>h2{font-size:clamp(28px,5vw,48px);line-height:1.15}
 .v-sample-cards{display:flex;align-items:center;justify-content:center;gap:var(--v-space-3);min-width:0}
 .v-sample-cards>div{display:grid;place-items:center;width:80px;aspect-ratio:1;background:var(--zg-card-front-image) center/100% 100% no-repeat;padding:var(--v-space-3)}
-@media(max-height:500px){.v-stage-footer{font-size:12px;padding-block:var(--v-space-1)}.v-welcome{gap:var(--v-space-2);padding:var(--v-space-3)}}
+@media(max-height:500px){.v-welcome{gap:var(--v-space-2);padding:var(--v-space-3)}}
 .v-workspace{display:flex;flex:1;flex-direction:column;min-width:0;min-height:0}
