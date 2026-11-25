@@ -28,7 +28,9 @@ import {CardArtwork} from './CardArtwork.tsx';
 import {DerivedArtwork} from './design-system/DerivedArtwork.tsx';
 import {GameToolbar} from './GameToolbar.tsx';
 import {QuantitySlider} from './QuantitySlider.tsx';
-import {Icon,Scenery,ThemePicker} from './GameUI.tsx';
+import {Icon} from './visual/primitives/Icon.tsx';
+import {Scenery} from './design-system/Scenery.tsx';
+import {ThemePicker} from './design-system/ThemePicker.tsx';
 import {useTheme} from './design-system/useTheme.ts';
 import {themeAttributes,themeVars} from './design-system/themes.ts';
 export function Matching(){
@@ -151,6 +153,7 @@ export function Matching(){
 </>}/></div></section>}
  </div>;
 }
+
 
 
 

@@ -19,7 +19,9 @@ import {initialLearning,learningPool,balancedPick} from './learning.ts';
 import {defaultFilters} from './model.ts';
 import {useLibrary} from './useLibrary.ts';
 import {useEffect,useMemo,useRef,useState} from 'react';
-import {Icon,ThemePicker,Scenery} from './GameUI.tsx';
+import {Icon} from './visual/primitives/Icon.tsx';
+import {ThemePicker} from './design-system/ThemePicker.tsx';
+import {Scenery} from './design-system/Scenery.tsx';
 import {useTheme} from './design-system/useTheme.ts';
 import {themeAttributes,themeVars} from './design-system/themes.ts';
 import {TransformationScene} from './design-system/TransformationScene.tsx';
@@ -68,4 +70,5 @@ export function Transformations(){
  /><div className="stage transformation-stage"><Scenery theme={theme}/>{word&&learning.mode==='math'?<div className="transformation-math-card"><h2>{word.label}</h2>{phase==='answer'&&<p>{word.answer}</p>}</div>:word&&<TransformationScene theme={theme} word={mode==='reading'?{...word,label:readingLabel(word.label,{...learning,mode:'reading'})}:word} mode={mode} phase={phase}/>}<div className="transformation-prompt"><div className="transformation-actions"><button className="icon-button answer-no" aria-label="Отметить ошибку" disabled={paused||!!limits.lost} onClick={()=>{playGameSound('wrong');limits.mistake()}}><Icon name="X"/></button><fieldset disabled={paused||!!limits.lost}>{index>0&&<button className="secondary" onClick={()=>{if(timer.current)clearTimeout(timer.current);setIndex(i=>i-1);setPhase('question')}}>Предыдущая карточка</button>}{phase==='question'?<button className="icon-button answer-yes" aria-label={learning.mode==='math'?'Показать ответ':'Показать превращение'} onClick={reveal}><Icon name="Check"/></button>:phase==='answer'?<><button className="secondary" onClick={()=>setPhase('question')}>Повторить</button><button className="icon-button answer-yes" aria-label={index+1>=activeWords.length?'Завершить':'Следующая карточка'} onClick={()=>{if(timer.current)clearTimeout(timer.current);if(index+1>=activeWords.length){setCompleted(true);setPaused(true)}else{setIndex(i=>i+1);setPhase('question')}}}><Icon name="Check"/></button></>:<button className="icon-button answer-yes" aria-label="Пропустить анимацию" onClick={()=>{if(timer.current)clearTimeout(timer.current);setPhase('answer')}}><Icon name="Check"/></button>}</fieldset></div></div>{(paused&&!completed||completed&&roundPlan.isLast||limits.lost)&&<GameDialog stars={limits.lost?0:completed?roundPlan.award:undefined} onRepeat={()=>roundPlan.repeat(loadRound)} title={limits.lost||(completed?'Игра завершена':'Пауза')} onContinue={!completed&&!limits.lost?()=>setPaused(false):undefined} onSettings={reset}/>}</div></section>}
  </div>;
 }
+
 

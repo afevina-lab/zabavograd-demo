@@ -24,7 +24,9 @@ import {useEffect,useMemo,useRef,useState} from 'react';
 import {useLibrary} from './useLibrary.ts';
 import {useTheme} from './design-system/useTheme.ts';
 import {themeAttributes,themeVars} from './design-system/themes.ts';
-import {Scenery,ThemePicker,Icon} from './GameUI.tsx';
+import {Scenery} from './design-system/Scenery.tsx';
+import {ThemePicker} from './design-system/ThemePicker.tsx';
+import {Icon} from './visual/primitives/Icon.tsx';
 import {MaterialSettings} from './MaterialSettings.tsx';
 import {CardArtwork} from './CardArtwork.tsx';
 import {defaultFilters} from './model.ts';
@@ -115,6 +117,7 @@ export function Conveyor(){
  /><div className="stage conveyor-stage"><Scenery theme={theme}/>{(paused||state.finished&&roundPlan.isLast||limits.lost)&&<GameDialog stars={limits.lost?0:state.finished?roundPlan.award:undefined} onRepeat={()=>roundPlan.repeat(loadRound)} title={limits.lost||(state.finished?'Игра завершена':'Пауза')} onContinue={paused&&!state.finished&&!limits.lost?()=>setPaused(false):undefined} onSettings={()=>{setState(null);latest.current=null}}/>}<ConveyorTrack className="conveyor-belt" aria-label="Движение слева направо">{state.cards.map(item=><CardSurface feedback={item.answered?(item.correct?"correct":"wrong"):"idle"} frame="sliced" className={'conveyor-card '+(material!=='pictures'?'text-card ':'')+(item===active?'is-current':'')+(item.answered?(item.correct?' conveyor-correct':' conveyor-wrong'):'')} key={item.card.id} style={{left:item.position*100+'%',...(material!=='pictures'?{fontSize:`clamp(14px, ${82/Math.max(6,item.card.text.length*.65)}vw, 46px)`}:{})}}>{material==='pictures'&&item.card.word?.variants?.[0]?<><CardArtwork image={item.card.word.variants[0]} label={item.card.text}/>{captions&&<small>{readingLabel(item.card.text,learning)}</small>}</>:<span>{readingLabel(item.card.text,learning)}</span>}</CardSurface>)}</ConveyorTrack>{!state.finished&&!limits.lost&&<div className="conveyor-answer"><button className="icon-button answer-yes" aria-label="Да, подходит или верно" disabled={!active||paused} onClick={()=>answer(true)}><Icon name="Check"/></button><button className="icon-button answer-no" aria-label="Нет, не подходит или неверно" disabled={!active||paused} onClick={()=>answer(false)}><Icon name="X"/></button></div>}</div></section>}
  </main></div>;
 }
+
 
 
 

@@ -28,7 +28,10 @@ import {useLibrary} from './useLibrary.ts';
 import {hasMaterial,distinctCaptions} from './material-policy.ts';
 import {Transformations} from './Transformations.tsx';
 import {Sorting} from './Sorting.tsx';
-import {Icon,ThemePicker,Scenery,Challenges} from './GameUI.tsx';
+import {Icon} from './visual/primitives/Icon.tsx';
+import {ThemePicker} from './design-system/ThemePicker.tsx';
+import {Scenery} from './design-system/Scenery.tsx';
+import {ChallengeSettings as Challenges} from './design-system/ChallengeSettings.tsx';
 import {compatibleMemoryMode,includesReading,includesSyllables} from './reading.ts';
 import React,{useEffect,useLayoutEffect,useMemo,useRef,useState} from 'react';
 import {CardArtwork} from './CardArtwork.tsx';
@@ -166,6 +169,7 @@ function App(){
 {showHelp&&<div className="modal-backdrop"><section className="modal help" role="dialog" aria-modal="true" aria-label="Как играть"><div className="panel-scroll"><div className="modal-title"><h2>Как играть в мемори</h2><button type="button" className="icon-button" aria-label="Закрыть инструкцию" onClick={()=>setShowHelp(false)}><Icon name="X"/></button></div><ol><li>Откройте карточку и назовите слово.</li><li>Откройте вторую. Если слова совпали, пара остаётся открытой.</li><li>Если нет — запомните расположение и попробуйте ещё.</li></ol><p>Соберите все пары. Произношение оценивает педагог; игра не распознаёт речь.</p><button className="primary" onClick={()=>{setShowHelp(false);setPaused(false)}}>Понятно, играем</button></div></section></div>}</div>;
 }
 (installGameAudio(),createRoot(document.getElementById('root')!)).render(new URLSearchParams(location.search).get('game')==='matching'?<Matching/>:new URLSearchParams(location.search).get('game')==='conveyor'?<Conveyor/>:new URLSearchParams(location.search).get('game')==='transformations'?<Transformations/>:new URLSearchParams(location.search).get('game')==='sorting'?<Sorting/>:<App/>);
+
 
 
 
