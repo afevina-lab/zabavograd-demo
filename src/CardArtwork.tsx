@@ -1,3 +1,4 @@
+import {ArtworkGroup} from './visual/primitives/ArtworkGroup.tsx';
 import {BoundedArtwork} from './visual/primitives/BoundedArtwork.tsx';
 import {useEffect,useState} from 'react';
 import type {ImageVariant} from './model.ts';
@@ -71,9 +72,7 @@ export function CardArtwork({image,label,number='singular'}:{image:ImageVariant;
  return number==='plural'?<PluralArtwork image={image} label={label}/>:<SingleArtwork image={image} label={label}/>;
 }
 export function PluralArtwork({image,label}:{image:ImageVariant;label:string}){
- return <div className="plural-artwork" role="img" aria-label={label}>
-  {Array.from({length:7},(_,i)=><div className="plural-artwork-object" key={i} aria-hidden="true"><SingleArtwork image={image} label=""/></div>)}
- </div>;
+ return <ArtworkGroup label={label} classNames={{root:'plural-artwork',item:'plural-artwork-object'}}><SingleArtwork image={image} label=""/></ArtworkGroup>;
 }
 function SingleArtwork({image,label}:{image:ImageVariant;label:string}){
  const src=import.meta.env.BASE_URL+image.src.replace(/^\//,'');
@@ -88,3 +87,4 @@ function SingleArtwork({image,label}:{image:ImageVariant;label:string}){
  const bounds=image.bounds||detected;
  return <BoundedArtwork src={src} label={label} bounds={bounds} className="bounded-image" fallbackClassName=""/>;
 }
+

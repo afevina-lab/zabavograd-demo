@@ -10,6 +10,7 @@
 @import './primitives/tooltip.css' layer(primitives);
 @import './primitives/toggle-group.css' layer(primitives);
 @import './primitives/card.css' layer(primitives);
+@import './primitives/card-content.css' layer(primitives);
 @import './primitives/card-slot.css' layer(primitives);
 @import './primitives/flip-faces.css' layer(primitives);
 @import './primitives/bounded-artwork.css' layer(primitives);
@@ -48,6 +49,7 @@
 @layer motion{
  @media(prefers-reduced-motion:reduce){.v-root *,.v-root *::before,.v-root *::after{animation-duration:0s;transition-duration:0s;scroll-behavior:auto}}
 }
+
 
 
 
