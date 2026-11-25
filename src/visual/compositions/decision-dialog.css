@@ -1,0 +1,4 @@
+.v-decision-dialog{width:min(520px,calc(100vw - 2*var(--v-viewport-gap)));max-height:calc(100dvh - 2*var(--v-viewport-gap));overflow:auto;color:var(--ui-text);overscroll-behavior:contain}
+.v-decision-dialog::backdrop{background:#15202266}
+.v-decision-scroll{display:flex;flex-direction:column;gap:var(--v-space-4);min-width:0;text-align:center;padding:var(--v-space-3);overflow-wrap:anywhere}
+.v-decision-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:var(--v-space-3)}

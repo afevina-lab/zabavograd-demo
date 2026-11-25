@@ -1,3 +1,4 @@
+import {DecisionDialog} from '../visual/compositions/DecisionDialog.tsx';
 import {useRef,useState} from 'react';
 import {QuantitySlider} from '../QuantitySlider.tsx';
 import {splitRounds,suggestedRounds,roundNoun,type RoundMaterial} from '../round-plan.ts';
@@ -20,5 +21,5 @@ export function useRoundPlan<T>(material:RoundMaterial){
  }
  return {rounds,setRounds,index,count,isLast:index+1>=count,award,request,advance,repeat,
   settings:(max=10)=><QuantitySlider label="Количество раундов" value={Math.min(rounds,max)} min={1} max={Math.max(1,max)} onChange={setRounds}/>,
-  confirmation:pending&&<div className="modal-backdrop"><section className="modal gui-panel" role="dialog" aria-modal="true" aria-label="Разделить игру на раунды"><div className="panel-scroll"><h2>Разделить на {pending.count} {roundNoun(pending.count)} для удобства?</h2><div className="round-plan-actions"><button type="button" className="primary" onClick={()=>pending.accept(pending.count)}>Разделить</button><button type="button" className="secondary" onClick={()=>pending.accept(pending.original)}>Оставить как есть</button><button type="button" className="link" onClick={()=>setPending(null)}>Назад</button></div></div></section></div>};
+  confirmation:pending&&<DecisionDialog title={`Разделить игру на ${pending.count} ${roundNoun(pending.count)}?`} description="Так карточки будут крупнее и удобнее на небольшом экране." onDismiss={()=>setPending(null)} classNames={{root:'modal gui-panel',scroll:'panel-scroll',actions:'round-plan-actions',primary:'primary',secondary:'secondary',quiet:'link'}} actions={[{id:'split',label:'Разделить',onClick:()=>pending.accept(pending.count)},{id:'keep',label:'Оставить как есть',tone:'secondary',onClick:()=>pending.accept(pending.original)},{id:'cancel',label:'Назад',tone:'quiet',onClick:()=>setPending(null)}]}/>};
 }

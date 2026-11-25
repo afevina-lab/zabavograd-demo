@@ -36,6 +36,7 @@
 @import './compositions/game.css' layer(compositions);
 @import './compositions/scenery.css' layer(compositions);
 @import './compositions/dialog.css' layer(compositions);
+@import './compositions/decision-dialog.css' layer(compositions);
 @import './games/boards.css' layer(games);
 @import './games/layouts.css' layer(games);
 @import './motion/motion.css' layer(motion);
@@ -43,6 +44,7 @@
 @layer motion{
  @media(prefers-reduced-motion:reduce){.v-root *,.v-root *::before,.v-root *::after{animation-duration:0s;transition-duration:0s;scroll-behavior:auto}}
 }
+
 
 
 
