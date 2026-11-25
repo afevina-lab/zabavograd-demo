@@ -1,0 +1,508 @@
+[
+  {
+    "word_id": "ru-r-add-d0b1d0b0d180d181d183d0ba",
+    "label": "барсук",
+    "src": "/assets/words/barsuk-20261115.webp",
+    "variant_id": "approved-import-20261115-barsuk",
+    "git_blob_sha": "ed77cc9c30dcd851b7786f891143e2a609b1d765",
+    "bytes": 113022
+  },
+  {
+    "word_id": "ru-r-add-d182d191d180d0bad0b0",
+    "label": "тёрка",
+    "src": "/assets/words/terka-20261115.webp",
+    "variant_id": "approved-import-20261115-terka",
+    "git_blob_sha": "15f01c9134816f22a003e8a220684410193799ab",
+    "bytes": 172634
+  },
+  {
+    "word_id": "ru-r-add-d0bad180d18bd0bbd18cd186d0be",
+    "label": "крыльцо",
+    "src": "/assets/words/kryltso-20261115.webp",
+    "variant_id": "approved-import-20261115-kryltso",
+    "git_blob_sha": "f3f86a5955b125d0107fae4b92621f3e2f62666a",
+    "bytes": 94024
+  },
+  {
+    "word_id": "ru-new-20261102-0042",
+    "label": "парта",
+    "src": "/assets/words/parta-20261115.webp",
+    "variant_id": "approved-import-20261115-parta",
+    "git_blob_sha": "bc390219bd7b77e0963184dae18345eb618ed7ff",
+    "bytes": 186758
+  },
+  {
+    "word_id": "lex-v2-d0b5d0bdd0bed182",
+    "label": "енот",
+    "src": "/assets/words/enot-20261115.webp",
+    "variant_id": "approved-import-20261115-enot",
+    "git_blob_sha": "ffd8d9cf998ed8f2228a9dfd35e14c48a48fd728",
+    "bytes": 197512
+  },
+  {
+    "word_id": "lex-v2-d0b6d0b5d180d0b5d0b1d191d0bdd0bed0ba",
+    "label": "жеребёнок",
+    "src": "/assets/words/zherebenok-20261115.webp",
+    "variant_id": "approved-import-20261115-zherebenok",
+    "git_blob_sha": "39989ec70a09b17b102a521740ff573fc0624071",
+    "bytes": 211408
+  },
+  {
+    "word_id": "lex-v2-d0bad0bed0b0d0bbd0b0",
+    "label": "коала",
+    "src": "/assets/words/koala-20261115.webp",
+    "variant_id": "approved-import-20261115-koala",
+    "git_blob_sha": "958225efc694a86aa8c5b65fe7f4b1c43efbc397",
+    "bytes": 250794
+  },
+  {
+    "word_id": "lex-v2-d0bad0bed0b7d0bbd191d0bdd0bed0ba",
+    "label": "козлёнок",
+    "src": "/assets/words/kozlenok-20261115.webp",
+    "variant_id": "approved-import-20261115-kozlenok",
+    "git_blob_sha": "06bca72898855ec2d8d2f036e7fcc21ed3dd8cbb",
+    "bytes": 172990
+  },
+  {
+    "word_id": "lex-v2-d0bad180d0b5d0b2d0b5d182d0bad0b0",
+    "label": "креветка",
+    "src": "/assets/words/krevetka-20261115.webp",
+    "variant_id": "approved-import-20261115-krevetka",
+    "git_blob_sha": "8dd5bb12d3d3a58aaba711f7b61f70c517e04052",
+    "bytes": 189144
+  },
+  {
+    "word_id": "lex-v2-d0bad183d180d0b8d186d0b0",
+    "label": "курица",
+    "src": "/assets/words/kuritsa-20261115.webp",
+    "variant_id": "approved-import-20261115-kuritsa",
+    "git_blob_sha": "70cbe5c794e0afcd41027a5b86689c6b433ddf1f",
+    "bytes": 170568
+  },
+  {
+    "word_id": "lex-v2-d0bed0b2d186d0b0",
+    "label": "овца",
+    "src": "/assets/words/ovtsa-20261115.webp",
+    "variant_id": "approved-import-20261115-ovtsa",
+    "git_blob_sha": "82431a0008429b1247737340f9562cab21da65ca",
+    "bytes": 215868
+  },
+  {
+    "word_id": "lex-v2-d0bfd0b5d182d183d185",
+    "label": "петух",
+    "src": "/assets/words/petukh-20261115.webp",
+    "variant_id": "approved-import-20261115-petukh",
+    "git_blob_sha": "307e9163dc524669ec5753179e9d1294d299004d",
+    "bytes": 219708
+  },
+  {
+    "word_id": "lex-v2-d186d18bd0bfd0bbd191d0bdd0bed0ba",
+    "label": "цыплёнок",
+    "src": "/assets/words/tsyplenok-20261115.webp",
+    "variant_id": "approved-import-20261115-tsyplenok",
+    "git_blob_sha": "df3ec41af78f888566229f569b5562c4b6b7995d",
+    "bytes": 155786
+  },
+  {
+    "word_id": "lex-v2-d18fd0b3d0bdd191d0bdd0bed0ba",
+    "label": "ягнёнок",
+    "src": "/assets/words/yagnenok-20261115.webp",
+    "variant_id": "approved-import-20261115-yagnenok",
+    "git_blob_sha": "0c59aeda48be60bbf7f839ce2ef491eaf89087d4",
+    "bytes": 171516
+  },
+  {
+    "word_id": "lex-v2-d18fd189d0b5d180d0b8d186d0b0",
+    "label": "ящерица",
+    "src": "/assets/words/yashcheritsa-20261115.webp",
+    "variant_id": "approved-import-20261115-yashcheritsa",
+    "git_blob_sha": "877eb3d7f9b894da83c077ae96bb05a56d7e87ab",
+    "bytes": 84252
+  },
+  {
+    "word_id": "ru-plant-20261104-d0b2d0b0d181d0b8d0bbd191d0ba",
+    "label": "василёк",
+    "src": "/assets/words/vasilek-20261115.webp",
+    "variant_id": "approved-import-20261115-vasilek",
+    "git_blob_sha": "02961086012b5c249bc4e4902f9aa49a0fdb295c",
+    "bytes": 189562
+  },
+  {
+    "word_id": "ru-home-20261105-dc3c0696",
+    "label": "батарейка",
+    "src": "/assets/words/batareyka-20261115.webp",
+    "variant_id": "approved-import-20261115-batareyka",
+    "git_blob_sha": "1823977e433b0bd9749850ead07acb1edd8a961d",
+    "bytes": 99508
+  },
+  {
+    "word_id": "ru-home-20261105-fab42c9f",
+    "label": "бутылка",
+    "src": "/assets/words/butylka-20261115.webp",
+    "variant_id": "approved-import-20261115-butylka",
+    "git_blob_sha": "c85acc5e4f2edae09a7f9a9d988b003ac935ea9e",
+    "bytes": 106240
+  },
+  {
+    "word_id": "ru-home-20261105-57fec3cd",
+    "label": "ванна",
+    "src": "/assets/words/vanna-20261115.webp",
+    "variant_id": "approved-import-20261115-vanna",
+    "git_blob_sha": "a2df7c224e9812058be4320022729c7865f825c3",
+    "bytes": 140070
+  },
+  {
+    "word_id": "ru-home-20261105-5eb96006",
+    "label": "вилка",
+    "src": "/assets/words/vilka-20261115.webp",
+    "variant_id": "approved-import-20261115-vilka",
+    "git_blob_sha": "432f226b2d6a1e3623e045924e7a713be7599219",
+    "bytes": 42676
+  },
+  {
+    "word_id": "ru-home-20261105-c54e368a",
+    "label": "диван",
+    "src": "/assets/words/divan-20261115.webp",
+    "variant_id": "approved-import-20261115-divan",
+    "git_blob_sha": "8dbe55d7b9bfa7e1d7e6bed32c529ca187691114",
+    "bytes": 167744
+  },
+  {
+    "word_id": "ru-home-20261105-67d50378",
+    "label": "кастрюля",
+    "src": "/assets/words/kastryulya-20261115.webp",
+    "variant_id": "approved-import-20261115-kastryulya",
+    "git_blob_sha": "3d12d9ac89ef567ee2d58e340c2a881b9e18c6fa",
+    "bytes": 87428
+  },
+  {
+    "word_id": "ru-home-20261105-f84c356b",
+    "label": "комод",
+    "src": "/assets/words/komod-20261115.webp",
+    "variant_id": "approved-import-20261115-komod",
+    "git_blob_sha": "52a83a54e52bec6dfc9e9cb3d11ffc27a6233c0e",
+    "bytes": 176240
+  },
+  {
+    "word_id": "ru-home-20261105-7074370",
+    "label": "кресло",
+    "src": "/assets/words/kreslo-20261115.webp",
+    "variant_id": "approved-import-20261115-kreslo",
+    "git_blob_sha": "11c20dfbd8e2fa8f7e1498df1719b2bc59c2f1be",
+    "bytes": 160366
+  },
+  {
+    "word_id": "ru-home-20261105-8a46549",
+    "label": "кувшин",
+    "src": "/assets/words/kuvshin-20261115.webp",
+    "variant_id": "approved-import-20261115-kuvshin",
+    "git_blob_sha": "ec29c367bd3455fdc429e688407c180a59869cce",
+    "bytes": 144794
+  },
+  {
+    "word_id": "ru-home-20261105-5423908",
+    "label": "ложка",
+    "src": "/assets/words/lozhka-20261115.webp",
+    "variant_id": "approved-import-20261115-lozhka",
+    "git_blob_sha": "7206605b4fbea7ef88b6f9a3b537e4c520581fcf",
+    "bytes": 109154
+  },
+  {
+    "word_id": "ru-home-20261105-6a956b2a",
+    "label": "миска",
+    "src": "/assets/words/miska-20261115.webp",
+    "variant_id": "approved-import-20261115-miska",
+    "git_blob_sha": "f89bb468cad6b89d3ca78e2ee6a3b7030bcf3265",
+    "bytes": 75226
+  },
+  {
+    "word_id": "ru-home-20261105-a7f282c0",
+    "label": "нож",
+    "src": "/assets/words/nozh-20261115.webp",
+    "variant_id": "approved-import-20261115-nozh",
+    "git_blob_sha": "a68037c0dac3a93e331323e5f56cac6370bbdf29",
+    "bytes": 41958
+  },
+  {
+    "word_id": "ru-home-20261105-8330865d",
+    "label": "полка",
+    "src": "/assets/words/polka-20261115.webp",
+    "variant_id": "approved-import-20261115-polka",
+    "git_blob_sha": "76b3502d5be004fe065a311377c8259a16f3886c",
+    "bytes": 63296
+  },
+  {
+    "word_id": "ru-home-20261105-9769581b",
+    "label": "стол",
+    "src": "/assets/words/stol-20261115.webp",
+    "variant_id": "approved-import-20261115-stol",
+    "git_blob_sha": "9e3e2cf4b2f6ef59d2825f988ceb9b6a3b02c552",
+    "bytes": 201296
+  },
+  {
+    "word_id": "ru-home-20261105-83f6f264",
+    "label": "стул",
+    "src": "/assets/words/stul-20261115.webp",
+    "variant_id": "approved-import-20261115-stul",
+    "git_blob_sha": "6171cd37942e7c95c9a5fd7ef539419fcc589d1d",
+    "bytes": 188132
+  },
+  {
+    "word_id": "ru-home-20261105-217a4612",
+    "label": "табурет",
+    "src": "/assets/words/taburet-20261115.webp",
+    "variant_id": "approved-import-20261115-taburet",
+    "git_blob_sha": "09469898731323a88a048463cc29fcc3638d6449",
+    "bytes": 157954
+  },
+  {
+    "word_id": "ru-home-20261105-259cc695",
+    "label": "тарелка",
+    "src": "/assets/words/tarelka-20261115.webp",
+    "variant_id": "approved-import-20261115-tarelka",
+    "git_blob_sha": "cfd769d268018a39accbead10286fc7b63a0ad6a",
+    "bytes": 85736
+  },
+  {
+    "word_id": "ru-home-20261105-f197418",
+    "label": "тумбочка",
+    "src": "/assets/words/tumbochka-20261115.webp",
+    "variant_id": "approved-import-20261115-tumbochka",
+    "git_blob_sha": "72adb19328ee3bf0285ba9c1b75395cb51c64124",
+    "bytes": 147472
+  },
+  {
+    "word_id": "ru-noun-20261109-0012",
+    "label": "кепка",
+    "src": "/assets/words/kepka-20261115.webp",
+    "variant_id": "approved-import-20261115-kepka",
+    "git_blob_sha": "f20c06d02a0fc7dbea42672aec05d8ff643043e6",
+    "bytes": 172306
+  },
+  {
+    "word_id": "ru-noun-20261109-0042",
+    "label": "скакалка",
+    "src": "/assets/words/skakalka-20261115.webp",
+    "variant_id": "approved-import-20261115-skakalka",
+    "git_blob_sha": "fe045af589bcfc15de095bdebd06cba0a950d533",
+    "bytes": 331998
+  },
+  {
+    "word_id": "ru-noun-20261109-0057",
+    "label": "сок",
+    "src": "/assets/words/sok-20261115.webp",
+    "variant_id": "approved-import-20261115-sok",
+    "git_blob_sha": "736ea7e1151ebc03e8a53f77d1800ba6eed91fad",
+    "bytes": 124896
+  },
+  {
+    "word_id": "ru-noun-20261109-0082",
+    "label": "остановка",
+    "src": "/assets/words/ostanovka-20261115.webp",
+    "variant_id": "approved-import-20261115-ostanovka",
+    "git_blob_sha": "6aee80b717cdd60deb8dffd4035913b06e42306c",
+    "bytes": 213864
+  },
+  {
+    "word_id": "ru-noun-20261109-0083",
+    "label": "перекрёсток",
+    "src": "/assets/words/perekrestok-20261115.webp",
+    "variant_id": "approved-import-20261115-perekrestok",
+    "git_blob_sha": "7bbd25712034e0e75e69886dcf28dc4e0ec4c684",
+    "bytes": 145448
+  },
+  {
+    "word_id": "ru-noun-20261109-0084",
+    "label": "парк",
+    "src": "/assets/words/park-20261115.webp",
+    "variant_id": "approved-import-20261115-park",
+    "git_blob_sha": "d06bfbc7b6ebc0f68fce50636e634de72b62553a",
+    "bytes": 313400
+  },
+  {
+    "word_id": "ru-noun-extra-20261109-024",
+    "label": "дождевик",
+    "src": "/assets/words/dozhdevik-20261115.webp",
+    "variant_id": "approved-import-20261115-dozhdevik",
+    "git_blob_sha": "c4c153168caa03040a1632e58f6fb6facc76dd4a",
+    "bytes": 127748
+  },
+  {
+    "word_id": "ru-noun-extra-20261109-040",
+    "label": "книга",
+    "src": "/assets/words/kniga-20261115.webp",
+    "variant_id": "approved-import-20261115-kniga",
+    "git_blob_sha": "09dd5f94ea5bee7d532520814a9ab9b94c75c7fe",
+    "bytes": 196896
+  },
+  {
+    "word_id": "ru-noun-import-20261115-tsennik",
+    "label": "ценник",
+    "src": "/assets/words/tsennik-20261115.webp",
+    "variant_id": "approved-import-20261115-tsennik",
+    "git_blob_sha": "7e5482b2c40c38dd3ae8c956210abd18eb8af1d2",
+    "bytes": 109276,
+    "historic_word": {
+      "meaning": "табличка с ценой товара",
+      "weight": 30,
+      "scope": "general",
+      "categories": [
+        "Общество и окружающая среда/Торговля и покупки"
+      ],
+      "lexicalEligibleByDefault": true
+    }
+  },
+  {
+    "word_id": "ru-noun-import-20261115-lapa",
+    "label": "лапа",
+    "src": "/assets/words/lapa-20261115.webp",
+    "variant_id": "approved-import-20261115-lapa",
+    "git_blob_sha": "3d849fbb4d5229afe0ce4d506a2099eccce9f314",
+    "bytes": 224040,
+    "historic_word": {
+      "meaning": "лапа животного",
+      "weight": 70,
+      "scope": "auxiliary",
+      "categories": [
+        "Животный мир/Части тела животных"
+      ],
+      "lexicalEligibleByDefault": false
+    }
+  },
+  {
+    "word_id": "ru-noun-import-20261115-zavod",
+    "label": "завод",
+    "src": "/assets/words/zavod-20261115.webp",
+    "variant_id": "approved-import-20261115-zavod",
+    "git_blob_sha": "b05b37a11991bff6a70debdc2162bbcf00fcb2a3",
+    "bytes": 119310,
+    "historic_word": {
+      "meaning": "промышленное предприятие",
+      "weight": 50,
+      "scope": "general",
+      "categories": [
+        "Общество и окружающая среда/Город и село/Здания и учреждения"
+      ],
+      "lexicalEligibleByDefault": true
+    }
+  },
+  {
+    "word_id": "ru-noun-import-20261115-meshok",
+    "label": "мешок",
+    "src": "/assets/words/meshok-20261115.webp",
+    "variant_id": "approved-import-20261115-meshok",
+    "git_blob_sha": "57c93c822dbbd991dd2133f9998602af1954e5b3",
+    "bytes": 246152,
+    "historic_word": {
+      "meaning": "мешок для хранения или переноски",
+      "weight": 50,
+      "scope": "general",
+      "categories": [
+        "Дом и быт/Предметы домашнего обихода/Хранение вещей"
+      ],
+      "lexicalEligibleByDefault": true
+    }
+  },
+  {
+    "word_id": "ru-noun-import-20261115-kaplya",
+    "label": "капля",
+    "src": "/assets/words/kaplya-20261115.webp",
+    "variant_id": "approved-import-20261115-kaplya",
+    "git_blob_sha": "c5e9e60ee1b41e8a6a637d7ddbe23bbe1ede6237",
+    "bytes": 133478,
+    "historic_word": {
+      "meaning": "капля воды",
+      "weight": 70,
+      "scope": "general",
+      "categories": [
+        "Природа и окружающий мир/Явления"
+      ],
+      "lexicalEligibleByDefault": true
+    }
+  },
+  {
+    "word_id": "ru-noun-import-20261115-kalendar",
+    "label": "календарь",
+    "src": "/assets/words/kalendar-20261115.webp",
+    "variant_id": "approved-import-20261115-kalendar",
+    "git_blob_sha": "c8221c3aca72dc421f07c1077bb93df054dc6655",
+    "bytes": 219432,
+    "historic_word": {
+      "meaning": "настольный календарь",
+      "weight": 70,
+      "scope": "general",
+      "categories": [
+        "Время и календарь/Временные представления"
+      ],
+      "lexicalEligibleByDefault": true
+    }
+  },
+  {
+    "word_id": "ru-noun-import-20261115-snegovik",
+    "label": "снеговик",
+    "src": "/assets/words/snegovik-20261115.webp",
+    "variant_id": "approved-import-20261115-snegovik",
+    "git_blob_sha": "de150ee6064dd7034cfce562e7a326beebde7b87",
+    "bytes": 167314,
+    "historic_word": {
+      "meaning": "фигура из снега",
+      "weight": 70,
+      "scope": "general",
+      "categories": [
+        "Игры, творчество и увлечения/Зимние забавы"
+      ],
+      "lexicalEligibleByDefault": true
+    }
+  },
+  {
+    "word_id": "ru-noun-import-20261115-panda",
+    "label": "панда",
+    "src": "/assets/words/panda-20261115.webp",
+    "variant_id": "approved-import-20261115-panda",
+    "git_blob_sha": "c2f6f04d5fe3afdd6e934cebdbefefc164b580a9",
+    "bytes": 120454,
+    "historic_word": {
+      "meaning": "большая панда, медведь",
+      "weight": 70,
+      "scope": "general",
+      "categories": [
+        "Животный мир/Дикие животные/Жарких стран и других регионов"
+      ],
+      "lexicalEligibleByDefault": true
+    }
+  },
+  {
+    "word_id": "ru-noun-import-20261115-kryuchok",
+    "label": "крючок",
+    "src": "/assets/words/kryuchok-20261115.webp",
+    "variant_id": "approved-import-20261115-kryuchok",
+    "git_blob_sha": "1cfaedb9d2098067b80ada5aa0e2889abfb16211",
+    "bytes": 80862,
+    "historic_word": {
+      "meaning": "рыболовный крючок",
+      "weight": 30,
+      "scope": "general",
+      "categories": [
+        "Игры, творчество и увлечения/Рыбалка и принадлежности"
+      ],
+      "lexicalEligibleByDefault": true
+    }
+  },
+  {
+    "word_id": "ru-noun-import-20261115-udochka",
+    "label": "удочка",
+    "src": "/assets/words/udochka-20261115.webp",
+    "variant_id": "approved-import-20261115-udochka",
+    "git_blob_sha": "e0e41d53d6f0763bfdb071d78a994563fe4d9ba5",
+    "bytes": 113962,
+    "historic_word": {
+      "meaning": "удочка для ловли рыбы",
+      "weight": 70,
+      "scope": "general",
+      "categories": [
+        "Игры, творчество и увлечения/Рыбалка и принадлежности"
+      ],
+      "lexicalEligibleByDefault": true
+    }
+  }
+]
