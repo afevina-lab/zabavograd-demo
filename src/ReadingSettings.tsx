@@ -27,7 +27,7 @@ export function ReadingSettings({l,setL,words,textDisplayProvided=false}:{l:Lear
    <h2>Выберите буквы</h2>
    <section className="v-letter-section letter-picker-section"><h3>Доступные буквы · {draftAvailable.length} из 33</h3>
     <label className="v-choice check letter-select-all"><input type="checkbox" checked={draftAvailable.length===alphabet.length} onChange={e=>{setDraftAvailable(e.target.checked?[...alphabet]:[]);if(!e.target.checked)setDraftRequired([])}}/>Выбрать всё</label>
-    {Object.entries({'Гласные':vowels,'Согласные':consonants,'Знаки':['ь','ъ']}).map(([group,letters])=><details className="settings-disclosure letter-group" key={group} open>
+    {Object.entries({'Гласные':vowels,'Согласные':consonants,'Знаки':['ь','ъ']}).map(([group,letters])=><details className="v-letter-group settings-disclosure letter-group" key={group} open>
      <summary><span>{group}</span><label className="v-choice check letter-select-all" onClick={e=>e.stopPropagation()}><input type="checkbox" checked={letters.every(c=>draftAvailable.includes(c))} onChange={e=>{setDraftAvailable(current=>e.target.checked?[...new Set([...current,...letters])]:current.filter(c=>!letters.includes(c)));if(!e.target.checked)setDraftRequired(current=>current.filter(c=>!letters.includes(c)))}} aria-label={'Выбрать всё: '+group}/></label><ControlWell/></summary>
      <div className="v-letter-group-content letter-group-content">
 
@@ -37,7 +37,7 @@ export function ReadingSettings({l,setL,words,textDisplayProvided=false}:{l:Lear
    </section>
    <section className="v-letter-section letter-picker-section"><h3>Обязательные буквы · {draftRequired.length||'не выбраны'}</h3>
     <p className="v-help-copy hint">В каждом слове должны быть все отмеченные буквы.</p>
-    <details className="settings-disclosure letter-group" open>
+    <details className="v-letter-group settings-disclosure letter-group" open>
      <summary><span>Выберите обязательные буквы</span><ControlWell/></summary>
      <div className="v-letter-group-content letter-group-content">
       <label className="v-choice check letter-select-all"><input type="checkbox" checked={draftAvailable.length>0&&draftAvailable.every(c=>draftRequired.includes(c))} onChange={e=>setDraftRequired(e.target.checked?[...draftAvailable]:[])}/>Выбрать всё</label>
@@ -52,3 +52,4 @@ export function ReadingSettings({l,setL,words,textDisplayProvided=false}:{l:Lear
  {kinds.includes('syllables')&&<details className="v-filter-details filter-details" open><summary>Виды слогов и сочетаний</summary>{Object.entries(syllablePatterns).map(([p,label])=><div key={p}><label className="v-choice check" key={p}><input type="checkbox" checked={patterns.includes(p as Pattern)} disabled={r.excludeClusters&&['CCV','VCC'].includes(p)} onChange={e=>setL({...l,syllablePatterns:toggle(patterns,p,e.target.checked) as Pattern[]})}/>{label}</label>{l.mode!=='reading'&&patterns.includes(p as Pattern)&&<div className="v-target-slots target-slots">{[...p].map((slot,i)=>{const applicable=l.sounds.some(s=>slot===(vowels.includes(s)?'V':'C'));return applicable&&<label className="v-choice check" key={i}><input type="checkbox" checked={(l.targetSlots?.[p as Pattern]??[...p].flatMap((c,j)=>l.sounds.some(s=>c===(vowels.includes(s)?'V':'C'))?[j]:[])).includes(i)} onChange={e=>{const current=l.targetSlots?.[p as Pattern]??[...p].flatMap((c,j)=>l.sounds.some(s=>c===(vowels.includes(s)?'V':'C'))?[j]:[]);setL({...l,targetSlots:{...l.targetSlots,[p]:e.target.checked?[...current,i]:current.filter(j=>j!==i)}})}}/>{[...p].map((c,j)=>(c==='C'?'согласный':'гласный')+(j===i?' (целевой)':' (любой)')).join(' + ')}</label>})}</div>}</div>)}<p className="v-help-copy hint">Слоги и сочетания используются в режиме «Слово — слово».</p></details>}
  </div>;
 }
+

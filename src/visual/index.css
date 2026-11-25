@@ -8,6 +8,7 @@
 @import './primitives/field.css' layer(primitives);
 @import './primitives/chip.css' layer(primitives);
 @import './primitives/tooltip.css' layer(primitives);
+@import './primitives/popover-tip.css' layer(primitives);
 @import './primitives/toggle-group.css' layer(primitives);
 @import './primitives/card.css' layer(primitives);
 @import './primitives/card-content.css' layer(primitives);
@@ -17,6 +18,7 @@
 @import './primitives/choice.css' layer(primitives);
 @import './primitives/life-meter.css' layer(primitives);
 @import './primitives/time-bar.css' layer(primitives);
+@import './primitives/session-time.css' layer(primitives);
 @import './primitives/score-stars.css' layer(primitives);
 @import './primitives/sound-choice.css' layer(primitives);
 @import './primitives/fit-copy.css' layer(primitives);
@@ -55,6 +57,8 @@
 @layer motion{
  @media(prefers-reduced-motion:reduce){.v-root *,.v-root *::before,.v-root *::after{animation-duration:0s;transition-duration:0s;scroll-behavior:auto}}
 }
+
+
 
 
 
