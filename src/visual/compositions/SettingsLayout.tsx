@@ -1,3 +1,4 @@
+import {SettingsTitle} from './SettingsTitle.tsx';
 import {visualClasses} from '../primitives/classNames.ts';
 import {useId,useState,type ReactNode} from 'react';
 
@@ -13,7 +14,7 @@ export function SettingsLayout({title,headerActions,heading,leading,primary,seco
  return <div className={classNames.backdrop}>
   <section className={classNames.frame} role="dialog" aria-modal="true" aria-label={heading?'Настройки: '+title:undefined} aria-labelledby={heading?undefined:titleId}>
    <header className={classNames.heading}>
-    {heading||<div><h1 id={titleId}>{title}</h1><p className="v-settings-subtitle">Подготовка к игре</p></div>}
+    {heading||<div id={titleId}><SettingsTitle title={title}/></div>}
     <div className={classNames.actions}>{headerActions}</div>
    </header>
    <div className={classNames.workspace}>
@@ -31,3 +32,4 @@ export function SettingsLayout({title,headerActions,heading,leading,primary,seco
   {overlay}
  </div>;
 }
+
