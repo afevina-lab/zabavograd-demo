@@ -35,6 +35,7 @@
 @import './compositions/picker-dialog.css' layer(compositions);
 @import './compositions/toolbar.css' layer(compositions);
 @import './compositions/game.css' layer(compositions);
+@import './compositions/game-actions.css' layer(compositions);
 @import './compositions/scenery.css' layer(compositions);
 @import './compositions/dialog.css' layer(compositions);
 @import './compositions/decision-dialog.css' layer(compositions);
@@ -47,6 +48,7 @@
 @layer motion{
  @media(prefers-reduced-motion:reduce){.v-root *,.v-root *::before,.v-root *::after{animation-duration:0s;transition-duration:0s;scroll-behavior:auto}}
 }
+
 
 
 

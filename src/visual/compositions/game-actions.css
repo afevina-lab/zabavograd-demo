@@ -1,0 +1,3 @@
+.v-game-actions{position:relative;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:var(--v-space-3);min-width:0;flex:none;padding:var(--v-space-3);z-index:var(--v-layer-board)}
+.v-game-action-group{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:var(--v-space-3);min-width:0;margin:0;padding:0;border:0}
+@media(max-height:500px){.v-game-actions{padding:var(--v-space-2);gap:var(--v-space-2)}.v-game-action-group{gap:var(--v-space-2)}}
