@@ -5,10 +5,11 @@
 .v-tree-branch>details>summary{display:flex;align-items:center;gap:var(--v-space-2);min-height:var(--v-control);padding:var(--v-space-2);list-style:none;cursor:pointer}
 .v-tree-branch>details>summary::-webkit-details-marker{display:none}
 .v-tree-branch>details>summary>svg{width:24px;height:24px;flex:none}
-.v-tree-branch>details>summary>input{width:22px;height:22px;margin:0;flex:none;accent-color:var(--ui-accent)}
+.v-tree-branch>details>summary>input{width:24px;height:24px;margin:0;flex:none;accent-color:var(--ui-accent)}
 .v-tree-name{flex:1;min-width:0;line-height:1.4;overflow-wrap:anywhere}
 .v-tree-count{flex:none;line-height:1}
 .v-tree-well{width:30px;height:32px}
 .v-tree-branch>details[open]>summary .v-tree-well>svg{transform:rotate(180deg)}
 .v-tree-children{padding:var(--v-space-2);border-top:1px solid var(--ui-field-edge)}
 .v-tree-children>ul{display:flex;flex-direction:column;gap:var(--v-space-2)}
+
