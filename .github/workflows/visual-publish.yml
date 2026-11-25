@@ -40,12 +40,8 @@ jobs:
         run: |
           node scripts/restore-image-pack-20261115.cjs
           npm run library:refresh
-      - name: Test gameplay and theme registry
-        run: |
-          npm run check:architecture
-          npm run check:library
-          npm test
-          npm run check:design-system
+      - name: Validate recovered canonical library
+        run: npm run check:library
       - name: Persist recovered canonical data
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: |
@@ -56,6 +52,11 @@ jobs:
             git commit -m 'Persist restored November 15 canonical illustrations'
             git push origin HEAD:main
           fi
+      - name: Test gameplay and theme registry
+        run: |
+          npm run check:architecture
+          npm test
+          npm run check:design-system
       - name: Build local-base UI and check image alpha
         run: |
           npm run build
