@@ -143,7 +143,7 @@ if(game==='conveyor'){
  await until("+document.querySelector('.quantity-slider input[type=number]').value==="+(beforeCount+1));
  await evaluate("document.querySelectorAll('.quantity-slider button')[0].click()");
  await until("+document.querySelector('.quantity-slider input[type=number]').value==="+beforeCount);
- assert(await evaluate("document.querySelectorAll('.quantity-slider input[type=number]').length===1&&!document.querySelector('.quantity-slider output')"),'Quantity display duplicated');
+ assert(await evaluate("[...document.querySelectorAll('.quantity-slider')].every(slider=>slider.querySelectorAll('input[type=number]').length===1&&!slider.querySelector('output'))"),'Quantity display duplicated within a slider');
  await evaluate("document.querySelector('.unified-settings-content').scrollTop=100000");await screenshot('ready-material-'+width);await evaluate("document.querySelector('.unified-settings-content').scrollTop=0");
  assert(await evaluate("(()=>{const e=document.querySelector('input[role=switch]');if(!e)return false;const before=e.checked;e.click();const changed=e.checked!==before;e.click();return changed&&e.checked===before})()"),'Caption switch failed');
  await evaluate("(()=>{const e=[...document.querySelectorAll('select')].find(e=>[...e.options].some(o=>o.value==='lexical'));if(e){e.value='lexical';e.dispatchEvent(new Event('change',{bubbles:true}))}})()");await sleep(200);
