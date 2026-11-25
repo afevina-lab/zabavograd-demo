@@ -131,6 +131,9 @@ export function themeVars(id:ThemeId,base='/'):CSSProperties{
   '--skin-tab':kit('tabs',`tab-${c}-inactive`),
   '--skin-tab-active':kit('tabs',`tab-${c}-active`),
   '--skin-chip':kit('chips',`chip-${c}-normal`),
+  '--skin-check-disabled':url('assets/theme-ui/checkboxes/checkbox-disabled.webp',base),
+  '--skin-toggle-off':url('assets/theme-ui/toggles/toggle-off.webp',base),
+  '--skin-slider-track':url('assets/theme-ui/sliders/slider-track-empty.webp',base),
   '--skin-check-empty':kit('checkboxes',`checkbox-${c}-empty`),
   '--skin-check-checked':kit('checkboxes',`checkbox-${c}-checked`),
   '--skin-radio-empty':kit('radio',`radio-${c}-empty`),
@@ -159,5 +162,6 @@ export const TRANSFORMATION_SCENES:Record<ThemeId,{kind:'flip'|'depth'|'rays';ba
  forest:{kind:'depth',frame:'assets/flashcards/tree-hollow.webp'},
  space:{kind:'rays',background:'assets/flashcards/space-laboratory.webp',back:'assets/flashcards/camera-back.webp',glass:'assets/flashcards/camera-glass.webp',frame:'assets/flashcards/camera-frame.webp'}
 };
+
 
 

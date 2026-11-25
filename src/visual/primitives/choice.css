@@ -1,5 +1,12 @@
-.v-choice{display:flex;align-items:center;gap:10px;min-height:var(--v-target);padding:6px var(--v-space-2);overflow-wrap:anywhere}
-.v-choice input{appearance:auto;accent-color:var(--ui-accent);width:22px;height:22px;margin:0;flex:none}
-
+.v-choice{display:flex;align-items:center;gap:var(--v-space-3);min-height:var(--v-target);padding:var(--v-space-2);min-width:0;overflow-wrap:anywhere}
+.v-choice>input{appearance:none;width:24px;height:24px;margin:0;flex:none;border:0;background:var(--skin-check-empty) center/contain no-repeat;cursor:pointer}
+.v-choice>input:checked{background-image:var(--skin-check-checked)}
+.v-choice>input[type=radio]{background-image:var(--skin-radio-empty)}
+.v-choice>input[type=radio]:checked{background-image:var(--skin-radio-checked)}
+.v-choice>input:indeterminate{background-image:linear-gradient(currentColor,currentColor),var(--skin-check-empty);background-size:10px 2px,contain}
+.v-choice>input[role=switch]{width:52px;height:27px;background-image:var(--skin-toggle-off);background-size:100% 100%}
+.v-choice>input[role=switch]:checked{background-image:var(--skin-toggle-on)}
+.v-choice>input:disabled:not([role=switch]){background-image:var(--skin-check-disabled);cursor:not-allowed}
 .v-choice>span{min-width:0;line-height:1.4}
-.v-choice:has(>input:disabled){opacity:.5}
+.v-choice>input:disabled+span{opacity:.5}
+@media(forced-colors:active){.v-choice>input{appearance:auto;accent-color:auto;background:none}.v-choice>input[role=switch]{width:24px;height:24px}}
