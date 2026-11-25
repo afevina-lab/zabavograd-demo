@@ -24,3 +24,16 @@ test('lexical task weight preserves approved weight 1 and leaves base weights in
  assert.equal(materialWeight(word),100);
  assert.equal(word.weight,100);
 });
+
+import {orderedWords} from '../src/word-choice-order.ts';
+test('historical aliases never appear as separate cards in automatic or manual selection',()=>{
+ const canonical={id:'sock',label:'носок',weight:100,opposition:[],type:null,variants:[{id:'same',src:'sock.webp'}]} as Word;
+ const alias={...canonical,id:'old-sock',aliasOf:'sock',weight:0};
+ const manual={...canonical,id:'manual',label:'редкое слово',weight:0};
+ const homonym={...canonical,id:'different-sense'};
+ const words=[canonical,alias,manual,homonym];
+ assert.deepEqual(availableMaterial(words,true,false).map(w=>w.id),['sock','manual','different-sense']);
+ assert.deepEqual(learningPool(words,defaultFilters,initialLearning,false).map(w=>w.id),['sock','manual','different-sense']);
+ assert.equal(orderedWords(words,[]).some(w=>w.id===alias.id),false);
+ assert.deepEqual(learningPool(words,defaultFilters,{...initialLearning,selectionMode:'approved',approvedWordIds:[alias.id]},false).map(w=>w.id),['sock']);
+});

@@ -2,7 +2,7 @@ import {mathMaterial,type MathSettings} from './math-material.ts';
 import {contentKinds,effectivePatterns,matchesReading,materialCandidates,type ReadingOptions,type ContentKind,type Pattern} from './reading.ts';
 import type {Word,Filters,SoundOccurrence as MaterialSoundOccurrence} from './material-types.ts';
 import {pickWords} from './material-selection.ts';
-import {canSelectAutomatically,materialWeight} from './material-policy.ts';
+import {canSelectAutomatically,isCanonicalMaterial,materialWeight} from './material-policy.ts';
 export const groups:Record<string,string[]>={'Ранний онтогенез':['м',"м'",'н',"н'",'п',"п'",'б',"б'",'т',"т'",'д',"д'",'к',"к'",'г',"г'",'х',"х'",'в',"в'",'ф',"ф'"],'Гласные':['а','о','у','ы','э','и'],'Свистящие':['с',"с'",'з',"з'",'ц'],'Шипящие':['ш','ж',"ч'","щ'"],'Соноры':["й'",'р',"р'",'л',"л'"]};
 export const positions=['начало','середина','конец','после согласного','перед согласным','несколько вхождений'];
 export type SoundOccurrence=MaterialSoundOccurrence;
@@ -72,7 +72,7 @@ function matchesMaterial(w:Word,f:Filters,l:Learning):boolean {
  const allowed=base&&(!f.noOpposition||l.mode!=='automation'||l.sounds[0]!=='р'||w.opposition.length===0);
  return soundAllowed&&(allowed||(l.additional||[]).some(r=>matchesMaterial(w,r.filters,r.learning)))&&!(l.exclusions||[]).some(r=>matchesMaterial(w,r.filters,r.learning));
 }
-export function learningPool(words:Word[],f:Filters,l:Learning,automatic=true){if(l.mode==='math')return mathMaterial(l.math);const approved=l.selectionMode==='approved'?new Set(l.approvedWordIds||[]):null;const candidates=materialCandidates(words,l).filter(w=>matchesMaterial(w,f,l)&&(!approved||approved.has(w.id))).map(w=>l.mode==='lexical'?{...w,weight:materialWeight(w,true)}:w).filter(w=>!automatic||canSelectAutomatically(w)||Boolean(approved?.has(w.id)));
+export function learningPool(words:Word[],f:Filters,l:Learning,automatic=true){if(l.mode==='math')return mathMaterial(l.math);const aliases=new Map(words.filter(w=>w.aliasOf).map(w=>[w.id,w.aliasOf!]));const approved=l.selectionMode==='approved'?new Set((l.approvedWordIds||[]).map(id=>aliases.get(id)??id)):null;const candidates=materialCandidates(words,l).filter(w=>isCanonicalMaterial(w)&&matchesMaterial(w,f,l)&&(!approved||approved.has(w.id))).map(w=>l.mode==='lexical'?{...w,weight:materialWeight(w,true)}:w).filter(w=>!automatic||canSelectAutomatically(w)||Boolean(approved?.has(w.id)));
  const seen=new Set<string>();return candidates.filter(w=>{const key=w.id;if(seen.has(key))return false;seen.add(key);return true;});}
 /** Keep words and generated syllables near 50:50 whenever both kinds are enabled.
  * Reallocate only when one eligible kind is genuinely too small; do not repeat IDs.
