@@ -1,0 +1,1134 @@
+{
+  "schema": "zabavograd_priority_review_batch_v1",
+  "date": "2026-11-25",
+  "source_blob_sha": "8a05b9cc056486a13ec46f6718cbdf791b1a62ac",
+  "status": "review_only_not_applied",
+  "baseline": {
+    "entries": 1980,
+    "phonetics_pending": 444,
+    "phonetics_pending_weight_100": 23,
+    "grammar_no_data": 76,
+    "grammar_no_data_weight_100": 14,
+    "active_inflections": 1171,
+    "no_categories": 129,
+    "graph_edges": 1500,
+    "entries_without_graph_edges": 774,
+    "verbs": 300,
+    "active_speech_frames": 0
+  },
+  "phonetic": [
+    {
+      "id": "ru-new-20261102-0035",
+      "lemma": "розетка",
+      "expected_status": "pending_automatic_analysis",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "р",
+          "а",
+          "з'",
+          "э",
+          "т",
+          "к",
+          "а"
+        ],
+        "stress_syllable": 2,
+        "stressed_vowel": "э",
+        "syllable_count": 3,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "ru-new-20261102-0038",
+      "lemma": "кроссовки",
+      "expected_status": "pending_automatic_analysis",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "к",
+          "р",
+          "а",
+          "с",
+          "о",
+          "ф",
+          "к'",
+          "и"
+        ],
+        "stress_syllable": 2,
+        "stressed_vowel": "о",
+        "syllable_count": 3,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "lex-v2-d0b1d0b5d0bbd0bad0b0",
+      "lemma": "белка",
+      "expected_status": "pending_automatic_analysis",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "б'",
+          "э",
+          "л",
+          "к",
+          "а"
+        ],
+        "stress_syllable": 1,
+        "stressed_vowel": "э",
+        "syllable_count": 2,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "lex-v2-d0b7d0bcd0b5d18f",
+      "lemma": "змея",
+      "expected_status": "pending_automatic_analysis",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "з",
+          "м'",
+          "и",
+          "й",
+          "а"
+        ],
+        "stress_syllable": 2,
+        "stressed_vowel": "а",
+        "syllable_count": 2,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "lex-v2-d0bbd0b8d181d0b0",
+      "lemma": "лиса",
+      "expected_status": "pending_automatic_analysis",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "л'",
+          "и",
+          "с",
+          "а"
+        ],
+        "stress_syllable": 2,
+        "stressed_vowel": "а",
+        "syllable_count": 2,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "ru-home-20261105-5eb96006",
+      "lemma": "вилка",
+      "expected_status": "pending_automatic_analysis",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "в'",
+          "и",
+          "л",
+          "к",
+          "а"
+        ],
+        "stress_syllable": 1,
+        "stressed_vowel": "и",
+        "syllable_count": 2,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "ru-home-20261105-5423908",
+      "lemma": "ложка",
+      "expected_status": "pending_automatic_analysis",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "л",
+          "о",
+          "ш",
+          "к",
+          "а"
+        ],
+        "stress_syllable": 1,
+        "stressed_vowel": "о",
+        "syllable_count": 2,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "ru-home-20261105-accfb2b4",
+      "lemma": "стена",
+      "expected_status": "pending_automatic_analysis",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "с",
+          "т'",
+          "и",
+          "н",
+          "а"
+        ],
+        "stress_syllable": 2,
+        "stressed_vowel": "а",
+        "syllable_count": 2,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "ru-noun-20261109-0029",
+      "lemma": "носок",
+      "expected_status": "pending_automatic_analysis",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "н",
+          "а",
+          "с",
+          "о",
+          "к"
+        ],
+        "stress_syllable": 2,
+        "stressed_vowel": "о",
+        "syllable_count": 2,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "ru-noun-20261109-0055",
+      "lemma": "вода",
+      "expected_status": "pending_automatic_analysis",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "в",
+          "а",
+          "д",
+          "а"
+        ],
+        "stress_syllable": 2,
+        "stressed_vowel": "а",
+        "syllable_count": 2,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "ru-new-20261108-2bac6d3523",
+      "lemma": "кукла",
+      "expected_status": "pending",
+      "method": "existing_candidate",
+      "donor_id": "ru-noun-20261109-0030",
+      "proposal": {
+        "status": "automatic_candidate_needs_review",
+        "data": {
+          "sound_tokens": [
+            "к",
+            "у",
+            "к",
+            "л",
+            "а"
+          ],
+          "stress_syllable": 1,
+          "stressed_vowel": "у",
+          "syllable_count": 2,
+          "markova_type_candidate": 5,
+          "automatic_proposal": {
+            "source": "nsu-ai/russian_g2p",
+            "status": "suggested",
+            "accented": "ку+кла",
+            "usable_for_automatic_target_selection": "only_letter_aligned_and_not_before_soft_consonant",
+            "not_methodically_verified": true
+          }
+        }
+      }
+    },
+    {
+      "id": "ru-new-20261108-b8f6c0f802",
+      "lemma": "молоко",
+      "expected_status": "pending",
+      "method": "existing_candidate",
+      "donor_id": "ru-noun-20261109-0056",
+      "proposal": {
+        "status": "automatic_candidate_needs_review",
+        "data": {
+          "sound_tokens": [
+            "м",
+            "а",
+            "л",
+            "а",
+            "к",
+            "о"
+          ],
+          "stress_syllable": 3,
+          "stressed_vowel": "о",
+          "syllable_count": 3,
+          "markova_type_candidate": 2,
+          "automatic_proposal": {
+            "source": "nsu-ai/russian_g2p",
+            "status": "suggested",
+            "accented": "молоко+",
+            "usable_for_automatic_target_selection": "only_letter_aligned_and_not_before_soft_consonant",
+            "not_methodically_verified": true
+          }
+        }
+      }
+    },
+    {
+      "id": "ru-new-20261108-84653d88d9",
+      "lemma": "мяч",
+      "expected_status": "pending",
+      "method": "existing_candidate",
+      "donor_id": "ru-noun-20261109-0031",
+      "proposal": {
+        "status": "automatic_candidate_needs_review",
+        "data": {
+          "sound_tokens": [
+            "м'",
+            "а",
+            "ч'"
+          ],
+          "stress_syllable": 1,
+          "stressed_vowel": "а",
+          "syllable_count": 1,
+          "markova_type_candidate": 3,
+          "automatic_proposal": {
+            "source": "nsu-ai/russian_g2p",
+            "status": "suggested",
+            "accented": "мя+ч",
+            "usable_for_automatic_target_selection": "only_letter_aligned_and_not_before_soft_consonant",
+            "not_methodically_verified": true
+          }
+        }
+      }
+    },
+    {
+      "id": "ru-new-20261108-97b71638c2",
+      "lemma": "облако",
+      "expected_status": "pending",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "о",
+          "б",
+          "л",
+          "а",
+          "к",
+          "а"
+        ],
+        "stress_syllable": 1,
+        "stressed_vowel": "о",
+        "syllable_count": 3,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "ru-new-20261108-0ca50229c2",
+      "lemma": "платье",
+      "expected_status": "pending",
+      "method": "existing_candidate",
+      "donor_id": "ru-noun-20261109-0001",
+      "proposal": {
+        "status": "automatic_candidate_needs_review",
+        "data": {
+          "sound_tokens": [
+            "п",
+            "л",
+            "а",
+            "т'",
+            "й",
+            "и"
+          ],
+          "stress_syllable": 1,
+          "stressed_vowel": "а",
+          "syllable_count": 2,
+          "markova_type_candidate": 13,
+          "automatic_proposal": {
+            "source": "nsu-ai/russian_g2p",
+            "status": "suggested",
+            "accented": "пла+тье",
+            "usable_for_automatic_target_selection": "only_letter_aligned_and_not_before_soft_consonant",
+            "not_methodically_verified": true
+          }
+        }
+      }
+    },
+    {
+      "id": "ru-new-20261108-6ce7e80f4f",
+      "lemma": "футболка",
+      "expected_status": "pending",
+      "method": "existing_candidate",
+      "donor_id": "ru-noun-20261109-0005",
+      "proposal": {
+        "status": "automatic_candidate_needs_review",
+        "data": {
+          "sound_tokens": [
+            "ф",
+            "у",
+            "д",
+            "б",
+            "о",
+            "л",
+            "к",
+            "а"
+          ],
+          "stress_syllable": 2,
+          "stressed_vowel": "о",
+          "syllable_count": 3,
+          "markova_type_candidate": 10,
+          "automatic_proposal": {
+            "source": "nsu-ai/russian_g2p",
+            "status": "suggested",
+            "accented": "футбо+лка",
+            "usable_for_automatic_target_selection": "only_letter_aligned_and_not_before_soft_consonant",
+            "not_methodically_verified": true
+          }
+        }
+      }
+    },
+    {
+      "id": "ru-new-20261108-70c372449f",
+      "lemma": "шапка",
+      "expected_status": "pending",
+      "method": "existing_candidate",
+      "donor_id": "ru-noun-20261109-0011",
+      "proposal": {
+        "status": "automatic_candidate_needs_review",
+        "data": {
+          "sound_tokens": [
+            "ш",
+            "а",
+            "п",
+            "к",
+            "а"
+          ],
+          "stress_syllable": 1,
+          "stressed_vowel": "а",
+          "syllable_count": 2,
+          "markova_type_candidate": 5,
+          "automatic_proposal": {
+            "source": "nsu-ai/russian_g2p",
+            "status": "suggested",
+            "accented": "ша+пка",
+            "usable_for_automatic_target_selection": "only_letter_aligned_and_not_before_soft_consonant",
+            "not_methodically_verified": true
+          }
+        }
+      }
+    },
+    {
+      "id": "ru-new-20261108-53796f6d09",
+      "lemma": "штаны",
+      "expected_status": "pending",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "ш",
+          "т",
+          "а",
+          "н",
+          "ы"
+        ],
+        "stress_syllable": 2,
+        "stressed_vowel": "ы",
+        "syllable_count": 2,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "ru-new-20261108-a88df7da50",
+      "lemma": "яйцо",
+      "expected_status": "pending",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "й",
+          "и",
+          "й",
+          "ц",
+          "о"
+        ],
+        "stress_syllable": 2,
+        "stressed_vowel": "о",
+        "syllable_count": 2,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "image-pack-20261123-30fa6e611a11",
+      "lemma": "арка",
+      "expected_status": "pending",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "а",
+          "р",
+          "к",
+          "а"
+        ],
+        "stress_syllable": 1,
+        "stressed_vowel": "а",
+        "syllable_count": 2,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "image-pack-20261123-1b7d9df0e6b5",
+      "lemma": "скамейка",
+      "expected_status": "pending",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "с",
+          "к",
+          "а",
+          "м'",
+          "э",
+          "й",
+          "к",
+          "а"
+        ],
+        "stress_syllable": 2,
+        "stressed_vowel": "э",
+        "syllable_count": 3,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    },
+    {
+      "id": "image-pack-20261123-f20acaf756df",
+      "lemma": "статуя",
+      "expected_status": "pending",
+      "method": "manual_draft",
+      "proposal": {
+        "sound_tokens": [
+          "с",
+          "т",
+          "а",
+          "т",
+          "у",
+          "й",
+          "а"
+        ],
+        "stress_syllable": 1,
+        "stressed_vowel": "а",
+        "syllable_count": 3,
+        "review_status": "editorial_draft",
+        "usable_for_generation": false,
+        "note": "Не G2P; проверить редукцию, ассимиляцию, соответствие букве и новую классификацию перед активацией."
+      }
+    }
+  ],
+  "grammar": [
+    {
+      "id": "ru-home-20261105-4a814f4",
+      "lemma": "зубная паста",
+      "expected_status": "pending_automatic_analysis",
+      "proposal": {
+        "review_status": "editorial_draft",
+        "part_of_speech": "NOUN",
+        "gender": "ж",
+        "full_inflection": {
+          "nomn_sing": "зубная паста",
+          "gent_sing": "зубной пасты",
+          "datv_sing": "зубной пасте",
+          "accs_sing": "зубную пасту",
+          "ablt_sing": "зубной пастой",
+          "loct_sing": "зубной пасте"
+        },
+        "plural_nominative": null,
+        "genitive_singular": "зубной пасты",
+        "genitive_plural": null,
+        "plural_enabled": false,
+        "counting_enabled": false,
+        "usable_for_generation": false,
+        "notes": [
+          "Вещественное значение; множественное число только для видов."
+        ]
+      }
+    },
+    {
+      "id": "ru-home-20261105-92d7e826",
+      "lemma": "зубная щётка",
+      "expected_status": "pending_automatic_analysis",
+      "proposal": {
+        "review_status": "editorial_draft",
+        "part_of_speech": "NOUN",
+        "gender": "ж",
+        "full_inflection": {
+          "nomn_sing": "зубная щётка",
+          "gent_sing": "зубной щётки",
+          "datv_sing": "зубной щётке",
+          "accs_sing": "зубную щётку",
+          "ablt_sing": "зубной щёткой",
+          "loct_sing": "зубной щётке",
+          "nomn_plur": "зубные щётки",
+          "gent_plur": "зубных щёток",
+          "datv_plur": "зубным щёткам",
+          "accs_plur": "зубные щётки",
+          "ablt_plur": "зубными щётками",
+          "loct_plur": "зубных щётках"
+        },
+        "plural_nominative": "зубные щётки",
+        "genitive_singular": "зубной щётки",
+        "genitive_plural": "зубных щёток",
+        "plural_enabled": true,
+        "counting_enabled": false,
+        "usable_for_generation": false,
+        "notes": [
+          "Проверить машинно перед допуском."
+        ]
+      }
+    },
+    {
+      "id": "ru-home-20261105-691e73d6",
+      "lemma": "разделочная доска",
+      "expected_status": "pending_automatic_analysis",
+      "proposal": {
+        "review_status": "editorial_draft",
+        "part_of_speech": "NOUN",
+        "gender": "ж",
+        "full_inflection": {
+          "nomn_sing": "разделочная доска",
+          "gent_sing": "разделочной доски",
+          "datv_sing": "разделочной доске",
+          "accs_sing": "разделочную доску",
+          "ablt_sing": "разделочной доской",
+          "loct_sing": "разделочной доске",
+          "nomn_plur": "разделочные доски",
+          "gent_plur": "разделочных досок",
+          "datv_plur": "разделочным доскам",
+          "accs_plur": "разделочные доски",
+          "ablt_plur": "разделочными досками",
+          "loct_plur": "разделочных досках"
+        },
+        "plural_nominative": "разделочные доски",
+        "genitive_singular": "разделочной доски",
+        "genitive_plural": "разделочных досок",
+        "plural_enabled": true,
+        "counting_enabled": false,
+        "usable_for_generation": false,
+        "notes": [
+          "Проверить машинно перед допуском."
+        ]
+      }
+    },
+    {
+      "id": "ru-home-20261105-5e049672",
+      "lemma": "стиральная машина",
+      "expected_status": "pending_automatic_analysis",
+      "proposal": {
+        "review_status": "editorial_draft",
+        "part_of_speech": "NOUN",
+        "gender": "ж",
+        "full_inflection": {
+          "nomn_sing": "стиральная машина",
+          "gent_sing": "стиральной машины",
+          "datv_sing": "стиральной машине",
+          "accs_sing": "стиральную машину",
+          "ablt_sing": "стиральной машиной",
+          "loct_sing": "стиральной машине",
+          "nomn_plur": "стиральные машины",
+          "gent_plur": "стиральных машин",
+          "datv_plur": "стиральным машинам",
+          "accs_plur": "стиральные машины",
+          "ablt_plur": "стиральными машинами",
+          "loct_plur": "стиральных машинах"
+        },
+        "plural_nominative": "стиральные машины",
+        "genitive_singular": "стиральной машины",
+        "genitive_plural": "стиральных машин",
+        "plural_enabled": true,
+        "counting_enabled": false,
+        "usable_for_generation": false,
+        "notes": [
+          "Проверить машинно перед допуском."
+        ]
+      }
+    },
+    {
+      "id": "ru-noun-extra-20261109-026",
+      "lemma": "детский сад",
+      "expected_status": "pending_automatic_analysis",
+      "proposal": {
+        "review_status": "editorial_draft",
+        "part_of_speech": "NOUN",
+        "gender": "м",
+        "full_inflection": {
+          "nomn_sing": "детский сад",
+          "gent_sing": "детского сада",
+          "datv_sing": "детскому саду",
+          "accs_sing": "детский сад",
+          "ablt_sing": "детским садом",
+          "loct_sing": "детском саде",
+          "nomn_plur": "детские сады",
+          "gent_plur": "детских садов",
+          "datv_plur": "детским садам",
+          "accs_plur": "детские сады",
+          "ablt_plur": "детскими садами",
+          "loct_plur": "детских садах"
+        },
+        "plural_nominative": "детские сады",
+        "genitive_singular": "детского сада",
+        "genitive_plural": "детских садов",
+        "plural_enabled": true,
+        "counting_enabled": false,
+        "usable_for_generation": false,
+        "notes": [
+          "Проверить машинно перед допуском."
+        ]
+      }
+    },
+    {
+      "id": "ru-new-20261108-2bac6d3523",
+      "lemma": "кукла",
+      "expected_status": "pending",
+      "proposal": {
+        "review_status": "editorial_draft",
+        "part_of_speech": "NOUN",
+        "gender": "ж",
+        "full_inflection": {
+          "nomn_sing": "кукла",
+          "gent_sing": "куклы",
+          "datv_sing": "кукле",
+          "accs_sing": "куклу",
+          "ablt_sing": "куклой",
+          "loct_sing": "кукле",
+          "nomn_plur": "куклы",
+          "gent_plur": "кукол",
+          "datv_plur": "куклам",
+          "accs_plur": "кукол",
+          "ablt_plur": "куклами",
+          "loct_plur": "куклах"
+        },
+        "plural_nominative": "куклы",
+        "genitive_singular": "куклы",
+        "genitive_plural": "кукол",
+        "plural_enabled": true,
+        "counting_enabled": false,
+        "usable_for_generation": false,
+        "notes": [
+          "Винительный мн. ч. кукол; вариант куклы проверить отдельно."
+        ]
+      }
+    },
+    {
+      "id": "ru-new-20261108-b8f6c0f802",
+      "lemma": "молоко",
+      "expected_status": "pending",
+      "proposal": {
+        "review_status": "editorial_draft",
+        "part_of_speech": "NOUN",
+        "gender": "с",
+        "full_inflection": {
+          "nomn_sing": "молоко",
+          "gent_sing": "молока",
+          "datv_sing": "молоку",
+          "accs_sing": "молоко",
+          "ablt_sing": "молоком",
+          "loct_sing": "молоке"
+        },
+        "plural_nominative": null,
+        "genitive_singular": "молока",
+        "genitive_plural": null,
+        "plural_enabled": false,
+        "counting_enabled": false,
+        "usable_for_generation": false,
+        "notes": [
+          "Вещественное; обычное множественное число и счёт неприменимы."
+        ]
+      }
+    },
+    {
+      "id": "ru-new-20261108-84653d88d9",
+      "lemma": "мяч",
+      "expected_status": "pending",
+      "proposal": {
+        "review_status": "editorial_draft",
+        "part_of_speech": "NOUN",
+        "gender": "м",
+        "full_inflection": {
+          "nomn_sing": "мяч",
+          "gent_sing": "мяча",
+          "datv_sing": "мячу",
+          "accs_sing": "мяч",
+          "ablt_sing": "мячом",
+          "loct_sing": "мяче",
+          "nomn_plur": "мячи",
+          "gent_plur": "мячей",
+          "datv_plur": "мячам",
+          "accs_plur": "мячи",
+          "ablt_plur": "мячами",
+          "loct_plur": "мячах"
+        },
+        "plural_nominative": "мячи",
+        "genitive_singular": "мяча",
+        "genitive_plural": "мячей",
+        "plural_enabled": true,
+        "counting_enabled": false,
+        "usable_for_generation": false,
+        "notes": [
+          "Проверить машинно перед допуском."
+        ]
+      }
+    },
+    {
+      "id": "ru-new-20261108-97b71638c2",
+      "lemma": "облако",
+      "expected_status": "pending",
+      "proposal": {
+        "review_status": "editorial_draft",
+        "part_of_speech": "NOUN",
+        "gender": "с",
+        "full_inflection": {
+          "nomn_sing": "облако",
+          "gent_sing": "облака",
+          "datv_sing": "облаку",
+          "accs_sing": "облако",
+          "ablt_sing": "облаком",
+          "loct_sing": "облаке",
+          "nomn_plur": "облака",
+          "gent_plur": "облаков",
+          "datv_plur": "облакам",
+          "accs_plur": "облака",
+          "ablt_plur": "облаками",
+          "loct_plur": "облаках"
+        },
+        "plural_nominative": "облака",
+        "genitive_singular": "облака",
+        "genitive_plural": "облаков",
+        "plural_enabled": true,
+        "counting_enabled": false,
+        "usable_for_generation": false,
+        "notes": [
+          "Проверить машинно перед допуском."
+        ]
+      }
+    },
+    {
+      "id": "ru-new-20261108-0ca50229c2",
+      "lemma": "платье",
+      "expected_status": "pending",
+      "proposal": {
+        "review_status": "editorial_draft",
+        "part_of_speech": "NOUN",
+        "gender": "с",
+        "full_inflection": {
+          "nomn_sing": "платье",
+          "gent_sing": "платья",
+          "datv_sing": "платью",
+          "accs_sing": "платье",
+          "ablt_sing": "платьем",
+          "loct_sing": "платье",
+          "nomn_plur": "платья",
+          "gent_plur": "платьев",
+          "datv_plur": "платьям",
+          "accs_plur": "платья",
+          "ablt_plur": "платьями",
+          "loct_plur": "платьях"
+        },
+        "plural_nominative": "платья",
+        "genitive_singular": "платья",
+        "genitive_plural": "платьев",
+        "plural_enabled": true,
+        "counting_enabled": false,
+        "usable_for_generation": false,
+        "notes": [
+          "Проверить машинно перед допуском."
+        ]
+      }
+    },
+    {
+      "id": "ru-new-20261108-6ce7e80f4f",
+      "lemma": "футболка",
+      "expected_status": "pending",
+      "proposal": {
+        "review_status": "editorial_draft",
+        "part_of_speech": "NOUN",
+        "gender": "ж",
+        "full_inflection": {
+          "nomn_sing": "футболка",
+          "gent_sing": "футболки",
+          "datv_sing": "футболке",
+          "accs_sing": "футболку",
+          "ablt_sing": "футболкой",
+          "loct_sing": "футболке",
+          "nomn_plur": "футболки",
+          "gent_plur": "футболок",
+          "datv_plur": "футболкам",
+          "accs_plur": "футболки",
+          "ablt_plur": "футболками",
+          "loct_plur": "футболках"
+        },
+        "plural_nominative": "футболки",
+        "genitive_singular": "футболки",
+        "genitive_plural": "футболок",
+        "plural_enabled": true,
+        "counting_enabled": false,
+        "usable_for_generation": false,
+        "notes": [
+          "Проверить машинно перед допуском."
+        ]
+      }
+    },
+    {
+      "id": "ru-new-20261108-70c372449f",
+      "lemma": "шапка",
+      "expected_status": "pending",
+      "proposal": {
+        "review_status": "editorial_draft",
+        "part_of_speech": "NOUN",
+        "gender": "ж",
+        "full_inflection": {
+          "nomn_sing": "шапка",
+          "gent_sing": "шапки",
+          "datv_sing": "шапке",
+          "accs_sing": "шапку",
+          "ablt_sing": "шапкой",
+          "loct_sing": "шапке",
+          "nomn_plur": "шапки",
+          "gent_plur": "шапок",
+          "datv_plur": "шапкам",
+          "accs_plur": "шапки",
+          "ablt_plur": "шапками",
+          "loct_plur": "шапках"
+        },
+        "plural_nominative": "шапки",
+        "genitive_singular": "шапки",
+        "genitive_plural": "шапок",
+        "plural_enabled": true,
+        "counting_enabled": false,
+        "usable_for_generation": false,
+        "notes": [
+          "Проверить машинно перед допуском."
+        ]
+      }
+    },
+    {
+      "id": "ru-new-20261108-53796f6d09",
+      "lemma": "штаны",
+      "expected_status": "pending",
+      "proposal": {
+        "review_status": "editorial_draft",
+        "part_of_speech": "NOUN",
+        "gender": null,
+        "full_inflection": {
+          "nomn_plur": "штаны",
+          "gent_plur": "штанов",
+          "datv_plur": "штанам",
+          "accs_plur": "штаны",
+          "ablt_plur": "штанами",
+          "loct_plur": "штанах"
+        },
+        "plural_nominative": "штаны",
+        "genitive_singular": null,
+        "genitive_plural": "штанов",
+        "plural_enabled": true,
+        "counting_enabled": false,
+        "usable_for_generation": false,
+        "notes": [
+          "Pluralia tantum; единственного числа нет, обычный счёт не разрешать."
+        ]
+      }
+    },
+    {
+      "id": "ru-new-20261108-a88df7da50",
+      "lemma": "яйцо",
+      "expected_status": "pending",
+      "proposal": {
+        "review_status": "editorial_draft",
+        "part_of_speech": "NOUN",
+        "gender": "с",
+        "full_inflection": {
+          "nomn_sing": "яйцо",
+          "gent_sing": "яйца",
+          "datv_sing": "яйцу",
+          "accs_sing": "яйцо",
+          "ablt_sing": "яйцом",
+          "loct_sing": "яйце",
+          "nomn_plur": "яйца",
+          "gent_plur": "яиц",
+          "datv_plur": "яйцам",
+          "accs_plur": "яйца",
+          "ablt_plur": "яйцами",
+          "loct_plur": "яйцах"
+        },
+        "plural_nominative": "яйца",
+        "genitive_singular": "яйца",
+        "genitive_plural": "яиц",
+        "plural_enabled": true,
+        "counting_enabled": false,
+        "usable_for_generation": false,
+        "notes": [
+          "Проверить машинно перед допуском."
+        ]
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "ru-r-017",
+      "lemma": "дорога",
+      "proposal": {
+        "path": "Общество и окружающая среда/Транспорт и специальная техника/Дорожные понятия",
+        "default_selection": true
+      }
+    },
+    {
+      "id": "ru-r-020",
+      "lemma": "забор",
+      "proposal": {
+        "path": "Общество и окружающая среда/Город и село/Улицы и общественные пространства",
+        "default_selection": true
+      }
+    },
+    {
+      "id": "ru-r-054",
+      "lemma": "подарок",
+      "proposal": {
+        "path": "Общество и окружающая среда/Праздники и события/Праздничные атрибуты",
+        "default_selection": true
+      }
+    },
+    {
+      "id": "ru-r-058",
+      "lemma": "радуга",
+      "proposal": {
+        "path": "Природа и окружающий мир/Погодные явления",
+        "default_selection": true
+      }
+    },
+    {
+      "id": "ru-r-075",
+      "lemma": "светофор",
+      "proposal": {
+        "path": "Общество и окружающая среда/Транспорт и специальная техника/Дорожные понятия",
+        "default_selection": true
+      }
+    },
+    {
+      "id": "ru-r-084",
+      "lemma": "трава",
+      "proposal": {
+        "path": "Растительный мир и грибы",
+        "default_selection": true
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "used_for",
+      "subject": {
+        "id": "ru-home-20261105-5eb96006",
+        "lemma": "вилка"
+      },
+      "object": {
+        "id": "ru-action-20261109-0041",
+        "lemma": "есть"
+      },
+      "inverse_type": "purpose_of",
+      "approval": {
+        "status": "suggested",
+        "usable_for_generation": false
+      }
+    },
+    {
+      "type": "used_for",
+      "subject": {
+        "id": "ru-home-20261105-5423908",
+        "lemma": "ложка"
+      },
+      "object": {
+        "id": "ru-action-20261109-0041",
+        "lemma": "есть"
+      },
+      "inverse_type": "purpose_of",
+      "approval": {
+        "status": "suggested",
+        "usable_for_generation": false
+      }
+    },
+    {
+      "type": "used_for",
+      "subject": {
+        "id": "ru-home-20261105-259cc695",
+        "lemma": "тарелка"
+      },
+      "object": {
+        "id": "ru-action-20261109-0041",
+        "lemma": "есть"
+      },
+      "inverse_type": "purpose_of",
+      "approval": {
+        "status": "suggested",
+        "usable_for_generation": false
+      }
+    },
+    {
+      "type": "used_for",
+      "subject": {
+        "id": "ru-home-20261105-e3e0c479",
+        "lemma": "гвоздь"
+      },
+      "object": {
+        "id": "ru-action-20261109-0148",
+        "lemma": "прибивать"
+      },
+      "inverse_type": "purpose_of",
+      "approval": {
+        "status": "suggested",
+        "usable_for_generation": false
+      }
+    },
+    {
+      "type": "used_for",
+      "subject": {
+        "id": "ru-noun-extra-20261109-042",
+        "lemma": "ластик"
+      },
+      "object": {
+        "id": "ru-sem-20261105-aca36a39",
+        "lemma": "стирать"
+      },
+      "inverse_type": "purpose_of",
+      "approval": {
+        "status": "suggested",
+        "usable_for_generation": false
+      }
+    }
+  ],
+  "deferred": [
+    {
+      "id": "ru-home-20261105-dfa4b2aa",
+      "lemma": "замок",
+      "reason": "Уточнить за́мок/замо́к."
+    }
+  ],
+  "activation": "Не импортировать автоматически. Сохранить ID, проверить соответствие существующей схеме; G2P и фонетику проверить, грамматику сверить pymorphy3, семантические связи и категорию сверить по значению; обновить новую слоговую классификацию и выгрузку только после целевых проверок."
+}
