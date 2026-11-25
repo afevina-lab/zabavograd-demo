@@ -10,3 +10,4 @@
 .v-letter-group[open]>summary{margin-bottom:var(--v-space-3)}
 .v-letter-group[open]>summary .v-control-well>svg{transform:rotate(180deg)}
 .v-letter-group-content{padding:var(--v-space-2)}
+.v-letter-grid>.v-letter-choice,.v-syllable-grid>.v-syllable-option{aspect-ratio:1;width:100%}

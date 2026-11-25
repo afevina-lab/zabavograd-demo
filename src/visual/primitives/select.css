@@ -2,7 +2,7 @@
 .v-select>select{appearance:none;width:100%;min-width:0;min-height:var(--v-control);padding:12px 54px 12px 46px;border:1px solid var(--ui-field-edge);border-radius:14px;background:var(--ui-control-face);color:inherit;font:inherit;cursor:pointer;box-shadow:inset 0 2px 1px var(--ui-field-glint),inset 0 -3px 4px var(--ui-button-inset),0 3px 0 var(--ui-control-bottom),0 5px 4px var(--ui-control-shadow)}
 .v-select-leading{position:absolute;inset-inline-start:12px;top:50%;transform:translateY(-50%);width:24px;height:24px;color:var(--ui-deep);pointer-events:none}
 .v-select-leading>svg{display:block;width:100%;height:100%}
-.v-select-caret{position:absolute;inset-inline-end:8px;top:50%;transform:translateY(-50%)}
+.v-select-caret{position:absolute;inset-inline-end:var(--v-space-3);top:50%;transform:translateY(-50%)}
 .v-control-well{display:inline-flex;align-items:center;justify-content:center;flex:none;width:36px;height:38px;border:1px solid var(--ui-deep);border-radius:10px;background:var(--ui-deep);color:var(--ui-paper);box-shadow:inset 0 2px 1px #fff5,inset 0 -2px 2px #0002,0 2px 0 var(--ui-control-bottom);pointer-events:none}
 .v-control-well>svg{width:20px;height:20px;transition:transform .16s ease}
 .v-select.is-disabled{opacity:.5}

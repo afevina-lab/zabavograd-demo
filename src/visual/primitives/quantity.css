@@ -1,9 +1,13 @@
 .v-quantity{container-type:inline-size;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--v-space-3);align-items:center;min-width:0;padding:var(--v-space-3);border:1px solid var(--ui-tray-edge);border-radius:16px;background:var(--ui-setup-field);box-shadow:inset 0 2px 3px #fff9,0 2px 0 var(--ui-tray-shadow)}
 .v-quantity>label{font-size:15px;font-weight:650;line-height:1.4;min-width:0;overflow-wrap:anywhere}
 .v-stepper{display:grid;grid-template-columns:var(--v-stepper-button) var(--v-stepper-number) var(--v-stepper-button);gap:0;align-items:center;border:1px solid var(--ui-deep);border-radius:11px;overflow:hidden}
-.v-stepper input{width:100%;min-width:0;text-align:center;min-height:var(--v-stepper-height);height:var(--v-stepper-height);border:0;border-radius:0;background:var(--ui-paper)}
-.v-quantity>input[type=range]{grid-column:1/-1;width:100%;margin:0;accent-color:var(--ui-accent);height:30px}
+.v-stepper input{width:100%;min-width:0;text-align:center;padding:0;appearance:textfield;min-height:var(--v-stepper-height);height:var(--v-stepper-height);border:0;border-radius:0;background:var(--ui-paper)}
+.v-quantity>input[type=range]{grid-column:1/-1;width:100%;margin:0;appearance:none;accent-color:var(--ui-accent);height:30px;background:transparent}
 
-.v-quantity>input[type=range]::-webkit-slider-thumb{appearance:none;width:28px;height:28px;border:0;background:var(--skin-slider-thumb) center/contain no-repeat}
+.v-quantity>input[type=range]::-webkit-slider-thumb{margin-top:-9px;appearance:none;width:28px;height:28px;border:0;background:var(--skin-slider-thumb) center/contain no-repeat}
 .v-quantity>input[type=range]::-moz-range-thumb{width:28px;height:28px;border:0;background:var(--skin-slider-thumb) center/contain no-repeat}
 @container(max-width:240px){.v-quantity>label{grid-column:1/-1}.v-quantity>.v-stepper{grid-column:1/-1;justify-self:center}}
+
+.v-stepper input::-webkit-inner-spin-button,.v-stepper input::-webkit-outer-spin-button{appearance:none;margin:0}
+.v-quantity>input[type=range]::-webkit-slider-runnable-track{height:12px;border:1px solid var(--ui-field-edge);border-radius:12px;background:linear-gradient(to right,var(--ui-accent) var(--quantity-fill),var(--ui-pale) var(--quantity-fill))}
+.v-quantity>input[type=range]::-moz-range-track{height:10px;border:1px solid var(--ui-field-edge);border-radius:12px;background:var(--ui-pale)}

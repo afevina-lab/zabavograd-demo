@@ -6,5 +6,6 @@
 .v-toolbar-counters{display:flex;gap:var(--v-space-2);align-items:center;justify-content:center;min-width:0;font-size:14px}
 .v-toolbar-hint{position:absolute;top:100%;inset-inline:var(--v-space-4);margin:0;padding:var(--v-space-3);border:1px solid var(--ui-outline);border-radius:12px;background:var(--ui-setup-paper);color:var(--ui-text);text-align:center;overflow-wrap:anywhere;box-shadow:0 4px 12px #172a4030}
 @media(max-width:700px){.v-toolbar{grid-template-columns:auto minmax(0,1fr) auto;gap:var(--v-space-1);padding-inline:6px}.v-toolbar-navigation{gap:3px}.v-toolbar-counters{font-size:10px;gap:2px}}
+@media(max-width:400px){.v-toolbar-status{max-height:100%;gap:2px}.v-toolbar-status>strong{width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.v-toolbar-counters{flex-wrap:wrap;line-height:1.2}.v-toolbar-counters>.v-life-meter{width:100%;justify-content:center}.v-toolbar .v-life-button{min-height:20px}.v-toolbar .v-life-heart{width:14px;height:18px}}
 
 

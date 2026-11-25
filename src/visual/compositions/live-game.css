@@ -1,5 +1,5 @@
-.v-game-screen{min-height:100dvh}
-.v-game-screen.game-active{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
+.v-game-screen{height:100dvh;min-height:0;overflow:hidden}
+.v-game-screen.game-active{display:flex;flex-direction:column}
 .v-game-screen.game-active>main{display:flex;flex:1;flex-direction:column;min-width:0;min-height:0}
 .v-play-area{display:flex;flex-direction:column;min-width:0;min-height:0;flex:1}
 .v-live-stage{position:relative;display:flex;flex:1;flex-direction:column;min-width:0;min-height:0;isolation:isolate;overflow:hidden;background:var(--zg-stage-image) center/cover no-repeat,var(--zg-stage-fill)}

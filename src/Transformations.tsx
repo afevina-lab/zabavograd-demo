@@ -65,7 +65,7 @@ export function Transformations(){
  appearance:<section className="v-settings-section settings-block" data-setup-section="appearance"><h2>Оформление</h2><ThemePicker theme={theme} setTheme={setTheme}/></section>,
  footer:<><SetupPreview actions={<><WordPicker words={candidates} selected={pool.map(w=>w.id)} onConfirm={ids=>{setManual({source:candidates,ids});setCount(ids.length)}}/><button type="button" className="v-control-button v-icon-button icon-button" onClick={()=>{setManual(null);setShuffleKey(k=>k+1)}} aria-label="Перемешать состав" title="Перемешать состав"><Icon name="Return1"/></button></>}
  message={error||(!words.length?'Загружаем библиотеку…':!pool.length?'Нет подходящего материала. Измените учебную задачу или условия.':undefined)}>
- <p className="v-material-summary setup-material-summary">{pool.map(w=>w.label).join(', ')}</p>
+ <p>{pool.map(w=>w.label).join(', ')}</p>
  </SetupPreview><button className="v-control-button v-button v-button--primary primary" disabled={!pool.length||pool.length!==count} onClick={start}>Начать игру</button></>
  }}/>:<section className="v-play-area play-area" aria-label="Превращения"><GameToolbar task={(learning.mode==='math'?'Реши задание':mode==='small'?'Назови ласково':mode==='many'?'Один — много':'Прочитай')+(phase==='answer'&&word&&learning.mode!=='math'&&mode!=='reading'?' · '+transformationAnswer(word,mode):'')}
  pause={<IconButton size="toolbar" label={paused?'Продолжить':'Пауза'} icon={paused?'Play':'Pause'} className="icon-button toolbar-pause"  onClick={()=>setPaused(v=>!v)}/>}

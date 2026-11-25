@@ -10,8 +10,8 @@ async function setup(game,{timed=false,rounds=1}={}){
  await evaluate("(()=>{const e=document.querySelectorAll('.sort-group-settings>:is(.v-settings-section,.settings-block)')["+i+"].querySelector('select[aria-label=\"Учебная задача\"]');e.value='lexical';e.dispatchEvent(new Event('change',{bubbles:true}))})()");
  await sleep(150);
  await evaluate("document.querySelectorAll('.sort-group-settings>:is(.v-settings-section,.settings-block)')["+i+"].querySelector(':is(.v-picker-trigger,.category-picker-trigger)').click()");
- await until("[...document.querySelectorAll('.category-picker[open] .category-grid>li summary')].some(e=>e.textContent.includes("+JSON.stringify(i?'Дом и быт':'Животный мир')+"))");
- await evaluate("(()=>{const d=document.querySelector('.category-picker[open]');d.querySelectorAll('input:checked').forEach(e=>e.click());const nodes=[...d.querySelectorAll('.category-grid>li')];const n=nodes.find(e=>e.querySelector('summary')?.textContent.includes('"+(i?'Дом и быт':'Животный мир')+"'));if(!n)throw Error('Category missing');n.querySelector('details').open=true;n.querySelector('input').click()})()");
+ await until("[...document.querySelectorAll('.category-picker[open] :is(.v-selection-tree,.category-grid)>li summary')].some(e=>e.textContent.includes("+JSON.stringify(i?'Дом и быт':'Животный мир')+"))");
+ await evaluate("(()=>{const d=document.querySelector('.category-picker[open]');d.querySelectorAll('input:checked').forEach(e=>e.click());const nodes=[...d.querySelectorAll(':is(.v-selection-tree,.category-grid)>li')];const n=nodes.find(e=>e.querySelector('summary')?.textContent.includes('"+(i?'Дом и быт':'Животный мир')+"'));if(!n)throw Error('Category missing');n.querySelector('details').open=true;n.querySelector('input').click()})()");
  await sleep(100);await evaluate("document.querySelector('.category-picker[open] :is(.v-button--primary,.primary)').click()");await sleep(200);
  }
  }
@@ -21,8 +21,8 @@ async function setup(game,{timed=false,rounds=1}={}){
  for(let round=1;round<rounds;round++)await evaluate("document.querySelector('button[aria-label=\"Увеличить: Количество раундов\"]').click()");
  await until("!![...document.querySelectorAll(':is(.v-settings-footer,.setup-footer) button')].find(e=>e.textContent.startsWith('Начать')&&!e.disabled)");
  await evaluate("[...document.querySelectorAll(':is(.v-settings-footer,.setup-footer) button')].find(e=>e.textContent.startsWith('Начать')&&!e.disabled).click()");
- await until("!!document.querySelector('.app.game-active')||!!document.querySelector('[aria-label=\"Разделить игру на раунды\"]')");
- if(await evaluate("!!document.querySelector('[aria-label=\"Разделить игру на раунды\"]')"))await evaluate("document.querySelector('[aria-label=\"Разделить игру на раунды\"] :is(.v-button--secondary,.secondary)').click()");
+ await until("!!document.querySelector('.app.game-active')||!!document.querySelector('[aria-label^=\"Разделить игру на \"]')");
+ if(await evaluate("!!document.querySelector('[aria-label^=\"Разделить игру на \"]')"))await evaluate("document.querySelector('[aria-label^=\"Разделить игру на \"] :is(.v-button--secondary,.secondary)').click()");
  await until("!!document.querySelector('.app.game-active')");
 }
 return setup;

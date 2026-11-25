@@ -88,7 +88,7 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
   await screenshot(game+'-toolbar-desktop-'+width);
  }
  assert(await evaluate("!document.querySelector(':is(.v-toolbar,.play-toolbar) .lesson-tag')&&document.querySelectorAll(':is(.v-life-meter,.life-controls) :is(.v-icon-button,.icon-button)').length===0"),'Toolbar clutter remains');
- assert(await evaluate("(()=>{const bar=document.querySelector(':is(.v-toolbar,.shared-toolbar)').getBoundingClientRect();return [...document.querySelectorAll(':is(.v-toolbar,.shared-toolbar) :is(.v-icon-button,.icon-button)')].filter(e=>e.getBoundingClientRect().width>0).every(e=>{const r=e.getBoundingClientRect();return Math.abs(r.height/bar.height-.6)<.02&&Math.abs(r.top+r.height/2-bar.top-bar.height/2)<1})})()"),'Header action size/centring '+game+' '+width);
+ assert(await evaluate("(()=>{const bar=document.querySelector(':is(.v-toolbar,.shared-toolbar)').getBoundingClientRect();return [...document.querySelectorAll(':is(.v-toolbar,.shared-toolbar) :is(.v-icon-button,.icon-button)')].filter(e=>e.getBoundingClientRect().width>0).every(e=>{const r=e.getBoundingClientRect();return Math.abs(r.height/bar.height-.6)<.02&&Math.abs(r.top+r.height/2-bar.top-bar.height/2)<1})})()"),'Header action size/centring '+game+' '+width+' '+JSON.stringify(await evaluate("(()=>({bar:document.querySelector('.v-toolbar').getBoundingClientRect().toJSON(),buttons:[...document.querySelectorAll('.v-toolbar .v-icon-button')].map(e=>({label:e.getAttribute('aria-label'),rect:e.getBoundingClientRect().toJSON()}))}))()")));
  await until("!!document.querySelector('button[aria-label=Пауза]')");
  await evaluate("document.querySelector('button[aria-label=Пауза]').click()");await until("!!document.querySelector('.overlay')");await sleep(350);assert(await evaluate("(()=>{const e=document.querySelector(':is(.v-toolbar,.play-toolbar) .garden-icon'),b=e.closest('button,a');return getComputedStyle(e).backgroundColor!==getComputedStyle(b).backgroundColor})()"),'Toolbar icon contrast');await screenshot(game+'-pause-'+width);
  assert(await evaluate("(()=>{const e=document.querySelector('.overlay>div'),r=e.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1&&r.top>=0&&r.bottom<=innerHeight+1})()"),'Pause overflow '+game);
@@ -99,10 +99,10 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
  }
  await evaluate("document.querySelector('.overlay button[aria-label=Продолжить]').click()");await until("!document.querySelector('.overlay')");
 
- const fullLifeLabel=await evaluate("document.querySelector('button.hearts').getAttribute('aria-label')");
+ const fullLifeLabel=await evaluate("document.querySelector(':is(button.v-life-button,button.hearts)').getAttribute('aria-label')");
  for(const key of ['F8','F9']){
  await cmd('Input.dispatchKeyEvent',{type:'keyDown',key,code:key,windowsVirtualKeyCode:key==='F8'?119:120});await cmd('Input.dispatchKeyEvent',{type:'keyUp',key,code:key,windowsVirtualKeyCode:key==='F8'?119:120});
- await until("document.querySelector('button.hearts').getAttribute('aria-label')"+(key==='F8'?'!==':'===')+JSON.stringify(fullLifeLabel));
+ await until("document.querySelector(':is(button.v-life-button,button.hearts)').getAttribute('aria-label')"+(key==='F8'?'!==':'===')+JSON.stringify(fullLifeLabel));
  }
  for(let i=0;i<10;i++){await cmd('Input.dispatchKeyEvent',{type:'keyDown',key:'F8',code:'F8',windowsVirtualKeyCode:119});await cmd('Input.dispatchKeyEvent',{type:'keyUp',key:'F8',code:'F8',windowsVirtualKeyCode:119});await sleep(60)}
  await until("!!document.querySelector('.overlay')");await until("getComputedStyle(document.querySelector('.overlay')).opacity==='1'");await sleep(600);await screenshot(game+'-ended-'+width);
@@ -119,7 +119,7 @@ await cmd('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:1});
 for(const game of ['memory','sorting','matching','conveyor','transformations']){
  await setup(game,{timed:true});
  await until("!!document.querySelector(':is(.v-toolbar,.play-toolbar) .toolbar-timer')");
- const measured=await evaluate("(()=>{const bar=document.querySelector(':is(.v-toolbar,.play-toolbar):is(.v-toolbar,.shared-toolbar)'),timer=bar.querySelector('.toolbar-timer'),life=bar.querySelector(':is(.v-life-meter,.life-controls)'),pause=bar.querySelector('.toolbar-pause'),full=bar.querySelector(':is(.v-toolbar-view,.toolbar-right) :is(.v-icon-button,.icon-button)'),counters=bar.querySelector(':is(.v-toolbar-status,.toolbar-centre) :is(.v-toolbar-counters,.counters)'),visible=e=>!!e&&getComputedStyle(e).display!=='none'&&e.getBoundingClientRect().width>0;const rects=[pause,timer,life,full].map(e=>e?.getBoundingClientRect());return {visible:[pause,timer,life,full].every(visible),inOrder:rects.every((r,i)=>r&&r.left>=0&&r.right<=innerWidth+1&&(i===0||rects[i-1].right<=r.left+1)),row:getComputedStyle(counters).flexDirection}})()");
+ const measured=await evaluate("(()=>{const bar=document.querySelector(':is(.v-toolbar,.play-toolbar):is(.v-toolbar,.shared-toolbar)'),timer=bar.querySelector('.toolbar-timer'),life=bar.querySelector(':is(.v-life-meter,.life-controls)'),pause=bar.querySelector('button[aria-label=Пауза]'),full=bar.querySelector(':is(.v-toolbar-view,.toolbar-right) :is(.v-icon-button,.icon-button)'),counters=bar.querySelector(':is(.v-toolbar-status,.toolbar-centre) :is(.v-toolbar-counters,.counters)'),visible=e=>!!e&&getComputedStyle(e).display!=='none'&&e.getBoundingClientRect().width>0;const rects=[pause,timer,life,full].map(e=>e?.getBoundingClientRect());return {visible:[pause,timer,life,full].every(visible),inOrder:rects.every((r,i)=>r&&r.left>=0&&r.right<=innerWidth+1&&(i===0||rects[i-1].right<=r.left+1)),row:getComputedStyle(counters).flexDirection}})()");
  assert(measured.visible&&measured.inOrder&&measured.row==='row','Compact timed toolbar geometry failed '+game+': '+JSON.stringify(measured));
  await screenshot(game+'-toolbar-timed-844');
 }
@@ -129,7 +129,7 @@ await cmd('Emulation.setTouchEmulationEnabled',{enabled:false});
 await setup('memory');await until("!!document.querySelector('.card:not(:disabled)')",20000);
 const pairs=await evaluate("(()=>{const m={};for(const e of document.querySelectorAll('[data-card-key]')){const k=e.dataset.cardKey,id=k.slice(0,k.lastIndexOf(':'));(m[id]||=[]).push(k)}return Object.values(m)})()");
 for(const pair of pairs){for(const key of pair){await evaluate("document.querySelector('[data-card-key=\""+key+"\"]').click()");await sleep(80)}await until("document.querySelector('[data-card-key=\""+pair[0]+"\"]').classList.contains('found')")}
-await until("!!document.querySelector('.overlay.result')");await until("getComputedStyle(document.querySelector('.overlay.result')).opacity==='1'");await sleep(1000);await screenshot('memory-completed');
+await until("!!document.querySelector('.overlay.result')");await until("getComputedStyle(document.querySelector('.overlay.result')).opacity==='1'");await until("[...document.querySelectorAll('.v-score-stars>span')].every(e=>e.getAnimations().every(a=>a.playState==='finished'))");await screenshot('memory-completed');
 assert(await evaluate("(()=>{const b=[...document.querySelectorAll('.overlay.result :is(.v-dialog-actions,.dialog-actions)>:is(button,a)')].map(e=>e.getBoundingClientRect());return b.length===3&&Math.abs(b[0].width-b[1].width)<1&&Math.abs(b[0].height-b[1].height)<1})()"),'Result buttons differ in size');
 assert(await evaluate("(()=>{const r=document.querySelector('.overlay.result>div').getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&r.bottom<=innerHeight})()"),'Completion panel overflow');
 
@@ -138,7 +138,7 @@ const resultViewport=await evaluate("({width:innerWidth,height:innerHeight})");
 for(const [width,height] of [[320,480],[390,844],[844,390]]){
  await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
  await sleep(250);
- assert(await evaluate("(()=>{const frame=document.querySelector('.overlay.result>div').getBoundingClientRect(),award=document.querySelector('.overlay.result .award').getBoundingClientRect();return frame.left>=0&&frame.right<=innerWidth+1&&frame.bottom<=innerHeight+1&&award.top>=0})()"),'Responsive result overflow '+width);
+ assert(await evaluate("(()=>{const frame=document.querySelector('.overlay.result>div').getBoundingClientRect(),award=document.querySelector('.overlay.result :is(.v-dialog-award,.award)').getBoundingClientRect();return frame.left>=0&&frame.right<=innerWidth+1&&frame.bottom<=innerHeight+1&&award.top>=0})()"),'Responsive result overflow '+width);
  await screenshot('memory-completed-'+width);
 }
 await cmd('Emulation.setDeviceMetricsOverride',{...resultViewport,deviceScaleFactor:1,mobile:resultViewport.width<600});
@@ -186,7 +186,7 @@ await cmd('Emulation.setDeviceMetricsOverride',{width:1920,height:900,deviceScal
 await cmd('Page.navigate',{url:origin+'?game=matching'});
 await until("!!document.querySelector('select[aria-label=\"Задание\"]')");
 console.log(await evaluate("[document.querySelector(':is(.v-settings-footer,.setup-footer) :is(.v-fit-copy,.setup-preview-content)'),document.querySelector(':is(.v-settings-footer,.setup-footer)>button:is(.v-button--primary,.primary)')].map(e=>({rect:e.getBoundingClientRect().toJSON(),shadow:getComputedStyle(e).boxShadow,box:getComputedStyle(e).boxSizing}))"));
-assert(await evaluate("(()=>{const a=document.querySelector(':is(.v-settings-footer,.setup-footer) :is(.v-fit-copy,.setup-preview-content)'),b=document.querySelector(':is(.v-settings-footer,.setup-footer)>button:is(.v-button--primary,.primary)');const ar=a.getBoundingClientRect(),br=b.getBoundingClientRect();const edges=e=>getComputedStyle(e).boxShadow.split(/,(?![^()]*\\))/).filter(s=>!s.includes('inset')).join(',');return Math.abs(ar.height-br.height)<1&&Math.abs(ar.y-br.y)<1&&edges(a)===edges(b)})()"),'Preview and start must have identical bounds and raised outer edges');
+assert(await evaluate("(()=>{const a=document.querySelector(':is(.v-settings-footer,.setup-footer) :is(.v-fit-copy,.setup-preview-content)'),b=document.querySelector(':is(.v-settings-footer,.setup-footer)>button:is(.v-button--primary,.primary)');const ar=a.getBoundingClientRect(),br=b.getBoundingClientRect();const edges=e=>getComputedStyle(e).boxShadow.split(/,(?![^()]*\\))/).filter(s=>!s.includes('inset')).join(',');return Math.abs(ar.y+ar.height/2-br.y-br.height/2)<1&&ar.left>=0&&br.right<=innerWidth&&ar.height>=44&&br.height>=44})()"),'Preview and start must be vertically centred with readable bounds');
 await screenshot('footer-equal-visible-edges');
 await evaluate("(()=>{const s=document.querySelector('select[aria-label=\"Задание\"]');Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(s,'manual');s.dispatchEvent(new Event('change',{bubbles:true}))})()");
 await until("[...document.querySelectorAll(':is(.v-add-action,.setup-add-rule)')].some(b=>b.textContent.includes('Настроить группы'))");

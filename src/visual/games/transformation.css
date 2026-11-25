@@ -1,6 +1,6 @@
-.v-transformation-scene{position:relative;display:grid;place-items:center;isolation:isolate;overflow:hidden;width:100%;height:100%;min-width:0;min-height:0}
+.v-transformation-scene{position:relative;display:grid;place-items:center;isolation:isolate;overflow:hidden;width:100%;height:100%;flex:1;container-type:size;min-width:0;min-height:0}
 .v-transformation-background{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;pointer-events:none}
-.v-transformation-chamber{position:relative;height:100%;width:auto;max-width:100%;max-height:100%;aspect-ratio:4/3}
+.v-transformation-chamber{position:relative;height:auto;width:min(100cqw,133.333cqh);max-width:100%;max-height:100%;aspect-ratio:4/3}
 .v-transformation-chamber>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
 .v-transformation-back{z-index:1}
 .v-transformation-content{position:absolute;inset:25% 16% 19%;display:grid;place-items:center;z-index:2;container-type:inline-size;min-width:0}
