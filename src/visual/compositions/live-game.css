@@ -11,3 +11,4 @@
 .v-sample-cards{display:flex;align-items:center;justify-content:center;gap:var(--v-space-3);min-width:0}
 .v-sample-cards>div{display:grid;place-items:center;width:80px;aspect-ratio:1;background:var(--zg-card-front-image) center/100% 100% no-repeat;padding:var(--v-space-3)}
 @media(max-height:500px){.v-stage-footer{font-size:12px;padding-block:var(--v-space-1)}.v-welcome{gap:var(--v-space-2);padding:var(--v-space-3)}}
+.v-workspace{display:flex;flex:1;flex-direction:column;min-width:0;min-height:0}

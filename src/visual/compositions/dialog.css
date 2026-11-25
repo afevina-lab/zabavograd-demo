@@ -5,3 +5,5 @@
 .v-dialog-actions{display:flex;gap:var(--v-space-3);justify-content:center;align-items:center;flex-wrap:wrap;padding-block:var(--v-space-1)}
 .v-dialog-award{display:flex;justify-content:center;align-items:center;position:relative;padding-top:var(--v-space-2);min-width:0;flex:none}
 @media(max-height:500px){.v-dialog-content{gap:var(--v-space-2)}.v-dialog-scroll{padding:var(--v-space-2);gap:var(--v-space-2)}}
+.v-game-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:var(--v-viewport-gap);background:#15202266;z-index:var(--v-layer-dialog);overflow:auto;overscroll-behavior:contain}
+.v-game-overlay>.v-dialog-content{width:min(var(--v-dialog-width),100%);max-height:100%;overflow:auto;padding:var(--v-space-4);border:2px solid var(--ui-frame-dark);border-radius:24px;background:var(--ui-setup-paper);box-shadow:0 12px 32px #15202244;flex:none}

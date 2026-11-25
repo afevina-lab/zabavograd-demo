@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {existsSync,readFileSync} from 'node:fs';
 import {resolve,relative,sep} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {createRequire} from 'node:module';
@@ -25,6 +25,13 @@ export function checkBuildIsolation(directory){
  };
  const game=readStyles('index.html'),lab=readStyles('visual-lab.html');
  validateVisualBuildStyles(game.css,lab.css);
- return {game:game.files,lab:lab.files};
+ let replacement;
+ if(existsSync(resolve(root,'visual-game.html'))){
+  replacement=readStyles('visual-game.html');
+  validateVisualBuildStyles(game.css,replacement.css);
+  assert(/\.v-root\b/.test(replacement.css),'Real replacement entry has no visual root styles');
+ }
+ return {game:game.files,lab:lab.files,...(replacement?{replacement:replacement.files}:{})};
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)console.log('Stylesheet isolation verified: '+JSON.stringify(checkBuildIsolation(process.argv[2]||'dist-visual')));
+
