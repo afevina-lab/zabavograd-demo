@@ -21,7 +21,10 @@ assert(!/\bChildren\b|cloneElement|\barrange\b|game===/.test(realShell),'Real se
 const realToolbar=readFileSync('src/GameToolbar.tsx','utf8');
 assert(!/\bChildren\b|cloneElement|isValidElement|\bcollect\b/.test(realToolbar),'Real toolbar must use explicit action slots');
 const entry=readFileSync('src/visual/index.css','utf8');assert(entry.includes('@layer reset, foundation, primitives, compositions, games, motion;'),'Missing declared cascade order');
-assert(!readFileSync('src/main.tsx','utf8').includes('visual/index.css'),'Current games must not mix legacy and replacement stylesheets');
+const mainEntry=readFileSync('src/main.tsx','utf8');
+assert(mainEntry.includes("import './visual/index.css'"),'Real games must use the replacement stylesheet entry');
+assert(!mainEntry.includes("import './style.css'"),'Real games must not mix old and new stylesheet entries');
 const styles=validateVisualStyles(files.filter(file=>file.endsWith('.css')).map(file=>({file,source:readFileSync(file,'utf8'),layer:file.endsWith('/reset.css')?'reset':file.split('/')[2]})));
 console.log(JSON.stringify(styles));
-console.log('Standalone visual architecture: '+files.length+' files; explicit slots, no legacy CSS, no priority patches, replacement CSS isolated from current games');
+console.log('Standalone visual architecture: '+files.length+' files; explicit slots, no legacy CSS, no priority patches, replacement CSS used by real games without legacy imports');
+
