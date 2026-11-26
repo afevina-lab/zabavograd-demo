@@ -2,7 +2,9 @@
 'use strict';
 const fs=require('node:fs');const assert=require('node:assert/strict');
 const img=JSON.parse(fs.readFileSync('outputs/image-library.json','utf8'));
-const v=require('./library-source.cjs').readSource().db;
+const args=process.argv.slice(2);
+assert(args.length===0||(args.length===2&&args[0]==='--candidate-dir'),'Usage: check-library-v2.cjs [--candidate-dir DIR]');
+const v=args.length?require('./library-store.cjs').load(args[1]).db:require('./library-source.cjs').readSource().db;
 require('./validate-library-contract.cjs').validateLibrary(v);
 assert.equal(v.schema_version,2);
 const modularCreated=require('./library-import.cjs').verifyImports(v);

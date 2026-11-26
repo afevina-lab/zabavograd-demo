@@ -122,33 +122,101 @@ def enrich(db, morph):
                     'statistics': dict(sorted(stats.items())), 'issues': issues, 'examples': samples}
 
 
+SAFE_REVISION = 'safe-local-morphology-modular-v1'
+SINGLE_ONLY = {'бельё', 'шерсть', 'мука', 'мёд'}
+BLOCKED_FLAGS = {'homograph_or_ambiguous_analysis', 'lemma_differs_from_card',
+                 'part_of_speech_conflict', 'editorial_gender_conflict',
+                 'grammatical_number_must_be_confirmed'}
+
+def safe_forms(entry, morph):
+    """Reconstruct only exact, already proposed inflections, never counting forms."""
+    if entry.get('kind') != 'word' or entry.get('same_lexical_meaning_as') or (entry.get('legacy_source') or {}).get('raw'):
+        return {}, 'protected_entry'
+    p = proposal_for(entry)
+    data = entry.get('morphology', {}).get('data') or {}
+    if 'approved_form_subset' in data:
+        return {}, 'existing_approval'
+    if not isinstance(p, dict) or not isinstance(p.get('forms'), dict):
+        return {}, 'missing_proposal'
+    if p.get('lemma') != entry.get('lemma') or not isinstance(p.get('flags'), list):
+        return {}, 'unconfirmed_lemma_or_flags'
+    flags = set(p['flags'])
+    if flags & BLOCKED_FLAGS:
+        return {}, 'risk_flags'
+    parse = exact_parse(morph, entry, p)
+    expected = {'noun': {'NOUN'}, 'adjective': {'ADJF', 'ADJS'}, 'verb': {'INFN', 'VERB'}}
+    pos = entry.get('part_of_speech')
+    if parse is None or parse.tag.POS not in expected.get(pos, set()):
+        return {}, 'no_exact_parse'
+    forms = {k: v for k, v in all_forms(parse).items()
+             if p['forms'].get(k) == v and not k.startswith(('loct2_', 'gent2_', 'short_', 'count_'))}
+    if pos == 'noun' and (entry['lemma'] in SINGLE_ONLY or 'countability_unverified' in flags):
+        forms = {k: v for k, v in forms.items() if k.endswith('_sing')}
+    return forms, None if forms else 'no_safe_forms'
+
+def admit_safe_subset(db, morph, ids):
+    if not 1 <= len(ids) <= 30 or len(set(ids)) != len(ids):
+        raise ValueError('Select 1..30 distinct entry IDs')
+    result = copy.deepcopy(db)
+    index = {e['id']: e for e in result['entries']}
+    stats = Counter()
+    rows = []
+    for entry_id in ids:
+        entry = index[entry_id]
+        forms, reason = safe_forms(entry, morph)
+        if not forms:
+            stats['skipped'] += 1
+            rows.append({'id': entry_id, 'reason': reason})
+            continue
+        entry['morphology']['data']['approved_form_subset'] = {
+            'revision': SAFE_REVISION, 'status': 'machine_checked', 'usable_for_generation': True,
+            'source': 'pymorphy3_2.0.6_exact_lemma', 'review_method': 'exact_pymorphy3_paradigm_matching',
+            'human_reviewed': False, 'automatic_counting_allowed': False, 'forms': forms}
+        stats['changed'] += 1
+        stats['forms'] += len(forms)
+        rows.append({'id': entry_id, 'forms': forms})
+    return result, {'schema': 'safe_form_subset_report_v1', 'status': 'machine_checked_candidate_not_approved',
+                    'statistics': dict(stats), 'entries': rows}
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--library', default='outputs/library-v2.json')
     parser.add_argument('--report', default='outputs/GRAMMAR_FORMS_REVIEW_20261123.json')
     parser.add_argument('--write', action='store_true', help='Extend unapproved existing suggestions (legacy only)')
     parser.add_argument('--candidate-dir', help='Create a validated modular candidate, never overwrite the source')
+    parser.add_argument('--safe-entry', action='append', default=[], help='Explicit ID for exact machine-checked subset; repeat up to 30 times')
     args = parser.parse_args()
     import pymorphy3
     import os
     import subprocess
     import tempfile
-    from library_source import read_library, require_legacy_write, ROOT
+    from library_source import read_snapshot, require_legacy_write, ROOT
     source = Path(args.library)
     modules = os.environ.get("ZABAVOGRAD_LIBRARY_MODULES")
+    if (ROOT / "editorial/library-source-mode.json").exists():
+        if modules is not None:
+            parser.error("Canonical source override is prohibited")
+        modules = str(ROOT / "outputs/library-modules")
+    if args.safe_entry and (not modules or not args.candidate_dir or args.write):
+        parser.error("--safe-entry requires a modular candidate directory, never --write")
     expected = None
     if modules is not None:
         if args.write or args.library != 'outputs/library-v2.json':
             parser.error("Modular mode disallows --write and alternate monolithic files")
-        info = subprocess.run(["node", str(ROOT / "scripts/library-source.cjs"), "info"],
-                              cwd=ROOT, check=True, capture_output=True, text=True, encoding="utf-8")
-        expected = json.loads(info.stdout)["source_sha256"]
-        original = read_library()
+        original, info = read_snapshot()
+        expected = info["sha256"]
     else:
         if args.candidate_dir:
             parser.error("--candidate-dir requires ZABAVOGRAD_LIBRARY_MODULES")
         original = json.loads(source.read_text(encoding='utf-8'))
-    db, report = enrich(original, pymorphy3.MorphAnalyzer())
+    morph = pymorphy3.MorphAnalyzer()
+    if args.safe_entry:
+        if pymorphy3.__version__ != '2.0.6':
+            parser.error('Safe forms require pinned pymorphy3 2.0.6')
+        db, report = admit_safe_subset(original, morph, args.safe_entry)
+    else:
+        db, report = enrich(original, morph)
     dest = Path(args.report)
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
@@ -156,9 +224,11 @@ def main():
         with tempfile.TemporaryDirectory(prefix="zabavograd-analysis-") as tmp:
             proposed = Path(tmp) / "proposal.json"
             proposed.write_text(json.dumps(db, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-            subprocess.run(["node", str(ROOT / "scripts/library-analysis-writer.cjs"),
-                            modules, expected, str(proposed), str(Path(args.candidate_dir).resolve())],
-                           cwd=ROOT, check=True)
+            cmd = ["node", str(ROOT / "scripts/library-analysis-writer.cjs"),
+                   modules, expected, str(proposed), str(Path(args.candidate_dir).resolve())]
+            if args.safe_entry:
+                cmd += ["--safe-subset", *args.safe_entry]
+            subprocess.run(cmd, cwd=ROOT, check=True)
     if args.write:
         require_legacy_write()
         source.write_text(json.dumps(db, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')

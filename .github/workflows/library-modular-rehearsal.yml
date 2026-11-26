@@ -76,7 +76,12 @@ jobs:
           node --check public/editor/modular-client.mjs
           node --test editor-service/model.test.mjs editor-service/modular-bridge.test.mjs editor-service/modular-client.test.mjs editor-service/modular-read-cache.test.mjs
       - name: Check preserved catalogue and media regressions
-        run: node --experimental-strip-types --test tests/library-contract.test.ts tests/image-import.test.ts tests/pack77-recovery.test.ts tests/editorial-gaps-published.test.ts
+        shell: bash
+        run: |
+          set -euo pipefail
+          trap 'git restore -- public/semantic-graph.json public/grammar-frames.json; if git ls-files --error-unmatch public/library.json >/dev/null 2>&1; then git restore -- public/library.json; else rm -f public/library.json; fi' EXIT
+          node scripts/export-library.cjs
+          node --experimental-strip-types --test tests/library-contract.test.ts tests/image-import.test.ts tests/pack77-recovery.test.ts tests/editorial-gaps-published.test.ts
       - name: Inventory direct consumers
         run: node scripts/library-consumer-audit.cjs "$RUNNER_TEMP/consumer-audit.json"
       - name: Rehearse migration and candidate update on real source
@@ -133,6 +138,31 @@ jobs:
           set -euo pipefail
           python3 -m pip install --disable-pip-version-check pymorphy3==2.0.6
           ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" python3 scripts/extend-morphology-20261123.py --report "$RUNNER_TEMP/morphology-review.json" --candidate-dir "$RUNNER_TEMP/morphology-candidate"
+          git diff --exit-code
+      - name: Verify exact machine-checked safe forms on disposable real source
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - "$RUNNER_TEMP/rebuilt.json" "$RUNNER_TEMP/safe-form-fixture.json" "$RUNNER_TEMP/safe-form-id" <<'PY'
+          import sys,json,importlib.util,pymorphy3
+          spec=importlib.util.spec_from_file_location("morphology","scripts/extend-morphology-20261123.py")
+          m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+          db=json.load(open(sys.argv[1]));morph=pymorphy3.MorphAnalyzer()
+          for e in db["entries"]:
+              data=e.get("morphology",{}).get("data")
+              if not isinstance(data,dict) or "approved_form_subset" not in data:continue
+              previous=data.pop("approved_form_subset")
+              forms,reason=m.safe_forms(e,morph)
+              if forms:
+                  with open(sys.argv[2],"w",encoding="utf-8") as f:json.dump(db,f,ensure_ascii=False)
+                  with open(sys.argv[3],"w") as f:f.write(e["id"])
+                  break
+              data["approved_form_subset"]=previous
+          else:raise RuntimeError("No safe existing candidate for disposable test")
+          PY
+          node scripts/library-store.cjs init "$RUNNER_TEMP/safe-form-fixture.json" "$RUNNER_TEMP/safe-form-modules"
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/safe-form-modules" python3 scripts/extend-morphology-20261123.py --safe-entry "$(cat "$RUNNER_TEMP/safe-form-id")" --report "$RUNNER_TEMP/safe-form-report.json" --candidate-dir "$RUNNER_TEMP/safe-form-candidate"
+          node -e 'const a=require("node:assert/strict"),s=require("./scripts/library-store.cjs"),w=require("./scripts/library-analysis-writer.cjs"),fs=require("fs"),[old,next,id]=process.argv.slice(1),r=w.verifySafeSubset(s.load(old).db,s.load(next).db,[fs.readFileSync(id,"utf8")]);a.equal(r.changed,1);a(r.addedForms>0);console.log(r)' "$RUNNER_TEMP/safe-form-modules" "$RUNNER_TEMP/safe-form-candidate" "$RUNNER_TEMP/safe-form-id"
           git diff --exit-code
       - name: Generate bounded fresh analysis and stage initial candidates
         shell: bash
@@ -291,7 +321,7 @@ jobs:
             if "$runner" "$writer" > "$RUNNER_TEMP/writer.log" 2>&1; then echo "Historical writer accepted: $writer"; exit 1; fi
             grep -F 'Direct V2 write disabled' "$RUNNER_TEMP/writer.log"
             printf '%s: rejected\n' "$writer" >> "$RUNNER_TEMP/switch-writer-rejected.log"
-          done < <(printf '%s\n' scripts/activate-safe-forms-20261123.py scripts/restore-image-pack-20261115.cjs)
+          done < <(printf '%s\n' scripts/restore-image-pack-20261115.cjs)
           test ! -e outputs/library-v2.json
           cleanup
           trap - EXIT
@@ -306,6 +336,7 @@ jobs:
             ${{ runner.temp }}/archive-rejection.log
             ${{ runner.temp }}/analysis-candidate-report.json
             ${{ runner.temp }}/morphology-review.json
+            ${{ runner.temp }}/safe-form-report.json
             ${{ runner.temp }}/fresh-analysis.json
             ${{ runner.temp }}/initial-analysis-result.json
             ${{ runner.temp }}/library.sqlite
