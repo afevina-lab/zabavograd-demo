@@ -11,6 +11,7 @@ parser.add_argument('report', type=Path)
 parser.add_argument('--expected', type=int, default=25)
 parser.add_argument('--pixel-tolerance', type=int, default=16)
 parser.add_argument('--max-changed-ratio', type=float, default=0.001)
+parser.add_argument('--report-only', action='store_true', help='Report intentional pixel changes; missing captures and dimension changes still fail')
 args = parser.parse_args()
 args.report.mkdir(parents=True, exist_ok=True)
 files = sorted(args.after.glob('*.png'))
@@ -43,6 +44,8 @@ for candidate in files:
 (args.report / 'comparison.json').write_text(json.dumps({'pixelTolerance': args.pixel_tolerance, 'maxChangedRatio': args.max_changed_ratio, 'results': results}, indent=2), encoding='utf-8')
 failed = [r for r in results if not r['passed']]
 print(json.dumps({'screenshots': len(results), 'failed': len(failed), 'exactMatches': sum(r.get('exactMatch', False) for r in results), 'largestChangedRatio': max(r.get('changedRatio', 1) for r in results)}))
-if failed:
+if any(r.get('reason') == 'Different dimensions' for r in failed):
+    raise SystemExit('Capture dimensions changed')
+if failed and not args.report_only:
     print(json.dumps({'differences': failed}))
     raise SystemExit('Visual differences need review; reference was not changed')

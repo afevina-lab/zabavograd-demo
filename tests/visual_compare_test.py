@@ -9,7 +9,7 @@ from PIL import Image
 SCRIPT = Path(__file__).resolve().parents[1] / 'scripts' / 'compare-visual-captures.py'
 
 class VisualComparisonTests(unittest.TestCase):
-    def run_comparison(self, changed=None, dimensions=(10, 10), reference=True):
+    def run_comparison(self, changed=None, dimensions=(10, 10), reference=True, report_only=False):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             before, after, report = root / 'before', root / 'after', root / 'report'
@@ -21,7 +21,10 @@ class VisualComparisonTests(unittest.TestCase):
             if changed:
                 candidate.putpixel((0, 0), changed)
             candidate.save(after / 'screen.png')
-            result = subprocess.run([sys.executable, str(SCRIPT), str(before), str(after), str(report), '--expected', '1'], capture_output=True, text=True)
+            command = [sys.executable, str(SCRIPT), str(before), str(after), str(report), '--expected', '1']
+            if report_only:
+                command.append('--report-only')
+            result = subprocess.run(command, capture_output=True, text=True)
             data = json.loads((report / 'comparison.json').read_text()) if (report / 'comparison.json').exists() else None
             return result, data
 
@@ -46,6 +49,17 @@ class VisualComparisonTests(unittest.TestCase):
         result, data = self.run_comparison(dimensions=(11, 10))
         self.assertNotEqual(result.returncode, 0)
         self.assertEqual(data['results'][0]['reason'], 'Different dimensions')
+
+    def test_report_only_records_intentional_changes(self):
+        result, data = self.run_comparison(changed=(255, 0, 0), report_only=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertFalse(data['results'][0]['passed'])
+
+    def test_report_only_does_not_hide_invalid_captures(self):
+        result, _ = self.run_comparison(reference=False, report_only=True)
+        self.assertNotEqual(result.returncode, 0)
+        result, _ = self.run_comparison(dimensions=(11, 10), report_only=True)
+        self.assertNotEqual(result.returncode, 0)
 
     def test_missing_reference_fails(self):
         result, _ = self.run_comparison(reference=False)

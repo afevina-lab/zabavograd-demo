@@ -27,7 +27,7 @@ await runBrowserProbe({theme,outputDirectory:directory,rootDirectory:process.env
   }
   await evaluate("(async()=>{for(let frame=0;frame<3;frame++){for(const animation of document.getAnimations()){const timing=animation.effect?.getComputedTiming();if(timing&&Number.isFinite(timing.endTime))animation.finish();else{animation.pause();await animation.ready;animation.currentTime=0}}await new Promise(resolve=>requestAnimationFrame(resolve))}})()");
   if(name.endsWith('-pause')||name.endsWith('-result'))await until("getComputedStyle(document.querySelector('.overlay')).opacity==='1'");
-  measurements.push({name,theme,captureVersion:4,fontsBeforeBoot:true,captureMotion:'reduced',metrics:await evaluate(`(()=>{const selectors=['.shared-settings-window','.settings-window-heading','.setup-workspace','.setup-columns','.setup-theme-rail','.setup-footer','.setup-footer>.primary','.quantity-slider','.shared-toolbar','.toolbar-left','.toolbar-centre','.toolbar-right','.overlay>div','.transformation-chamber','.zg-scene-layers','.zg-scene-sprite'];return selectors.flatMap(selector=>[...document.querySelectorAll(selector)].map((e,index)=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {selector,index,bounds:{x:r.x,y:r.y,width:r.width,height:r.height},styles:Object.fromEntries(['display','position','gap','padding','margin','fontFamily','fontSize','lineHeight','backgroundImage','borderImageSource','borderImageSlice','zIndex','overflow','maxHeight','transform'].map(k=>[k,s[k]]))}}))})()`)});
+  measurements.push({name,theme,captureVersion:4,fontsBeforeBoot:true,captureMotion:'reduced',metrics:await evaluate(`(()=>{const selectors=[':is(.v-settings,.shared-settings-window)',':is(.v-settings-heading,.settings-window-heading)',':is(.v-settings-workspace,.setup-workspace)',':is(.v-settings-columns,.setup-columns)',':is(.v-settings-appearance,.setup-theme-rail)',':is(.v-settings-footer,.setup-footer)',':is(.v-settings-footer,.setup-footer)>.primary',':is(.v-quantity,.quantity-slider)',':is(.v-toolbar,.shared-toolbar)',':is(.v-toolbar-navigation,.toolbar-left)',':is(.v-toolbar-status,.toolbar-centre)',':is(.v-toolbar-view,.toolbar-right)','.overlay>div',':is(.v-transformation-chamber,.transformation-chamber)','.zg-scene-layers','.zg-scene-sprite'];return selectors.flatMap(selector=>[...document.querySelectorAll(selector)].map((e,index)=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {selector,index,bounds:{x:r.x,y:r.y,width:r.width,height:r.height},styles:Object.fromEntries(['display','position','gap','padding','margin','fontFamily','fontSize','lineHeight','backgroundImage','borderImageSource','borderImageSlice','zIndex','overflow','maxHeight','transform'].map(k=>[k,s[k]]))}}))})()`)});
   await screenshot(name,{quietMs:1000});
   await until("[...document.images].filter(img=>{const r=img.getBoundingClientRect();return r.width>0&&r.height>0}).every(img=>img.complete&&img.naturalWidth>0)");
  };
@@ -35,10 +35,10 @@ await runBrowserProbe({theme,outputDirectory:directory,rootDirectory:process.env
   await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600||width===844});
   for(const game of games){
    const name=`${game}-${width}x${height}`;
-   await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector('.unified-settings-content')");
-   await evaluate(`document.querySelectorAll('.themes button')[${themeIndex}].click()`);
+   await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector(':is(.v-settings-scroll,.unified-settings-content)')");
+   await evaluate(`document.querySelectorAll(':is(.v-theme-choice,.themes) button')[${themeIndex}].click()`);
    await capture(name+'-settings');
-   await evaluate("document.querySelectorAll('.settings-disclosure').forEach(e=>e.open=true)");await capture(name+'-expanded');
+   await evaluate("document.querySelectorAll(':is(.v-disclosure,.settings-disclosure)').forEach(e=>e.open=true)");await capture(name+'-expanded');
    await setup(game);await capture(name+'-play');
    await evaluate("document.querySelector('button[aria-label=Пауза]').click()");await until("!!document.querySelector('.overlay')");await capture(name+'-pause');
    await evaluate("document.querySelector('.overlay button[aria-label=Продолжить]').click()");
