@@ -89,7 +89,7 @@ function apply(source,bundle,dest,expectedPreview){
   return {...result,status:'staged_generation_validated_not_activated',preview_sha256:expectedPreview,destination:target};
  }finally{fs.rmSync(tmp,{recursive:true,force:true});}
 }
-module.exports={verifyBundle,apply};
+module.exports={verifyBundle,apply,readRegular,inventory,expectedDirs};
 if(require.main===module)try{
  const [source,bundle,dest,expected,...extra]=process.argv.slice(2);
  assert(source&&bundle&&dest&&expected&&!extra.length,'Usage: library-apply-bundle.cjs SOURCE_DIR BUNDLE_DIR NEW_DIR EXPECTED_PREVIEW_SHA256');

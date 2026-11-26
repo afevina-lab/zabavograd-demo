@@ -310,6 +310,44 @@ jobs:
           test ! -e "$RUNNER_TEMP/media-corrupt"
           test ! -e public/assets/words/modular-media-ci-only.webp
           git diff --exit-code
+      - name: Rehearse isolated one-commit acceptance of library and media packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          work="$RUNNER_TEMP/commit-rehearsal"
+          git worktree add --detach "$work" HEAD
+          trap 'git worktree remove --force "$work"' EXIT
+          cp -a "$RUNNER_TEMP/modules" "$work/outputs/library-modules"
+          printf '%s\n' '{"version":1,"mode":"modules","directory":"outputs/library-modules"}' > "$work/editorial/library-source-mode.json"
+          git -C "$work" rm outputs/library-v2.json
+          git -C "$work" add editorial/library-source-mode.json outputs/library-modules
+          git -C "$work" -c user.name="Library rehearsal" -c user.email="rehearsal@example.invalid" commit -m "Disposable canonical base"
+          (
+            cd "$work"
+            export GIT_AUTHOR_NAME="Library rehearsal" GIT_AUTHOR_EMAIL="rehearsal@example.invalid" GIT_COMMITTER_NAME="Library rehearsal" GIT_COMMITTER_EMAIL="rehearsal@example.invalid"
+            base=$(git rev-parse HEAD)
+            preview=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).preview_sha256' "$RUNNER_TEMP/edit-preview-output/result.json")
+            node scripts/library-commit-package.cjs "$base" "$RUNNER_TEMP/edit-candidate-output" "$preview" > "$RUNNER_TEMP/weight-commit-report.json"
+            libpin=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).library_preview_sha256' "$RUNNER_TEMP/media-preview-output/result.json")
+            mediapin=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).media_preview_sha256' "$RUNNER_TEMP/media-preview-output/result.json")
+            node scripts/library-commit-package.cjs "$base" "$RUNNER_TEMP/media-candidate-output" "$libpin" "$mediapin" > "$RUNNER_TEMP/media-commit-report.json"
+            commit=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).commit' "$RUNNER_TEMP/media-commit-report.json")
+            test "$(git rev-parse "$commit^")" = "$base"
+            test "$(git rev-parse HEAD)" = "$base"
+            test -z "$(git status --porcelain)"
+            git show "$commit:public/assets/words/modular-media-ci-only.webp" > "$RUNNER_TEMP/commit-probe.webp"
+            cmp "$RUNNER_TEMP/commit-probe.webp" "$RUNNER_TEMP/media-candidate-output/media/public/assets/words/modular-media-ci-only.webp"
+            git show "$commit:outputs/image-library.json" > "$RUNNER_TEMP/commit-registry.json"
+            cmp "$RUNNER_TEMP/commit-registry.json" "$RUNNER_TEMP/media-candidate-output/media/image-library.json"
+            cp -a "$RUNNER_TEMP/media-candidate-output" "$RUNNER_TEMP/tampered-media"
+            printf bad >> "$RUNNER_TEMP/tampered-media/media/image-library.json"
+            if node scripts/library-commit-package.cjs "$base" "$RUNNER_TEMP/tampered-media" "$libpin" "$mediapin"; then echo 'Tampered registry accepted'; exit 1; fi
+            test "$(git rev-parse HEAD)" = "$base"
+            test -z "$(git status --porcelain)"
+          )
+          git worktree remove --force "$work"
+          trap - EXIT
+          git diff --exit-code
       - name: Rehearse future canonical switch without legacy master
         shell: bash
         run: |
@@ -373,6 +411,8 @@ jobs:
             ${{ runner.temp }}/apply-semantic-result.json
             ${{ runner.temp }}/apply-decision-result.json
             ${{ runner.temp }}/media-candidate-output/result.json
+            ${{ runner.temp }}/weight-commit-report.json
+            ${{ runner.temp }}/media-commit-report.json
             ${{ runner.temp }}/switch-source.json
             ${{ runner.temp }}/switch-writer-rejected.log
             ${{ runner.temp }}/modules

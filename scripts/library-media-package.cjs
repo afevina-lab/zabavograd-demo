@@ -94,7 +94,60 @@ function run(source,request,input,output,expectedMediaPreview){
   fs.renameSync(publish,target);return report;
  }finally{fs.rmSync(tmp,{recursive:true,force:true});}
 }
-module.exports={run,stageAssets};
+
+// Reuse the original package builder and independently supplied preview pins;
+// compare every returned byte rather than trusting paths or hashes in a report.
+function replayCandidate(source,bundle,dest,libraryPin,mediaPin){
+ const {readRegular,inventory}=require('./library-apply-bundle.cjs');
+ const src=fs.realpathSync(source),input=fs.realpathSync(bundle);
+ assert(fs.lstatSync(bundle).isDirectory(),'Bundle must be a real directory');
+ const parent=fs.realpathSync(path.dirname(path.resolve(dest))),target=path.join(parent,path.basename(dest));
+ assert(outside(src,target)&&outside(input,target)&&outside(ROOT,target),'Output must be outside source, bundle and repository');
+ assert(!fs.existsSync(target),'Destination exists');
+ assert(/^[a-f0-9]{64}$/.test(libraryPin||'')&&/^[a-f0-9]{64}$/.test(mediaPin||''),'Independent preview pins required');
+ const report=JSON.parse(readRegular(input,'result.json',100*1024));
+ assert.equal(report.status,'validated_media_candidate_not_approved','Not a validated media candidate');
+ assert.equal(report.library_preview_sha256,libraryPin,'Library preview differs');
+ assert.equal(report.media_preview_sha256,mediaPin,'Media preview differs');
+ const request={version:1,mode:'candidate',source_sha256:report.source_sha256,preview_sha256:libraryPin,operations:[],import_operations:report.import_operations};
+ validate(request);
+ const tmp=fs.mkdtempSync(path.join(parent,'.media-replay-'));
+ try{
+  const files=path.join(tmp,'images');fs.mkdirSync(files);
+  let total=0;
+  for(const op of request.import_operations.filter(o=>o.type==='link_webp')){
+   const bytes=readRegular(input,'media/public'+op.src,2*1024*1024);
+   total+=bytes.length;assert(total<=24*1024*1024,'Media packet exceeds 24 MiB');
+   fs.writeFileSync(path.join(files,path.basename(op.src)),bytes,{flag:'wx'});
+  }
+  const req=path.join(tmp,'request.json');fs.writeFileSync(req,json(request));
+  const expected=path.join(tmp,'expected'),fresh=run(src,req,files,expected,mediaPin);
+  const {source_commit,request_commit,request_sha256,scope,...payload}=report;
+  assert.deepEqual(payload,fresh,'Report differs from replay');
+  const wanted=inventory(expected);
+  assert.deepEqual(inventory(input),wanted,'Media bundle paths differ from replay');
+  for(const rel of wanted.files.filter(f=>f!=='result.json')){
+   const b=fs.readFileSync(path.join(expected,rel));
+   assert(readRegular(input,rel,b.length).equals(b),'Media bundle bytes differ: '+rel);
+  }
+  const generation=path.join(tmp,'staged'),modules=path.join(generation,'modules');
+  fs.mkdirSync(generation);
+  // Only the replay-generated data, not the untrusted bundle, is used.
+  fs.cpSync(src,modules,{recursive:true});
+  for(const rel of fresh.bundle.removed_files)fs.unlinkSync(path.join(modules,rel));
+  for(const rel of ['manifest.json',...fresh.bundle.changed_files]){
+   const f=path.join(modules,rel);fs.mkdirSync(path.dirname(f),{recursive:true});fs.copyFileSync(path.join(expected,'delta',rel),f);
+  }
+  assert.equal(load(modules).source_sha256,fresh.result_source_sha256);
+  fs.renameSync(path.join(expected,'media'),path.join(generation,'media'));
+  assert.equal(load(src).source_sha256,fresh.source_sha256,'Source changed');
+  assert(!fs.existsSync(target),'Destination exists');
+  fs.renameSync(generation,target);
+  return fresh;
+ }finally{fs.rmSync(tmp,{recursive:true,force:true});}
+}
+
+module.exports={run,stageAssets,replayCandidate};
 if(require.main===module)try{
  const [source,request,input,output,pin,...extra]=process.argv.slice(2);
  assert(source&&request&&input&&output&&!extra.length,'Usage: library-media-package.cjs SOURCE REQUEST INPUT_WEBP_DIR NEW_OUTPUT_DIR [MEDIA_PREVIEW_SHA256]');
