@@ -14,7 +14,8 @@
     "test:editorial": "node --experimental-strip-types --test tests/semantic-review.test.ts tests/grammar-review.test.ts tests/sound-selection.test.ts tests/speech-frame-candidates.test.ts",
     "check:architecture": "node scripts/check-architecture.cjs",
     "library:tool": "node scripts/library-toolkit.cjs",
-    "test:library-toolkit": "node --experimental-strip-types --test tests/library-toolkit.test.ts"
+    "test:library-toolkit": "node --experimental-strip-types --test tests/library-toolkit.test.ts",
+    "test:library-editor": "node --check editor-service/server.mjs && node --check public/editor/modular-client.mjs && node --check public/editor/modular-ui.mjs && node --check public/editor/editor-connection.mjs && node --check public/editor/start.mjs && node --check public/editor/app.js && node --test editor-service/modular-ui.test.mjs editor-service/model.test.mjs editor-service/modular-bridge.test.mjs editor-service/modular-client.test.mjs editor-service/modular-read-cache.test.mjs"
   },
   "dependencies": {
     "react": "19.3.1",

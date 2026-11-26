@@ -87,7 +87,7 @@ test('canonical module loader fails closed on dual master, missing shard and cor
  }
 });
 if(process.env.LIBRARY_REAL_MODULES_TEST==='1')test('real canonical modules yield identical cached SQLite result',async()=>{
- const dir=path.join(process.env.RUNNER_TEMP,'modules'),files=new Map();
+ const dir=process.env.LIBRARY_REAL_MODULES_DIR||path.join(process.env.RUNNER_TEMP,'modules'),files=new Map();
  function walk(d,p=''){for(const ent of fs.readdirSync(d,{withFileTypes:true})){const rel=p+ent.name;if(ent.isDirectory())walk(path.join(d,ent.name),rel+'/');else files.set(rel,fs.readFileSync(path.join(d,ent.name)));}}
  walk(dir);
  const a=remoteModules(files),cache=makeReadCache({repo:'owner/repo',loadSnapshot:makePinnedLoader({fetchImpl:a.fetchImpl})});

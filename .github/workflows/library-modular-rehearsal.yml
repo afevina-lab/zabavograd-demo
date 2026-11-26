@@ -29,7 +29,7 @@ jobs:
           node --experimental-strip-types --test tests/library-ci-plan.test.ts
           if [[ "$BEFORE" =~ ^[a-f0-9]{40}$ ]] && ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then git fetch --no-tags --depth=1 origin "$BEFORE" || true; fi
           mode=$(node scripts/library-ci-plan.cjs "$BEFORE" "$AFTER" "$EVENT")
-          [[ "$mode" =~ ^(docs|client|full)$ ]]
+          [[ "$mode" =~ ^(docs|client|adapter|full)$ ]]
           echo "mode=$mode" >> "$GITHUB_OUTPUT"
           echo "Check scope: $mode" >> "$GITHUB_STEP_SUMMARY"
       - name: Check references to removed executable scripts
@@ -53,11 +53,20 @@ jobs:
               [[ "$code" == 1 ]] || exit "$code"
             fi
           done <<< "$deleted"
-      - name: Check isolated browser controller
-        if: steps.scope.outputs.mode == 'client'
+      - name: Check isolated editor components
+        if: steps.scope.outputs.mode == 'client' || steps.scope.outputs.mode == 'adapter'
+        run: npm run test:library-editor
+      - name: Verify adapter reads against real catalogue and module transport
+        if: steps.scope.outputs.mode == 'adapter'
+        shell: bash
         run: |
-          node --check public/editor/modular-client.mjs
-          node --test editor-service/modular-client.test.mjs
+          set -euo pipefail
+          node scripts/library-request-source.cjs prepare "$RUNNER_TEMP/modules" > "$RUNNER_TEMP/adapter-source.json"
+          modules=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).directory' "$RUNNER_TEMP/adapter-source.json")
+          echo '{"version":1,"mode":"query","command":"sqlite","options":{"weight":100,"sounds":["к"],"exclude_sounds":["р","р\u0027"],"has_image":true,"limit":10}}' > "$RUNNER_TEMP/remote-sqlite-request.json"
+          node scripts/library-request-source.cjs query "$modules" "$RUNNER_TEMP/remote-sqlite-request.json" "$RUNNER_TEMP/remote-sqlite-result.json"
+          LIBRARY_REAL_MODULES_TEST=1 LIBRARY_REAL_MODULES_DIR="$modules" node --test editor-service/modular-read-cache.test.mjs
+          git diff --exit-code
   rehearsal:
     needs: plan
     if: needs.plan.outputs.mode == 'full'
@@ -71,14 +80,7 @@ jobs:
       - name: Run storage and editorial unit tests
         run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts tests/library-modular-request.test.ts tests/library-phonetic-review.test.ts tests/library-semantic-proposals.test.ts tests/library-editorial-decisions.test.ts tests/library-apply-bundle.test.ts tests/library-import.test.ts tests/library-media-request.test.ts
       - name: Check editor server bridge without deployment
-        run: |
-          node --check editor-service/server.mjs
-          node --check public/editor/modular-client.mjs
-          node --check public/editor/modular-ui.mjs
-          node --check public/editor/editor-connection.mjs
-          node --check public/editor/start.mjs
-          node --check public/editor/app.js
-          node --test editor-service/modular-ui.test.mjs editor-service/model.test.mjs editor-service/modular-bridge.test.mjs editor-service/modular-client.test.mjs editor-service/modular-read-cache.test.mjs
+        run: npm run test:library-editor
       - name: Check preserved catalogue and media regressions
         shell: bash
         run: |

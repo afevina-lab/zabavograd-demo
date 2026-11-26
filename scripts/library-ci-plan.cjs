@@ -1,12 +1,14 @@
 'use strict';
 const {execFileSync}=require('node:child_process');
 const sha=/^[a-f0-9]{40}$/;
-const clients=new Set(['public/editor/modular-client.mjs','editor-service/modular-client.test.mjs']);
+const clients=new Set(['public/editor/modular-client.mjs','public/editor/modular-ui.mjs','editor-service/modular-client.test.mjs','editor-service/modular-ui.test.mjs']);
+const adapters=new Set(['editor-service/modular-bridge.mjs','editor-service/modular-read-cache.mjs','editor-service/modular-bridge.test.mjs','editor-service/modular-read-cache.test.mjs']);
 const docs=new Set(['docs/LIBRARY_CUTOVER.md','docs/LIBRARY_MODULAR_INTEGRATION.md','docs/LIBRARY_REMOTE.md','docs/LIBRARY_TOOLKIT.md','docs/LIBRARY_INDEX.md','docs/LIBRARY_STORAGE_MIGRATION.md','editor-service/README.md']);
 function classify(paths,{known=true,manual=false}={}){
  if(manual||!known||!Array.isArray(paths)||!paths.length)return 'full';
  if(paths.every(p=>docs.has(p)))return 'docs';
  if(paths.every(p=>docs.has(p)||clients.has(p)))return 'client';
+ if(paths.every(p=>docs.has(p)||clients.has(p)||adapters.has(p)))return 'adapter';
  return 'full';
 }
 function changed(before,after){
