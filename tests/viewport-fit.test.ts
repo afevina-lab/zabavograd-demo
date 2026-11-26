@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {fittedGrid} from '../src/visual/games/geometry.ts';
+import {fittedGrid,memoryLayout} from '../src/visual/games/geometry.ts';
 test('Every offered card fits the field with a fixed gap, including maximum desktop material',()=>{
  for(const [width,height,count] of [[1904,380,40],[936,480,20],[1424,310,40],[374,240,40],[304,140,20],[820,115,40],[180,80,5]]){
   const grid=fittedGrid(count,width,height);
@@ -15,3 +15,5 @@ test('Sparse fields enlarge cards instead of stretching the gaps',()=>{
  assert(fittedGrid(8,1900,400).size>220);
  assert(fittedGrid(20,940,480).size>100);
 });
+
+test('Square memory cards fit every complete row vertically',()=>{for(const [w,h] of [[1920,994],[1440,814],[390,774],[320,418],[844,328]])for(let count=6;count<=20;count+=2){const grid=memoryLayout(count,w,h),rows=Math.ceil(count/grid.cols);assert(rows*grid.width+(rows-1)*12<=h-36+.01);assert(grid.cols*grid.width+(grid.cols-1)*12<=w-36+.01)}});

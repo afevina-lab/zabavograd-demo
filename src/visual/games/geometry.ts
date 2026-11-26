@@ -3,7 +3,7 @@ import {BOARD_METRICS} from '../foundation/geometry.ts';
 export function memoryLayout(count:number,width:number,height:number){
  return Array.from({length:Math.max(1,Math.min(count,10)-1)},(_,i)=>i+2).map(cols=>{
   const rows=Math.ceil(count/cols);
-  return {cols,width:Math.max(0,Math.min((width-36-(cols-1)*12)/cols,(height-36-(rows-1)*12)/rows*1.05))};
+  return {cols,width:Math.max(0,Math.min((width-36-(cols-1)*12)/cols,(height-36-(rows-1)*12)/rows))};
  }).sort((a,b)=>b.width-a.width)[0];
 }
 export function sortingLayout(width:number,height:number,tray:number,groups:number[]){
