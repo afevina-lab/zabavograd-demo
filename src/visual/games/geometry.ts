@@ -9,7 +9,7 @@ export function memoryLayout(count:number,width:number,height:number){
 export function sortingLayout(width:number,height:number,tray:number,groups:number[]){
  const columns=Math.max(1,Math.min(groups.length,width<700?2:groups.length));
  const inner=Math.max(1,width-24),binWidth=(inner-(columns-1)*8)/columns;
- // The bank stays readable; placed cards yield space first. Overflow scrolls locally.
+ // The bank stays readable; placed cards yield space first. Every item is fitted to the measured field.
  const card=Math.max(BOARD_METRICS.bankMinimum,Math.min(180,Math.floor(height*.4-16),Math.floor((inner-16)/Math.min(3,Math.max(1,tray)))));
  const binRows=Math.ceil(groups.length/columns),available=Math.max(64,(height*.55)/binRows-52);
  let placedCard=Math.min(card,96);
@@ -33,3 +33,10 @@ export function balancedCardStyle(index:number,count:number,width:number,card:nu
  return {gridColumn:(columns-length)+(index%columns)*2+1+' / span 2',gridRow:row+1,justifySelf:'center'};
 }
 
+
+/** Largest equal square layout within both field dimensions. No minimum can force overflow. */
+export function fittedGrid(count:number,width:number,height:number,preferred=320,groups=false){
+ const total=Math.max(1,count),gap=8,w=Math.max(1,width),h=Math.max(1,height);let columns=1,size=0;
+ for(let cols=1;cols<=total;cols++){const rows=Math.ceil(total/cols),candidate=Math.min((w-gap*(cols-1))/cols,(h-gap*(rows-1))/rows*(groups?1.35:1));if(candidate>size){columns=cols;size=candidate;}}
+ return {columns,rows:Math.ceil(total/columns),size:Math.max(1,Math.min(preferred,size))};
+}

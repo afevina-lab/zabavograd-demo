@@ -2,7 +2,7 @@
 export function createGameSetup({cmd,evaluate,until,origin,themeIndex}){
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 async function choose(selector,value){await evaluate("(()=>{const e=document.querySelector("+JSON.stringify(selector)+");if(!e)throw Error('Missing select');e.value="+JSON.stringify(value)+";e.dispatchEvent(new Event('change',{bubbles:true}))})()");await sleep(100)}
-async function setup(game,{timed=false,rounds=1,lives=5}={}){
+async function setup(game,{timed=false,rounds=1,lives=5,maxMaterial=false}={}){
  await cmd('Page.navigate',{url:origin+'?game='+game});await until("!!document.querySelector(':is(.v-settings-scroll,.unified-settings-content)')");
  await evaluate("document.querySelectorAll(':is(.v-theme-choice,.themes) button')["+themeIndex+"]?.click()");
  if(game==='sorting'){
@@ -16,6 +16,8 @@ async function setup(game,{timed=false,rounds=1,lives=5}={}){
  }
  }
  if(game==='matching')await choose('select[aria-label="Учебная задача"]','math');
+ if(maxMaterial&&game==='sorting')await evaluate("(()=>{for(const e of document.querySelectorAll('select')){if([...e.options].some(o=>o.value==='all')){e.value='all';e.dispatchEvent(new Event('change',{bubbles:true}));}if([...e.options].some(o=>o.value==='finish')){e.value='finish';e.dispatchEvent(new Event('change',{bubbles:true}));}}})()");
+ if(maxMaterial)await evaluate("(async()=>{for(const q of document.querySelectorAll('.v-quantity')){if(!/^(Количество пар|Количество групп|Элементов)$/.test(q.querySelector('label')?.textContent||''))continue;for(let n=0;n<40;n++){const plus=q.querySelector('button[aria-label^=Увеличить]');if(!plus||plus.disabled)break;plus.click();await new Promise(r=>setTimeout(r,10));}}})()");
  await evaluate("(()=>{const d=document.querySelector('.challenge');d.open=true;const label=[...d.querySelectorAll('label')].find(e=>e.textContent==='Жизни');const e=label.querySelector('input');if(!e.checked)e.click()})()");
  for(let value=5;value<lives;value++)await evaluate("document.querySelector('button[aria-label=\"Увеличить: Количество жизней\"]').click()");
  if(timed)await evaluate("(()=>{const d=document.querySelector('.challenge');const label=[...d.querySelectorAll('label')].find(e=>e.textContent.startsWith('На время'));if(!label)throw Error('Missing timer toggle');const e=label.querySelector('input');if(!e.checked)e.click()})()");

@@ -67,6 +67,7 @@ jobs:
         run: |
           GEOMETRY_ONLY=1 node scripts/verify-dialogs-browser.mjs
           UI_DIST_ROOT=dist UI_THEME=neutral node scripts/verify-compact-toolbar.mjs
+          node scripts/verify-viewport-fit.mjs
           for theme in neutral forest space; do
             UI_THEME="$theme" node scripts/verify-settings-browser.mjs
             UI_THEME="$theme" node scripts/verify-dialogs-browser.mjs

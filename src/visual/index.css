@@ -54,31 +54,8 @@
 @import './games/matching-bank.css' layer(games);
 @import './motion/motion.css' layer(motion);
 @import './games/transformation.css' layer(games);
+@import './games/fitted-grid.css' layer(games);
+@import './primitives/scrollbar.css' layer(primitives);
 @layer motion{
  @media(prefers-reduced-motion:reduce){.v-root *,.v-root *::before,.v-root *::after{animation-duration:0s;transition-duration:0s;scroll-behavior:auto}}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

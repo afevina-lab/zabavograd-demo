@@ -7,6 +7,6 @@ body{margin:0}
 .v-root :where(button:disabled,input:disabled,select:disabled){cursor:not-allowed;opacity:.38}
 .v-root :where(a){color:inherit;text-decoration:none}
 .v-root :where(h1,h2,h3,p){margin:0}
-.v-root :where(button,a,input,select,summary):focus-visible{outline:3px solid var(--ui-accent);outline-offset:4px}
+.v-root :where(button,a,input,select,summary):focus-visible{outline:2px solid var(--ui-accent);outline-offset:2px}
 .v-root :where(img){max-width:100%}
 .v-root :where(fieldset){border:0;margin:0;padding:0;min-width:0}

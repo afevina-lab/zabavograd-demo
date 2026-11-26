@@ -1,3 +1,4 @@
+import {FittedGrid} from './visual/games/FittedGrid.tsx';
 import {PickerDialog} from './design-system/PickerDialog.tsx';
 import {MatchingGroup} from './visual/games/MatchingGroup.tsx';
 import {visualThemeVars} from './visual/foundation/visualThemeVars.ts';
@@ -26,7 +27,7 @@ import {WordPicker} from './WordPicker.tsx';
 import {initialLearning,learningPool,balancedPick} from './learning.ts';
 import {defaultFilters} from './model.ts';
 import {useCardDrag} from './design-system/useCardDrag.tsx';
-import {useEffect,useLayoutEffect,useMemo,useRef,useState,type CSSProperties} from 'react';
+import {useEffect,useMemo,useRef,useState} from 'react';
 import {useLibrary,useFamilies} from './useLibrary.ts';
 import {familyGroups,visualGroups,validateGroups,checkMatching,shuffled,type MatchGroup,type MatchElement} from './matching.ts';
 import {CardArtwork} from './CardArtwork.tsx';
@@ -50,9 +51,8 @@ export function Matching(){
  const drag=useCardDrag(paused||finished||!!limits.lost);
  const [displayMode,setDisplayMode]=useState('image-image');
  const groupDialog=useRef<HTMLDialogElement>(null);
- const stageRef=useRef<HTMLDivElement|null>(null);
- const [bankPage,setBankPage]=useState(0);
- const [boardLayout,setBoardLayout]=useState({columns:4,cardWidth:104,bankPageSize:12});
+
+
  const available=useMemo(()=>learningPool(words,filters,learning),[words,filters,learning]);
  const kind=learning.mode==='math'?null:mode==='shadow'?'silhouette':mode==='outline'?'outline':null;
  const captionMode=!kind&&(displayMode==='word-image'||displayMode==='image-word');
@@ -68,32 +68,8 @@ export function Matching(){
  const maxCount=Math.min(8,kind&&!prepared.busy&&prepared.words.length<count?prepared.words.length:displayCandidates.length);
  const setupError=validateGroups(groups,learning.mode==='math'?2:size)||(groups.length!==count&&(learning.mode==='math'||mode!=='manual')?'Недостаточно полных групп: уменьшите количество или измените материал.':'')||(learning.mode!=='math'&&mode==='manual'&&manual.some(row=>new Set(row).size!==row.length)?'Внутри одной группы выберите разные слова.':'');
  const placed=new Set(Object.values(placements).flat()),remaining=bank.filter(e=>!placed.has(e.id)),complete=remaining.length===0;
- // The complete game stays inside the viewport: resize cards, not text or the page.
- // For large groups the answer bank is paged, never scrolled or clipped.
- useLayoutEffect(()=>{
-  const stage=stageRef.current;
-  if(!stage||!session.length)return;
-  const fit=()=>{
-   const width=Math.max(180,stage.clientWidth-32),height=Math.max(160,stage.clientHeight-26);
-   // Groups are compact answer stations, not a memory-style board.
-   const minimum=captionMode?186:120,gap=12;
-   const columns=Math.max(1,Math.min(session.length,Math.floor((width+gap)/(minimum+gap))));
-   const cardWidth=Math.max(96,Math.min(132,Math.floor((width-(columns-1)*gap)/columns-24)));
-   const bankColumns=Math.max(1,Math.floor((width+gap)/(cardWidth+gap)));
-   const best={columns,cardWidth,bankPageSize:Math.max(1,Math.min(bank.length,bankColumns))};
-   setBoardLayout(prev=>prev.columns===best.columns&&prev.cardWidth===best.cardWidth&&prev.bankPageSize===best.bankPageSize?prev:best);
-  };
-  const observer=new ResizeObserver(fit);
-  observer.observe(stage);
-  fit();
-  return()=>observer.disconnect();
- },[session,bank.length,captionMode,displayMode]);
- const pageCount=Math.max(1,Math.ceil(remaining.length/boardLayout.bankPageSize));
- const currentPage=Math.min(bankPage,pageCount-1);
- const visibleBank=remaining.slice(currentPage*boardLayout.bankPageSize,(currentPage+1)*boardLayout.bankPageSize);
- const boardVars={'--matching-columns':String(boardLayout.columns),'--matching-card-size':boardLayout.cardWidth+'px','--v-slot-size':boardLayout.cardWidth+'px','--matching-caption-width':Math.max(162,boardLayout.cardWidth*1.55)+'px'} as CSSProperties;
  useGameSoundOutcome(limits.lost?'lose':finished&&roundPlan.isLast?(Object.values(checkMatching(session,placements)).filter(Boolean).length>=bank.length*.3?'win':'lose'):null);
- function loadRound(next:MatchGroup[]){resetSoundCombo();enterGameViewport();limits.reset();setSession(next);setBank(shuffled(next.flatMap(g=>g.elements.slice(1))));setPlacements({});setVerdict({});setSelected(null);setBankPage(0);setFinished(false);setPaused(false);setMessage('');}
+ function loadRound(next:MatchGroup[]){resetSoundCombo();enterGameViewport();limits.reset();setSession(next);setBank(shuffled(next.flatMap(g=>g.elements.slice(1))));setPlacements({});setVerdict({});setSelected(null);setFinished(false);setPaused(false);setMessage('');}
  function start(){if(setupError||prepared.busy)return;roundPlan.request(groups,loadRound,{text:displayMode==='word-word',groupSize:size,maxRounds:groups.length});}
  useEffect(()=>{if(!finished||limits.lost)return;const next=roundPlan.advance(starsForScore(Object.values(checkMatching(session,placements)).filter(Boolean).length,bank.length));if(next)loadRound(next)},[finished]);
 
@@ -113,8 +89,8 @@ export function Matching(){
  }
  function retry(){setPlacements(p=>Object.fromEntries(Object.entries(p).map(([id,ids])=>[id,ids.filter(id=>verdict[id])])));setVerdict({});setMessage('Исправьте оставшиеся соответствия.');}
  function remove(id:string){if(paused||finished||limits.lost)return;setPlacements(p=>Object.fromEntries(Object.entries(p).map(([g,ids])=>[g,ids.filter(x=>x!==id)])));setVerdict({});setSelected(null);}
- function artwork(e:MatchElement){const image=e.appearance==='word'?undefined:e.word.variants?.[0];return <>{image?(e.appearance==='silhouette'||e.appearance==='outline'?<DerivedArtwork image={image} outline={e.appearance==='outline'}/>:<CardArtwork image={image} label={e.word.label}/>):<span className="v-card-word matching-word-text" style={{fontSize:Math.max(12,Math.min(20,280/Math.max(9,readingLabel(e.word.label,learning).length)))+'px'}}>{readingLabel(e.word.label,learning)}</span>}{captions&&displayMode==='image-image'&&!kind&&image&&e.appearance==='original'&&<small>{readingLabel(e.word.label,learning)}</small>}</>;}
- function card(e:MatchElement,isPlaced=false){return <CardButton feedback={verdict[e.id]===false?"wrong":verdict[e.id]===true?"correct":"idle"} type="button" key={e.id} data-match-card={e.id} disabled={paused||finished||!!limits.lost} className={'matching-card '+(e.appearance==='word'?'matching-word-card ':'')+(selected===e.id?'chosen ':'')+(verdict[e.id]===false?'verdict-bad':verdict[e.id]===true?'verdict-good':'')} aria-label={e.appearance==='original'?e.word.label:e.appearance==='outline'?'Контур':'Тень'} onClick={()=>{if(drag.suppressClick())return;if(isPlaced)remove(e.id);else setSelected(e.id)}} onPointerDown={event=>{if(!isPlaced)drag.begin(event,'[data-match-group]',target=>place(e.id,target.dataset.matchGroup!));}}>{artwork(e)}</CardButton>;}
+ function artwork(e:MatchElement,size=132){const image=e.appearance==='word'?undefined:e.word.variants?.[0];return <>{image?(e.appearance==='silhouette'||e.appearance==='outline'?<DerivedArtwork image={image} outline={e.appearance==='outline'}/>:<CardArtwork image={image} label={e.word.label}/>):<span className="v-card-word matching-word-text" style={{fontSize:Math.max(16,Math.min(44,size*.36,size*2.2/Math.max(2,readingLabel(e.word.label,learning).length)))+'px'}}>{readingLabel(e.word.label,learning)}</span>}{captions&&displayMode==='image-image'&&!kind&&image&&e.appearance==='original'&&<small>{readingLabel(e.word.label,learning)}</small>}</>;}
+ function card(e:MatchElement,isPlaced=false,size=132){return <CardButton feedback={verdict[e.id]===false?"wrong":verdict[e.id]===true?"correct":"idle"} style={{width:size,height:size,padding:size*.105}} type="button" key={e.id} aria-pressed={selected===e.id} data-match-card={e.id} disabled={paused||finished||!!limits.lost} className={'matching-card '+(e.appearance==='word'?'matching-word-card ':'')+(selected===e.id?'chosen ':'')+(verdict[e.id]===false?'verdict-bad':verdict[e.id]===true?'verdict-good':'')} aria-label={e.appearance==='original'||e.appearance==='word'?e.word.label:e.appearance==='outline'?'Контур':'Тень'} onClick={()=>{if(drag.suppressClick())return;if(isPlaced)remove(e.id);else setSelected(e.id)}} onPointerDown={event=>{if(!isPlaced)drag.begin(event,'[data-match-group]',target=>place(e.id,target.dataset.matchGroup!));}}>{artwork(e,size)}</CardButton>;}
  function resize(n:number){setSize(n);setManual(rows=>rows.map(row=>Array.from({length:n},(_,i)=>row[i]||'')));if(n>3)setMode('manual');}
  useGameViewport(session.length>0);
  return <div className={'app v-root v-game-screen '+(session.length?'game-active':'')} {...themeAttributes(theme)} style={visualThemeVars(theme,import.meta.env.BASE_URL)}>
@@ -138,7 +114,7 @@ export function Matching(){
  pause={<IconButton size="toolbar" label={paused?'Продолжить':'Пауза'} icon={paused?'Play':'Pause'} className="icon-button toolbar-pause"  onClick={()=>setPaused(v=>!v)}/>}
  status={<><span>{placed.size} / {bank.length}</span>{limits.status}</>}
  />
- <div className={'v-live-stage stage matching-stage '+(captionMode?'matching-stage-caption ':'')+(displayMode==='image-word'?'matching-bank-words':'')} ref={stageRef} style={boardVars}><Scenery theme={theme}/>{(paused||finished&&roundPlan.isLast||limits.lost)&&<GameDialog stars={limits.lost?0:finished?roundPlan.award:undefined} onRepeat={()=>roundPlan.repeat(loadRound)} title={limits.lost||(finished?(roundPlan.count>1?'Игра завершена':message):'Пауза')} onContinue={paused&&!finished&&!limits.lost?()=>setPaused(false):undefined} onSettings={()=>{setSession([]);setMessage('')}}/>}<MatchingLayout groups={<> {session.map(g=><MatchingGroup captionPosition={captionMode?(displayMode==="word-image"?"above":"below"):undefined} className={'matching-group '+(captionMode?'matching-group-caption '+(displayMode==='word-image'?'caption-above':'caption-below'):'')} key={g.id} data-match-group={g.id}><CardSurface data-caption={captionMode&&g.elements[0].appearance==="word"} className={captionMode&&g.elements[0].appearance==='word'?'matching-anchor matching-caption':'matching-card matching-anchor'}>{artwork(g.elements[0])}</CardSurface><div className="v-matching-slots matching-slots">{(placements[g.id]||[]).map(id=>card(bank.find(e=>e.id===id)!,true))}{Array.from({length:g.elements.length-1-(placements[g.id]?.length||0)},(_,i)=><CardSlot className={'matching-slot '+(displayMode==='image-word'?'matching-caption-slot':'')} key={'slot-'+i} aria-label={'Поместить под '+g.elements[0].word.label} disabled={!selected||paused||finished||!!limits.lost} onClick={()=>selected&&place(selected,g.id)}>+</CardSlot>)}</div></MatchingGroup>)}</>} bank={<> {!finished&&<MatchingBank heading={<> {pageCount>1&&<div className="v-bank-pages matching-bank-pages"><button className="v-control-button v-button v-button--secondary" type="button" disabled={currentPage===0} onClick={()=>setBankPage(currentPage-1)} aria-label="Предыдущие карточки">‹</button><span>{currentPage+1} / {pageCount}</span><button className="v-control-button v-button v-button--secondary" type="button" disabled={currentPage>=pageCount-1} onClick={()=>setBankPage(currentPage+1)} aria-label="Следующие карточки">›</button></div>}</>}> {visibleBank.map(e=>card(e))}</MatchingBank>}
+ <div className={'v-live-stage stage matching-stage '+(captionMode?'matching-stage-caption ':'')+(displayMode==='image-word'?'matching-bank-words':'')}><Scenery theme={theme}/>{(paused||finished&&roundPlan.isLast||limits.lost)&&<GameDialog stars={limits.lost?0:finished?roundPlan.award:undefined} onRepeat={()=>roundPlan.repeat(loadRound)} title={limits.lost||(finished?(roundPlan.count>1?'Игра завершена':message):'Пауза')} onContinue={paused&&!finished&&!limits.lost?()=>setPaused(false):undefined} onSettings={()=>{setSession([]);setMessage('')}}/>}<MatchingLayout groups={<><FittedGrid groups items={session} label="Группы соотнесения" render={g=><MatchingGroup captionPosition={captionMode?(displayMode==="word-image"?"above":"below"):undefined} className={'matching-group '+(captionMode?'matching-group-caption '+(displayMode==='word-image'?'caption-above':'caption-below'):'')} key={g.id} data-match-group={g.id}><FittedGrid items={g.elements} preferred={280} label="Карточки группы" render={(element,index,total,width,size)=>index===0?<CardSurface style={{width:size,height:size,padding:size*.105}} className="matching-anchor">{artwork(element,size)}</CardSurface>:(placements[g.id]||[])[index-1]?card(bank.find(e=>e.id===(placements[g.id]||[])[index-1])!,true,size):<CardSlot style={{width:size,height:size,minWidth:0,minHeight:0}} aria-label={'Поместить под '+g.elements[0].word.label} disabled={!selected||paused||finished||!!limits.lost} onClick={()=>selected&&place(selected,g.id)}>+</CardSlot>}/></MatchingGroup>}/></>} bank={<> {!finished&&<MatchingBank><FittedGrid items={remaining} preferred={280} label="Банк карточек" render={(e,index,total,width,size)=>card(e,false,size)}/></MatchingBank>}
  </>} actions={<> {!paused&&!finished&&!limits.lost&&message&&<p role="status">{message}</p>}{checkMode!=='instant'&&!finished&&<button className="v-control-button v-button v-button--primary primary" disabled={!complete||paused||!!limits.lost||Object.keys(verdict).length>0} onClick={check}>Проверить</button>}{checkMode==='correct'&&Object.values(verdict).some(v=>!v)&&<button className="v-control-button v-button v-button--primary primary" disabled={paused} onClick={retry}>Вернуть ошибки в банк</button>}
 </>}/></div></section>}
  </div>;

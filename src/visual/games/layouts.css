@@ -1,4 +1,4 @@
-.v-matching-layout{display:flex;flex-direction:column;gap:var(--v-space-3);height:100%;min-width:0;min-height:0;overflow:hidden}
-.v-matching-groups{display:grid;grid-template-columns:repeat(var(--matching-columns,auto-fit),minmax(0,1fr));align-content:start;gap:var(--v-space-3);flex:1;min-width:0;min-height:0;overflow:auto}
+.v-matching-layout{position:relative;z-index:var(--v-layer-board);display:flex;flex-direction:column;gap:var(--v-space-3);height:100%;min-width:0;min-height:0;overflow:hidden}
+.v-matching-groups{display:flex;flex:1;min-width:0;min-height:0;overflow:hidden}
 .v-conveyor-track{position:relative;flex:1;width:100%;min-width:0;min-height:0;overflow:hidden}
 

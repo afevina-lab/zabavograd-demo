@@ -1,3 +1,4 @@
+import {GameActions} from '../compositions/GameActions.tsx';
 import {visualClasses} from '../primitives/classNames.ts';
 import type {CSSProperties,ReactNode,Ref} from 'react';
 export type SortingLayoutClasses={root:string;bank:string;groups:string};
@@ -7,6 +8,6 @@ export function SortingLayout({bank,groups,actions,style,bankStyle,bankRef,bankL
  return <div className={classNames.root} style={style}>
   <div className={classNames.bank} style={bankStyle} ref={bankRef} aria-label={bankLabel}>{bank}</div>
   <div className={classNames.groups}>{groups}</div>
-  {actions}
+  <GameActions>{actions}</GameActions>
  </div>;
 }

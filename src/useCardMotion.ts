@@ -5,6 +5,8 @@ export function useCardMotion(root:RefObject<HTMLElement|null>,selector:string,s
  const previous=useRef(new Map<string,DOMRect>());
  const animations=useRef(new WeakMap<HTMLElement,Animation>());
  useLayoutEffect(()=>{
+  // Child grids finish their measured layout before movement origins are recorded.
+  let frame=0;const first=requestAnimationFrame(()=>{frame=requestAnimationFrame(()=>{
   const next=new Map<string,DOMRect>();
   root.current?.querySelectorAll<HTMLElement>(selector).forEach(el=>{
    const key=el.dataset.motionId;if(!key)return;
@@ -16,5 +18,7 @@ export function useCardMotion(root:RefObject<HTMLElement|null>,selector:string,s
     animations.current.set(el,el.animate([{transform:`translate(${old.x-rect.x}px,${old.y-rect.y}px)`},{transform:'none'}],{duration:MOTION.layoutMs,easing:MOTION.layoutEasing}));
    }
   });previous.current=next;
+  })});
+  return()=>{cancelAnimationFrame(first);cancelAnimationFrame(frame)};
  });
 }
