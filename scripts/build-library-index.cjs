@@ -36,6 +36,7 @@ function build(db,draft,syll,meta,tasks){
  const byId=index(db),draftById=new Map();
  for(const row of draft?.entries||[]){if(draftById.has(row.id))throw Error('Duplicate machine analysis '+row.id);draftById.set(row.id,row);}
  const relations=relationIndex(db,byId),syllTypes=new Map();
+ const semanticPending=require('./library-semantic-proposals.cjs').counts(db);
  const syllFresh=Boolean(syll?.source?.canonical_blob_sha&&syll.source.canonical_blob_sha===meta.master.git_blob&&syll.source.blob_sha===meta.runtime?.git_blob);
  if(syllFresh)for(const [type,ids] of Object.entries(syll.groups||{}))for(const id of ids){
   assert(byId.has(id),'Unknown syllable ID '+id);assert(!syllTypes.has(id),'Duplicate syllable group membership '+id);syllTypes.set(id,type);
@@ -53,7 +54,7 @@ function build(db,draft,syll,meta,tasks){
    morphology:{status:status(e.morphology),stored_candidate_forms:Boolean(storedForms),draft_status:draftMatches?status(d.morphology):null},
    metadata_status:e.metadata_completion||null,
    syllable_type:syllFresh?(syllTypes.get(e.id)??null):null,
-   relation_counts:rel,illustrations:(e.illustrations?.senses||[]).reduce((n,s)=>n+(s.variants||[]).length,0)
+   relation_counts:rel,semantic_review_proposals:semanticPending.get(e.id)||0,illustrations:(e.illustrations?.senses||[]).reduce((n,s)=>n+(s.variants||[]).length,0)
   };
  }).sort((a,b)=>(b.weight??-1)-(a.weight??-1)||cmp(a.id,b.id));
  const pages={},pageList=[],size=40;
@@ -71,6 +72,7 @@ function build(db,draft,syll,meta,tasks){
  const filters={
   phonetics:r=>r.kind==='word'&&!r.phonetic.stored_tokens,
   phonetic_review:r=>r.phonetic.status==='automatic_candidate_needs_review',
+  semantic_proposals:r=>r.semantic_review_proposals>0,
   morphology:r=>r.kind==='word'&&['pending_automatic_analysis',null].includes(r.morphology.status),
   morphology_review:r=>r.morphology.status==='automatic_candidate_needs_review',
   category_review:r=>r.kind==='word'&&!r.categories.length,

@@ -153,4 +153,5 @@ if(require.main===module){
   }else throw Error('Choose apply or export');
  }catch(e){console.error(e.message);process.exitCode=1;}
 }
-module.exports={key,review,validateExport};
+function relationPolicy(type){return allowed.has(type)?{inverse:inverse[type],symmetric:symmetric.has(type)}:null;}
+module.exports={key,review,validateExport,relationPolicy};

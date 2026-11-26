@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '24'
       - name: Run storage and editorial unit tests
-        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts tests/library-modular-request.test.ts tests/library-phonetic-review.test.ts
+        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts tests/library-modular-request.test.ts tests/library-phonetic-review.test.ts tests/library-semantic-proposals.test.ts
       - name: Inventory direct consumers
         run: node scripts/library-consumer-audit.cjs "$RUNNER_TEMP/consumer-audit.json"
       - name: Rehearse migration and candidate update on real source
@@ -128,6 +128,18 @@ jobs:
           sha256sum public/library.json public/semantic-graph.json public/grammar-frames.json > "$RUNNER_TEMP/phonetic-base.sha"
           ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/phonetic-reconstructed" node scripts/export-library.cjs
           sha256sum -c "$RUNNER_TEMP/phonetic-base.sha"
+      - name: Verify typed semantic review candidates and preserve active graph
+        shell: bash
+        run: |
+          set -euo pipefail
+          node -e 'const fs=require("fs"),s=require("./scripts/library-store.cjs"),p=require("./scripts/library-semantic-proposals.cjs"),r=s.load(process.argv[1]);let op;for(const [a,b] of [["шкаф","футболка"],["сумка","бутылка"],["холодильник","молоко"]]){const sub=r.db.entries.filter(e=>e.lemma===a&&e.kind==="word"&&!e.same_lexical_meaning_as),obj=r.db.entries.filter(e=>e.lemma===b&&e.kind==="word"&&!e.same_lexical_meaning_as);if(sub.length!==1||obj.length!==1)continue;const o={type:"typically_contains",subject:p.reference(sub[0]),object:p.reference(obj[0]),reason:"Disposable CI test only; no editorial approval"};try{p.plan(r.db,[o]);op=o;break}catch(e){if(!String(e.message).includes("Duplicate active or proposed"))throw e}}if(!op)throw Error("No suitable unique test pair");fs.writeFileSync(process.argv[2],JSON.stringify({version:1,mode:"preview",source_sha256:r.source_sha256,operations:[],semantic_operations:[op]}))' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/semantic-preview.json"
+          node scripts/library-modular-request.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/semantic-preview.json" "$RUNNER_TEMP/semantic-preview-output"
+          node -e 'const fs=require("fs"),r=JSON.parse(fs.readFileSync(process.argv[1]));fs.writeFileSync(process.argv[2],JSON.stringify({version:1,mode:"candidate",source_sha256:r.source_sha256,preview_sha256:r.preview_sha256,operations:r.operations,semantic_operations:r.semantic_operations}))' "$RUNNER_TEMP/semantic-preview-output/result.json" "$RUNNER_TEMP/semantic-candidate.json"
+          node scripts/library-modular-request.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/semantic-candidate.json" "$RUNNER_TEMP/semantic-candidate-output"
+          node -e 'const fs=require("fs"),path=require("path"),a=require("node:assert/strict"),s=require("./scripts/library-store.cjs"),p=require("./scripts/library-semantic-proposals.cjs"),sem=require("./scripts/semantic-review.cjs"),[src,out,dest]=process.argv.slice(1),r=JSON.parse(fs.readFileSync(path.join(out,"result.json")));a.equal(r.status,"validated_candidate_not_approved");fs.cpSync(src,dest,{recursive:true});for(const f of r.bundle.removed_files)fs.unlinkSync(path.join(dest,f));for(const f of ["manifest.json",...r.bundle.changed_files]){const target=path.join(dest,f);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(path.join(out,"delta",f),target)}const x=s.load(src),y=s.load(dest);a.deepEqual(x.db.relations,y.db.relations);a.deepEqual(sem.validateExport(x.db),sem.validateExport(y.db));a.equal(y.source_sha256,r.result_source_sha256);a.equal(p.counts(y.db).get(r.semantic_operations[0].subject.id),1);console.log("Semantic proposal validated; active graph unchanged")' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/semantic-candidate-output" "$RUNNER_TEMP/semantic-reconstructed"
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/semantic-reconstructed" node scripts/build-library-index.cjs "$RUNNER_TEMP/semantic-index"
+          node -e 'const a=require("node:assert/strict"),fs=require("fs"),m=JSON.parse(fs.readFileSync(process.argv[1]));a.equal(m.queues["semantic-proposals"].count,2)' "$RUNNER_TEMP/semantic-index/manifest.json"
+          git diff --exit-code
       - uses: actions/upload-artifact@v4
         with:
           name: library-integration-rehearsal
@@ -147,6 +159,7 @@ jobs:
             ${{ runner.temp }}/edit-preview-output
             ${{ runner.temp }}/edit-candidate-output
             ${{ runner.temp }}/phonetic-candidate-output
+            ${{ runner.temp }}/semantic-candidate-output
             ${{ runner.temp }}/modules
             ${{ runner.temp }}/storage-check/optimization.json
           retention-days: 14
