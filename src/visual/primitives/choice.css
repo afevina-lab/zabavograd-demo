@@ -1,4 +1,4 @@
-.v-choice{display:flex;align-items:center;gap:var(--v-space-3);min-height:var(--v-target);padding:var(--v-space-2);min-width:0;overflow-wrap:anywhere}
+.v-choice{display:flex;align-items:center;gap:var(--v-space-2);min-height:36px;padding:var(--v-space-1) 0;min-width:0;overflow-wrap:anywhere}
 .v-choice>input{appearance:none;width:24px;height:24px;margin:0;flex:none;border:0;background:var(--skin-check-empty) center/contain no-repeat;cursor:pointer}
 .v-choice>input:checked{background-image:var(--skin-check-checked)}
 .v-choice>input[type=radio]{background-image:var(--skin-radio-empty)}

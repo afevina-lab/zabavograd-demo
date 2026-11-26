@@ -15,7 +15,7 @@ await runBrowserProbe({theme,rootDirectory:'dist',outputDirectory:'.build-tools/
   await new Promise(r=>setTimeout(r,650));
   const inspect=()=>{
    const stage=document.querySelector('.v-live-stage'),r=stage.getBoundingClientRect();
-   const gaps=[...stage.querySelectorAll('.v-fitted-grid:not([data-groups=true])')].every(grid=>{const cells=[...grid.children].map(e=>e.getBoundingClientRect());return cells.every((a,i)=>!i||Math.abs(a.top-cells[i-1].top)>1||Math.abs(a.left-cells[i-1].right-8)<1)});
+   const gaps=[...stage.querySelectorAll('.v-fitted-grid:not([data-groups=true])')].every(grid=>{return [...grid.children].every(row=>{const cells=[...row.children].map(e=>e.getBoundingClientRect()),gap=parseFloat(getComputedStyle(row).gap);return cells.every((a,i)=>!i||Math.abs(a.left-cells[i-1].right-gap)<1)})});
    const scrollers=[...stage.querySelectorAll('*')].filter(e=>['auto','scroll'].includes(getComputedStyle(e).overflowY)||['auto','scroll'].includes(getComputedStyle(e).overflowX)).map(e=>e.className);
    const clipped=[...stage.querySelectorAll('.v-fitted-grid-cell>.v-card,.v-fitted-grid-cell>.v-card-surface,.v-fitted-grid-cell>.v-card-slot')].filter(e=>{const a=e.getBoundingClientRect(),b=e.parentElement.getBoundingClientRect();return a.left<b.left-1||a.right>b.right+1||a.top<b.top-1||a.bottom>b.bottom+1}).map(e=>({label:e.getAttribute('aria-label'),rect:e.getBoundingClientRect().toJSON(),cell:e.parentElement.getBoundingClientRect().toJSON()}));
    const memoryFits=[...stage.querySelectorAll('[data-card-key]')].every(e=>{const b=e.getBoundingClientRect();return b.left>=r.left-1&&b.right<=r.right+1&&b.top>=r.top-1&&b.bottom<=r.bottom+1});

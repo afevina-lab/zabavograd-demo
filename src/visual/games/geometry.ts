@@ -34,9 +34,17 @@ export function balancedCardStyle(index:number,count:number,width:number,card:nu
 }
 
 
-/** Largest equal square layout within both field dimensions. No minimum can force overflow. */
-export function fittedGrid(count:number,width:number,height:number,preferred=320,groups=false){
- const total=Math.max(1,count),gap=8,w=Math.max(1,width),h=Math.max(1,height);let columns=1,size=0;
- for(let cols=1;cols<=total;cols++){const rows=Math.ceil(total/cols),candidate=Math.min((w-gap*(cols-1))/cols,(h-gap*(rows-1))/rows*(groups?1.35:1));if(candidate>size){columns=cols;size=candidate;}}
- return {columns,rows:Math.ceil(total/columns),size:Math.max(1,Math.min(preferred,size))};
+export const cardGap=(size:number)=>Math.max(2,Math.min(12,size*.04));
+export function balancedRows(count:number,rows:number){const base=Math.floor(count/Math.max(1,rows)),extra=count%Math.max(1,rows);return Array.from({length:Math.min(count,rows)},(_,i)=>base+(i<extra?1:0));}
+/** All rows use comparable counts; each row is centred by the shared renderer. */
+export function fittedGrid(count:number,width:number,height:number,preferred=360,groups=false){
+ const total=Math.max(1,count),w=Math.max(1,width),h=Math.max(1,height);let best={columns:1,rows:total,size:0,gap:2};
+ for(let proposed=1;proposed<=total;proposed++){const rows=Math.ceil(total/proposed),columns=Math.ceil(total/rows);let size=Math.min(preferred,w/columns,h/rows*(groups?1.35:1));for(let n=0;n<12;n++){const gap=groups?12:cardGap(size);size=Math.min(preferred,(w-gap*(columns-1))/columns,(h-gap*(rows-1))/rows*(groups?1.35:1));}if(size>best.size)best={columns,rows,size,gap:groups?12:cardGap(size)};}
+ return {...best,size:Math.max(1,Math.floor(best.size*64)/64)};
+}
+export function sortingGroupMetrics(count:number,width:number,height:number,bankSize:number){
+ const heading=height<180?44:64,available=Math.max(1,height-heading),preferred=Math.max(8,Math.min(200,bankSize*.78,(width-20)/2,available/2-4));
+ const columns=Math.max(1,Math.floor((width-16+cardGap(preferred))/(preferred+cardGap(preferred))));
+ const fit=fittedGrid(Math.max(count,columns*2),Math.max(1,width-18),available,preferred);
+ return {size:Math.min(preferred,fit.size),height:Math.min(height,heading+Math.max(2,fit.rows)*(fit.size+fit.gap)-fit.gap)};
 }

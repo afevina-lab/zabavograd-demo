@@ -1,3 +1,4 @@
+import {TaskSearch} from './TaskSearch.tsx';
 import {PreviewNotice} from './visual/compositions/PreviewNotice.tsx';
 import {ModalWindow} from './visual/compositions/ModalWindow.tsx';
 import {visualThemeVars} from './visual/foundation/visualThemeVars.ts';
@@ -143,6 +144,7 @@ function App(){
  useGameViewport(!!round&&!settingsOpen);
  return <div ref={gameRoot} className={`app v-root v-game-screen ${theme} ${round&&!settingsOpen?'game-active':''}`} style={visualThemeVars(theme,import.meta.env.BASE_URL)} {...themeAttributes(theme)}>
  {roundPlan.confirmation}<main><div className="v-workspace workspace">{settingsOpen&&<SettingsWindow game="Мемори" layout={{
+ taskSearch:<TaskSearch words={words} onPick={preset=>{setLearning(preset.learning);setFilters({...defaultFilters});setMode(preset.presentation==='pictures'?'image-image':'word-word');setPairs(Math.max(3,Math.min(8,preset.count)))}}/>,
  contentAs:"aside",contentClassName:"settings",
  primary:<><SettingsGroup disabled={!!active}><section className="v-settings-section settings-block" data-setup-section="material"><h2>Учебный материал</h2><MaterialSettings textDisplayProvided={mode==='word-word'||mode==='word-image'||captions} words={words} f={filters} setF={setFilter} l={learning} setL={setLearning}/>
 

@@ -2,3 +2,5 @@
 .v-field{display:flex;flex-direction:column;gap:var(--v-space-3);min-width:0}
 .v-field-label{line-height:1.4}
 .v-field-description{font-size:14px;line-height:1.4}
+
+.v-input[aria-invalid=true]{border-color:var(--ui-required);background:color-mix(in srgb,var(--ui-required) 8%,var(--ui-setup-field))}

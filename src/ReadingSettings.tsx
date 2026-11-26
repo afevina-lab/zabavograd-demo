@@ -19,10 +19,10 @@ export function ReadingSettings({l,setL,words,textDisplayProvided=false}:{l:Lear
  const closeLetters=()=>{letterDialog.current?.close();letterTrigger.current?.focus()};
  const saveLetters=()=>{update({available:draftAvailable,required:draftRequired.filter(c=>draftAvailable.includes(c))});closeLetters()};
  return <div className="v-reading-settings reading-settings">
- <div className="v-field-label field-label">{l.mode==='reading'?'Что читаем':'Материал для задания'}</div>
- <div className="v-reading-kinds reading-kinds">{([...(l.mode==='reading'?[['letters','Буквы']]:[]),['syllables','Слоги'],['words','Слова']] as [ContentKind,string][]).map(([kind,label])=><Choice className="v-choice check" key={kind} label={label} checked={kinds.includes(kind)} onChange={checked=>setL({...l,contentKinds:toggle(kinds,kind,checked) as ContentKind[]})}/>)}</div>
+
+ <div className="v-reading-kinds reading-kinds" data-field-state={kinds.length?"ready":"required"} aria-invalid={!kinds.length||undefined}>{([...(l.mode==='reading'?[['letters','Буквы']]:[]),['syllables','Слоги'],['words','Слова']] as [ContentKind,string][]).map(([kind,label])=><Choice className="v-choice check" key={kind} label={label} checked={kinds.includes(kind)} onChange={checked=>setL({...l,contentKinds:toggle(kinds,kind,checked) as ContentKind[]})}/>)}</div>
  {l.mode==='reading'&&<>{!textDisplayProvided&&<Choice className="v-choice check" kind="switch" label="Разделить на слоги" checked={!!r.splitSyllables} onChange={splitSyllables=>update({splitSyllables})}/>}
- <PickerTrigger className="letter-picker-trigger" ref={letterTrigger} onClick={openLetters} title="Выберите буквы" description={`Доступные: ${r.available.length} из 33 · Обязательные: ${r.required.length||'нет'}`} icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16v16H4zM7 16l3-8 3 8m-5-2h4M16 8v8m-2-4h4"/></svg>}/>
+ <PickerTrigger className="letter-picker-trigger" data-field-state={r.available.length?"ready":"required"} aria-invalid={!r.available.length||undefined} ref={letterTrigger} onClick={openLetters} title="Выберите буквы" description={`Доступные: ${r.available.length} из 33 · Обязательные: ${r.required.length||'нет'}`} icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16v16H4zM7 16l3-8 3 8m-5-2h4M16 8v8m-2-4h4"/></svg>}/>
  <PickerDialog ref={letterDialog} className="letter-picker-dialog" label="Выбор букв" onDismiss={()=>letterTrigger.current?.focus()} onConfirm={saveLetters} onCancel={closeLetters}>
    <h2>Выберите буквы</h2>
    <section className="v-letter-section letter-picker-section"><h3>Доступные буквы · {draftAvailable.length} из 33</h3>

@@ -6,7 +6,7 @@ const classes:MaterialPreviewClasses={root:'v-material-preview',meta:'v-preview-
 export function MaterialPreview({actions,children,message,classNames=classes}:{actions?:ReactNode;children?:ReactNode;message?:ReactNode;classNames?:MaterialPreviewClasses}){
  classNames=visualClasses(classes,classNames);
  return <section className={classNames.root} data-setup-section="preview" aria-label="Материал для игры">
-  {actions&&<div className={classNames.meta}><div className={classNames.actions}>{actions}</div></div>}
+  {actions&&<div className={classNames.meta}><span className="v-preview-label">В этой игре</span><div className={classNames.actions}>{actions}</div></div>}
   <FitCopy classNames={{root:classNames.well,text:classNames.text}}>{message?<p className={classNames.message} role="status">{message}</p>:children}</FitCopy>
  </section>;
 }

@@ -17,3 +17,6 @@
 .v-button[data-size=attached]{width:38px;height:38px;--v-button-height:38px;--v-button-padding:var(--v-space-2) 6px var(--v-space-2) var(--v-space-3);--v-button-radius:0 10px 10px 0}
 
 .v-control-button:focus-visible{outline:0;border-color:var(--ui-accent);filter:brightness(.92)}
+
+.v-button[data-size=suggestion]{--v-button-height:44px;--v-button-padding:var(--v-space-2) var(--v-space-3);display:flex;align-items:flex-start;flex-direction:column;gap:var(--v-space-1);text-align:start;border-radius:8px}
+.v-button[data-size=suggestion][aria-selected=true]{background:var(--ui-pale)}

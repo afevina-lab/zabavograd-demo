@@ -8,7 +8,7 @@ const classes:SelectClasses={root:'v-select',leading:'v-select-leading',caret:'v
 /** Native select semantics; required state is explicit, never inferred from visible wording. */
 export function SelectControl({icon='choices',children,classNames=classes,fieldState='ready',...props}:SelectHTMLAttributes<HTMLSelectElement>&{icon?:SelectIcon;classNames?:SelectClasses;fieldState?:'required'|'ready'}){
  classNames=visualClasses(classes,classNames);
- return <span data-field-state={fieldState} className={classNames.root+(props.disabled?' is-disabled':'')}>
+ return <span data-field-state={fieldState==='required'||props['aria-invalid']===true||props['aria-invalid']==='true'?'required':'ready'} className={classNames.root+(props.disabled?' is-disabled':'')}>
   <span className={classNames.leading} aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d={paths[icon]}/></svg></span>
   <select {...props}>{children}</select>
   <ControlWell className={classNames.caret}/>

@@ -1,0 +1,5 @@
+.v-task-search{position:relative;flex:1;min-width:120px;max-width:440px;margin-inline-start:var(--v-space-3)}
+.v-task-suggestions{position:absolute;inset-inline:0;top:calc(100% + 4px);z-index:var(--v-layer-popover);display:flex;flex-direction:column;max-height:min(40dvh,320px);overflow:auto;border:1px solid var(--ui-deep);border-radius:12px;padding:var(--v-space-2);background:var(--ui-setup-paper);box-shadow:0 8px 20px #0003}
+.v-task-suggestions>p{padding:var(--v-space-2);font-size:14px}
+.v-task-search-notice{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+@media(max-width:760px){.v-task-search{order:3;flex-basis:100%;max-width:none;margin-inline-start:0}.v-settings-heading{flex-wrap:wrap}}

@@ -1,3 +1,4 @@
+import {TaskSearch} from './TaskSearch.tsx';
 import {visualThemeVars} from './visual/foundation/visualThemeVars.ts';
 import {GameActions,ActionGroup} from './visual/compositions/GameActions.tsx';
 import {AnswerButton} from './visual/primitives/AnswerButton.tsx';
@@ -59,6 +60,7 @@ export function Transformations(){
  useGameViewport(started);
  return <div className={`app v-root v-game-screen ${started?'game-active':''}`} {...themeAttributes(theme)} style={visualThemeVars(theme,import.meta.env.BASE_URL)}>
  {roundPlan.confirmation}{!started?<SettingsWindow game="Превращения" layout={{
+ taskSearch:<TaskSearch words={library} onPick={preset=>{setLearning(preset.learning);setFilters({...defaultFilters});setMode('reading');setManual(null);setCount(preset.count)}}/>,
  contentAs:'main',contentClassName:'transformation-setup settings',
  primary:<><section className="v-settings-section settings-block" data-setup-section="material"><h2>Учебный материал</h2><MaterialSettings textDisplayProvided words={library} f={filters} setF={part=>setFilters(f=>({...f,...part}))} l={learning} setL={next=>{setLearning(next);if(next.mode==='reading')setMode('reading')}}/></section><section className="v-settings-section settings-block" data-setup-section="rules"><h2>Правила игры</h2><label className="v-choice check"><input type="checkbox" role="switch" checked={random} onChange={e=>setRandom(e.target.checked)}/>Перемешивать карточки</label>{roundPlan.settings(Math.max(1,count))}{limits.settings}</section></>,
  secondary:<section className="v-settings-section settings-block" data-setup-section="task"><h2>Задание</h2>{learning.mode!=='math'&&<GameSelect label="Задание" hideLabel value={mode} onChange={value=>setMode(value as TransformationMode)}><option value="small">Назови ласково</option><option value="many">Один — много</option><option value="reading">Чтение: слово — картинка</option></GameSelect>}{learning.mode!=='math'&&<TextDisplaySettings l={learning} setL={setLearning}/>}<QuantitySlider label="Количество заданий" value={count} min={1} max={Math.max(1,Math.min(20,candidates.length))} onChange={setCount}/></section>,

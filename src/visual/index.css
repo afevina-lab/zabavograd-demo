@@ -29,6 +29,7 @@
 @import './primitives/quantity.css' layer(primitives);
 @import './primitives/range.css' layer(primitives);
 @import './primitives/selection.css' layer(primitives);
+@import './compositions/task-search.css' layer(compositions);
 @import './compositions/settings.css' layer(compositions);
 @import './compositions/material-settings.css' layer(compositions);
 @import './compositions/sound-workshop.css' layer(compositions);

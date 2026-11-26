@@ -1,3 +1,4 @@
+import {TaskSearch} from './TaskSearch.tsx';
 import {visualThemeVars} from './visual/foundation/visualThemeVars.ts';
 import {GameActions} from './visual/compositions/GameActions.tsx';
 import {AnswerButton} from './visual/primitives/AnswerButton.tsx';
@@ -98,6 +99,7 @@ export function Conveyor(){
  useGameViewport(!!state);
  return <div className={'app v-root v-game-screen '+(state?'game-active':'')} {...themeAttributes(theme)} style={visualThemeVars(theme,import.meta.env.BASE_URL)}><main>
  {roundPlan.confirmation}{!state?<SettingsWindow game="Конвейер" layout={{
+ taskSearch:<TaskSearch words={words} onPick={preset=>{setLearning(preset.learning);setFilters({...defaultFilters});setMaterial(preset.learning.mode==='math'?'math':preset.presentation);setCondition('none');setManualIds(null);setMathKind(preset.learning.math?.kind||'examples');setMax(preset.learning.math?.target||10);setAdd(preset.learning.math?.add!==false);setSubtract(!!preset.learning.math?.subtract);setMultiply(!!preset.learning.math?.multiply);setDivide(!!preset.learning.math?.divide);setCount(preset.count)}}/>,
  contentAs:"section",contentClassName:"settings conveyor-settings",
  primary:<><section className="v-settings-section settings-block" data-setup-section="material"><h2>Учебный материал</h2><GameSelect label="Учебная задача" hideLabel value={task} onChange={value=>{const next=value;setTask(next);setMaterial(next==='math'?'math':next==='reading'?'words':'pictures');setLearning({...initialLearning,mode:next==='lexical'?'lexical':next==='sounds'?'automation':next==='structure'?'structure':next==='reading'?'reading':'any'});setCondition('none')}}><option value="naming">Называние</option><option value="lexical">Лексическая тема</option><option value="sounds">Работа со звуками</option><option value="structure">Слоговая структура</option><option value="reading">Чтение</option><option value="math">Математика</option></GameSelect>
  
