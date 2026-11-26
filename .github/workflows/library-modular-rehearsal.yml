@@ -18,7 +18,8 @@ jobs:
       - name: Check editor server bridge without deployment
         run: |
           node --check editor-service/server.mjs
-          node --test editor-service/model.test.mjs editor-service/modular-bridge.test.mjs
+          node --check public/editor/modular-client.mjs
+          node --test editor-service/model.test.mjs editor-service/modular-bridge.test.mjs editor-service/modular-client.test.mjs
       - name: Inventory direct consumers
         run: node scripts/library-consumer-audit.cjs "$RUNNER_TEMP/consumer-audit.json"
       - name: Rehearse migration and candidate update on real source
