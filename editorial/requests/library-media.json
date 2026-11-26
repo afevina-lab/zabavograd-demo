@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "request": {
+    "version": 1,
+    "mode": "candidate",
+    "source_sha256": "2342765ab2aae827ab89a2b9bbdcde08b9fbb14ccc5ba35a16879a12d51c5526",
+    "preview_sha256": "e32b2c5e148f28395a5ee253ef58e68d602e5ab3249981150720efd75d954757",
+    "operations": [],
+    "import_operations": [
+      {
+        "type": "create_noun",
+        "lemma": "удалённомедиапроверочныйпредмет",
+        "meaning": "временная техническая проверка, не словарное решение",
+        "categories": [
+          "Животный мир/Домашние животные/Детёныши"
+        ],
+        "proposed_weight": 10,
+        "reason": "Disposable remote transport probe; never approve"
+      },
+      {
+        "type": "link_webp",
+        "entry_id": "modular-noun-6376f8c34952efe0c84e8cad",
+        "lemma": "удалённомедиапроверочныйпредмет",
+        "meaning": "временная техническая проверка, не словарное решение",
+        "src": "/assets/words/modular-remote-media-ci-only.webp",
+        "sha256": "0ca39a4ec0dbebec58fd5886e817d257d88f2bd83832fce9091f6d51d7cd4184",
+        "reviewed": true,
+        "reason": "Synthetic test image, not an approved illustration"
+      }
+    ]
+  },
+  "media_preview_sha256": "bd98fa1aeceaed8f7f06b79b835a813cd56adb519c2f763c969d7a1be0036e13"
+}
