@@ -32,6 +32,27 @@ jobs:
           [[ "$mode" =~ ^(docs|client|full)$ ]]
           echo "mode=$mode" >> "$GITHUB_OUTPUT"
           echo "Check scope: $mode" >> "$GITHUB_STEP_SUMMARY"
+      - name: Check references to removed executable scripts
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! "$BEFORE" =~ ^[a-f0-9]{40}$ ]] || ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            echo "No comparable previous revision; full checks selected"; exit 0
+          fi
+          deleted=$(git diff --no-renames --diff-filter=D --name-only "$BEFORE" "$AFTER" -- scripts/)
+          while IFS= read -r script; do
+            [[ "$script" =~ \.(cjs|mjs|js|py|sh)$ ]] || continue
+            name=${script##*/}
+            if git grep -n -F -e "$name" -- scripts tests src editor-service public/editor .github/workflows package.json; then
+              echo "Executable reference to deleted script: $script"; exit 1
+            else
+              code=$?
+              [[ "$code" == 1 ]] || exit "$code"
+            fi
+          done <<< "$deleted"
       - name: Check isolated browser controller
         if: steps.scope.outputs.mode == 'client'
         run: |
@@ -54,6 +75,8 @@ jobs:
           node --check editor-service/server.mjs
           node --check public/editor/modular-client.mjs
           node --test editor-service/model.test.mjs editor-service/modular-bridge.test.mjs editor-service/modular-client.test.mjs editor-service/modular-read-cache.test.mjs
+      - name: Check preserved catalogue and media regressions
+        run: node --experimental-strip-types --test tests/library-contract.test.ts tests/image-import.test.ts tests/pack77-recovery.test.ts tests/editorial-gaps-published.test.ts
       - name: Inventory direct consumers
         run: node scripts/library-consumer-audit.cjs "$RUNNER_TEMP/consumer-audit.json"
       - name: Rehearse migration and candidate update on real source
@@ -268,7 +291,7 @@ jobs:
             if "$runner" "$writer" > "$RUNNER_TEMP/writer.log" 2>&1; then echo "Historical writer accepted: $writer"; exit 1; fi
             grep -F 'Direct V2 write disabled' "$RUNNER_TEMP/writer.log"
             printf '%s: rejected\n' "$writer" >> "$RUNNER_TEMP/switch-writer-rejected.log"
-          done < <(node -p 'require("./editorial/legacy-library-writers.json").scripts.join("\n")')
+          done < <(printf '%s\n' scripts/activate-safe-forms-20261123.py scripts/restore-image-pack-20261115.cjs)
           test ! -e outputs/library-v2.json
           cleanup
           trap - EXIT
