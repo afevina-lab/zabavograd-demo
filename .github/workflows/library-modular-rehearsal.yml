@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '24'
       - name: Run storage and editorial unit tests
-        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts
+        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts
       - name: Inventory direct consumers
         run: node scripts/library-consumer-audit.cjs "$RUNNER_TEMP/consumer-audit.json"
       - name: Rehearse migration and candidate update on real source
@@ -72,6 +72,15 @@ jobs:
           python3 -m pip install --disable-pip-version-check pymorphy3==2.0.6
           ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" python3 scripts/extend-morphology-20261123.py --report "$RUNNER_TEMP/morphology-review.json" --candidate-dir "$RUNNER_TEMP/morphology-candidate"
           git diff --exit-code
+      - name: Generate bounded fresh analysis and stage initial candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" python3 scripts/analyze-pending-words.py --morphology-only --limit 20 --output "$RUNNER_TEMP/fresh-analysis.json" --report "$RUNNER_TEMP/fresh-analysis.md"
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" node scripts/merge-auto-analysis.cjs "$RUNNER_TEMP/fresh-analysis.json" "$RUNNER_TEMP/initial-candidate" > "$RUNNER_TEMP/initial-analysis-result.json"
+          cat "$RUNNER_TEMP/initial-analysis-result.json"
+          node -e 'const fs=require("fs"),s=require("./scripts/library-store.cjs"),r=s.load(process.argv[1]),a=require("node:assert/strict");const d=JSON.parse(fs.readFileSync(process.argv[2]));a.equal(d.source.sha256,r.source_sha256);a(d.entries.length<=20);const p=require("./scripts/library-initial-analysis.cjs");a.throws(()=>p.plan(r.db,{...d,source:{sha256:"stale"}},r.source_sha256),/Stale/)' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/fresh-analysis.json"
+          git diff --exit-code
       - uses: actions/upload-artifact@v4
         with:
           name: library-integration-rehearsal
@@ -82,6 +91,8 @@ jobs:
             ${{ runner.temp }}/archive-rejection.log
             ${{ runner.temp }}/analysis-candidate-report.json
             ${{ runner.temp }}/morphology-review.json
+            ${{ runner.temp }}/fresh-analysis.json
+            ${{ runner.temp }}/initial-analysis-result.json
             ${{ runner.temp }}/modules
             ${{ runner.temp }}/storage-check/optimization.json
           retention-days: 14

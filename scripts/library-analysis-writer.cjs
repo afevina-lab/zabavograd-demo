@@ -56,6 +56,11 @@ function stage({source,expected,next,dest}){
  const current=load(source);
  assert.equal(current.source_sha256,expected,'Stale modular source; rerun analyzer');
  const stats=verifyExtension(current.db,next);
+ return stageVerified(current,next,dest,stats);
+}
+// Shared finalization for internally generated, independently restricted candidates.
+function stageVerified(current,next,dest,stats){
+ const expected=current.source_sha256;
  verifyArchive(next,baseline);validateLibrary(next);
  if(!stats.changed)return {...stats,status:'no_changes'};
  const m=create(dest,next);
@@ -65,7 +70,7 @@ function stage({source,expected,next,dest}){
  }catch(e){fs.rmSync(dest,{recursive:true,force:true});throw e;}
  return {...stats,status:'validated_candidate_not_approved',source_sha256:expected,result_source_sha256:m.source_sha256,delta:delta(current.manifest,m)};
 }
-module.exports={verifyExtension,stage};
+module.exports={verifyExtension,stage,stageVerified};
 if(require.main===module)try{
  const [source,expected,input,dest,...extra]=process.argv.slice(2);
  if(!source||!expected||!input||!dest||extra.length)fail('Usage: library-analysis-writer.cjs SOURCE_DIR SHA256 PROPOSED_JSON NEW_DIR');
