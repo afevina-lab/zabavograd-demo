@@ -73,6 +73,7 @@ function build(db,draft,syll,meta,tasks){
   phonetics:r=>r.kind==='word'&&!r.phonetic.stored_tokens,
   phonetic_review:r=>r.phonetic.status==='automatic_candidate_needs_review',
   semantic_proposals:r=>r.semantic_review_proposals>0,
+  phonetic_proposals:r=>r.phonetic.review_proposal===true,
   morphology:r=>r.kind==='word'&&['pending_automatic_analysis',null].includes(r.morphology.status),
   morphology_review:r=>r.morphology.status==='automatic_candidate_needs_review',
   category_review:r=>r.kind==='word'&&!r.categories.length,

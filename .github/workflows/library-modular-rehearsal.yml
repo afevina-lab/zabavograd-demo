@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '24'
       - name: Run storage and editorial unit tests
-        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts tests/library-modular-request.test.ts tests/library-phonetic-review.test.ts tests/library-semantic-proposals.test.ts
+        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts tests/library-modular-request.test.ts tests/library-phonetic-review.test.ts tests/library-semantic-proposals.test.ts tests/library-editorial-decisions.test.ts
       - name: Inventory direct consumers
         run: node scripts/library-consumer-audit.cjs "$RUNNER_TEMP/consumer-audit.json"
       - name: Rehearse migration and candidate update on real source
@@ -140,6 +140,18 @@ jobs:
           ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/semantic-reconstructed" node scripts/build-library-index.cjs "$RUNNER_TEMP/semantic-index"
           node -e 'const a=require("node:assert/strict"),fs=require("fs"),m=JSON.parse(fs.readFileSync(process.argv[1]));a.equal(m.queues["semantic-proposals"].count,2)' "$RUNNER_TEMP/semantic-index/manifest.json"
           git diff --exit-code
+      - name: Rehearse explicit acceptance and rejection without source mutation
+        shell: bash
+        run: |
+          set -euo pipefail
+          node -e 'const fs=require("fs"),s=require("./scripts/library-store.cjs"),d=require("./scripts/library-editorial-decisions.cjs"),r=s.load(process.argv[1]),e=r.db.entries.find(x=>x.semantic_review_proposals?.length),p=e.semantic_review_proposals[0];for(const action of ["accept","reject"]){const decision={domain:"semantic",entry_id:e.id,proposal_id:p.id,proposal_sha256:d.digest(p),action,reason:"Disposable CI decision; not an editorial instruction",...(action==="accept"?{sense_checked:true,typical_for_children:true,independently_authored:true}:{})};fs.writeFileSync(process.argv[2]+"/decision-"+action+".json",JSON.stringify({version:1,mode:"preview",source_sha256:r.source_sha256,operations:[],review_decisions:[decision]}))}' "$RUNNER_TEMP/semantic-reconstructed" "$RUNNER_TEMP"
+          for action in accept reject; do
+            node scripts/library-modular-request.cjs "$RUNNER_TEMP/semantic-reconstructed" "$RUNNER_TEMP/decision-$action.json" "$RUNNER_TEMP/decision-$action-preview"
+            node -e 'const fs=require("fs"),r=JSON.parse(fs.readFileSync(process.argv[1]));fs.writeFileSync(process.argv[2],JSON.stringify({version:1,mode:"candidate",source_sha256:r.source_sha256,preview_sha256:r.preview_sha256,operations:[],review_decisions:r.review_decisions}))' "$RUNNER_TEMP/decision-$action-preview/result.json" "$RUNNER_TEMP/decision-$action-candidate.json"
+            node scripts/library-modular-request.cjs "$RUNNER_TEMP/semantic-reconstructed" "$RUNNER_TEMP/decision-$action-candidate.json" "$RUNNER_TEMP/decision-$action-output"
+            node -e 'const fs=require("fs"),path=require("path"),a=require("node:assert/strict"),s=require("./scripts/library-store.cjs"),p=require("./scripts/library-semantic-proposals.cjs"),sem=require("./scripts/semantic-review.cjs"),[src,out,dest,action]=process.argv.slice(1),r=JSON.parse(fs.readFileSync(path.join(out,"result.json")));a.equal(r.status,"validated_candidate_not_approved");fs.cpSync(src,dest,{recursive:true});for(const f of r.bundle.removed_files)fs.unlinkSync(path.join(dest,f));for(const f of ["manifest.json",...r.bundle.changed_files]){const target=path.join(dest,f);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(path.join(out,"delta",f),target)}const x=s.load(src),y=s.load(dest);a.equal(y.source_sha256,r.result_source_sha256);a.equal(y.db.relations.length,x.db.relations.length+(action==="accept"?1:0));a.equal(sem.validateExport(y.db).relations.length,sem.validateExport(x.db).relations.length+(action==="accept"?1:0));a.equal(p.counts(y.db).size,0);a.equal(p.counts(x.db).size,2);a.equal(y.db.editorial_decision_history.at(-1).decision.action,action);console.log("Decision rehearsal passed:",action)' "$RUNNER_TEMP/semantic-reconstructed" "$RUNNER_TEMP/decision-$action-output" "$RUNNER_TEMP/decision-$action-rebuilt" "$action"
+          done
+          git diff --exit-code
       - uses: actions/upload-artifact@v4
         with:
           name: library-integration-rehearsal
@@ -160,6 +172,8 @@ jobs:
             ${{ runner.temp }}/edit-candidate-output
             ${{ runner.temp }}/phonetic-candidate-output
             ${{ runner.temp }}/semantic-candidate-output
+            ${{ runner.temp }}/decision-accept-output
+            ${{ runner.temp }}/decision-reject-output
             ${{ runner.temp }}/modules
             ${{ runner.temp }}/storage-check/optimization.json
           retention-days: 14

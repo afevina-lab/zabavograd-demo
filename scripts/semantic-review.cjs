@@ -66,6 +66,16 @@ function review(db,proposalBundles,decisions){
  validateExport(output);
  return output;
 }
+function auditedModularEdge(db,r){
+ const p=r.provenance,a=r.approval;
+ if(p?.source!=='zabavograd_editorial'||p.authorship!=='independent'||p.revision!=='modular-editorial-decision-v1'||a?.review_method!=='explicit_modular_editorial_decision'||a.human_reviewed!==false)return false;
+ const history=(db.editorial_decision_history||[]).filter(h=>h.id===p.decision_id);
+ if(history.length!==1)return false;
+ const h=history[0],d=h.decision,q=h.proposal;
+ const hash=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex');
+ if(!d||!q||d.domain!=='semantic'||d.action!=='accept'||d.sense_checked!==true||d.typical_for_children!==true||d.independently_authored!==true||d.entry_id!==q.subject?.id||d.proposal_id!==q.id||q.source!=='zabavograd_editorial'||q.status!=='suggested'||q.usable_for_generation!==false)return false;
+ return h.id==='decision-'+hash(d).slice(0,24)&&h.relation_id===r.id&&d.proposal_sha256===hash(q)&&p.proposal_sha256===d.proposal_sha256&&r.id==='semantic-decision-'+hash([q.type,q.subject.id,q.object.id]).slice(0,24)&&q.type===r.type&&q.subject.id===r.subject.id&&q.object.id===r.object.id&&q.subject.lemma===r.subject.lemma&&q.object.lemma===r.object.lemma&&r.inverse_type===inverse[r.type];
+}
 function validateExport(db){
  const entries=catalog(db),relations=[],families=[],seen=new Set();
  for(const r of db.relations){
@@ -81,7 +91,7 @@ function validateExport(db){
    const originalEditorial=r.provenance?.source==='zabavograd_editorial'&&
     r.provenance.authorship==='independent'&&['v2-obvious-relations-20261109-v1','v2-attribute-relations-20261109-v1','v2-obvious-relations-20261123-v1'].includes(r.provenance.revision)&&
     r.approval?.review_method==='independent_explicit_pair'&&r.approval?.typical_for_children===true;
-   if(!clearedExternal&&!originalEditorial)throw Error('Non-cleared external relation');
+   if(!clearedExternal&&!originalEditorial&&!auditedModularEdge(db,r))throw Error('Non-cleared external relation');
    relations.push({id:r.id,type:r.type,subject_id:r.subject.id,object_id:r.object.id,inverse_type:inverse[r.type],provenance:r.provenance});
   }else{
    for(const field of ['male','female','offspring'])if(r[field]?.id&&!entries.has(r[field].id))throw Error('Broken family reference');
