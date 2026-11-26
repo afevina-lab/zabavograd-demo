@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '24'
       - name: Run storage and editorial unit tests
-        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts
+        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts
       - name: Inventory direct consumers
         run: node scripts/library-consumer-audit.cjs "$RUNNER_TEMP/consumer-audit.json"
       - name: Rehearse migration and candidate update on real source
@@ -76,10 +76,22 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" python3 scripts/analyze-pending-words.py --morphology-only --limit 20 --output "$RUNNER_TEMP/fresh-analysis.json" --report "$RUNNER_TEMP/fresh-analysis.md"
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" python3 scripts/analyze-pending-words.py --morphology-only --initial-only --limit 20 --output "$RUNNER_TEMP/fresh-analysis.json" --report "$RUNNER_TEMP/fresh-analysis.md"
           ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" node scripts/merge-auto-analysis.cjs "$RUNNER_TEMP/fresh-analysis.json" "$RUNNER_TEMP/initial-candidate" > "$RUNNER_TEMP/initial-analysis-result.json"
           cat "$RUNNER_TEMP/initial-analysis-result.json"
           node -e 'const fs=require("fs"),s=require("./scripts/library-store.cjs"),r=s.load(process.argv[1]),a=require("node:assert/strict");const d=JSON.parse(fs.readFileSync(process.argv[2]));a.equal(d.source.sha256,r.source_sha256);a(d.entries.length<=20);const p=require("./scripts/library-initial-analysis.cjs");a.throws(()=>p.plan(r.db,{...d,source:{sha256:"stale"}},r.source_sha256),/Stale/)' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/fresh-analysis.json"
+          git diff --exit-code
+      - name: Build and verify derived SQLite search index
+        shell: bash
+        run: |
+          set -euo pipefail
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" node scripts/library-sqlite.cjs build "$RUNNER_TEMP/library.sqlite" > "$RUNNER_TEMP/sqlite-report.json"
+          cat "$RUNNER_TEMP/sqlite-report.json"
+          echo '{"weight":100,"sounds":["к"],"exclude_sounds":["р","р\u0027"],"has_image":true,"limit":10}' > "$RUNNER_TEMP/sqlite-request.json"
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" node scripts/library-sqlite.cjs query "$RUNNER_TEMP/library.sqlite" "$RUNNER_TEMP/sqlite-request.json" > "$RUNNER_TEMP/sqlite-result.json"
+          node -e 'const fs=require("fs"),r=JSON.parse(fs.readFileSync(process.argv[1])),a=require("node:assert/strict");a(r.total>0);a(r.rows.length<=10);a(r.rows.every(x=>x.weight===100&&x.illustrations>0));console.log("Combined query total:",r.total)' "$RUNNER_TEMP/sqlite-result.json"
+          if ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/candidate" node scripts/library-sqlite.cjs query "$RUNNER_TEMP/library.sqlite" "$RUNNER_TEMP/sqlite-request.json" > "$RUNNER_TEMP/sqlite-stale.log" 2>&1; then echo "Stale index accepted"; exit 1; fi
+          grep -F 'Stale index' "$RUNNER_TEMP/sqlite-stale.log"
           git diff --exit-code
       - uses: actions/upload-artifact@v4
         with:
@@ -93,6 +105,9 @@ jobs:
             ${{ runner.temp }}/morphology-review.json
             ${{ runner.temp }}/fresh-analysis.json
             ${{ runner.temp }}/initial-analysis-result.json
+            ${{ runner.temp }}/library.sqlite
+            ${{ runner.temp }}/sqlite-report.json
+            ${{ runner.temp }}/sqlite-result.json
             ${{ runner.temp }}/modules
             ${{ runner.temp }}/storage-check/optimization.json
           retention-days: 14

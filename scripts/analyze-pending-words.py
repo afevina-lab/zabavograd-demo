@@ -229,6 +229,7 @@ def run():
  parser.add_argument('--limit', type=int)
  parser.add_argument('--weight', type=int, choices=[0,10,20,30,50,70,100])
  parser.add_argument('--morphology-only', action='store_true')
+ parser.add_argument('--initial-only', action='store_true', help='Only fields still pending initial analysis')
  args=parser.parse_args()
  if args.limit is not None and args.limit<1: parser.error('limit must be positive')
  if 'ZABAVOGRAD_LIBRARY_MODULES' in os.environ and (not args.output or not args.report): parser.error('modular mode requires explicit draft and report output paths')
@@ -242,8 +243,9 @@ def run():
  for entry in entries:
   if args.weight is not None and (entry.get("selection") or {}).get("base_weight")!=args.weight: continue
   if args.limit is not None and len(proposals)>=args.limit: break
-  pending_ph=(entry.get("phonetic_tags") or {}).get("status") in ("pending_automatic_analysis","automatic_candidate_needs_review")
-  pending_mo=(entry.get("morphology") or {}).get("status") in ("pending_automatic_analysis","automatic_candidate_needs_review")
+  pending_statuses=("pending_automatic_analysis",) if args.initial_only else ("pending_automatic_analysis","automatic_candidate_needs_review")
+  pending_ph=(entry.get("phonetic_tags") or {}).get("status") in pending_statuses
+  pending_mo=(entry.get("morphology") or {}).get("status") in pending_statuses
   if args.morphology_only: pending_ph=False
   if not(pending_ph or pending_mo):
    continue
@@ -263,7 +265,7 @@ def run():
  out={
   "schema_version":1,"generated_at":datetime.now(timezone.utc).isoformat(timespec="seconds"),
   "source":source,"status":"DRAFT_ONLY_NOT_APPROVED",
-  "scope":{"weight":args.weight,"limit":args.limit,"morphology_only":args.morphology_only},
+  "scope":{"weight":args.weight,"limit":args.limit,"morphology_only":args.morphology_only,"initial_only":args.initial_only},
   "tools":{"morphology":"pymorphy3","phonetics":"nsu-ai/russian_g2p"},
   "note":"Draft morphology needs review; draft G2P is used in automatic tasks only for unambiguously letter-aligned target phonemes, by author decision. V2 source is unchanged.",
   "stats":counts,"entries":proposals,
