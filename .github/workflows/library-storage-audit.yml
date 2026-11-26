@@ -5,6 +5,8 @@ on:
     paths:
       - 'scripts/library-storage-audit.cjs'
       - 'tests/library-storage-audit.test.ts'
+      - 'scripts/library-storage-optimize.cjs'
+      - 'tests/library-storage-optimize.test.ts'
       - 'outputs/library-v2.json'
       - 'outputs/library-v2-auto-analysis.json'
       - 'scripts/export-library.cjs'
@@ -19,15 +21,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - run: node --experimental-strip-types --test tests/library-storage-audit.test.ts
+      - run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts
       - name: Verify source and all three runtime exports
         run: |
           node scripts/check-library-v2.cjs
           node scripts/library-storage-audit.cjs "$RUNNER_TEMP/storage-audit" --verify-runtime
+          node scripts/library-storage-optimize.cjs "$RUNNER_TEMP/storage-optimize"
           git diff --exit-code
           node scripts/check-library-v2.cjs
       - uses: actions/upload-artifact@v4
         with:
           name: storage-audit
-          path: ${{ runner.temp }}/storage-audit
+          path: |
+            ${{ runner.temp }}/storage-audit/audit.json
+            ${{ runner.temp }}/storage-optimize
           retention-days: 14

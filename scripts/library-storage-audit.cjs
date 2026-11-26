@@ -9,7 +9,7 @@ const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 const bytes=x=>Buffer.byteLength(JSON.stringify(x));
 const own=(x,k)=>Object.hasOwn(x,k);
 const obj=xs=>Object.fromEntries(xs);
-const bucket=id=>hash(id).slice(0,2); // 256 stable shards, no theme-based duplication
+const bucket=(id,count=256)=>{assert([16,32,64,128,256].includes(count),'Unsupported shard count');return (parseInt(hash(id).slice(0,2),16)%count).toString(16).padStart(2,'0');};
 const domains={
  phonetics:['phonetic_tags','phonetics'],
  morphology:['morphology','grammar','word_forms','forms','word_formation','derivation'],
@@ -18,7 +18,8 @@ const domains={
  translations:['translations','multilingual','foreign_languages'],
  illustrations:['illustrations'],
  machine:['machine_analysis'],
- archive:['legacy_source']
+ archive:['legacy_source'],
+ shared:['__storage_shared_values']
 };
 const domain=new Map(Object.entries(domains).flatMap(([g,keys])=>keys.map(k=>[k,g])));
 function ids(rows,label){
@@ -28,11 +29,13 @@ function ids(rows,label){
  return m;
 }
 function compactRows(rows){return '[\n'+rows.map(r=>JSON.stringify(r)).join(',\n')+'\n]\n';}
-function split(db,sourceSha){
+function split(db,sourceSha,counts={}){
+ const count=g=>counts[g]??256;
+ for(const [g,n] of Object.entries(counts)){assert(/^(entries\/[a-z]+|relations)$/.test(g));bucket('probe',n);}
  ids(db.entries,'entries');ids(db.relations,'relations');
  const shards=new Map(),entryOrder=[],relationOrder=[];
  const add=(group,id,row)=>{
-  const f=group+'/'+bucket(id)+'.json';
+  const f=group+'/'+bucket(id,count(group))+'.json';
   if(!shards.has(f))shards.set(f,[]);
   shards.get(f).push(row);
  };
@@ -55,12 +58,12 @@ function split(db,sourceSha){
  files.set('entry-order.json',compactRows(entryOrder));
  files.set('relation-order.json',compactRows(relationOrder));
  for(const [file,rows] of [...shards].sort((a,b)=>a[0].localeCompare(b[0])))files.set(file,compactRows(rows));
- const manifest={version:1,source_sha256:sourceSha,top_keys:Object.keys(db),entries:db.entries.length,relations:db.relations.length,categories:db.categories.length,files:obj([...files].map(([f,s])=>[f,{sha256:hash(s),bytes:Buffer.byteLength(s)}]))};
+ const manifest={version:1,shard_counts:counts,source_sha256:sourceSha,top_keys:Object.keys(db),entries:db.entries.length,relations:db.relations.length,categories:db.categories.length,files:obj([...files].map(([f,s])=>[f,{sha256:hash(s),bytes:Buffer.byteLength(s)}]))};
  return {manifest,files};
 }
 function restore(manifest,read){
  assert.equal(manifest.version,1);
- const data=new Map();
+ const data=new Map(),count=g=>manifest.shard_counts?.[g]??256;
  for(const [f,info] of Object.entries(manifest.files)){
   assert(/^(metadata|categories|entry-order|relation-order)\.json$|^(entries\/[a-z]+|relations)\/[a-f0-9]{2}\.json$/.test(f),'Invalid shard path '+f);
   const content=read(f);assert.equal(hash(content),info.sha256,'Corrupt shard '+f);assert.equal(Buffer.byteLength(content),info.bytes,'Shard size mismatch '+f);
@@ -73,11 +76,11 @@ function restore(manifest,read){
  for(const [f,rows] of data){
   if(f.startsWith('entries/')){
    const g=f.split('/')[1];
-   for(const r of rows){assert(fields.has(r.id),'Unknown entry '+r.id);assert.equal(f,'entries/'+g+'/'+bucket(r.id)+'.json','Wrong shard '+r.id);const row=fields.get(r.id);
+   for(const r of rows){assert(fields.has(r.id),'Unknown entry '+r.id);assert.equal(f,'entries/'+g+'/'+bucket(r.id,count('entries/'+g))+'.json','Wrong shard '+r.id);const row=fields.get(r.id);
     for(const [k,v] of Object.entries(r.fields)){assert.equal(domain.get(k)||'core',g,'Wrong field group '+k);assert(!row.has(k),'Duplicate field '+r.id+' '+k);row.set(k,v);}
    }
   }else if(f.startsWith('relations/')){
-   for(const r of rows){assert.equal(f,'relations/'+bucket(r.id)+'.json','Wrong relation shard');assert(!relations.has(r.id),'Duplicate relation '+r.id);relations.set(r.id,r);}
+   for(const r of rows){assert.equal(f,'relations/'+bucket(r.id,count('relations'))+'.json','Wrong relation shard');assert(!relations.has(r.id),'Duplicate relation '+r.id);relations.set(r.id,r);}
   }
  }
  const entries=[...order.values()].map(({id,keys})=>{
@@ -145,5 +148,5 @@ function main(){
  fs.writeFileSync(path.join(output,'audit.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({entries:report.entries,relations:report.relations,categories:report.categories,source_bytes:report.source_bytes,archive:report.archive,overlap:report.overlap,largest_fields:Object.entries(report.fields).slice(0,10),layout:report.layout,runtime_sha256:report.runtime_sha256},null,2));
 }
-module.exports={split,restore,audit,bucket};
+module.exports={split,restore,audit,bucket,verifyRuntime};
 if(require.main===module)try{main();}catch(e){console.error(e.stack);process.exitCode=1;}
