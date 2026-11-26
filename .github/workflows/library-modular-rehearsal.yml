@@ -19,7 +19,7 @@ jobs:
         run: |
           node --check editor-service/server.mjs
           node --check public/editor/modular-client.mjs
-          node --test editor-service/model.test.mjs editor-service/modular-bridge.test.mjs editor-service/modular-client.test.mjs
+          node --test editor-service/model.test.mjs editor-service/modular-bridge.test.mjs editor-service/modular-client.test.mjs editor-service/modular-read-cache.test.mjs
       - name: Inventory direct consumers
         run: node scripts/library-consumer-audit.cjs "$RUNNER_TEMP/consumer-audit.json"
       - name: Rehearse migration and candidate update on real source
@@ -109,6 +109,9 @@ jobs:
           if ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" node scripts/library-request.cjs "$RUNNER_TEMP/remote-stale-request.json" "$RUNNER_TEMP/remote-stale-result.json"; then echo "Stale remote request accepted"; exit 1; fi
           test ! -e "$RUNNER_TEMP/remote-stale-result.json"
           git diff --exit-code
+      - name: Verify cached reads against real modular SQLite result
+        run: |
+          node --input-type=module -e 'import fs from "node:fs";import assert from "node:assert/strict";import {makeReadCache} from "./editor-service/modular-read-cache.mjs";const p=process.env.RUNNER_TEMP,raw=fs.readFileSync("outputs/library-v2.json"),c=makeReadCache({repo:"afevina-lab/zabavograd-demo",loadSnapshot:async()=>raw});try{const request=async()=>({sha:"a".repeat(40),commit:{tree:{sha:"b".repeat(40)}}});const q=JSON.parse(fs.readFileSync(p+"/remote-sqlite-request.json"));const actual=(await c.query(request,q)).report,expected=JSON.parse(fs.readFileSync(p+"/remote-sqlite-result.json"));assert.equal(actual.source_sha256,expected.source_sha256);assert.equal(actual.total,expected.total);assert.deepEqual(actual.rows,expected.rows);console.log("Cached query matches remote:",actual.total)}finally{c.close()}'
       - name: Exercise exact-field inspection through remote query runner
         shell: bash
         run: |

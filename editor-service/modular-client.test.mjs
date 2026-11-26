@@ -56,3 +56,9 @@ test('rejects unsupported operations, stale rows and excess pagination',async()=
  await assert.rejects(()=>c.query('sqlite',{limit:41}),/Лимит/);
  await assert.rejects(()=>c.requestPreview({operations:Array(31).fill({})}),/30 операций/);
 });
+
+test('cached read pins result and supports exact-field operations without ticket',async()=>{
+ const client=createModularClient(async(route,body)=>{assert.equal(route,'/api/modular/read');return {status:'cached_result',report:{scope,mode:'query',command:body.command,source_commit:commit,source_sha256:source,request_sha256:crypto.createHash('sha256').update(JSON.stringify(body,null,2)+'\n').digest('hex'),rows:[row]}}});
+ await client.cachedQuery('inspect',{id:'a',fields:['/selection/base_weight']});
+ assert.equal(client.state().source_sha256,source);assert.equal(client.operation(row,'/selection/base_weight',70).value,70);assert.equal(client.state().pending.length,0);
+});

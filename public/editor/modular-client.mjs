@@ -44,6 +44,22 @@ export function createModularClient(api){
    return r;
   });
  }
+ function cachedQuery(command,options={},fresh=false){
+  return exclusive(async()=>{
+   check(commands.has(command),'Неизвестный поисковый запрос');
+   check(options&&typeof options==='object'&&!Array.isArray(options),'Неверные параметры');
+   check(options.limit===undefined||Number.isInteger(options.limit)&&options.limit>=1&&options.limit<=40,'Лимит от 1 до 40');
+   if(fresh)check(![...jobs.values()].some(j=>j.status==='submitted'),'Сначала завершите или отмените ожидающие запросы');
+   const body={version:1,mode:'query',command,options:clone(options)};
+   if(!fresh&&source)body.source_sha256=source;
+   const expected=await requestHash(body),result=await api('/api/modular/read',body),r=result?.report;
+   check(result?.status==='cached_result'&&r?.scope===scope&&r.mode==='query'&&r.command===command&&r.request_sha256===expected&&commit.test(r.source_commit||'')&&hash.test(r.source_sha256||''),'Отчёт не соответствует запросу');
+   check(!body.source_sha256||body.source_sha256===r.source_sha256,'Изменилась версия источника');
+   if(command!=='inventory')check(Array.isArray(r.rows)&&r.rows.length<=40,'Некорректная выборка');
+   if(fresh||source!==r.source_sha256)preview=null;
+   source=r.source_sha256;latest=clone(r);return clone(result);
+  });
+ }
  function inspect(id,paths=[...fields]){
   check(typeof id==='string'&&id.length&&id.length<=256,'Нужен точный ID');
   return query('inspect',{id,fields:paths,limit:1});
@@ -114,5 +130,5 @@ export function createModularClient(api){
   });
  }
  function abandon(ticket){check(!busy,'Другой запрос выполняется');const j=jobs.get(ticket);check(j?.status==='submitted','Нет ожидающего запроса');j.status='abandoned';}
- return {state,query,inspect,operation,requestPreview,requestCandidate,collect,abandon};
+ return {state,query,cachedQuery,inspect,operation,requestPreview,requestCandidate,collect,abandon};
 }
