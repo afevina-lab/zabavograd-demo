@@ -3,6 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
 const {load,planPatch,build,delta,fingerprint}=require('./library-store.cjs');
 const {stageVerified}=require('./library-analysis-writer.cjs');
+const phoneticReview=require('./library-phonetic-review.cjs');
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 const digest=x=>sha(JSON.stringify(x));
 const weights=new Set([0,10,20,30,50,70,100]);
@@ -24,6 +25,7 @@ function validate(r){
   assert(typeof o.expect.exists==='boolean'&&o.expect.exists===Object.hasOwn(o.expect,'value'),'Exact prior value required');
   if(o.path==='/selection/base_weight')assert(weights.has(o.value),'Invalid weight');
   else if(textFields.has(o.path))assert(typeof o.value==='string'&&o.value.trim()===o.value&&o.value.length>0&&o.value.length<=160,'Invalid morphology text');
+  else if(o.path===phoneticReview.PROPOSAL_PATH){assert(o.expect.exists===false,'Existing review cannot be overwritten');phoneticReview.validateProposal(o.value);}
   else assert.fail('Path not enabled for remote modular edits: '+o.path);
  }
  return r;
@@ -31,10 +33,13 @@ function validate(r){
 function prepare(current,r){
  validate(r);
  assert.equal(r.source_sha256,current.source_sha256,'Stale source; query again');
+ const byId=new Map(current.db.entries.map(e=>[e.id,e]));
+ const reviews=r.operations.filter(o=>o.path===phoneticReview.PROPOSAL_PATH).map(o=>{const e=byId.get(o.id);assert(e,'Unknown word ID '+o.id);return phoneticReview.inspect(e,o.value);});
  const planned=planPatch(current,{version:1,source_sha256:r.source_sha256,operations:r.operations});
  const newManifest=build(planned.db).manifest,changes=planned.changes;
  const diff=delta(current.manifest,newManifest),target=fingerprint(planned.db);
  const preview={version:1,source_sha256:current.source_sha256,result_source_sha256:target,operations:r.operations,changes,delta:diff};
+ if(reviews.length)preview.phonetic_reviews=reviews;
  const preview_sha256=digest(preview);
  if(r.mode==='candidate')assert.equal(r.preview_sha256,preview_sha256,'Preview mismatch; generate a new preview');
  return {planned,preview,preview_sha256,newManifest};

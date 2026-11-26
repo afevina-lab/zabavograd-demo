@@ -49,7 +49,7 @@ function build(db,draft,syll,meta,tasks){
   const rel=relations.get(e.id)||{total:0,by_type:{},verified:0,suggested:0};
   return {id:e.id,lemma:e.lemma,weight,kind:e.kind??null,pos:e.part_of_speech??null,
    categories:(e.categories||[]).map(c=>c.path),
-   phonetic:{status:status(e.phonetic_tags),stored_tokens:storedPh,draft_status:draftMatches?status(d.phonetic):null,draft_tokens:draftMatches?hasTokens(d.phonetic):false},
+   phonetic:{status:status(e.phonetic_tags),stored_tokens:storedPh,review_proposal:e.phonetic_tags?.review_proposal?.status==='suggested',draft_status:draftMatches?status(d.phonetic):null,draft_tokens:draftMatches?hasTokens(d.phonetic):false},
    morphology:{status:status(e.morphology),stored_candidate_forms:Boolean(storedForms),draft_status:draftMatches?status(d.morphology):null},
    metadata_status:e.metadata_completion||null,
    syllable_type:syllFresh?(syllTypes.get(e.id)??null):null,

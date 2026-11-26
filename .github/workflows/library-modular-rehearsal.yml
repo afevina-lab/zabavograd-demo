@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '24'
       - name: Run storage and editorial unit tests
-        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts tests/library-modular-request.test.ts
+        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts tests/library-modular-request.test.ts tests/library-phonetic-review.test.ts
       - name: Inventory direct consumers
         run: node scripts/library-consumer-audit.cjs "$RUNNER_TEMP/consumer-audit.json"
       - name: Rehearse migration and candidate update on real source
@@ -114,6 +114,20 @@ jobs:
           node scripts/library-modular-request.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/edit-candidate.json" "$RUNNER_TEMP/edit-candidate-output"
           node -e 'const fs=require("fs"),path=require("path"),a=require("node:assert/strict"),s=require("./scripts/library-store.cjs"),[src,out,dest]=process.argv.slice(1),r=JSON.parse(fs.readFileSync(path.join(out,"result.json")));a.equal(r.status,"validated_candidate_not_approved");a.equal(r.changes.length,1);fs.cpSync(src,dest,{recursive:true});for(const f of r.bundle.removed_files)fs.unlinkSync(path.join(dest,f));for(const f of ["manifest.json",...r.bundle.changed_files]){const target=path.join(dest,f);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(path.join(out,"delta",f),target)}const candidate=s.load(dest);a.equal(candidate.source_sha256,r.result_source_sha256);a.equal(candidate.db.entries.find(e=>e.id===r.changes[0].id).selection.base_weight,70);a.equal(s.load(src).db.entries.find(e=>e.id===r.changes[0].id).selection.base_weight,100);console.log("Verified reconstructable delta:",r.bundle.changed_files)' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/edit-candidate-output" "$RUNNER_TEMP/reconstructed-edit"
           git diff --exit-code
+      - name: Verify separate phonetic review proposal and unchanged active export
+        shell: bash
+        run: |
+          set -euo pipefail
+          trap 'git restore -- public/semantic-graph.json public/grammar-frames.json; if git ls-files --error-unmatch public/library.json >/dev/null 2>&1; then git restore -- public/library.json; else rm -f public/library.json; fi' EXIT
+          node -e 'const fs=require("fs"),s=require("./scripts/library-store.cjs"),p=require("./scripts/library-phonetic-review.cjs"),r=s.load(process.argv[1]),e=r.db.entries.find(x=>x.id==="lex-v2-d0bad0bed182");if(!e)throw Error("Probe word missing");fs.writeFileSync(process.argv[2],JSON.stringify({version:1,mode:"preview",source_sha256:r.source_sha256,operations:[{id:e.id,path:p.PROPOSAL_PATH,expect:{exists:false},value:{source:"editorial_review",status:"suggested",usable_for_generation:false,base:p.stored(e),sound_tokens:["к","о","т"],stress_syllable:1,syllable_count:1,stressed_vowel:"о",reason:"Disposable test; no editorial decision"}}]}))' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/phonetic-preview.json"
+          node scripts/library-modular-request.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/phonetic-preview.json" "$RUNNER_TEMP/phonetic-preview-output"
+          node -e 'const fs=require("fs"),r=JSON.parse(fs.readFileSync(process.argv[1]));fs.writeFileSync(process.argv[2],JSON.stringify({version:1,mode:"candidate",source_sha256:r.source_sha256,preview_sha256:r.preview_sha256,operations:r.operations}))' "$RUNNER_TEMP/phonetic-preview-output/result.json" "$RUNNER_TEMP/phonetic-candidate.json"
+          node scripts/library-modular-request.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/phonetic-candidate.json" "$RUNNER_TEMP/phonetic-candidate-output"
+          node -e 'const fs=require("fs"),path=require("path"),a=require("node:assert/strict"),s=require("./scripts/library-store.cjs"),[src,out,dest]=process.argv.slice(1),r=JSON.parse(fs.readFileSync(path.join(out,"result.json")));a.equal(r.status,"validated_candidate_not_approved");fs.cpSync(src,dest,{recursive:true});for(const f of r.bundle.removed_files)fs.unlinkSync(path.join(dest,f));for(const f of ["manifest.json",...r.bundle.changed_files]){const target=path.join(dest,f);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(path.join(out,"delta",f),target)}const x=s.load(src),y=s.load(dest),before=x.db.entries.find(e=>e.id===r.changes[0].id),after=y.db.entries.find(e=>e.id===r.changes[0].id);a.deepEqual(before.phonetic_tags.data,after.phonetic_tags.data);a.deepEqual(before.legacy_source,after.legacy_source);a.equal(after.phonetic_tags.review_proposal.usable_for_generation,false);a.equal(y.source_sha256,r.result_source_sha256)' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/phonetic-candidate-output" "$RUNNER_TEMP/phonetic-reconstructed"
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" node scripts/export-library.cjs
+          sha256sum public/library.json public/semantic-graph.json public/grammar-frames.json > "$RUNNER_TEMP/phonetic-base.sha"
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/phonetic-reconstructed" node scripts/export-library.cjs
+          sha256sum -c "$RUNNER_TEMP/phonetic-base.sha"
       - uses: actions/upload-artifact@v4
         with:
           name: library-integration-rehearsal
@@ -132,6 +146,7 @@ jobs:
             ${{ runner.temp }}/remote-sqlite-result.json
             ${{ runner.temp }}/edit-preview-output
             ${{ runner.temp }}/edit-candidate-output
+            ${{ runner.temp }}/phonetic-candidate-output
             ${{ runner.temp }}/modules
             ${{ runner.temp }}/storage-check/optimization.json
           retention-days: 14
