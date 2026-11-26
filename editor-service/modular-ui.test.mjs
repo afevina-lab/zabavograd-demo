@@ -24,10 +24,10 @@ test('experimental editor uses cached pages, exact fields, and explicit two-phas
  const ids=new Map(),aside=new El(),nav=new El(),hint=new El();
  const document={getElementById:id=>{if(!ids.has(id))ids.set(id,new El());return ids.get(id)},createElement:tag=>new El(tag),querySelector:s=>s==='aside'?aside:s==='nav'?nav:hint,querySelectorAll:()=>[]};
  const $=id=>document.getElementById(id),calls=[],source='a'.repeat(64),pin='b'.repeat(64);
- let latest='',pending=null;const row={id:'a',lemma:'кот',fields:{'/selection/base_weight':{exists:true,value:100}}};
+ let latest='',pending=null,failRead=false;const row={id:'a',lemma:'кот',fields:{'/selection/base_weight':{exists:true,value:100}}};
  const client={
   state:()=>({source_sha256:source}),
-  cachedQuery:async(command,options)=>{calls.push([command,options]);latest=command;return {report:command==='inventory'?{entries:1,categories:1,relations:0,category_paths:['Животные'],kinds:['word']}:command==='inspect'?{source_sha256:source,rows:[row]}:{source_sha256:source,total:1,rows:[{id:'a',lemma:'кот',weight:100,illustrations:1}]}}},
+  cachedQuery:async(command,options)=>{calls.push([command,options]);if(failRead)throw Object.assign(Error('Источник изменился'),{status:409});latest=command;return {report:command==='inventory'?{entries:1,categories:1,relations:0,category_paths:['Животные'],kinds:['word']}:command==='inspect'?{source_sha256:source,rows:[row]}:{source_sha256:source,total:1,rows:[{id:'a',lemma:'кот',weight:100,illustrations:1}]}}},
   operation:(r,path,value)=>{assert.equal(latest,'inspect');assert.equal(r,row);return {id:r.id,path,expect:{exists:true,value:100},value}},
   requestPreview:async r=>{calls.push(['preview',r]);pending='preview';return {ticket:'preview-ticket'}},
   collect:async ticket=>{calls.push(['collect',ticket]);return {status:'result_available',report:{status:pending==='preview'?'preview_not_validated_or_approved':'validated_candidate_not_approved',preview_sha256:pin,changes:[]}}},
@@ -45,6 +45,9 @@ test('experimental editor uses cached pages, exact fields, and explicit two-phas
  await $('submit').onclick();assert.equal(calls.at(-1)[0],'candidate');
  await $('save').onclick();assert.equal($('submit').disabled,true);
  assert.equal(alerts.length,0);
+ // A failed read must not leave a previous card editable.
+ failRead=true;await $('search').onchange();assert.equal($('detail').hidden,true);assert.equal($('save').disabled,false); // already collected report remains accessible
+ const count=calls.length;await $('cards').children[0].onclick();assert.equal(calls.length,count);assert.equal($('submit').disabled,true);assert.equal(alerts.length,1);
 });
 
 test('draft serialization rejects unrecognized fields, duplicate operations and mismatched submitted package',()=>{

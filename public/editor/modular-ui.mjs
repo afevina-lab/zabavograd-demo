@@ -86,7 +86,7 @@ export async function startModularEditor({document=globalThis.document,window=gl
  const disable=ids=>ids.forEach(id=>$(id).hidden=true);
  const key=(id,p)=>id+'\0'+p;
  function controls(){
-  const freeze=locked||stale||!!waiting||!!review;
+  const freeze=locked||!ready||stale||!!waiting||!!review;
   for(const id of ['search','category','kind','missing'])$(id).disabled=!ready||locked;
   $('connect').disabled=locked||!!waiting||!!review||draft.size>0||storageBlocked||!!storageRaw;
   $('login').disabled=locked; // Allow reauthentication with an existing draft.
@@ -120,10 +120,10 @@ export async function startModularEditor({document=globalThis.document,window=gl
   for(const value of values){const n=add(el,'option',value);n.value=value;}
  }
  async function loadList(){
+  // Hide the previous inspection even if the replacement read fails.
+  row=null;selected=null;$('detail').hidden=true;$('empty').hidden=false;
   const q=searchOptions({text:$('search').value,category:$('category').value,kind:$('kind').value,missing:$('missing').value,page});
   const r=(await c.cachedQuery('sqlite',q)).report;
-  // A new list query invalidates the controller's latest exact-field inspection.
-  row=null;selected=null;$('detail').hidden=true;$('empty').hidden=false;
   total=r.total;$('count').textContent=String(total);$('page').textContent=(page+1)+' / '+Math.max(1,Math.ceil(total/PAGE));
   $('cards').replaceChildren();
   for(const e of r.rows){
@@ -168,6 +168,8 @@ export async function startModularEditor({document=globalThis.document,window=gl
   $('json').value=JSON.stringify(row,null,2);controls();
  }
  async function inspect(id){
+  if(!ready||stale)return;
+  row=null;selected=null;$('detail').hidden=true;$('empty').hidden=false;
   const r=(await c.cachedQuery('inspect',{id,fields,limit:1})).report;
   if(r.rows.length!==1||r.rows[0].id!==id)throw Error('Карточка не найдена в текущем снимке');
   row=r.rows[0];selected=id;drawDetail();
@@ -242,9 +244,9 @@ export async function startModularEditor({document=globalThis.document,window=gl
   const blob=new Blob([raw],{type:'application/json'});
   const url=window.URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='zabavograd-modular-draft.json';a.click();setTimeout(()=>window.URL.revokeObjectURL(url),1000);
  };
- for(const id of ['search','category','kind','missing'])$(id).onchange=()=>task(async()=>{page=0;await loadList();});
- $('prev').onclick=()=>task(async()=>{if(page>0){page--;await loadList();}});
- $('next').onclick=()=>task(async()=>{if((page+1)*PAGE<total){page++;await loadList();}});
+ for(const id of ['search','category','kind','missing'])$(id).onchange=()=>task(async()=>{if(!ready)return;page=0;await loadList();});
+ $('prev').onclick=()=>task(async()=>{if(ready&&page>0){const old=page;page--;try{await loadList()}catch(e){page=old;throw e}}});
+ $('next').onclick=()=>task(async()=>{if(ready&&(page+1)*PAGE<total){const old=page;page++;try{await loadList()}catch(e){page=old;throw e}}});
  document.querySelector('nav').onclick=e=>{
   const tab=e.target.dataset.tab;if(!['basic','all'].includes(tab))return;
   for(const el of document.querySelectorAll('.tab'))el.hidden=el.id!==tab;
