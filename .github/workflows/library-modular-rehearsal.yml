@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '24'
       - name: Run storage and editorial unit tests
-        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts tests/library-modular-request.test.ts tests/library-phonetic-review.test.ts tests/library-semantic-proposals.test.ts tests/library-editorial-decisions.test.ts
+        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts tests/library-modular-request.test.ts tests/library-phonetic-review.test.ts tests/library-semantic-proposals.test.ts tests/library-editorial-decisions.test.ts tests/library-apply-bundle.test.ts
       - name: Check editor server bridge without deployment
         run: |
           node --check editor-service/server.mjs
@@ -163,6 +163,22 @@ jobs:
             node -e 'const fs=require("fs"),path=require("path"),a=require("node:assert/strict"),s=require("./scripts/library-store.cjs"),p=require("./scripts/library-semantic-proposals.cjs"),sem=require("./scripts/semantic-review.cjs"),[src,out,dest,action]=process.argv.slice(1),r=JSON.parse(fs.readFileSync(path.join(out,"result.json")));a.equal(r.status,"validated_candidate_not_approved");fs.cpSync(src,dest,{recursive:true});for(const f of r.bundle.removed_files)fs.unlinkSync(path.join(dest,f));for(const f of ["manifest.json",...r.bundle.changed_files]){const target=path.join(dest,f);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(path.join(out,"delta",f),target)}const x=s.load(src),y=s.load(dest);a.equal(y.source_sha256,r.result_source_sha256);a.equal(y.db.relations.length,x.db.relations.length+(action==="accept"?1:0));a.equal(sem.validateExport(y.db).relations.length,sem.validateExport(x.db).relations.length+(action==="accept"?1:0));a.equal(p.counts(y.db).size,0);a.equal(p.counts(x.db).size,2);a.equal(y.db.editorial_decision_history.at(-1).decision.action,action);console.log("Decision rehearsal passed:",action)' "$RUNNER_TEMP/semantic-reconstructed" "$RUNNER_TEMP/decision-$action-output" "$RUNNER_TEMP/decision-$action-rebuilt" "$action"
           done
           git diff --exit-code
+      - name: Apply candidate bundles through guarded replay and validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          preview_sha() { node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).preview_sha256' "$1/result.json"; }
+          node scripts/library-apply-bundle.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/edit-candidate-output" "$RUNNER_TEMP/applied-weight" "$(preview_sha "$RUNNER_TEMP/edit-preview-output")" > "$RUNNER_TEMP/apply-weight-result.json"
+          node scripts/library-apply-bundle.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/semantic-candidate-output" "$RUNNER_TEMP/applied-semantic" "$(preview_sha "$RUNNER_TEMP/semantic-preview-output")" > "$RUNNER_TEMP/apply-semantic-result.json"
+          node scripts/library-apply-bundle.cjs "$RUNNER_TEMP/applied-semantic" "$RUNNER_TEMP/decision-accept-output" "$RUNNER_TEMP/applied-decision" "$(preview_sha "$RUNNER_TEMP/decision-accept-preview")" > "$RUNNER_TEMP/apply-decision-result.json"
+          node -e 'const a=require("node:assert/strict"),s=require("./scripts/library-store.cjs"),[base,weight,semantic,decision]=process.argv.slice(1).map(s.load);a.equal(base.db.entries.find(e=>e.id==="ru-home-20261105-bd699907").selection.base_weight,100);a.equal(weight.db.entries.find(e=>e.id==="ru-home-20261105-bd699907").selection.base_weight,70);a.deepEqual(semantic.db.relations,base.db.relations);a.equal(decision.db.relations.length,base.db.relations.length+1)' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/applied-weight" "$RUNNER_TEMP/applied-semantic" "$RUNNER_TEMP/applied-decision"
+          if node scripts/library-apply-bundle.cjs "$RUNNER_TEMP/applied-weight" "$RUNNER_TEMP/edit-candidate-output" "$RUNNER_TEMP/rejected-stale" "$(preview_sha "$RUNNER_TEMP/edit-preview-output")"; then echo 'Stale bundle accepted'; exit 1; fi
+          test ! -e "$RUNNER_TEMP/rejected-stale"
+          cp -a "$RUNNER_TEMP/edit-candidate-output" "$RUNNER_TEMP/corrupt-bundle"
+          printf '\n' >> "$RUNNER_TEMP/corrupt-bundle/delta/entries/core/19.json"
+          if node scripts/library-apply-bundle.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/corrupt-bundle" "$RUNNER_TEMP/rejected-corrupt" "$(preview_sha "$RUNNER_TEMP/edit-preview-output")"; then echo 'Corrupt bundle accepted'; exit 1; fi
+          test ! -e "$RUNNER_TEMP/rejected-corrupt"
+          git diff --exit-code
       - uses: actions/upload-artifact@v4
         with:
           name: library-integration-rehearsal
@@ -185,6 +201,9 @@ jobs:
             ${{ runner.temp }}/semantic-candidate-output
             ${{ runner.temp }}/decision-accept-output
             ${{ runner.temp }}/decision-reject-output
+            ${{ runner.temp }}/apply-weight-result.json
+            ${{ runner.temp }}/apply-semantic-result.json
+            ${{ runner.temp }}/apply-decision-result.json
             ${{ runner.temp }}/modules
             ${{ runner.temp }}/storage-check/optimization.json
           retention-days: 14
