@@ -1,11 +1,13 @@
 import type {Word} from './material-types.ts';
 
+/** Historical aliases are references, not selectable material. */
+export function isCanonicalMaterial(word:Word):boolean {return !word.aliasOf;}
 /** Availability is independent of teaching eligibility and random selection weight. */
 export function hasMaterial(word:Word,pictures=false):boolean {
- return !pictures||Boolean(word.variants?.length);
+ return isCanonicalMaterial(word)&&(!pictures||Boolean(word.variants?.length));
 }
 export function canSelectAutomatically(word:Word):boolean {
- return Number.isFinite(word.weight)&&word.weight>0;
+ return isCanonicalMaterial(word)&&Number.isFinite(word.weight)&&word.weight>0;
 }
 export function materialWeight(word:Word,lexical=false):number {
  return lexical?(word.taskWeights?.lexical_topic??word.weight):word.weight;

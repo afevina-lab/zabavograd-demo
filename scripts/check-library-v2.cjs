@@ -25,7 +25,7 @@ for(const sense of img.senses){
 }
 assert.equal(v.provenance.legacy_entry_count,legacy.length);
 assert.equal(v.provenance.merged+v.provenance.created,v.provenance.editorial_input_count);
-assert.equal(v.entries.length,legacy.length+v.provenance.created+(v.provenance.plant_world?.created||0)+(v.provenance.generalization_audit?.created||0)+(v.provenance.webp_assets?.created_word_entries||0)+(v.provenance.public_reconciliation?.imported_entries||0)+(v.provenance.sense_separation?.created||0)+(v.provenance.action_lexicon?.created||0)+(v.provenance.noun_expansion_20261109?.added_entry_count||0)+(v.provenance.public_noun_additions_20261109?.created||0)+(v.provenance.attribute_lexicon_20261109?.created||0)+(v.provenance.public_only_20261112?.public_only_imported||0)+(v.provenance.useful_words_20261113?.created||0)+(v.provenance.image_pack_20261114?.created||0)+(v.provenance.image_pack_20261120?.created||0)+(v.provenance.image_pack_20261123?.created||0)+(v.provenance.editorial_gap_completion_20261123?.created||0));
+assert.equal(v.entries.length,legacy.length+v.provenance.created+(v.provenance.plant_world?.created||0)+(v.provenance.generalization_audit?.created||0)+(v.provenance.webp_assets?.created_word_entries||0)+(v.provenance.public_reconciliation?.imported_entries||0)+(v.provenance.sense_separation?.created||0)+(v.provenance.action_lexicon?.created||0)+(v.provenance.noun_expansion_20261109?.added_entry_count||0)+(v.provenance.public_noun_additions_20261109?.created||0)+(v.provenance.attribute_lexicon_20261109?.created||0)+(v.provenance.public_only_20261112?.public_only_imported||0)+(v.provenance.useful_words_20261113?.created||0)+(v.provenance.image_pack_20261114?.created||0)+(v.provenance.image_pack_20261115_restored?.created||0)+(v.provenance.image_pack_20261120?.created||0)+(v.provenance.image_pack_20261123?.created||0)+(v.provenance.editorial_gap_completion_20261123?.created||0)+(v.provenance.image_pack77_20261125?.created_entries||0));
 const familyRelations=v.relations.filter(r=>r.type!=='is_a'&&!r.subject&&!r.object);
 assert.equal(familyRelations.length,40,'Original animal-family relations must be preserved');
 const genusRelations=v.relations.filter(r=>r.type==='is_a'&&r.child&&r.parent);
@@ -193,7 +193,7 @@ assert(v.categories.every(c=>!["Семья","Семья и люди","Мебел
 if(v.provenance.public_reconciliation){
  assert.equal(v.provenance.public_reconciliation.imported_entries,301,'Published-only word import was changed');
  assert.equal(v.provenance.public_reconciliation.added_is_a,76,'Published semantic links were lost');
- assert.equal(v.entries.length,1288+(v.provenance.sense_separation?.created||0)+(v.provenance.action_lexicon?.created||0)+(v.provenance.noun_expansion_20261109?.added_entry_count||0)+(v.provenance.public_noun_additions_20261109?.created||0)+(v.provenance.attribute_lexicon_20261109?.created||0)+(v.provenance.public_only_20261112?.public_only_imported||0)+(v.provenance.useful_words_20261113?.created||0)+(v.provenance.image_pack_20261114?.created||0)+(v.provenance.image_pack_20261120?.created||0)+(v.provenance.image_pack_20261123?.created||0)+(v.provenance.editorial_gap_completion_20261123?.created||0),'Published and private word IDs must include subsequent sense separation and noun expansion');
+ assert.equal(v.entries.length,1288+(v.provenance.sense_separation?.created||0)+(v.provenance.action_lexicon?.created||0)+(v.provenance.noun_expansion_20261109?.added_entry_count||0)+(v.provenance.public_noun_additions_20261109?.created||0)+(v.provenance.attribute_lexicon_20261109?.created||0)+(v.provenance.public_only_20261112?.public_only_imported||0)+(v.provenance.useful_words_20261113?.created||0)+(v.provenance.image_pack_20261114?.created||0)+(v.provenance.image_pack_20261115_restored?.created||0)+(v.provenance.image_pack_20261120?.created||0)+(v.provenance.image_pack_20261123?.created||0)+(v.provenance.editorial_gap_completion_20261123?.created||0)+(v.provenance.image_pack77_20261125?.created_entries||0),'Published and private word IDs must include subsequent sense separation and noun expansion');
  const released=v.entries.filter(e=>e.selection.weight_source==='public_reconciliation_20261105');
  assert.equal(released.length,301,'Some published-only records disappeared');
  assert.equal(new Set(released.map(e=>e.id)).size,301,'Duplicate published IDs');
@@ -232,7 +232,7 @@ if(v.provenance.noun_expansion_20261109?.revision==='nouns-20261109-v1'){
   assert(!prior.some(p=>p.lemma===e.lemma),'New noun duplicates existing lemma '+e.lemma);
   assert(e.categories.length>0 && e.categories.every(c=>categoryPaths.has(c.path)),'New noun uncategorized '+e.lemma);
   assert(e.selection.base_weight>0 && permitted.has(e.selection.base_weight),'Invalid noun weight '+e.lemma);
-  const furnitureAssigned=e.illustrations.senses.some(s=>s.variants?.some(v=>v.id.startsWith('approved-20261123-')));
+  const furnitureAssigned=e.illustrations.senses.some(s=>s.variants?.some(v=>v.id.startsWith('approved-20261123-')||v.id.startsWith('approved-import-20261115-')||v.id.startsWith('approved-pack77-')));
   assert.equal(e.illustrations.art_status,furnitureAssigned?'assigned':'not_assigned');
  }
  console.log('PASS noun expansion:',newNouns.length,'new nouns');
@@ -251,3 +251,16 @@ if(v.provenance.attribute_lexicon_20261109){
 for(const lemma of ['телёнок','поросёнок','жеребёнок'])assert(word(lemma).categories.some(c=>c.path==='Животный мир/Домашние животные/Детёныши'));
 assert(word('лисёнок').categories.every(c=>!c.path.includes('Домашние')));
 
+
+// Verify every historical 15 November link after every canonical rebuild.
+if(v.provenance.image_pack_20261115_restored){
+ const manifest=JSON.parse(fs.readFileSync('outputs/image-pack-20261115-restored.json','utf8'));
+ const crypto=require('node:crypto');
+ assert.equal(manifest.length,52);
+ for(const row of manifest){
+  const entry=byId.get(row.word_id);assert(entry,'Lost restored word '+row.word_id);
+  assert(entry.illustrations.senses.some(s=>s.variants.some(x=>x.src===row.src&&x.id===row.variant_id)),'Lost restored image '+row.src);
+  const bytes=fs.readFileSync('public'+row.src);
+  assert.equal(crypto.createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),row.git_blob_sha,'Restored image content changed '+row.src);
+ }
+}

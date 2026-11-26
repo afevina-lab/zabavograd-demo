@@ -357,6 +357,33 @@
       "links_added": 56,
       "status": "author_approved_lexical_and_semantic_editorial_batch",
       "human_pair_review": false
+    },
+    "image_pack_20261115_restored": {
+      "created": 10,
+      "created_ids": [
+        "ru-noun-import-20261115-tsennik",
+        "ru-noun-import-20261115-lapa",
+        "ru-noun-import-20261115-zavod",
+        "ru-noun-import-20261115-meshok",
+        "ru-noun-import-20261115-kaplya",
+        "ru-noun-import-20261115-kalendar",
+        "ru-noun-import-20261115-snegovik",
+        "ru-noun-import-20261115-panda",
+        "ru-noun-import-20261115-kryuchok",
+        "ru-noun-import-20261115-udochka"
+      ],
+      "image_count": 52,
+      "original_commit": "9580b124e20198d00fa02e459b1b2ed002d51177",
+      "restored_categories": [
+        "Общество и окружающая среда/Торговля и покупки",
+        "Животный мир/Части тела животных",
+        "Игры, творчество и увлечения/Зимние забавы",
+        "Игры, творчество и увлечения/Рыбалка и принадлежности"
+      ]
+    },
+    "image_pack77_20261125": {
+      "images_linked": 24,
+      "created_entries": 3
     }
   },
   "weight_migration": {
@@ -1145,8 +1172,20 @@
       ]
     },
     {
+      "path": "Животный мир/Части тела животных",
+      "parent_paths": [
+        "Животный мир"
+      ]
+    },
+    {
       "path": "Игры, творчество и увлечения",
       "parent_paths": []
+    },
+    {
+      "path": "Игры, творчество и увлечения/Зимние забавы",
+      "parent_paths": [
+        "Игры, творчество и увлечения"
+      ]
     },
     {
       "path": "Игры, творчество и увлечения/Игровые понятия",
@@ -1237,6 +1276,12 @@
     },
     {
       "path": "Игры, творчество и увлечения/Настольные игры",
+      "parent_paths": [
+        "Игры, творчество и увлечения"
+      ]
+    },
+    {
+      "path": "Игры, творчество и увлечения/Рыбалка и принадлежности",
       "parent_paths": [
         "Игры, творчество и увлечения"
       ]
@@ -1389,6 +1434,12 @@
       "parent_paths": [
         "Общество и окружающая среда",
         "Общество и окружающая среда/Праздники и события"
+      ]
+    },
+    {
+      "path": "Общество и окружающая среда/Торговля и покупки",
+      "parent_paths": [
+        "Общество и окружающая среда"
       ]
     },
     {
@@ -125852,9 +125903,29 @@
       },
       "illustrations": {
         "policy": "illustration_planned",
-        "planned_variants": null,
-        "art_status": "needs_zabavograd_redraw",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-r-add-d0bfd0bed180d0bed181d191d0bdd0bed0ba-sense",
+            "word_id": "ru-r-add-d0bfd0bed180d0bed181d191d0bdd0bed0ba",
+            "label": "поросёнок",
+            "meaning": "поросёнок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-porosenok",
+                "src": "/assets/words/porosenok-pack77.webp",
+                "label": "поросёнок",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "a1b42705096698330734cee318456efc2381b5ad",
+                "sha256": "b2426f0fa5444d43d19b98b161333467d0a33005cb3b96d68886e8645ce617bd"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "filled_with_explicit_extended_cases",
@@ -140430,6 +140501,14 @@
             "subcategory": null,
             "variants": [
               {
+                "id": "approved-import-20261115-barsuk",
+                "src": "/assets/words/barsuk-20261115.webp",
+                "label": "барсук",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "ed77cc9c30dcd851b7786f891143e2a609b1d765"
+              },
+              {
                 "id": "optimized-179_barsuk",
                 "src": "/assets/words/barsuk.webp",
                 "sha256": "1ff4c682b097227dcc8a0aafecb163c5057f7ecb605daeaf184ba1cde6a81131",
@@ -141547,9 +141626,28 @@
       },
       "illustrations": {
         "policy": "illustration_planned",
-        "planned_variants": null,
-        "art_status": "needs_zabavograd_redraw",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-r-add-d182d191d180d0bad0b0-sense",
+            "word_id": "ru-r-add-d182d191d180d0bad0b0",
+            "label": "тёрка",
+            "meaning": "тёрка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-terka",
+                "src": "/assets/words/terka-20261115.webp",
+                "label": "тёрка",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "15f01c9134816f22a003e8a220684410193799ab"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "filled_with_explicit_extended_cases",
@@ -159931,9 +160029,28 @@
       },
       "illustrations": {
         "policy": "illustration_planned",
-        "planned_variants": null,
-        "art_status": "needs_zabavograd_redraw",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-r-add-d0bad180d18bd0bbd18cd186d0be-sense",
+            "word_id": "ru-r-add-d0bad180d18bd0bbd18cd186d0be",
+            "label": "крыльцо",
+            "meaning": "крыльцо",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-kryltso",
+                "src": "/assets/words/kryltso-20261115.webp",
+                "label": "крыльцо",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "f3f86a5955b125d0107fae4b92621f3e2f62666a"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "filled_with_explicit_extended_cases",
@@ -182861,9 +182978,28 @@
       },
       "illustrations": {
         "policy": "illustration_planned",
-        "planned_variants": null,
-        "art_status": "not_created",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-new-20261102-0042-sense",
+            "word_id": "ru-new-20261102-0042",
+            "label": "парта",
+            "meaning": "парта",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-parta",
+                "src": "/assets/words/parta-20261115.webp",
+                "label": "парта",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "bc390219bd7b77e0963184dae18345eb618ed7ff"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -212835,9 +212971,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d0b3d183d181d191d0bdd0bed0ba-sense",
+            "word_id": "lex-v2-d0b3d183d181d191d0bdd0bed0ba",
+            "label": "гусёнок",
+            "meaning": "гусёнок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-gusenok",
+                "src": "/assets/words/gusenok-pack77.webp",
+                "label": "гусёнок",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "e8e7875d200e64db9766a703eba5550187b98edf",
+                "sha256": "3edf6424ddd106fccef650d7b6c045572ee363f82b2be64837a971909d295201"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -214338,9 +214494,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d0b5d0bdd0bed182-sense",
+            "word_id": "lex-v2-d0b5d0bdd0bed182",
+            "label": "енот",
+            "meaning": "енот",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-enot",
+                "src": "/assets/words/enot-20261115.webp",
+                "label": "енот",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "ffd8d9cf998ed8f2228a9dfd35e14c48a48fd728"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -215274,9 +215449,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d0b6d0b5d180d0b5d0b1d191d0bdd0bed0ba-sense",
+            "word_id": "lex-v2-d0b6d0b5d180d0b5d0b1d191d0bdd0bed0ba",
+            "label": "жеребёнок",
+            "meaning": "жеребёнок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-zherebenok",
+                "src": "/assets/words/zherebenok-20261115.webp",
+                "label": "жеребёнок",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "39989ec70a09b17b102a521740ff573fc0624071"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -217628,9 +217822,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d0b8d0bdd0b4d18ed0ba-sense",
+            "word_id": "lex-v2-d0b8d0bdd0b4d18ed0ba",
+            "label": "индюк",
+            "meaning": "индюк",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-indyuk",
+                "src": "/assets/words/indyuk-pack77.webp",
+                "label": "индюк",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "14b019043d33b07bf8e4b405c5714610525f2c7d",
+                "sha256": "d82d7555103bd26a01c5ce05ee5e2357395f6bba5560a45f4e057b07ffce14e2"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -219658,9 +219872,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d0bad0bed0b0d0bbd0b0-sense",
+            "word_id": "lex-v2-d0bad0bed0b0d0bbd0b0",
+            "label": "коала",
+            "meaning": "коала",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-koala",
+                "src": "/assets/words/koala-20261115.webp",
+                "label": "коала",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "958225efc694a86aa8c5b65fe7f4b1c43efbc397"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -220252,9 +220485,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d0bad0bed0b7d0bbd191d0bdd0bed0ba-sense",
+            "word_id": "lex-v2-d0bad0bed0b7d0bbd191d0bdd0bed0ba",
+            "label": "козлёнок",
+            "meaning": "козлёнок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-kozlenok",
+                "src": "/assets/words/kozlenok-20261115.webp",
+                "label": "козлёнок",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "06bca72898855ec2d8d2f036e7fcc21ed3dd8cbb"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -221314,9 +221566,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d0bad0bed182d191d0bdd0bed0ba-sense",
+            "word_id": "lex-v2-d0bad0bed182d191d0bdd0bed0ba",
+            "label": "котёнок",
+            "meaning": "котёнок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-kotenok",
+                "src": "/assets/words/kotenok-pack77.webp",
+                "label": "котёнок",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "3649720250641de8defacf5a4de23a2313ed201e",
+                "sha256": "ccea7a77fe729d4441666a201790b99c3dc65d6553ee7f72fdbca6cdaba99dab"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -221549,9 +221821,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d0bad180d0b5d0b2d0b5d182d0bad0b0-sense",
+            "word_id": "lex-v2-d0bad180d0b5d0b2d0b5d182d0bad0b0",
+            "label": "креветка",
+            "meaning": "креветка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-krevetka",
+                "src": "/assets/words/krevetka-20261115.webp",
+                "label": "креветка",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "8dd5bb12d3d3a58aaba711f7b61f70c517e04052"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -222253,9 +222544,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d0bad183d0bad183d188d0bad0b0-sense",
+            "word_id": "lex-v2-d0bad183d0bad183d188d0bad0b0",
+            "label": "кукушка",
+            "meaning": "кукушка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-kukushka",
+                "src": "/assets/words/kukushka-pack77.webp",
+                "label": "кукушка",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "e50cc3ee927dd36315ac8d32ebc2befd1edd9a61",
+                "sha256": "67366451a4542bae1c1e19deb2c99029d33895a6e4d255c61b770b6eb47048ac"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -222675,9 +222986,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d0bad183d180d0b8d186d0b0-sense",
+            "word_id": "lex-v2-d0bad183d180d0b8d186d0b0",
+            "label": "курица",
+            "meaning": "курица",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-kuritsa",
+                "src": "/assets/words/kuritsa-20261115.webp",
+                "label": "курица",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "70cbe5c794e0afcd41027a5b86689c6b433ddf1f"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -230039,9 +230369,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d0bed0b2d186d0b0-sense",
+            "word_id": "lex-v2-d0bed0b2d186d0b0",
+            "label": "овца",
+            "meaning": "овца",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-ovtsa",
+                "src": "/assets/words/ovtsa-20261115.webp",
+                "label": "овца",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "82431a0008429b1247737340f9562cab21da65ca"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -233487,9 +233836,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d0bfd0b5d182d183d185-sense",
+            "word_id": "lex-v2-d0bfd0b5d182d183d185",
+            "label": "петух",
+            "meaning": "петух",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-petukh",
+                "src": "/assets/words/petukh-20261115.webp",
+                "label": "петух",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "307e9163dc524669ec5753179e9d1294d299004d"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -235411,9 +235779,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d0bfd0bed0bfd183d0b3d0b0d0b9-sense",
+            "word_id": "lex-v2-d0bfd0bed0bfd183d0b3d0b0d0b9",
+            "label": "попугай",
+            "meaning": "попугай",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-popugay",
+                "src": "/assets/words/popugay-pack77.webp",
+                "label": "попугай",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "396824f250196a0c040c8f636db5fda44ecacc66",
+                "sha256": "0534681a9f86ed2d793e4d619345f38386547abfdb26fcd48b3b40774280a2f4"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -243742,9 +244130,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d182d0b5d0bbd191d0bdd0bed0ba-sense",
+            "word_id": "lex-v2-d182d0b5d0bbd191d0bdd0bed0ba",
+            "label": "телёнок",
+            "meaning": "телёнок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-telenok",
+                "src": "/assets/words/telenok-pack77.webp",
+                "label": "телёнок",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "b939fedde33e026fef9b64b4f68a3303039dee75",
+                "sha256": "af4e2375f2ef2814047ab77ee217f106e67e3fa35106313b3c2470275f6607a6"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -246467,9 +246875,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d183d182d191d0bdd0bed0ba-sense",
+            "word_id": "lex-v2-d183d182d191d0bdd0bed0ba",
+            "label": "утёнок",
+            "meaning": "утёнок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-utenok",
+                "src": "/assets/words/utenok-pack77.webp",
+                "label": "утёнок",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "ee032d24d7837bda1dd935604eb493249584f1f1",
+                "sha256": "0a970a5b8c8fa504961373bff2aa304f564e6163e64bcaf9d0fdeb6c165e817d"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -246571,9 +246999,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d183d182d0bad0b0-sense",
+            "word_id": "lex-v2-d183d182d0bad0b0",
+            "label": "утка",
+            "meaning": "утка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-utka",
+                "src": "/assets/words/utka-pack77.webp",
+                "label": "утка",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "5bbeff772705cc1a78113510674f6429f5e90431",
+                "sha256": "c0ff06bdf46e332bdd30991edef8702152e3adf68da8577ab2efefe00b5175c1"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "pending_automatic_analysis",
@@ -247950,9 +248398,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d185d0bed0bcd18fd0ba-sense",
+            "word_id": "lex-v2-d185d0bed0bcd18fd0ba",
+            "label": "хомяк",
+            "meaning": "хомяк",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-khomyak",
+                "src": "/assets/words/khomyak-pack77.webp",
+                "label": "хомяк",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "d9a1cfc1d8551fd0ad37be36cc973e82f9120466",
+                "sha256": "799956d3c43c7fc3ea42ab681a5c6f638ddcca2cd4ca8a6181b4af08f2d85e1d"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -248525,9 +248993,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d186d18bd0bfd0bbd191d0bdd0bed0ba-sense",
+            "word_id": "lex-v2-d186d18bd0bfd0bbd191d0bdd0bed0ba",
+            "label": "цыплёнок",
+            "meaning": "цыплёнок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-tsyplenok",
+                "src": "/assets/words/tsyplenok-20261115.webp",
+                "label": "цыплёнок",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "df3ec41af78f888566229f569b5562c4b6b7995d"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -250005,9 +250492,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d189d0b5d0bdd0bed0ba-sense",
+            "word_id": "lex-v2-d189d0b5d0bdd0bed0ba",
+            "label": "щенок",
+            "meaning": "щенок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-shchenok",
+                "src": "/assets/words/shchenok-pack77.webp",
+                "label": "щенок",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "c57df3b66697987647fa7ee275b047a10d11c00b",
+                "sha256": "951869176713bafc02f515200181fb8af5ece31e3011445595b0ce2fff567f00"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -250375,9 +250882,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d18fd0b3d0bdd191d0bdd0bed0ba-sense",
+            "word_id": "lex-v2-d18fd0b3d0bdd191d0bdd0bed0ba",
+            "label": "ягнёнок",
+            "meaning": "ягнёнок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-yagnenok",
+                "src": "/assets/words/yagnenok-20261115.webp",
+                "label": "ягнёнок",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "0c59aeda48be60bbf7f839ce2ef491eaf89087d4"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -250838,9 +251364,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "lex-v2-d18fd189d0b5d180d0b8d186d0b0-sense",
+            "word_id": "lex-v2-d18fd189d0b5d180d0b8d186d0b0",
+            "label": "ящерица",
+            "meaning": "ящерица",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-yashcheritsa",
+                "src": "/assets/words/yashcheritsa-20261115.webp",
+                "label": "ящерица",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "877eb3d7f9b894da83c077ae96bb05a56d7e87ab"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -251097,9 +251642,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0b1d0b5d180d191d0b7d0b0-sense",
+            "word_id": "ru-plant-20261104-d0b1d0b5d180d191d0b7d0b0",
+            "label": "берёза",
+            "meaning": "берёза",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-bereza",
+                "src": "/assets/words/bereza-pack77.webp",
+                "label": "берёза",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "d17d0438b4e2ae3b8e1fce218b549ff2c383df70",
+                "sha256": "a4c7abea2fdba46ad956d727a1839a639894c9ae7e2804e3c6dcd63ab21e9b4b"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -251209,9 +251774,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0b4d183d0b1-sense",
+            "word_id": "ru-plant-20261104-d0b4d183d0b1",
+            "label": "дуб",
+            "meaning": "дуб",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-dub",
+                "src": "/assets/words/dub-pack77.webp",
+                "label": "дуб",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "10b8becae72855fb559414e5c80fdd7a0e95820c",
+                "sha256": "987e1572032aa194a15ec3002de3ec011806cb5691ea2be8c533d754169de1f8"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -251320,9 +251905,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0b5d0bbd18c-sense",
+            "word_id": "ru-plant-20261104-d0b5d0bbd18c",
+            "label": "ель",
+            "meaning": "ель",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-el",
+                "src": "/assets/words/el-pack77.webp",
+                "label": "ель",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "48a34709b6ea37e9aaae5433b98e3874f4b939da",
+                "sha256": "0d226a85ff3e6a814d902367d52f03c7d287ed7e6fb15f6cf79e8f9ab8bd09b6"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -251545,9 +252150,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0bad0bbd191d0bd-sense",
+            "word_id": "ru-plant-20261104-d0bad0bbd191d0bd",
+            "label": "клён",
+            "meaning": "клён",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-klen",
+                "src": "/assets/words/klen-pack77.webp",
+                "label": "клён",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "ebd776c8f4318ab21bd9a477423bb87f8dd724df",
+                "sha256": "1ef6278d67a5e7053647c09e06e9ab623c24943da6ff55187f3232b34b49a470"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -251994,9 +252619,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d182d0bed0bfd0bed0bbd18c-sense",
+            "word_id": "ru-plant-20261104-d182d0bed0bfd0bed0bbd18c",
+            "label": "тополь",
+            "meaning": "тополь",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-topol",
+                "src": "/assets/words/topol-pack77.webp",
+                "label": "тополь",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "7b16fd97e569ab364dae61dcae152cc5a3bd3647",
+                "sha256": "e890c995159425a09529667b3b896bcf7452bf58df857b5c01ceb7d1ec308025"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -253111,9 +253756,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0bad0b8d0bfd0b0d180d0b8d181-sense",
+            "word_id": "ru-plant-20261104-d0bad0b8d0bfd0b0d180d0b8d181",
+            "label": "кипарис",
+            "meaning": "кипарис",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-kiparis",
+                "src": "/assets/words/kiparis-pack77.webp",
+                "label": "кипарис",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "544f2e07c599a83bbaab58339945fd03a8ea83d6",
+                "sha256": "467f4a7b2b68edae3c6965ba48f1911a5b3c8773323df46c24d84aeca46b620f"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -253973,9 +254638,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-plant-20261104-d0b2d0b0d181d0b8d0bbd191d0ba-sense",
+            "word_id": "ru-plant-20261104-d0b2d0b0d181d0b8d0bbd191d0ba",
+            "label": "василёк",
+            "meaning": "василёк",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-vasilek",
+                "src": "/assets/words/vasilek-20261115.webp",
+                "label": "василёк",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "02961086012b5c249bc4e4902f9aa49a0fdb295c"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -270838,9 +271522,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-home-20261105-dc3c0696-sense",
+            "word_id": "ru-home-20261105-dc3c0696",
+            "label": "батарейка",
+            "meaning": "батарейка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-batareyka",
+                "src": "/assets/words/batareyka-20261115.webp",
+                "label": "батарейка",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "1823977e433b0bd9749850ead07acb1edd8a961d"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -272241,9 +272944,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-home-20261105-fab42c9f-sense",
+            "word_id": "ru-home-20261105-fab42c9f",
+            "label": "бутылка",
+            "meaning": "бутылка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-butylka",
+                "src": "/assets/words/butylka-20261115.webp",
+                "label": "бутылка",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "c85acc5e4f2edae09a7f9a9d988b003ac935ea9e"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -272562,9 +273284,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-home-20261105-57fec3cd-sense",
+            "word_id": "ru-home-20261105-57fec3cd",
+            "label": "ванна",
+            "meaning": "ванна",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-vanna",
+                "src": "/assets/words/vanna-20261115.webp",
+                "label": "ванна",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "a2df7c224e9812058be4320022729c7865f825c3"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -273891,9 +274632,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-home-20261105-5eb96006-sense",
+            "word_id": "ru-home-20261105-5eb96006",
+            "label": "вилка",
+            "meaning": "вилка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-vilka",
+                "src": "/assets/words/vilka-20261115.webp",
+                "label": "вилка",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "432f226b2d6a1e3623e045924e7a713be7599219"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "pending_automatic_analysis",
@@ -276768,7 +277528,7 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
+        "planned_variants": 2,
         "art_status": "assigned",
         "senses": [
           {
@@ -276787,6 +277547,14 @@
                 "width": 1536,
                 "height": 1024,
                 "format": "webp"
+              },
+              {
+                "id": "approved-import-20261115-divan",
+                "src": "/assets/words/divan-20261115.webp",
+                "label": "диван",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "8dbe55d7b9bfa7e1d7e6bed32c529ca187691114"
               }
             ]
           }
@@ -279538,9 +280306,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-home-20261105-67d50378-sense",
+            "word_id": "ru-home-20261105-67d50378",
+            "label": "кастрюля",
+            "meaning": "кастрюля",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-kastryulya",
+                "src": "/assets/words/kastryulya-20261115.webp",
+                "label": "кастрюля",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "3d12d9ac89ef567ee2d58e340c2a881b9e18c6fa"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -280707,7 +281494,7 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
+        "planned_variants": 2,
         "art_status": "assigned",
         "senses": [
           {
@@ -280726,6 +281513,14 @@
                 "width": 1254,
                 "height": 1254,
                 "format": "webp"
+              },
+              {
+                "id": "approved-import-20261115-komod",
+                "src": "/assets/words/komod-20261115.webp",
+                "label": "комод",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "52a83a54e52bec6dfc9e9cb3d11ffc27a6233c0e"
               }
             ]
           }
@@ -281637,7 +282432,7 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
+        "planned_variants": 2,
         "art_status": "assigned",
         "senses": [
           {
@@ -281656,6 +282451,14 @@
                 "width": 1254,
                 "height": 1254,
                 "format": "webp"
+              },
+              {
+                "id": "approved-import-20261115-kreslo",
+                "src": "/assets/words/kreslo-20261115.webp",
+                "label": "кресло",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "11c20dfbd8e2fa8f7e1498df1719b2bc59c2f1be"
               }
             ]
           }
@@ -281887,9 +282690,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-home-20261105-8a46549-sense",
+            "word_id": "ru-home-20261105-8a46549",
+            "label": "кувшин",
+            "meaning": "кувшин",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-kuvshin",
+                "src": "/assets/words/kuvshin-20261115.webp",
+                "label": "кувшин",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "ec29c367bd3455fdc429e688407c180a59869cce"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -282818,9 +283640,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-home-20261105-e1299fb0-sense",
+            "word_id": "ru-home-20261105-e1299fb0",
+            "label": "лифт",
+            "meaning": "лифт",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-lift",
+                "src": "/assets/words/lift-pack77.webp",
+                "label": "лифт",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "a481a38de03affa821169526ba5a519987c7eae2",
+                "sha256": "c1cbae7830b887e955b600a107a802c054a44638f33de4f4900ae57afc1a2f37"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -282892,9 +283734,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-home-20261105-5423908-sense",
+            "word_id": "ru-home-20261105-5423908",
+            "label": "ложка",
+            "meaning": "ложка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-lozhka",
+                "src": "/assets/words/lozhka-20261115.webp",
+                "label": "ложка",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "7206605b4fbea7ef88b6f9a3b537e4c520581fcf"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "pending_automatic_analysis",
@@ -283817,9 +284678,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-home-20261105-6a956b2a-sense",
+            "word_id": "ru-home-20261105-6a956b2a",
+            "label": "миска",
+            "meaning": "миска",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-miska",
+                "src": "/assets/words/miska-20261115.webp",
+                "label": "миска",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "f89bb468cad6b89d3ca78e2ee6a3b7030bcf3265"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -285790,9 +286670,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-home-20261105-a7f282c0-sense",
+            "word_id": "ru-home-20261105-a7f282c0",
+            "label": "нож",
+            "meaning": "нож",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-nozh",
+                "src": "/assets/words/nozh-20261115.webp",
+                "label": "нож",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "a68037c0dac3a93e331323e5f56cac6370bbdf29"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -289796,7 +290695,7 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
+        "planned_variants": 2,
         "art_status": "assigned",
         "senses": [
           {
@@ -289815,6 +290714,14 @@
                 "width": 1774,
                 "height": 887,
                 "format": "webp"
+              },
+              {
+                "id": "approved-import-20261115-polka",
+                "src": "/assets/words/polka-20261115.webp",
+                "label": "полка",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "76b3502d5be004fe065a311377c8259a16f3886c"
               }
             ]
           }
@@ -296336,7 +297243,7 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
+        "planned_variants": 2,
         "art_status": "assigned",
         "senses": [
           {
@@ -296355,6 +297262,14 @@
                 "width": 1254,
                 "height": 1254,
                 "format": "webp"
+              },
+              {
+                "id": "approved-import-20261115-stol",
+                "src": "/assets/words/stol-20261115.webp",
+                "label": "стол",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "9e3e2cf4b2f6ef59d2825f988ceb9b6a3b02c552"
               }
             ]
           }
@@ -296565,7 +297480,7 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
+        "planned_variants": 2,
         "art_status": "assigned",
         "senses": [
           {
@@ -296584,6 +297499,14 @@
                 "width": 1254,
                 "height": 1254,
                 "format": "webp"
+              },
+              {
+                "id": "approved-import-20261115-stul",
+                "src": "/assets/words/stul-20261115.webp",
+                "label": "стул",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "6171cd37942e7c95c9a5fd7ef539419fcc589d1d"
               }
             ]
           }
@@ -296814,9 +297737,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-home-20261105-bd699907-sense",
+            "word_id": "ru-home-20261105-bd699907",
+            "label": "сумка",
+            "meaning": "сумка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-sumka",
+                "src": "/assets/words/sumka-pack77.webp",
+                "label": "сумка",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "6b44441f3e301a0b30598576a624461ae06827c7",
+                "sha256": "3c46da6414a440b7cf86bdd2e1ff0a528a6da28055a459de9772fc314911da9a"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -297235,7 +298178,7 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
+        "planned_variants": 2,
         "art_status": "assigned",
         "senses": [
           {
@@ -297254,6 +298197,14 @@
                 "width": 1312,
                 "height": 1199,
                 "format": "webp"
+              },
+              {
+                "id": "approved-import-20261115-taburet",
+                "src": "/assets/words/taburet-20261115.webp",
+                "label": "табурет",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "09469898731323a88a048463cc29fcc3638d6449"
               }
             ]
           }
@@ -297484,9 +298435,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-home-20261105-259cc695-sense",
+            "word_id": "ru-home-20261105-259cc695",
+            "label": "тарелка",
+            "meaning": "тарелка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-tarelka",
+                "src": "/assets/words/tarelka-20261115.webp",
+                "label": "тарелка",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "cfd769d268018a39accbead10286fc7b63a0ad6a"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -298841,7 +299811,7 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
+        "planned_variants": 2,
         "art_status": "assigned",
         "senses": [
           {
@@ -298860,6 +299830,14 @@
                 "width": 1254,
                 "height": 1254,
                 "format": "webp"
+              },
+              {
+                "id": "approved-import-20261115-tumbochka",
+                "src": "/assets/words/tumbochka-20261115.webp",
+                "label": "тумбочка",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "72adb19328ee3bf0285ba9c1b75395cb51c64124"
               }
             ]
           }
@@ -334736,9 +335714,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0012-sense",
+            "word_id": "ru-noun-20261109-0012",
+            "label": "кепка",
+            "meaning": "кепка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-kepka",
+                "src": "/assets/words/kepka-20261115.webp",
+                "label": "кепка",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "f20c06d02a0fc7dbea42672aec05d8ff643043e6"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -338540,9 +339537,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0042-sense",
+            "word_id": "ru-noun-20261109-0042",
+            "label": "скакалка",
+            "meaning": "скакалка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-skakalka",
+                "src": "/assets/words/skakalka-20261115.webp",
+                "label": "скакалка",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "fe045af589bcfc15de095bdebd06cba0a950d533"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -340381,9 +341397,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0057-sense",
+            "word_id": "ru-noun-20261109-0057",
+            "label": "сок",
+            "meaning": "сок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-sok",
+                "src": "/assets/words/sok-20261115.webp",
+                "label": "сок",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "736ea7e1151ebc03e8a53f77d1800ba6eed91fad"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -342002,9 +343037,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0070-sense",
+            "word_id": "ru-noun-20261109-0070",
+            "label": "велосипед",
+            "meaning": "велосипед",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-velosiped",
+                "src": "/assets/words/velosiped-pack77.webp",
+                "label": "велосипед",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "c46be94fffc19b7f0fa89b5d8b09010983a173ca",
+                "sha256": "e9ba61582d33837487b73061ab8485a56ebd6ebddc27511990fb9e5b182dd16c"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -342129,9 +343184,29 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0071-sense",
+            "word_id": "ru-noun-20261109-0071",
+            "label": "самокат",
+            "meaning": "самокат",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-samokat",
+                "src": "/assets/words/samokat-pack77.webp",
+                "label": "самокат",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "c39f423d2b3e918e352e97742c6a8661785a710c",
+                "sha256": "291a88a72889df36046f6c0300edf5d33d3e1f939ad58441baedf95ec83fe40e"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -343566,9 +344641,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0082-sense",
+            "word_id": "ru-noun-20261109-0082",
+            "label": "остановка",
+            "meaning": "место остановки общественного транспорта",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-ostanovka",
+                "src": "/assets/words/ostanovka-20261115.webp",
+                "label": "остановка",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "6aee80b717cdd60deb8dffd4035913b06e42306c"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -343697,9 +344791,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0083-sense",
+            "word_id": "ru-noun-20261109-0083",
+            "label": "перекрёсток",
+            "meaning": "перекрёсток",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-perekrestok",
+                "src": "/assets/words/perekrestok-20261115.webp",
+                "label": "перекрёсток",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "7bbd25712034e0e75e69886dcf28dc4e0ec4c684"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -343821,9 +344934,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-20261109-0084-sense",
+            "word_id": "ru-noun-20261109-0084",
+            "label": "парк",
+            "meaning": "городской парк",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-park",
+                "src": "/assets/words/park-20261115.webp",
+                "label": "парк",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "d06bfbc7b6ebc0f68fce50636e634de72b62553a"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -348619,9 +349751,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-extra-20261109-024-sense",
+            "word_id": "ru-noun-extra-20261109-024",
+            "label": "дождевик",
+            "meaning": "дождевик",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-dozhdevik",
+                "src": "/assets/words/dozhdevik-20261115.webp",
+                "label": "дождевик",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "c4c153168caa03040a1632e58f6fb6facc76dd4a"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -350464,9 +351615,28 @@
       },
       "illustrations": {
         "policy": null,
-        "planned_variants": null,
-        "art_status": "not_assigned",
-        "senses": []
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-extra-20261109-040-sense",
+            "word_id": "ru-noun-extra-20261109-040",
+            "label": "книга",
+            "meaning": "книга",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-kniga",
+                "src": "/assets/words/kniga-20261115.webp",
+                "label": "книга",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "09dd5f94ea5bee7d532520814a9ab9b94c75c7fe"
+              }
+            ]
+          }
+        ]
       },
       "metadata_completion": {
         "speech": "automatic_candidate_needs_review",
@@ -371397,6 +372567,855 @@
         "status": "approved_lexical_entry",
         "note": "Added as missing vocabulary for semantic exercises. No illustration or phonetics invented."
       },
+      "lexical_eligible_by_default": true
+    },
+    {
+      "id": "ru-noun-import-20261115-tsennik",
+      "lemma": "ценник",
+      "language": "ru",
+      "meaning": "табличка с ценой товара",
+      "kind": "word",
+      "selection": {
+        "base_weight": 30,
+        "scope": "general",
+        "weight_source": "restored_approved_import_20261115"
+      },
+      "categories": [
+        {
+          "path": "Общество и окружающая среда/Торговля и покупки",
+          "default_selection": true
+        }
+      ],
+      "phonetic_tags": {
+        "status": "pending_automatic_analysis",
+        "data": null
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "policy": "illustration_planned",
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-import-20261115-tsennik-sense",
+            "word_id": "ru-noun-import-20261115-tsennik",
+            "label": "ценник",
+            "meaning": "табличка с ценой товара",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-tsennik",
+                "src": "/assets/words/tsennik-20261115.webp",
+                "label": "ценник",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "7e5482b2c40c38dd3ae8c956210abd18eb8af1d2"
+              }
+            ]
+          }
+        ]
+      },
+      "metadata_completion": {
+        "speech": "pending",
+        "lexical": "editorial_draft",
+        "forms": "pending",
+        "prepositions": "pending",
+        "descriptions": "pending"
+      },
+      "legacy_source": null,
+      "editorial": {
+        "source": "approved_import_20261115",
+        "status": "needs_review",
+        "note": "Restored original approved public import; phonetics and inflections remain pending."
+      },
+      "part_of_speech": "noun",
+      "lexical_eligible_by_default": true
+    },
+    {
+      "id": "ru-noun-import-20261115-lapa",
+      "lemma": "лапа",
+      "language": "ru",
+      "meaning": "лапа животного",
+      "kind": "word",
+      "selection": {
+        "base_weight": 70,
+        "scope": "auxiliary",
+        "weight_source": "restored_approved_import_20261115"
+      },
+      "categories": [
+        {
+          "path": "Животный мир/Части тела животных",
+          "default_selection": true
+        }
+      ],
+      "phonetic_tags": {
+        "status": "pending_automatic_analysis",
+        "data": null
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "policy": "illustration_planned",
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-import-20261115-lapa-sense",
+            "word_id": "ru-noun-import-20261115-lapa",
+            "label": "лапа",
+            "meaning": "лапа животного",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-lapa",
+                "src": "/assets/words/lapa-20261115.webp",
+                "label": "лапа",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "3d849fbb4d5229afe0ce4d506a2099eccce9f314"
+              }
+            ]
+          }
+        ]
+      },
+      "metadata_completion": {
+        "speech": "pending",
+        "lexical": "editorial_draft",
+        "forms": "pending",
+        "prepositions": "pending",
+        "descriptions": "pending"
+      },
+      "legacy_source": null,
+      "editorial": {
+        "source": "approved_import_20261115",
+        "status": "needs_review",
+        "note": "Restored original approved public import; phonetics and inflections remain pending."
+      },
+      "part_of_speech": "noun",
+      "lexical_eligible_by_default": false
+    },
+    {
+      "id": "ru-noun-import-20261115-zavod",
+      "lemma": "завод",
+      "language": "ru",
+      "meaning": "промышленное предприятие",
+      "kind": "word",
+      "selection": {
+        "base_weight": 50,
+        "scope": "general",
+        "weight_source": "restored_approved_import_20261115"
+      },
+      "categories": [
+        {
+          "path": "Общество и окружающая среда/Город и село/Здания и учреждения",
+          "default_selection": true
+        }
+      ],
+      "phonetic_tags": {
+        "status": "pending_automatic_analysis",
+        "data": null
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "policy": "illustration_planned",
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-import-20261115-zavod-sense",
+            "word_id": "ru-noun-import-20261115-zavod",
+            "label": "завод",
+            "meaning": "промышленное предприятие",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-zavod",
+                "src": "/assets/words/zavod-20261115.webp",
+                "label": "завод",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "b05b37a11991bff6a70debdc2162bbcf00fcb2a3"
+              }
+            ]
+          }
+        ]
+      },
+      "metadata_completion": {
+        "speech": "pending",
+        "lexical": "editorial_draft",
+        "forms": "pending",
+        "prepositions": "pending",
+        "descriptions": "pending"
+      },
+      "legacy_source": null,
+      "editorial": {
+        "source": "approved_import_20261115",
+        "status": "needs_review",
+        "note": "Restored original approved public import; phonetics and inflections remain pending."
+      },
+      "part_of_speech": "noun",
+      "lexical_eligible_by_default": true
+    },
+    {
+      "id": "ru-noun-import-20261115-meshok",
+      "lemma": "мешок",
+      "language": "ru",
+      "meaning": "мешок для хранения или переноски",
+      "kind": "word",
+      "selection": {
+        "base_weight": 50,
+        "scope": "general",
+        "weight_source": "restored_approved_import_20261115"
+      },
+      "categories": [
+        {
+          "path": "Дом и быт/Предметы домашнего обихода/Хранение вещей",
+          "default_selection": true
+        }
+      ],
+      "phonetic_tags": {
+        "status": "pending_automatic_analysis",
+        "data": null
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "policy": "illustration_planned",
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-import-20261115-meshok-sense",
+            "word_id": "ru-noun-import-20261115-meshok",
+            "label": "мешок",
+            "meaning": "мешок для хранения или переноски",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-meshok",
+                "src": "/assets/words/meshok-20261115.webp",
+                "label": "мешок",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "57c93c822dbbd991dd2133f9998602af1954e5b3"
+              }
+            ]
+          }
+        ]
+      },
+      "metadata_completion": {
+        "speech": "pending",
+        "lexical": "editorial_draft",
+        "forms": "pending",
+        "prepositions": "pending",
+        "descriptions": "pending"
+      },
+      "legacy_source": null,
+      "editorial": {
+        "source": "approved_import_20261115",
+        "status": "needs_review",
+        "note": "Restored original approved public import; phonetics and inflections remain pending."
+      },
+      "part_of_speech": "noun",
+      "lexical_eligible_by_default": true
+    },
+    {
+      "id": "ru-noun-import-20261115-kaplya",
+      "lemma": "капля",
+      "language": "ru",
+      "meaning": "капля воды",
+      "kind": "word",
+      "selection": {
+        "base_weight": 70,
+        "scope": "general",
+        "weight_source": "restored_approved_import_20261115"
+      },
+      "categories": [
+        {
+          "path": "Природа и окружающий мир/Явления",
+          "default_selection": true
+        }
+      ],
+      "phonetic_tags": {
+        "status": "pending_automatic_analysis",
+        "data": null
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "policy": "illustration_planned",
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-import-20261115-kaplya-sense",
+            "word_id": "ru-noun-import-20261115-kaplya",
+            "label": "капля",
+            "meaning": "капля воды",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-kaplya",
+                "src": "/assets/words/kaplya-20261115.webp",
+                "label": "капля",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "c5e9e60ee1b41e8a6a637d7ddbe23bbe1ede6237"
+              }
+            ]
+          }
+        ]
+      },
+      "metadata_completion": {
+        "speech": "pending",
+        "lexical": "editorial_draft",
+        "forms": "pending",
+        "prepositions": "pending",
+        "descriptions": "pending"
+      },
+      "legacy_source": null,
+      "editorial": {
+        "source": "approved_import_20261115",
+        "status": "needs_review",
+        "note": "Restored original approved public import; phonetics and inflections remain pending."
+      },
+      "part_of_speech": "noun",
+      "lexical_eligible_by_default": true
+    },
+    {
+      "id": "ru-noun-import-20261115-kalendar",
+      "lemma": "календарь",
+      "language": "ru",
+      "meaning": "настольный календарь",
+      "kind": "word",
+      "selection": {
+        "base_weight": 70,
+        "scope": "general",
+        "weight_source": "restored_approved_import_20261115"
+      },
+      "categories": [
+        {
+          "path": "Время и календарь/Временные представления",
+          "default_selection": true
+        }
+      ],
+      "phonetic_tags": {
+        "status": "pending_automatic_analysis",
+        "data": null
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "policy": "illustration_planned",
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-import-20261115-kalendar-sense",
+            "word_id": "ru-noun-import-20261115-kalendar",
+            "label": "календарь",
+            "meaning": "настольный календарь",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-kalendar",
+                "src": "/assets/words/kalendar-20261115.webp",
+                "label": "календарь",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "c8221c3aca72dc421f07c1077bb93df054dc6655"
+              }
+            ]
+          }
+        ]
+      },
+      "metadata_completion": {
+        "speech": "pending",
+        "lexical": "editorial_draft",
+        "forms": "pending",
+        "prepositions": "pending",
+        "descriptions": "pending"
+      },
+      "legacy_source": null,
+      "editorial": {
+        "source": "approved_import_20261115",
+        "status": "needs_review",
+        "note": "Restored original approved public import; phonetics and inflections remain pending."
+      },
+      "part_of_speech": "noun",
+      "lexical_eligible_by_default": true
+    },
+    {
+      "id": "ru-noun-import-20261115-snegovik",
+      "lemma": "снеговик",
+      "language": "ru",
+      "meaning": "фигура из снега",
+      "kind": "word",
+      "selection": {
+        "base_weight": 70,
+        "scope": "general",
+        "weight_source": "restored_approved_import_20261115"
+      },
+      "categories": [
+        {
+          "path": "Игры, творчество и увлечения/Зимние забавы",
+          "default_selection": true
+        }
+      ],
+      "phonetic_tags": {
+        "status": "pending_automatic_analysis",
+        "data": null
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "policy": "illustration_planned",
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-import-20261115-snegovik-sense",
+            "word_id": "ru-noun-import-20261115-snegovik",
+            "label": "снеговик",
+            "meaning": "фигура из снега",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-snegovik",
+                "src": "/assets/words/snegovik-20261115.webp",
+                "label": "снеговик",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "de150ee6064dd7034cfce562e7a326beebde7b87"
+              }
+            ]
+          }
+        ]
+      },
+      "metadata_completion": {
+        "speech": "pending",
+        "lexical": "editorial_draft",
+        "forms": "pending",
+        "prepositions": "pending",
+        "descriptions": "pending"
+      },
+      "legacy_source": null,
+      "editorial": {
+        "source": "approved_import_20261115",
+        "status": "needs_review",
+        "note": "Restored original approved public import; phonetics and inflections remain pending."
+      },
+      "part_of_speech": "noun",
+      "lexical_eligible_by_default": true
+    },
+    {
+      "id": "ru-noun-import-20261115-panda",
+      "lemma": "панда",
+      "language": "ru",
+      "meaning": "большая панда, медведь",
+      "kind": "word",
+      "selection": {
+        "base_weight": 70,
+        "scope": "general",
+        "weight_source": "restored_approved_import_20261115"
+      },
+      "categories": [
+        {
+          "path": "Животный мир/Дикие животные/Жарких стран и других регионов",
+          "default_selection": true
+        }
+      ],
+      "phonetic_tags": {
+        "status": "pending_automatic_analysis",
+        "data": null
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "policy": "illustration_planned",
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-import-20261115-panda-sense",
+            "word_id": "ru-noun-import-20261115-panda",
+            "label": "панда",
+            "meaning": "большая панда, медведь",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-panda",
+                "src": "/assets/words/panda-20261115.webp",
+                "label": "панда",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "c2f6f04d5fe3afdd6e934cebdbefefc164b580a9"
+              }
+            ]
+          }
+        ]
+      },
+      "metadata_completion": {
+        "speech": "pending",
+        "lexical": "editorial_draft",
+        "forms": "pending",
+        "prepositions": "pending",
+        "descriptions": "pending"
+      },
+      "legacy_source": null,
+      "editorial": {
+        "source": "approved_import_20261115",
+        "status": "needs_review",
+        "note": "Restored original approved public import; phonetics and inflections remain pending."
+      },
+      "part_of_speech": "noun",
+      "lexical_eligible_by_default": true
+    },
+    {
+      "id": "ru-noun-import-20261115-kryuchok",
+      "lemma": "крючок",
+      "language": "ru",
+      "meaning": "рыболовный крючок",
+      "kind": "word",
+      "selection": {
+        "base_weight": 30,
+        "scope": "general",
+        "weight_source": "restored_approved_import_20261115"
+      },
+      "categories": [
+        {
+          "path": "Игры, творчество и увлечения/Рыбалка и принадлежности",
+          "default_selection": true
+        }
+      ],
+      "phonetic_tags": {
+        "status": "pending_automatic_analysis",
+        "data": null
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "policy": "illustration_planned",
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-import-20261115-kryuchok-sense",
+            "word_id": "ru-noun-import-20261115-kryuchok",
+            "label": "крючок",
+            "meaning": "рыболовный крючок",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-kryuchok",
+                "src": "/assets/words/kryuchok-20261115.webp",
+                "label": "крючок",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "1cfaedb9d2098067b80ada5aa0e2889abfb16211"
+              }
+            ]
+          }
+        ]
+      },
+      "metadata_completion": {
+        "speech": "pending",
+        "lexical": "editorial_draft",
+        "forms": "pending",
+        "prepositions": "pending",
+        "descriptions": "pending"
+      },
+      "legacy_source": null,
+      "editorial": {
+        "source": "approved_import_20261115",
+        "status": "needs_review",
+        "note": "Restored original approved public import; phonetics and inflections remain pending."
+      },
+      "part_of_speech": "noun",
+      "lexical_eligible_by_default": true
+    },
+    {
+      "id": "ru-noun-import-20261115-udochka",
+      "lemma": "удочка",
+      "language": "ru",
+      "meaning": "удочка для ловли рыбы",
+      "kind": "word",
+      "selection": {
+        "base_weight": 70,
+        "scope": "general",
+        "weight_source": "restored_approved_import_20261115"
+      },
+      "categories": [
+        {
+          "path": "Игры, творчество и увлечения/Рыбалка и принадлежности",
+          "default_selection": true
+        }
+      ],
+      "phonetic_tags": {
+        "status": "pending_automatic_analysis",
+        "data": null
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "policy": "illustration_planned",
+        "planned_variants": 1,
+        "art_status": "assigned",
+        "senses": [
+          {
+            "id": "ru-noun-import-20261115-udochka-sense",
+            "word_id": "ru-noun-import-20261115-udochka",
+            "label": "удочка",
+            "meaning": "удочка для ловли рыбы",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-import-20261115-udochka",
+                "src": "/assets/words/udochka-20261115.webp",
+                "label": "удочка",
+                "format": "webp",
+                "source": "approved_import_20261115",
+                "git_blob_sha": "e0e41d53d6f0763bfdb071d78a994563fe4d9ba5"
+              }
+            ]
+          }
+        ]
+      },
+      "metadata_completion": {
+        "speech": "pending",
+        "lexical": "editorial_draft",
+        "forms": "pending",
+        "prepositions": "pending",
+        "descriptions": "pending"
+      },
+      "legacy_source": null,
+      "editorial": {
+        "source": "approved_import_20261115",
+        "status": "needs_review",
+        "note": "Restored original approved public import; phonetics and inflections remain pending."
+      },
+      "part_of_speech": "noun",
+      "lexical_eligible_by_default": true
+    },
+    {
+      "id": "ru-pack77-20261125-pismo",
+      "lemma": "письмо",
+      "language": "ru",
+      "meaning": "письмо",
+      "kind": "word",
+      "selection": {
+        "base_weight": 50,
+        "scope": "general",
+        "weight_source": "approved_pack77_20261125"
+      },
+      "categories": [
+        {
+          "path": "Дом и быт/Предметы домашнего обихода/Прочие бытовые предметы",
+          "default_selection": true
+        }
+      ],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": null
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "ru-pack77-20261125-pismo-sense",
+            "word_id": "ru-pack77-20261125-pismo",
+            "label": "письмо",
+            "meaning": "письмо",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-pismo",
+                "src": "/assets/words/pismo-pack77.webp",
+                "label": "письмо",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "af49db8ab375f8453438ca4bf25942457653bd1d",
+                "sha256": "d34623ee2661e38c74e54340c3a7491fafae91ee705dfd96db48d3aa60b7cbdd"
+              }
+            ]
+          }
+        ],
+        "art_status": "assigned",
+        "planned_variants": 1
+      },
+      "metadata_completion": {
+        "speech": "pending",
+        "forms": "pending",
+        "lexical": "editorial_draft"
+      },
+      "legacy_source": null,
+      "editorial": {
+        "source": "approved_pack77_20261125",
+        "status": "needs_review"
+      },
+      "part_of_speech": "noun",
+      "lexical_eligible_by_default": true
+    },
+    {
+      "id": "ru-pack77-20261125-posylka",
+      "lemma": "посылка",
+      "language": "ru",
+      "meaning": "посылка",
+      "kind": "word",
+      "selection": {
+        "base_weight": 50,
+        "scope": "general",
+        "weight_source": "approved_pack77_20261125"
+      },
+      "categories": [
+        {
+          "path": "Дом и быт/Предметы домашнего обихода/Прочие бытовые предметы",
+          "default_selection": true
+        }
+      ],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": null
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "ru-pack77-20261125-posylka-sense",
+            "word_id": "ru-pack77-20261125-posylka",
+            "label": "посылка",
+            "meaning": "посылка",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-posylka",
+                "src": "/assets/words/posylka-pack77.webp",
+                "label": "посылка",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "ed989c6a2319add0e52e7565dbc37967ba4828b2",
+                "sha256": "79cbe25dcc3a0c9454cd7b586416213c76960c04e33a8da06d5b10ad1b738065"
+              }
+            ]
+          }
+        ],
+        "art_status": "assigned",
+        "planned_variants": 1
+      },
+      "metadata_completion": {
+        "speech": "pending",
+        "forms": "pending",
+        "lexical": "editorial_draft"
+      },
+      "legacy_source": null,
+      "editorial": {
+        "source": "approved_pack77_20261125",
+        "status": "needs_review"
+      },
+      "part_of_speech": "noun",
+      "lexical_eligible_by_default": true
+    },
+    {
+      "id": "ru-pack77-20261125-roliki",
+      "lemma": "ролики",
+      "language": "ru",
+      "meaning": "роликовые коньки",
+      "kind": "word",
+      "selection": {
+        "base_weight": 70,
+        "scope": "general",
+        "weight_source": "approved_pack77_20261125"
+      },
+      "categories": [
+        {
+          "path": "Игры, творчество и увлечения/Спортивный инвентарь",
+          "default_selection": true
+        }
+      ],
+      "phonetic_tags": {
+        "status": "pending",
+        "data": null
+      },
+      "morphology": {
+        "status": "pending",
+        "data": {}
+      },
+      "illustrations": {
+        "senses": [
+          {
+            "id": "ru-pack77-20261125-roliki-sense",
+            "word_id": "ru-pack77-20261125-roliki",
+            "label": "ролики",
+            "meaning": "роликовые коньки",
+            "topic": null,
+            "subcategory": null,
+            "variants": [
+              {
+                "id": "approved-pack77-roliki",
+                "src": "/assets/words/roliki-pack77.webp",
+                "label": "ролики",
+                "format": "webp",
+                "source": "approved_pack77_20261125",
+                "git_blob_sha": "b3273eae5700e4562606f26f7d9645fe46a7153d",
+                "sha256": "22860501bf6f3ee07bd6e11b8afddc9a882d7676ec298fd579499442559a12ee"
+              }
+            ]
+          }
+        ],
+        "art_status": "assigned",
+        "planned_variants": 1
+      },
+      "metadata_completion": {
+        "speech": "pending",
+        "forms": "pending",
+        "lexical": "editorial_draft"
+      },
+      "legacy_source": null,
+      "editorial": {
+        "source": "approved_pack77_20261125",
+        "status": "needs_review"
+      },
+      "part_of_speech": "noun",
       "lexical_eligible_by_default": true
     }
   ],
