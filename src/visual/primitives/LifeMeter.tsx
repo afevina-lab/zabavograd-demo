@@ -14,7 +14,7 @@ export function LifeMeter({lives,maximum=5,disabled,manual,onSpend,onUndo,classN
   return ()=>clearTimeout(timer);
  },[lives,maximum]);
  const image=(amount:number)=>import.meta.env.BASE_URL+'assets/rewards/'+(amount===.5?'heart-half':'heart')+'.webp';
- return <span className={classNames.root}><button type="button" className={classNames.button} aria-label={'Жизни: '+lives+'; снять половину жизни'} disabled={disabled||!manual} title="Нажатие или F8 — снять половину жизни. F9 или контекстное меню — отменить." onContextMenu={event=>{event.preventDefault();onUndo()}} onClick={onSpend}>
+ return <span className={classNames.root} data-high-count={maximum>5||undefined}><button type="button" className={classNames.button} aria-label={'Жизни: '+lives+'; снять половину жизни'} disabled={disabled||!manual} title="Нажатие или F8 — снять половину жизни. F9 или контекстное меню — отменить." onContextMenu={event=>{event.preventDefault();onUndo()}} onClick={onSpend}>
   {Array.from({length:maximum},(_,index)=>{
    const amount=Math.max(0,Math.min(1,lives-index));
    return <span key={index} className={classNames.heart}>
@@ -22,5 +22,6 @@ export function LifeMeter({lives,maximum=5,disabled,manual,onSpend,onUndo,classN
     {fading.filter(value=>value.index===index).map(value=><img key={value.key} alt="" className={classNames.leaving+' '+(value.amount===.5?classNames.half:classNames.full)} style={{'--zg-life-loss-duration':MOTION.lifeLossMs+'ms'} as CSSProperties} src={image(value.amount)}/>)}
    </span>;
   })}
+ <span className="v-life-compact" aria-hidden="true"><img src={image(1)} alt=""/><span>{lives}</span></span>
  </button></span>;
 }

@@ -12,3 +12,6 @@
 .v-icon-button[data-size=answer]{--v-icon-size:clamp(48px,8vmin,72px);--v-icon-padding:var(--v-space-3)}
 .v-icon-button[data-size=answer][data-answer=negative]{background:var(--ui-required);border-color:var(--ui-required-dark)}
 .v-button--secondary[aria-pressed=true]{background:var(--ui-deep);border-color:var(--ui-deep);color:var(--ui-paper)}
+.v-button[data-size=trigger]{display:flex;width:100%;min-width:0;gap:var(--v-space-3);--v-button-padding:var(--v-space-2) var(--v-space-3);--v-button-radius:14px;text-align:start;line-height:1.4}
+.v-button[data-size=chip]{--v-button-height:var(--v-target);--v-button-radius:24px;--v-button-padding:var(--v-space-2) var(--v-space-4)}
+.v-button[data-size=attached]{width:38px;height:38px;--v-button-height:38px;--v-button-padding:var(--v-space-2) 6px var(--v-space-2) var(--v-space-3);--v-button-radius:0 10px 10px 0}

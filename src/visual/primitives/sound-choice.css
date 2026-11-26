@@ -1,3 +1,3 @@
 .v-sound-choice{display:inline-flex;align-items:center;isolation:isolate;flex:none;gap:0}
 .v-sound-symbol{width:48px;height:48px;--v-button-height:48px;--v-button-padding:var(--v-space-2);position:relative;z-index:1;font-weight:700}
-.v-sound-edit{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;flex:none;margin-inline-start:-8px;padding:8px 6px 8px 12px;border:1px solid var(--ui-field-edge);border-radius:0 10px 10px 0;background:var(--ui-control-face);color:var(--ui-text)}
+.v-sound-edit{margin-inline-start:-8px}

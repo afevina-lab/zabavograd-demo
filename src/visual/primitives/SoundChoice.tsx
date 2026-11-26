@@ -1,3 +1,4 @@
+import {Button} from './Buttons.tsx';
 import {visualClasses} from './classNames.ts';
 import {Icon} from './Icon.tsx';
 export type SoundChoiceClasses={root:string;attached:string;symbol:string;edit:string};
@@ -7,6 +8,6 @@ export function SoundChoice({sound,selected,disabled=false,onSelect,onEdit,class
  classNames=visualClasses(classes,classNames);
  return <div className={classNames.root+(selected?' '+classNames.attached:'')}>
   <button type="button" className={classNames.symbol} aria-pressed={selected} disabled={disabled} onClick={onSelect}>{sound.toUpperCase()}</button>
-  {selected&&<button type="button" className={classNames.edit} aria-label={'Редактировать '+sound} onClick={onEdit}><Icon name="Settings"/></button>}
+  {selected&&<Button tone="secondary" size="attached" className={classNames.edit} aria-label={'Редактировать '+sound} onClick={onEdit}><Icon name="Settings"/></Button>}
  </div>;
 }
