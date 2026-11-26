@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "mode": "preview",
+  "source_sha256": "2342765ab2aae827ab89a2b9bbdcde08b9fbb14ccc5ba35a16879a12d51c5526",
+  "operations": [
+    {
+      "id": "ru-home-20261105-bd699907",
+      "path": "/selection/base_weight",
+      "expect": {
+        "exists": true,
+        "value": 100
+      },
+      "value": 70
+    }
+  ]
+}
