@@ -24,6 +24,8 @@ export async function startModularEditor({document=globalThis.document,window=gl
  function controls(){
   const freeze=locked||!!waiting||!!review;
   for(const id of ['search','category','kind','missing'])$(id).disabled=!ready||locked;
+  $('connect').disabled=locked||!!waiting||!!review||draft.size>0;
+  $('login').disabled=locked||!!waiting||!!review||draft.size>0;
   $('prev').disabled=!ready||locked||page===0;
   $('next').disabled=!ready||locked||(page+1)*PAGE>=total;
   $('save').disabled=!ready||locked||(!draft.size&&!waiting&&!review);
@@ -55,6 +57,8 @@ export async function startModularEditor({document=globalThis.document,window=gl
  async function loadList(){
   const q=searchOptions({text:$('search').value,category:$('category').value,kind:$('kind').value,missing:$('missing').value,page});
   const r=(await c.cachedQuery('sqlite',q)).report;
+  // A new list query invalidates the controller's latest exact-field inspection.
+  row=null;selected=null;$('detail').hidden=true;$('empty').hidden=false;
   total=r.total;$('count').textContent=String(total);$('page').textContent=(page+1)+' / '+Math.max(1,Math.ceil(total/PAGE));
   $('cards').replaceChildren();
   for(const e of r.rows){
@@ -165,5 +169,7 @@ export async function startModularEditor({document=globalThis.document,window=gl
   $('stats').textContent=r.entries+' слов · '+r.categories+' веток · '+r.relations+' связей';
   $('login').textContent='GitHub подключён';page=0;ready=true;await loadList();
  }
+ const reconnect=$('connect').onclick;
+ $('connect').onclick=()=>{if(locked||draft.size||waiting||review)return;reconnect?.();ready=false;row=null;selected=null;$('cards').replaceChildren();$('detail').hidden=true;$('empty').hidden=false;controls();};
  hideUnsupported();controls();await task(()=>initialize());
 }
