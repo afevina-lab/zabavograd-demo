@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "mode": "query",
+  "command": "sqlite",
+  "options": {
+    "weight": 100,
+    "sounds": [
+      "к"
+    ],
+    "exclude_sounds": [
+      "р",
+      "р'"
+    ],
+    "has_image": true,
+    "limit": 10
+  }
+}
