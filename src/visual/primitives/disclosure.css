@@ -9,3 +9,4 @@
 .v-disclosure[open]>summary .v-disclosure-well>svg{transform:rotate(180deg)}
 .v-disclosure-body{display:flex;flex-direction:column;gap:var(--v-space-3);min-width:0;padding-top:var(--v-space-3)}
 .v-disclosure>summary:focus-visible{outline:3px solid var(--ui-accent);outline-offset:3px;border-radius:8px}
+@media(max-width:360px){.v-disclosure-icon{display:none}}

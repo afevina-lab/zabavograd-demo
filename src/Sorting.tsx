@@ -115,7 +115,7 @@ export function Sorting(){
  footer:<><SetupPreview actions={<><button type="button" className="v-control-button v-icon-button icon-button" aria-label="Перемешать состав" onClick={()=>setPreviewOverride({source:preparation,items:makeSorting(pools,groups.map(g=>g.count))})} disabled={!!preparation.error}><Icon name="Return1"/></button><button type="button" className="v-control-button v-icon-button icon-button" aria-label="Выбрать слова вручную" onClick={()=>{setChosen(previewItems.map(i=>i.word.id));setSearch('');setPicker(true)}} disabled={!!preparation.error}><Icon name="Settings"/></button></>}
  message={error||preparation.error||(!previewItems.length?'Нет подходящих карточек. Измените темы или условия групп.':undefined)}>
  <p>{previewItems.map(i=>i.word.label).join(', ')}</p>
- </SetupPreview><button className="v-control-button v-button v-button--primary primary" disabled={!!error||!!preparation.error} onClick={start}>Начать игру</button></>
+ </SetupPreview><button className="v-control-button v-button v-button--primary primary" disabled={!!error||!!preparation.error} data-size="launch" onClick={start}>Начать игру</button></>
  }}/>:<section className="v-play-area play-area"><GameToolbar task={pictures?'Назови и разложи по группам':'Прочитай и разложи по группам'}
  pause={<IconButton size="toolbar" label="Пауза" icon="Pause" className="icon-button toolbar-pause"  disabled={checking} onClick={()=>setPaused(!paused)}/>}
  sound={<IconButton size="toolbar" label="Звуки" icon={sound?'Sound':'SoundOff'} className="icon-button"  onClick={()=>setSound(!sound)}/>}

@@ -25,8 +25,8 @@ test('Settings are explicit slots with no runtime child routing',()=>{
  const layout=visual('compositions/SettingsLayout.tsx');for(const slot of ['primary','secondary','appearance','footer','supplementary'])assert.ok(layout.includes(slot));
  assert.ok(layout.indexOf('className={classNames.footer}')>layout.indexOf('className={classNames.workspace}'));
 });
-test('Settings columns align at the top and theme rail scrolls independently',()=>{
- const css=visual('compositions/settings.css');assert.match(css,/\.v-settings-columns\{[^}]*align-items:start/);assert.match(css,/\.v-appearance-scroll\{[^}]*overflow:auto/);assert.match(css,/\.v-settings-scroll\{[^}]*min-height:0[^}]*overflow:auto/);assert.match(css,/\.v-settings-footer\{[^}]*grid-template-columns:minmax\(0,1fr\) auto/);
+test('Settings columns align and appearance belongs to the scrollable settings',()=>{
+ const css=visual('compositions/settings.css');assert.match(css,/\.v-settings-columns\{[^}]*align-items:start/);assert.match(css,/\.v-appearance-scroll\{[^}]*overflow:auto/);assert.match(css,/\.v-settings-scroll\{[^}]*min-height:0[^}]*overflow:auto/);assert.match(css,/\.v-settings-footer\{[^}]*grid-template-areas:"actions words start"/);
 });
 test('Only themes are sent to the appearance rail in sorting',()=>{
  const source=read('src/Sorting.tsx'),start=source.indexOf('appearance:'),end=source.indexOf('footer:',start),rail=source.slice(start,end);assert.match(rail,/ThemePicker/);assert.doesNotMatch(rail,/Показ карточек|GameSelect/);

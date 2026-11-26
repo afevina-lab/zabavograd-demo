@@ -75,27 +75,12 @@ export function Matching(){
   if(!stage||!session.length)return;
   const fit=()=>{
    const width=Math.max(180,stage.clientWidth-32),height=Math.max(160,stage.clientHeight-26);
-   const maxElements=Math.max(2,...session.map(g=>g.elements.length));
-   let best={columns:1,cardWidth:36,bankPageSize:4},bestScore=-1;
-   for(let columns=1;columns<=Math.min(6,session.length);columns++){
-    const groupRows=Math.ceil(session.length/columns);
-    for(let cardWidth=132;cardWidth>=36;cardWidth-=2){
-     const gap=6,groupWidth=captionMode?Math.max(162,cardWidth*1.55)+12:maxElements*cardWidth+(maxElements-1)*gap+16;
-     if(columns*groupWidth+(columns-1)*10>width)continue;
-     const cardHeight=cardWidth*1.04;
-     const groupHeight=groupRows*(cardHeight+(captionMode?62:20))+(groupRows-1)*10;
-     const bankCardWidth=displayMode==='image-word'?Math.max(142,cardWidth*1.55):cardWidth;
-     const bankCardHeight=displayMode==='image-word'?44:cardHeight;
-     const bankColumns=Math.max(1,Math.floor((width+8)/(bankCardWidth+8)));
-     const pageSize=Math.min(bank.length,Math.min(12,bankColumns*2));
-     const bankRows=Math.ceil(pageSize/bankColumns);
-     const bankHeight=bank.length?bankRows*(bankCardHeight+8)+14:0;
-     if(groupHeight+bankHeight+100>height)continue;
-     const score=cardWidth+Math.min(columns,4)*0.08;
-     if(score>bestScore){bestScore=score;best={columns,cardWidth,bankPageSize:Math.max(1,pageSize)}}
-     break;
-    }
-   }
+   // Groups are compact answer stations, not a memory-style board.
+   const minimum=captionMode?186:120,gap=12;
+   const columns=Math.max(1,Math.min(session.length,Math.floor((width+gap)/(minimum+gap))));
+   const cardWidth=Math.max(96,Math.min(132,Math.floor((width-(columns-1)*gap)/columns-24)));
+   const bankColumns=Math.max(1,Math.floor((width+gap)/(cardWidth+gap)));
+   const best={columns,cardWidth,bankPageSize:Math.max(1,Math.min(bank.length,bankColumns))};
    setBoardLayout(prev=>prev.columns===best.columns&&prev.cardWidth===best.cardWidth&&prev.bankPageSize===best.bankPageSize?prev:best);
   };
   const observer=new ResizeObserver(fit);
@@ -106,7 +91,7 @@ export function Matching(){
  const pageCount=Math.max(1,Math.ceil(remaining.length/boardLayout.bankPageSize));
  const currentPage=Math.min(bankPage,pageCount-1);
  const visibleBank=remaining.slice(currentPage*boardLayout.bankPageSize,(currentPage+1)*boardLayout.bankPageSize);
- const boardVars={'--matching-columns':String(boardLayout.columns),'--matching-card-size':boardLayout.cardWidth+'px','--matching-caption-width':Math.max(162,boardLayout.cardWidth*1.55)+'px'} as CSSProperties;
+ const boardVars={'--matching-columns':String(boardLayout.columns),'--matching-card-size':boardLayout.cardWidth+'px','--v-slot-size':boardLayout.cardWidth+'px','--matching-caption-width':Math.max(162,boardLayout.cardWidth*1.55)+'px'} as CSSProperties;
  useGameSoundOutcome(limits.lost?'lose':finished&&roundPlan.isLast?(Object.values(checkMatching(session,placements)).filter(Boolean).length>=bank.length*.3?'win':'lose'):null);
  function loadRound(next:MatchGroup[]){resetSoundCombo();enterGameViewport();limits.reset();setSession(next);setBank(shuffled(next.flatMap(g=>g.elements.slice(1))));setPlacements({});setVerdict({});setSelected(null);setBankPage(0);setFinished(false);setPaused(false);setMessage('');}
  function start(){if(setupError||prepared.busy)return;roundPlan.request(groups,loadRound,{text:displayMode==='word-word',groupSize:size,maxRounds:groups.length});}
@@ -147,14 +132,14 @@ export function Matching(){
  actions={<><button type="button" className="v-control-button v-icon-button icon-button" onClick={()=>{if(kind)prepared.shuffle();else{setChosenGroups(null);setShuffleKey(k=>k+1)}}} aria-label="Перемешать состав" title="Перемешать состав"><Icon name="Return1"/></button><WordPicker max={8} words={kind?visualWords:displayCandidates.map(g=>({...g.elements[0]?.word,id:g.id,label:g.elements.map(e=>e.word.label).join(' — ')}))} selected={kind?groups.map(g=>g.id):selectedGroups.map(g=>g.id)} onConfirm={ids=>{setCount(ids.length);if(kind)prepared.select(ids);else setChosenGroups({source:candidates,ids})}}/></>}
  message={error||familyError||setupError||(prepared.busy?'Подбираем '+count+' групп, проверено '+prepared.done:!groups.length?(message||'Нет полных групп. Измените тему или составьте группы вручную.'):undefined)}>
  <MaterialSummary items={groups.flatMap(g=>g.elements.map(e=>({label:e.word.label})))} empty="Нет полных групп. Измените тему или составьте группы вручную."/>
- </SetupPreview><button className="v-control-button v-button v-button--primary primary" disabled={prepared.busy||!!setupError||!!error} onClick={start}>Начать игру</button></>,
+ </SetupPreview><button className="v-control-button v-button v-button--primary primary" disabled={prepared.busy||!!setupError||!!error} data-size="launch" onClick={start}>Начать игру</button></>,
  supplementary:(prepared.busy||prepared.cancelled)?<>{prepared.busy&&<button className="v-control-button v-button v-button--secondary secondary" onClick={prepared.cancel}>Отменить подготовку</button>}{prepared.cancelled&&<button className="v-control-button v-button v-button--secondary secondary" onClick={prepared.retry}>Подготовить снова</button>}</>:undefined
  }}/>:<section className="v-play-area play-area"><GameToolbar task={learning.mode==='math'?'Реши и соотнеси':learning.mode==='reading'?'Прочитай и соотнеси':'Найди пару'}
  pause={<IconButton size="toolbar" label={paused?'Продолжить':'Пауза'} icon={paused?'Play':'Pause'} className="icon-button toolbar-pause"  onClick={()=>setPaused(v=>!v)}/>}
  status={<><span>{placed.size} / {bank.length}</span>{limits.status}</>}
  />
  <div className={'v-live-stage stage matching-stage '+(captionMode?'matching-stage-caption ':'')+(displayMode==='image-word'?'matching-bank-words':'')} ref={stageRef} style={boardVars}><Scenery theme={theme}/>{(paused||finished&&roundPlan.isLast||limits.lost)&&<GameDialog stars={limits.lost?0:finished?roundPlan.award:undefined} onRepeat={()=>roundPlan.repeat(loadRound)} title={limits.lost||(finished?(roundPlan.count>1?'Игра завершена':message):'Пауза')} onContinue={paused&&!finished&&!limits.lost?()=>setPaused(false):undefined} onSettings={()=>{setSession([]);setMessage('')}}/>}<MatchingLayout groups={<> {session.map(g=><MatchingGroup captionPosition={captionMode?(displayMode==="word-image"?"above":"below"):undefined} className={'matching-group '+(captionMode?'matching-group-caption '+(displayMode==='word-image'?'caption-above':'caption-below'):'')} key={g.id} data-match-group={g.id}><CardSurface data-caption={captionMode&&g.elements[0].appearance==="word"} className={captionMode&&g.elements[0].appearance==='word'?'matching-anchor matching-caption':'matching-card matching-anchor'}>{artwork(g.elements[0])}</CardSurface><div className="v-matching-slots matching-slots">{(placements[g.id]||[]).map(id=>card(bank.find(e=>e.id===id)!,true))}{Array.from({length:g.elements.length-1-(placements[g.id]?.length||0)},(_,i)=><CardSlot className={'matching-slot '+(displayMode==='image-word'?'matching-caption-slot':'')} key={'slot-'+i} aria-label={'Поместить под '+g.elements[0].word.label} disabled={!selected||paused||finished||!!limits.lost} onClick={()=>selected&&place(selected,g.id)}>+</CardSlot>)}</div></MatchingGroup>)}</>} bank={<> {!finished&&<MatchingBank heading={<> {pageCount>1&&<div className="v-bank-pages matching-bank-pages"><button className="v-control-button v-button v-button--secondary" type="button" disabled={currentPage===0} onClick={()=>setBankPage(currentPage-1)} aria-label="Предыдущие карточки">‹</button><span>{currentPage+1} / {pageCount}</span><button className="v-control-button v-button v-button--secondary" type="button" disabled={currentPage>=pageCount-1} onClick={()=>setBankPage(currentPage+1)} aria-label="Следующие карточки">›</button></div>}</>}> {visibleBank.map(e=>card(e))}</MatchingBank>}
- </>} actions={<> <p role="status">{limits.lost||(paused?'Пауза':message)}</p>{checkMode!=='instant'&&!finished&&<button className="v-control-button v-button v-button--primary primary" disabled={!complete||paused||!!limits.lost||Object.keys(verdict).length>0} onClick={check}>Проверить</button>}{checkMode==='correct'&&Object.values(verdict).some(v=>!v)&&<button className="v-control-button v-button v-button--primary primary" disabled={paused} onClick={retry}>Вернуть ошибки в банк</button>}
+ </>} actions={<> {!paused&&!finished&&!limits.lost&&message&&<p role="status">{message}</p>}{checkMode!=='instant'&&!finished&&<button className="v-control-button v-button v-button--primary primary" disabled={!complete||paused||!!limits.lost||Object.keys(verdict).length>0} onClick={check}>Проверить</button>}{checkMode==='correct'&&Object.values(verdict).some(v=>!v)&&<button className="v-control-button v-button v-button--primary primary" disabled={paused} onClick={retry}>Вернуть ошибки в банк</button>}
 </>}/></div></section>}
  </div>;
 }

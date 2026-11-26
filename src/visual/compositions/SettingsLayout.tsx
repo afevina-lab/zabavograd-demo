@@ -20,13 +20,13 @@ export function SettingsLayout({title,headerActions,heading,leading,primary,seco
    </header>
    <div className={classNames.workspace}>
     <Content className={[contentClassName,classNames.content].filter(Boolean).join(' ')}>
-     {leading}<div className={classNames.columns}><div className={classNames.column}>{primary}</div>{secondary!=null&&<div className={classNames.column}>{secondary}</div>}</div>
-     {supplementary&&<div className={classNames.notes}>{supplementary}</div>}
-    </Content>
+     <div className="v-settings-body">{leading}<div className={classNames.columns}><div className={classNames.column}>{primary}</div>{secondary!=null&&<div className={classNames.column}>{secondary}</div>}</div>
+     {supplementary&&<div className={classNames.notes}>{supplementary}</div>}</div>
     {appearance!=null&&<aside className={classNames.appearance} aria-label="Оформление игры">
      <Button tone="quiet" className={classNames.toggle} aria-expanded={expanded} aria-controls={appearanceId} onClick={()=>setExpanded(value=>!value)}>Оформление <span aria-hidden="true">{expanded?'▴':'▾'}</span></Button>
      <div id={appearanceId} className={classNames.appearanceScroll+(expanded?' '+classNames.expanded:'')} data-expanded={expanded}>{appearance}</div>
     </aside>}
+    </Content>
    </div>
    <footer className={classNames.footer}>{footer}</footer>
   </section>

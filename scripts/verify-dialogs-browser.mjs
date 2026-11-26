@@ -91,7 +91,7 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
  assert(await evaluate("(()=>{const bar=document.querySelector(':is(.v-toolbar,.shared-toolbar)').getBoundingClientRect();return [...document.querySelectorAll(':is(.v-toolbar,.shared-toolbar) :is(.v-icon-button,.icon-button)')].filter(e=>e.getBoundingClientRect().width>0).every(e=>{const r=e.getBoundingClientRect();return Math.abs(r.height/bar.height-.6)<.02&&Math.abs(r.top+r.height/2-bar.top-bar.height/2)<1})})()"),'Header action size/centring '+game+' '+width+' '+JSON.stringify(await evaluate("(()=>({bar:document.querySelector('.v-toolbar').getBoundingClientRect().toJSON(),buttons:[...document.querySelectorAll('.v-toolbar .v-icon-button')].map(e=>({label:e.getAttribute('aria-label'),rect:e.getBoundingClientRect().toJSON()}))}))()")));
  await until("!!document.querySelector('button[aria-label=Пауза]')");
  await evaluate("document.querySelector('button[aria-label=Пауза]').click()");await until("!!document.querySelector('.overlay')");await sleep(350);assert(await evaluate("(()=>{const e=document.querySelector(':is(.v-toolbar,.play-toolbar) .garden-icon'),b=e.closest('button,a');return getComputedStyle(e).backgroundColor!==getComputedStyle(b).backgroundColor})()"),'Toolbar icon contrast');await screenshot(game+'-pause-'+width);
- assert.deepEqual(await evaluate("(()=>{const e=document.querySelector('.overlay>.v-dialog-content'),style=getComputedStyle(e);return Object.fromEntries(['borderTopWidth','borderTopStyle','borderTopColor','borderRadius','backgroundImage','backgroundColor','boxShadow'].map(key=>[key,style[key]]))})()"),menuSkin,'Game window must use the menu frame and material: '+game+' '+width);
+ assert.deepEqual(await evaluate("(()=>{const e=document.querySelector('.overlay .v-dialog-panel'),style=getComputedStyle(e);return Object.fromEntries(['borderTopWidth','borderTopStyle','borderTopColor','borderRadius','backgroundImage','backgroundColor','boxShadow'].map(key=>[key,style[key]]))})()"),menuSkin,'Game window must use the menu frame and material: '+game+' '+width);
  assert(await evaluate("(()=>{const e=document.querySelector('.overlay>div'),r=e.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1&&r.top>=0&&r.bottom<=innerHeight+1})()"),'Pause overflow '+game);
  if(width===1440&&game!=='memory'){
   const frozen=await evaluate("document.querySelector('[aria-label=\"Прошло времени\"]').textContent");
@@ -132,14 +132,14 @@ const pairs=await evaluate("(()=>{const m={};for(const e of document.querySelect
 for(const pair of pairs){for(const key of pair){await evaluate("document.querySelector('[data-card-key=\""+key+"\"]').click()");await sleep(80)}await until("document.querySelector('[data-card-key=\""+pair[0]+"\"]').classList.contains('found')")}
 await until("!!document.querySelector('.overlay.result')");await until("getComputedStyle(document.querySelector('.overlay.result')).opacity==='1'");await until("[...document.querySelectorAll('.v-score-stars>span')].every(e=>e.getAnimations().every(a=>a.playState==='finished'))");await screenshot('memory-completed');
 assert(await evaluate("(()=>{const b=[...document.querySelectorAll('.overlay.result :is(.v-dialog-actions,.dialog-actions)>:is(button,a)')].map(e=>e.getBoundingClientRect());return b.length===3&&Math.abs(b[0].width-b[1].width)<1&&Math.abs(b[0].height-b[1].height)<1})()"),'Result buttons differ in size');
-assert(await evaluate("(()=>{const r=document.querySelector('.overlay.result>div').getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&r.bottom<=innerHeight})()"),'Completion panel overflow');
+assert(await evaluate("(()=>{const r=document.querySelector('.overlay.result .v-dialog-panel').getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&r.bottom<=innerHeight})()"),'Completion panel overflow');
 
 // Award and result frame must fit short screens, including the raised central star.
 const resultViewport=await evaluate("({width:innerWidth,height:innerHeight})");
 for(const [width,height] of [[320,480],[390,844],[844,390]]){
  await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
  await sleep(250);
- assert(await evaluate("(()=>{const frame=document.querySelector('.overlay.result>div').getBoundingClientRect(),award=document.querySelector('.overlay.result :is(.v-dialog-award,.award)').getBoundingClientRect();return frame.left>=0&&frame.right<=innerWidth+1&&frame.bottom<=innerHeight+1&&award.top>=0})()"),'Responsive result overflow '+width);
+ assert(await evaluate("(()=>{const frame=document.querySelector('.overlay.result .v-dialog-panel').getBoundingClientRect(),award=document.querySelector('.overlay.result :is(.v-dialog-award,.award)').getBoundingClientRect();return frame.left>=0&&frame.right<=innerWidth+1&&frame.bottom<=innerHeight+1&&award.top>=0})()"),'Responsive result overflow '+width);
  await screenshot('memory-completed-'+width);
 }
 await cmd('Emulation.setDeviceMetricsOverride',{...resultViewport,deviceScaleFactor:1,mobile:resultViewport.width<600});
