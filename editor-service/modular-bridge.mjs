@@ -10,7 +10,7 @@ const obj=x=>x&&typeof x==='object'&&!Array.isArray(x);
 function keys(x,allowed){check(obj(x),'Ожидается объект запроса');check(Object.keys(x).every(k=>allowed.includes(k)),'Неизвестное поле запроса')}
 export function validateEnvelope(kind,body){
  check(Object.hasOwn(kinds,kind),'Неизвестный тип запроса');
- check(obj(body)&&Buffer.byteLength(JSON.stringify(body))<=64*1024,'Запрос превышает 64 КиБ',413);
+ check(obj(body)&&Buffer.byteLength(JSON.stringify(body,null,2)+'\n')<=64*1024,'Запрос превышает 64 КиБ',413);
  check(body.version===1,'Требуется версия запроса 1');
  if(kind==='query'){
   keys(body,['version','mode','command','options','source_sha256']);
@@ -23,8 +23,10 @@ export function validateEnvelope(kind,body){
   check(['preview','candidate'].includes(body.mode)&&typeof body.source_sha256==='string'&&hash.test(body.source_sha256),'Требуется точная версия источника');
   check(body.mode==='candidate'?typeof body.preview_sha256==='string'&&hash.test(body.preview_sha256):body.preview_sha256===undefined,'Требуется соответствующий предварительный просмотр');
   check(Array.isArray(body.operations),'Ожидаются операции');
-  const arrays=[body.operations,body.semantic_operations??[],body.review_decisions??[],body.import_operations??[]];
+  const arrays=['operations','semantic_operations','review_decisions','import_operations'].map(k=>Object.hasOwn(body,k)?body[k]:[]);
   check(arrays.every(Array.isArray),'Ожидаются списки операций');
+  check(!arrays[3].length||arrays.slice(0,3).every(a=>!a.length),'Импорт требует отдельного запроса');
+  check(!arrays[2].length||(!arrays[0].length&&!arrays[1].length),'Решения требуют отдельного запроса');
   const count=arrays.reduce((n,a)=>n+a.length,0);
   check(count>=1&&count<=30,'Допускается от 1 до 30 операций');
  }
@@ -61,7 +63,8 @@ export function makeBridge({request,repo,random=()=>crypto.randomBytes(12).toStr
   check(file.type==='file'&&file.encoding==='base64'&&typeof file.content==='string'&&Number.isInteger(file.size)&&file.size<=100*1024,'Некорректный отчёт',502);
   const raw=Buffer.from(file.content,'base64');
   check(raw.length===file.size,'Размер отчёта не совпадает',502);
-  const report=JSON.parse(raw.toString('utf8'));
+  let report;try{report=JSON.parse(raw.toString('utf8'));}catch{fail('Некорректный JSON отчёта',502);}
+  check(obj(report),'Некорректный отчёт',502);
   check(report.scope==='integration_snapshot_not_live_main'&&commitHash.test(report.source_commit)&&commitHash.test(report.request_commit)&&report.request_commit.startsWith(m[2].slice(-12)),'Отчёт не соответствует запросу',502);
   return {status:'result_available',ticket,report,result_branch:branch};
  }

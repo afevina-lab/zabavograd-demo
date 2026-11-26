@@ -30,10 +30,27 @@ test('result unavailable is not a success; exact request binding checked',async(
  const ticket='edit/'+slug+'-'+c.slice(0,12);
  const missing=makeBridge({repo:'owner/repo',request:async()=>{throw Object.assign(Error('404'),{status:404})}});
  assert.equal((await missing.result(ticket)).status,'result_not_available');
- assert.rejects(()=>missing.result('edit/../../main'));
+ await assert.rejects(()=>missing.result('edit/../../main'));
  const report={source_commit:h,request_commit:c,scope:'integration_snapshot_not_live_main',status:'validated_candidate_not_approved'};
  const raw=Buffer.from(JSON.stringify(report));
  const bridge=makeBridge({repo:'owner/repo',request:async()=>({type:'file',encoding:'base64',size:raw.length,content:raw.toString('base64')})});
  assert.deepEqual((await bridge.result(ticket)).report,report);
  await assert.rejects(()=>bridge.result('edit/'+slug+'-'+'f'.repeat(12)),/не соответствует/);
+});
+
+test('rejects invalid or oversized request before any GitHub operation',async()=>{
+ let calls=0;
+ const bridge=makeBridge({repo:'owner/repo',request:async()=>{calls++;throw Error('must not contact GitHub')}});
+ const base={version:1,mode:'preview',source_sha256:sha,operations:[{}]};
+ for(const body of [{...base,semantic_operations:null},{...base,review_decisions:[{}]},{...base,import_operations:[{}]},{...base,operations:[{data:Array(5000).fill('a')}]}]){
+  await assert.rejects(()=>bridge.submit('edit',body),e=>[400,413].includes(e.status));
+ }
+ assert.equal(calls,0);
+});
+test('malformed result body fails as upstream error, not a valid result',async()=>{
+ const ticket='edit/'+slug+'-'+c.slice(0,12);
+ for(const raw of [Buffer.from('null'),Buffer.from('{broken')]){
+  const bridge=makeBridge({repo:'owner/repo',request:async()=>({type:'file',encoding:'base64',size:raw.length,content:raw.toString('base64')})});
+  await assert.rejects(()=>bridge.result(ticket),e=>e.status===502);
+ }
 });
