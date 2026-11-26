@@ -18,9 +18,31 @@ export function parseDraft(raw){
   const b=state.job?.body;
   if(!b||!Array.isArray(b.operations)||!b.operations.length||b.operations.length>30||b.semantic_operations!==undefined||b.review_decisions!==undefined||b.import_operations!==undefined)throw Error('Этот черновик не поддерживается интерфейсом');
   b.operations.forEach(valid);
+  if(new Set(b.operations.map(o=>o.id)).size!==b.operations.length)throw Error('Повторная операция в отправленном пакете');
+  if(b.mode==='preview'&&!d.operations.length)throw Error('Отсутствуют операции предварительного просмотра');
   if(d.operations.length&&JSON.stringify(d.operations)!==JSON.stringify(b.operations))throw Error('Черновик не совпадает с отправленным пакетом');
  }
+ if(!d.operations.length&&state.job===null)throw Error('Пустой черновик');
  return d;
+}
+// Read-only validation of unsent changes. A historical ticket is re-collected
+// from the server, never reconstructed from a saved preview.
+export async function verifyDraftOperations(client,operations){
+ for(const op of operations){
+  const r=(await client.cachedQuery('inspect',{id:op.id,fields:[weightPath],limit:1})).report;
+  const row=r.rows?.[0],prior=row?.fields?.[weightPath];
+  if(r.rows?.length!==1||row.id!==op.id||prior?.exists!==true||prior.value!==op.expect.value)
+   throw Object.assign(Error('Изменилось исходное значение: '+op.id),{status:409});
+ }
+}
+export async function prepareImportedDraft(raw,api){
+ const saved=parseDraft(raw),client=createModularClient(api);
+ const waiting=await client.restore(saved.controller);
+ if(!waiting){
+  await client.cachedQuery('inventory');
+  await verifyDraftOperations(client,saved.operations);
+ }
+ return {saved,client,waiting};
 }
 export function draftStorageKey(service){return draftPrefix+new URL(service).origin;}
 export function searchOptions({text='',category='',kind='',missing='',page=0}={}){
@@ -35,7 +57,7 @@ export function searchOptions({text='',category='',kind='',missing='',page=0}={}
 }
 export async function startModularEditor({document=globalThis.document,window=globalThis.window,connection,client}={}){
  const $=id=>document.getElementById(id),say=s=>$('state').textContent=s;
- const conn=connection??connectEditor({document,window}),c=client??createModularClient(conn.api);
+ const conn=connection??connectEditor({document,window});let c=client??createModularClient(conn.api);
  let page=0,total=0,selected=null,row=null,waiting=null,review=null,draft=new Map(),locked=false,ready=false,connected=false,stale=false;
  let storageKey=null,storageRaw=null,storageBlocked=false;
  const storage=()=>window.localStorage;
@@ -66,20 +88,21 @@ export async function startModularEditor({document=globalThis.document,window=gl
  function controls(){
   const freeze=locked||stale||!!waiting||!!review;
   for(const id of ['search','category','kind','missing'])$(id).disabled=!ready||locked;
-  $('connect').disabled=locked||!!waiting||!!review||draft.size>0;
+  $('connect').disabled=locked||!!waiting||!!review||draft.size>0||storageBlocked||!!storageRaw;
   $('login').disabled=locked; // Allow reauthentication with an existing draft.
   $('prev').disabled=!ready||locked||page===0;
   $('next').disabled=!ready||locked||(page+1)*PAGE>=total;
   $('save').disabled=locked||(!waiting&&!review&&(!ready||stale||!draft.size))||(!!waiting&&!connected);
   $('save').textContent=waiting?'Проверить результат':review?'Открыть проверку':'Предпросмотр изменений';
   $('undo').disabled=freeze||!selected||![...draft.values()].some(o=>o.id===selected);
-  $('export').disabled=!draft.size&&!waiting&&!review;
+  $('export').disabled=!draft.size&&!waiting&&!review&&!storageRaw;
+  $('import').disabled=locked||!connected||!!waiting||!!review||draft.size>0||storageBlocked||!!storageRaw;
   $('submit').disabled=locked||!connected||stale||!ready||!review||review.status!=='preview_not_validated_or_approved';
   for(const n of $('fields').querySelectorAll('input,select'))n.disabled=freeze||n.dataset.protected==='1';
  }
  async function task(fn){if(locked)return;locked=true;controls();try{return await fn()}catch(e){if(e.status===409){stale=true;ready=false;}if(e.status===401){connected=false;ready=false;$('login').textContent='Войти через GitHub';}say(e.message);window.alert(e.message)}finally{locked=false;controls()}}
  function hideUnsupported(){
-  disable(['add','branch','analyze','import','pickCategory','assign','analyzeOne','addRelation','applyJson','sort','direction']);
+  disable(['add','branch','analyze','pickCategory','assign','analyzeOne','addRelation','applyJson','sort','direction']);
   for(const id of ['pickCategory','message'])$(id).closest('label')?.setAttribute('hidden','');
   for(const b of document.querySelectorAll('nav button'))if(b.dataset.tab==='links')b.hidden=true;
   $('missing').replaceChildren();
@@ -126,7 +149,7 @@ export async function startModularEditor({document=globalThis.document,window=gl
    select.value=String(draft.get(key(row.id,weightPath))?.value??saved);
    select.onchange=()=>{
     try{
-     if(locked||waiting||review)throw Error('Сначала завершите проверку');
+     if(locked||stale||!ready||waiting||review)throw Error('Сначала завершите проверку');
      const op=c.operation(row,weightPath,Number(select.value)),k=key(row.id,weightPath);
      if(op.value===op.expect.value)draft.delete(k);
      else{if(!draft.has(k)&&draft.size>=30)throw Error('Не более 30 изменений в одном пакете');draft.set(k,op);}
@@ -169,7 +192,10 @@ export async function startModularEditor({document=globalThis.document,window=gl
    persist();showReview();return;
   }
   if(review){showReview();return;}
-  if(!draft.size)return;
+  if(!ready||stale||!draft.size)return;
+  // A saved or imported draft can never bypass comparison with the pinned source.
+  await verifyDraftOperations(c,[...draft.values()]);
+  row=null;selected=null;$('detail').hidden=true;$('empty').hidden=false;
   waiting=await c.requestPreview({operations:[...draft.values()]});persist();
   say('Запрос отправлен. Нажмите «Проверить результат».');
  });
@@ -181,16 +207,39 @@ export async function startModularEditor({document=globalThis.document,window=gl
  $('cancel').onclick=()=>$('review').close();
  const reset=add(document.querySelector('aside'),'button','Сбросить черновик / ожидание');
  reset.onclick=()=>task(async()=>{
-  if((draft.size||waiting||review)&&!window.confirm('Сбросить локальный черновик и ожидание? Уже отправленные запросы GitHub не отменяются.'))return;
+  if((draft.size||waiting||review||storageRaw)&&!window.confirm('Сбросить локальный черновик и ожидание? Уже отправленные запросы GitHub не отменяются.'))return;
   if(waiting)c.abandon(waiting.ticket);
   c.clearCheckpoint?.();stale=false;
   waiting=null;review=null;draft.clear();row=null;selected=null;$('detail').hidden=true;$('empty').hidden=false;
   if($('review').open)$('review').close();
+  if(storageBlocked&&storageKey){
+   // Only discard the exact locally observed file, never a newer tab's data.
+   try{const s=storage();if(s?.getItem(storageKey)!==storageRaw)throw Error('Черновик изменён в другой вкладке. Перезагрузите страницу.');s.removeItem(storageKey);storageRaw=null;storageBlocked=false;}
+   catch(e){throw Error('Не удалось удалить локальный черновик: '+e.message);}
+  }
   persist();await initialize(true);
  });
- $('undo').onclick=()=>{if(locked||waiting||review)return;for(const [k,o] of draft)if(o.id===selected)draft.delete(k);if(row)drawDetail();say('Черновик: '+draft.size);persist();};
+ $('undo').onclick=()=>{if(locked||stale||waiting||review)return;for(const [k,o] of draft)if(o.id===selected)draft.delete(k);if(row)drawDetail();say('Черновик: '+draft.size);persist();};
+ $('import').onclick=()=>{if(!$('import').disabled)$('file').click();};
+ $('file').onchange=()=>task(async()=>{
+  const file=$('file').files?.[0];$('file').value='';
+  if(!file)return;
+  if(!connected||draft.size||waiting||review||storageBlocked||storageRaw)throw Error('Сначала завершите текущий черновик. Импорт не заменяет сохранённые данные.');
+  if(file.size>160*1024)throw Error('Слишком большой черновик');
+  const prepared=await prepareImportedDraft(await file.text(),conn.api);
+  if(!window.confirm('Загрузить черновик? Изменений: '+prepared.saved.operations.length+(prepared.waiting?' · ранее отправленный запрос будет проверен заново.':'. Библиотека не изменится.')))return;
+  if(storageKey&&storage()?.getItem(storageKey)!==storageRaw)throw Error('В другой вкладке появился черновик. Импорт отменён.');
+  c=prepared.client;waiting=prepared.waiting;draft=new Map(prepared.saved.operations.map(o=>[key(o.id,o.path),o]));
+  stale=false;row=null;selected=null;$('detail').hidden=true;$('empty').hidden=false;
+  persist();
+  // For a stale historical ticket, initialize can refuse the current source;
+  // the preserved ticket can still be collected via the explicit save button.
+  await initialize();
+  if(!waiting)say('Черновик загружен: '+draft.size+' изменений. Требуется предварительный просмотр.');
+ });
  $('export').onclick=()=>{
-  const blob=new Blob([JSON.stringify({format:'zabavograd-modular-draft-v2',controller:c.checkpoint(),operations:[...draft.values()]},null,2)],{type:'application/json'});
+  const raw=!draft.size&&!waiting&&!review&&storageRaw?storageRaw:JSON.stringify({format:'zabavograd-modular-draft-v2',controller:c.checkpoint(),operations:[...draft.values()]},null,2);
+  const blob=new Blob([raw],{type:'application/json'});
   const url=window.URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='zabavograd-modular-draft.json';a.click();setTimeout(()=>window.URL.revokeObjectURL(url),1000);
  };
  for(const id of ['search','category','kind','missing'])$(id).onchange=()=>task(async()=>{page=0;await loadList();});
@@ -209,12 +258,20 @@ export async function startModularEditor({document=globalThis.document,window=gl
   if(!health.modular_rehearsal||!health.cached_read)throw Error('Сервер не поддерживает модульный режим. Полная библиотека не будет загружена.');
   connected=true;
   const r=(await c.cachedQuery('inventory',{},fresh)).report;
+  if(draft.size&&!waiting&&!review)await verifyDraftOperations(c,[...draft.values()]);
   options($('category'),r.category_paths??[],'Все ветки');options($('kind'),r.kinds??[],'Все типы');
   $('stats').textContent=r.entries+' слов · '+r.categories+' веток · '+r.relations+' связей';
   $('login').textContent='GitHub подключён';page=0;ready=true;stale=false;await loadList();
   if(waiting)say('Восстановлен ожидающий запрос. Нажмите «Проверить результат».');
  }
  const reconnect=$('connect').onclick;
- $('connect').onclick=()=>{if(locked||draft.size||waiting||review)return;reconnect?.();storageKey=conn.service?draftStorageKey(conn.service):null;storageRaw=null;storageBlocked=false;ready=false;connected=false;row=null;selected=null;$('cards').replaceChildren();$('detail').hidden=true;$('empty').hidden=false;controls();};
+ $('connect').onclick=()=>task(async()=>{
+  if(draft.size||waiting||review||storageBlocked||storageRaw)return;
+  const before=conn.service;reconnect?.();
+  if(conn.service===before)return;
+  c=createModularClient(conn.api);storageKey=null;storageRaw=null;storageBlocked=false;ready=false;connected=false;stale=false;row=null;selected=null;
+  $('cards').replaceChildren();$('detail').hidden=true;$('empty').hidden=false;
+  await restoreLocal();controls();
+ });
  hideUnsupported();controls();await restoreLocal();await task(()=>initialize());
 }

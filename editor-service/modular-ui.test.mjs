@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {searchOptions,parseDraft,draftStorageKey} from '../public/editor/modular-ui.mjs';
+import crypto from 'node:crypto';
+import {searchOptions,parseDraft,draftStorageKey,prepareImportedDraft,verifyDraftOperations} from '../public/editor/modular-ui.mjs';
 test('bounded indexed search translates visible filters without full source',()=>{
  assert.deepEqual(searchOptions({text:' кот ',category:'Животные',kind:'word',missing:'images',page:2}),{limit:36,offset:72,prefix:'кот',category:'Животные',kind:'word',has_image:false});
  assert.deepEqual(searchOptions({text:'id:ru-a',missing:'phonetic_tags'}),{limit:36,offset:0,id:'ru-a',stored_phonetics:false});
@@ -54,4 +55,26 @@ test('draft serialization rejects unrecognized fields, duplicate operations and 
  assert.throws(()=>parseDraft(JSON.stringify({...d,operations:[{...op,path:'/lemma'}]})),/Неверная операция/);
  assert.throws(()=>parseDraft(JSON.stringify({...d,controller:{...d.controller,job:{body:{operations:[{...op,value:50}]}}}})),/не совпадает/);
  assert.notEqual(draftStorageKey('https://a.example'),draftStorageKey('https://b.example'));
+});
+
+test('import validates all old weights on pinned source without sending any edit',async()=>{
+ const source='a'.repeat(64),op={id:'a',path:'/selection/base_weight',expect:{exists:true,value:100},value:70};
+ const d={format:'zabavograd-modular-draft-v2',controller:{source_sha256:source,job:null},operations:[op]};
+ let weight=100,current=source;const calls=[];
+ const api=async(route,body)=>{
+  assert.equal(route,'/api/modular/read');calls.push(body.command);
+  if(body.source_sha256!==current)throw Object.assign(Error('Stale source'),{status:409});
+  return {status:'cached_result',report:{scope:'integration_snapshot_not_live_main',source_commit:'b'.repeat(40),source_sha256:current,mode:'query',command:body.command,request_sha256:crypto.createHash('sha256').update(JSON.stringify(body,null,2)+'\n').digest('hex'),rows:body.command==='inspect'?[{id:'a',fields:{'/selection/base_weight':{exists:true,value:weight}}}]:[]}};
+ };
+ const p=await prepareImportedDraft(JSON.stringify(d),api);
+ assert.equal(p.waiting,null);assert.deepEqual(calls,['inventory','inspect']);assert.equal(p.client.state().source_sha256,source);
+ weight=70;await assert.rejects(()=>prepareImportedDraft(JSON.stringify(d),api),e=>e.status===409&&/исходное значение/.test(e.message));
+ current='c'.repeat(64);await assert.rejects(()=>prepareImportedDraft(JSON.stringify(d),api),e=>e.status===409);
+});
+test('import of submitted ticket makes no requests and requires independent report collection',async()=>{
+ const source='a'.repeat(64),op={id:'a',path:'/selection/base_weight',expect:{exists:true,value:100},value:70},commit='b'.repeat(40),ticket='edit/web-'+'c'.repeat(24)+'-'+commit.slice(0,12);
+ const d={format:'zabavograd-modular-draft-v2',controller:{source_sha256:source,job:{ticket,commit,body:{version:1,mode:'preview',source_sha256:source,operations:[op]}}},operations:[op]};
+ const p=await prepareImportedDraft(JSON.stringify(d),async()=>{throw Error('No automatic requests');});
+ assert.equal(p.waiting.ticket,ticket);assert.equal(p.client.state().preview,null);
+ await assert.rejects(()=>p.client.requestCandidate('d'.repeat(64)),/preview/);
 });
