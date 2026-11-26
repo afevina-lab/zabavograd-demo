@@ -9,6 +9,6 @@ export function Toolbar({pause,sound,hint,task,counters,fullscreen,help,classNam
   <nav className={classNames.navigation} aria-label="Управление игрой">{pause}{sound}{hint}</nav>
   <div className={classNames.status}><strong className={classNames.task}>{task}</strong><div className={classNames.counters}>{counters}</div></div>
   <div className={classNames.view}>{fullscreen}</div>
-  {help&&<p className={classNames.hint} role="status">{help}</p>}
+  {help&&<p className={classNames.hint+' v-surface--panel'} role="status">{help}</p>}
  </header>;
 }

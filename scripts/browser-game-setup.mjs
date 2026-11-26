@@ -20,10 +20,12 @@ async function setup(game,{timed=false,rounds=1}={}){
  if(timed)await evaluate("(()=>{const d=document.querySelector('.challenge');const label=[...d.querySelectorAll('label')].find(e=>e.textContent.startsWith('На время'));if(!label)throw Error('Missing timer toggle');const e=label.querySelector('input');if(!e.checked)e.click()})()");
  for(let round=1;round<rounds;round++)await evaluate("document.querySelector('button[aria-label=\"Увеличить: Количество раундов\"]').click()");
  await until("!![...document.querySelectorAll(':is(.v-settings-footer,.setup-footer) button')].find(e=>e.textContent.startsWith('Начать')&&!e.disabled)");
+ const windowSkin=await evaluate("(()=>{const e=document.querySelector('.v-settings,.shared-settings-window'),style=getComputedStyle(e);return Object.fromEntries(['borderTopWidth','borderTopStyle','borderTopColor','borderRadius','backgroundImage','backgroundColor','boxShadow'].map(key=>[key,style[key]]))})()");
  await evaluate("[...document.querySelectorAll(':is(.v-settings-footer,.setup-footer) button')].find(e=>e.textContent.startsWith('Начать')&&!e.disabled).click()");
  await until("!!document.querySelector('.app.game-active')||!!document.querySelector('[aria-label^=\"Разделить игру на \"]')");
  if(await evaluate("!!document.querySelector('[aria-label^=\"Разделить игру на \"]')"))await evaluate("document.querySelector('[aria-label^=\"Разделить игру на \"] :is(.v-button--secondary,.secondary)').click()");
  await until("!!document.querySelector('.app.game-active')");
+ return windowSkin;
 }
 return setup;
 }

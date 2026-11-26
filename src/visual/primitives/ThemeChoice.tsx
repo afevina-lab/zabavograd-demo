@@ -1,3 +1,4 @@
+import {Button} from './Buttons.tsx';
 import {visualClasses} from './classNames.ts';
 import {THEMES,THEME_IDS,type ThemeId} from '../../design-system/themes.ts';
 
@@ -6,9 +7,9 @@ const classes:ThemeChoiceClasses={root:'v-theme-section',choices:'v-theme-choice
 export function ThemeChoice({value,onChange,classNames=classes,thumbnailThemeClass=false}:{value:ThemeId;onChange:(value:ThemeId)=>void;classNames?:ThemeChoiceClasses;thumbnailThemeClass?:boolean}){
  classNames=visualClasses(classes,classNames);
  return <div className={classNames.root}><div className={classNames.choices} role="group" aria-label="Оформление игры">
-  {THEME_IDS.map(id=><button key={id} type="button" aria-pressed={value===id} className={value===id?classNames.selected:undefined} onClick={()=>onChange(id)}>
+  {THEME_IDS.map(id=><Button tone="secondary" key={id} aria-pressed={value===id} className={value===id?classNames.selected:undefined} onClick={()=>onChange(id)}>
    <i className={[classNames.thumbnail,thumbnailThemeClass?id:''].filter(Boolean).join(' ')} aria-hidden="true" style={{backgroundColor:THEMES[id].palette.accent,backgroundImage:THEMES[id].scene.background?`url("${import.meta.env.BASE_URL+THEMES[id].scene.background}")`:undefined}}/>
    {THEMES[id].label}
-  </button>)}
+  </Button>)}
  </div></div>;
 }

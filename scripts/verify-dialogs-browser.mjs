@@ -67,7 +67,7 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
  await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600||width===844});
  await cmd('Emulation.setTouchEmulationEnabled',{enabled:width<=844,maxTouchPoints:1});
  for(const game of ['memory','sorting','matching','conveyor','transformations']){
- await setup(game);
+ const menuSkin=await setup(game);
  if(width===1440&&game!=='memory'){
   const before=await evaluate("document.querySelector('[aria-label=\"Прошло времени\"]').textContent");
   await sleep(1200);
@@ -75,8 +75,8 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
  }
  if(width<=844){
   const compact=await evaluate("(()=>{const bar=document.querySelector(':is(.v-toolbar,.play-toolbar):is(.v-toolbar,.shared-toolbar)'),left=[...bar.querySelectorAll(':is(.v-toolbar-navigation,.toolbar-left)>button,:is(.v-toolbar-navigation,.toolbar-left)>a')],right=[...bar.querySelectorAll(':is(.v-toolbar-view,.toolbar-right)>button,:is(.v-toolbar-view,.toolbar-right)>a')],shown=e=>getComputedStyle(e).display!=='none'&&e.getBoundingClientRect().width>0,counters=bar.querySelector(':is(.v-toolbar-status,.toolbar-centre)>:is(.v-toolbar-counters,.counters)'),lives=counters.querySelector(':is(.v-life-meter,.life-controls)'),pause=left.filter(shown),view=right.filter(shown),b=bar.getBoundingClientRect();return {pause:pause.map(e=>e.getAttribute('aria-label')),view:view.map(e=>e.getAttribute('aria-label')),hasLives:!!lives&&shown(lives),hasTimer:!!counters.querySelector('.toolbar-timer'),row:getComputedStyle(counters).flexDirection,scroll:getComputedStyle(bar.querySelector(':is(.v-toolbar-navigation,.toolbar-left)')).overflowX,within:b.left>=0&&b.right<=innerWidth+1,overlap:(()=>{const p=pause[0]?.getBoundingClientRect(),v=view[0]?.getBoundingClientRect(),l=lives?.getBoundingClientRect();return !!p&&!!v&&!!l&&(p.right>l.left+1||l.right>v.left+1||p.right>v.left+1)})()}})()");
-  assert.equal(compact.pause.length,3,'Shared toolbar must keep three actions: '+game+' '+width);assert.equal(compact.pause[0],'Пауза');assert(/звук/i.test(compact.pause[1]));assert(/подпис|подсказ/i.test(compact.pause[2]));
-  assert.deepEqual(compact.view,['Полный экран'],'Compact toolbar must show only fullscreen: '+game+' '+width);
+  assert.equal(compact.pause.length,width<=700?2:3,'Shared toolbar must keep responsive actions: '+game+' '+width);assert.equal(compact.pause[0],'Пауза');assert(/звук/i.test(compact.pause[1]));if(width>700)assert(/подпис|подсказ/i.test(compact.pause[2]));
+  assert.deepEqual(compact.view,width<=700?[]:['Полный экран'],'Fullscreen visibility must follow available width: '+game+' '+width);
   assert(compact.hasLives&&!compact.hasTimer,'Only enabled lives should appear: '+game+' '+width);
   assert.equal(compact.row,'row','Mobile counter layout must remain horizontal: '+game+' '+width);
   assert.notEqual(compact.scroll,'auto','No toolbar scrolling: '+game+' '+width);
@@ -91,6 +91,7 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
  assert(await evaluate("(()=>{const bar=document.querySelector(':is(.v-toolbar,.shared-toolbar)').getBoundingClientRect();return [...document.querySelectorAll(':is(.v-toolbar,.shared-toolbar) :is(.v-icon-button,.icon-button)')].filter(e=>e.getBoundingClientRect().width>0).every(e=>{const r=e.getBoundingClientRect();return Math.abs(r.height/bar.height-.6)<.02&&Math.abs(r.top+r.height/2-bar.top-bar.height/2)<1})})()"),'Header action size/centring '+game+' '+width+' '+JSON.stringify(await evaluate("(()=>({bar:document.querySelector('.v-toolbar').getBoundingClientRect().toJSON(),buttons:[...document.querySelectorAll('.v-toolbar .v-icon-button')].map(e=>({label:e.getAttribute('aria-label'),rect:e.getBoundingClientRect().toJSON()}))}))()")));
  await until("!!document.querySelector('button[aria-label=Пауза]')");
  await evaluate("document.querySelector('button[aria-label=Пауза]').click()");await until("!!document.querySelector('.overlay')");await sleep(350);assert(await evaluate("(()=>{const e=document.querySelector(':is(.v-toolbar,.play-toolbar) .garden-icon'),b=e.closest('button,a');return getComputedStyle(e).backgroundColor!==getComputedStyle(b).backgroundColor})()"),'Toolbar icon contrast');await screenshot(game+'-pause-'+width);
+ assert.deepEqual(await evaluate("(()=>{const e=document.querySelector('.overlay>.v-dialog-content'),style=getComputedStyle(e);return Object.fromEntries(['borderTopWidth','borderTopStyle','borderTopColor','borderRadius','backgroundImage','backgroundColor','boxShadow'].map(key=>[key,style[key]]))})()"),menuSkin,'Game window must use the menu frame and material: '+game+' '+width);
  assert(await evaluate("(()=>{const e=document.querySelector('.overlay>div'),r=e.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1&&r.top>=0&&r.bottom<=innerHeight+1})()"),'Pause overflow '+game);
  if(width===1440&&game!=='memory'){
   const frozen=await evaluate("document.querySelector('[aria-label=\"Прошло времени\"]').textContent");

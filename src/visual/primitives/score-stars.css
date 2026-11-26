@@ -1,4 +1,4 @@
-.v-score-stars{display:flex;align-items:center;justify-content:center;gap:14px}
+.v-score-stars{display:flex;align-items:center;justify-content:center;gap:var(--v-space-3)}
 .v-score-stars>span{display:inline-flex}
 .v-score-stars>span[data-emphasis=true]{margin-top:-9px}
 .v-score-star{display:block;flex:none;width:clamp(52px,8vw,78px);aspect-ratio:1;background:var(--zg-award-stars-image) left center/contain no-repeat;filter:drop-shadow(0 3px 6px #9a6a2b44)}

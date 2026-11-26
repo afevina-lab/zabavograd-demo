@@ -1,8 +1,8 @@
 .v-picker-dialog{width:min(900px,calc(100vw - 2*var(--v-viewport-gap)));max-height:calc(100dvh - 2*var(--v-viewport-gap));overflow:hidden;color:var(--ui-text)}
-.v-picker-dialog[open]{display:flex;flex-direction:column;gap:var(--v-space-4)}
+.v-picker-dialog[open]{display:flex;flex-direction:column;gap:var(--v-space-3)}
 .v-picker-dialog::backdrop{background:#15202266}
-.v-picker-scroll{display:flex;flex-direction:column;gap:var(--v-space-4);flex:1 1 auto;min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:var(--v-space-3);overflow-wrap:anywhere}
+.v-picker-scroll{display:flex;flex-direction:column;gap:var(--v-space-3);flex:1 1 auto;min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:var(--v-space-3);overflow-wrap:anywhere}
 .v-picker-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:var(--v-space-3);flex:none;min-width:0;padding:var(--v-space-3)}
 @media(max-height:500px){.v-picker-dialog[open]{gap:var(--v-space-2)}.v-picker-scroll,.v-picker-actions{padding:var(--v-space-2)}}
-.v-picker-scroll>.material-save-form{display:flex;flex-direction:column;gap:var(--v-space-4);min-width:0}
+.v-picker-scroll>.material-save-form{display:flex;flex-direction:column;gap:var(--v-space-3);min-width:0}
 

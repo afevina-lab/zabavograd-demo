@@ -86,7 +86,7 @@ test('Approved forest ground depth and shared adaptive framing remain',()=>{
  const theme=read('src/design-system/themes.ts');for(const [id,bottom] of [['bush-back-middle','41%'],['flowers-left','6%'],['bush-front-right','6%']])assert.ok(new RegExp("id:'"+id+"'[^\\n]*bottom:'"+bottom+"'").test(theme));assert.match(theme,/minimumAspect:1\.78/);assert.doesNotMatch(read('src/design-system/SceneLayers.tsx'),/theme===/);
 });
 test('Chromium scenarios retain all-game navigation counters and accessible range coverage',()=>{
- const script=read('scripts/verify-dialogs-browser.mjs');assert.match(script,/Emulation\.setTouchEmulationEnabled/);assert.match(script,/Shared toolbar must keep three actions/);assert.match(script,/Desktop counter contract failed/);assert.match(script,/Compact timed toolbar geometry failed/);assert.match(read('scripts/verify-settings-browser.mjs'),/Word length must use one accessible two-ended track/);
+ const script=read('scripts/verify-dialogs-browser.mjs');assert.match(script,/Emulation\.setTouchEmulationEnabled/);assert.match(script,/Shared toolbar must keep responsive actions/);assert.match(script,/Desktop counter contract failed/);assert.match(script,/Compact timed toolbar geometry failed/);assert.match(read('scripts/verify-settings-browser.mjs'),/Word length must use one accessible two-ended track/);
 });
 test('Discarded previous-card and replay-card actions cannot return',()=>{
  assert.doesNotMatch(read('src/Transformations.tsx'),/Предыдущая карточка|>Повторить</);assert.match(read('src/Transformations.tsx'),/roundPlan.repeat/);

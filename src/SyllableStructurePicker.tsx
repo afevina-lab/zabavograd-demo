@@ -36,9 +36,9 @@ export function SyllableStructurePicker({filters,onChange,words=[]}:{filters:Fil
      const description=descriptions[n]||'Тип слоговой структуры '+n;
      const examples=words.filter(w=>w.type===n).slice(0,3).map(w=>w.label).join(', ');
      const selected=types.includes(n);
-     return <button type="button" key={n} className="v-syllable-option syllable-type-option" aria-pressed={selected} onMouseEnter={e=>showHelp(e.currentTarget,e.clientX,e.clientY)} onMouseMove={e=>showHelp(e.currentTarget,e.clientX,e.clientY)} onMouseLeave={e=>hideHelp(e.currentTarget)} onFocus={e=>showHelp(e.currentTarget)} onBlur={e=>hideHelp(e.currentTarget)} aria-label={`Тип ${n}: ${description}`} onClick={()=>setTypes(v=>selected?v.filter(x=>x!==n):[...v,n])}>{n}<PopoverTip className="syllable-type-tooltip">{description}{examples&&<small>Например: {examples}</small>}</PopoverTip></button>;
+     return <button type="button" key={n} className="v-control-button v-button v-button--secondary v-syllable-option syllable-type-option" aria-pressed={selected} onMouseEnter={e=>showHelp(e.currentTarget,e.clientX,e.clientY)} onMouseMove={e=>showHelp(e.currentTarget,e.clientX,e.clientY)} onMouseLeave={e=>hideHelp(e.currentTarget)} onFocus={e=>showHelp(e.currentTarget)} onBlur={e=>hideHelp(e.currentTarget)} aria-label={`Тип ${n}: ${description}`} onClick={()=>setTypes(v=>selected?v.filter(x=>x!==n):[...v,n])}>{n}<PopoverTip className="syllable-type-tooltip">{description}{examples&&<small>Например: {examples}</small>}</PopoverTip></button>;
     })}</div>
-    <button type="button" className="v-syllable-option syllable-type-option syllable-untyped" aria-pressed={untyped} onClick={()=>setUntyped(v=>!v)}>Без категории</button>
+    <button type="button" className="v-control-button v-button v-button--secondary v-syllable-option syllable-type-option syllable-untyped" aria-pressed={untyped} onClick={()=>setUntyped(v=>!v)}>Без категории</button>
    </div>
   </PickerDialog>
  </>;

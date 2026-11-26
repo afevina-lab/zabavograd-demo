@@ -1,3 +1,2 @@
 .v-toggle-group{display:flex;align-items:center;flex-wrap:wrap;gap:var(--v-space-2);min-width:0}
-.v-toggle-choice{display:inline-flex;align-items:center;justify-content:center;min-width:var(--v-target);min-height:var(--v-target);padding:var(--v-space-2) var(--v-space-3);border:1px solid var(--ui-field-edge);border-radius:12px;background:var(--ui-control-face);color:var(--ui-text);font:inherit;line-height:1.3;text-align:center;overflow-wrap:anywhere;box-shadow:inset 0 2px 1px var(--ui-field-glint),0 3px 0 var(--ui-control-bottom)}
-.v-toggle-choice[aria-pressed=true]{background:var(--ui-deep);color:var(--ui-paper);border-color:var(--ui-deep)}
+.v-toggle-choice{min-width:var(--v-target);overflow-wrap:anywhere}

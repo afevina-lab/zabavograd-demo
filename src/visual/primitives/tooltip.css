@@ -1,3 +1,3 @@
 .v-tooltip{position:relative;display:inline-flex}
-.v-tooltip>[role=tooltip]{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);padding:var(--v-space-2) var(--v-space-3);background:var(--ui-deep);color:var(--ui-paper);border-radius:8px;max-width:min(240px,80vw);width:max-content;z-index:var(--v-layer-tooltip);pointer-events:none}
+.v-tooltip>[role=tooltip]{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);max-width:min(240px,80vw);width:max-content;z-index:var(--v-layer-tooltip);pointer-events:none}
 .v-tooltip:is(:hover,:focus-within)>[role=tooltip]{display:block}

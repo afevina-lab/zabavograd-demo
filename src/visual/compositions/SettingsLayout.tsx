@@ -1,3 +1,4 @@
+import {Button} from '../primitives/Buttons.tsx';
 import {SettingsTitle} from './SettingsTitle.tsx';
 import {visualClasses} from '../primitives/classNames.ts';
 import {useId,useState,type ReactNode} from 'react';
@@ -23,7 +24,7 @@ export function SettingsLayout({title,headerActions,heading,leading,primary,seco
      {supplementary&&<div className={classNames.notes}>{supplementary}</div>}
     </Content>
     {appearance!=null&&<aside className={classNames.appearance} aria-label="Оформление игры">
-     <button type="button" className={classNames.toggle} aria-expanded={expanded} aria-controls={appearanceId} onClick={()=>setExpanded(value=>!value)}>Оформление <span aria-hidden="true">{expanded?'▴':'▾'}</span></button>
+     <Button tone="quiet" className={classNames.toggle} aria-expanded={expanded} aria-controls={appearanceId} onClick={()=>setExpanded(value=>!value)}>Оформление <span aria-hidden="true">{expanded?'▴':'▾'}</span></Button>
      <div id={appearanceId} className={classNames.appearanceScroll+(expanded?' '+classNames.expanded:'')} data-expanded={expanded}>{appearance}</div>
     </aside>}
    </div>
