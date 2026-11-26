@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "library_preview_sha256": "e32b2c5e148f28395a5ee253ef58e68d602e5ab3249981150720efd75d954757",
+  "source_sha256": "2342765ab2aae827ab89a2b9bbdcde08b9fbb14ccc5ba35a16879a12d51c5526",
+  "result_source_sha256": "db993171f48a385fda045b42cc905bdc346f60428ca1044c0d03018a51e6e34c",
+  "registry_source_sha256": "69603ef6fb9ade1674d9959b7c6aac4d21dafaf6219ab3eb115b0e377977f744",
+  "registry_result_sha256": "8110d793fceb76113e7269c16f7365e793baf99a3184eca5f0c52955ca19e877",
+  "assets": [
+    {
+      "src": "/assets/words/modular-remote-media-ci-only.webp",
+      "sha256": "0ca39a4ec0dbebec58fd5886e817d257d88f2bd83832fce9091f6d51d7cd4184",
+      "bytes": 42,
+      "width": 9,
+      "height": 9
+    }
+  ],
+  "changes": [
+    {
+      "id": "modular-noun-6376f8c34952efe0c84e8cad",
+      "lemma": "удалённомедиапроверочныйпредмет",
+      "action": "create_noun",
+      "active_weight": 0,
+      "proposed_weight": 10
+    },
+    {
+      "id": "modular-noun-6376f8c34952efe0c84e8cad",
+      "lemma": "удалённомедиапроверочныйпредмет",
+      "action": "link_webp",
+      "sense_id": "modular-noun-6376f8c34952efe0c84e8cad-modular-sense",
+      "variant_id": "modular-image-2e7ce3d142e5ca85c86f6cf6",
+      "src": "/assets/words/modular-remote-media-ci-only.webp",
+      "sha256": "0ca39a4ec0dbebec58fd5886e817d257d88f2bd83832fce9091f6d51d7cd4184"
+    }
+  ],
+  "delta": {
+    "added": [],
+    "removed": [],
+    "modified": [
+      "metadata.json",
+      "entry-order.json",
+      "entries/archive/1d.json",
+      "entries/core/1d.json",
+      "entries/illustrations/1d.json",
+      "entries/morphology/1d.json",
+      "entries/phonetics/1d.json"
+    ]
+  },
+  "import_operations": [
+    {
+      "type": "create_noun",
+      "lemma": "удалённомедиапроверочныйпредмет",
+      "meaning": "временная техническая проверка, не словарное решение",
+      "categories": [
+        "Животный мир/Домашние животные/Детёныши"
+      ],
+      "proposed_weight": 10,
+      "reason": "Disposable remote transport probe; never approve"
+    },
+    {
+      "type": "link_webp",
+      "entry_id": "modular-noun-6376f8c34952efe0c84e8cad",
+      "lemma": "удалённомедиапроверочныйпредмет",
+      "meaning": "временная техническая проверка, не словарное решение",
+      "src": "/assets/words/modular-remote-media-ci-only.webp",
+      "sha256": "0ca39a4ec0dbebec58fd5886e817d257d88f2bd83832fce9091f6d51d7cd4184",
+      "reviewed": true,
+      "reason": "Synthetic test image, not an approved illustration"
+    }
+  ],
+  "media_preview_sha256": "bd98fa1aeceaed8f7f06b79b835a813cd56adb519c2f763c969d7a1be0036e13",
+  "status": "media_preview_not_validated_or_approved",
+  "request_sha256": "d1846bcef81d37e7bb5816525f48e430221707565846184eee1680c1b9aa4100",
+  "source_commit": "6e4639d6a63f9662038e07572c856e84fb2ab9c3",
+  "request_commit": "bd7ed10b2968f495a7754abc0880c036df837df8",
+  "scope": "integration_snapshot_not_live_main"
+}
