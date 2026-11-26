@@ -24,7 +24,14 @@ function validate(o){
  }else assert.fail('Unsupported import operation');
  assert(txt(o.reason,500)&&o.reason.length>=5,'Import reason required');return o;
 }
-function verifyAsset(src,expected,publicDir=root){
+function assetRoot(src,publicDir=root,overlay){
+ if(!overlay||!srcPattern.test(src))return publicDir;
+ const staged=path.join(overlay,src),existing=path.join(publicDir,src);
+ if(fs.existsSync(staged)){assert(!fs.existsSync(existing),'Staged asset shadows existing file '+src);return overlay;}
+ return publicDir;
+}
+function verifyAsset(src,expected,publicDir=root,overlay){
+ publicDir=assetRoot(src,publicDir,overlay);
  assert(srcPattern.test(src),'Invalid WebP asset path');
  let f=publicDir;for(const p of src.slice(1).split('/')){f=path.join(f,p);const s=fs.lstatSync(f);assert(f.endsWith('.webp')?s.isFile():s.isDirectory(),'Nonregular asset path');}
  const size=fs.statSync(f).size;assert(size>=20&&size<=2*1024*1024,'WebP size out of bounds');
@@ -36,7 +43,7 @@ function verifyAsset(src,expected,publicDir=root){
  assert.equal(image,1,'Expected single still WebP payload');
  return {sha256:expected,bytes:b.length};
 }
-function plan(db,ops,publicDir=root){
+function plan(db,ops,publicDir=root,overlay){
  assert(Array.isArray(ops)&&ops.length>=1&&ops.length<=30,'1..30 import operations');
  const out=structuredClone(db),ids=new Map(out.entries.map(e=>[e.id,e])),cats=new Set(out.categories.map(c=>c.path)),changes=[];
  for(const o of ops){
@@ -56,7 +63,7 @@ function plan(db,ops,publicDir=root){
    for(const x of out.entries)for(const s of x.illustrations?.senses||[])for(const v of s.variants||[]){
     assert(v.src!==o.src&&v.sha256!==o.sha256,'Image already linked (path or known digest)');
    }
-   verifyAsset(o.src,o.sha256,publicDir);
+   verifyAsset(o.src,o.sha256,publicDir,overlay);
    const sid=e.id+'-modular-sense',vid='modular-image-'+hash(e.id+'\0'+o.src).slice(0,24);
    assert(!out.entries.some(x=>x.illustrations?.senses?.some(s=>s.id===sid||s.variants?.some(v=>v.id===vid))),'Image identity collision');
    e.illustrations={...e.illustrations,art_status:'assigned',planned_variants:Math.max(1,e.illustrations.planned_variants??0),senses:[{id:sid,word_id:e.id,label:e.lemma,meaning:e.meaning??e.lemma,topic:null,subcategory:null,variants:[{id:vid,src:o.src,label:e.lemma,sha256:o.sha256,format:'webp',source:REVISION,review_note:o.reason}]}]};
@@ -69,14 +76,14 @@ function plan(db,ops,publicDir=root){
  if(created.length)out.provenance.modular_import={revision:REVISION,created:created.length,created_ids:created};
  return {db:out,changes};
 }
-function verifyImports(db,publicDir=root){
+function verifyImports(db,publicDir=root,overlay){
  const added=db.entries.filter(e=>e.id.startsWith(PREFIX)),p=db.provenance?.modular_import;
  assert.equal(p?.created??0,added.length,'New noun count mismatch');
  if(p){assert.equal(p.revision,REVISION);assert.deepEqual(p.created_ids,added.map(e=>e.id));}
  for(const e of added){assert.equal(e.id,nounId(e.lemma));assert.equal(e.part_of_speech,'noun');assert.equal(e.editorial?.source,REVISION);}
  for(const e of db.entries)for(const s of e.illustrations?.senses||[])for(const v of s.variants||[])if(v.source===REVISION){
   assert.equal(s.id,e.id+'-modular-sense');assert.equal(s.word_id,e.id);assert.equal(v.id,'modular-image-'+hash(e.id+'\0'+v.src).slice(0,24));
-  verifyAsset(v.src,v.sha256,publicDir);
+  verifyAsset(v.src,v.sha256,publicDir,overlay);
  }
  return added.length;
 }
@@ -88,4 +95,4 @@ function projectRegistry(db,registry){
  }
  return out;
 }
-module.exports={validate,plan,nounId,verifyAsset,verifyImports,projectRegistry};
+module.exports={validate,plan,nounId,verifyAsset,verifyImports,projectRegistry,assetRoot,srcPattern};

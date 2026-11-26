@@ -290,6 +290,26 @@ jobs:
           rm "$asset"
           trap - EXIT
           git diff --exit-code
+      - name: Rehearse atomic media candidate with new files and registry
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir "$RUNNER_TEMP/new-webp"
+          python3 -c 'from PIL import Image;im=Image.new("RGBA",(8,8));im.putpixel((4,4),(120,45,60,255));im.save("'"$RUNNER_TEMP"'/new-webp/modular-media-ci-only.webp","WEBP",lossless=True)'
+          node -e 'const fs=require("fs"),s=require("./scripts/library-store.cjs"),m=require("./scripts/library-import.cjs"),r=s.load(process.argv[1]),lemma="медиапроверочныйпредмет",meaning="временная проверка, не словарное решение",src="/assets/words/modular-media-ci-only.webp",sha256=require("crypto").createHash("sha256").update(fs.readFileSync(process.argv[2])).digest("hex");fs.writeFileSync(process.argv[3],JSON.stringify({version:1,mode:"preview",source_sha256:r.source_sha256,operations:[],import_operations:[{type:"create_noun",lemma,meaning,categories:[r.db.categories[0].path],proposed_weight:100,reason:"Disposable media probe"},{type:"link_webp",entry_id:m.nounId(lemma),lemma,meaning,src,sha256,reviewed:true,reason:"Disposable media probe"}]}))' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/new-webp/modular-media-ci-only.webp" "$RUNNER_TEMP/media-preview.json"
+          node scripts/library-media-package.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/media-preview.json" "$RUNNER_TEMP/new-webp" "$RUNNER_TEMP/media-preview-output"
+          node -e 'const fs=require("fs"),r=JSON.parse(fs.readFileSync(process.argv[1]));fs.writeFileSync(process.argv[2],JSON.stringify({version:1,mode:"candidate",source_sha256:r.source_sha256,preview_sha256:r.library_preview_sha256,operations:[],import_operations:r.import_operations}))' "$RUNNER_TEMP/media-preview-output/result.json" "$RUNNER_TEMP/media-candidate.json"
+          pin=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).media_preview_sha256' "$RUNNER_TEMP/media-preview-output/result.json")
+          node scripts/library-media-package.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/media-candidate.json" "$RUNNER_TEMP/new-webp" "$RUNNER_TEMP/media-candidate-output" "$pin"
+          node -e 'const fs=require("fs"),path=require("path"),a=require("node:assert/strict"),s=require("./scripts/library-store.cjs"),m=require("./scripts/library-import.cjs"),[src,out,dest]=process.argv.slice(1),r=JSON.parse(fs.readFileSync(path.join(out,"result.json")));a.equal(r.status,"validated_media_candidate_not_approved");fs.cpSync(src,dest,{recursive:true});for(const f of r.bundle.removed_files)fs.unlinkSync(path.join(dest,f));for(const f of ["manifest.json",...r.bundle.changed_files]){const t=path.join(dest,f);fs.mkdirSync(path.dirname(t),{recursive:true});fs.copyFileSync(path.join(out,"delta",f),t)}const next=s.load(dest);a.equal(next.source_sha256,r.result_source_sha256);a.deepEqual(JSON.parse(fs.readFileSync(path.join(out,r.bundle.registry))),m.projectRegistry(next.db,require("./outputs/image-library.json")));a.equal(next.db.entries.at(-1).selection.base_weight,0)' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/media-candidate-output" "$RUNNER_TEMP/media-rebuilt"
+          node scripts/check-library-v2.cjs --candidate-dir "$RUNNER_TEMP/media-rebuilt" --candidate-media "$RUNNER_TEMP/media-candidate-output/media"
+          if node scripts/library-media-package.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/media-candidate.json" "$RUNNER_TEMP/new-webp" "$RUNNER_TEMP/media-wrong-pin" "$(printf '%064d' 0)"; then exit 1; fi
+          test ! -e "$RUNNER_TEMP/media-wrong-pin"
+          printf bad >> "$RUNNER_TEMP/new-webp/modular-media-ci-only.webp"
+          if node scripts/library-media-package.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/media-candidate.json" "$RUNNER_TEMP/new-webp" "$RUNNER_TEMP/media-corrupt" "$pin"; then exit 1; fi
+          test ! -e "$RUNNER_TEMP/media-corrupt"
+          test ! -e public/assets/words/modular-media-ci-only.webp
+          git diff --exit-code
       - name: Rehearse future canonical switch without legacy master
         shell: bash
         run: |
@@ -352,6 +372,7 @@ jobs:
             ${{ runner.temp }}/apply-weight-result.json
             ${{ runner.temp }}/apply-semantic-result.json
             ${{ runner.temp }}/apply-decision-result.json
+            ${{ runner.temp }}/media-candidate-output/result.json
             ${{ runner.temp }}/switch-source.json
             ${{ runner.temp }}/switch-writer-rejected.log
             ${{ runner.temp }}/modules

@@ -13,7 +13,7 @@ function validate(value,rule,location='$'){
  for(const [key,child]of Object.entries(rule.properties||{}))if(Object.hasOwn(value,key))validate(value[key],child,`${location}.${key}`);
  if(rule.items)value.forEach((item,i)=>validate(item,rule.items,`${location}[${i}]`));
 }
-function validateLibrary(db){
+function validateLibrary(db,{assetDir}={}){
  validate(db,schema);
  const ids=new Set(db.entries.map(e=>e.id)),categories=new Set(db.categories.map(c=>c.path));
  assert.equal(ids.size,db.entries.length,'Duplicate entry ID');
@@ -22,7 +22,7 @@ function validateLibrary(db){
  for(const category of db.categories)for(const parent of category.parent_paths||[])assert(categories.has(parent),`Missing category parent ${parent}`);
  for(const entry of db.entries){
   for(const category of entry.categories)assert(categories.has(category.path),`Unknown category ${entry.id}: ${category.path}`);
-  for(const sense of entry.illustrations.senses||[]){assert.equal(sense.word_id,entry.id,`Sense owner ${sense.id}`);for(const image of sense.variants){assert(image.src.startsWith('/assets/')&&!image.src.includes('..'),`Unsafe image ${image.src}`);assert(fs.existsSync(path.join(root,'public',image.src)),`Missing image ${image.src}`);}}
+  for(const sense of entry.illustrations.senses||[]){assert.equal(sense.word_id,entry.id,`Sense owner ${sense.id}`);for(const image of sense.variants){assert(image.src.startsWith('/assets/')&&!image.src.includes('..'),`Unsafe image ${image.src}`);const publicDir=require('./library-import.cjs').assetRoot(image.src,path.join(root,'public'),assetDir);assert(fs.existsSync(path.join(publicDir,image.src)),`Missing image ${image.src}`);}}
  }
  for(const relation of db.relations)for(const [key,value]of Object.entries(relation))if(value&&typeof value==='object'&&!Array.isArray(value)&&typeof value.id==='string')assert(ids.has(value.id),`Dangling relation ${relation.id}.${key}: ${value.id}`);
  return {entries:ids.size,categories:categories.size,relations:db.relations.length};

@@ -1,13 +1,17 @@
 #!/usr/bin/env node
 'use strict';
 const fs=require('node:fs');const assert=require('node:assert/strict');
-const img=JSON.parse(fs.readFileSync('outputs/image-library.json','utf8'));
+const path=require('node:path');
+const originalRegistry=JSON.parse(fs.readFileSync('outputs/image-library.json','utf8'));
 const args=process.argv.slice(2);
-assert(args.length===0||(args.length===2&&args[0]==='--candidate-dir'),'Usage: check-library-v2.cjs [--candidate-dir DIR]');
+assert(args.length===0||((args.length===2||args.length===4)&&args[0]==='--candidate-dir'&&(args.length===2||args[2]==='--candidate-media')),'Usage: check-library-v2.cjs [--candidate-dir DIR [--candidate-media DIR]]');
 const v=args.length?require('./library-store.cjs').load(args[1]).db:require('./library-source.cjs').readSource().db;
-require('./validate-library-contract.cjs').validateLibrary(v);
+const importer=require('./library-import.cjs'),media=args.length===4?path.resolve(args[3]):null,assetDir=media?path.join(media,'public'):undefined;
+const img=media?JSON.parse(fs.readFileSync(path.join(media,'image-library.json'),'utf8')):originalRegistry;
+if(media)assert.deepEqual(img,importer.projectRegistry(v,originalRegistry),'Candidate registry differs from projection');
+require('./validate-library-contract.cjs').validateLibrary(v,{assetDir});
 assert.equal(v.schema_version,2);
-const modularCreated=require('./library-import.cjs').verifyImports(v);
+const modularCreated=importer.verifyImports(v,undefined,assetDir);
 const byId=new Map(v.entries.map(e=>[e.id,e]));
 assert.equal(byId.size,v.entries.length,'Duplicate ID');
 const legacy=v.entries.filter(e=>e.legacy_source?.raw);
@@ -175,7 +179,7 @@ if(v.provenance.webp_assets?.revision==='webp-pack-20261105'){
   for(const variant of s.variants||[]){
    const src=variant.src;
    assert(src.startsWith('/assets/words/'),'Invalid asset path '+src);
-   assert(fs.existsSync('public'+src),'Missing linked asset '+src);
+   assert(fs.existsSync(path.join(importer.assetRoot(src,'public',assetDir),src)),'Missing linked asset '+src);
   }
  }
 }
@@ -186,7 +190,7 @@ if(v.provenance.image_naming?.revision==='semantic-word-assets-20261105-v1'){
  for(const variant of variants){
   assert(!new RegExp('/[0-9]+[a-z]?_').test(variant.src),'Numbered artwork filename remained: '+variant.src);
   assert(variant.src.endsWith('.webp'),'Game artwork must use compressed WebP '+variant.src);
-  assert(fs.existsSync('public'+variant.src),'Artwork file missing: '+variant.src);
+  assert(fs.existsSync(path.join(importer.assetRoot(variant.src,'public',assetDir),variant.src)),'Artwork file missing: '+variant.src);
  }
  console.log('PASS semantic WebP names and', variants.length, 'linked image variants');
 }

@@ -42,7 +42,7 @@ function validate(r){
  }
  return r;
 }
-function prepare(current,r){
+function prepare(current,r,{assetDir}={}){
  validate(r);
  assert.equal(r.source_sha256,current.source_sha256,'Stale source; query again');
  const byId=new Map(current.db.entries.map(e=>[e.id,e]));
@@ -50,7 +50,7 @@ function prepare(current,r){
  let planned=r.operations.length?planPatch(current,{version:1,source_sha256:r.source_sha256,operations:r.operations}):{db:current.db,changes:[]};
  if(r.semantic_operations?.length){const next=semanticReview.plan(planned.db,r.semantic_operations);planned={db:next.db,changes:[...planned.changes,...next.changes]};}
  if(r.review_decisions?.length){const next=editorialDecisions.plan(planned.db,r.review_decisions);planned={db:next.db,changes:next.changes};}
- if(r.import_operations?.length)planned=importer.plan(current.db,r.import_operations);
+ if(r.import_operations?.length)planned=importer.plan(current.db,r.import_operations,undefined,assetDir);
  const newManifest=build(planned.db).manifest,changes=planned.changes;
  const diff=delta(current.manifest,newManifest),target=fingerprint(planned.db);
  const preview={version:1,source_sha256:current.source_sha256,result_source_sha256:target,operations:r.operations,changes,delta:diff};

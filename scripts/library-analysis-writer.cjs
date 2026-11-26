@@ -102,14 +102,14 @@ function stage({source,expected,next,dest}){
  return stageVerified(current,next,dest,stats);
 }
 // Shared finalization for internally generated, independently restricted candidates.
-function stageVerified(current,next,dest,stats){
+function stageVerified(current,next,dest,stats,{mediaDir}={}){
  const expected=current.source_sha256;
  assert(!fs.existsSync(dest),'Destination exists');
- verifyArchive(next,baseline);validateLibrary(next);
+ verifyArchive(next,baseline);validateLibrary(next,{assetDir:mediaDir?path.join(mediaDir,'public'):undefined});
  if(!stats.changed)return {...stats,status:'no_changes'};
  const m=create(dest,next);
  try{
-  const p=spawnSync(process.execPath,[path.join(ROOT,'scripts/check-library-v2.cjs'),'--candidate-dir',path.resolve(dest)],{cwd:ROOT,env:process.env,encoding:'utf8',maxBuffer:8*1024*1024});
+  const p=spawnSync(process.execPath,[path.join(ROOT,'scripts/check-library-v2.cjs'),'--candidate-dir',path.resolve(dest),...(mediaDir?['--candidate-media',path.resolve(mediaDir)]:[])],{cwd:ROOT,env:process.env,encoding:'utf8',maxBuffer:8*1024*1024});
   if(p.error||p.status!==0)fail('Candidate rejected by full validator: '+(p.error||p.stderr||p.stdout));
  }catch(e){fs.rmSync(dest,{recursive:true,force:true});throw e;}
  return {...stats,status:'validated_candidate_not_approved',source_sha256:expected,result_source_sha256:m.source_sha256,delta:delta(current.manifest,m)};
