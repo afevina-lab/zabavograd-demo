@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '24'
       - name: Run storage and editorial unit tests
-        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts
+        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts tests/library-modular-request.test.ts
       - name: Inventory direct consumers
         run: node scripts/library-consumer-audit.cjs "$RUNNER_TEMP/consumer-audit.json"
       - name: Rehearse migration and candidate update on real source
@@ -104,6 +104,16 @@ jobs:
           if ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" node scripts/library-request.cjs "$RUNNER_TEMP/remote-stale-request.json" "$RUNNER_TEMP/remote-stale-result.json"; then echo "Stale remote request accepted"; exit 1; fi
           test ! -e "$RUNNER_TEMP/remote-stale-result.json"
           git diff --exit-code
+      - name: Verify remote preview and candidate bundle on real library
+        shell: bash
+        run: |
+          set -euo pipefail
+          node -e 'const fs=require("fs"),s=require("./scripts/library-store.cjs"),r=s.load(process.argv[1]),e=r.db.entries.find(x=>x.id==="ru-home-20261105-bd699907");if(e?.selection.base_weight!==100)throw Error("Probe changed");fs.writeFileSync(process.argv[2],JSON.stringify({version:1,mode:"preview",source_sha256:r.source_sha256,operations:[{id:e.id,path:"/selection/base_weight",expect:{exists:true,value:100},value:70}]}))' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/edit-preview.json"
+          node scripts/library-modular-request.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/edit-preview.json" "$RUNNER_TEMP/edit-preview-output"
+          node -e 'const fs=require("fs"),r=JSON.parse(fs.readFileSync(process.argv[1]));fs.writeFileSync(process.argv[2],JSON.stringify({version:1,mode:"candidate",source_sha256:r.source_sha256,preview_sha256:r.preview_sha256,operations:r.operations}))' "$RUNNER_TEMP/edit-preview-output/result.json" "$RUNNER_TEMP/edit-candidate.json"
+          node scripts/library-modular-request.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/edit-candidate.json" "$RUNNER_TEMP/edit-candidate-output"
+          node -e 'const fs=require("fs"),path=require("path"),a=require("node:assert/strict"),s=require("./scripts/library-store.cjs"),[src,out,dest]=process.argv.slice(1),r=JSON.parse(fs.readFileSync(path.join(out,"result.json")));a.equal(r.status,"validated_candidate_not_approved");a.equal(r.changes.length,1);fs.cpSync(src,dest,{recursive:true});for(const f of r.bundle.removed_files)fs.unlinkSync(path.join(dest,f));for(const f of ["manifest.json",...r.bundle.changed_files]){const target=path.join(dest,f);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(path.join(out,"delta",f),target)}const candidate=s.load(dest);a.equal(candidate.source_sha256,r.result_source_sha256);a.equal(candidate.db.entries.find(e=>e.id===r.changes[0].id).selection.base_weight,70);a.equal(s.load(src).db.entries.find(e=>e.id===r.changes[0].id).selection.base_weight,100);console.log("Verified reconstructable delta:",r.bundle.changed_files)' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/edit-candidate-output" "$RUNNER_TEMP/reconstructed-edit"
+          git diff --exit-code
       - uses: actions/upload-artifact@v4
         with:
           name: library-integration-rehearsal
@@ -120,6 +130,8 @@ jobs:
             ${{ runner.temp }}/sqlite-report.json
             ${{ runner.temp }}/sqlite-result.json
             ${{ runner.temp }}/remote-sqlite-result.json
+            ${{ runner.temp }}/edit-preview-output
+            ${{ runner.temp }}/edit-candidate-output
             ${{ runner.temp }}/modules
             ${{ runner.temp }}/storage-check/optimization.json
           retention-days: 14
