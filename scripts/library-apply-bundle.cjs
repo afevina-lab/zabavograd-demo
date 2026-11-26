@@ -43,7 +43,7 @@ function verifyBundle(current,bundle,expectedPreview){
  assert.equal(report.source_sha256,current.source_sha256,'Stale source; regenerate preview');
  assert.equal(report.preview_sha256,expectedPreview,'Bundle preview differs from approved preview');
  const req={version:report.version,mode:'candidate',source_sha256:report.source_sha256,preview_sha256:expectedPreview,operations:report.operations};
- for(const k of ['semantic_operations','review_decisions'])if(Object.hasOwn(report,k))req[k]=report[k];
+ for(const k of ['semantic_operations','review_decisions','import_operations'])if(Object.hasOwn(report,k))req[k]=report[k];
  // Replay known domain operations, rather than trusting a self-consistent edited manifest.
  const p=prepare(current,req);
  assert(p.planned.changes.length>0,'Empty candidate');

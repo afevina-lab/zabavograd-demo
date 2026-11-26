@@ -74,10 +74,11 @@ export function createModularClient(api){
   else check(typeof value==='string'&&value.trim()===value&&value.length>0&&value.length<=160,'Недопустимая словоформа');
   return clone({id:row.id,path,expect:prior,value});
  }
- function requestPreview({operations=[],semantic_operations,review_decisions}={}){
+ function requestPreview({operations=[],semantic_operations,review_decisions,import_operations}={}){
   return exclusive(async()=>{
    check(source,'Сначала получите актуальную версию библиотеки');
-   const arrays=[operations,semantic_operations??[],review_decisions??[]];
+   const arrays=[operations,semantic_operations??[],review_decisions??[],import_operations??[]];
+   check(!import_operations?.length||(!operations.length&&!semantic_operations?.length&&!review_decisions?.length),'Импорт требует отдельного запроса');
    check(arrays.every(Array.isArray),'Нужны списки операций');
    const count=arrays.reduce((n,a)=>n+a.length,0);
    check(count>=1&&count<=30,'От 1 до 30 операций');
@@ -86,6 +87,7 @@ export function createModularClient(api){
    const body={version:1,mode:'preview',source_sha256:source,operations:clone(operations)};
    if(semantic_operations?.length)body.semantic_operations=clone(semantic_operations);
    if(review_decisions?.length)body.review_decisions=clone(review_decisions);
+   if(import_operations?.length)body.import_operations=clone(import_operations);
    const result=await submit('edit',body);preview=null;return result;
   });
  }
@@ -95,7 +97,7 @@ export function createModularClient(api){
    check(preview.source_sha256===source,'Версия источника изменилась');
    check(![...jobs.values()].some(j=>j.kind==='edit'&&j.status==='submitted'),'Редакторский запрос уже ожидает результата');
    const body={version:1,mode:'candidate',source_sha256:source,preview_sha256:expectedPreview,operations:clone(preview.operations)};
-   for(const k of ['semantic_operations','review_decisions'])if(own(preview,k))body[k]=clone(preview[k]);
+   for(const k of ['semantic_operations','review_decisions','import_operations'])if(own(preview,k))body[k]=clone(preview[k]);
    return submit('edit',body);
   });
  }
@@ -116,7 +118,7 @@ export function createModularClient(api){
     if(r.command!=='inventory')check(Array.isArray(r.rows)&&r.rows.length<=40,'Некорректная выборка');
     latest=clone(r);
    }else{
-    for(const k of ['operations','semantic_operations','review_decisions'])check(equal(r[k]??[],job.body[k]??[]),'Операции отчёта не совпадают');
+    for(const k of ['operations','semantic_operations','review_decisions','import_operations'])check(equal(r[k]??[],job.body[k]??[]),'Операции отчёта не совпадают');
     check(hash.test(r.preview_sha256||'')&&hash.test(r.result_source_sha256||''),'Нет контрольных сумм результата');
     if(r.mode==='preview'){
      check(r.status==='preview_not_validated_or_approved','Некорректный статус preview');

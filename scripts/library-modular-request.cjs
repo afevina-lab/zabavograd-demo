@@ -6,6 +6,7 @@ const {stageVerified}=require('./library-analysis-writer.cjs');
 const phoneticReview=require('./library-phonetic-review.cjs');
 const semanticReview=require('./library-semantic-proposals.cjs');
 const editorialDecisions=require('./library-editorial-decisions.cjs');
+const importer=require('./library-import.cjs');
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 const digest=x=>sha(JSON.stringify(x));
 const weights=new Set([0,10,20,30,50,70,100]);
@@ -15,7 +16,7 @@ function keys(x,allowed){
  for(const k of Object.keys(x))assert(allowed.includes(k),'Unexpected key '+k);
 }
 function validate(r){
- keys(r,['version','mode','source_sha256','operations','semantic_operations','review_decisions','preview_sha256']);
+ keys(r,['version','mode','source_sha256','operations','semantic_operations','review_decisions','import_operations','preview_sha256']);
  assert(r.version===1&&['preview','candidate'].includes(r.mode),'Expected preview or candidate request v1');
  assert(/^[a-f0-9]{64}$/.test(r.source_sha256||''),'Exact source fingerprint required');
  if(r.mode==='candidate')assert(/^[a-f0-9]{64}$/.test(r.preview_sha256||''),'Candidate requires preview fingerprint');
@@ -23,8 +24,11 @@ function validate(r){
  assert(Array.isArray(r.operations),'operations must be an array');
  const semantic=r.semantic_operations??[];assert(Array.isArray(semantic),'semantic_operations must be an array');
  const decisions=r.review_decisions??[];assert(Array.isArray(decisions),'review_decisions must be an array');
+ const imports=r.import_operations??[];assert(Array.isArray(imports),'import_operations must be an array');
+ assert(!imports.length||(!r.operations.length&&!semantic.length&&!decisions.length),'Import requires a separate request');
+ for(const o of imports)importer.validate(o);
  assert(!decisions.length||(!r.operations.length&&!semantic.length),'Decisions require a separate request on existing proposals');
- assert(r.operations.length+semantic.length+decisions.length>=1&&r.operations.length+semantic.length+decisions.length<=30,'1..30 operations required');
+ assert(r.operations.length+semantic.length+decisions.length+imports.length>=1&&r.operations.length+semantic.length+decisions.length+imports.length<=30,'1..30 operations required');
  for(const d of decisions)editorialDecisions.validate(d);
  for(const op of semantic)semanticReview.validateOperation(op);
  for(const o of r.operations){
@@ -46,12 +50,14 @@ function prepare(current,r){
  let planned=r.operations.length?planPatch(current,{version:1,source_sha256:r.source_sha256,operations:r.operations}):{db:current.db,changes:[]};
  if(r.semantic_operations?.length){const next=semanticReview.plan(planned.db,r.semantic_operations);planned={db:next.db,changes:[...planned.changes,...next.changes]};}
  if(r.review_decisions?.length){const next=editorialDecisions.plan(planned.db,r.review_decisions);planned={db:next.db,changes:next.changes};}
+ if(r.import_operations?.length)planned=importer.plan(current.db,r.import_operations);
  const newManifest=build(planned.db).manifest,changes=planned.changes;
  const diff=delta(current.manifest,newManifest),target=fingerprint(planned.db);
  const preview={version:1,source_sha256:current.source_sha256,result_source_sha256:target,operations:r.operations,changes,delta:diff};
  if(reviews.length)preview.phonetic_reviews=reviews;
  if(r.semantic_operations?.length)preview.semantic_operations=r.semantic_operations;
  if(r.review_decisions?.length)preview.review_decisions=r.review_decisions;
+ if(r.import_operations?.length)preview.import_operations=r.import_operations;
  const preview_sha256=digest(preview);
  if(r.mode==='candidate')assert.equal(r.preview_sha256,preview_sha256,'Preview mismatch; generate a new preview');
  return {planned,preview,preview_sha256,newManifest};

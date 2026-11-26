@@ -19,11 +19,11 @@ export function validateEnvelope(kind,body){
   if(body.options?.limit!==undefined)check(Number.isInteger(body.options.limit)&&body.options.limit>=1&&body.options.limit<=40,'Лимит от 1 до 40');
   if(body.source_sha256!==undefined)check(typeof body.source_sha256==='string'&&hash.test(body.source_sha256),'Недопустимая версия источника');
  }else{
-  keys(body,['version','mode','source_sha256','preview_sha256','operations','semantic_operations','review_decisions']);
+  keys(body,['version','mode','source_sha256','preview_sha256','operations','semantic_operations','review_decisions','import_operations']);
   check(['preview','candidate'].includes(body.mode)&&typeof body.source_sha256==='string'&&hash.test(body.source_sha256),'Требуется точная версия источника');
   check(body.mode==='candidate'?typeof body.preview_sha256==='string'&&hash.test(body.preview_sha256):body.preview_sha256===undefined,'Требуется соответствующий предварительный просмотр');
   check(Array.isArray(body.operations),'Ожидаются операции');
-  const arrays=[body.operations,body.semantic_operations??[],body.review_decisions??[]];
+  const arrays=[body.operations,body.semantic_operations??[],body.review_decisions??[],body.import_operations??[]];
   check(arrays.every(Array.isArray),'Ожидаются списки операций');
   const count=arrays.reduce((n,a)=>n+a.length,0);
   check(count>=1&&count<=30,'Допускается от 1 до 30 операций');
