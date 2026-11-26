@@ -1,4 +1,5 @@
 'use strict';
+require('./library-source.cjs').requireLegacyWrite();
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const db=JSON.parse(fs.readFileSync('outputs/library-v2.json','utf8'));const before=structuredClone(db),changes=[];
 function category(path){const p=path.split('/');for(let i=1;i<=p.length;i++){const s=p.slice(0,i).join('/');if(!db.categories.some(c=>c.path===s))db.categories.push({path:s,parent_paths:p.slice(0,i-1).map((_,j)=>p.slice(0,j+1).join('/'))})}}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "scope": "Confirmed historical scripts directly writing V2. Not a complete consumer inventory.",
+  "scripts": [
+    "scripts/activate-safe-forms-20261123.py",
+    "scripts/add-attributes-20261109.cjs",
+    "scripts/add-common-nouns-20261109.cjs",
+    "scripts/add-common-verbs-20261109.cjs",
+    "scripts/consolidate-repositories-20261112.cjs",
+    "scripts/import-approved-39-20261120.cjs",
+    "scripts/import-furniture-20261123.cjs",
+    "scripts/migrate-generalizing-concepts.cjs",
+    "scripts/populate-curated-semantic-relations-20261109.cjs",
+    "scripts/populate-speech-frame-candidates-20261109.cjs",
+    "scripts/publish-editorial-gaps-20261123.cjs",
+    "scripts/reconcile-duplicate-meanings-20261112.cjs",
+    "scripts/reconcile-published-catalogue.cjs",
+    "scripts/reorganize-taxonomy-20261106.py",
+    "scripts/restore-image-pack-20261115.cjs",
+    "scripts/review-library-quality-20261113.cjs",
+    "scripts/sync-public-nouns-20261109.cjs"
+  ]
+}

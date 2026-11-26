@@ -1,3 +1,4 @@
+require('./library-source.cjs').requireLegacyWrite();
 const fs=require('node:fs'),crypto=require('node:crypto'),assert=require('node:assert/strict');
 // Only reviewed, individually prepared WebP files are accepted.
 const manifest=JSON.parse(fs.readFileSync(process.argv[2],'utf8'));

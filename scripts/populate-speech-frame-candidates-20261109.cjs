@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+require('./library-source.cjs').requireLegacyWrite();
 // First independently authored editorial action frames. Do not publish these
 // as verified grammar or use for automatic generation before author review.
 const fs=require('node:fs');

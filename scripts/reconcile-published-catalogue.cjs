@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+require('./library-source.cjs').requireLegacyWrite();
 // One-time, guarded reconciliation of already published words into the private editorial V2.
 // Usage: node scripts/reconcile-published-catalogue.cjs /tmp/published-library.json
 // Never publishes the draft to the public repository. All 409 historical raw records survive.

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+require('./library-source.cjs').requireLegacyWrite();
 // One-time, reproducible consolidation. No GitHub tokens or second repository are needed.
 // Inputs: immutable, sanitized import shards plus the existing PUBLIC release.
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');

@@ -3,6 +3,9 @@
 import json
 from pathlib import Path
 
+from library_source import require_legacy_write
+require_legacy_write()
+
 FILE = Path("outputs/library-v2.json")
 data = json.loads(FILE.read_text(encoding="utf-8"))
 before = [(e["id"], e["lemma"], e.get("selection", {}).get("base_weight")) for e in data["entries"]]

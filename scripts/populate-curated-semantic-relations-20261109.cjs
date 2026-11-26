@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+require('./library-source.cjs').requireLegacyWrite();
 // Reproducible, independently authored, sense-disambiguated semantic pairs.
 // One canonical edge; reverse reading is derived by semantic-review.cjs.
 const fs=require('node:fs');

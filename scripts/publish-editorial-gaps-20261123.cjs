@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+require('./library-source.cjs').requireLegacyWrite();
 /**
  * Canonical public catalogue: author-approved batch of missing vocabulary
  * and independently authored, sense-ID-checked semantic relationships.

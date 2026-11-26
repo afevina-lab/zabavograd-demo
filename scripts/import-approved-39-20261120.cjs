@@ -1,3 +1,4 @@
+require('./library-source.cjs').requireLegacyWrite();
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
 const archive=process.argv[2]||'.asset-review-39';
 const manifest=JSON.parse(fs.readFileSync(path.join(archive,'manifest.json')));

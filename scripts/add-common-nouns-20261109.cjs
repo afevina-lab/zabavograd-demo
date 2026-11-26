@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+require('./library-source.cjs').requireLegacyWrite();
 /**
  * Одноразовое расширение общей библиотеки на 100 существительных.
  * Не удаляет и не перестраивает прежние записи, картинки, ID и связи.

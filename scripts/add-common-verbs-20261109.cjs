@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+require('./library-source.cjs').requireLegacyWrite();
 /**
  * Однократное, идемпотентное авторское пополнение частотных глаголов.
  * Сохраняет существующие ID, значения, изображения и связи.

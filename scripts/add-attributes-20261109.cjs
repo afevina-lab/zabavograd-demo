@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+require('./library-source.cjs').requireLegacyWrite();
 // One-time, idempotent editorial import. Run after noun/verb enrichment.
 const fs=require('node:fs'), assert=require('node:assert/strict');
 const filename='outputs/library-v2.json';

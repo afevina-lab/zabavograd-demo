@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+require('./library-source.cjs').requireLegacyWrite();
 // Add only the still-missing words from the public noun batch to master V2.
 // Existing canonical words and IDs are kept verbatim.
 const fs=require('node:fs');

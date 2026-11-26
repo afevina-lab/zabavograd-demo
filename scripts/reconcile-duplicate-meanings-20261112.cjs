@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+require('./library-source.cjs').requireLegacyWrite();
 /**
  * One-time value reconciliation after ID-level consolidation.
  * Preserve all 1,899 immutable source IDs, but route images from

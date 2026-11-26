@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+require('./library-source.cjs').requireLegacyWrite();
 // Approved generalizing concepts (2026-11-14).
 // Run: node scripts/migrate-generalizing-concepts.cjs
 // Re-running is safe; existing entry IDs, meanings, and semantic links remain intact.

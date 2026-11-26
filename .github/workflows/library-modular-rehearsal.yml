@@ -2,10 +2,44 @@ name: Modular library integration rehearsal
 on:
   push:
     branches: [refactor/library-modular-integration-20261126]
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
+  plan:
+    if: github.ref == 'refs/heads/refactor/library-modular-integration-20261126'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    outputs:
+      mode: ${{ steps.scope.outputs.mode }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Select conservative check scope
+        id: scope
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          node --experimental-strip-types --test tests/library-ci-plan.test.ts
+          if [[ "$BEFORE" =~ ^[a-f0-9]{40}$ ]] && ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then git fetch --no-tags --depth=1 origin "$BEFORE" || true; fi
+          mode=$(node scripts/library-ci-plan.cjs "$BEFORE" "$AFTER" "$EVENT")
+          [[ "$mode" =~ ^(docs|client|full)$ ]]
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+          echo "Check scope: $mode" >> "$GITHUB_STEP_SUMMARY"
+      - name: Check isolated browser controller
+        if: steps.scope.outputs.mode == 'client'
+        run: |
+          node --check public/editor/modular-client.mjs
+          node --test editor-service/modular-client.test.mjs
   rehearsal:
+    needs: plan
+    if: needs.plan.outputs.mode == 'full'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -209,8 +243,12 @@ jobs:
           node scripts/sync-runtime.cjs
           sha256sum -c "$RUNNER_TEMP/switch-runtime.sha"
           python3 -c 'import sys,json;sys.path.insert(0,"scripts");from library_source import read_library;assert read_library()==json.load(open(sys.argv[1]))' "$RUNNER_TEMP/rebuilt.json"
-          if node scripts/restore-image-pack-20261115.cjs > "$RUNNER_TEMP/switch-writer-rejected.log" 2>&1; then echo 'Historical writer accepted'; exit 1; fi
-          grep -F 'Direct V2 write disabled' "$RUNNER_TEMP/switch-writer-rejected.log"
+          while IFS= read -r writer; do
+            if [[ "$writer" == *.py ]]; then runner=python3; else runner=node; fi
+            if "$runner" "$writer" > "$RUNNER_TEMP/writer.log" 2>&1; then echo "Historical writer accepted: $writer"; exit 1; fi
+            grep -F 'Direct V2 write disabled' "$RUNNER_TEMP/writer.log"
+            printf '%s: rejected\n' "$writer" >> "$RUNNER_TEMP/switch-writer-rejected.log"
+          done < <(node -p 'require("./editorial/legacy-library-writers.json").scripts.join("\n")')
           test ! -e outputs/library-v2.json
           cleanup
           trap - EXIT
