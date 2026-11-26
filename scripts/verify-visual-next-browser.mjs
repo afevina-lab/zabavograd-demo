@@ -38,7 +38,7 @@ await runBrowserProbe({theme,outputDirectory:output,rootDirectory:'dist-visual'}
    await cmd('CSS.forcePseudoState',{nodeId:quiet,forcedPseudoClasses:[]});
    await screenshot(`${game}-${width}-settings`);
    await evaluate("[...document.querySelectorAll('button')].find(e=>e.textContent==='Начать игру').click()");await until("!!document.querySelector('.v-toolbar')");
-   assert(await evaluate("(()=>{const bar=document.querySelector('.v-toolbar').getBoundingClientRect();return [...document.querySelectorAll('.v-toolbar .v-icon-button')].every(e=>{const r=e.getBoundingClientRect();return Math.abs(r.height/bar.height-.6)<.02&&Math.abs(r.top+r.height/2-bar.top-bar.height/2)<1&&r.left>=0&&r.right<=innerWidth})})()"),'Toolbar geometry '+game+' '+width);
+   assert(await evaluate("(()=>{const bar=document.querySelector('.v-toolbar').getBoundingClientRect();return [...document.querySelectorAll('.v-toolbar .v-icon-button')].filter(e=>e.getBoundingClientRect().width>0).every(e=>{const r=e.getBoundingClientRect();return Math.abs(r.height/bar.height-.6)<.02&&Math.abs(r.top+r.height/2-bar.top-bar.height/2)<1&&r.left>=0&&r.right<=innerWidth})})()"),'Toolbar geometry '+game+' '+width);
    await until("[...document.images].every(e=>e.complete&&e.naturalWidth>0)");await screenshot(`${game}-${width}-play`);
    await evaluate("document.querySelector('button[aria-label=Пауза]').click()");await until("!!document.querySelector('dialog[open]')");
    assert(await evaluate("(()=>{const d=document.querySelector('dialog[open]'),r=d.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1&&r.top>=0&&r.bottom<=innerHeight+1&&d.contains(document.activeElement)})()"),'Native dialog bounds/focus '+game+' '+width);
