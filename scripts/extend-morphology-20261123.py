@@ -126,16 +126,41 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--library', default='outputs/library-v2.json')
     parser.add_argument('--report', default='outputs/GRAMMAR_FORMS_REVIEW_20261123.json')
-    parser.add_argument('--write', action='store_true', help='Extend unapproved existing suggestions')
+    parser.add_argument('--write', action='store_true', help='Extend unapproved existing suggestions (legacy only)')
+    parser.add_argument('--candidate-dir', help='Create a validated modular candidate, never overwrite the source')
     args = parser.parse_args()
     import pymorphy3
+    import os
+    import subprocess
+    import tempfile
+    from library_source import read_library, require_legacy_write, ROOT
     source = Path(args.library)
-    original = json.loads(source.read_text(encoding='utf-8'))
+    modules = os.environ.get("ZABAVOGRAD_LIBRARY_MODULES")
+    expected = None
+    if modules is not None:
+        if args.write or args.library != 'outputs/library-v2.json':
+            parser.error("Modular mode disallows --write and alternate monolithic files")
+        info = subprocess.run(["node", str(ROOT / "scripts/library-source.cjs"), "info"],
+                              cwd=ROOT, check=True, capture_output=True, text=True, encoding="utf-8")
+        expected = json.loads(info.stdout)["source_sha256"]
+        original = read_library()
+    else:
+        if args.candidate_dir:
+            parser.error("--candidate-dir requires ZABAVOGRAD_LIBRARY_MODULES")
+        original = json.loads(source.read_text(encoding='utf-8'))
     db, report = enrich(original, pymorphy3.MorphAnalyzer())
     dest = Path(args.report)
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    if args.candidate_dir:
+        with tempfile.TemporaryDirectory(prefix="zabavograd-analysis-") as tmp:
+            proposed = Path(tmp) / "proposal.json"
+            proposed.write_text(json.dumps(db, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+            subprocess.run(["node", str(ROOT / "scripts/library-analysis-writer.cjs"),
+                            modules, expected, str(proposed), str(Path(args.candidate_dir).resolve())],
+                           cwd=ROOT, check=True)
     if args.write:
+        require_legacy_write()
         source.write_text(json.dumps(db, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({'write': args.write, 'review': str(dest), **report['statistics']}, ensure_ascii=False))
 

@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '24'
       - name: Run storage and editorial unit tests
-        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts
+        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts
       - name: Inventory direct consumers
         run: node scripts/library-consumer-audit.cjs "$RUNNER_TEMP/consumer-audit.json"
       - name: Rehearse migration and candidate update on real source
@@ -57,6 +57,21 @@ jobs:
           node scripts/check-library-v2.cjs
           git restore -- outputs/library-v2.json
           git diff --exit-code
+      - name: Verify restricted analyzer writer against real modular data
+        shell: bash
+        run: |
+          set -euo pipefail
+          node -e 'const fs=require("fs"),s=require("./scripts/library-store.cjs"),r=s.load(process.argv[1]);const e=r.db.entries.find(e=>e.morphology?.status==="automatic_candidate_needs_review"&&e.morphology?.data?.automatic_proposal?.status==="suggested"&&e.morphology.data.automatic_proposal.source==="pymorphy3"&&e.morphology.data.automatic_proposal.usable_for_generation===false&&e.morphology.data.automatic_proposal.forms&&!Object.hasOwn(e.morphology.data.automatic_proposal.forms,"toolkit_probe"));if(!e)throw Error("No suitable proposal");const p=e.morphology.data.automatic_proposal;p.forms.toolkit_probe=e.lemma.replace(/\s/g,"");p.extended_by="pymorphy3-expanded-paradigms-20261123-v1";fs.writeFileSync(process.argv[2],JSON.stringify(r.db));fs.writeFileSync(process.argv[3],r.source_sha256)' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/analysis-probe.json" "$RUNNER_TEMP/analysis-sha"
+          node scripts/library-analysis-writer.cjs "$RUNNER_TEMP/modules" "$(cat "$RUNNER_TEMP/analysis-sha")" "$RUNNER_TEMP/analysis-probe.json" "$RUNNER_TEMP/analysis-candidate" > "$RUNNER_TEMP/analysis-candidate-report.json"
+          cat "$RUNNER_TEMP/analysis-candidate-report.json"
+          git diff --exit-code
+      - name: Run existing morphology expansion in review mode on modules
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --disable-pip-version-check pymorphy3==2.0.6
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" python3 scripts/extend-morphology-20261123.py --report "$RUNNER_TEMP/morphology-review.json" --candidate-dir "$RUNNER_TEMP/morphology-candidate"
+          git diff --exit-code
       - uses: actions/upload-artifact@v4
         with:
           name: library-integration-rehearsal
@@ -65,6 +80,8 @@ jobs:
             ${{ runner.temp }}/patch-result.json
             ${{ runner.temp }}/archive-patch-result.json
             ${{ runner.temp }}/archive-rejection.log
+            ${{ runner.temp }}/analysis-candidate-report.json
+            ${{ runner.temp }}/morphology-review.json
             ${{ runner.temp }}/modules
             ${{ runner.temp }}/storage-check/optimization.json
           retention-days: 14
