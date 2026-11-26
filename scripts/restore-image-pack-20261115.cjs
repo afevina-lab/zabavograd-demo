@@ -1,4 +1,5 @@
 'use strict';
+require('./library-source.cjs').requireLegacyWrite();
 const fs=require('node:fs'),assert=require('node:assert/strict'),crypto=require('node:crypto');
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const write=(p,data)=>fs.writeFileSync(p,JSON.stringify(data,null,2)+'\n');

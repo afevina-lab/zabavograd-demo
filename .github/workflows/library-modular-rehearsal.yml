@@ -183,6 +183,38 @@ jobs:
           if node scripts/library-apply-bundle.cjs "$RUNNER_TEMP/modules" "$RUNNER_TEMP/corrupt-bundle" "$RUNNER_TEMP/rejected-corrupt" "$(preview_sha "$RUNNER_TEMP/edit-preview-output")"; then echo 'Corrupt bundle accepted'; exit 1; fi
           test ! -e "$RUNNER_TEMP/rejected-corrupt"
           git diff --exit-code
+      - name: Rehearse future canonical switch without legacy master
+        shell: bash
+        run: |
+          set -euo pipefail
+          test ! -e editorial/library-source-mode.json
+          test ! -e outputs/library-modules
+          cleanup() {
+            rm -f editorial/library-source-mode.json
+            rm -rf outputs/library-modules
+            git restore -- outputs/library-v2.json library.json semantic-graph.json public/semantic-graph.json public/grammar-frames.json outputs/Библиотека.html
+            if git ls-files --error-unmatch public/library.json >/dev/null 2>&1; then git restore -- public/library.json; else rm -f public/library.json; fi
+          }
+          trap cleanup EXIT
+          node scripts/sync-runtime.cjs
+          sha256sum library.json semantic-graph.json public/library.json public/semantic-graph.json public/grammar-frames.json > "$RUNNER_TEMP/switch-runtime.sha"
+          cp -a "$RUNNER_TEMP/modules" outputs/library-modules
+          printf '%s\n' '{"version":1,"mode":"modules","directory":"outputs/library-modules"}' > editorial/library-source-mode.json
+          if node scripts/library-source.cjs info; then echo 'Dual source accepted'; exit 1; fi
+          rm outputs/library-v2.json
+          node scripts/library-source.cjs info > "$RUNNER_TEMP/switch-source.json"
+          node scripts/check-library-v2.cjs
+          node scripts/library-archive-guard.cjs
+          node scripts/build-library-v2-view.cjs
+          node scripts/sync-runtime.cjs
+          sha256sum -c "$RUNNER_TEMP/switch-runtime.sha"
+          python3 -c 'import sys,json;sys.path.insert(0,"scripts");from library_source import read_library;assert read_library()==json.load(open(sys.argv[1]))' "$RUNNER_TEMP/rebuilt.json"
+          if node scripts/restore-image-pack-20261115.cjs > "$RUNNER_TEMP/switch-writer-rejected.log" 2>&1; then echo 'Historical writer accepted'; exit 1; fi
+          grep -F 'Direct V2 write disabled' "$RUNNER_TEMP/switch-writer-rejected.log"
+          test ! -e outputs/library-v2.json
+          cleanup
+          trap - EXIT
+          git diff --exit-code
       - uses: actions/upload-artifact@v4
         with:
           name: library-integration-rehearsal
@@ -208,6 +240,8 @@ jobs:
             ${{ runner.temp }}/apply-weight-result.json
             ${{ runner.temp }}/apply-semantic-result.json
             ${{ runner.temp }}/apply-decision-result.json
+            ${{ runner.temp }}/switch-source.json
+            ${{ runner.temp }}/switch-writer-rejected.log
             ${{ runner.temp }}/modules
             ${{ runner.temp }}/storage-check/optimization.json
           retention-days: 14

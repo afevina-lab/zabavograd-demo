@@ -145,6 +145,8 @@ def activate(db,morph):
                 'statistics':dict(stats),'examples':sample,'unresolved':blocked}
 
 def main():
+    from library_source import require_legacy_write
+    require_legacy_write()
     import pymorphy3
     db=json.loads(FILE.read_text(encoding='utf-8'))
     changed,report=activate(db,pymorphy3.MorphAnalyzer())

@@ -7,13 +7,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+def _modular_requested():
+    return "ZABAVOGRAD_LIBRARY_MODULES" in os.environ or (ROOT / "editorial/library-source-mode.json").exists()
+
 def read_snapshot():
-    if "ZABAVOGRAD_LIBRARY_MODULES" in os.environ:
+    if _modular_requested():
         result = subprocess.run(
             ["node", str(ROOT / "scripts/library-source.cjs"), "export"],
-            cwd=ROOT, check=True, capture_output=True, encoding="utf-8",
+            cwd=ROOT, check=True, capture_output=True,
         )
-        raw = result.stdout.encode("utf-8")
+        raw = result.stdout
         source = "generated V2 from modules"
     else:
         raw = (ROOT / "outputs/library-v2.json").read_bytes()
@@ -28,5 +31,5 @@ def read_library():
     return read_snapshot()[0]
 
 def require_legacy_write():
-    if "ZABAVOGRAD_LIBRARY_MODULES" in os.environ:
+    if _modular_requested():
         raise RuntimeError("Direct V2 write disabled in modular mode; use a checked candidate")
