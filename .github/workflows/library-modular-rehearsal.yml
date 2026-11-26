@@ -78,7 +78,9 @@ jobs:
         with:
           node-version: '24'
       - name: Run storage and editorial unit tests
-        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts tests/library-modular-request.test.ts tests/library-phonetic-review.test.ts tests/library-semantic-proposals.test.ts tests/library-editorial-decisions.test.ts tests/library-apply-bundle.test.ts tests/library-import.test.ts tests/library-media-request.test.ts
+        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts tests/library-modular-request.test.ts tests/library-phonetic-review.test.ts tests/library-semantic-proposals.test.ts tests/library-editorial-decisions.test.ts tests/library-apply-bundle.test.ts tests/library-import.test.ts tests/library-media-request.test.ts tests/linguistic-sources.test.ts
+      - name: Test review-only RuWordNet adapter without external database
+        run: python3 -m unittest discover -s tests -p test_ruwordnet_suggestions.py
       - name: Check editor server bridge without deployment
         run: npm run test:library-editor
       - name: Check preserved catalogue and media regressions
@@ -394,6 +396,7 @@ jobs:
           node scripts/sync-runtime.cjs
           sha256sum -c "$RUNNER_TEMP/switch-runtime.sha"
           python3 -c 'import sys,json;sys.path.insert(0,"scripts");from library_source import read_library;assert read_library()==json.load(open(sys.argv[1]))' "$RUNNER_TEMP/rebuilt.json"
+          python3 -c 'import sys,importlib.util,json;sys.path.insert(0,"scripts");s=importlib.util.spec_from_file_location("rwn","scripts/ruwordnet-suggestions.py");m=importlib.util.module_from_spec(s);s.loader.exec_module(m);db,meta=m.read_input();assert db==json.load(open(sys.argv[1]));assert meta["mode"]=="modules";assert meta["sha256"]==json.load(open(sys.argv[2]))["source_sha256"]' "$RUNNER_TEMP/rebuilt.json" "$RUNNER_TEMP/switch-source.json"
           while IFS= read -r writer; do
             if [[ "$writer" == *.py ]]; then runner=python3; else runner=node; fi
             if "$runner" "$writer" > "$RUNNER_TEMP/writer.log" 2>&1; then echo "Historical writer accepted: $writer"; exit 1; fi

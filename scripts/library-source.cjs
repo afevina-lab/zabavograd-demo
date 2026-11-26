@@ -20,8 +20,8 @@ function resolveSource(root=ROOT,env=process.env){
  }
  return {mode:'legacy',path:legacy};
 }
-function readSource(){
- const selected=resolveSource();
+function readSource(root=ROOT,env=process.env){
+ const selected=resolveSource(root,env);
  if(selected.mode==='modules'){
   const store=require('./library-store.cjs'),r=store.load(selected.path);
   return {db:r.db,raw:store.snapshot(r.db),sha256:r.source_sha256,...selected};
