@@ -25,15 +25,16 @@ function filesIn(dir){
  });
  return walk(dir).sort();
 }
-function load(dir){
- const m=JSON.parse(fs.readFileSync(path.join(dir,'manifest.json'),'utf8'));
+function loadFiles(names,read){
+ const m=JSON.parse(read('manifest.json'));
  assert.equal(m.encoding,ENCODING,'Unknown storage encoding');
  assert.deepEqual(m.shard_counts,counts,'Unknown shard layout');
- assert.deepEqual(filesIn(dir),['manifest.json',...Object.keys(m.files)].sort(),'Missing or extra module files');
- const db=unpack(restore(m,f=>fs.readFileSync(path.join(dir,f),'utf8')));
+ assert.deepEqual([...names].sort(),['manifest.json',...Object.keys(m.files)].sort(),'Missing or extra module files');
+ const db=unpack(restore(m,read));
  assert.equal(fingerprint(db),m.source_sha256,'Logical library fingerprint mismatch');
  return {db,manifest:m,source_sha256:m.source_sha256};
 }
+function load(dir){return loadFiles(filesIn(dir),f=>fs.readFileSync(path.join(dir,f),'utf8'));}
 function create(dir,db){
  assert(!fs.existsSync(dir),'Destination already exists');
  const built=build(db);
@@ -80,5 +81,5 @@ function main(){
   console.log(JSON.stringify({changed:r.changes.length,source_sha256:m.source_sha256,delta:delta(current.manifest,m),status:'candidate_requires_full_validation'},null,2));
  }else throw Error('Usage: library-store.cjs init SOURCE NEW_DIR | export DIR NEW_JSON | inspect DIR | patch DIR PACKET NEW_DIR');
 }
-module.exports={build,create,load,planPatch,delta,fingerprint,snapshot};
+module.exports={build,create,load,loadFiles,planPatch,delta,fingerprint,snapshot};
 if(require.main===module)try{main();}catch(e){console.error(e.stack);process.exitCode=1;}

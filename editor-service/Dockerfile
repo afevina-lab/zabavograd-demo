@@ -5,7 +5,7 @@ ENV PYTHON=/opt/morph/bin/python
 WORKDIR /app
 COPY editor-service ./editor-service
 COPY public/editor/model.mjs ./public/editor/model.mjs
-COPY scripts/library-sqlite.cjs scripts/library-source.cjs scripts/library-toolkit.cjs scripts/library-request.cjs scripts/sound-index.cjs ./scripts/
+COPY scripts/library-sqlite.cjs scripts/library-source.cjs scripts/library-toolkit.cjs scripts/library-request.cjs scripts/sound-index.cjs scripts/library-store.cjs scripts/library-storage-audit.cjs scripts/library-storage-optimize.cjs ./scripts/
 ENV PORT=4181
 EXPOSE 4181
 CMD ["node", "editor-service/server.mjs"]

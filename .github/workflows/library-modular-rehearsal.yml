@@ -203,6 +203,8 @@ jobs:
       - name: Verify cached reads against real modular SQLite result
         run: |
           node --input-type=module -e 'import fs from "node:fs";import assert from "node:assert/strict";import {makeReadCache} from "./editor-service/modular-read-cache.mjs";const p=process.env.RUNNER_TEMP,raw=fs.readFileSync("outputs/library-v2.json"),c=makeReadCache({repo:"afevina-lab/zabavograd-demo",loadSnapshot:async()=>raw});try{const request=async()=>({sha:"a".repeat(40),commit:{tree:{sha:"b".repeat(40)}}});const q=JSON.parse(fs.readFileSync(p+"/remote-sqlite-request.json"));const actual=(await c.query(request,q)).report,expected=JSON.parse(fs.readFileSync(p+"/remote-sqlite-result.json"));assert.equal(actual.source_sha256,expected.source_sha256);assert.equal(actual.total,expected.total);assert.deepEqual(actual.rows,expected.rows);console.log("Cached query matches remote:",actual.total)}finally{c.close()}'
+      - name: Verify actual canonical module transport and cached query
+        run: LIBRARY_REAL_MODULES_TEST=1 node --test editor-service/modular-read-cache.test.mjs
       - name: Exercise exact-field inspection through remote query runner
         shell: bash
         run: |
