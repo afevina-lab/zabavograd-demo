@@ -74,7 +74,11 @@ jobs:
         run: |
           node --check editor-service/server.mjs
           node --check public/editor/modular-client.mjs
-          node --test editor-service/model.test.mjs editor-service/modular-bridge.test.mjs editor-service/modular-client.test.mjs editor-service/modular-read-cache.test.mjs
+          node --check public/editor/modular-ui.mjs
+          node --check public/editor/editor-connection.mjs
+          node --check public/editor/start.mjs
+          node --check public/editor/app.js
+          node --test editor-service/modular-ui.test.mjs editor-service/model.test.mjs editor-service/modular-bridge.test.mjs editor-service/modular-client.test.mjs editor-service/modular-read-cache.test.mjs
       - name: Check preserved catalogue and media regressions
         shell: bash
         run: |

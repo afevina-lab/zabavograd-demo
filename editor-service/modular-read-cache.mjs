@@ -38,7 +38,7 @@ function readQuery(snapshot,r){
   const db=new DatabaseSync(snapshot.file,{readOnly:true});
   try{const result=sqlite.query(db,v.sqlite,snapshot.sha);return {...result,rows:result.rows.map(({metadata_json,normalized,...row})=>row)};}finally{db.close();}
  }
- if(r.command==='inventory')return toolkit.inventory(snapshot.db,o.fields??[]);
+ if(r.command==='inventory')return {...toolkit.inventory(snapshot.db,o.fields??[]),category_paths:snapshot.db.categories.map(c=>c.path).sort((a,b)=>a.localeCompare(b,'ru')),kinds:[...new Set(snapshot.db.entries.map(e=>e.kind).filter(k=>typeof k==='string'))].sort()};
  require(!o.full,'Full cards disabled in cached API; request exact fields',400);
  require(r.command!=='find'||o.id||o.lemma,'Find requires ID or lemma',400);
  require(r.command!=='inspect'||o.id&&o.fields?.length,'Inspect requires ID and fields',400);
