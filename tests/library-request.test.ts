@@ -16,3 +16,12 @@ test('patch requires exact source fingerprint and bounded operations',()=>{
  assert.throws(()=>validate({version:1,mode:'preview',source_sha256:'a'.repeat(64),operations:Array(31).fill(op)}));
  assert.deepEqual(validate({version:1,mode:'candidate',source_sha256:'a'.repeat(64),operations:[op]}).packet,{version:1,operations:[op]});
 });
+
+test('SQLite request permits bounded filters and optional pagination fingerprint, rejects write or arbitrary SQL',()=>{
+ const req={version:1,mode:'query',command:'sqlite',source_sha256:'a'.repeat(64),options:{sounds:['к'],exclude_sounds:['р'],weight:100}};
+ assert.deepEqual(validate(req).sqlite,{sounds:['к'],exclude_sounds:['р'],weight:100,limit:20});
+ assert.throws(()=>validate({...req,options:{sql:'DROP TABLE word'}}));
+ assert.throws(()=>validate({...req,options:{limit:41}}));
+ assert.throws(()=>validate({...req,operations:[]}));
+ assert.throws(()=>validate({...req,source_sha256:'bad'}));
+});

@@ -2,6 +2,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const {spawnSync}=require('node:child_process');
+const os=require('node:os');
 const ROOT=path.resolve(__dirname,'..');
 const SOURCE=path.join(ROOT,'outputs/library-v2.json');
 const own=(x,k)=>Object.hasOwn(x,k);
@@ -16,6 +17,14 @@ function validate(r){
  keys(r,['version','mode','command','options','source_sha256','operations']);
  if(r.version!==1)throw Error('Request version 1 required');
  if(r.mode==='query'){
+  if(r.command==='sqlite'){
+   if(own(r,'operations'))throw Error('SQLite is read-only');
+   if(own(r,'source_sha256')&&(typeof r.source_sha256!=='string'||!/^[a-f0-9]{64}$/.test(r.source_sha256)))throw Error('Invalid source_sha256');
+   const o=r.options??{};keys(o,['id','lemma','prefix','weight','kind','pos','category','default_category','lexical_default','phonetic_status','morphology_status','has_image','stored_phonetics','syllable_type','sounds','exclude_sounds','position','cluster','min_occurrences','form_key','form_origin','relation_type','relation_status','limit','offset']);
+   if(own(o,'limit')&&(!Number.isInteger(o.limit)||o.limit<1||o.limit>40))throw Error('Invalid limit');
+   if(own(o,'offset')&&(!Number.isInteger(o.offset)||o.offset<0||o.offset>100000))throw Error('Invalid offset');
+   return {sqlite:{...o,limit:o.limit??20}};
+  }
   if(!QUERY.includes(r.command)||own(r,'operations')||own(r,'source_sha256'))throw Error('Invalid query request');
   const o=r.options??{};
   keys(o,r.command==='inventory'?['fields']:['id','lemma','weight','category','field','equals','fields','limit','offset','full']);
@@ -43,15 +52,37 @@ function invoke(args){
  return JSON.parse(r.stdout);
 }
 function write(file,obj){const body=JSON.stringify(obj,null,2)+'\n';if(Buffer.byteLength(body)>96*1024)throw Error('Result exceeds 96 KiB; reduce limit or projected fields');fs.writeFileSync(file,body,{flag:'wx'});}
+function sqliteQuery(options,expected){
+ const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'library-remote-sqlite-'));
+ try{
+  const db=path.join(tmp,'index.sqlite'),request=path.join(tmp,'query.json');
+  fs.writeFileSync(request,JSON.stringify(options),{flag:'wx'});
+  const call=(...args)=>{
+   const r=spawnSync(process.execPath,[path.join(ROOT,'scripts/library-sqlite.cjs'),...args],{cwd:ROOT,encoding:'utf8',maxBuffer:2*1024*1024,timeout:90000});
+   if(r.error||r.status!==0)throw Error('SQLite rejected request: '+String(r.error||r.stderr||r.stdout).slice(0,8192));
+   return JSON.parse(r.stdout);
+  };
+  const built=call('build',db);
+  if(built.source_sha256!==expected)throw Error('Source changed during index build');
+  const result=call('query',db,request);
+  if(result.source_sha256!==expected)throw Error('Source changed during search');
+  return {...result,rows:result.rows.map(({metadata_json,normalized,...row})=>row)};
+ }finally{fs.rmSync(tmp,{recursive:true,force:true});}
+}
 function run(requestFile,resultFile,allowCandidate=false){
- // The existing remote publisher writes a monolithic candidate. Until it is
- // switched to module candidates, fail closed rather than use a stale V2.
- require('./library-source.cjs').requireLegacyWrite();
+ if(fs.existsSync(resultFile))throw Error('Result already exists');
  const raw=fs.readFileSync(requestFile);
  if(raw.length>64*1024)throw Error('Request exceeds 64 KiB');
  const r=JSON.parse(raw),v=validate(r);
- const before=sha(fs.readFileSync(SOURCE));
- if(r.mode==='query'){const result=invoke(v.args);write(resultFile,{request_sha256:sha(raw),mode:r.mode,...result});return;}
+ const source=require('./library-source.cjs'),s=source.readSource(),before=s.sha256;
+ if(r.mode==='query'){
+  if(r.source_sha256&&r.source_sha256!==before)throw Error('Stale source_sha256; restart query');
+  const result=v.sqlite?sqliteQuery(v.sqlite,before):invoke(v.args);
+  if(result.source_sha256!==before||source.readSource().sha256!==before)throw Error('Source changed during query');
+  write(resultFile,{request_sha256:sha(raw),mode:r.mode,command:r.command,source_mode:s.mode,...result});return;
+ }
+ // Existing remote publisher still writes only monolithic candidates.
+ source.requireLegacyWrite();
  if(r.source_sha256!==before)throw Error('Stale source_sha256; make a fresh query and recheck expected values');
  if(r.mode==='candidate'&&!allowCandidate)throw Error('Candidate mode is disabled in this environment');
  // Request and output live in RUNNER_TEMP, never in the editable source tree.
@@ -69,7 +100,7 @@ function run(requestFile,resultFile,allowCandidate=false){
   write(resultFile,{...base,result_source_sha256:sha(fs.readFileSync(SOURCE))});
  }finally{fs.unlinkSync(packet);}
 }
-module.exports={validate};
+module.exports={validate,run};
 if(require.main===module)try{
  const [request,result,flag,...extra]=process.argv.slice(2);
  if(!request||!result||extra.length||(flag&&flag!=='--allow-candidate'))throw Error('Usage: node scripts/library-request.cjs REQUEST RESULT [--allow-candidate]');
