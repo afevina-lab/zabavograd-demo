@@ -1,0 +1,69 @@
+import {withReadyFonts} from './visual-html-bootstrap.mjs';
+import {captureStableFrame} from './settle-visual-frame.mjs';
+import assert from 'node:assert/strict';
+import {spawn} from 'node:child_process';
+import {mkdtempSync,readFileSync,existsSync,writeFileSync,mkdirSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join,resolve,extname,sep} from 'node:path';
+import {createServer} from 'node:http';
+
+export async function runBrowserProbe({theme='neutral',outputDirectory='ui-smoke/critical',rootDirectory='dist',warmFontsBeforeBoot=false}={},probe){
+const selectedTheme=theme;
+assert(['neutral','forest','space'].includes(selectedTheme),'Unknown UI_THEME');
+const themeIndex=['neutral','forest','space'].indexOf(selectedTheme);
+const root=resolve(rootDirectory);
+const output=resolve(outputDirectory);
+mkdirSync(output,{recursive:true});
+const contentTypes={'.html':'text/html','.js':'text/javascript','.css':'text/css','.webp':'image/webp','.png':'image/png','.svg':'image/svg+xml','.json':'application/json'};
+const server=createServer((req,res)=>{
+  const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
+  const file=resolve(root,'.'+pathname);
+  if(file!==root&&!file.startsWith(root+sep)){res.writeHead(403).end();return;}
+  const path=pathname==='/'?join(root,'index.html'):file;
+  try{let content=readFileSync(path);if(warmFontsBeforeBoot&&extname(path)==='.html')content=Buffer.from(withReadyFonts(content.toString('utf8')));res.writeHead(200,{'Content-Type':contentTypes[extname(path)]||'application/octet-stream','Cache-Control':'no-store'}).end(content)}catch{res.writeHead(404).end('Not found')}
+});
+await new Promise(r=>server.listen(0,'127.0.0.1',r));
+const origin=`http://127.0.0.1:${server.address().port}/`;
+const chrome=process.env.CHROME_BIN||['/usr/bin/google-chrome','/usr/bin/chromium','/usr/bin/chromium-browser'].find(existsSync);
+if(!chrome)throw Error('Chrome/Chromium not available');
+const profile=mkdtempSync(join(tmpdir(),'zabavograd-ui-'));
+const proc=spawn(chrome,['--headless=new','--no-sandbox','--disable-gpu','--disable-background-timer-throttling','--disable-renderer-backgrounding','--disable-backgrounding-occluded-windows','--disable-dev-shm-usage','--no-first-run','--no-proxy-server','--proxy-bypass-list=<-loopback>','--no-default-browser-check','--remote-allow-origins=*',`--user-data-dir=${profile}`,'--remote-debugging-port=0','--window-size=1440,900','about:blank'],{stdio:['ignore','pipe','pipe']});
+let stderr='';proc.stderr.on('data',d=>stderr+=String(d).slice(-2000));
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+let ws=null;
+try{
+  const active=join(profile,'DevToolsActivePort');
+  for(let i=0;i<450&&!existsSync(active);i++){if(proc.exitCode!==null)break;await sleep(100)}
+  assert(existsSync(active),'Chromium startup failed after retry window; exit='+proc.exitCode+'; stderr='+stderr);
+  const port=Number(readFileSync(active,'utf8').split('\n')[0]);
+  let targets=[];
+  for(let i=0;i<30;i++){targets=await fetch(`http://127.0.0.1:${port}/json/list`).then(r=>r.json());if(targets.some(x=>x.type==='page'))break;await sleep(100)}
+  const target=targets.find(x=>x.type==='page');assert(target?.webSocketDebuggerUrl);
+  ws=new WebSocket(target.webSocketDebuggerUrl);
+  await new Promise((resolve,reject)=>{ws.addEventListener('open',resolve,{once:true});ws.addEventListener('error',reject,{once:true})});
+  let id=1;
+  const pending=new Map();
+  ws.addEventListener('message',e=>{
+    let m;try{m=JSON.parse(e.data)}catch{return}
+    if(m.id&&pending.has(m.id)){const [ok,fail]=pending.get(m.id);pending.delete(m.id);m.error?fail(Error(JSON.stringify(m.error))):ok(m.result)}
+  });
+  const cmd=(method,params={})=>new Promise((ok,fail)=>{const current=id++;pending.set(current,[ok,fail]);ws.send(JSON.stringify({id:current,method,params}));setTimeout(()=>{if(pending.has(current)){pending.delete(current);fail(Error(method+' timeout'))}},12000).unref()});
+  const evaluate=async(expression)=>{
+    const out=await cmd('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});
+    if(out.exceptionDetails)throw Error(`Evaluate failed: ${out.exceptionDetails.text} ${JSON.stringify(out.exceptionDetails.exception||{})}`);
+    return out.result?.value;
+  };
+  await cmd('Page.enable');await cmd('Runtime.enable');await cmd('Network.enable');
+  const failures=[];
+  const exceptions=[];
+  ws.addEventListener('message',e=>{const m=JSON.parse(e.data);if(m.method==='Runtime.exceptionThrown')exceptions.push(m.params.exceptionDetails.text+': '+(m.params.exceptionDetails.exception?.description||''))});
+  ws.addEventListener('message',e=>{let m;try{m=JSON.parse(e.data)}catch{return}if(m.method==='Network.responseReceived'&&m.params?.response?.status>=400&&!m.params.response.url.endsWith('/favicon.ico'))failures.push(m.params.response.url+' HTTP '+m.params.response.status)});
+  async function until(predicate,timeoutMs=20000){let last;for(let i=0;i<timeoutMs/150;i++){try{last=await evaluate(predicate);if(last)return last;}catch{}await sleep(150)}throw Error('Timed out waiting for '+predicate.slice(0,150)+'; last='+last)}
+  async function screenshot(name,{quietMs=0}={}){const capture=async()=>(await cmd('Page.captureScreenshot',{format:'png',captureBeyondViewport:false})).data;const data=quietMs?await captureStableFrame({capture,sleep,quietMs}):await capture();writeFileSync(join(output,name+'.png'),Buffer.from(data,'base64'))}
+
+await probe({cmd,evaluate,until,screenshot,failures,origin,themeIndex});
+assert.deepEqual(failures,[],'Missing HTTP resources');
+assert.deepEqual(exceptions,[],'Uncaught browser exceptions');
+}finally{ws?.close();proc.kill('SIGTERM');server.close();await Promise.race([new Promise(r=>proc.once('exit',r)),sleep(1500)]);try{rmSync(profile,{recursive:true,force:true,maxRetries:5,retryDelay:100})}catch{}}
+
+}

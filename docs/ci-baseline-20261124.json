@@ -1,0 +1,716 @@
+[
+  {
+    "run": 45386181062,
+    "sha": "953797fdc6969bbd3ae939e970ea57a2a596c619",
+    "conclusion": "failure",
+    "job": "verify-and-publish",
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Checkout public visual source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 4.0
+      },
+      {
+        "name": "Node for Vite and TS",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Python for transparent card contours",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Install tools",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 9.0
+      },
+      {
+        "name": "Test gameplay and theme registry",
+        "status": "completed",
+        "conclusion": "failure",
+        "seconds": 0.0
+      },
+      {
+        "name": "Build local-base UI and check image alpha",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Check autonomous release",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Browser smoke test across games, themes, sizes",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Browser screenshots and report",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Checkout published gh-pages separately",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Build public-base UI from this very same source",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Replace only generated public UI and delete obsolete patches",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Verify real published site version",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Python for transparent card contours",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Node for Vite and TS",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Checkout public visual source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      }
+    ]
+  },
+  {
+    "run": 45265165102,
+    "sha": "c64dc2a0fc429a3bb4293c0e533de1b158d0f493",
+    "conclusion": "failure",
+    "job": "verify-and-publish",
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 2.0
+      },
+      {
+        "name": "Checkout public visual source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 10.0
+      },
+      {
+        "name": "Node for Vite and TS",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 5.0
+      },
+      {
+        "name": "Python for transparent card contours",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Install tools",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 17.0
+      },
+      {
+        "name": "Test gameplay and theme registry",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Build local-base UI and check image alpha",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 2.0
+      },
+      {
+        "name": "Check autonomous release",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Browser smoke test across games, themes, sizes",
+        "status": "completed",
+        "conclusion": "failure",
+        "seconds": 23.0
+      },
+      {
+        "name": "Browser screenshots and report",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Checkout published gh-pages separately",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Build public-base UI from this very same source",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Replace only generated public UI and delete obsolete patches",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Verify real published site version",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Python for transparent card contours",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Node for Vite and TS",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Checkout public visual source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      }
+    ]
+  },
+  {
+    "run": 45261838741,
+    "sha": "654353ac95123f79f23ce034291998c06de0cc21",
+    "conclusion": "success",
+    "job": "verify-and-publish",
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Checkout public visual source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Node for Vite and TS",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Python for transparent card contours",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Install tools",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 9.0
+      },
+      {
+        "name": "Test gameplay and theme registry",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 4.0
+      },
+      {
+        "name": "Build local-base UI and check image alpha",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 2.0
+      },
+      {
+        "name": "Check autonomous release",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Browser smoke test across games, themes, sizes",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 449.0
+      },
+      {
+        "name": "Browser screenshots and report",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 8.0
+      },
+      {
+        "name": "Checkout published gh-pages separately",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 4.0
+      },
+      {
+        "name": "Build public-base UI from this very same source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Replace only generated public UI and delete obsolete patches",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 2.0
+      },
+      {
+        "name": "Verify real published site version",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 31.0
+      },
+      {
+        "name": "Post Checkout published gh-pages separately",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Python for transparent card contours",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Post Node for Vite and TS",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Checkout public visual source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      }
+    ]
+  },
+  {
+    "run": 45261316780,
+    "sha": "6af1eea62f4e056c905b5d0bdc714edc9bd37015",
+    "conclusion": "success",
+    "job": "verify-and-publish",
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Checkout public visual source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Node for Vite and TS",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Python for transparent card contours",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Install tools",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 9.0
+      },
+      {
+        "name": "Test gameplay and theme registry",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Build local-base UI and check image alpha",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 2.0
+      },
+      {
+        "name": "Check autonomous release",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Browser smoke test across games, themes, sizes",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 417.0
+      },
+      {
+        "name": "Browser screenshots and report",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 8.0
+      },
+      {
+        "name": "Checkout published gh-pages separately",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Build public-base UI from this very same source",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Replace only generated public UI and delete obsolete patches",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Verify real published site version",
+        "status": "completed",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Python for transparent card contours",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Node for Vite and TS",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Checkout public visual source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      }
+    ]
+  },
+  {
+    "run": 45251725502,
+    "sha": "285f86f81f3089ff8af33ec32602e7a4c5146d64",
+    "conclusion": "success",
+    "job": "verify-and-publish",
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Checkout public visual source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 4.0
+      },
+      {
+        "name": "Node for Vite and TS",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Python for transparent card contours",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Install tools",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 9.0
+      },
+      {
+        "name": "Test gameplay and theme registry",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Build local-base UI and check image alpha",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 2.0
+      },
+      {
+        "name": "Check autonomous release",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Browser smoke test across games, themes, sizes",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 399.0
+      },
+      {
+        "name": "Browser screenshots and report",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 6.0
+      },
+      {
+        "name": "Checkout published gh-pages separately",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Build public-base UI from this very same source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Replace only generated public UI and delete obsolete patches",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Verify real published site version",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 46.0
+      },
+      {
+        "name": "Post Checkout published gh-pages separately",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Python for transparent card contours",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Node for Vite and TS",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Checkout public visual source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      }
+    ]
+  },
+  {
+    "run": 45243504668,
+    "sha": "8e4ebdd9c8d00c999f5b599420b42baff0916666",
+    "conclusion": "success",
+    "job": "verify-and-publish",
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Checkout public visual source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Node for Vite and TS",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Python for transparent card contours",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Install tools",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 10.0
+      },
+      {
+        "name": "Test gameplay and theme registry",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Build local-base UI and check image alpha",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 2.0
+      },
+      {
+        "name": "Check autonomous release",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Browser smoke test across games, themes, sizes",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 394.0
+      },
+      {
+        "name": "Browser screenshots and report",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 6.0
+      },
+      {
+        "name": "Checkout published gh-pages separately",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 4.0
+      },
+      {
+        "name": "Build public-base UI from this very same source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Replace only generated public UI and delete obsolete patches",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Verify real published site version",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 46.0
+      },
+      {
+        "name": "Post Checkout published gh-pages separately",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Python for transparent card contours",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Node for Vite and TS",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Checkout public visual source",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "seconds": 0.0
+      }
+    ]
+  }
+]

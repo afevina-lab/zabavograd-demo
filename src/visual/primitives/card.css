@@ -1,0 +1,15 @@
+.v-card,.v-card-surface{position:relative;width:100%;border:0;background:var(--zg-card-front-image) center/100% 100% no-repeat;aspect-ratio:3/4;min-width:0;padding:var(--v-card-padding,14px);color:var(--ui-text);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.v-card[aria-pressed=true]{outline:3px solid var(--ui-accent);outline-offset:2px}
+.v-artwork{width:100%;height:100%;min-height:0;object-fit:var(--v-art-fit,contain)}
+
+.v-card>span{flex:none;text-align:center;line-height:1.3;overflow-wrap:anywhere}
+
+
+
+.v-card:disabled{opacity:1;cursor:default}
+.v-card[data-card-key]{width:var(--v-memory-card-width);aspect-ratio:1;padding:0;perspective:1000px;overflow:visible}
+.v-card[data-motion-id]{width:var(--v-sort-card-size,var(--sort-card-size));height:var(--v-sort-card-size,var(--sort-card-size));aspect-ratio:1;padding:calc(var(--v-sort-card-size,var(--sort-card-size))*.105)}
+.v-card[data-match-card]{width:var(--matching-card-size,120px);aspect-ratio:1;flex:none}
+.v-conveyor-card{position:absolute;left:0;top:50%;translate:-50% -50%;width:clamp(120px,20vw,240px);aspect-ratio:1;flex:none}
+.v-matching-group>.v-card-surface{width:var(--matching-card-size,120px);aspect-ratio:1;flex:none}
+.v-card-surface[data-caption=true]{width:min(100%,var(--matching-caption-width,180px));min-height:var(--v-target);aspect-ratio:auto;padding:var(--v-space-2);background:none;border:0;border-image:none;box-shadow:none;text-align:center;line-height:1.4}

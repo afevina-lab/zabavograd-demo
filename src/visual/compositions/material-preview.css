@@ -1,0 +1,6 @@
+.v-material-preview{display:contents}
+.v-preview-meta{grid-area:actions;display:flex;align-items:center;justify-content:space-between;gap:var(--v-space-3);min-width:0}
+.v-preview-actions{display:flex;align-items:center;flex:none;gap:var(--v-space-2)}
+.v-preview-message{color:var(--ui-text)}
+
+.v-material-preview>.v-fit-copy{grid-area:words}

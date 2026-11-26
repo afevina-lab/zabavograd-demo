@@ -1,0 +1,2 @@
+.v-card-slot{display:inline-flex;align-items:center;justify-content:center;flex:none;width:var(--v-slot-size,96px);aspect-ratio:1;min-width:var(--v-target);min-height:var(--v-target);padding:var(--v-space-2);border:2px dashed var(--ui-outline);border-radius:14px;background:color-mix(in srgb,var(--ui-paper) 45%,transparent);color:var(--ui-deep);font:inherit;font-size:24px;line-height:1}
+.v-card-slot:not(:disabled):hover{background:var(--ui-pale);border-color:var(--ui-deep)}

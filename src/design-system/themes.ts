@@ -5,10 +5,11 @@ import {MOTION} from './motion.ts';
 export const THEME_IDS=['neutral','forest','space'] as const;
 export type ThemeId=typeof THEME_IDS[number];
 type Palette={accent:string;deep:string;pale:string;outline:string;text:string;paper:string;page:string;stageText:string};
+export type SceneLayout={minimumAspect:number;minimumScale:number;scaleHeightRatio:number};
 export type SceneSprite={id:string;src:string;motion:'none'|'float'|'breathe'|'twinkle'|'sway'|'fall'|'cloud';width:string;left?:string;right?:string;top?:string;bottom?:string;opacity?:number;durationMs?:number;delayMs?:number;origin?:string;spinMs?:number;layer?:number};
 type ThemeConfig={
  label:string;palette:Palette;skin:'blue'|'sage'|'lavender';toolbarArt:string|null;
- scene:{background:string|null;fill:string;motion:'drift'|'static';sprites:SceneSprite[];effects:{stars:number;comets:number}};
+ scene:{background:string|null;fill:string;motion:'drift'|'static';layout?:SceneLayout;sprites:SceneSprite[];effects:{stars:number;comets:number}};
  cards:{kind:'watercolor'|'procedural';back:string|null;front:string|null};
  sounds:Partial<Record<'flip'|'match',string>>;
 };
@@ -23,7 +24,7 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
   label:'Лес',
   palette:{accent:'#80b84c',deep:'#3f782f',pale:'#edf4e5',outline:'#7c9b72',text:'#304d38',paper:'#fffaf0',page:'#eef2e6',stageText:'#344a39'},
   skin:'sage',toolbarArt:'assets/themes/forest/header.webp',
-  scene:{background:'assets/themes/forest/forest_background.webp',fill:'#d5e7bf',motion:'static',sprites:[
+  scene:{background:'assets/themes/forest/forest_background.webp',fill:'#d5e7bf',motion:'static',layout:{minimumAspect:1.78,minimumScale:.68,scaleHeightRatio:1.3},sprites:[
    // One shared six-tree composition. Distances follow the actual scene height;
    // the SceneLayers viewport extends beyond narrow screens instead of shrinking.
    // Deep side trees provide canopy density without closing the central clearing.
@@ -130,6 +131,9 @@ export function themeVars(id:ThemeId,base='/'):CSSProperties{
   '--skin-tab':kit('tabs',`tab-${c}-inactive`),
   '--skin-tab-active':kit('tabs',`tab-${c}-active`),
   '--skin-chip':kit('chips',`chip-${c}-normal`),
+  '--skin-check-disabled':url('assets/theme-ui/checkboxes/checkbox-disabled.webp',base),
+  '--skin-toggle-off':url('assets/theme-ui/toggles/toggle-off.webp',base),
+  '--skin-slider-track':url('assets/theme-ui/sliders/slider-track-empty.webp',base),
   '--skin-check-empty':kit('checkboxes',`checkbox-${c}-empty`),
   '--skin-check-checked':kit('checkboxes',`checkbox-${c}-checked`),
   '--skin-radio-empty':kit('radio',`radio-${c}-empty`),
@@ -158,4 +162,6 @@ export const TRANSFORMATION_SCENES:Record<ThemeId,{kind:'flip'|'depth'|'rays';ba
  forest:{kind:'depth',frame:'assets/flashcards/tree-hollow.webp'},
  space:{kind:'rays',background:'assets/flashcards/space-laboratory.webp',back:'assets/flashcards/camera-back.webp',glass:'assets/flashcards/camera-glass.webp',frame:'assets/flashcards/camera-frame.webp'}
 };
+
+
 

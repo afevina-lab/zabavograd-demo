@@ -1,0 +1,300 @@
+[
+  {
+    "name": "build",
+    "conclusion": "success",
+    "seconds": 47.0,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 4.0
+      },
+      {
+        "name": "Run actions/checkout@v4",
+        "conclusion": "success",
+        "seconds": 10.0
+      },
+      {
+        "name": "Run actions/setup-node@v4",
+        "conclusion": "success",
+        "seconds": 5.0
+      },
+      {
+        "name": "Run actions/setup-python@v5",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Cache downloaded tools",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Select safe scope",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Install tools",
+        "conclusion": "success",
+        "seconds": 10.0
+      },
+      {
+        "name": "Mandatory checks (each once)",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Build once and validate offline resources",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Run actions/upload-artifact@v4",
+        "conclusion": "success",
+        "seconds": 4.0
+      },
+      {
+        "name": "Post Cache downloaded tools",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Post Run actions/setup-python@v5",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Run actions/setup-node@v4",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Run actions/checkout@v4",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0.0
+      }
+    ]
+  },
+  {
+    "name": "browser (space)",
+    "conclusion": "success",
+    "seconds": 211.0,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Run actions/checkout@v4",
+        "conclusion": "success",
+        "seconds": 4.0
+      },
+      {
+        "name": "Run actions/setup-node@v4",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Run actions/download-artifact@v4",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Verify artifact identity",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Critical routes and resources",
+        "conclusion": "success",
+        "seconds": 36.0
+      },
+      {
+        "name": "Targeted settings regressions",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Full settings and gameplay regressions",
+        "conclusion": "success",
+        "seconds": 161.0
+      },
+      {
+        "name": "Shared geometry once",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Run actions/upload-artifact@v4",
+        "conclusion": "success",
+        "seconds": 4.0
+      },
+      {
+        "name": "Post Run actions/setup-node@v4",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Run actions/checkout@v4",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0.0
+      }
+    ]
+  },
+  {
+    "name": "browser (forest)",
+    "conclusion": "success",
+    "seconds": 228.0,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 2.0
+      },
+      {
+        "name": "Run actions/checkout@v4",
+        "conclusion": "success",
+        "seconds": 6.0
+      },
+      {
+        "name": "Run actions/setup-node@v4",
+        "conclusion": "success",
+        "seconds": 2.0
+      },
+      {
+        "name": "Run actions/download-artifact@v4",
+        "conclusion": "success",
+        "seconds": 12.0
+      },
+      {
+        "name": "Verify artifact identity",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Critical routes and resources",
+        "conclusion": "success",
+        "seconds": 42.0
+      },
+      {
+        "name": "Targeted settings regressions",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Full settings and gameplay regressions",
+        "conclusion": "success",
+        "seconds": 156.0
+      },
+      {
+        "name": "Shared geometry once",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Run actions/upload-artifact@v4",
+        "conclusion": "success",
+        "seconds": 4.0
+      },
+      {
+        "name": "Post Run actions/setup-node@v4",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Run actions/checkout@v4",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0.0
+      }
+    ]
+  },
+  {
+    "name": "browser (neutral)",
+    "conclusion": "success",
+    "seconds": 209.0,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Run actions/checkout@v4",
+        "conclusion": "success",
+        "seconds": 4.0
+      },
+      {
+        "name": "Run actions/setup-node@v4",
+        "conclusion": "success",
+        "seconds": 1.0
+      },
+      {
+        "name": "Run actions/download-artifact@v4",
+        "conclusion": "success",
+        "seconds": 9.0
+      },
+      {
+        "name": "Verify artifact identity",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Critical routes and resources",
+        "conclusion": "success",
+        "seconds": 27.0
+      },
+      {
+        "name": "Targeted settings regressions",
+        "conclusion": "skipped",
+        "seconds": 0.0
+      },
+      {
+        "name": "Full settings and gameplay regressions",
+        "conclusion": "success",
+        "seconds": 157.0
+      },
+      {
+        "name": "Shared geometry once",
+        "conclusion": "success",
+        "seconds": 4.0
+      },
+      {
+        "name": "Run actions/upload-artifact@v4",
+        "conclusion": "success",
+        "seconds": 3.0
+      },
+      {
+        "name": "Post Run actions/setup-node@v4",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Post Run actions/checkout@v4",
+        "conclusion": "success",
+        "seconds": 0.0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0.0
+      }
+    ]
+  }
+]

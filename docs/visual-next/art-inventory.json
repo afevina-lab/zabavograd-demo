@@ -1,0 +1,2005 @@
+{
+  "schema": 1,
+  "scope": "Visual artwork, skins, icons, rewards and fonts. Dictionary artwork remains in its canonical image registry.",
+  "themes": {
+    "neutral": {
+      "config": {
+        "label": "Нейтральное",
+        "palette": {
+          "accent": "#9bb8d0",
+          "deep": "#4c6c8d",
+          "pale": "#edf3f8",
+          "outline": "#97a9b8",
+          "text": "#334559",
+          "paper": "#fffdf6",
+          "page": "#f4f0e8",
+          "stageText": "#5b5059"
+        },
+        "skin": "blue",
+        "toolbarArt": "assets/themes/neutral/header.webp",
+        "scene": {
+          "background": "assets/neutral/approved-paper-4k.webp",
+          "fill": "#f9f2e7",
+          "motion": "drift",
+          "sprites": [],
+          "effects": {
+            "stars": 0,
+            "comets": 0
+          }
+        },
+        "cards": {
+          "kind": "watercolor",
+          "back": "assets/themes/neutral/back.webp",
+          "front": "assets/themes/neutral/front.webp"
+        },
+        "sounds": {}
+      },
+      "variables": {
+        "--ui-accent": "#9bb8d0",
+        "--ui-deep": "#4c6c8d",
+        "--ui-pale": "#edf3f8",
+        "--ui-control-face": "linear-gradient(180deg,#fffefb 0%,#faf6ec 45%,#eee6d6 100%)",
+        "--ui-control-bottom": "#c9bfaa",
+        "--ui-control-shadow": "#514b3e1a",
+        "--ui-control-ambient": "#514b3e12",
+        "--ui-frame-inset": "13px",
+        "--ui-surface-texture": "none",
+        "--ui-frame-base": "#c6bdad",
+        "--ui-frame-light": "#f7f1e5",
+        "--ui-frame-dark": "#9a9183",
+        "--ui-frame-texture": "none",
+        "--ui-frame-fill": "linear-gradient(115deg,#fffaf0,#d7cdbb 35%,#f6efdf 60%,#c2b8a6)",
+        "--ui-frame-glint": "#fffdf7",
+        "--ui-frame-shadow": "#625a4933",
+        "--ui-inner-edge": "#c2b7a1",
+        "--ui-inner-shadow": "#6f604126",
+        "--ui-surface-glint": "#fffdf6",
+        "--ui-field-glint": "#ffffff",
+        "--ui-surface-edge": "#d5ccb9",
+        "--ui-field-edge": "#d4cbb7",
+        "--ui-tray-edge": "#d5ccb9",
+        "--ui-tray-shadow": "#ded5c3",
+        "--ui-well-shadow": "#57452a20",
+        "--ui-well-shadow-strong": "#57452a25",
+        "--ui-muted-text": "#687064",
+        "--ui-button-inset": "#53617118",
+        "--ui-button-inset-strong": "#33485e30",
+        "--ui-soft-shadow": "#514b3e10",
+        "--ui-icon-shadow": "#514b3e18",
+        "--ui-empty-edge": "#c4bba7",
+        "--ui-thumb-edge": "#b7a173",
+        "--ui-thumb-base": "#ad986d",
+        "--ui-highlight": "#e4c996",
+        "--ui-icon-surface": "#e4e9ee",
+        "--ui-setup-paper": "#f6f0e3",
+        "--ui-setup-field": "#fffdf6",
+        "--ui-required": "#c63b32",
+        "--ui-required-dark": "#86281f",
+        "--ui-outline": "#97a9b8",
+        "--ui-text": "#334559",
+        "--ui-paper": "#fffdf6",
+        "--zg-page": "#f4f0e8",
+        "--zg-stage-fill": "#f9f2e7",
+        "--zg-stage-text": "#5b5059",
+        "--zg-stage-image": "url(\"/assets/neutral/approved-paper-4k.webp\")",
+        "--zg-toolbar-image": "url(\"/assets/themes/neutral/header.webp\")",
+        "--zg-card-back-image": "url(\"/assets/themes/neutral/back.webp\")",
+        "--zg-card-front-image": "url(\"/assets/themes/neutral/front.webp\")",
+        "--zg-award-stars-image": "url(\"/assets/rewards/star.webp\")",
+        "--skin-panel": "url(\"/assets/theme-ui/panels/panel-blue-square-corners.webp\")",
+        "--skin-large": "url(\"/assets/theme-ui/buttons/large/button-large-blue-normal.webp\")",
+        "--skin-large-hover": "url(\"/assets/theme-ui/buttons/large/button-large-blue-hover.webp\")",
+        "--skin-large-pressed": "url(\"/assets/theme-ui/buttons/large/button-large-blue-pressed.webp\")",
+        "--skin-large-disabled": "url(\"/assets/theme-ui/buttons/large/button-large-blue-disabled.webp\")",
+        "--skin-square": "url(\"/assets/theme-ui/buttons/square/button-square-blue-normal.webp\")",
+        "--skin-square-hover": "url(\"/assets/theme-ui/buttons/square/button-square-blue-hover.webp\")",
+        "--skin-square-pressed": "url(\"/assets/theme-ui/buttons/square/button-square-blue-pressed.webp\")",
+        "--skin-pill": "url(\"/assets/theme-ui/buttons/pill/button-pill-blue-normal.webp\")",
+        "--skin-pill-hover": "url(\"/assets/theme-ui/buttons/pill/button-pill-blue-hover.webp\")",
+        "--skin-tab": "url(\"/assets/theme-ui/tabs/tab-blue-inactive.webp\")",
+        "--skin-tab-active": "url(\"/assets/theme-ui/tabs/tab-blue-active.webp\")",
+        "--skin-chip": "url(\"/assets/theme-ui/chips/chip-blue-normal.webp\")",
+        "--skin-check-empty": "url(\"/assets/theme-ui/checkboxes/checkbox-blue-empty.webp\")",
+        "--skin-check-checked": "url(\"/assets/theme-ui/checkboxes/checkbox-blue-checked.webp\")",
+        "--skin-radio-empty": "url(\"/assets/theme-ui/radio/radio-blue-empty.webp\")",
+        "--skin-radio-checked": "url(\"/assets/theme-ui/radio/radio-blue-checked.webp\")",
+        "--skin-toggle-on": "url(\"/assets/theme-ui/toggles/toggle-blue-on.webp\")",
+        "--skin-slider-thumb": "url(\"/assets/theme-ui/sliders/slider-thumb-blue-normal.webp\")",
+        "--zg-deal-duration": "5500ms",
+        "--zg-flip-duration": "400ms",
+        "--zg-mismatch-duration": "380ms",
+        "--zg-match-duration": "1650ms",
+        "--zg-result-duration": "2200ms",
+        "--zg-sort-wrong-duration": "600ms"
+      }
+    },
+    "forest": {
+      "config": {
+        "label": "Лес",
+        "palette": {
+          "accent": "#80b84c",
+          "deep": "#3f782f",
+          "pale": "#edf4e5",
+          "outline": "#7c9b72",
+          "text": "#304d38",
+          "paper": "#fffaf0",
+          "page": "#eef2e6",
+          "stageText": "#344a39"
+        },
+        "skin": "sage",
+        "toolbarArt": "assets/themes/forest/header.webp",
+        "scene": {
+          "background": "assets/themes/forest/forest_background.webp",
+          "fill": "#d5e7bf",
+          "motion": "static",
+          "sprites": [
+            {
+              "id": "tree-depth-left",
+              "src": "assets/themes/forest/forest_tree_2.webp",
+              "motion": "sway",
+              "width": "min(66cqh,39cqw)",
+              "left": "-9%",
+              "bottom": "31%",
+              "opacity": 0.78,
+              "layer": 0,
+              "durationMs": 18000,
+              "origin": "50% 94%"
+            },
+            {
+              "id": "tree-depth-right",
+              "src": "assets/themes/forest/forest_tree_1.webp",
+              "motion": "sway",
+              "width": "min(65cqh,39cqw)",
+              "right": "-8%",
+              "bottom": "32%",
+              "opacity": 0.78,
+              "layer": 0,
+              "durationMs": 19000,
+              "origin": "50% 94%"
+            },
+            {
+              "id": "tree-far-left",
+              "src": "assets/themes/forest/forest_tree_1.webp",
+              "motion": "sway",
+              "width": "min(76cqh,43cqw)",
+              "left": "11%",
+              "bottom": "23%",
+              "opacity": 1,
+              "layer": 1,
+              "durationMs": 15000,
+              "origin": "50% 94%"
+            },
+            {
+              "id": "tree-far-right",
+              "src": "assets/themes/forest/forest_tree_2.webp",
+              "motion": "sway",
+              "width": "min(76cqh,43cqw)",
+              "right": "16%",
+              "bottom": "18%",
+              "opacity": 1,
+              "layer": 1,
+              "durationMs": 17000,
+              "origin": "50% 94%"
+            },
+            {
+              "id": "bush-back-left",
+              "src": "assets/themes/forest/forest_bush.webp",
+              "motion": "breathe",
+              "width": "min(25cqh,15cqw)",
+              "left": "0%",
+              "bottom": "14%",
+              "opacity": 0.9,
+              "layer": 2,
+              "durationMs": 28000
+            },
+            {
+              "id": "bush-back-middle",
+              "src": "assets/themes/forest/forest_bush.webp",
+              "motion": "breathe",
+              "width": "min(8cqh,5cqw)",
+              "left": "35%",
+              "bottom": "41%",
+              "opacity": 0.85,
+              "layer": 0,
+              "durationMs": 30000
+            },
+            {
+              "id": "flowers-right",
+              "src": "assets/themes/forest/forest_flower_patch.webp",
+              "motion": "none",
+              "width": "min(49cqh,30cqw)",
+              "right": "17%",
+              "bottom": "8%",
+              "opacity": 1,
+              "layer": 5
+            },
+            {
+              "id": "tree-left",
+              "src": "assets/themes/forest/forest_tree_2.webp",
+              "motion": "sway",
+              "width": "min(102cqh,56cqw)",
+              "left": "-11%",
+              "bottom": "11%",
+              "opacity": 1,
+              "layer": 4,
+              "durationMs": 10500,
+              "origin": "50% 94%"
+            },
+            {
+              "id": "tree-right",
+              "src": "assets/themes/forest/forest_tree_1.webp",
+              "motion": "sway",
+              "width": "min(100cqh,56cqw)",
+              "right": "-10%",
+              "bottom": "11%",
+              "opacity": 1,
+              "layer": 4,
+              "durationMs": 12400,
+              "delayMs": -4500,
+              "origin": "50% 94%"
+            },
+            {
+              "id": "flowers-left",
+              "src": "assets/themes/forest/forest_flower_patch.webp",
+              "motion": "none",
+              "width": "min(48cqh,29cqw)",
+              "left": "5%",
+              "bottom": "6%",
+              "opacity": 1,
+              "layer": 5
+            },
+            {
+              "id": "bush-front-right",
+              "src": "assets/themes/forest/forest_bush.webp",
+              "motion": "breathe",
+              "width": "min(34cqh,20cqw)",
+              "right": "1%",
+              "bottom": "6%",
+              "opacity": 1,
+              "layer": 5,
+              "durationMs": 26000
+            },
+            {
+              "id": "leaf-birch",
+              "src": "assets/themes/forest/forest_leaf_birch.webp",
+              "motion": "fall",
+              "width": "clamp(26px,3vw,44px)",
+              "left": "13%",
+              "top": "-12%",
+              "opacity": 0.8,
+              "durationMs": 17000,
+              "delayMs": -2200
+            },
+            {
+              "id": "leaf-oak",
+              "src": "assets/themes/forest/forest_leaf_oak.webp",
+              "motion": "fall",
+              "width": "clamp(30px,3.2vw,49px)",
+              "left": "69%",
+              "top": "-11%",
+              "opacity": 0.85,
+              "durationMs": 21500,
+              "delayMs": -9100
+            },
+            {
+              "id": "leaf-oval",
+              "src": "assets/themes/forest/forest_leaf_oval.webp",
+              "motion": "fall",
+              "width": "clamp(25px,2.8vw,43px)",
+              "left": "42%",
+              "top": "-13%",
+              "opacity": 0.8,
+              "durationMs": 18800,
+              "delayMs": -13900
+            }
+          ],
+          "effects": {
+            "stars": 0,
+            "comets": 0
+          }
+        },
+        "cards": {
+          "kind": "watercolor",
+          "back": "assets/themes/forest/back.webp",
+          "front": "assets/themes/forest/front.webp"
+        },
+        "sounds": {}
+      },
+      "variables": {
+        "--ui-accent": "#80b84c",
+        "--ui-deep": "#3f782f",
+        "--ui-pale": "#edf4e5",
+        "--ui-control-face": "linear-gradient(180deg,#fffdf5 0%,#fff4dc 44%,#f1dfb9 100%)",
+        "--ui-control-bottom": "#c6ad82",
+        "--ui-control-shadow": "#65451d24",
+        "--ui-control-ambient": "#65451d18",
+        "--ui-frame-inset": "13px",
+        "--ui-surface-texture": "none",
+        "--ui-frame-base": "#c28a48",
+        "--ui-frame-light": "#e7bc7d",
+        "--ui-frame-dark": "#79502c",
+        "--ui-frame-texture": "repeating-linear-gradient(2deg,transparent 0 5px,#6d3e1710 6px,transparent 7px 13px)",
+        "--ui-frame-fill": "linear-gradient(100deg,var(--ui-frame-light),var(--ui-frame-base) 24%,var(--ui-frame-light) 54%,var(--ui-frame-base))",
+        "--ui-frame-glint": "#fff6d6",
+        "--ui-frame-shadow": "#53351f55",
+        "--ui-inner-edge": "#a97b43",
+        "--ui-inner-shadow": "#60361640",
+        "--ui-surface-glint": "#fff5df",
+        "--ui-field-glint": "#fffdf0",
+        "--ui-surface-edge": "#cfb68c",
+        "--ui-field-edge": "#d2bb8d",
+        "--ui-tray-edge": "#cbb58a",
+        "--ui-tray-shadow": "#d5c399",
+        "--ui-well-shadow": "#57452a20",
+        "--ui-well-shadow-strong": "#57452a25",
+        "--ui-muted-text": "#8b8f81",
+        "--ui-button-inset": "#263c2220",
+        "--ui-button-inset-strong": "#17331a40",
+        "--ui-soft-shadow": "#49382012",
+        "--ui-icon-shadow": "#49382020",
+        "--ui-empty-edge": "#ba9d70",
+        "--ui-thumb-edge": "#ba8b2c",
+        "--ui-thumb-base": "#b58a2c",
+        "--ui-highlight": "#efba3e",
+        "--ui-icon-surface": "#f3d6b0",
+        "--ui-setup-paper": "#f5e9cc",
+        "--ui-setup-field": "#fff5df",
+        "--ui-required": "#c63b32",
+        "--ui-required-dark": "#86281f",
+        "--ui-outline": "#7c9b72",
+        "--ui-text": "#304d38",
+        "--ui-paper": "#fffaf0",
+        "--zg-page": "#eef2e6",
+        "--zg-stage-fill": "#d5e7bf",
+        "--zg-stage-text": "#344a39",
+        "--zg-stage-image": "url(\"/assets/themes/forest/forest_background.webp\")",
+        "--zg-toolbar-image": "url(\"/assets/themes/forest/header.webp\")",
+        "--zg-card-back-image": "url(\"/assets/themes/forest/back.webp\")",
+        "--zg-card-front-image": "url(\"/assets/themes/forest/front.webp\")",
+        "--zg-award-stars-image": "url(\"/assets/rewards/star.webp\")",
+        "--skin-panel": "url(\"/assets/theme-ui/panels/panel-sage-square-corners.webp\")",
+        "--skin-large": "url(\"/assets/theme-ui/buttons/large/button-large-sage-normal.webp\")",
+        "--skin-large-hover": "url(\"/assets/theme-ui/buttons/large/button-large-sage-hover.webp\")",
+        "--skin-large-pressed": "url(\"/assets/theme-ui/buttons/large/button-large-sage-pressed.webp\")",
+        "--skin-large-disabled": "url(\"/assets/theme-ui/buttons/large/button-large-sage-disabled.webp\")",
+        "--skin-square": "url(\"/assets/theme-ui/buttons/square/button-square-sage-normal.webp\")",
+        "--skin-square-hover": "url(\"/assets/theme-ui/buttons/square/button-square-sage-hover.webp\")",
+        "--skin-square-pressed": "url(\"/assets/theme-ui/buttons/square/button-square-sage-pressed.webp\")",
+        "--skin-pill": "url(\"/assets/theme-ui/buttons/pill/button-pill-sage-normal.webp\")",
+        "--skin-pill-hover": "url(\"/assets/theme-ui/buttons/pill/button-pill-sage-hover.webp\")",
+        "--skin-tab": "url(\"/assets/theme-ui/tabs/tab-sage-inactive.webp\")",
+        "--skin-tab-active": "url(\"/assets/theme-ui/tabs/tab-sage-active.webp\")",
+        "--skin-chip": "url(\"/assets/theme-ui/chips/chip-sage-normal.webp\")",
+        "--skin-check-empty": "url(\"/assets/theme-ui/checkboxes/checkbox-sage-empty.webp\")",
+        "--skin-check-checked": "url(\"/assets/theme-ui/checkboxes/checkbox-sage-checked.webp\")",
+        "--skin-radio-empty": "url(\"/assets/theme-ui/radio/radio-sage-empty.webp\")",
+        "--skin-radio-checked": "url(\"/assets/theme-ui/radio/radio-sage-checked.webp\")",
+        "--skin-toggle-on": "url(\"/assets/theme-ui/toggles/toggle-sage-on.webp\")",
+        "--skin-slider-thumb": "url(\"/assets/theme-ui/sliders/slider-thumb-sage-normal.webp\")",
+        "--zg-deal-duration": "5500ms",
+        "--zg-flip-duration": "400ms",
+        "--zg-mismatch-duration": "380ms",
+        "--zg-match-duration": "1650ms",
+        "--zg-result-duration": "2200ms",
+        "--zg-sort-wrong-duration": "600ms"
+      }
+    },
+    "space": {
+      "config": {
+        "label": "Космос",
+        "palette": {
+          "accent": "#93a7ed",
+          "deep": "#5050a8",
+          "pale": "#e0e6fb",
+          "outline": "#8b9cbf",
+          "text": "#29365a",
+          "paper": "#f5f8ff",
+          "page": "#111b35",
+          "stageText": "#f0f5ff"
+        },
+        "skin": "lavender",
+        "toolbarArt": "assets/themes/space/header.webp",
+        "scene": {
+          "background": "assets/space/background.webp",
+          "fill": "#1c2340",
+          "motion": "drift",
+          "sprites": [
+            {
+              "id": "planet-blue",
+              "src": "assets/space/planet-blue.webp",
+              "motion": "float",
+              "width": "min(120cqh,82cqw)",
+              "left": "-30cqh",
+              "bottom": "-20cqh",
+              "opacity": 0.9,
+              "durationMs": 24000,
+              "spinMs": 160000
+            },
+            {
+              "id": "planet-rings",
+              "src": "assets/space/planet.webp",
+              "motion": "float",
+              "width": "min(78cqh,52cqw)",
+              "right": "2%",
+              "top": "4%",
+              "opacity": 0.9,
+              "durationMs": 30000,
+              "delayMs": -13000
+            },
+            {
+              "id": "purple-nebula",
+              "src": "assets/space/nebula-purple.webp",
+              "motion": "cloud",
+              "layer": 2,
+              "width": "55%",
+              "left": "0%",
+              "top": "0%",
+              "opacity": 0.12,
+              "durationMs": 18000
+            },
+            {
+              "id": "blue-nebula",
+              "src": "assets/space/nebula-blue.webp",
+              "motion": "breathe",
+              "width": "45%",
+              "right": "0%",
+              "bottom": "0%",
+              "opacity": 0.12,
+              "durationMs": 22000
+            },
+            {
+              "id": "star-0",
+              "src": "assets/space/star.webp",
+              "motion": "twinkle",
+              "width": "42px",
+              "left": "8%",
+              "top": "15%",
+              "opacity": 0.2,
+              "durationMs": 14000,
+              "delayMs": 0
+            },
+            {
+              "id": "star-1",
+              "src": "assets/space/star.webp",
+              "motion": "twinkle",
+              "width": "42px",
+              "left": "21%",
+              "top": "38%",
+              "opacity": 0.2,
+              "durationMs": 14000,
+              "delayMs": 2000
+            },
+            {
+              "id": "star-2",
+              "src": "assets/space/star.webp",
+              "motion": "twinkle",
+              "width": "42px",
+              "left": "34%",
+              "top": "61%",
+              "opacity": 0.2,
+              "durationMs": 14000,
+              "delayMs": 4000
+            },
+            {
+              "id": "star-3",
+              "src": "assets/space/star.webp",
+              "motion": "twinkle",
+              "width": "42px",
+              "left": "47%",
+              "top": "84%",
+              "opacity": 0.2,
+              "durationMs": 14000,
+              "delayMs": 6000
+            },
+            {
+              "id": "star-4",
+              "src": "assets/space/star.webp",
+              "motion": "twinkle",
+              "width": "42px",
+              "left": "60%",
+              "top": "37%",
+              "opacity": 0.2,
+              "durationMs": 14000,
+              "delayMs": 8000
+            },
+            {
+              "id": "star-5",
+              "src": "assets/space/star.webp",
+              "motion": "twinkle",
+              "width": "42px",
+              "left": "73%",
+              "top": "60%",
+              "opacity": 0.2,
+              "durationMs": 14000,
+              "delayMs": 10000
+            },
+            {
+              "id": "star-6",
+              "src": "assets/space/star.webp",
+              "motion": "twinkle",
+              "width": "42px",
+              "left": "86%",
+              "top": "83%",
+              "opacity": 0.2,
+              "durationMs": 14000,
+              "delayMs": 12000
+            }
+          ],
+          "effects": {
+            "stars": 30,
+            "comets": 2
+          }
+        },
+        "cards": {
+          "kind": "watercolor",
+          "back": "assets/themes/space/back.webp",
+          "front": "assets/themes/space/front.webp"
+        },
+        "sounds": {}
+      },
+      "variables": {
+        "--ui-accent": "#93a7ed",
+        "--ui-deep": "#5050a8",
+        "--ui-pale": "#e0e6fb",
+        "--ui-control-face": "linear-gradient(180deg,#ffffff 0%,#f2f6ff 38%,#d9e3f4 100%)",
+        "--ui-control-bottom": "#9aaccc",
+        "--ui-control-shadow": "#1b30502d",
+        "--ui-control-ambient": "#1b30501e",
+        "--ui-frame-inset": "13px",
+        "--ui-surface-texture": "none",
+        "--ui-frame-base": "#8397b1",
+        "--ui-frame-light": "#e8f2ff",
+        "--ui-frame-dark": "#273c56",
+        "--ui-frame-texture": "repeating-linear-gradient(0deg,#ffffff10 0 1px,transparent 1px 5px)",
+        "--ui-frame-fill": "linear-gradient(105deg,#f9fcff 0%,#adbed4 10%,#617a98 22%,#dfe9f5 35%,#ffffff 44%,#7d93af 58%,#465e7e 73%,#dce8f5 86%,#98adc6 100%)",
+        "--ui-frame-glint": "#ffffff",
+        "--ui-frame-shadow": "#08162966",
+        "--ui-inner-edge": "#647e9c",
+        "--ui-inner-shadow": "#182c4d60",
+        "--ui-surface-glint": "#ffffff",
+        "--ui-field-glint": "#ffffff",
+        "--ui-surface-edge": "#93a6c0",
+        "--ui-field-edge": "#9aacc3",
+        "--ui-tray-edge": "#9aacc3",
+        "--ui-tray-shadow": "#b4c3d7",
+        "--ui-well-shadow": "#1b355028",
+        "--ui-well-shadow-strong": "#1b355030",
+        "--ui-muted-text": "#626f8e",
+        "--ui-button-inset": "#1a2d4c24",
+        "--ui-button-inset-strong": "#1c245540",
+        "--ui-soft-shadow": "#19375418",
+        "--ui-icon-shadow": "#19375422",
+        "--ui-empty-edge": "#91a8c4",
+        "--ui-thumb-edge": "#268bac",
+        "--ui-thumb-base": "#287b9b",
+        "--ui-highlight": "#64d1ed",
+        "--ui-icon-surface": "#ccd7ff",
+        "--ui-setup-paper": "#e4ebf6",
+        "--ui-setup-field": "#f7faff",
+        "--ui-required": "#c63b32",
+        "--ui-required-dark": "#86281f",
+        "--ui-outline": "#8b9cbf",
+        "--ui-text": "#29365a",
+        "--ui-paper": "#f5f8ff",
+        "--zg-page": "#111b35",
+        "--zg-stage-fill": "#1c2340",
+        "--zg-stage-text": "#f0f5ff",
+        "--zg-stage-image": "url(\"/assets/space/background.webp\")",
+        "--zg-toolbar-image": "url(\"/assets/themes/space/header.webp\")",
+        "--zg-card-back-image": "url(\"/assets/themes/space/back.webp\")",
+        "--zg-card-front-image": "url(\"/assets/themes/space/front.webp\")",
+        "--zg-award-stars-image": "url(\"/assets/rewards/star.webp\")",
+        "--skin-panel": "url(\"/assets/theme-ui/panels/panel-lavender-square-corners.webp\")",
+        "--skin-large": "url(\"/assets/theme-ui/buttons/large/button-large-lavender-normal.webp\")",
+        "--skin-large-hover": "url(\"/assets/theme-ui/buttons/large/button-large-lavender-hover.webp\")",
+        "--skin-large-pressed": "url(\"/assets/theme-ui/buttons/large/button-large-lavender-pressed.webp\")",
+        "--skin-large-disabled": "url(\"/assets/theme-ui/buttons/large/button-large-lavender-disabled.webp\")",
+        "--skin-square": "url(\"/assets/theme-ui/buttons/square/button-square-lavender-normal.webp\")",
+        "--skin-square-hover": "url(\"/assets/theme-ui/buttons/square/button-square-lavender-hover.webp\")",
+        "--skin-square-pressed": "url(\"/assets/theme-ui/buttons/square/button-square-lavender-pressed.webp\")",
+        "--skin-pill": "url(\"/assets/theme-ui/buttons/pill/button-pill-lavender-normal.webp\")",
+        "--skin-pill-hover": "url(\"/assets/theme-ui/buttons/pill/button-pill-lavender-hover.webp\")",
+        "--skin-tab": "url(\"/assets/theme-ui/tabs/tab-lavender-inactive.webp\")",
+        "--skin-tab-active": "url(\"/assets/theme-ui/tabs/tab-lavender-active.webp\")",
+        "--skin-chip": "url(\"/assets/theme-ui/chips/chip-lavender-normal.webp\")",
+        "--skin-check-empty": "url(\"/assets/theme-ui/checkboxes/checkbox-lavender-empty.webp\")",
+        "--skin-check-checked": "url(\"/assets/theme-ui/checkboxes/checkbox-lavender-checked.webp\")",
+        "--skin-radio-empty": "url(\"/assets/theme-ui/radio/radio-lavender-empty.webp\")",
+        "--skin-radio-checked": "url(\"/assets/theme-ui/radio/radio-lavender-checked.webp\")",
+        "--skin-toggle-on": "url(\"/assets/theme-ui/toggles/toggle-lavender-on.webp\")",
+        "--skin-slider-thumb": "url(\"/assets/theme-ui/sliders/slider-thumb-lavender-normal.webp\")",
+        "--zg-deal-duration": "5500ms",
+        "--zg-flip-duration": "400ms",
+        "--zg-mismatch-duration": "380ms",
+        "--zg-match-duration": "1650ms",
+        "--zg-result-duration": "2200ms",
+        "--zg-sort-wrong-duration": "600ms"
+      }
+    }
+  },
+  "motion": {
+    "lifeLossMs": 560,
+    "dealMs": 5500,
+    "dealStaggerMs": 700,
+    "flipMs": 400,
+    "flipBackMs": 1100,
+    "mismatchMs": 380,
+    "matchMs": 1650,
+    "resultMs": 2200,
+    "awardDelayMs": 2220,
+    "awardStaggerMs": 190,
+    "layoutMs": 420,
+    "conveyorFeedbackMs": 650,
+    "sortVerdictMs": 420,
+    "sortRetryMs": 650,
+    "sortWrongMs": 600,
+    "layoutEasing": "cubic-bezier(.2,.8,.2,1)"
+  },
+  "assets": [
+    {
+      "file": "public/assets/flashcards/camera-back.webp",
+      "bytes": 59444,
+      "sha256": "979b9ed271058315771505261c5099de1726e01edf40bafc9b4af9f2e7f10ec5"
+    },
+    {
+      "file": "public/assets/flashcards/camera-frame.webp",
+      "bytes": 219848,
+      "sha256": "8381247c8a374a85259ce74c4272f4ae7e55dbaa08190a485e49f92792288e5b"
+    },
+    {
+      "file": "public/assets/flashcards/camera-glass.webp",
+      "bytes": 322254,
+      "sha256": "30bce882748a5be37b359c72ff5b3bce3a3c6765a395e75009023f150c253cf1"
+    },
+    {
+      "file": "public/assets/flashcards/space-laboratory.webp",
+      "bytes": 192504,
+      "sha256": "c3cc2c0ec979458d1236759816df12b501c168b46da207c1adb03f4bda409d3c"
+    },
+    {
+      "file": "public/assets/flashcards/tree-hollow.webp",
+      "bytes": 287034,
+      "sha256": "328bbca0171cd2a0b7de0d43f9f7bb1cfd8524fd74bced82c9819c50f5ff27ed"
+    },
+    {
+      "file": "public/assets/fonts/Akt-LICENSE.txt",
+      "bytes": 4393,
+      "sha256": "7f18ec1ebb6b50e3ed0f74b2c61f25b8d7cd69e43f4de66e991bcfd3c419a8bb"
+    },
+    {
+      "file": "public/assets/fonts/Akt.ttf",
+      "bytes": 353816,
+      "sha256": "3da5013ec56bf5a83cccd1d5601b89fa58a6cda5b3fd0e5f8d18ee3690272c05"
+    },
+    {
+      "file": "public/assets/fonts/Londrina-LICENSE.txt",
+      "bytes": 4393,
+      "sha256": "7f18ec1ebb6b50e3ed0f74b2c61f25b8d7cd69e43f4de66e991bcfd3c419a8bb"
+    },
+    {
+      "file": "public/assets/fonts/Londrina.ttf",
+      "bytes": 108996,
+      "sha256": "14d3f1ad2662111b2f580c4bfdd8350a37d901fcdbd4aaf26dd96075167dca68"
+    },
+    {
+      "file": "public/assets/icons-new/arrow-right.svg",
+      "bytes": 690,
+      "sha256": "050a1b2276f399cd7e4db2e9a2ebe64c9a313a612c8c9eaf606c5e0503dd596d"
+    },
+    {
+      "file": "public/assets/icons-new/cross.svg",
+      "bytes": 570,
+      "sha256": "b43e3cd16112f44949d2290a4f2164c37a882a627bda27f9839af125c0d34561"
+    },
+    {
+      "file": "public/assets/icons-new/expand.svg",
+      "bytes": 1884,
+      "sha256": "76cf836b19c1b670e79a094aef372a923a7cdbe6d6100f705b29b0be2b647ea8"
+    },
+    {
+      "file": "public/assets/icons-new/heart.svg",
+      "bytes": 320,
+      "sha256": "13fe221c9d2ab03f82918b5f5d8a4841687bb2baa4adb4e786468f45ad4bee29"
+    },
+    {
+      "file": "public/assets/icons-new/house.svg",
+      "bytes": 649,
+      "sha256": "c7aa73fa2320516681c00d2e66d77c92530652f84fdbecbfb649f807a3c30cf4"
+    },
+    {
+      "file": "public/assets/icons-new/light.svg",
+      "bytes": 583,
+      "sha256": "3418ae74cbc2440b0b7538532a5d429998843a9494bc72f1063b867cefd7dc6f"
+    },
+    {
+      "file": "public/assets/icons-new/mute.svg",
+      "bytes": 963,
+      "sha256": "e8a616d13d5743a41aca09b3f6627d5ae6b85c09eabe6652b044cd1e1e6a2dfb"
+    },
+    {
+      "file": "public/assets/icons-new/pause.svg",
+      "bytes": 253,
+      "sha256": "d87a0dfaa925136bddde544eaf63fb63cd2d5b462af39ed325d6e0ac901b468f"
+    },
+    {
+      "file": "public/assets/icons-new/play.svg",
+      "bytes": 377,
+      "sha256": "211f9006965721c5e710d7977d60ee45e1aaf495fc1a92db4e307c3c49ca1502"
+    },
+    {
+      "file": "public/assets/icons-new/question-mark.svg",
+      "bytes": 635,
+      "sha256": "1103f5083d504c0f7f6ccf46fdf356d8f531f8f1d1aa905192893e8f4d078eb3"
+    },
+    {
+      "file": "public/assets/icons-new/refresh.svg",
+      "bytes": 638,
+      "sha256": "4487ba61cc1ff2363fd04a0d06d0179bcb8e67e1f0932d3898d76fea6e11762e"
+    },
+    {
+      "file": "public/assets/icons-new/save.svg",
+      "bytes": 615,
+      "sha256": "9e82b10b4bc54e395974c23c3df4cf46f1d729a65d77b2745666479ede86a678"
+    },
+    {
+      "file": "public/assets/icons-new/settings.svg",
+      "bytes": 601,
+      "sha256": "c3d4f44adcdf6987ac72c4424f73f00d42cd860dab8e0c5e99390d64a31ff9fb"
+    },
+    {
+      "file": "public/assets/icons-new/star.svg",
+      "bytes": 1318,
+      "sha256": "a7e602eff9a6387a719d189a0d15f8a64fc147baa6c29acb688c87137c62be39"
+    },
+    {
+      "file": "public/assets/icons-new/tick.svg",
+      "bytes": 293,
+      "sha256": "ce41703f047c25a9fd54cdf13f538da4912af85b58b5a0992aa222694cc15f7b"
+    },
+    {
+      "file": "public/assets/icons-new/trash.svg",
+      "bytes": 701,
+      "sha256": "b4386b6ade214b0ea7add951f5adee2c0343e9b41473893ad424e0acae79a715"
+    },
+    {
+      "file": "public/assets/icons-new/volume.svg",
+      "bytes": 974,
+      "sha256": "6f4eb9cb7a4ba9d49a46a6d9caad4287ce124e67fb4899cb370640817f00974d"
+    },
+    {
+      "file": "public/assets/neutral/approved-paper-4k.webp",
+      "bytes": 455478,
+      "sha256": "6f4b6438cc6fe15653ec83421556d504361fb815d8fc77388762e6873a33dc0e"
+    },
+    {
+      "file": "public/assets/neutral/approved-stars.webp",
+      "bytes": 324812,
+      "sha256": "3904d8f581fc2f0d2d9f727aefea07c74a5ea2d58c2af5a70a53987629b0cfad"
+    },
+    {
+      "file": "public/assets/neutral/approved-ui.webp",
+      "bytes": 161134,
+      "sha256": "299d6f98854ece02d9d4a48918b2502aba3e7da120148a8dcd5b6a78b1aa3594"
+    },
+    {
+      "file": "public/assets/neutral/background-paper-2560.webp",
+      "bytes": 48676,
+      "sha256": "78545122bd001bda3b4cc464ab0dbb0695f94958203237bd2bac850be409c1ad"
+    },
+    {
+      "file": "public/assets/neutral/background-v2.svg",
+      "bytes": 1491,
+      "sha256": "acd64a1c2062482e97aa0fd5c75afb8010c7d92f8c09e15dbc8add6d72d90dc6"
+    },
+    {
+      "file": "public/assets/neutral/background-v2.webp",
+      "bytes": 12446,
+      "sha256": "07af0439f95aa26fcae9a0a4bee7ead25ce7f85babeb550eb0252a8671c2ad5a"
+    },
+    {
+      "file": "public/assets/neutral/paper.svg",
+      "bytes": 440,
+      "sha256": "244874ad9eaf5484c8639ada7bebfd6da1b38907ac351f2f203ce3d29a727efc"
+    },
+    {
+      "file": "public/assets/rewards/heart-half.webp",
+      "bytes": 32806,
+      "sha256": "60aa933026e24eab8435c96dec287718b4ab0d6343bfcb70abe46ccd068ced3b"
+    },
+    {
+      "file": "public/assets/rewards/heart.webp",
+      "bytes": 42412,
+      "sha256": "eae622e3d35c5e508bfc871e3a4603223fc1892fcaf8a8c789beeb717851fe58"
+    },
+    {
+      "file": "public/assets/rewards/star.webp",
+      "bytes": 35852,
+      "sha256": "a295defe64f6bdd1002b9d4e3833ae501b63decf1056bf7bc44d0fc7aed08caf"
+    },
+    {
+      "file": "public/assets/space/background.webp",
+      "bytes": 1605516,
+      "sha256": "3d628df2e942aca8ae73bd6015a7d9da452f94138ff3262267b3ea31184e3380"
+    },
+    {
+      "file": "public/assets/space/comet.webp",
+      "bytes": 592764,
+      "sha256": "dae716e901287ffeb65e1fcb986f4d54c5fccbec36815c1786929d01c40ccb7a"
+    },
+    {
+      "file": "public/assets/space/nebula-blue.webp",
+      "bytes": 1163348,
+      "sha256": "6e2a979f752d3f1d7e02c07fe9271a476e6c9658d242e318d2f98fca9e413669"
+    },
+    {
+      "file": "public/assets/space/nebula-purple.webp",
+      "bytes": 1333006,
+      "sha256": "3f74b92de8eb68f7b06aa8edddbcac6a5865b3b3f78692dba599834e28384594"
+    },
+    {
+      "file": "public/assets/space/planet-blue.webp",
+      "bytes": 1280542,
+      "sha256": "fa788b29dddc0f04eb86421f96fa8711e22de2dd95929bb94c8a768fdbf0ecf9"
+    },
+    {
+      "file": "public/assets/space/planet.webp",
+      "bytes": 1584250,
+      "sha256": "a6700bfe55f1969188d8cec395b99c155f0ec9156fc7c09dc73dd06c78308c64"
+    },
+    {
+      "file": "public/assets/space/star.webp",
+      "bytes": 993376,
+      "sha256": "13b8b7d2c8b679a361c89d64b85558f9d8a622d3e156221693a093b41adc4e00"
+    },
+    {
+      "file": "public/assets/theme-ui/asset-manifest.json",
+      "bytes": 66237,
+      "sha256": "39feccfe2ccaf9d4a05254af3e0f70e91855500fea10a5ddc8f69a52c4e5b0a8"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-blue-disabled.webp",
+      "bytes": 46808,
+      "sha256": "ce4e77937cea5476db2b51945eae36184e96573e2c1a5db2d6cc9ef9ce054c47"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-blue-hover.webp",
+      "bytes": 48950,
+      "sha256": "98a9a60f92836c8e1b6a78665e4178225700af2faf96c62d169f922a307d4ef2"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-blue-normal.webp",
+      "bytes": 47568,
+      "sha256": "0cf42bffeeda92804e5bf1b95b4cab5d3df8df3f86ac6fc84fd38c7683186e1a"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-blue-pressed.webp",
+      "bytes": 48008,
+      "sha256": "a148c15c4e3b1ab6512b9cd0f49ba390423711ff06f1a7c655d78803e8dc8e65"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-cream-disabled.webp",
+      "bytes": 47054,
+      "sha256": "2d1de58ed1e1b91156bf1849f09386a7238fa65fa6795f2e86f3bdcd57e604af"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-cream-hover.webp",
+      "bytes": 48700,
+      "sha256": "a1a4f5d84ba30732d5eb2ebe33ae22132ef988a4762a02e03904ee1c4987aaca"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-cream-normal.webp",
+      "bytes": 48812,
+      "sha256": "4ab2fb303a032bd8019230edff2dc98c6b529446809c19abf83e22d1a01405aa"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-cream-pressed.webp",
+      "bytes": 47926,
+      "sha256": "a234cb326b7853ae82a17e8d008c08f7f3cac303b0baaeec76837734100c35da"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-lavender-disabled.webp",
+      "bytes": 48284,
+      "sha256": "b11e81500bcb85e9b06a744983b40f3a71855c27e12956dd9848f3f38e74514c"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-lavender-hover.webp",
+      "bytes": 48980,
+      "sha256": "5e5bb4b8cb3dec6baa3ae77e8b1cc7b4b9137d9b80a9aff94e38904dcae07abe"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-lavender-normal.webp",
+      "bytes": 48826,
+      "sha256": "ea95c2cffac98da567c49a11670e65cce54b3639f83d892c09d787c59fdbadcc"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-lavender-pressed.webp",
+      "bytes": 48102,
+      "sha256": "0aebdae077c5b456c94ffd954cfc4eb72cb0947bdc9aac5a92d1de4c78c8b4da"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-lightgray-disabled.webp",
+      "bytes": 47920,
+      "sha256": "bc434e2231d2b6986ecf772b2c01373c02d34ef9b833739fbf382dcf3e7121c9"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-lightgray-hover.webp",
+      "bytes": 49052,
+      "sha256": "6f22b2f170056a8c86d0457ba579fdaff2008a87d2a1f24525348ba515218b6a"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-lightgray-normal.webp",
+      "bytes": 49312,
+      "sha256": "431922cd9941cd373a734bc4efff8ba2784efb40339b174774997ca960abfc37"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-lightgray-pressed.webp",
+      "bytes": 47614,
+      "sha256": "c655f613b7f9777c64b6eb81385e82e9f8d6f33265a1d74c44e8818e48f4cff4"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-sage-disabled.webp",
+      "bytes": 47380,
+      "sha256": "6a8a67abb691818821b3a2b140c766cbbf15f97710de70a1e1d760ed892b20b2"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-sage-hover.webp",
+      "bytes": 48790,
+      "sha256": "5099ef3e9fba8933702cbdd2aae2b6c3fbdf9cb026c4f9d6164d164e802873cf"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-sage-normal.webp",
+      "bytes": 48632,
+      "sha256": "f6185e68eeade10b5530e4c0ebbbbffb13116e4c503b6306f7ab8b01badbde2b"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-sage-pressed.webp",
+      "bytes": 48174,
+      "sha256": "c35ff6fc0969d694998866514fe75be941f6aa715b0a6389eae512a67246a0b0"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-sand-disabled.webp",
+      "bytes": 48256,
+      "sha256": "e3d7eef7e22ec8a22ec8c04f8f66d39857b83d3652698c137af21506cc1ccf0c"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-sand-hover.webp",
+      "bytes": 48958,
+      "sha256": "d190885d7dc2fc4977cf73b897e24a4429cadba8e9f54e69c6cc3ed5bfd1df1a"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-sand-normal.webp",
+      "bytes": 48654,
+      "sha256": "c2634e54cbffa9fc45b9107c0107d002bc3d7f33d6c06d42dc35e95eb8118c34"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-sand-pressed.webp",
+      "bytes": 48384,
+      "sha256": "257393f7bf385c917aaa39b012d95a1a118869f1846fb4a5f5de817291710507"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-steel-disabled.webp",
+      "bytes": 46946,
+      "sha256": "1138a5b08b62c91de6db5d58e3f9dc98dfd9140b69547fde429d4df03c04b650"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-steel-hover.webp",
+      "bytes": 48054,
+      "sha256": "8f161e5773b1987cf8c84916b534f3b8753deee656ef23db00b85dd1382ddb61"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-steel-normal.webp",
+      "bytes": 48974,
+      "sha256": "c8a36634a1c6c4d23f150e0df6b16be6971c885abb636862bc33c06f6517a0d8"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-steel-pressed.webp",
+      "bytes": 48692,
+      "sha256": "e6a8d03999421e900407329ef52cad512b393fefa240c76bead24e21dba13f51"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-turquoise-disabled.webp",
+      "bytes": 47498,
+      "sha256": "a637ae4f26a8f360a0a4e7ede141ba3e90846d78db8058046d7ea7e6f2d2031d"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-turquoise-hover.webp",
+      "bytes": 49070,
+      "sha256": "44495bc398dbd802ee3f44df142137ac422a28db161b08ac5fe8dd5fbbf02417"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-turquoise-normal.webp",
+      "bytes": 48918,
+      "sha256": "ae9477887d6d4855d62e1582b9ad0323e936c73defbf6b2525607033cfcb4ccb"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/large/button-large-turquoise-pressed.webp",
+      "bytes": 48944,
+      "sha256": "939d2c0d4fff9e29444b5b01fbede6858d8e3259651ee18e469fa6f716e6ce04"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-blue-disabled.webp",
+      "bytes": 15004,
+      "sha256": "20aaa2cf086e053e6456cd9e5ec337a0d6673b54f6b0adfb26e1c50214bad71d"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-blue-hover.webp",
+      "bytes": 16108,
+      "sha256": "31351ae1d938f2395ee224fcb4b5e40fbaa23a0c653a7894d5cbcf5ebf84a024"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-blue-normal.webp",
+      "bytes": 15806,
+      "sha256": "5ce0e9b5b55bac92805bc7b62f71df36f1a2a1ff83f8d8b99e7bcef3ed038be5"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-blue-pressed.webp",
+      "bytes": 15480,
+      "sha256": "8b7ac7f00ac6f92ae9344146e3b298df132070c174377f1a68e40a3e1e58409d"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-cream-disabled.webp",
+      "bytes": 15000,
+      "sha256": "128116e91d54a7ca06f4ce5ddae4d46f7e4704e9c711ad1fb0921e9fc589be51"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-cream-hover.webp",
+      "bytes": 16196,
+      "sha256": "63e6c3d8f1b816e20219a25d2438a5d45670d7bebcaf49197b8e5317f6db5343"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-cream-normal.webp",
+      "bytes": 16328,
+      "sha256": "e0b4276a4da295c4b8b64f6f56f09d0a788f510b8779bdaa3f21b673c9f53bf0"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-cream-pressed.webp",
+      "bytes": 15496,
+      "sha256": "6344784347f1dc6f65662c0f4e6373f5515688cbbeb36048cef2eac73e1f0dd5"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-lavender-disabled.webp",
+      "bytes": 15388,
+      "sha256": "5f3e9416279c3d79ac8914f61c9eadccdf648f20b042995dc8bddc290ccc7d5d"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-lavender-hover.webp",
+      "bytes": 16046,
+      "sha256": "f0ba38b4545b8235ab23de4e25bb40db099b3ace52588bb5615a5b2552c1c835"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-lavender-normal.webp",
+      "bytes": 16064,
+      "sha256": "067ac44c2ff5617cc8e92d62c13efbe0821b2da619833c48d9e288119b7c2709"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-lavender-pressed.webp",
+      "bytes": 15560,
+      "sha256": "2d02359857a97e117d14850fd93dd92ecd6d5cd02ff5099f52d157d0dbb9ad23"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-lightgray-disabled.webp",
+      "bytes": 15050,
+      "sha256": "2b5a9f87005e90cfb82220b2483f4ce7bf7395153853e4e83fd1745e3a20c72e"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-lightgray-hover.webp",
+      "bytes": 15910,
+      "sha256": "37a7aa1d4ff81acf8831cfaefdbe3636e8afa562bb4d7ef17a8db8e4baf8ce3f"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-lightgray-normal.webp",
+      "bytes": 16078,
+      "sha256": "d129a48eda512eebdace51138cd494d95b073f6faeab0b141587279e6328fcab"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-lightgray-pressed.webp",
+      "bytes": 15176,
+      "sha256": "c64a6d9291c1bb66853e16ab58112822b64f881ec296b5db9ef5f77dceaef04e"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-sage-disabled.webp",
+      "bytes": 15242,
+      "sha256": "7573b53ad248cdc046dac4dc58fe282a8e08787741e85ec5e61542ad7850914f"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-sage-hover.webp",
+      "bytes": 16340,
+      "sha256": "a0a1f3f3a26935951457fa7fe7a52ebafd7da6126ed87e73e79767813597379a"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-sage-normal.webp",
+      "bytes": 15926,
+      "sha256": "64ddfa34a49be37bf2d80affcedaa9dc007c0719fd7856c2ef3b0a702aeb66dd"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-sage-pressed.webp",
+      "bytes": 15630,
+      "sha256": "c20623f547019e3ddf9c6b4dafd522462131bbc8a055fead2c8ad5d610769573"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-sand-disabled.webp",
+      "bytes": 15360,
+      "sha256": "560422e7684eb2bfbf369e07c54a77155fbfb2a7df5a3878f439d6402e8667a7"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-sand-hover.webp",
+      "bytes": 16190,
+      "sha256": "085ed8a56d1f7b4b52ce882eab251163eb867cf52e9dab570d05e278dd9bf8a0"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-sand-normal.webp",
+      "bytes": 16340,
+      "sha256": "237efb21ce47a97656c71ef897db7c53597fe392e8e62714b7a978752333bde1"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-sand-pressed.webp",
+      "bytes": 15964,
+      "sha256": "43ce5f92d9692d078fd119b7e46c4f58a29dd0653b6f16894f1f07f85113a47b"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-steel-disabled.webp",
+      "bytes": 14636,
+      "sha256": "21e19d387f5ac7e7e75592d8632faf5ea5131bafb2283c88dc292f687b09f881"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-steel-hover.webp",
+      "bytes": 15568,
+      "sha256": "f715619e8b997eeb10936e2f5d77b46896da995553a1a9578364da930d85110d"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-steel-normal.webp",
+      "bytes": 15956,
+      "sha256": "ce6b917d959a94a179b9eb09f021686771cc68ee636120ad18d756200f232ba5"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-steel-pressed.webp",
+      "bytes": 15566,
+      "sha256": "c7373fad2d9291929151133fd6be8fa8f8f67abd6a6f573e2fb103f7d192b85f"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-turquoise-disabled.webp",
+      "bytes": 15066,
+      "sha256": "f424fe99c647c86abe6839b2aaa3814dc11cc33f9a1b4a394904e844e5cb5dc5"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-turquoise-hover.webp",
+      "bytes": 16090,
+      "sha256": "ecc8cee8b44e2a4192ae29c65b5e24d7b0c354caf1433f41114b4f74b236cb18"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-turquoise-normal.webp",
+      "bytes": 16280,
+      "sha256": "356c806a406796342fcf635be7fdf4de11cb57b22bffd13480daf532db254e05"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/pill/button-pill-turquoise-pressed.webp",
+      "bytes": 15660,
+      "sha256": "a854fd15a73ba6878c55c15ac087941afc069bf1b4de68f0f5bc5184b5df13d0"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-blue-disabled.webp",
+      "bytes": 9004,
+      "sha256": "fb37e4dc00fedab7c2402cb57d4f1e2d36ea3201f536ae606d78178d0d7b8fec"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-blue-hover.webp",
+      "bytes": 9700,
+      "sha256": "f306c80c45ae411369e8fdcb8396fb90ed96bcb997f611867e37305bd47dc911"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-blue-normal.webp",
+      "bytes": 9512,
+      "sha256": "8189bb88726496a06265e046f829f19c815f882e71514dfc672bb4ee29c5b152"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-blue-pressed.webp",
+      "bytes": 9356,
+      "sha256": "62c16c43b36e46569c85d76a2c4812f526c7b8d900316fc6fa3ed346705a3306"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-cream-disabled.webp",
+      "bytes": 9152,
+      "sha256": "06639d7983da1435d8ff361a5ffc8a8ca278f0fc00fb3dcb4bfc5c2f0885b948"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-cream-hover.webp",
+      "bytes": 9588,
+      "sha256": "ba1911744c06e288f15514b4f58f75a29e3fb29986305076135f5503aaac8c29"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-cream-normal.webp",
+      "bytes": 9680,
+      "sha256": "73f2adfb850214bdb470d090a67da91dfd52ae04bcdbda83ca929724b1db7f96"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-cream-pressed.webp",
+      "bytes": 9232,
+      "sha256": "7175f6f332b678b787f2e7c9111d83101b78b61fcde9f880f3a544e6d3821633"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-lavender-disabled.webp",
+      "bytes": 9268,
+      "sha256": "bf7d140f1e93084d58d50b5851358350e31b957146373ba3d732f601ec253e6c"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-lavender-hover.webp",
+      "bytes": 9642,
+      "sha256": "e19ddd00116ccacd1806123d2e6443debd164dd3c09c3ce9f26ddad13c8b7c1a"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-lavender-normal.webp",
+      "bytes": 9576,
+      "sha256": "223a1dcec9d1c4e483f6631bef3aec7ba60b7f250e32fdb0f029d1a3eef24bb1"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-lavender-pressed.webp",
+      "bytes": 9368,
+      "sha256": "b2e087b6e11b07b3f363c8b9ee9a8743b55065cd4c08266766337c0b7a823893"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-lightgray-disabled.webp",
+      "bytes": 9452,
+      "sha256": "d835b3dc530c25ef3ce11cb5398c141caf0db79ec1f9fbf8bbaa51faa81e8f12"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-lightgray-hover.webp",
+      "bytes": 9648,
+      "sha256": "495fa16c539549ef3452ad96e6178c5eeb51a29e950a40a4737659fdb513ebca"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-lightgray-normal.webp",
+      "bytes": 9710,
+      "sha256": "a6fef1dc36bf3fe6b33683217a49b8265fb1948e962422a8a30f5cfe94d6750d"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-lightgray-pressed.webp",
+      "bytes": 9214,
+      "sha256": "217cba430c01cf09189f327f1cbc7332848800cb34931c399b0f9d317a620cfc"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-sage-disabled.webp",
+      "bytes": 9272,
+      "sha256": "0104dd070f37e65d9c578071712259c8c21aa559ee84cd8e4bdc27d392473605"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-sage-hover.webp",
+      "bytes": 9768,
+      "sha256": "400468d7efbcd239336bb3ea77ecd7d61034060052be522da5d8ca7cfec25452"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-sage-normal.webp",
+      "bytes": 9770,
+      "sha256": "6e3f680c6e581616f851185e872eca3e882ef0dbee28c9f184c8dbdc452aa06d"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-sage-pressed.webp",
+      "bytes": 9478,
+      "sha256": "f929b01d988002fd565e37aa82bd834dede1ef04b176792d0ac81b38f0bc655b"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-sand-disabled.webp",
+      "bytes": 9502,
+      "sha256": "7dbeb8449e2d9493721b12d6b3698c9da2d6736407d53c0028c30e08605e4667"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-sand-hover.webp",
+      "bytes": 9776,
+      "sha256": "44ae283ec727a307756359ae5cc3983b07dffe5a9957ef50d7f77fafeb051fe5"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-sand-normal.webp",
+      "bytes": 9732,
+      "sha256": "455298645a6a5e978873827764ca954b663e7aadc66af68f0da1cc137fb81f8e"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-sand-pressed.webp",
+      "bytes": 9472,
+      "sha256": "b44178769abfcd3aa265b3a438959fc19c09de5238a972ff7dbd4e0c9f60b5f7"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-steel-disabled.webp",
+      "bytes": 8958,
+      "sha256": "8b4a7596c47ad8c25493e0f58a8e7a09705c1847bb38f5c39e1cf85bb136f250"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-steel-hover.webp",
+      "bytes": 9456,
+      "sha256": "1015c92e3764964d91c28e7513b81ac5792448a242bb160d737ccc6e4cefff1d"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-steel-normal.webp",
+      "bytes": 9620,
+      "sha256": "0f5d5145fd179d02d0ff22006891cde17c9aefff8121d3eddfc49945de23ffce"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-steel-pressed.webp",
+      "bytes": 9494,
+      "sha256": "d6dc0ff6fe0c48f57e4f3e0d4aec5abfe4cc5ac00de9dc20c997118c2292bf4f"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-turquoise-disabled.webp",
+      "bytes": 9278,
+      "sha256": "60d5fa9a8ee8edafcd9d0caa030f1e878f802e985d5817680602c6ad47c2c74e"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-turquoise-hover.webp",
+      "bytes": 9934,
+      "sha256": "e09e90c8f479bcf96bb738d2319d5ceecbdb3b7e67c7e2a48c6216e7563727e1"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-turquoise-normal.webp",
+      "bytes": 9816,
+      "sha256": "8fd1339c003c20fb9b4f8b81ef96a5d85d38f65878c134437af3817b1273f740"
+    },
+    {
+      "file": "public/assets/theme-ui/buttons/square/button-square-turquoise-pressed.webp",
+      "bytes": 9690,
+      "sha256": "f0f54276d02dbcdb3f9c9f6fe2c6efa4a3fcfefdf4d7fdffd4e79f6584c772fa"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-blue-checked.webp",
+      "bytes": 5210,
+      "sha256": "d98dbff38a250c96d7905b42f775e51699ebd128827e752758a866dbdf627116"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-blue-empty.webp",
+      "bytes": 5164,
+      "sha256": "c88104ae90ea24ca2201c09dd5135c9db04896141a705dbd7560a5c0179d5304"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-cream-checked.webp",
+      "bytes": 5320,
+      "sha256": "ffd7774a0d6c4ece4f80926f2f0e52d1309a7d22717b53a5a0b5d0a0b8f5cfbf"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-cream-empty.webp",
+      "bytes": 5256,
+      "sha256": "1a4f2887da94c0266095e4796b1b68f0a7ee59aba9d99e1ca6f60bec5c293bb3"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-disabled.webp",
+      "bytes": 4916,
+      "sha256": "5292118dc969a4e4cf1821822e6c237894b2eccf6b594861608f950592c3ca88"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-lavender-checked.webp",
+      "bytes": 5296,
+      "sha256": "121c6d9d4f2e56ae029d5a19dc0dfcd1fe6440e072784cbe1fabf1aaa9acb139"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-lavender-empty.webp",
+      "bytes": 5268,
+      "sha256": "f3f2e20424b999f8315417e9701feb4ea1101531233579b25db40d2f191c4684"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-lightgray-checked.webp",
+      "bytes": 5260,
+      "sha256": "1274fb956bffd4b0abdbb507413bba250f7f332926a72e66cc93ca2457a31779"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-lightgray-empty.webp",
+      "bytes": 5212,
+      "sha256": "fe4ca6d2ac67f9c7b7ea6016172841f7bac9e7cfeac7e9b609d574fec26951dd"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-sage-checked.webp",
+      "bytes": 5270,
+      "sha256": "ef2e4ba206637574a47470f363a41a5f2fb6451766727bacef9d0306cea41e19"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-sage-empty.webp",
+      "bytes": 5256,
+      "sha256": "d61e67d7c0d9e76a870fb6abe205f6ec9465fc7407ca7da11267d8ab50dbd823"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-sand-checked.webp",
+      "bytes": 5486,
+      "sha256": "61afc04a8a4fa6c5ac9b375ac9bdb47c7635863345c544bc274f6a3b1cf90946"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-sand-empty.webp",
+      "bytes": 5448,
+      "sha256": "59def4335146a7132c69e52ef0c348b9987bc3ffc3e0631936619fcb238880aa"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-steel-checked.webp",
+      "bytes": 5142,
+      "sha256": "29c9ec84973d54c375859af1ff00ece86686d9ea0ff4cb00b3eaa2d1476c5ed3"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-steel-empty.webp",
+      "bytes": 5088,
+      "sha256": "99d35ac64cb841f802171976b885961ad07188101ef7e14bbdebe9372706b726"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-turquoise-checked.webp",
+      "bytes": 5268,
+      "sha256": "5d155b17841e46034c76ef779f1c66c9e65a653f4280051b2544aa6b34e11473"
+    },
+    {
+      "file": "public/assets/theme-ui/checkboxes/checkbox-turquoise-empty.webp",
+      "bytes": 5262,
+      "sha256": "80d44fe0a7d9bf424de08fadc3d57000aa72f493e4632c2b67b463cf7d084624"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-blue-normal.webp",
+      "bytes": 10914,
+      "sha256": "fa4b1b14357e8e82a823e309b34cd245837ded69bf406e3960c73172dcd1633e"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-blue-selected.webp",
+      "bytes": 11018,
+      "sha256": "89022e5a4e29aff47b03aa08213879623c4808fa4dfd1cc260864d071df8b6ea"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-cream-normal.webp",
+      "bytes": 11536,
+      "sha256": "8745d6f247dd6f863dfedbe6891fc32f02759cbecf663e5dfa51b62e90e8632c"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-cream-selected.webp",
+      "bytes": 11410,
+      "sha256": "971d3df686605644494895585e01af7f4acdd79f4b7048ed46bbd9b481259928"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-lavender-normal.webp",
+      "bytes": 10872,
+      "sha256": "4d45ca18fd2b601e49d9a5eff7818551cfe0f3f6f3ea1a11f1f9df1d0e29804d"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-lavender-selected.webp",
+      "bytes": 11242,
+      "sha256": "53c6fa2940bacb6d7e5e23bd2c4b0278061e132866c5697fe01d7f6ed5786fef"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-lightgray-normal.webp",
+      "bytes": 10940,
+      "sha256": "e519eaf253fa0cc0122c78b2d1022e059b3ee1aae1acd637c2afc3ff57b4f555"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-lightgray-selected.webp",
+      "bytes": 11080,
+      "sha256": "e5d2886c53a488c0d958e8b7e016d2c15a6c45e285236693f27dca7d102fa038"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-sage-normal.webp",
+      "bytes": 11098,
+      "sha256": "29ce3df353567574549d2f655ae5b3de24e5d99a8f07322a579a34a965b15f24"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-sage-selected.webp",
+      "bytes": 11296,
+      "sha256": "c9556b9117afbb8ca565e930377efc09218911b507e4c77a4467a09377219dd1"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-sand-normal.webp",
+      "bytes": 11312,
+      "sha256": "71b4d71ab163188e2146a97c8c49929baccdee6c9bb66a55058d654860529a26"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-sand-selected.webp",
+      "bytes": 11560,
+      "sha256": "476bcaf79d903b03db053c589908b63ad0cdddbd0fe472d4784b74a8390edf1c"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-steel-normal.webp",
+      "bytes": 11004,
+      "sha256": "adddc4c01eca12b0e2c5e3821c5443910f0c9ad70d9bc8dc4111f9bb8c80d72b"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-steel-selected.webp",
+      "bytes": 10906,
+      "sha256": "da05390e84c8697051c6b375dfd7d756f0cfde597ae7548c55610a5add7f57df"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-turquoise-normal.webp",
+      "bytes": 11084,
+      "sha256": "3e622ac20474be396dd19faca7a4b45424c5cdd26280173168a7b6ca61bdf8dd"
+    },
+    {
+      "file": "public/assets/theme-ui/chips/chip-turquoise-selected.webp",
+      "bytes": 11298,
+      "sha256": "dac17cc6f68876893e29a2e2fbd9ade59d8ff2952b3ee42238c88ad5835738d7"
+    },
+    {
+      "file": "public/assets/theme-ui/panels/panel-blue-square-corners.webp",
+      "bytes": 82152,
+      "sha256": "65e68324a1d96d8390d679e4238f068292b221c7ed7fe3d8d71919c22b620b0f"
+    },
+    {
+      "file": "public/assets/theme-ui/panels/panel-cream-square-corners.webp",
+      "bytes": 82058,
+      "sha256": "9056a0a447980bfe7177f34efeebb2c9b43b0727d0268243ee8d8af1bff18be0"
+    },
+    {
+      "file": "public/assets/theme-ui/panels/panel-lavender-square-corners.webp",
+      "bytes": 82318,
+      "sha256": "ad91ea6babac159e59fec8d447e68beffc1a9b92255dee7381c105846f59b559"
+    },
+    {
+      "file": "public/assets/theme-ui/panels/panel-lightgray-square-corners.webp",
+      "bytes": 83156,
+      "sha256": "7dc26ccdde770ea38f78ce8a26c26c42f0b58f6b616f5880206273a6aff65fb2"
+    },
+    {
+      "file": "public/assets/theme-ui/panels/panel-sage-square-corners.webp",
+      "bytes": 82966,
+      "sha256": "b1fa2980eeb66fc5ee8b7b2d8ce0c2fe070de2dcf50667871266dc285b17a739"
+    },
+    {
+      "file": "public/assets/theme-ui/panels/panel-sand-square-corners.webp",
+      "bytes": 83242,
+      "sha256": "888d36a9f57644fe07924582a468636cb1073ba461531de172a67cdf46f9f873"
+    },
+    {
+      "file": "public/assets/theme-ui/panels/panel-steel-square-corners.webp",
+      "bytes": 81034,
+      "sha256": "5052fcc1fcdc264ef50cdaf9eee450c354100dda2d26822aaa493c17fd513e30"
+    },
+    {
+      "file": "public/assets/theme-ui/panels/panel-turquoise-square-corners.webp",
+      "bytes": 82102,
+      "sha256": "af432f7adac6568e33a73b40d8ae761153cb29d0df46db59142cc4aed9c46dd6"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-blue-checked.webp",
+      "bytes": 7128,
+      "sha256": "7ce7e73bf6fdf04d0bc5aab26a1d83e6c225f33b998b4c14abda1b78f0a5e1ae"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-blue-empty.webp",
+      "bytes": 6538,
+      "sha256": "72e0e5e67ab2f501fe889cdbef5edb925faa065bed204742abf841803d3b5384"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-cream-checked.webp",
+      "bytes": 6474,
+      "sha256": "0a36f52223c3f103b094426aeb61603c4117ae77a1a8a556cd7797f1102e2b8f"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-cream-empty.webp",
+      "bytes": 6328,
+      "sha256": "5e13c18c5d9682a35a79d7cdaa5e8879b693048ab273646be057ab32fbf917e8"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-disabled.webp",
+      "bytes": 5332,
+      "sha256": "e4ff2bfb22dec104b897d02ec3fecd9cb3038a24562deb95766199e152cd824f"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-lavender-checked.webp",
+      "bytes": 7008,
+      "sha256": "bbee64423fe691e343e687a5a061933a326b94bd2ad2dd8fda160cfc4c1f4a8b"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-lavender-empty.webp",
+      "bytes": 6408,
+      "sha256": "ba5adab14775af6bb7797bbbde95ef7b775529aef17dbc776d438faff9e7042e"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-lightgray-checked.webp",
+      "bytes": 6680,
+      "sha256": "866e7333f492d4850e539f71800c98a32eddd137e090bca7d1f8ef8f9b3db381"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-lightgray-empty.webp",
+      "bytes": 6254,
+      "sha256": "28a187bc109c86c703ade9b41a02fd0c219837bc1270d6b4442b67167aef0355"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-sage-checked.webp",
+      "bytes": 6830,
+      "sha256": "0cfcb88259c159274f14f3606ea04673831245b7521146e216e7a1991aa513ec"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-sage-empty.webp",
+      "bytes": 6310,
+      "sha256": "09c51c4b789d705e7a1df45fed24cff0e820f8135f1061f7e4557141e58d4348"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-sand-checked.webp",
+      "bytes": 6988,
+      "sha256": "da3a5032283576e16c3d47b1242cd62849d7b9214756cb72afb65cfa67b92a4a"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-sand-empty.webp",
+      "bytes": 6328,
+      "sha256": "b79908f9b28509ce21ad78f644730ec1a7bf2852c6daa421b81edf4986fa2980"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-steel-checked.webp",
+      "bytes": 7150,
+      "sha256": "b358aa590fe5ad2b550ce7e9050d8154a787221d34cd19e561d19785296320e5"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-steel-empty.webp",
+      "bytes": 6426,
+      "sha256": "0bbbbc567b201089e66e3e636bfa69600a16369c8814e76a337ad2d469368342"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-turquoise-checked.webp",
+      "bytes": 7032,
+      "sha256": "7d7fe78bd864f77b95498a282fc29f8449410abf2e5556d11ec85cee809e7c80"
+    },
+    {
+      "file": "public/assets/theme-ui/radio/radio-turquoise-empty.webp",
+      "bytes": 6414,
+      "sha256": "ce6af92889dc84348e9b4ac2e46cd213d11df4b7e25be213d6927e1338610db4"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-complete-example-blue.webp",
+      "bytes": 15350,
+      "sha256": "66554cf557d3e6e0733e94fc17df3cf0094636dab7b3c487d5ac49642af1e708"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-complete-example-sage.webp",
+      "bytes": 15546,
+      "sha256": "3156241eba9e493dad2864d5504a010ba8a11e7f3b3487e5e84b78d9b41cc893"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-complete-example-turquoise.webp",
+      "bytes": 15462,
+      "sha256": "ae538525f6f57851b285a8a557ee148e2092651a843c739fc7c9505a593b6791"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-blue-hover.webp",
+      "bytes": 6428,
+      "sha256": "32fc57c26e96279a9452f69333bf931aac90007ff06e4173825aa7a5e9b1ad0e"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-blue-normal.webp",
+      "bytes": 5654,
+      "sha256": "54256f0bcfb0a4ce26aaf02b02f51842aed1ae57e1683d65db80ef8cd636debe"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-cream-hover.webp",
+      "bytes": 6262,
+      "sha256": "f553d4b9c3b98b0d34f5c56aa2b3081f5882cfef8584ba5e80de249af75f0b96"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-cream-normal.webp",
+      "bytes": 5624,
+      "sha256": "c8759a76bffc0a8300339e38489ba155477abf4c70a962fc1354dede78e45bdd"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-disabled.webp",
+      "bytes": 5096,
+      "sha256": "6ed1494dfd5fad01bae47ea741dc9f82f57874d580125da226b5415199100cfa"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-lavender-hover.webp",
+      "bytes": 6328,
+      "sha256": "ec0392f24373daf2f7ef38735730a64afa63d2eee4c19ae44143b83afabee8e4"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-lavender-normal.webp",
+      "bytes": 5582,
+      "sha256": "66b1b0b03d1d0ddf716abcf26e8df821d12a82d0d5c988868866d6c77dce9c40"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-lightgray-hover.webp",
+      "bytes": 6052,
+      "sha256": "73c940b2dc33a56c2327516069eb1bca1f0a90560ad57478d90cff6a50ec0f84"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-lightgray-normal.webp",
+      "bytes": 5324,
+      "sha256": "819ab780c58236af6294ef006ae029a721f3e4f37907c6cbaf59ce49ed7063c9"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-sage-hover.webp",
+      "bytes": 6316,
+      "sha256": "bdf0888214a79fd9ebaa57f82ad69d460e88603f221a34c683b742da2d71e69b"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-sage-normal.webp",
+      "bytes": 5560,
+      "sha256": "ccacae3a32193cf58ec05ac537fc0bd233644cfd1f382f89c48a9a95e3456f9e"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-sand-hover.webp",
+      "bytes": 6840,
+      "sha256": "746da88f2969909d47e726340ed4e4f9a4b10f30e6d64bf85edd37ac0f162462"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-sand-normal.webp",
+      "bytes": 6040,
+      "sha256": "5f9feb70f9db32c1672d2efb1b1a2a57c26baa1d3ce29c51f272d83aa1706363"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-steel-hover.webp",
+      "bytes": 6288,
+      "sha256": "992da31df0b0dd350a4ace0f0c2962dfcf2769fba86781a756c31008e5887dd5"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-steel-normal.webp",
+      "bytes": 5524,
+      "sha256": "706f934daa0c58dccb7c531eb1eda42f4c76ec52adb565156567eb409d29e120"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-turquoise-hover.webp",
+      "bytes": 6322,
+      "sha256": "ac3df860d4a427bd82a273a451258cf43faeb901fce8e43f45cccdca334d5f55"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-thumb-turquoise-normal.webp",
+      "bytes": 5592,
+      "sha256": "eef145870b803265921e3c119087f763f1e6a73bbcc14fcef45b705d846108e6"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-track-disabled.webp",
+      "bytes": 10228,
+      "sha256": "5c55715f2345bafd6a00c016e36fb9d739c58cd5889e7c084cc4914a08c264ac"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-track-empty.webp",
+      "bytes": 10320,
+      "sha256": "4108efb2568991c0b218be6956a06cc418ab96bab50514d959a3236b49518579"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-track-fill-blue.webp",
+      "bytes": 10498,
+      "sha256": "9e2c224fbd2d322d0b80da40129a43ba5d7fffad91e18d01990918ff48c6bd5d"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-track-fill-cream.webp",
+      "bytes": 10696,
+      "sha256": "d749557561d24f4cc08ac2713dbca91c1b1bd7b443297869eb2d63f8edd43762"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-track-fill-lavender.webp",
+      "bytes": 10894,
+      "sha256": "fb42eb74ff4658d320dfa073a99d9f91382132ec854f087f452aa0c98aa89a99"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-track-fill-lightgray.webp",
+      "bytes": 10702,
+      "sha256": "5901f03e3bd37f1a3138632e79f6c703bd44e6a0b01260e85dc1c05a50047348"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-track-fill-sage.webp",
+      "bytes": 10838,
+      "sha256": "4219d1ce8209b602f3d9a1ed42f9877fc4b59221ca7cbe519110973f1911234d"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-track-fill-sand.webp",
+      "bytes": 10542,
+      "sha256": "1d7fee733723648d812cdb27a8df0d30b81bc5cae14034876e09eb6d953152c5"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-track-fill-steel.webp",
+      "bytes": 10774,
+      "sha256": "f396572bf4a81ddca71309a7d92e29f7e9e361d1915d7c85363fe427f9b18b90"
+    },
+    {
+      "file": "public/assets/theme-ui/sliders/slider-track-fill-turquoise.webp",
+      "bytes": 10514,
+      "sha256": "3f7aa9b356cf79a965761a04afa3e40772943d22e556201b27a501445437e9f1"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-blue-active.webp",
+      "bytes": 10890,
+      "sha256": "63e77797d22062bbbba3bb53a8396aa9a30fb0d1b4b6eae57633e7239252eb0a"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-blue-inactive.webp",
+      "bytes": 10588,
+      "sha256": "acabb61b6547b148e57054aad83abfd6e5bad0cd2d1ef547a4defa2aad52834d"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-cream-active.webp",
+      "bytes": 11052,
+      "sha256": "065d6ba6bbc7e4a2486f2fe7130ac5501fe3829c6421b287b9e01a641b448c67"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-cream-inactive.webp",
+      "bytes": 10380,
+      "sha256": "7654d3eebbb776bca7fa6207d775c861ac84adab10fb877a806c705cd4dc9362"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-lavender-active.webp",
+      "bytes": 11030,
+      "sha256": "a8679a81ace80f488b0b2cf642df4cd052a3071bf786071cf70f17c67d8e3b25"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-lavender-inactive.webp",
+      "bytes": 10422,
+      "sha256": "8e36f716b15c7c91e70d7d5277167244443dd0527e91d2af9b7125e6b396756e"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-lightgray-active.webp",
+      "bytes": 10920,
+      "sha256": "3a391cf49d0f477d0662681152a9a7ca4c9d9304a53d57266ce2a4a443676072"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-lightgray-inactive.webp",
+      "bytes": 10498,
+      "sha256": "17f06ceba453fbffb93d456c9be4ddb816f8c421e9b63a76c6fdeec163717b54"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-sage-active.webp",
+      "bytes": 11040,
+      "sha256": "0eb7a2646368df404d213d70a3e2785ba6fe6bfeb5014b14cb2f761af7664d2e"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-sage-inactive.webp",
+      "bytes": 10394,
+      "sha256": "d51aa2f5fc568df11dd05392b52d938d85e90f475a19e94719f1836a34bd477c"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-sand-active.webp",
+      "bytes": 11112,
+      "sha256": "5906c2de0993d8bf39254a58ef495660d2f9526e5441c2f187a21621c40ba62b"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-sand-inactive.webp",
+      "bytes": 10440,
+      "sha256": "bec6c3026242508f5e7e1344394ea438cc98979e1566429b2bb292b592780268"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-steel-active.webp",
+      "bytes": 10858,
+      "sha256": "b902f7320c069997883d5d33bf549066161c4a7c451390ce5c41cd0ac4c1b56a"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-steel-inactive.webp",
+      "bytes": 10350,
+      "sha256": "f8dc91a5cbbc6abd16aa381dad6c5f79bc89161fcdc78b919fe703ed2724d5ec"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-turquoise-active.webp",
+      "bytes": 11048,
+      "sha256": "ad8a38b4845c2b58c6987a4cbe395e88385cbc1facd681b11d406bf0c0275b8e"
+    },
+    {
+      "file": "public/assets/theme-ui/tabs/tab-turquoise-inactive.webp",
+      "bytes": 10552,
+      "sha256": "323a0e51ceb223c290522ef38b688b34fce9be5966f4e74a923f866b802f7a85"
+    },
+    {
+      "file": "public/assets/theme-ui/theme-palette.json",
+      "bytes": 598,
+      "sha256": "9fb4b9f917402ca29c6206217bcebb37edc2b9173968f96184123dc4e3e388ed"
+    },
+    {
+      "file": "public/assets/theme-ui/toggles/toggle-blue-on.webp",
+      "bytes": 10154,
+      "sha256": "aa9e4381da1ad19ce672be8c082919b5170a1548b1fcb2f7c62283d1ecfe0662"
+    },
+    {
+      "file": "public/assets/theme-ui/toggles/toggle-cream-on.webp",
+      "bytes": 10000,
+      "sha256": "6d076c4844878e17d6fd52cb882c970f73b99f8df6780380072273895660ded2"
+    },
+    {
+      "file": "public/assets/theme-ui/toggles/toggle-disabled.webp",
+      "bytes": 9540,
+      "sha256": "110a96e3fc1ce425505ee82955481abf0028f750de1aaffdfc4e2584c801b5b5"
+    },
+    {
+      "file": "public/assets/theme-ui/toggles/toggle-lavender-on.webp",
+      "bytes": 10084,
+      "sha256": "ab68ef41062b4522b802cf4a59d7a9a4ffa08e80eda0fc651f012f78218b0d22"
+    },
+    {
+      "file": "public/assets/theme-ui/toggles/toggle-lightgray-on.webp",
+      "bytes": 9896,
+      "sha256": "5d3154e0367b42e22ce787134484dcfb6096e52807efe2047d1efb4d6a888507"
+    },
+    {
+      "file": "public/assets/theme-ui/toggles/toggle-off.webp",
+      "bytes": 9858,
+      "sha256": "0e03fad740bfafe48cbfa2d070819073fcd193508f37cecc80c63adf75cb0f97"
+    },
+    {
+      "file": "public/assets/theme-ui/toggles/toggle-sage-on.webp",
+      "bytes": 10030,
+      "sha256": "1c02af3119421958d4c7dc48aecc80611fd40530efeae410c0a7ff5966777a55"
+    },
+    {
+      "file": "public/assets/theme-ui/toggles/toggle-sand-on.webp",
+      "bytes": 10328,
+      "sha256": "6325b2d6dee5efb8939ab3b9cb45fd00ef0f1429bba4bb59bd5caf5df74e5066"
+    },
+    {
+      "file": "public/assets/theme-ui/toggles/toggle-steel-on.webp",
+      "bytes": 9872,
+      "sha256": "f2bce6fd50db4669ea6eed2b8ee85ca7cd5de2ebdb616f927863be64cfa32daa"
+    },
+    {
+      "file": "public/assets/theme-ui/toggles/toggle-turquoise-on.webp",
+      "bytes": 10116,
+      "sha256": "fab4cf9e4e16358abaf365e9174a4cc8b6f77b388c7af565d51a74951fd866a3"
+    },
+    {
+      "file": "public/assets/themes/forest/back.webp",
+      "bytes": 416106,
+      "sha256": "1e1b9f28a084536e45b044a2e53319d5d0e14de2c0effa213eeb95c2610476d9"
+    },
+    {
+      "file": "public/assets/themes/forest/forest_background.webp",
+      "bytes": 575924,
+      "sha256": "71c231e1e9bb41cffd671b66868d10e0d97388188fea8f348e92043b71589056"
+    },
+    {
+      "file": "public/assets/themes/forest/forest_bush.webp",
+      "bytes": 297376,
+      "sha256": "b7c1b666b0123ce247372b04eaeeec53f7f53caf424037628cf42b09ed126e5f"
+    },
+    {
+      "file": "public/assets/themes/forest/forest_fern.webp",
+      "bytes": 476436,
+      "sha256": "18f25a021b6753dd1153f0c4ea10ab2013dcb4c2ad40cce4cf6b632a9246879a"
+    },
+    {
+      "file": "public/assets/themes/forest/forest_flower_patch.webp",
+      "bytes": 472434,
+      "sha256": "bf8e156bbcbf207f3768d93bf858815d9cbb694381ff64fb1ca36137aaddc5e5"
+    },
+    {
+      "file": "public/assets/themes/forest/forest_leaf_birch.webp",
+      "bytes": 109664,
+      "sha256": "6e2f3fc5f59eb7c079e07464fc571cd09fd555b276e62adbd1fd7de1a8cbe0f0"
+    },
+    {
+      "file": "public/assets/themes/forest/forest_leaf_oak.webp",
+      "bytes": 113204,
+      "sha256": "efa93ed0a78e180bf77eb6c07237af8fed8cf1da774be771ea4af631dcabc590"
+    },
+    {
+      "file": "public/assets/themes/forest/forest_leaf_oval.webp",
+      "bytes": 82932,
+      "sha256": "81fdf238255555888a904af6bfa9daa89b54eb42163c3ed5cb0c7e6b4999650c"
+    },
+    {
+      "file": "public/assets/themes/forest/forest_tree_1.webp",
+      "bytes": 449796,
+      "sha256": "17bc1f766e6c17416317d6080b8f89015ef70bddd12b4904ad371a5672cd8142"
+    },
+    {
+      "file": "public/assets/themes/forest/forest_tree_2.webp",
+      "bytes": 339908,
+      "sha256": "2f2f0de2a62acac8f119a1030aea63abde82e12eaf8d3c456c383a36940c0796"
+    },
+    {
+      "file": "public/assets/themes/forest/front.webp",
+      "bytes": 282292,
+      "sha256": "24c095c13eaf5a0f44af51d7a098e3bd5b3b914bb02fdcda480087a20b352a49"
+    },
+    {
+      "file": "public/assets/themes/forest/header.webp",
+      "bytes": 99726,
+      "sha256": "7ad802b4308b8a4d7739030b640afe5aecaebfa914600f980a5954c037588bc6"
+    },
+    {
+      "file": "public/assets/themes/neutral/back.webp",
+      "bytes": 395784,
+      "sha256": "362827d26b82e4870e7492e528e5848417bb27da3b4c94080a886b2fcbb8210f"
+    },
+    {
+      "file": "public/assets/themes/neutral/front.webp",
+      "bytes": 220532,
+      "sha256": "e7da412a9d6b23ac600ce47adc04a89172b3cf81192ffadc0153e7245a926a73"
+    },
+    {
+      "file": "public/assets/themes/neutral/header.webp",
+      "bytes": 78928,
+      "sha256": "6a49a891936c183e19e881c20c1af1c5c6233d5d5e8fcaf271fc7f8d2743712d"
+    },
+    {
+      "file": "public/assets/themes/space/back.webp",
+      "bytes": 293652,
+      "sha256": "80260e2c049689badc28ae5c179c17610e90ceeeb8f1cb3194e650de9984a302"
+    },
+    {
+      "file": "public/assets/themes/space/front.webp",
+      "bytes": 212648,
+      "sha256": "eae71d848ec4fc185913e986690569bd574b71dd2b0971a6fe747752708f6daa"
+    },
+    {
+      "file": "public/assets/themes/space/header.webp",
+      "bytes": 94818,
+      "sha256": "355d93f9a42c925ce6ee8eb252add89cc8cd5d77244485e1a81ec28102a5b650"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+.v-saved-set-list{display:flex;flex-direction:column;gap:var(--v-space-3);min-width:0}
+.v-saved-set-row{display:flex;align-items:center;justify-content:space-between;gap:var(--v-space-3);padding:var(--v-space-2);border:1px solid var(--ui-field-edge);border-radius:12px;background:var(--ui-setup-field);min-width:0}
+.v-saved-set-row>.v-choice{flex:1;min-width:0}
+.v-saved-set-row>.v-choice>span{display:flex;flex-direction:column;gap:var(--v-space-1);min-width:0}
+.v-saved-set-row small{font-size:14px;line-height:1.4}

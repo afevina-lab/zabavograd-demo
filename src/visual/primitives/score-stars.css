@@ -1,0 +1,8 @@
+.v-score-stars{display:flex;align-items:center;justify-content:center;gap:var(--v-space-3)}
+.v-score-stars>span{display:inline-flex}
+.v-score-stars>span[data-emphasis=true]{margin-top:-9px}
+.v-score-star{display:block;flex:none;width:clamp(52px,8vw,78px);aspect-ratio:1;background:var(--zg-award-stars-image) left center/contain no-repeat;filter:drop-shadow(0 3px 6px #9a6a2b44)}
+.v-score-stars>span[data-emphasis=true]>.v-score-star{width:clamp(68px,10.4vw,102px)}
+.v-score-star-shining{filter:drop-shadow(0 0 12px #ffd86dbb) drop-shadow(0 0 22px #ffedb177)}
+.v-score-star-empty{opacity:.25;filter:grayscale(1)}
+@media(max-height:450px){.v-score-star{width:48px}.v-score-stars>span[data-emphasis=true]>.v-score-star{width:64px}}

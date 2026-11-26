@@ -1,0 +1,5 @@
+.v-picker-trigger-icon{display:inline-flex;align-items:center;justify-content:center;flex:none;width:28px;height:28px;color:var(--ui-deep)}
+.v-picker-trigger-icon>svg{width:100%;height:100%}
+.v-picker-trigger-copy{display:flex;flex:1;flex-direction:column;justify-content:center;gap:var(--v-space-1);min-width:0;line-height:1.4;overflow-wrap:anywhere}
+.v-picker-trigger-copy>small{font-size:14px}
+.v-picker-trigger[data-field-state=required]{--ui-deep:var(--ui-required);border-color:var(--ui-required)}

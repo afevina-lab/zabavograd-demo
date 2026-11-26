@@ -1,0 +1,9 @@
+.v-scene-layers{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:var(--v-layer-scene);container-type:size}
+.v-scene-sprite{position:absolute;display:block;height:auto;max-width:none;object-fit:contain;pointer-events:none;user-select:none}
+.v-scene-sprite>img{display:block;width:100%;height:auto;pointer-events:none}
+.v-ambient-effects{position:absolute;inset:0;overflow:hidden;z-index:var(--v-layer-scene);pointer-events:none}
+.v-ambient-star{position:absolute;aspect-ratio:1;opacity:.5;filter:drop-shadow(0 0 3px #ffecac88)}
+.v-ambient-star-shape{display:block;width:100%;aspect-ratio:1;background:#fff0bd;clip-path:polygon(50% 0,61% 37%,100% 50%,61% 63%,50% 100%,39% 63%,0 50%,39% 37%)}
+.v-ambient-comet{position:absolute;width:150px;height:2px;background:linear-gradient(90deg,transparent,#bddcff88,#fff5df);border-radius:50%;opacity:0;filter:drop-shadow(0 0 5px #c4e5ff);transform-origin:right center}
+.v-ambient-comet::after{content:'';position:absolute;right:0;top:-2px;width:6px;height:6px;border-radius:50%;background:#fff7e5;box-shadow:0 0 10px #beeaff}
+.v-scene-camera{position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0}

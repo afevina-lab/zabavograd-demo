@@ -1,0 +1,12 @@
+.v-letter-section,.v-letter-group-content,.v-syllable-body{display:flex;flex-direction:column;gap:var(--v-space-3);min-width:0}
+.v-letter-section>h3{margin:0;line-height:1.4}
+.v-letter-grid,.v-syllable-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(44px,56px));justify-content:center;gap:var(--v-space-2);min-width:0}
+.v-letter-choice,.v-syllable-option{min-width:var(--v-target);--v-button-height:var(--v-target);--v-button-padding:var(--v-space-2);--v-button-font:18px}
+.v-letter-group{min-width:0;border:1px solid var(--ui-field-edge);border-radius:12px;background:var(--ui-setup-field);padding:var(--v-space-2)}
+.v-letter-group>summary{display:flex;align-items:center;gap:var(--v-space-3);min-height:var(--v-control);cursor:pointer;list-style:none}
+.v-letter-group>summary::-webkit-details-marker{display:none}
+.v-letter-group>summary>span:first-child{flex:1;min-width:0;line-height:1.4;overflow-wrap:anywhere}
+.v-letter-group[open]>summary{margin-bottom:var(--v-space-3)}
+.v-letter-group[open]>summary .v-control-well>svg{transform:rotate(180deg)}
+.v-letter-group-content{padding:var(--v-space-2)}
+.v-letter-grid>.v-letter-choice,.v-syllable-grid>.v-syllable-option{aspect-ratio:1;width:100%}

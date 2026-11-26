@@ -1,0 +1,17 @@
+.v-selection-tree,.v-tree-children>ul{list-style:none;margin:0;padding:0;min-width:0}
+.v-selection-tree{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:var(--v-space-3);align-items:start}
+.v-tree-branch,.v-tree-leaf{min-width:0}
+.v-tree-branch>details{border:1px solid var(--ui-field-edge);border-radius:12px;background:var(--ui-setup-field);min-width:0}
+.v-tree-branch>details>summary{display:flex;align-items:center;gap:var(--v-space-2);min-height:var(--v-control);padding:var(--v-space-2);list-style:none;cursor:pointer;user-select:none}
+.v-tree-branch>details>summary::-webkit-details-marker{display:none}
+.v-tree-branch>details>summary>svg{width:24px;height:24px;flex:none}
+.v-tree-branch>details>summary>input{width:24px;height:24px;margin:0;flex:none;accent-color:var(--ui-accent)}
+.v-tree-name{flex:1;min-width:0;line-height:1.4;overflow-wrap:anywhere}
+.v-tree-count{flex:none;line-height:1}
+.v-tree-well{width:30px;height:32px}
+.v-tree-branch>details[open]>summary .v-tree-well>svg{transform:rotate(180deg)}
+.v-tree-children{padding:var(--v-space-2);border-top:1px solid var(--ui-field-edge)}
+.v-tree-children>ul{display:flex;flex-direction:column;gap:var(--v-space-2)}
+
+
+.v-selection-tree>.v-tree-branch:has(>details[open]){grid-column:1/-1}

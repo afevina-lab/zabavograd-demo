@@ -1,0 +1,84 @@
+@layer reset, foundation, primitives, compositions, games, motion;
+@import './foundation/reset.css' layer(reset);
+@import './foundation/tokens.css' layer(foundation);
+@import './primitives/icons.css' layer(primitives);
+@import './primitives/buttons.css' layer(primitives);
+@import './primitives/controls.css' layer(primitives);
+@import './primitives/surface.css' layer(primitives);
+@import './primitives/field.css' layer(primitives);
+@import './primitives/chip.css' layer(primitives);
+@import './primitives/tooltip.css' layer(primitives);
+@import './primitives/popover-tip.css' layer(primitives);
+@import './primitives/toggle-group.css' layer(primitives);
+@import './primitives/card.css' layer(primitives);
+@import './primitives/card-content.css' layer(primitives);
+@import './primitives/card-slot.css' layer(primitives);
+@import './primitives/flip-faces.css' layer(primitives);
+@import './primitives/bounded-artwork.css' layer(primitives);
+@import './primitives/choice.css' layer(primitives);
+@import './primitives/life-meter.css' layer(primitives);
+@import './primitives/time-bar.css' layer(primitives);
+@import './primitives/session-time.css' layer(primitives);
+@import './primitives/score-stars.css' layer(primitives);
+@import './primitives/sound-choice.css' layer(primitives);
+@import './primitives/fit-copy.css' layer(primitives);
+@import './primitives/add-action.css' layer(primitives);
+@import './primitives/picker-trigger.css' layer(primitives);
+@import './primitives/select.css' layer(primitives);
+@import './primitives/disclosure.css' layer(primitives);
+@import './primitives/quantity.css' layer(primitives);
+@import './primitives/range.css' layer(primitives);
+@import './primitives/selection.css' layer(primitives);
+@import './compositions/settings.css' layer(compositions);
+@import './compositions/material-settings.css' layer(compositions);
+@import './compositions/sound-workshop.css' layer(compositions);
+@import './compositions/letter-syllable-settings.css' layer(compositions);
+@import './compositions/material-rule.css' layer(compositions);
+@import './compositions/selection-tree.css' layer(compositions);
+@import './compositions/saved-set-list.css' layer(compositions);
+@import './compositions/material-preview.css' layer(compositions);
+@import './compositions/search-choices.css' layer(compositions);
+@import './compositions/picker-dialog.css' layer(compositions);
+@import './compositions/toolbar.css' layer(compositions);
+@import './compositions/game.css' layer(compositions);
+@import './compositions/live-game.css' layer(compositions);
+@import './compositions/game-actions.css' layer(compositions);
+@import './compositions/scenery.css' layer(compositions);
+@import './compositions/dialog.css' layer(compositions);
+@import './compositions/selection-panel.css' layer(compositions);
+@import './compositions/decision-dialog.css' layer(compositions);
+@import './games/boards.css' layer(games);
+@import './games/layouts.css' layer(games);
+@import './games/game-content.css' layer(games);
+@import './games/sorting-group.css' layer(games);
+@import './games/matching-bank.css' layer(games);
+@import './motion/motion.css' layer(motion);
+@import './games/transformation.css' layer(games);
+@layer motion{
+ @media(prefers-reduced-motion:reduce){.v-root *,.v-root *::before,.v-root *::after{animation-duration:0s;transition-duration:0s;scroll-behavior:auto}}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
