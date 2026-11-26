@@ -1,0 +1,33 @@
+name: Library storage audit
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/library-storage-audit.cjs'
+      - 'tests/library-storage-audit.test.ts'
+      - 'outputs/library-v2.json'
+      - 'outputs/library-v2-auto-analysis.json'
+      - 'scripts/export-library.cjs'
+      - '.github/workflows/library-storage-audit.yml'
+permissions:
+  contents: read
+jobs:
+  roundtrip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --experimental-strip-types --test tests/library-storage-audit.test.ts
+      - name: Verify source and all three runtime exports
+        run: |
+          node scripts/check-library-v2.cjs
+          node scripts/library-storage-audit.cjs "$RUNNER_TEMP/storage-audit" --verify-runtime
+          git diff --exit-code
+          node scripts/check-library-v2.cjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: storage-audit
+          path: ${{ runner.temp }}/storage-audit
+          retention-days: 14
