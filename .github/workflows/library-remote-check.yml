@@ -1,0 +1,49 @@
+name: Library remote request checks
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/library-request.cjs'
+      - 'scripts/library-toolkit.cjs'
+      - 'tests/library-request.test.ts'
+      - '.github/workflows/library-remote.yml'
+      - '.github/workflows/library-remote-check.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --experimental-strip-types --test tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts
+      - name: Exercise real source query and preview
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '%s\n' '{"version":1,"mode":"query","command":"select","options":{"weight":100,"limit":1,"fields":["/selection/base_weight"]}}' > "$RUNNER_TEMP/query.json"
+          node scripts/library-request.cjs "$RUNNER_TEMP/query.json" "$RUNNER_TEMP/query-result.json"
+          node -e 'const fs=require("fs");const r=JSON.parse(fs.readFileSync(process.argv[1]));const row=r.rows[0];if(!row||row.weight!==100)throw Error("Query failed");fs.writeFileSync(process.argv[2],JSON.stringify({version:1,mode:"preview",source_sha256:r.source_sha256,operations:[{id:row.id,path:"/selection/base_weight",expect:row.fields["/selection/base_weight"],value:70}]}))' "$RUNNER_TEMP/query-result.json" "$RUNNER_TEMP/preview.json"
+          node scripts/library-request.cjs "$RUNNER_TEMP/preview.json" "$RUNNER_TEMP/preview-result.json"
+          node -e 'const r=JSON.parse(require("fs").readFileSync(process.argv[1]));if(r.changed!==1||r.source_sha256!==r.result_source_sha256)throw Error("Preview changed source")' "$RUNNER_TEMP/preview-result.json"
+          git diff --exit-code -- outputs/library-v2.json
+      - name: Check no-op candidate and existing validator
+        shell: bash
+        run: |
+          set -euo pipefail
+          node -e 'const fs=require("fs");const r=JSON.parse(fs.readFileSync(process.argv[1]));r.mode="candidate";r.operations[0].value=r.operations[0].expect.value;fs.writeFileSync(process.argv[2],JSON.stringify(r))' "$RUNNER_TEMP/preview.json" "$RUNNER_TEMP/noop.json"
+          node scripts/library-request.cjs "$RUNNER_TEMP/noop.json" "$RUNNER_TEMP/noop-result.json" --allow-candidate
+          git diff --exit-code -- outputs/library-v2.json
+          node scripts/check-library-v2.cjs
+      - name: Test validated write and restoration in disposable checkout
+        shell: bash
+        run: |
+          set -euo pipefail
+          trap 'git restore -- outputs/library-v2.json' EXIT
+          node -e 'const fs=require("fs");const r=JSON.parse(fs.readFileSync(process.argv[1]));r.mode="candidate";r.operations[0].path="/toolkit_validation_probe";r.operations[0].expect={exists:false};r.operations[0].value="disposable CI test only";fs.writeFileSync(process.argv[2],JSON.stringify(r))' "$RUNNER_TEMP/preview.json" "$RUNNER_TEMP/candidate.json"
+          node scripts/library-request.cjs "$RUNNER_TEMP/candidate.json" "$RUNNER_TEMP/candidate-result.json" --allow-candidate
+          node -e 'const fs=require("fs");const r=JSON.parse(fs.readFileSync(process.argv[1]));const db=JSON.parse(fs.readFileSync("outputs/library-v2.json"));if(r.changed!==1||r.source_sha256===r.result_source_sha256||!db.entries.some(e=>e.id===r.preview[0].id&&e.toolkit_validation_probe==="disposable CI test only"))throw Error("Candidate not applied")' "$RUNNER_TEMP/candidate-result.json"
+          git restore -- outputs/library-v2.json
+          git diff --exit-code -- outputs/library-v2.json

@@ -1,0 +1,89 @@
+name: Library editorial index
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'outputs/library-v2.json'
+      - 'outputs/library-v2-auto-analysis.json'
+      - 'outputs/library-syllable-structure.json'
+      - 'library.json'
+      - 'editorial/library-tasks.json'
+      - 'scripts/build-library-index.cjs'
+      - 'scripts/library-toolkit.cjs'
+      - 'tests/library-index.test.ts'
+      - 'tests/library-toolkit.test.ts'
+      - '.github/workflows/library-index.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'outputs/library-v2.json'
+      - 'outputs/library-v2-auto-analysis.json'
+      - 'outputs/library-syllable-structure.json'
+      - 'library.json'
+      - 'editorial/library-tasks.json'
+      - 'scripts/build-library-index.cjs'
+      - 'scripts/library-toolkit.cjs'
+      - 'tests/library-index.test.ts'
+      - 'tests/library-toolkit.test.ts'
+      - '.github/workflows/library-index.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: library-index-${{ github.event_name == 'pull_request' && github.ref || 'main' }}
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Test editorial tools without installing dependencies
+        run: node --experimental-strip-types --test tests/library-toolkit.test.ts tests/library-index.test.ts
+      - name: Generate compact index from checked-out source
+        run: node scripts/build-library-index.cjs "$RUNNER_TEMP/library-index"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: library-index
+          path: ${{ runner.temp }}/library-index
+          retention-days: 14
+  publish:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: generate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: library-index
+          path: ${{ runner.temp }}/library-index
+      - name: Publish only the generated editorial index
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git diff --quiet HEAD FETCH_HEAD -- outputs/library-v2.json outputs/library-v2-auto-analysis.json outputs/library-syllable-structure.json library.json editorial/library-tasks.json scripts/build-library-index.cjs scripts/library-toolkit.cjs || { echo "Newer source; refusing stale index"; exit 1; }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          previous=$(git ls-remote origin refs/heads/library-index | cut -f1)
+          parents=()
+          if [ -n "$previous" ]; then
+            git fetch origin "$previous"
+            parents=(-p "$previous")
+          fi
+          export GIT_INDEX_FILE="$RUNNER_TEMP/library-index.git-index"
+          export GIT_DIR="$GITHUB_WORKSPACE/.git"
+          export GIT_WORK_TREE="$RUNNER_TEMP/library-index"
+          git read-tree --empty
+          cd "$GIT_WORK_TREE"
+          git add -A
+          tree=$(git write-tree)
+          if [ -n "$previous" ] && [ "$(git rev-parse "$previous^{tree}")" = "$tree" ]; then
+            echo "Index unchanged"; exit 0
+          fi
+          commit=$(git commit-tree "$tree" "${parents[@]}" -m "Refresh derived library index from $GITHUB_SHA")
+          git push origin "$commit:refs/heads/library-index"
