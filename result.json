@@ -1,0 +1,45 @@
+{
+  "mode": "preview",
+  "request_sha256": "e25b92a81e6872ce0c3c19ef21d7708a521ce267a8ca80c28f8d0041cc1cf6f1",
+  "preview_sha256": "8e990e0bfbb02f0dca5761c1356b04e42acb0b2cc0a2e9e1d5c7b070e46830a6",
+  "version": 1,
+  "source_sha256": "2342765ab2aae827ab89a2b9bbdcde08b9fbb14ccc5ba35a16879a12d51c5526",
+  "result_source_sha256": "3425ddae8e2980614fb108d991f4ef259ece3a4005865c1e96195b31410f0d62",
+  "operations": [
+    {
+      "id": "ru-home-20261105-bd699907",
+      "path": "/selection/base_weight",
+      "expect": {
+        "exists": true,
+        "value": 100
+      },
+      "value": 70
+    }
+  ],
+  "changes": [
+    {
+      "id": "ru-home-20261105-bd699907",
+      "lemma": "сумка",
+      "path": "/selection/base_weight",
+      "before": {
+        "exists": true,
+        "value": 100
+      },
+      "after": {
+        "exists": true,
+        "value": 70
+      }
+    }
+  ],
+  "delta": {
+    "added": [],
+    "removed": [],
+    "modified": [
+      "entries/core/19.json"
+    ]
+  },
+  "status": "preview_not_validated_or_approved",
+  "source_commit": "8310bb9d5c9fd1a1d0b990dad1e532a2d56b33e1",
+  "request_commit": "e9d4e12fb9925d4b04349caa12e20b63d52bcd4e",
+  "scope": "integration_snapshot_not_live_main"
+}
