@@ -42,7 +42,10 @@ test('rejects invalid or oversized request before any GitHub operation',async()=
  let calls=0;
  const bridge=makeBridge({repo:'owner/repo',request:async()=>{calls++;throw Error('must not contact GitHub')}});
  const base={version:1,mode:'preview',source_sha256:sha,operations:[{}]};
- for(const body of [{...base,semantic_operations:null},{...base,review_decisions:[{}]},{...base,import_operations:[{}]},{...base,operations:[{data:Array(5000).fill('a')}]}]){
+ const oversized={...base,operations:[{data:Array(9000).fill('a')}]};
+ assert(Buffer.byteLength(JSON.stringify(oversized))<64*1024,'Compact fixture must fit');
+ assert(Buffer.byteLength(JSON.stringify(oversized,null,2)+'\n')>64*1024,'Serialized request must exceed limit');
+ for(const body of [{...base,semantic_operations:null},{...base,review_decisions:[{}]},{...base,import_operations:[{}]},oversized]){
   await assert.rejects(()=>bridge.submit('edit',body),e=>[400,413].includes(e.status));
  }
  assert.equal(calls,0);
