@@ -7,6 +7,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 import pymorphy3
+from library_source import read_library
 
 ROOT=Path(__file__).resolve().parent.parent
 SOURCE=ROOT/"outputs/library-v2.json"
@@ -220,7 +221,7 @@ def g2p_proposal(lemma,accentor,transcriber):
   return {"status":"needs_review","reason":"g2p_error","detail":str(exc)[:140]}
 
 def run():
- data=json.loads(SOURCE.read_text(encoding="utf-8"))
+ data=read_library()
  accentor,transcriber=g2p_components()
  proposals=[]
  for entry in data["entries"]:

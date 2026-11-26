@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '24'
       - name: Run storage and editorial unit tests
-        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts
+        run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts
       - name: Inventory direct consumers
         run: node scripts/library-consumer-audit.cjs "$RUNNER_TEMP/consumer-audit.json"
       - name: Rehearse migration and candidate update on real source
@@ -28,6 +28,17 @@ jobs:
           node scripts/library-store.cjs export "$RUNNER_TEMP/modules" "$RUNNER_TEMP/rebuilt.json"
           node -e 'const fs=require("fs"),a=require("node:assert/strict");a.equal(JSON.stringify(JSON.parse(fs.readFileSync("outputs/library-v2.json"))),JSON.stringify(JSON.parse(fs.readFileSync(process.argv[1]))))' "$RUNNER_TEMP/rebuilt.json"
           node scripts/library-storage-optimize.cjs "$RUNNER_TEMP/storage-check"
+          node scripts/library-archive-guard.cjs
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" node scripts/library-archive-guard.cjs
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" node scripts/check-library-v2.cjs
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" node scripts/library-toolkit.cjs select --weight 100 --limit 1 > "$RUNNER_TEMP/module-query.json"
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" python3 -c 'import sys;sys.path.insert(0,"scripts");from library_source import read_library;import json;assert read_library()==json.load(open("outputs/library-v2.json"))'
+          node scripts/export-library.cjs
+          sha256sum public/library.json public/semantic-graph.json public/grammar-frames.json > "$RUNNER_TEMP/runtime-before.sha"
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" node scripts/export-library.cjs
+          sha256sum -c "$RUNNER_TEMP/runtime-before.sha"
+          git restore -- public/semantic-graph.json public/grammar-frames.json
+          if git ls-files --error-unmatch public/library.json >/dev/null 2>&1; then git restore -- public/library.json; else rm -f public/library.json; fi
           node -e 'const fs=require("fs"),s=require("./scripts/library-store.cjs"),r=s.load(process.argv[1]);const e=r.db.entries.find(x=>x.kind==="word"&&!Object.hasOwn(x,"toolkit_validation_probe"));fs.writeFileSync(process.argv[2],JSON.stringify({version:1,source_sha256:r.source_sha256,operations:[{id:e.id,path:"/toolkit_validation_probe",expect:{exists:false},value:"disposable CI test only"}]}))' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/packet.json"
           node scripts/library-store.cjs patch "$RUNNER_TEMP/modules" "$RUNNER_TEMP/packet.json" "$RUNNER_TEMP/candidate" > "$RUNNER_TEMP/patch-result.json"
           cat "$RUNNER_TEMP/patch-result.json"

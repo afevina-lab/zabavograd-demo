@@ -2,7 +2,7 @@
 'use strict';
 const fs=require('node:fs');const assert=require('node:assert/strict');
 const img=JSON.parse(fs.readFileSync('outputs/image-library.json','utf8'));
-const v=JSON.parse(fs.readFileSync('outputs/library-v2.json','utf8'));
+const v=require('./library-source.cjs').readSource().db;
 require('./validate-library-contract.cjs').validateLibrary(v);
 assert.equal(v.schema_version,2);
 const byId=new Map(v.entries.map(e=>[e.id,e]));

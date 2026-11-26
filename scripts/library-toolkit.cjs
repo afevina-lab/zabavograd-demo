@@ -95,12 +95,13 @@ function patches(db,packet){
  }
  return {db:result,changes};
 }
-function read(){const raw=fs.readFileSync(SOURCE,'utf8');return {raw,db:JSON.parse(raw),sha256:digest(raw)};}
+function read(){return require('./library-source.cjs').readSource();}
 function writeAtomic(raw){
  const tmp=SOURCE+'.tmp-'+process.pid;
  try{fs.writeFileSync(tmp,raw,{flag:'wx'});fs.renameSync(tmp,SOURCE);}finally{if(fs.existsSync(tmp))fs.unlinkSync(tmp);}
 }
 function apply(raw,db,changes){
+ require('./library-source.cjs').requireLegacyWrite();
  if(!changes.length)return;
  // Lock cooperating CLI writers; stale lock after a hard interruption is
  // deliberately not cleared automatically. Do not edit the file concurrently.

@@ -27,5 +27,5 @@ function validateLibrary(db){
  for(const relation of db.relations)for(const [key,value]of Object.entries(relation))if(value&&typeof value==='object'&&!Array.isArray(value)&&typeof value.id==='string')assert(ids.has(value.id),`Dangling relation ${relation.id}.${key}: ${value.id}`);
  return {entries:ids.size,categories:categories.size,relations:db.relations.length};
 }
-if(require.main===module)console.log(validateLibrary(JSON.parse(fs.readFileSync(path.join(root,'outputs/library-v2.json'),'utf8'))));
+if(require.main===module)console.log(validateLibrary(require('./library-source.cjs').readSource().db));
 module.exports={validateLibrary,validate};

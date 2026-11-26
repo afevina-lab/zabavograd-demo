@@ -10,6 +10,7 @@
 const fs=require('node:fs');
 const assert=require('node:assert/strict');
 
+require('./library-source.cjs').requireLegacyWrite();
 const LIB='outputs/library-v2.json';
 const PROPOSALS='outputs/library-v2-auto-analysis.json';
 const REPORT='outputs/METADATA_ENRICHMENT.md';

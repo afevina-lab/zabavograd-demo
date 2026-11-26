@@ -98,7 +98,8 @@ function main(){
  const output=path.resolve(dest);if(fs.existsSync(output))throw Error('Output directory already exists');
  const meta={},data={};
  for(const [key,p] of Object.entries(paths)){
-  const raw=fs.readFileSync(path.join(ROOT,p));meta[key]={path:p,sha256:sha256(raw),git_blob:gitBlob(raw),bytes:raw.length};
+  const source=key==='master'?require('./library-source.cjs').readSource():null;
+  const raw=source?Buffer.from(source.raw,'utf8'):fs.readFileSync(path.join(ROOT,p));meta[key]={path:source?.mode==='modules'?'generated V2 from modules':p,sha256:sha256(raw),git_blob:gitBlob(raw),bytes:raw.length,...(source?{mode:source.mode}: {})};
   if(key!=='runtime')data[key]=JSON.parse(raw);
  }
  const built=build(data.master,data.draft,data.syllables,meta,data.tasks);
