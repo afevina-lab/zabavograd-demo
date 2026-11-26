@@ -44,6 +44,9 @@ function invoke(args){
 }
 function write(file,obj){const body=JSON.stringify(obj,null,2)+'\n';if(Buffer.byteLength(body)>96*1024)throw Error('Result exceeds 96 KiB; reduce limit or projected fields');fs.writeFileSync(file,body,{flag:'wx'});}
 function run(requestFile,resultFile,allowCandidate=false){
+ // The existing remote publisher writes a monolithic candidate. Until it is
+ // switched to module candidates, fail closed rather than use a stale V2.
+ require('./library-source.cjs').requireLegacyWrite();
  const raw=fs.readFileSync(requestFile);
  if(raw.length>64*1024)throw Error('Request exceeds 64 KiB');
  const r=JSON.parse(raw),v=validate(r);

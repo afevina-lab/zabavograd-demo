@@ -5,7 +5,7 @@ const root=path.resolve(__dirname,'..');
 const source=path.join(root,'outputs/library-v2.json');
 const runtime=path.join(root,'library.json');
 const target=path.join(root,'public/library.json');
-if(fs.existsSync(source)){
+if(process.env.ZABAVOGRAD_LIBRARY_MODULES!==undefined||fs.existsSync(source)){
  cp.execFileSync(process.execPath,[path.join(root,'scripts/export-library.cjs')],{cwd:root,stdio:'inherit'});
  fs.copyFileSync(target,runtime);
  fs.copyFileSync(path.join(root,'public/semantic-graph.json'),path.join(root,'semantic-graph.json'));

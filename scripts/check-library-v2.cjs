@@ -8,14 +8,15 @@ assert.equal(v.schema_version,2);
 const byId=new Map(v.entries.map(e=>[e.id,e]));
 assert.equal(byId.size,v.entries.length,'Duplicate ID');
 const legacy=v.entries.filter(e=>e.legacy_source?.raw);
+require('./library-archive-guard.cjs').verifyArchive(v,require('../editorial/library-archive-baseline.json'));
 assert.equal(legacy.length,409,'Expected all 409 historical word records embedded in V2');
 for(const next of legacy){
  const e=next.legacy_source.raw;
  assert.equal(next.legacy_source.id,e.id,'Old ID changed');
  assert.equal(next.id,e.id,'Lost old ID '+e.id);
  assert.equal(next.lemma,e.label,'Legacy lemma changed '+e.id);
- assert.deepEqual(next.phonetic_tags.data,e.speech||{},'Legacy speech changed '+e.id);
- assert.deepEqual(next.morphology.data,e.grammar||{},'Legacy grammar changed '+e.id);
+ // The immutable historical payload is verified against the pinned SHA-256 above.
+ // Current phonetics and morphology may be corrected without mutating history.
  assert(Object.hasOwn(e,'selection_weight'),'Original weight missing: '+e.id);
 }
 assert.equal(new Set(legacy.map(e=>e.id)).size,legacy.length,'Duplicate embedded legacy ID');
