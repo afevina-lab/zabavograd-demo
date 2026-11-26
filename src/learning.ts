@@ -66,9 +66,9 @@ function matchesMaterial(w:Word,f:Filters,l:Learning):boolean {
  const topics=l.topics??(f.topic?[f.topic]:[]);
  const lexical=l.categoryPaths!==undefined?(w.categories||[]).some(p=>l.categoryPaths!.includes(p)):topics.length>0&&topics.some(t=>w.topic===t&&(!l.subtopics?.[t]?.length||l.subtopics[t].includes(w.subcategory||'')));
  const contentAllowed=['reading','automation','differentiation'].includes(l.mode)?contentKinds(l).includes(w.materialKind||'words')&&(w.materialKind!=='syllables'||effectivePatterns(l).includes(w.syllablePattern as Pattern)):!w.materialKind;
- const base=contentAllowed&&(l.mode==='reading'?matchesReading(w,l):l.mode==='any'?true:l.mode==='lexical'?lexical:l.mode==='structure'?structure:(w.materialKind==='syllables'||structure)&&l.sounds.some(s=>matchesSound(w,s,l)));
+ const base=contentAllowed&&(l.mode==='reading'?matchesReading(w,l)&&(!!w.materialKind||!l.sounds.length||l.sounds.some(s=>matchesSound(w,s,l))):l.mode==='any'?true:l.mode==='lexical'?lexical:l.mode==='structure'?structure:(w.materialKind==='syllables'||structure)&&l.sounds.some(s=>matchesSound(w,s,l)));
  const forbidden=(l.excludedSounds||[]).filter(s=>!l.sounds.includes(s));
- const soundAllowed=l.mode==='reading'||!forbidden.length||(!!w.phonemes&&!forbidden.some(s=>containsExcludedSound(w,s)));
+ const soundAllowed=l.mode==='reading'&&!l.sounds.length||!forbidden.length||(!!w.phonemes&&!forbidden.some(s=>containsExcludedSound(w,s)));
  const allowed=base&&(!f.noOpposition||l.mode!=='automation'||l.sounds[0]!=='р'||w.opposition.length===0);
  return soundAllowed&&(allowed||(l.additional||[]).some(r=>matchesMaterial(w,r.filters,r.learning)))&&!(l.exclusions||[]).some(r=>matchesMaterial(w,r.filters,r.learning));
 }

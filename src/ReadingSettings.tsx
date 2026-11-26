@@ -1,3 +1,4 @@
+import {SoundPicker} from './SoundPicker.tsx';
 import {PickerTrigger} from './design-system/PickerTrigger.tsx';
 import {PickerDialog} from './design-system/PickerDialog.tsx';
 import {Choice} from './visual/primitives/Choice.tsx';
@@ -46,6 +47,7 @@ export function ReadingSettings({l,setL,words,textDisplayProvided=false}:{l:Lear
     </details>
    </section>
  </PickerDialog>
+ {kinds.includes('words')&&l.mode==='reading'&&<details className="v-filter-details"><summary>Звуки в читаемых словах{l.sounds.length?' · '+l.sounds.map(s=>s.toUpperCase()).join(', '):' · любые'}</summary><SoundPicker optional words={words} l={l} setL={setL}/></details>}
  {kinds.includes('words')&&<RangeSlider label="Длина слова, букв" min={3} max={Math.max(3,maximum)} from={Math.max(3,Math.min(r.min,maximum))} to={Math.max(3,Math.min(r.max,maximum))} onChange={(min,max)=>update({min,max})}/>}
  <label className="v-choice check"><input type="checkbox" role="switch" checked={r.excludeClusters} onChange={e=>setL({...l,reading:{...r,excludeClusters:e.target.checked},syllablePatterns:e.target.checked?patterns.filter(p=>p!=='CCV'&&p!=='VCC'):patterns})}/>Исключить стечения согласных</label>
  </>}

@@ -1,4 +1,4 @@
-.v-memory-board{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,120px),160px));gap:var(--v-space-3);align-content:center;justify-content:center;margin:auto;min-height:100%}
+.v-memory-board{position:relative;z-index:var(--v-layer-board);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,120px),160px));gap:var(--v-space-3);align-content:center;justify-content:center;margin:auto;min-height:100%}
 .v-sorting-board{position:relative;z-index:var(--v-layer-board);padding:var(--v-space-3);display:grid;grid-template-rows:minmax(0,var(--v-sort-bank-height,35%)) minmax(0,1fr) auto;gap:var(--v-space-3);height:100%;min-height:0}
 .v-sorting-bank{display:flex;min-width:0;min-height:0;overflow:hidden;padding:var(--v-space-2)}
 .v-sorting-groups{display:flex;min-width:0;min-height:0;overflow:hidden}

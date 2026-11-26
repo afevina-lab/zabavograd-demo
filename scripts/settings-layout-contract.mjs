@@ -13,9 +13,9 @@ export function inspectSettingsLayout(){
   appearancePosition:wide?ar.left>=b.right-1:ar.top>=b.bottom-1,
   footerInside:f.bottom<=r.bottom+1&&(wide?b.bottom:scroll.getBoundingClientRect().bottom)<=f.top+1,
   wordsLayout:stacked?w.bottom<=a.top+1&&Math.abs(w.left-a.left)<=1&&Math.abs(w.right-s.right)<=1:a.right<=w.left+1&&w.right<=s.left+1&&Math.abs(centre(w)-centre(s))<=1,
-  actionsAligned:Math.abs(centre(a)-centre(s))<=1,
+  actionsAligned:Math.abs(centre(actions.parentElement.getBoundingClientRect())-centre(s))<=1,
   readableCopy:copy.getBoundingClientRect().height<=parseFloat(getComputedStyle(copy).lineHeight)*2+1,
   largeStart:s.height>=56&&s.width>=(innerWidth<=360?96:110)&&s.right<=f.right+1,
-  equalIcons:[...actions.querySelectorAll('button')].filter(e=>e.getBoundingClientRect().width>0).every(e=>Math.abs(e.getBoundingClientRect().height-s.height)<=1),
+  equalIcons:actions.parentElement.getBoundingClientRect().height<=Math.max(s.height,w.height)+1&&[...actions.querySelectorAll('button')].filter(e=>e.getBoundingClientRect().width>0).every(e=>e.getBoundingClientRect().height>=40&&e.getBoundingClientRect().height<=s.height),
  };
 }

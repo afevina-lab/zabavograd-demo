@@ -1,2 +1,2 @@
 .v-toggle-group{display:flex;align-items:center;flex-wrap:wrap;gap:var(--v-space-2);min-width:0}
-.v-toggle-choice{min-width:var(--v-target);overflow-wrap:anywhere}
+.v-toggle-choice{overflow-wrap:anywhere}
