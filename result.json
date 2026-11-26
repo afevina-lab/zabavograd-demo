@@ -1,0 +1,52 @@
+{
+  "mode": "candidate",
+  "request_sha256": "5c0fc041552a74b5c211c1b505ebd59b97eb7beaa87bece4af28b7e2da9d4a8b",
+  "preview_sha256": "8e990e0bfbb02f0dca5761c1356b04e42acb0b2cc0a2e9e1d5c7b070e46830a6",
+  "version": 1,
+  "source_sha256": "2342765ab2aae827ab89a2b9bbdcde08b9fbb14ccc5ba35a16879a12d51c5526",
+  "result_source_sha256": "3425ddae8e2980614fb108d991f4ef259ece3a4005865c1e96195b31410f0d62",
+  "operations": [
+    {
+      "id": "ru-home-20261105-bd699907",
+      "path": "/selection/base_weight",
+      "expect": {
+        "exists": true,
+        "value": 100
+      },
+      "value": 70
+    }
+  ],
+  "changes": [
+    {
+      "id": "ru-home-20261105-bd699907",
+      "lemma": "сумка",
+      "path": "/selection/base_weight",
+      "before": {
+        "exists": true,
+        "value": 100
+      },
+      "after": {
+        "exists": true,
+        "value": 70
+      }
+    }
+  ],
+  "delta": {
+    "added": [],
+    "removed": [],
+    "modified": [
+      "entries/core/19.json"
+    ]
+  },
+  "status": "validated_candidate_not_approved",
+  "bundle": {
+    "manifest": "delta/manifest.json",
+    "changed_files": [
+      "entries/core/19.json"
+    ],
+    "removed_files": []
+  },
+  "source_commit": "8310bb9d5c9fd1a1d0b990dad1e532a2d56b33e1",
+  "request_commit": "0bc36ee8191d6a1290130a24e705d45f2c91276c",
+  "scope": "integration_snapshot_not_live_main"
+}
