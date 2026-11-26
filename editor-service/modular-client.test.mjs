@@ -62,3 +62,23 @@ test('cached read pins result and supports exact-field operations without ticket
  await client.cachedQuery('inspect',{id:'a',fields:['/selection/base_weight']});
  assert.equal(client.state().source_sha256,source);assert.equal(client.operation(row,'/selection/base_weight',70).value,70);assert.equal(client.state().pending.length,0);
 });
+
+test('checkpoint reload verifies original ticket and re-fetches preview before candidate',async()=>{
+ const f=fixture(),c=f.c;f.ready();await c.collect((await c.inspect('a')).ticket);
+ const op=c.operation(row,'/selection/base_weight',70),p=await c.requestPreview({operations:[op]});
+ await c.collect(p.ticket);
+ const saved=c.checkpoint();
+ assert.equal(saved.job.ticket,p.ticket);assert(!Object.hasOwn(saved,'preview'));
+ const api=async(route,body)=>{
+  assert(!body,'Restoring and collecting do not send edits');
+  const b=saved.job.body;
+  return {status:'result_available',ticket:p.ticket,report:{scope,source_commit:commit,request_commit:commit,request_sha256:crypto.createHash('sha256').update(JSON.stringify(b,null,2)+'\n').digest('hex'),source_sha256:source,mode:'preview',operations:b.operations,preview_sha256:sha,result_source_sha256:target,status:'preview_not_validated_or_approved'}};
+ };
+ const resumed=createModularClient(api);await resumed.restore(saved);
+ await assert.rejects(()=>resumed.requestCandidate(sha),/preview/);
+ await resumed.collect(p.ticket);assert.equal(resumed.state().preview.preview_sha256,sha);
+ const corrupt=structuredClone(saved);corrupt.job.body.operations[0].value=50;
+ const damaged=createModularClient(api);await damaged.restore(corrupt);
+ await assert.rejects(()=>damaged.collect(p.ticket),/не соответствует/);
+ const invalid=createModularClient(api);await assert.rejects(()=>invalid.restore({...saved,job:{...saved.job,ticket:'wrong'}}),/билет/);
+});

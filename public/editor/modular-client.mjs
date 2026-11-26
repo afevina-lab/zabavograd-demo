@@ -131,6 +131,39 @@ export function createModularClient(api){
    return clone(result);
   });
  }
+ // Persist only request identity and original request, never a trusted preview
+ // or a session token. Completed edits are re-collected after reload.
+ function checkpoint(){
+  const edits=[...jobs.values()].filter(j=>j.kind==='edit'&&j.status!=='abandoned');
+  const j=edits.at(-1);
+  return clone({source_sha256:source,job:j?{ticket:j.ticket,commit:j.commit,body:j.body}:null});
+ }
+ function restore(saved){
+  return exclusive(async()=>{
+   check(!source&&!jobs.size&&!latest&&!preview,'Восстановление возможно только в пустом редакторе');
+   check(saved&&hash.test(saved.source_sha256||''),'Нет версии сохранённого черновика');
+   const j=saved.job;
+   if(j!==null){
+    check(j&&commit.test(j.commit||'')&&/^edit\/web-[a-f0-9]{24}-[a-f0-9]{12}$/.test(j.ticket||'')&&j.ticket.endsWith(j.commit.slice(0,12)),'Некорректный билет черновика');
+    const b=j.body;
+    check(b&&b.version===1&&['preview','candidate'].includes(b.mode)&&b.source_sha256===saved.source_sha256&&Array.isArray(b.operations),'Некорректный запрос черновика');
+    const arrays=[b.operations,b.semantic_operations??[],b.review_decisions??[],b.import_operations??[]];
+    check(arrays.every(Array.isArray)&&arrays.reduce((n,a)=>n+a.length,0)>=1&&arrays.reduce((n,a)=>n+a.length,0)<=30,'Неверный размер пакета');
+    check(b.mode==='candidate'?hash.test(b.preview_sha256||''):!own(b,'preview_sha256'),'Неверная контрольная сумма preview');
+    check(Object.keys(b).every(k=>['version','mode','source_sha256','operations','semantic_operations','review_decisions','import_operations','preview_sha256'].includes(k)),'Неизвестное поле запроса');
+    check(new TextEncoder().encode(JSON.stringify(b,null,2)+'\n').length<=64*1024,'Слишком большой запрос');
+    const packet=clone(b),expected=await requestHash(packet);
+    jobs.set(j.ticket,{ticket:j.ticket,commit:j.commit,kind:'edit',body:packet,hash:expected,status:'submitted'});
+   }
+   source=saved.source_sha256;
+   return j?{ticket:j.ticket}:null;
+  });
+ }
+ function clearCheckpoint(){
+  check(!busy,'Другой запрос выполняется');
+  check(![...jobs.values()].some(j=>j.status==='submitted'),'Сначала прекратите ожидание');
+  jobs.clear();source=null;latest=null;preview=null;
+ }
  function abandon(ticket){check(!busy,'Другой запрос выполняется');const j=jobs.get(ticket);check(j?.status==='submitted','Нет ожидающего запроса');j.status='abandoned';}
- return {state,query,cachedQuery,inspect,operation,requestPreview,requestCandidate,collect,abandon};
+ return {state,query,cachedQuery,inspect,operation,requestPreview,requestCandidate,collect,abandon,checkpoint,restore,clearCheckpoint};
 }

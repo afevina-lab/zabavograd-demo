@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {searchOptions} from '../public/editor/modular-ui.mjs';
+import {searchOptions,parseDraft,draftStorageKey} from '../public/editor/modular-ui.mjs';
 test('bounded indexed search translates visible filters without full source',()=>{
  assert.deepEqual(searchOptions({text:' кот ',category:'Животные',kind:'word',missing:'images',page:2}),{limit:36,offset:72,prefix:'кот',category:'Животные',kind:'word',has_image:false});
  assert.deepEqual(searchOptions({text:'id:ru-a',missing:'phonetic_tags'}),{limit:36,offset:0,id:'ru-a',stored_phonetics:false});
@@ -44,4 +44,14 @@ test('experimental editor uses cached pages, exact fields, and explicit two-phas
  await $('submit').onclick();assert.equal(calls.at(-1)[0],'candidate');
  await $('save').onclick();assert.equal($('submit').disabled,true);
  assert.equal(alerts.length,0);
+});
+
+test('draft serialization rejects unrecognized fields, duplicate operations and mismatched submitted package',()=>{
+ const op={id:'a',path:'/selection/base_weight',expect:{exists:true,value:100},value:70};
+ const d={format:'zabavograd-modular-draft-v2',controller:{source_sha256:'a'.repeat(64),job:null},operations:[op]};
+ assert.deepEqual(parseDraft(JSON.stringify(d)),d);
+ assert.throws(()=>parseDraft(JSON.stringify({...d,operations:[op,op]})),/Повторная/);
+ assert.throws(()=>parseDraft(JSON.stringify({...d,operations:[{...op,path:'/lemma'}]})),/Неверная операция/);
+ assert.throws(()=>parseDraft(JSON.stringify({...d,controller:{...d.controller,job:{body:{operations:[{...op,value:50}]}}}})),/не совпадает/);
+ assert.notEqual(draftStorageKey('https://a.example'),draftStorageKey('https://b.example'));
 });
