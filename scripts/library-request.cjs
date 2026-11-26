@@ -25,7 +25,8 @@ function validate(r){
    if(own(o,'offset')&&(!Number.isInteger(o.offset)||o.offset<0||o.offset>100000))throw Error('Invalid offset');
    return {sqlite:{...o,limit:o.limit??20}};
   }
-  if(!QUERY.includes(r.command)||own(r,'operations')||own(r,'source_sha256'))throw Error('Invalid query request');
+  if(!QUERY.includes(r.command)||own(r,'operations'))throw Error('Invalid query request');
+  if(own(r,'source_sha256')&&(typeof r.source_sha256!=='string'||!/^[a-f0-9]{64}$/.test(r.source_sha256)))throw Error('Invalid source_sha256');
   const o=r.options??{};
   keys(o,r.command==='inventory'?['fields']:['id','lemma','weight','category','field','equals','fields','limit','offset','full']);
   const args=[r.command];

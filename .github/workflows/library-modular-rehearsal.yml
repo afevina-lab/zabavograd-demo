@@ -15,6 +15,10 @@ jobs:
           node-version: '24'
       - name: Run storage and editorial unit tests
         run: node --experimental-strip-types --test tests/library-storage-audit.test.ts tests/library-storage-optimize.test.ts tests/library-store.test.ts tests/library-toolkit.test.ts tests/library-index.test.ts tests/library-request.test.ts tests/library-source.test.ts tests/library-analysis-writer.test.ts tests/library-initial-analysis.test.ts tests/library-sqlite.test.ts tests/library-modular-request.test.ts tests/library-phonetic-review.test.ts tests/library-semantic-proposals.test.ts tests/library-editorial-decisions.test.ts
+      - name: Check editor server bridge without deployment
+        run: |
+          node --check editor-service/server.mjs
+          node --test editor-service/model.test.mjs editor-service/modular-bridge.test.mjs
       - name: Inventory direct consumers
         run: node scripts/library-consumer-audit.cjs "$RUNNER_TEMP/consumer-audit.json"
       - name: Rehearse migration and candidate update on real source
@@ -104,6 +108,13 @@ jobs:
           if ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" node scripts/library-request.cjs "$RUNNER_TEMP/remote-stale-request.json" "$RUNNER_TEMP/remote-stale-result.json"; then echo "Stale remote request accepted"; exit 1; fi
           test ! -e "$RUNNER_TEMP/remote-stale-result.json"
           git diff --exit-code
+      - name: Exercise exact-field inspection through remote query runner
+        shell: bash
+        run: |
+          set -euo pipefail
+          node -e 'const fs=require("fs"),s=require("./scripts/library-store.cjs").load(process.argv[1]);fs.writeFileSync(process.argv[2],JSON.stringify({version:1,mode:"query",command:"inspect",source_sha256:s.source_sha256,options:{id:"ru-home-20261105-bd699907",fields:["/selection/base_weight"]}}))' "$RUNNER_TEMP/modules" "$RUNNER_TEMP/editor-inspect.json"
+          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" node scripts/library-request.cjs "$RUNNER_TEMP/editor-inspect.json" "$RUNNER_TEMP/editor-inspect-result.json"
+          node -e 'const a=require("node:assert/strict"),r=JSON.parse(require("fs").readFileSync(process.argv[1]));a.equal(r.rows.length,1);a.deepEqual(r.rows[0].fields["/selection/base_weight"],{exists:true,value:100});a.equal(r.source_mode,"modules")' "$RUNNER_TEMP/editor-inspect-result.json"
       - name: Verify remote preview and candidate bundle on real library
         shell: bash
         run: |

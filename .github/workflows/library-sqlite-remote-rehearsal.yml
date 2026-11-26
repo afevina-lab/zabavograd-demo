@@ -30,7 +30,7 @@ jobs:
           [[ "$slug" =~ ^[a-z0-9][a-z0-9-]{0,47}$ ]]
           git fetch --no-tags --depth=1 origin "$GITHUB_SHA"
           git show "$GITHUB_SHA:editorial/requests/library-request.json" > "$RUNNER_TEMP/request.json"
-          node -e 'const fs=require("fs"),a=require("node:assert/strict"),r=JSON.parse(fs.readFileSync(process.argv[1]));a.equal(r.mode,"query");a.equal(r.command,"sqlite")' "$RUNNER_TEMP/request.json"
+          node -e 'const fs=require("fs"),a=require("node:assert/strict"),r=JSON.parse(fs.readFileSync(process.argv[1]));a.equal(r.mode,"query");a(["sqlite","find","inspect","select","gaps","inventory"].includes(r.command))' "$RUNNER_TEMP/request.json"
           echo "REQUEST_KEY=$slug-${GITHUB_SHA:0:12}" >> "$GITHUB_ENV"
           echo "SOURCE_COMMIT=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
           node scripts/library-store.cjs init outputs/library-v2.json "$RUNNER_TEMP/modules"
