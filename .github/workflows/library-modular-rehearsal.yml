@@ -377,6 +377,8 @@ jobs:
           node scripts/sync-runtime.cjs
           sha256sum library.json semantic-graph.json public/library.json public/semantic-graph.json public/grammar-frames.json > "$RUNNER_TEMP/switch-runtime.sha"
           cp -a "$RUNNER_TEMP/modules" outputs/library-modules
+          if node scripts/library-source.cjs info; then echo 'Unmarked modules accepted'; exit 1; fi
+          if python3 -c 'import sys;sys.path.insert(0,"scripts");from library_source import read_library;read_library()'; then echo 'Python accepted unmarked modules'; exit 1; fi
           printf '%s\n' '{"version":1,"mode":"modules","directory":"outputs/library-modules"}' > editorial/library-source-mode.json
           if node scripts/library-source.cjs info; then echo 'Dual source accepted'; exit 1; fi
           rm outputs/library-v2.json

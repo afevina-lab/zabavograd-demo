@@ -8,7 +8,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 def _modular_requested():
-    return "ZABAVOGRAD_LIBRARY_MODULES" in os.environ or (ROOT / "editorial/library-source-mode.json").exists()
+    return ("ZABAVOGRAD_LIBRARY_MODULES" in os.environ
+            or (ROOT / "editorial/library-source-mode.json").exists()
+            or (ROOT / "outputs/library-modules").exists())
 
 def read_snapshot():
     if _modular_requested():

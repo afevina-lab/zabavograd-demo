@@ -13,6 +13,7 @@ function resolveSource(root=ROOT,env=process.env){
   if(env.ZABAVOGRAD_LIBRARY_MODULES!==undefined)throw Error('Explicit source override prohibited after canonical switch');
   return {mode:'modules',path:path.join(root,config.directory)};
  }
+ if(fs.existsSync(path.join(root,'outputs/library-modules')))throw Error('Unmarked modular source; refuse legacy fallback');
  const requested=env.ZABAVOGRAD_LIBRARY_MODULES;
  if(requested!==undefined){
   if(typeof requested!=='string'||!requested.trim())throw Error('Empty modular source path');

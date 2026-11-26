@@ -41,6 +41,10 @@ test('future canonical marker rejects dual sources, override and malformed polic
  fs.mkdirSync(path.join(dir,'editorial'));fs.mkdirSync(path.join(dir,'outputs'));
  const policy=path.join(dir,'editorial/library-source-mode.json'),legacy=path.join(dir,'outputs/library-v2.json');
  assert.equal(resolveSource(dir,{}).mode,'legacy');
+ const modules=path.join(dir,'outputs/library-modules');fs.mkdirSync(modules);
+ assert.throws(()=>resolveSource(dir,{}),/Unmarked modular source/);
+ assert.throws(()=>resolveSource(dir,{ZABAVOGRAD_LIBRARY_MODULES:'/tmp/other'}),/Unmarked modular source/);
+ fs.rmdirSync(modules);
  fs.writeFileSync(policy,JSON.stringify({version:1,mode:'modules',directory:'outputs/library-modules'}));
  assert.deepEqual(resolveSource(dir,{}),{mode:'modules',path:path.join(dir,'outputs/library-modules')});
  assert.throws(()=>resolveSource(dir,{ZABAVOGRAD_LIBRARY_MODULES:'/tmp/other'}),/override prohibited/);
