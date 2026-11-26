@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "mode": "candidate",
+  "source_sha256": "2342765ab2aae827ab89a2b9bbdcde08b9fbb14ccc5ba35a16879a12d51c5526",
+  "preview_sha256": "8e990e0bfbb02f0dca5761c1356b04e42acb0b2cc0a2e9e1d5c7b070e46830a6",
+  "operations": [
+    {
+      "id": "ru-home-20261105-bd699907",
+      "path": "/selection/base_weight",
+      "expect": {
+        "exists": true,
+        "value": 100
+      },
+      "value": 70
+    }
+  ]
+}
