@@ -29,7 +29,7 @@ jobs:
           node scripts/library-request.cjs "$RUNNER_TEMP/preview.json" "$RUNNER_TEMP/preview-result.json"
           node -e 'const r=JSON.parse(require("fs").readFileSync(process.argv[1]));if(r.changed!==1||r.source_sha256!==r.result_source_sha256)throw Error("Preview changed source")' "$RUNNER_TEMP/preview-result.json"
           git diff --exit-code -- outputs/library-v2.json
-      - name: Check actual candidate validation without publishing
+      - name: Check no-op candidate and existing validator
         shell: bash
         run: |
           set -euo pipefail
@@ -37,3 +37,13 @@ jobs:
           node scripts/library-request.cjs "$RUNNER_TEMP/noop.json" "$RUNNER_TEMP/noop-result.json" --allow-candidate
           git diff --exit-code -- outputs/library-v2.json
           node scripts/check-library-v2.cjs
+      - name: Test validated write and restoration in disposable checkout
+        shell: bash
+        run: |
+          set -euo pipefail
+          trap 'git restore -- outputs/library-v2.json' EXIT
+          node -e 'const fs=require("fs");const r=JSON.parse(fs.readFileSync(process.argv[1]));r.mode="candidate";r.operations[0].path="/toolkit_validation_probe";r.operations[0].expect={exists:false};r.operations[0].value="disposable CI test only";fs.writeFileSync(process.argv[2],JSON.stringify(r))' "$RUNNER_TEMP/preview.json" "$RUNNER_TEMP/candidate.json"
+          node scripts/library-request.cjs "$RUNNER_TEMP/candidate.json" "$RUNNER_TEMP/candidate-result.json" --allow-candidate
+          node -e 'const fs=require("fs");const r=JSON.parse(fs.readFileSync(process.argv[1]));const db=JSON.parse(fs.readFileSync("outputs/library-v2.json"));if(r.changed!==1||r.source_sha256===r.result_source_sha256||!db.entries.some(e=>e.id===r.preview[0].id&&e.toolkit_validation_probe==="disposable CI test only"))throw Error("Candidate not applied")' "$RUNNER_TEMP/candidate-result.json"
+          git restore -- outputs/library-v2.json
+          git diff --exit-code -- outputs/library-v2.json

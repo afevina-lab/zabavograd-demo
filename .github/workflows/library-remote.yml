@@ -2,6 +2,7 @@ name: Library remote requests
 on:
   push:
     branches: ['library-request/**']
+    paths: ['editorial/requests/library-request.json']
 permissions:
   contents: read
 concurrency:
