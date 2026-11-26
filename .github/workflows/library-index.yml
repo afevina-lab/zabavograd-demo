@@ -4,6 +4,13 @@ on:
     branches: [main]
     paths:
       - 'outputs/library-v2.json'
+      - 'outputs/library-modules/**'
+      - 'editorial/library-source-mode.json'
+      - 'scripts/library-source.cjs'
+      - 'scripts/library-store.cjs'
+      - 'scripts/library-storage-audit.cjs'
+      - 'scripts/library-storage-optimize.cjs'
+      - 'scripts/library-semantic-proposals.cjs'
       - 'outputs/library-v2-auto-analysis.json'
       - 'outputs/library-syllable-structure.json'
       - 'library.json'
@@ -17,6 +24,13 @@ on:
     branches: [main]
     paths:
       - 'outputs/library-v2.json'
+      - 'outputs/library-modules/**'
+      - 'editorial/library-source-mode.json'
+      - 'scripts/library-source.cjs'
+      - 'scripts/library-store.cjs'
+      - 'scripts/library-storage-audit.cjs'
+      - 'scripts/library-storage-optimize.cjs'
+      - 'scripts/library-semantic-proposals.cjs'
       - 'outputs/library-v2-auto-analysis.json'
       - 'outputs/library-syllable-structure.json'
       - 'library.json'
@@ -66,7 +80,7 @@ jobs:
         run: |
           set -euo pipefail
           git fetch origin main
-          git diff --quiet HEAD FETCH_HEAD -- outputs/library-v2.json outputs/library-v2-auto-analysis.json outputs/library-syllable-structure.json library.json editorial/library-tasks.json scripts/build-library-index.cjs scripts/library-toolkit.cjs || { echo "Newer source; refusing stale index"; exit 1; }
+          git diff --quiet HEAD FETCH_HEAD -- outputs/library-v2.json outputs/library-v2-auto-analysis.json outputs/library-syllable-structure.json library.json editorial/library-tasks.json scripts/build-library-index.cjs scripts/library-toolkit.cjs outputs/library-modules editorial/library-source-mode.json scripts/library-source.cjs scripts/library-store.cjs scripts/library-storage-audit.cjs scripts/library-storage-optimize.cjs scripts/library-semantic-proposals.cjs || { echo "Newer source; refusing stale index"; exit 1; }
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           previous=$(git ls-remote origin refs/heads/library-index | cut -f1)

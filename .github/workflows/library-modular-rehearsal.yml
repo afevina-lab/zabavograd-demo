@@ -360,6 +360,9 @@ jobs:
           set -euo pipefail
           test ! -e editorial/library-source-mode.json
           test ! -e outputs/library-modules
+          node scripts/library-request-source.cjs prepare "$RUNNER_TEMP/legacy-remote-stage" > "$RUNNER_TEMP/legacy-remote-source.json"
+          node scripts/library-request-source.cjs query "$RUNNER_TEMP/legacy-remote-stage" "$RUNNER_TEMP/remote-sqlite-request.json" "$RUNNER_TEMP/legacy-remote-query.json"
+          cmp "$RUNNER_TEMP/legacy-remote-query.json" "$RUNNER_TEMP/remote-sqlite-result.json"
           cleanup() {
             rm -f editorial/library-source-mode.json
             rm -rf outputs/library-modules
@@ -374,6 +377,15 @@ jobs:
           if node scripts/library-source.cjs info; then echo 'Dual source accepted'; exit 1; fi
           rm outputs/library-v2.json
           node scripts/library-source.cjs info > "$RUNNER_TEMP/switch-source.json"
+          node scripts/library-request-source.cjs prepare "$RUNNER_TEMP/unused-remote-stage" > "$RUNNER_TEMP/canonical-remote-source.json"
+          test ! -e "$RUNNER_TEMP/unused-remote-stage"
+          modules=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).directory' "$RUNNER_TEMP/canonical-remote-source.json")
+          test "$modules" = "$GITHUB_WORKSPACE/outputs/library-modules"
+          node scripts/library-request-source.cjs query "$modules" "$RUNNER_TEMP/remote-sqlite-request.json" "$RUNNER_TEMP/canonical-remote-query.json"
+          node scripts/library-modular-request.cjs "$modules" "$RUNNER_TEMP/edit-candidate.json" "$RUNNER_TEMP/canonical-remote-candidate"
+          node scripts/build-library-index.cjs "$RUNNER_TEMP/canonical-index"
+          node -e 'const fs=require("fs"),a=require("node:assert/strict"),p=process.env.RUNNER_TEMP,read=f=>JSON.parse(fs.readFileSync(p+"/"+f));a.deepEqual(read("canonical-remote-query.json"),read("remote-sqlite-result.json"));a.deepEqual(read("canonical-remote-candidate/result.json"),read("edit-candidate-output/result.json"));a.deepEqual(read("canonical-index/manifest.json"),read("module-index/manifest.json"));console.log("Canonical remote query, candidate and editorial index match rehearsal")'
+          test ! -e outputs/library-v2.json
           node scripts/check-library-v2.cjs
           node scripts/library-archive-guard.cjs
           node scripts/build-library-v2-view.cjs

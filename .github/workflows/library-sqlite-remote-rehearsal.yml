@@ -33,12 +33,13 @@ jobs:
           node -e 'const fs=require("fs"),a=require("node:assert/strict"),r=JSON.parse(fs.readFileSync(process.argv[1]));a.equal(r.mode,"query");a(["sqlite","find","inspect","select","gaps","inventory"].includes(r.command))' "$RUNNER_TEMP/request.json"
           echo "REQUEST_KEY=$slug-${GITHUB_SHA:0:12}" >> "$GITHUB_ENV"
           echo "SOURCE_COMMIT=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
-          node scripts/library-store.cjs init outputs/library-v2.json "$RUNNER_TEMP/modules"
+          node scripts/library-request-source.cjs prepare "$RUNNER_TEMP/modules" > "$RUNNER_TEMP/source.json"
+          echo "MODULES_DIR=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).directory' "$RUNNER_TEMP/source.json")" >> "$GITHUB_ENV"
       - name: Execute read-only query
         shell: bash
         run: |
           set -euo pipefail
-          ZABAVOGRAD_LIBRARY_MODULES="$RUNNER_TEMP/modules" node scripts/library-request.cjs "$RUNNER_TEMP/request.json" "$RUNNER_TEMP/raw-result.json"
+          node scripts/library-request-source.cjs query "$MODULES_DIR" "$RUNNER_TEMP/request.json" "$RUNNER_TEMP/raw-result.json"
           node -e 'const fs=require("fs"),r=JSON.parse(fs.readFileSync(process.argv[1]));r.source_commit=process.env.SOURCE_COMMIT;r.source_ref="refactor/library-modular-integration-20261126";r.scope="integration_snapshot_not_live_main";r.request_commit=process.env.GITHUB_SHA;fs.writeFileSync(process.argv[2],JSON.stringify(r,null,2)+"\n",{flag:"wx"})' "$RUNNER_TEMP/raw-result.json" "$RUNNER_TEMP/result.json"
           git diff --exit-code
       - uses: actions/upload-artifact@v4
