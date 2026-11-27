@@ -1,0 +1,2837 @@
+{
+  "generator": "individual-drawn-assets-not-crops",
+  "format": "webp",
+  "encoding": "lossless, transparency alpha",
+  "assets": [
+    {
+      "file": "panels/panel-blue-square-corners.webp",
+      "width": 1800,
+      "height": 170,
+      "group": "panel",
+      "transparent": true,
+      "nine_slice": {
+        "left": 22,
+        "right": 22,
+        "top": 20,
+        "bottom": 20
+      },
+      "color": "blue",
+      "state": "normal"
+    },
+    {
+      "file": "panels/panel-sand-square-corners.webp",
+      "width": 1800,
+      "height": 170,
+      "group": "panel",
+      "transparent": true,
+      "nine_slice": {
+        "left": 22,
+        "right": 22,
+        "top": 20,
+        "bottom": 20
+      },
+      "color": "sand",
+      "state": "normal"
+    },
+    {
+      "file": "panels/panel-lightgray-square-corners.webp",
+      "width": 1800,
+      "height": 170,
+      "group": "panel",
+      "transparent": true,
+      "nine_slice": {
+        "left": 22,
+        "right": 22,
+        "top": 20,
+        "bottom": 20
+      },
+      "color": "lightgray",
+      "state": "normal"
+    },
+    {
+      "file": "panels/panel-steel-square-corners.webp",
+      "width": 1800,
+      "height": 170,
+      "group": "panel",
+      "transparent": true,
+      "nine_slice": {
+        "left": 22,
+        "right": 22,
+        "top": 20,
+        "bottom": 20
+      },
+      "color": "steel",
+      "state": "normal"
+    },
+    {
+      "file": "panels/panel-cream-square-corners.webp",
+      "width": 1800,
+      "height": 170,
+      "group": "panel",
+      "transparent": true,
+      "nine_slice": {
+        "left": 22,
+        "right": 22,
+        "top": 20,
+        "bottom": 20
+      },
+      "color": "cream",
+      "state": "normal"
+    },
+    {
+      "file": "panels/panel-sage-square-corners.webp",
+      "width": 1800,
+      "height": 170,
+      "group": "panel",
+      "transparent": true,
+      "nine_slice": {
+        "left": 22,
+        "right": 22,
+        "top": 20,
+        "bottom": 20
+      },
+      "color": "sage",
+      "state": "normal"
+    },
+    {
+      "file": "panels/panel-lavender-square-corners.webp",
+      "width": 1800,
+      "height": 170,
+      "group": "panel",
+      "transparent": true,
+      "nine_slice": {
+        "left": 22,
+        "right": 22,
+        "top": 20,
+        "bottom": 20
+      },
+      "color": "lavender",
+      "state": "normal"
+    },
+    {
+      "file": "panels/panel-turquoise-square-corners.webp",
+      "width": 1800,
+      "height": 170,
+      "group": "panel",
+      "transparent": true,
+      "nine_slice": {
+        "left": 22,
+        "right": 22,
+        "top": 20,
+        "bottom": 20
+      },
+      "color": "turquoise",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/large/button-large-blue-normal.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "blue",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/large/button-large-blue-hover.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "blue",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/large/button-large-blue-pressed.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "blue",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/large/button-large-blue-disabled.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "blue",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/large/button-large-sand-normal.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "sand",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/large/button-large-sand-hover.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "sand",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/large/button-large-sand-pressed.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "sand",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/large/button-large-sand-disabled.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "sand",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/large/button-large-lightgray-normal.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "lightgray",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/large/button-large-lightgray-hover.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "lightgray",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/large/button-large-lightgray-pressed.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "lightgray",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/large/button-large-lightgray-disabled.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "lightgray",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/large/button-large-steel-normal.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "steel",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/large/button-large-steel-hover.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "steel",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/large/button-large-steel-pressed.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "steel",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/large/button-large-steel-disabled.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "steel",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/large/button-large-cream-normal.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "cream",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/large/button-large-cream-hover.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "cream",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/large/button-large-cream-pressed.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "cream",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/large/button-large-cream-disabled.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "cream",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/large/button-large-sage-normal.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "sage",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/large/button-large-sage-hover.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "sage",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/large/button-large-sage-pressed.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "sage",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/large/button-large-sage-disabled.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "sage",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/large/button-large-lavender-normal.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "lavender",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/large/button-large-lavender-hover.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "lavender",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/large/button-large-lavender-pressed.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "lavender",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/large/button-large-lavender-disabled.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "lavender",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/large/button-large-turquoise-normal.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "turquoise",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/large/button-large-turquoise-hover.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "turquoise",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/large/button-large-turquoise-pressed.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "turquoise",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/large/button-large-turquoise-disabled.webp",
+      "width": 860,
+      "height": 206,
+      "group": "button-large",
+      "transparent": true,
+      "nine_slice": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      },
+      "color": "turquoise",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/pill/button-pill-blue-normal.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "blue",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/pill/button-pill-blue-hover.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "blue",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/pill/button-pill-blue-pressed.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "blue",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/pill/button-pill-blue-disabled.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "blue",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/pill/button-pill-sand-normal.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "sand",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/pill/button-pill-sand-hover.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "sand",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/pill/button-pill-sand-pressed.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "sand",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/pill/button-pill-sand-disabled.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "sand",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/pill/button-pill-lightgray-normal.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "lightgray",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/pill/button-pill-lightgray-hover.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "lightgray",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/pill/button-pill-lightgray-pressed.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "lightgray",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/pill/button-pill-lightgray-disabled.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "lightgray",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/pill/button-pill-steel-normal.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "steel",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/pill/button-pill-steel-hover.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "steel",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/pill/button-pill-steel-pressed.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "steel",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/pill/button-pill-steel-disabled.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "steel",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/pill/button-pill-cream-normal.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "cream",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/pill/button-pill-cream-hover.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "cream",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/pill/button-pill-cream-pressed.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "cream",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/pill/button-pill-cream-disabled.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "cream",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/pill/button-pill-sage-normal.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "sage",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/pill/button-pill-sage-hover.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "sage",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/pill/button-pill-sage-pressed.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "sage",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/pill/button-pill-sage-disabled.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "sage",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/pill/button-pill-lavender-normal.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "lavender",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/pill/button-pill-lavender-hover.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "lavender",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/pill/button-pill-lavender-pressed.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "lavender",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/pill/button-pill-lavender-disabled.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "lavender",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/pill/button-pill-turquoise-normal.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "turquoise",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/pill/button-pill-turquoise-hover.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "turquoise",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/pill/button-pill-turquoise-pressed.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "turquoise",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/pill/button-pill-turquoise-disabled.webp",
+      "width": 404,
+      "height": 122,
+      "group": "button-pill",
+      "transparent": true,
+      "nine_slice": {
+        "left": 61,
+        "right": 61,
+        "top": 47,
+        "bottom": 47
+      },
+      "color": "turquoise",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/square/button-square-blue-normal.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "blue",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/square/button-square-blue-hover.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "blue",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/square/button-square-blue-pressed.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "blue",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/square/button-square-blue-disabled.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "blue",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/square/button-square-sand-normal.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "sand",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/square/button-square-sand-hover.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "sand",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/square/button-square-sand-pressed.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "sand",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/square/button-square-sand-disabled.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "sand",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/square/button-square-lightgray-normal.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "lightgray",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/square/button-square-lightgray-hover.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "lightgray",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/square/button-square-lightgray-pressed.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "lightgray",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/square/button-square-lightgray-disabled.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "lightgray",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/square/button-square-steel-normal.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "steel",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/square/button-square-steel-hover.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "steel",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/square/button-square-steel-pressed.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "steel",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/square/button-square-steel-disabled.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "steel",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/square/button-square-cream-normal.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "cream",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/square/button-square-cream-hover.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "cream",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/square/button-square-cream-pressed.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "cream",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/square/button-square-cream-disabled.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "cream",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/square/button-square-sage-normal.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "sage",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/square/button-square-sage-hover.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "sage",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/square/button-square-sage-pressed.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "sage",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/square/button-square-sage-disabled.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "sage",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/square/button-square-lavender-normal.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "lavender",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/square/button-square-lavender-hover.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "lavender",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/square/button-square-lavender-pressed.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "lavender",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/square/button-square-lavender-disabled.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "lavender",
+      "state": "disabled"
+    },
+    {
+      "file": "buttons/square/button-square-turquoise-normal.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "turquoise",
+      "state": "normal"
+    },
+    {
+      "file": "buttons/square/button-square-turquoise-hover.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "turquoise",
+      "state": "hover"
+    },
+    {
+      "file": "buttons/square/button-square-turquoise-pressed.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "turquoise",
+      "state": "pressed"
+    },
+    {
+      "file": "buttons/square/button-square-turquoise-disabled.webp",
+      "width": 170,
+      "height": 170,
+      "group": "button-square",
+      "transparent": true,
+      "nine_slice": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      },
+      "color": "turquoise",
+      "state": "disabled"
+    },
+    {
+      "file": "tabs/tab-blue-active.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "blue",
+      "state": "active"
+    },
+    {
+      "file": "tabs/tab-blue-inactive.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "blue",
+      "state": "inactive"
+    },
+    {
+      "file": "chips/chip-blue-normal.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "blue",
+      "state": "normal"
+    },
+    {
+      "file": "chips/chip-blue-selected.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "blue",
+      "state": "selected"
+    },
+    {
+      "file": "tabs/tab-sand-active.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "sand",
+      "state": "active"
+    },
+    {
+      "file": "tabs/tab-sand-inactive.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "sand",
+      "state": "inactive"
+    },
+    {
+      "file": "chips/chip-sand-normal.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "sand",
+      "state": "normal"
+    },
+    {
+      "file": "chips/chip-sand-selected.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "sand",
+      "state": "selected"
+    },
+    {
+      "file": "tabs/tab-lightgray-active.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "lightgray",
+      "state": "active"
+    },
+    {
+      "file": "tabs/tab-lightgray-inactive.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "lightgray",
+      "state": "inactive"
+    },
+    {
+      "file": "chips/chip-lightgray-normal.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "lightgray",
+      "state": "normal"
+    },
+    {
+      "file": "chips/chip-lightgray-selected.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "lightgray",
+      "state": "selected"
+    },
+    {
+      "file": "tabs/tab-steel-active.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "steel",
+      "state": "active"
+    },
+    {
+      "file": "tabs/tab-steel-inactive.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "steel",
+      "state": "inactive"
+    },
+    {
+      "file": "chips/chip-steel-normal.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "steel",
+      "state": "normal"
+    },
+    {
+      "file": "chips/chip-steel-selected.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "steel",
+      "state": "selected"
+    },
+    {
+      "file": "tabs/tab-cream-active.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "cream",
+      "state": "active"
+    },
+    {
+      "file": "tabs/tab-cream-inactive.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "cream",
+      "state": "inactive"
+    },
+    {
+      "file": "chips/chip-cream-normal.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "cream",
+      "state": "normal"
+    },
+    {
+      "file": "chips/chip-cream-selected.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "cream",
+      "state": "selected"
+    },
+    {
+      "file": "tabs/tab-sage-active.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "sage",
+      "state": "active"
+    },
+    {
+      "file": "tabs/tab-sage-inactive.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "sage",
+      "state": "inactive"
+    },
+    {
+      "file": "chips/chip-sage-normal.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "sage",
+      "state": "normal"
+    },
+    {
+      "file": "chips/chip-sage-selected.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "sage",
+      "state": "selected"
+    },
+    {
+      "file": "tabs/tab-lavender-active.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "lavender",
+      "state": "active"
+    },
+    {
+      "file": "tabs/tab-lavender-inactive.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "lavender",
+      "state": "inactive"
+    },
+    {
+      "file": "chips/chip-lavender-normal.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "lavender",
+      "state": "normal"
+    },
+    {
+      "file": "chips/chip-lavender-selected.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "lavender",
+      "state": "selected"
+    },
+    {
+      "file": "tabs/tab-turquoise-active.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "turquoise",
+      "state": "active"
+    },
+    {
+      "file": "tabs/tab-turquoise-inactive.webp",
+      "width": 300,
+      "height": 118,
+      "group": "tab",
+      "transparent": true,
+      "nine_slice": {
+        "left": 34,
+        "right": 34,
+        "top": 36,
+        "bottom": 18
+      },
+      "color": "turquoise",
+      "state": "inactive"
+    },
+    {
+      "file": "chips/chip-turquoise-normal.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "turquoise",
+      "state": "normal"
+    },
+    {
+      "file": "chips/chip-turquoise-selected.webp",
+      "width": 310,
+      "height": 105,
+      "group": "chip",
+      "transparent": true,
+      "nine_slice": {
+        "left": 50,
+        "right": 50,
+        "top": 38,
+        "bottom": 38
+      },
+      "color": "turquoise",
+      "state": "selected"
+    },
+    {
+      "file": "checkboxes/checkbox-blue-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "blue",
+      "state": "empty"
+    },
+    {
+      "file": "radio/radio-blue-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "blue",
+      "state": "empty"
+    },
+    {
+      "file": "checkboxes/checkbox-blue-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "blue",
+      "state": "checked"
+    },
+    {
+      "file": "radio/radio-blue-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "blue",
+      "state": "checked"
+    },
+    {
+      "file": "toggles/toggle-blue-on.webp",
+      "width": 238,
+      "height": 114,
+      "group": "toggle",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "blue",
+      "state": "on"
+    },
+    {
+      "file": "sliders/slider-track-fill-blue.webp",
+      "width": 900,
+      "height": 64,
+      "group": "slider-track",
+      "transparent": true,
+      "nine_slice": {
+        "left": 24,
+        "right": 24,
+        "top": 22,
+        "bottom": 22
+      },
+      "color": "blue",
+      "state": "fill"
+    },
+    {
+      "file": "sliders/slider-thumb-blue-normal.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "blue",
+      "state": "normal"
+    },
+    {
+      "file": "sliders/slider-thumb-blue-hover.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "blue",
+      "state": "hover"
+    },
+    {
+      "file": "checkboxes/checkbox-sand-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sand",
+      "state": "empty"
+    },
+    {
+      "file": "radio/radio-sand-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sand",
+      "state": "empty"
+    },
+    {
+      "file": "checkboxes/checkbox-sand-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sand",
+      "state": "checked"
+    },
+    {
+      "file": "radio/radio-sand-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sand",
+      "state": "checked"
+    },
+    {
+      "file": "toggles/toggle-sand-on.webp",
+      "width": 238,
+      "height": 114,
+      "group": "toggle",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sand",
+      "state": "on"
+    },
+    {
+      "file": "sliders/slider-track-fill-sand.webp",
+      "width": 900,
+      "height": 64,
+      "group": "slider-track",
+      "transparent": true,
+      "nine_slice": {
+        "left": 24,
+        "right": 24,
+        "top": 22,
+        "bottom": 22
+      },
+      "color": "sand",
+      "state": "fill"
+    },
+    {
+      "file": "sliders/slider-thumb-sand-normal.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sand",
+      "state": "normal"
+    },
+    {
+      "file": "sliders/slider-thumb-sand-hover.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sand",
+      "state": "hover"
+    },
+    {
+      "file": "checkboxes/checkbox-lightgray-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lightgray",
+      "state": "empty"
+    },
+    {
+      "file": "radio/radio-lightgray-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lightgray",
+      "state": "empty"
+    },
+    {
+      "file": "checkboxes/checkbox-lightgray-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lightgray",
+      "state": "checked"
+    },
+    {
+      "file": "radio/radio-lightgray-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lightgray",
+      "state": "checked"
+    },
+    {
+      "file": "toggles/toggle-lightgray-on.webp",
+      "width": 238,
+      "height": 114,
+      "group": "toggle",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lightgray",
+      "state": "on"
+    },
+    {
+      "file": "sliders/slider-track-fill-lightgray.webp",
+      "width": 900,
+      "height": 64,
+      "group": "slider-track",
+      "transparent": true,
+      "nine_slice": {
+        "left": 24,
+        "right": 24,
+        "top": 22,
+        "bottom": 22
+      },
+      "color": "lightgray",
+      "state": "fill"
+    },
+    {
+      "file": "sliders/slider-thumb-lightgray-normal.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lightgray",
+      "state": "normal"
+    },
+    {
+      "file": "sliders/slider-thumb-lightgray-hover.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lightgray",
+      "state": "hover"
+    },
+    {
+      "file": "checkboxes/checkbox-steel-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "steel",
+      "state": "empty"
+    },
+    {
+      "file": "radio/radio-steel-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "steel",
+      "state": "empty"
+    },
+    {
+      "file": "checkboxes/checkbox-steel-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "steel",
+      "state": "checked"
+    },
+    {
+      "file": "radio/radio-steel-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "steel",
+      "state": "checked"
+    },
+    {
+      "file": "toggles/toggle-steel-on.webp",
+      "width": 238,
+      "height": 114,
+      "group": "toggle",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "steel",
+      "state": "on"
+    },
+    {
+      "file": "sliders/slider-track-fill-steel.webp",
+      "width": 900,
+      "height": 64,
+      "group": "slider-track",
+      "transparent": true,
+      "nine_slice": {
+        "left": 24,
+        "right": 24,
+        "top": 22,
+        "bottom": 22
+      },
+      "color": "steel",
+      "state": "fill"
+    },
+    {
+      "file": "sliders/slider-thumb-steel-normal.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "steel",
+      "state": "normal"
+    },
+    {
+      "file": "sliders/slider-thumb-steel-hover.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "steel",
+      "state": "hover"
+    },
+    {
+      "file": "checkboxes/checkbox-cream-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "cream",
+      "state": "empty"
+    },
+    {
+      "file": "radio/radio-cream-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "cream",
+      "state": "empty"
+    },
+    {
+      "file": "checkboxes/checkbox-cream-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "cream",
+      "state": "checked"
+    },
+    {
+      "file": "radio/radio-cream-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "cream",
+      "state": "checked"
+    },
+    {
+      "file": "toggles/toggle-cream-on.webp",
+      "width": 238,
+      "height": 114,
+      "group": "toggle",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "cream",
+      "state": "on"
+    },
+    {
+      "file": "sliders/slider-track-fill-cream.webp",
+      "width": 900,
+      "height": 64,
+      "group": "slider-track",
+      "transparent": true,
+      "nine_slice": {
+        "left": 24,
+        "right": 24,
+        "top": 22,
+        "bottom": 22
+      },
+      "color": "cream",
+      "state": "fill"
+    },
+    {
+      "file": "sliders/slider-thumb-cream-normal.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "cream",
+      "state": "normal"
+    },
+    {
+      "file": "sliders/slider-thumb-cream-hover.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "cream",
+      "state": "hover"
+    },
+    {
+      "file": "checkboxes/checkbox-sage-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sage",
+      "state": "empty"
+    },
+    {
+      "file": "radio/radio-sage-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sage",
+      "state": "empty"
+    },
+    {
+      "file": "checkboxes/checkbox-sage-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sage",
+      "state": "checked"
+    },
+    {
+      "file": "radio/radio-sage-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sage",
+      "state": "checked"
+    },
+    {
+      "file": "toggles/toggle-sage-on.webp",
+      "width": 238,
+      "height": 114,
+      "group": "toggle",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sage",
+      "state": "on"
+    },
+    {
+      "file": "sliders/slider-track-fill-sage.webp",
+      "width": 900,
+      "height": 64,
+      "group": "slider-track",
+      "transparent": true,
+      "nine_slice": {
+        "left": 24,
+        "right": 24,
+        "top": 22,
+        "bottom": 22
+      },
+      "color": "sage",
+      "state": "fill"
+    },
+    {
+      "file": "sliders/slider-thumb-sage-normal.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sage",
+      "state": "normal"
+    },
+    {
+      "file": "sliders/slider-thumb-sage-hover.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sage",
+      "state": "hover"
+    },
+    {
+      "file": "checkboxes/checkbox-lavender-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lavender",
+      "state": "empty"
+    },
+    {
+      "file": "radio/radio-lavender-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lavender",
+      "state": "empty"
+    },
+    {
+      "file": "checkboxes/checkbox-lavender-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lavender",
+      "state": "checked"
+    },
+    {
+      "file": "radio/radio-lavender-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lavender",
+      "state": "checked"
+    },
+    {
+      "file": "toggles/toggle-lavender-on.webp",
+      "width": 238,
+      "height": 114,
+      "group": "toggle",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lavender",
+      "state": "on"
+    },
+    {
+      "file": "sliders/slider-track-fill-lavender.webp",
+      "width": 900,
+      "height": 64,
+      "group": "slider-track",
+      "transparent": true,
+      "nine_slice": {
+        "left": 24,
+        "right": 24,
+        "top": 22,
+        "bottom": 22
+      },
+      "color": "lavender",
+      "state": "fill"
+    },
+    {
+      "file": "sliders/slider-thumb-lavender-normal.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lavender",
+      "state": "normal"
+    },
+    {
+      "file": "sliders/slider-thumb-lavender-hover.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lavender",
+      "state": "hover"
+    },
+    {
+      "file": "checkboxes/checkbox-turquoise-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "turquoise",
+      "state": "empty"
+    },
+    {
+      "file": "radio/radio-turquoise-empty.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "turquoise",
+      "state": "empty"
+    },
+    {
+      "file": "checkboxes/checkbox-turquoise-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "turquoise",
+      "state": "checked"
+    },
+    {
+      "file": "radio/radio-turquoise-checked.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "turquoise",
+      "state": "checked"
+    },
+    {
+      "file": "toggles/toggle-turquoise-on.webp",
+      "width": 238,
+      "height": 114,
+      "group": "toggle",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "turquoise",
+      "state": "on"
+    },
+    {
+      "file": "sliders/slider-track-fill-turquoise.webp",
+      "width": 900,
+      "height": 64,
+      "group": "slider-track",
+      "transparent": true,
+      "nine_slice": {
+        "left": 24,
+        "right": 24,
+        "top": 22,
+        "bottom": 22
+      },
+      "color": "turquoise",
+      "state": "fill"
+    },
+    {
+      "file": "sliders/slider-thumb-turquoise-normal.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "turquoise",
+      "state": "normal"
+    },
+    {
+      "file": "sliders/slider-thumb-turquoise-hover.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "turquoise",
+      "state": "hover"
+    },
+    {
+      "file": "checkboxes/checkbox-disabled.webp",
+      "width": 114,
+      "height": 114,
+      "group": "checkbox",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lightgray",
+      "state": "disabled"
+    },
+    {
+      "file": "radio/radio-disabled.webp",
+      "width": 114,
+      "height": 114,
+      "group": "radio",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lightgray",
+      "state": "disabled"
+    },
+    {
+      "file": "toggles/toggle-off.webp",
+      "width": 238,
+      "height": 114,
+      "group": "toggle",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lightgray",
+      "state": "off"
+    },
+    {
+      "file": "toggles/toggle-disabled.webp",
+      "width": 238,
+      "height": 114,
+      "group": "toggle",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lightgray",
+      "state": "disabled"
+    },
+    {
+      "file": "sliders/slider-track-empty.webp",
+      "width": 900,
+      "height": 64,
+      "group": "slider-track",
+      "transparent": true,
+      "nine_slice": {
+        "left": 24,
+        "right": 24,
+        "top": 22,
+        "bottom": 22
+      },
+      "color": "lightgray",
+      "state": "empty"
+    },
+    {
+      "file": "sliders/slider-track-disabled.webp",
+      "width": 900,
+      "height": 64,
+      "group": "slider-track",
+      "transparent": true,
+      "nine_slice": {
+        "left": 24,
+        "right": 24,
+        "top": 22,
+        "bottom": 22
+      },
+      "color": "lightgray",
+      "state": "disabled"
+    },
+    {
+      "file": "sliders/slider-thumb-disabled.webp",
+      "width": 112,
+      "height": 112,
+      "group": "slider-thumb",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "lightgray",
+      "state": "disabled"
+    },
+    {
+      "file": "sliders/slider-complete-example-blue.webp",
+      "width": 900,
+      "height": 126,
+      "group": "slider-example",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "blue",
+      "state": "normal"
+    },
+    {
+      "file": "sliders/slider-complete-example-sage.webp",
+      "width": 900,
+      "height": 126,
+      "group": "slider-example",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "sage",
+      "state": "normal"
+    },
+    {
+      "file": "sliders/slider-complete-example-turquoise.webp",
+      "width": 900,
+      "height": 126,
+      "group": "slider-example",
+      "transparent": true,
+      "nine_slice": null,
+      "color": "turquoise",
+      "state": "normal"
+    }
+  ]
+}
