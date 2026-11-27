@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "neutral",
+  "name": "Акварельная бумага",
+  "width": 1920,
+  "height": 1080,
+  "fill": "#f6f0e6",
+  "camera": {
+    "mode": "cover",
+    "cropX": 0.5,
+    "cropY": 0.5
+  },
+  "nodes": [
+    {
+      "id": "paper",
+      "name": "Бумажный фон",
+      "type": "background",
+      "asset": "assets/neutral/background-v2.webp",
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 0,
+      "visible": true,
+      "anchor": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "sockets": {},
+      "animations": [],
+      "adapt": {
+        "mode": "inherit"
+      },
+      "locked": true
+    }
+  ],
+  "variants": []
+}

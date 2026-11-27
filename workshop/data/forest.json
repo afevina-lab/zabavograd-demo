@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "id": "forest",
+  "name": "Лесная поляна",
+  "width": 1920,
+  "height": 1080,
+  "fill": "#d5e7bf",
+  "camera": {
+    "mode": "width",
+    "cropX": 0.5,
+    "cropY": 0.5
+  },
+  "nodes": [
+    {
+      "id": "background",
+      "name": "Лесной фон",
+      "type": "background",
+      "asset": "assets/themes/forest/forest_background.webp",
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080,
+      "rotation": 0,
+      "opacity": 1,
+      "z": -100,
+      "visible": true,
+      "anchor": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "sockets": {},
+      "animations": [],
+      "adapt": {
+        "mode": "inherit"
+      },
+      "locked": true
+    },
+    {
+      "id": "foreground",
+      "name": "Передний план",
+      "type": "group",
+      "asset": null,
+      "x": 960,
+      "y": 1080,
+      "width": 1920,
+      "height": 1080,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 10,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "sockets": {},
+      "animations": [],
+      "adapt": {
+        "mode": "move-shrink",
+        "ax": 0.5,
+        "ay": 1,
+        "minScale": 0.65,
+        "maxShift": 1200
+      }
+    },
+    {
+      "id": "tree-left",
+      "name": "Левое дерево",
+      "type": "image",
+      "asset": "assets/themes/forest/forest_tree_1.webp",
+      "x": 100,
+      "y": 1080,
+      "width": 650,
+      "height": 731.3874788494078,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 11,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "sockets": {
+        "branch": {
+          "x": 0.72,
+          "y": 0.45
+        }
+      },
+      "animations": [
+        {
+          "type": "sway",
+          "amplitude": 1.2,
+          "period": 10.5
+        }
+      ],
+      "adapt": {
+        "mode": "inherit"
+      },
+      "parent": "foreground",
+      "space": "parent"
+    },
+    {
+      "id": "tree-right",
+      "name": "Правое дерево",
+      "type": "image",
+      "asset": "assets/themes/forest/forest_tree_2.webp",
+      "x": 1820,
+      "y": 1080,
+      "width": 650,
+      "height": 686.7622950819672,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 12,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "sockets": {},
+      "animations": [
+        {
+          "type": "sway",
+          "amplitude": 1,
+          "period": 12.4
+        }
+      ],
+      "adapt": {
+        "mode": "inherit"
+      },
+      "parent": "foreground",
+      "space": "parent"
+    },
+    {
+      "id": "fern",
+      "name": "Папоротник",
+      "type": "image",
+      "asset": "assets/themes/forest/forest_fern.webp",
+      "x": 180,
+      "y": 1080,
+      "width": 350,
+      "height": 319.8551829268293,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 20,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "sockets": {},
+      "animations": [],
+      "adapt": {
+        "mode": "edge",
+        "ax": 0,
+        "ay": 1,
+        "maxShift": 1200
+      }
+    },
+    {
+      "id": "bush",
+      "name": "Куст",
+      "type": "image",
+      "asset": "assets/themes/forest/forest_bush.webp",
+      "x": 1750,
+      "y": 1080,
+      "width": 360,
+      "height": 240,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 21,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "sockets": {},
+      "animations": [],
+      "adapt": {
+        "mode": "edge",
+        "ax": 1,
+        "ay": 1,
+        "maxShift": 1200
+      }
+    },
+    {
+      "id": "flowers",
+      "name": "Цветы",
+      "type": "image",
+      "asset": "assets/themes/forest/forest_flower_patch.webp",
+      "x": 960,
+      "y": 1080,
+      "width": 500,
+      "height": 166.66666666666666,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 22,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "sockets": {},
+      "animations": [],
+      "adapt": {
+        "mode": "edge",
+        "ax": 0.5,
+        "ay": 1,
+        "maxShift": 1200
+      }
+    },
+    {
+      "id": "leaf",
+      "name": "Лист у ветки",
+      "type": "image",
+      "asset": "assets/themes/forest/forest_leaf_birch.webp",
+      "x": 0,
+      "y": 0,
+      "width": 38,
+      "height": 42.81285444234405,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 15,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "sockets": {},
+      "animations": [
+        {
+          "type": "sway",
+          "amplitude": 7,
+          "period": 5
+        }
+      ],
+      "adapt": {
+        "mode": "inherit"
+      },
+      "attachment": {
+        "target": "tree-left",
+        "socket": "branch",
+        "dx": 0,
+        "dy": 0
+      }
+    },
+    {
+      "id": "play-zone",
+      "name": "Игровая зона",
+      "type": "zone",
+      "asset": null,
+      "x": 960,
+      "y": 540,
+      "width": 1000,
+      "height": 580,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 30,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "sockets": {},
+      "animations": [],
+      "adapt": {
+        "mode": "inherit"
+      }
+    }
+  ],
+  "variants": [
+    {
+      "id": "portrait",
+      "name": "Портретная композиция",
+      "range": {
+        "maxAspect": 1,
+        "minWidth": 600
+      },
+      "camera": {
+        "mode": "height",
+        "cropX": 0.5,
+        "cropY": 0.5
+      },
+      "nodes": {
+        "foreground": {
+          "adapt": {
+            "minScale": 0.55
+          }
+        },
+        "tree-left": {
+          "x": 650
+        },
+        "tree-right": {
+          "x": 1270
+        },
+        "flowers": {
+          "width": 350
+        },
+        "play-zone": {
+          "width": 480,
+          "height": 650
+        }
+      }
+    },
+    {
+      "id": "small-portrait",
+      "name": "Компактный портрет",
+      "extends": "portrait",
+      "range": {
+        "maxAspect": 1,
+        "maxWidth": 600
+      },
+      "nodes": {
+        "tree-left": {
+          "width": 480
+        },
+        "tree-right": {
+          "width": 480
+        }
+      }
+    }
+  ]
+}

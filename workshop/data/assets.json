@@ -1,0 +1,182 @@
+[
+  {
+    "id": "forest_background",
+    "name": "forest_background",
+    "path": "assets/themes/forest/forest_background.webp",
+    "width": 1672,
+    "height": 941,
+    "alpha": true,
+    "sha256": "71c231e1e9bb41cffd671b66868d10e0d97388188fea8f348e92043b71589056",
+    "version": 1,
+    "contentBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 1672,
+      "height": 941
+    },
+    "contentBoundsStatus": "canvas-conservative",
+    "sockets": {}
+  },
+  {
+    "id": "forest_bush",
+    "name": "forest_bush",
+    "path": "assets/themes/forest/forest_bush.webp",
+    "width": 1536,
+    "height": 1024,
+    "alpha": true,
+    "sha256": "b7c1b666b0123ce247372b04eaeeec53f7f53caf424037628cf42b09ed126e5f",
+    "version": 1,
+    "contentBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 1024
+    },
+    "contentBoundsStatus": "canvas-conservative",
+    "sockets": {}
+  },
+  {
+    "id": "forest_fern",
+    "name": "forest_fern",
+    "path": "assets/themes/forest/forest_fern.webp",
+    "width": 1312,
+    "height": 1199,
+    "alpha": true,
+    "sha256": "18f25a021b6753dd1153f0c4ea10ab2013dcb4c2ad40cce4cf6b632a9246879a",
+    "version": 1,
+    "contentBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 1312,
+      "height": 1199
+    },
+    "contentBoundsStatus": "canvas-conservative",
+    "sockets": {}
+  },
+  {
+    "id": "forest_flower_patch",
+    "name": "forest_flower_patch",
+    "path": "assets/themes/forest/forest_flower_patch.webp",
+    "width": 2172,
+    "height": 724,
+    "alpha": true,
+    "sha256": "bf8e156bbcbf207f3768d93bf858815d9cbb694381ff64fb1ca36137aaddc5e5",
+    "version": 1,
+    "contentBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 2172,
+      "height": 724
+    },
+    "contentBoundsStatus": "canvas-conservative",
+    "sockets": {}
+  },
+  {
+    "id": "forest_leaf_birch",
+    "name": "forest_leaf_birch",
+    "path": "assets/themes/forest/forest_leaf_birch.webp",
+    "width": 529,
+    "height": 596,
+    "alpha": true,
+    "sha256": "6e2f3fc5f59eb7c079e07464fc571cd09fd555b276e62adbd1fd7de1a8cbe0f0",
+    "version": 1,
+    "contentBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 529,
+      "height": 596
+    },
+    "contentBoundsStatus": "canvas-conservative",
+    "sockets": {}
+  },
+  {
+    "id": "forest_leaf_oak",
+    "name": "forest_leaf_oak",
+    "path": "assets/themes/forest/forest_leaf_oak.webp",
+    "width": 604,
+    "height": 600,
+    "alpha": true,
+    "sha256": "efa93ed0a78e180bf77eb6c07237af8fed8cf1da774be771ea4af631dcabc590",
+    "version": 1,
+    "contentBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 604,
+      "height": 600
+    },
+    "contentBoundsStatus": "canvas-conservative",
+    "sockets": {}
+  },
+  {
+    "id": "forest_leaf_oval",
+    "name": "forest_leaf_oval",
+    "path": "assets/themes/forest/forest_leaf_oval.webp",
+    "width": 637,
+    "height": 485,
+    "alpha": true,
+    "sha256": "81fdf238255555888a904af6bfa9daa89b54eb42163c3ed5cb0c7e6b4999650c",
+    "version": 1,
+    "contentBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 637,
+      "height": 485
+    },
+    "contentBoundsStatus": "canvas-conservative",
+    "sockets": {}
+  },
+  {
+    "id": "forest_tree_1",
+    "name": "forest_tree_1",
+    "path": "assets/themes/forest/forest_tree_1.webp",
+    "width": 1182,
+    "height": 1330,
+    "alpha": true,
+    "sha256": "17bc1f766e6c17416317d6080b8f89015ef70bddd12b4904ad371a5672cd8142",
+    "version": 1,
+    "contentBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 1182,
+      "height": 1330
+    },
+    "contentBoundsStatus": "canvas-conservative",
+    "sockets": {}
+  },
+  {
+    "id": "forest_tree_2",
+    "name": "forest_tree_2",
+    "path": "assets/themes/forest/forest_tree_2.webp",
+    "width": 1220,
+    "height": 1289,
+    "alpha": true,
+    "sha256": "2f2f0de2a62acac8f119a1030aea63abde82e12eaf8d3c456c383a36940c0796",
+    "version": 1,
+    "contentBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 1220,
+      "height": 1289
+    },
+    "contentBoundsStatus": "canvas-conservative",
+    "sockets": {}
+  },
+  {
+    "id": "background-v2",
+    "name": "background-v2",
+    "path": "assets/neutral/background-v2.webp",
+    "width": 1199,
+    "height": 675,
+    "alpha": false,
+    "sha256": "07af0439f95aa26fcae9a0a4bee7ead25ce7f85babeb550eb0252a8671c2ad5a",
+    "version": 1,
+    "contentBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 1199,
+      "height": 675
+    },
+    "contentBoundsStatus": "canvas-conservative",
+    "sockets": {}
+  }
+]
