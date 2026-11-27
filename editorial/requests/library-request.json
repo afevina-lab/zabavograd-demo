@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "mode": "query",
+  "command": "sqlite",
+  "source_sha256": "2342765ab2aae827ab89a2b9bbdcde08b9fbb14ccc5ba35a16879a12d51c5526",
+  "options": {
+    "weight": 100,
+    "has_image": true,
+    "sounds": [
+      "к"
+    ],
+    "exclude_sounds": [
+      "р",
+      "р'"
+    ],
+    "limit": 10
+  }
+}
