@@ -7,3 +7,6 @@ public/library.json
 dist-visual/
 
 __pycache__/
+
+# Generated offline catalogue preview
+/outputs/Библиотека.html

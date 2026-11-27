@@ -15,6 +15,9 @@ on:
       - 'library.json'
       - 'editorial/library-tasks.json'
       - 'scripts/build-library-index.cjs'
+      - 'scripts/build-library-v2-view.cjs'
+      - 'scripts/check-library-preview.cjs'
+      - 'outputs/Проверка-смысловых-связей.html'
       - 'scripts/library-toolkit.cjs'
       - 'tests/library-index.test.ts'
       - 'tests/library-toolkit.test.ts'
@@ -34,6 +37,9 @@ on:
       - 'library.json'
       - 'editorial/library-tasks.json'
       - 'scripts/build-library-index.cjs'
+      - 'scripts/build-library-v2-view.cjs'
+      - 'scripts/check-library-preview.cjs'
+      - 'outputs/Проверка-смысловых-связей.html'
       - 'scripts/library-toolkit.cjs'
       - 'tests/library-index.test.ts'
       - 'tests/library-toolkit.test.ts'
@@ -56,6 +62,12 @@ jobs:
         run: node --experimental-strip-types --test tests/library-toolkit.test.ts tests/library-index.test.ts
       - name: Generate compact index from checked-out source
         run: node scripts/build-library-index.cjs "$RUNNER_TEMP/library-index"
+      - name: Generate and verify downloadable catalogue preview
+        run: |
+          node scripts/build-library-v2-view.cjs
+          node scripts/check-library-preview.cjs
+          mkdir -p "$RUNNER_TEMP/library-index/preview"
+          cp "outputs/Библиотека.html" "outputs/Проверка-смысловых-связей.html" "$RUNNER_TEMP/library-index/preview/"
       - uses: actions/upload-artifact@v4
         with:
           name: library-index
@@ -73,12 +85,12 @@ jobs:
         with:
           name: library-index
           path: ${{ runner.temp }}/library-index
-      - name: Publish only the generated editorial index
+      - name: Publish only generated editorial index and catalogue preview
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin main
-          git diff --quiet HEAD FETCH_HEAD -- outputs/library-v2.json outputs/library-v2-auto-analysis.json outputs/library-syllable-structure.json library.json editorial/library-tasks.json scripts/build-library-index.cjs scripts/library-toolkit.cjs outputs/library-modules editorial/library-source-mode.json scripts/library-source.cjs scripts/library-store.cjs scripts/library-storage-codec.cjs scripts/library-semantic-proposals.cjs || { echo "Newer source; refusing stale index"; exit 1; }
+          git diff --quiet HEAD FETCH_HEAD -- outputs/library-v2.json outputs/library-v2-auto-analysis.json outputs/library-syllable-structure.json library.json editorial/library-tasks.json scripts/build-library-index.cjs scripts/library-toolkit.cjs outputs/library-modules editorial/library-source-mode.json scripts/library-source.cjs scripts/library-store.cjs scripts/library-storage-codec.cjs scripts/library-semantic-proposals.cjs scripts/build-library-v2-view.cjs scripts/check-library-preview.cjs 'outputs/Проверка-смысловых-связей.html' .github/workflows/library-index.yml || { echo "Newer source; refusing stale index"; exit 1; }
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           previous=$(git ls-remote origin refs/heads/library-index | cut -f1)
