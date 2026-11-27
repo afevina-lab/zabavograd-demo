@@ -26,7 +26,7 @@ npm run build
 npm run library:refresh
 ```
 
-Редакторские HTML формируются из канонического источника. `scripts/export-library.cjs` формирует игровой JSON. Публикация `gh-pages` собирается из проверенного `main`.
+HTML-просмотр библиотеки генерируется из канонического источника локально (`node scripts/build-library-v2-view.cjs`), не хранится в `main`. Проверенный HTML доступен в [library-index/preview](https://github.com/afevina-lab/zabavograd-demo/tree/library-index/preview) и артефакте `library-index` после успешного запуска. Для актуальности сверять SHA источника. Остальные локальные редакторские HTML не удалены. `scripts/export-library.cjs` формирует игровой JSON. Публикация `gh-pages` собирается из проверенного `main`.
 
 ## Архитектура и визуальные решения
 
