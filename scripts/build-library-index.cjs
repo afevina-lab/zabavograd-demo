@@ -6,7 +6,7 @@ const {index}=require('./library-toolkit.cjs');
 const ROOT=path.resolve(__dirname,'..');
 const sha256=b=>crypto.createHash('sha256').update(b).digest('hex');
 const gitBlob=b=>crypto.createHash('sha1').update('blob '+b.length+'\0').update(b).digest('hex');
-const paths={master:'outputs/library-v2.json',draft:'outputs/library-v2-auto-analysis.json',syllables:'outputs/library-syllable-structure.json',runtime:'library.json',tasks:'editorial/library-tasks.json'};
+const paths={master:'outputs/library-modules',syllables:'outputs/library-syllable-structure.json',runtime:'library.json',tasks:'editorial/library-tasks.json'};
 const W=[100,70,50,30,20,10,0];
 const cmp=(a,b)=>a<b?-1:a>b?1:0;
 function summary(rows,key){const m=new Map();for(const r of rows){const k=key(r);m.set(k,(m.get(k)||0)+1);}return Object.fromEntries([...m].sort((a,b)=>cmp(a[0],b[0])));}
@@ -32,25 +32,24 @@ function relationIndex(db,byId){
  }
  return counts;
 }
-function build(db,draft,syll,meta,tasks){
- const byId=index(db),draftById=new Map();
- for(const row of draft?.entries||[]){if(draftById.has(row.id))throw Error('Duplicate machine analysis '+row.id);draftById.set(row.id,row);}
+function build(db,syll,meta,tasks){
+ const byId=index(db);
  const relations=relationIndex(db,byId),syllTypes=new Map();
  const semanticPending=require('./library-semantic-proposals.cjs').counts(db);
  const syllFresh=Boolean(syll?.source?.canonical_blob_sha&&syll.source.canonical_blob_sha===meta.master.git_blob&&syll.source.blob_sha===meta.runtime?.git_blob);
  if(syllFresh)for(const [type,ids] of Object.entries(syll.groups||{}))for(const id of ids){
   assert(byId.has(id),'Unknown syllable ID '+id);assert(!syllTypes.has(id),'Duplicate syllable group membership '+id);syllTypes.set(id,type);
  }
- const draftSourceKnown=typeof draft?.source==='object'&&draft.source?.canonical_blob_sha===meta.master.git_blob;
+ const draftSourceKnown=false; // Retained historical draft residuals are not a fresh analysis.
  const all=[...byId.values()].map(e=>{
-  const d=draftById.get(e.id),draftMatches=d?.lemma===e.lemma;
+  const d=e.machine_analysis?.historical_draft,draftMatches=d?.lemma===e.lemma&&(d.meaning??null)===(e.meaning??null);
   const weight=e.selection?.base_weight??null;
   const storedPh=hasTokens(e.phonetic_tags?.data)||hasTokens(e.machine_analysis?.phonetic);
   const storedForms=hasForms(e.morphology?.data?.automatic_proposal?.forms)||hasForms(e.machine_analysis?.morphology?.forms);
   const rel=relations.get(e.id)||{total:0,by_type:{},verified:0,suggested:0};
   return {id:e.id,lemma:e.lemma,weight,kind:e.kind??null,pos:e.part_of_speech??null,
    categories:(e.categories||[]).map(c=>c.path),
-   phonetic:{status:status(e.phonetic_tags),stored_tokens:storedPh,review_proposal:e.phonetic_tags?.review_proposal?.status==='suggested',draft_status:draftMatches?status(d.phonetic):null,draft_tokens:draftMatches?hasTokens(d.phonetic):false},
+   phonetic:{status:status(e.phonetic_tags),stored_tokens:storedPh,review_proposal:e.phonetic_tags?.review_proposal?.status==='suggested',draft_status:draftMatches?status(d.phonetic):null,draft_tokens:draftMatches?d.had_sound_tokens===true:false},
    morphology:{status:status(e.morphology),stored_candidate_forms:Boolean(storedForms),draft_status:draftMatches?status(d.morphology):null},
    metadata_status:e.metadata_completion||null,
    syllable_type:syllFresh?(syllTypes.get(e.id)??null):null,
@@ -105,7 +104,7 @@ function main(){
   const raw=source?Buffer.from(source.raw,'utf8'):fs.readFileSync(path.join(ROOT,p));meta[key]={path:source?.mode==='modules'?'generated V2 from modules':p,sha256:sha256(raw),git_blob:gitBlob(raw),bytes:raw.length,...(source?{mode:source.mode}: {})};
   if(key!=='runtime')data[key]=JSON.parse(raw);
  }
- const built=build(data.master,data.draft,data.syllables,meta,data.tasks);
+ const built=build(data.master,data.syllables,meta,data.tasks);
  fs.mkdirSync(output,{recursive:true});
  function write(name,value){const file=path.join(output,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(value,null,2)+'\n');}
  write('manifest.json',built.manifest);

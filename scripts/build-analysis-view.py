@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 """Build a standalone sortable HTML viewer for pending-word analysis drafts."""
 import json
+import argparse
 from pathlib import Path
 
-ROOT=Path(__file__).resolve().parent.parent
-data=json.loads((ROOT/"outputs/library-v2-auto-analysis.json").read_text(encoding="utf-8"))
-out=ROOT/"outputs/Анализ-слов-v2.html"
+parser=argparse.ArgumentParser()
+parser.add_argument("draft", type=Path)
+parser.add_argument("output", type=Path)
+args=parser.parse_args()
+data=json.loads(args.draft.read_text(encoding="utf-8"))
+out=args.output
+if out.exists():
+    parser.error("Output must not exist")
 rows=[]
 for entry in data["entries"]:
  p=entry["phonetic"]
@@ -181,5 +187,6 @@ doc("export").onclick=()=>{
 showStats();filterRows();
 })();
 </script></main></body></html>"""
-out.write_text(page.replace("DATA_REPLACE",payload),encoding="utf-8")
+with out.open("x",encoding="utf-8") as f:
+    f.write(page.replace("DATA_REPLACE",payload))
 print("Built standalone review HTML:",out,len(rows),"words")
