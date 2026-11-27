@@ -1,30 +1,5 @@
 [
   {
-    "id": "lex-v2-d183d0b4d0b8d0b2d0bbd0b5d0bdd0b8d0b5",
-    "lemma": "удивление",
-    "weight": 70
-  },
-  {
-    "id": "lex-v2-d183d0bbd0b8d182d0bad0b0",
-    "lemma": "улитка",
-    "weight": 70
-  },
-  {
-    "id": "lex-v2-d183d0bbd18bd0b1d0bad0b0",
-    "lemma": "улыбка",
-    "weight": 70
-  },
-  {
-    "id": "lex-v2-d183d185d0be",
-    "lemma": "ухо",
-    "weight": 70
-  },
-  {
-    "id": "lex-v2-d183d187d0b8d182d0b5d0bbd18c",
-    "lemma": "учитель",
-    "weight": 70
-  },
-  {
     "id": "lex-v2-d187d0b5d0bbd0bed0b2d0b5d0ba",
     "lemma": "человек",
     "weight": 70
@@ -50,11 +25,6 @@
     "weight": 70
   },
   {
-    "id": "ru-editorial-gap-20261123-4aa311850100a8de",
-    "lemma": "будка",
-    "weight": 70
-  },
-  {
     "id": "ru-editorial-gap-20261123-4b2dab1fc64f76df",
     "lemma": "улей",
     "weight": 70
@@ -72,16 +42,6 @@
   {
     "id": "ru-editorial-gap-20261123-7d873ad573e2697f",
     "lemma": "муравейник",
-    "weight": 70
-  },
-  {
-    "id": "ru-editorial-gap-20261123-c12cd41bb4f37ba3",
-    "lemma": "курятник",
-    "weight": 70
-  },
-  {
-    "id": "ru-editorial-gap-20261123-d84927bcdfaf8b76",
-    "lemma": "коровник",
     "weight": 70
   },
   {
@@ -190,13 +150,53 @@
     "weight": 70
   },
   {
-    "id": "ru-home-20261105-624f6b16",
-    "lemma": "швейная машина",
+    "id": "ru-home-20261105-6e538a00",
+    "lemma": "туалет",
     "weight": 70
   },
   {
-    "id": "ru-home-20261105-6e538a00",
-    "lemma": "туалет",
+    "id": "ru-home-20261105-6f93de3a",
+    "lemma": "салфетка",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-86363d1",
+    "lemma": "пакет",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-89d8c778",
+    "lemma": "швабра",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-90406b80",
+    "lemma": "спальня",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-91ca6828",
+    "lemma": "балкон",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-993dbbb3",
+    "lemma": "линейка",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-9c11b779",
+    "lemma": "скатерть",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-9e665f70",
+    "lemma": "обогреватель",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-a9b0740",
+    "lemma": "принтер",
     "weight": 70
   }
 ]

@@ -1,5 +1,1041 @@
 [
   {
+    "id": "ru-action-20261109-0131",
+    "lemma": "плавать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Движение и положение тела/Передвижение"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0132",
+    "lemma": "плакать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Эмоции и реакции"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "contrasts_with": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0133",
+    "lemma": "плыть",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Движение и положение тела/Передвижение"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0134",
+    "lemma": "поворачиваться",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Движение и положение тела/Положение и движения тела"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0135",
+    "lemma": "повторять",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Речь и общение"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0136",
+    "lemma": "поднимать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Повседневные действия/Действия с предметами"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0137",
+    "lemma": "подниматься",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Движение и положение тела/Передвижение"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0138",
+    "lemma": "подпрыгивать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Движение и положение тела/Положение и движения тела"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0139",
+    "lemma": "ползать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Движение и положение тела/Передвижение"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0140",
+    "lemma": "ползти",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Движение и положение тела/Передвижение"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0141",
+    "lemma": "поливать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Природа и растения"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "used_for": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0142",
+    "lemma": "полоскать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Уборка"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0143",
+    "lemma": "получать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Повседневные действия/Действия с предметами"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "contrasts_with": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0144",
+    "lemma": "помнить",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Мышление и обучение"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0145",
+    "lemma": "помогать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Забота и отношения"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0146",
+    "lemma": "понимать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Мышление и обучение"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0147",
+    "lemma": "посыпать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Приготовление пищи"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0148",
+    "lemma": "прибивать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Ремонт"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "used_for": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0149",
+    "lemma": "приглашать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Забота и отношения"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0150",
+    "lemma": "приклеивать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Ремонт"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "same_root": 2
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0151",
+    "lemma": "приносить",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Повседневные действия/Действия с предметами"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0152",
+    "lemma": "приседать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Движение и положение тела/Положение и движения тела"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0153",
+    "lemma": "приходить",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Движение и положение тела/Передвижение"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 6,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 5
+      },
+      "verified": 6,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0154",
+    "lemma": "причёсываться",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Повседневные действия/Самообслуживание и гигиена"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0155",
+    "lemma": "пришивать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Стирка и уход за одеждой"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 5,
+      "by_type": {
+        "same_root": 5
+      },
+      "verified": 5,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0156",
+    "lemma": "пробовать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Повседневные действия/Еда и питьё",
+      "Действия/Восприятие и внимание"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0157",
+    "lemma": "проверять",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Мышление и обучение"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-action-20261109-0158",
+    "lemma": "провожать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Забота и отношения"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
     "id": "ru-action-20261109-0159",
     "lemma": "продолжать",
     "weight": 0,
@@ -407,1048 +1443,6 @@
     "pos": "verb",
     "categories": [
       "Действия/Изменение состояния и явления"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0171",
-    "lemma": "разбирать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Повседневные действия/Действия с предметами"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 1,
-      "by_type": {
-        "contrasts_with": 1
-      },
-      "verified": 1,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0172",
-    "lemma": "развязывать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Повседневные действия/Самообслуживание и гигиена"
-    ],
-    "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": "needs_review",
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "pending_automatic_analysis",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 3,
-      "by_type": {
-        "antonym": 1,
-        "same_root": 2
-      },
-      "verified": 3,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0173",
-    "lemma": "разговаривать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Речь и общение"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 1,
-      "by_type": {
-        "same_root": 1
-      },
-      "verified": 1,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0174",
-    "lemma": "раздеваться",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Повседневные действия/Самообслуживание и гигиена"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 1,
-      "by_type": {
-        "antonym": 1
-      },
-      "verified": 1,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0175",
-    "lemma": "разливать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Приготовление пищи"
-    ],
-    "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": "needs_review",
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "pending_automatic_analysis",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0176",
-    "lemma": "разуваться",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Повседневные действия/Самообслуживание и гигиена"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 1,
-      "by_type": {
-        "antonym": 1
-      },
-      "verified": 1,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0177",
-    "lemma": "раскладывать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Повседневные действия/Действия с предметами",
-      "Действия/Уборка"
-    ],
-    "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": "needs_review",
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "pending_automatic_analysis",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 3,
-      "by_type": {
-        "antonym": 1,
-        "same_root": 2
-      },
-      "verified": 3,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0178",
-    "lemma": "раскрашивать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Игры и творчество"
-    ],
-    "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": "needs_review",
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "pending_automatic_analysis",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 3,
-      "by_type": {
-        "same_root": 3
-      },
-      "verified": 3,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0179",
-    "lemma": "рассказывать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Речь и общение"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0180",
-    "lemma": "рассматривать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Восприятие и внимание"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0181",
-    "lemma": "расстёгивать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Повседневные действия/Самообслуживание и гигиена"
-    ],
-    "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": "needs_review",
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "pending_automatic_analysis",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 1,
-      "by_type": {
-        "antonym": 1
-      },
-      "verified": 1,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0182",
-    "lemma": "расти",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Природа и растения"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 3,
-      "by_type": {
-        "same_root": 3
-      },
-      "verified": 3,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0183",
-    "lemma": "расчёсывать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Повседневные действия/Самообслуживание и гигиена"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 1,
-      "by_type": {
-        "used_for": 1
-      },
-      "verified": 1,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0184",
-    "lemma": "расчёсываться",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Повседневные действия/Самообслуживание и гигиена"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0185",
-    "lemma": "ремонтировать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Ремонт"
-    ],
-    "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": "needs_review",
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "pending_automatic_analysis",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 1,
-      "by_type": {
-        "synonym": 1
-      },
-      "verified": 1,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0186",
-    "lemma": "решать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Мышление и обучение"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0187",
-    "lemma": "рисовать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Игры и творчество"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 7,
-      "by_type": {
-        "used_for": 7
-      },
-      "verified": 7,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0188",
-    "lemma": "рыхлить",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Природа и растения"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0189",
-    "lemma": "садиться",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Движение и положение тела/Положение и движения тела"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0190",
-    "lemma": "сажать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Природа и растения"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0191",
-    "lemma": "светить",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Изменение состояния и явления"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 3,
-      "by_type": {
-        "same_root": 3
-      },
-      "verified": 3,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0192",
-    "lemma": "сердиться",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Эмоции и реакции"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0193",
-    "lemma": "сидеть",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Движение и положение тела/Положение и движения тела"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 5,
-      "by_type": {
-        "used_for": 5
-      },
-      "verified": 5,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0194",
-    "lemma": "сказать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Речь и общение"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0195",
-    "lemma": "скакать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Движение и положение тела/Передвижение"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0196",
-    "lemma": "скучать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Эмоции и реакции"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0197",
-    "lemma": "слушать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Речь и общение",
-      "Действия/Восприятие и внимание"
-    ],
-    "phonetic": {
-      "status": "automatic_candidate_needs_review",
-      "stored_tokens": true,
-      "review_proposal": false,
-      "draft_status": "candidate_needs_review",
-      "draft_tokens": true
-    },
-    "morphology": {
-      "status": "automatic_candidate_needs_review",
-      "stored_candidate_forms": true,
-      "draft_status": "candidate_needs_review"
-    },
-    "metadata_status": {
-      "speech": "automatic_candidate_needs_review",
-      "forms": "automatic_candidate_needs_review",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 1,
-      "by_type": {
-        "used_for": 1
-      },
-      "verified": 1,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-action-20261109-0198",
-    "lemma": "слышать",
-    "weight": 0,
-    "kind": "word",
-    "pos": "verb",
-    "categories": [
-      "Действия/Восприятие и внимание"
     ],
     "phonetic": {
       "status": "automatic_candidate_needs_review",

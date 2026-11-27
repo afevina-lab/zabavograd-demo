@@ -1,115 +1,5 @@
 [
   {
-    "id": "ru-noun-20261109-0049",
-    "lemma": "скрипка",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-20261109-0050",
-    "lemma": "флейта",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-20261109-0052",
-    "lemma": "бубен",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-20261109-0060",
-    "lemma": "какао",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-20261109-0064",
-    "lemma": "омлет",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-20261109-0074",
-    "lemma": "самосвал",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-20261109-0081",
-    "lemma": "площадь",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-20261109-0088",
-    "lemma": "библиотека",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-20261109-0090",
-    "lemma": "ферма",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-20261109-0093",
-    "lemma": "луг",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-20261109-0098",
-    "lemma": "водопад",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-extra-20261109-002",
-    "lemma": "запеканка",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-extra-20261109-006",
-    "lemma": "кисель",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-extra-20261109-007",
-    "lemma": "лимонад",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-extra-20261109-012",
-    "lemma": "пряник",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-extra-20261109-013",
-    "lemma": "вафля",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-extra-20261109-018",
-    "lemma": "лото",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-extra-20261109-019",
-    "lemma": "домино",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-extra-20261109-027",
-    "lemma": "музей",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-extra-20261109-028",
-    "lemma": "фонтан",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-extra-20261109-036",
-    "lemma": "молния",
-    "weight": 50
-  },
-  {
-    "id": "ru-noun-extra-20261109-039",
-    "lemma": "океан",
-    "weight": 50
-  },
-  {
     "id": "ru-plant-20261104-d0b0d181d182d180d0b0",
     "lemma": "астра",
     "weight": 50
@@ -198,5 +88,115 @@
     "id": "ru-plant-20261104-d181d0b5d0bcd18f",
     "lemma": "семя",
     "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d184d0b0d181d0bed0bbd18c",
+    "lemma": "фасоль",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d186d0b2d0b5d182d0bdd0b0d18f20d0bad0b0d0bfd183d181d182d0b0",
+    "lemma": "цветная капуста",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-004",
+    "lemma": "баран",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d0b1d180d0bed0b2d18c",
+    "lemma": "бровь",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d0bcd0b0d180d182",
+    "lemma": "март",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d184d0b5d180d0bcd0b5d180",
+    "lemma": "фермер",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d184d180d183d0bad182",
+    "lemma": "фрукт",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d185d180d183d181d182",
+    "lemma": "хруст",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d186d0b8d184d180d0b0",
+    "lemma": "цифра",
+    "weight": 50
+  },
+  {
+    "id": "ru-sense-20261105-uroven-tool",
+    "lemma": "уровень",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0b1d183d181d18b",
+    "lemma": "бусы",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0b2d0b0d182d0b0",
+    "lemma": "вата",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0b7d0b0d0bb",
+    "lemma": "зал",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0bcd0bed185",
+    "lemma": "мох",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0bcd183d0bad0b0",
+    "lemma": "мука",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0bfd0b5d0bdd0b0",
+    "lemma": "пена",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0bfd183d185",
+    "lemma": "пух",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d181d0b5d0bdd0be",
+    "lemma": "сено",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d188d183d0bc",
+    "lemma": "шум",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d18dd185d0be",
+    "lemma": "эхо",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d18fd0bcd0b0",
+    "lemma": "яма",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0b0d0bdd182d0b8d0bbd0bed0bfd0b0",
+    "lemma": "антилопа",
+    "weight": 30
   }
 ]

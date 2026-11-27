@@ -1,115 +1,5 @@
 [
   {
-    "id": "ru-plant-20261104-d184d0b0d181d0bed0bbd18c",
-    "lemma": "фасоль",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d186d0b2d0b5d182d0bdd0b0d18f20d0bad0b0d0bfd183d181d182d0b0",
-    "lemma": "цветная капуста",
-    "weight": 50
-  },
-  {
-    "id": "ru-r-004",
-    "lemma": "баран",
-    "weight": 50
-  },
-  {
-    "id": "ru-r-add-d0b1d180d0bed0b2d18c",
-    "lemma": "бровь",
-    "weight": 50
-  },
-  {
-    "id": "ru-r-add-d0bcd0b0d180d182",
-    "lemma": "март",
-    "weight": 50
-  },
-  {
-    "id": "ru-r-add-d184d0b5d180d0bcd0b5d180",
-    "lemma": "фермер",
-    "weight": 50
-  },
-  {
-    "id": "ru-r-add-d184d180d183d0bad182",
-    "lemma": "фрукт",
-    "weight": 50
-  },
-  {
-    "id": "ru-r-add-d185d180d183d181d182",
-    "lemma": "хруст",
-    "weight": 50
-  },
-  {
-    "id": "ru-r-add-d186d0b8d184d180d0b0",
-    "lemma": "цифра",
-    "weight": 50
-  },
-  {
-    "id": "ru-sense-20261105-uroven-tool",
-    "lemma": "уровень",
-    "weight": 50
-  },
-  {
-    "id": "useful-20261113-d0b1d183d181d18b",
-    "lemma": "бусы",
-    "weight": 50
-  },
-  {
-    "id": "useful-20261113-d0b2d0b0d182d0b0",
-    "lemma": "вата",
-    "weight": 50
-  },
-  {
-    "id": "useful-20261113-d0b7d0b0d0bb",
-    "lemma": "зал",
-    "weight": 50
-  },
-  {
-    "id": "useful-20261113-d0bcd0bed185",
-    "lemma": "мох",
-    "weight": 50
-  },
-  {
-    "id": "useful-20261113-d0bcd183d0bad0b0",
-    "lemma": "мука",
-    "weight": 50
-  },
-  {
-    "id": "useful-20261113-d0bfd0b5d0bdd0b0",
-    "lemma": "пена",
-    "weight": 50
-  },
-  {
-    "id": "useful-20261113-d0bfd183d185",
-    "lemma": "пух",
-    "weight": 50
-  },
-  {
-    "id": "useful-20261113-d181d0b5d0bdd0be",
-    "lemma": "сено",
-    "weight": 50
-  },
-  {
-    "id": "useful-20261113-d188d183d0bc",
-    "lemma": "шум",
-    "weight": 50
-  },
-  {
-    "id": "useful-20261113-d18dd185d0be",
-    "lemma": "эхо",
-    "weight": 50
-  },
-  {
-    "id": "useful-20261113-d18fd0bcd0b0",
-    "lemma": "яма",
-    "weight": 50
-  },
-  {
-    "id": "lex-v2-d0b0d0bdd182d0b8d0bbd0bed0bfd0b0",
-    "lemma": "антилопа",
-    "weight": 30
-  },
-  {
     "id": "lex-v2-d0b1d0bed0b3d0bed0bcd0bed0bb",
     "lemma": "богомол",
     "weight": 30
@@ -197,6 +87,116 @@
   {
     "id": "lex-v2-d0bcd0bed180d181d0bad0b0d18f20d187d0b5d180d0b5d0bfd0b0d185d0b0",
     "lemma": "морская черепаха",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0bed0b920d0bad0bed0bdd191d0ba",
+    "lemma": "морской конёк",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0bed0b920d0bad0bed182d0b8d0ba",
+    "lemma": "морской котик",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0bed0b920d191d0b6",
+    "lemma": "морской ёж",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed182d18bd0bbd191d0ba",
+    "lemma": "мотылёк",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bed0bad183d0bdd18c",
+    "lemma": "окунь",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bed180d0bbd191d0bdd0bed0ba",
+    "lemma": "орлёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bfd0b0d0bdd182d0b5d180d0b0",
+    "lemma": "пантера",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bfd0b5d0bbd0b8d0bad0b0d0bd",
+    "lemma": "пеликан",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bfd18fd182d0bad0b0",
+    "lemma": "пятка",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d180d18bd0b1d0b02dd0bad0bbd0bed183d0bd",
+    "lemma": "рыба-клоун",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0b2d0b5d180d187d0bed0ba",
+    "lemma": "сверчок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0b2d0b5d182d0bbd18fd187d0bed0ba",
+    "lemma": "светлячок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0b2d0b8d180d0b8d181d182d0b5d0bbd18c",
+    "lemma": "свиристель",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bad0b0d182",
+    "lemma": "скат",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bad0bed180d0bfd0b8d0bed0bd",
+    "lemma": "скорпион",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bbd0b8d0b7d0b5d0bdd18c",
+    "lemma": "слизень",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bed0b2d191d0bdd0bed0ba",
+    "lemma": "совёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bed0bad0bed0bb",
+    "lemma": "сокол",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bed0bbd0bed0b2d0b5d0b9",
+    "lemma": "соловей",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bed180d0bed0bad0bed0bdd0bed0b6d0bad0b0",
+    "lemma": "сороконожка",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d182d180d0b8d0b6",
+    "lemma": "стриж",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d182d183d0bfd0bdd18f",
+    "lemma": "ступня",
     "weight": 30
   }
 ]

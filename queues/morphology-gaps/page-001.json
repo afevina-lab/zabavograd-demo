@@ -193,5 +193,10 @@
     "id": "ru-plant-20261104-d0bfd0b5d0bad0b8d0bdd181d0bad0b0d18f20d0bad0b0d0bfd183d181d182d0b0",
     "lemma": "пекинская капуста",
     "weight": 20
+  },
+  {
+    "id": "modular-noun-088178cdc9131aa81552a9ee",
+    "lemma": "огонь",
+    "weight": 0
   }
 ]

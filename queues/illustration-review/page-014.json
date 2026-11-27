@@ -1,120 +1,5 @@
 [
   {
-    "id": "lex-v2-d0bcd0bed180d181d0bad0bed0b920d0bad0bed0bdd191d0ba",
-    "lemma": "морской конёк",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d0bcd0bed180d181d0bad0bed0b920d0bad0bed182d0b8d0ba",
-    "lemma": "морской котик",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d0bcd0bed180d181d0bad0bed0b920d191d0b6",
-    "lemma": "морской ёж",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d0bcd0bed182d18bd0bbd191d0ba",
-    "lemma": "мотылёк",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d0bed0bad183d0bdd18c",
-    "lemma": "окунь",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d0bed180d0bbd191d0bdd0bed0ba",
-    "lemma": "орлёнок",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d0bfd0b0d0bdd182d0b5d180d0b0",
-    "lemma": "пантера",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d0bfd0b5d0bbd0b8d0bad0b0d0bd",
-    "lemma": "пеликан",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d0bfd0b5d181d0b5d186",
-    "lemma": "песец",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d0bfd18fd182d0bad0b0",
-    "lemma": "пятка",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d180d18bd0b1d0b02dd0bad0bbd0bed183d0bd",
-    "lemma": "рыба-клоун",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d181d0b2d0b5d180d187d0bed0ba",
-    "lemma": "сверчок",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d181d0b2d0b5d182d0bbd18fd187d0bed0ba",
-    "lemma": "светлячок",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d181d0b2d0b8d180d0b8d181d182d0b5d0bbd18c",
-    "lemma": "свиристель",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d181d0bad0b0d182",
-    "lemma": "скат",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d181d0bad0bed180d0bfd0b8d0bed0bd",
-    "lemma": "скорпион",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d181d0bbd0b8d0b7d0b5d0bdd18c",
-    "lemma": "слизень",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d181d0bed0b2d191d0bdd0bed0ba",
-    "lemma": "совёнок",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d181d0bed0bad0bed0bb",
-    "lemma": "сокол",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d181d0bed0bbd0bed0b2d0b5d0b9",
-    "lemma": "соловей",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d181d0bed180d0bed0bad0bed0bdd0bed0b6d0bad0b0",
-    "lemma": "сороконожка",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d181d182d180d0b8d0b6",
-    "lemma": "стриж",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d181d182d183d0bfd0bdd18f",
-    "lemma": "ступня",
-    "weight": 30
-  },
-  {
     "id": "lex-v2-d182d18ed0bbd0b5d0bdd18c",
     "lemma": "тюлень",
     "weight": 30
@@ -197,6 +82,121 @@
   {
     "id": "ru-home-20261105-1bed09e9",
     "lemma": "чехол",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-23ebaf4b",
+    "lemma": "проектор",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-309a5298",
+    "lemma": "мыльница",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-42e89bf4",
+    "lemma": "дверной звонок",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-4766e3b0",
+    "lemma": "дверная ручка",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-4c24628c",
+    "lemma": "футляр",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-4c8c0c22",
+    "lemma": "перила",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-5577c95e",
+    "lemma": "тюль",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-59295c6c",
+    "lemma": "кухонные весы",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-5b1f8d61",
+    "lemma": "казан",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-5bd96790",
+    "lemma": "подсвечник",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-6e18c351",
+    "lemma": "соусник",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-6eb84d4e",
+    "lemma": "шпатель",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-7406ced9",
+    "lemma": "флешка",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-87a50edd",
+    "lemma": "венок",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-93e6b725",
+    "lemma": "вытяжка",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-9fee620d",
+    "lemma": "сотейник",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-b663f83",
+    "lemma": "овощечистка",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-be632bf2",
+    "lemma": "щипцы",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-c0df24fa",
+    "lemma": "кабинет",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-c4c47b60",
+    "lemma": "столовая",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-c69c01e1",
+    "lemma": "игровая приставка",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-e1c07d48",
+    "lemma": "кладовка",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-e263753",
+    "lemma": "шайба",
     "weight": 30
   }
 ]

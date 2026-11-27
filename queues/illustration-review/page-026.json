@@ -1,145 +1,5 @@
 [
   {
-    "id": "ru-action-20261109-0047",
-    "lemma": "забывать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0048",
-    "lemma": "завязывать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0049",
-    "lemma": "заканчивать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0050",
-    "lemma": "замерзать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0051",
-    "lemma": "замечать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0052",
-    "lemma": "запоминать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0053",
-    "lemma": "застёгивать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0054",
-    "lemma": "засыпать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0055",
-    "lemma": "зашивать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0056",
-    "lemma": "защищать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0057",
-    "lemma": "звать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0058",
-    "lemma": "здороваться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0059",
-    "lemma": "знать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0060",
-    "lemma": "играть",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0061",
-    "lemma": "идти",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0062",
-    "lemma": "измерять",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0063",
-    "lemma": "искать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0064",
-    "lemma": "катать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0065",
-    "lemma": "кататься",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0066",
-    "lemma": "катить",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0067",
-    "lemma": "качаться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0068",
-    "lemma": "квакать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0069",
-    "lemma": "кидать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0070",
-    "lemma": "кипятить",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0071",
-    "lemma": "клевать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0072",
-    "lemma": "клеить",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0073",
-    "lemma": "копать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0074",
-    "lemma": "кричать",
-    "weight": 0
-  },
-  {
     "id": "ru-action-20261109-0075",
     "lemma": "кружиться",
     "weight": 0
@@ -197,6 +57,146 @@
   {
     "id": "ru-action-20261109-0086",
     "lemma": "ложиться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0087",
+    "lemma": "ломаться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0088",
+    "lemma": "любить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0089",
+    "lemma": "мастерить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0090",
+    "lemma": "месить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0091",
+    "lemma": "мешать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0092",
+    "lemma": "молчать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0093",
+    "lemma": "мочь",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0094",
+    "lemma": "мыться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0095",
+    "lemma": "мычать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0096",
+    "lemma": "мяукать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0097",
+    "lemma": "наблюдать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0098",
+    "lemma": "надевать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0099",
+    "lemma": "нажимать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0100",
+    "lemma": "называть",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0101",
+    "lemma": "наклоняться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0102",
+    "lemma": "намокать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0103",
+    "lemma": "нарезать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0104",
+    "lemma": "находить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0105",
+    "lemma": "начинать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0106",
+    "lemma": "нести",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0107",
+    "lemma": "носить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0108",
+    "lemma": "нравиться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0109",
+    "lemma": "нюхать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0110",
+    "lemma": "обижаться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0111",
+    "lemma": "обнимать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0112",
+    "lemma": "обуваться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0113",
+    "lemma": "объяснять",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0114",
+    "lemma": "одеваться",
     "weight": 0
   }
 ]

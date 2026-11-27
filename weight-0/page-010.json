@@ -1,5 +1,1051 @@
 [
   {
+    "id": "ru-attr-20261109-037",
+    "lemma": "плоский",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Форма"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-038",
+    "lemma": "горячий",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Температура"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-039",
+    "lemma": "холодный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Температура"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 4,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1,
+        "typically_has_property": 2
+      },
+      "verified": 4,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-040",
+    "lemma": "тёплый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Температура"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-041",
+    "lemma": "прохладный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Температура"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-042",
+    "lemma": "жаркий",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Температура"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-043",
+    "lemma": "морозный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Температура"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-044",
+    "lemma": "сладкий",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Вкус и запах"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "typically_has_property": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-045",
+    "lemma": "кислый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Вкус и запах"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "typically_has_property": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-046",
+    "lemma": "солёный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Вкус и запах"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-047",
+    "lemma": "горький",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Вкус и запах"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-048",
+    "lemma": "вкусный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Вкус и запах"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-049",
+    "lemma": "невкусный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Вкус и запах"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-050",
+    "lemma": "душистый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Вкус и запах"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-051",
+    "lemma": "ароматный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Вкус и запах"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-052",
+    "lemma": "колючий",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Осязательные свойства"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "typically_has_property": 2
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-053",
+    "lemma": "липкий",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Осязательные свойства"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-054",
+    "lemma": "пушистый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Осязательные свойства"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "typically_has_property": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-055",
+    "lemma": "скользкий",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Осязательные свойства"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-056",
+    "lemma": "упругий",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Осязательные свойства"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-057",
+    "lemma": "здоровый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Состояние"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-058",
+    "lemma": "больной",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Состояние"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-059",
+    "lemma": "открытый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Состояние"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-060",
+    "lemma": "закрытый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Состояние"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-061",
+    "lemma": "порванный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Состояние"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-062",
+    "lemma": "разбитый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Состояние"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-063",
+    "lemma": "спелый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Состояние"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-064",
+    "lemma": "неспелый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Состояние"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
     "id": "ru-attr-20261109-065",
     "lemma": "добрый",
     "weight": 0,
@@ -450,1042 +1496,6 @@
         "antonym": 1
       },
       "verified": 1,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-077",
-    "lemma": "молодой",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Возраст и время"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-078",
-    "lemma": "пожилой",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Возраст и время"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-079",
-    "lemma": "древний",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Возраст и время"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-080",
-    "lemma": "ранний",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Возраст и время"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 1,
-      "by_type": {
-        "antonym": 1
-      },
-      "verified": 1,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-081",
-    "lemma": "поздний",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Возраст и время"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 1,
-      "by_type": {
-        "antonym": 1
-      },
-      "verified": 1,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-082",
-    "lemma": "свежий",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Возраст и время"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-083",
-    "lemma": "зимний",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Принадлежность и назначение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-084",
-    "lemma": "летний",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Принадлежность и назначение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-085",
-    "lemma": "осенний",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Принадлежность и назначение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-086",
-    "lemma": "весенний",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Принадлежность и назначение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-087",
-    "lemma": "домашний",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Принадлежность и назначение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-088",
-    "lemma": "уличный",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Принадлежность и назначение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-089",
-    "lemma": "детский",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Принадлежность и назначение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-090",
-    "lemma": "взрослый",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Принадлежность и назначение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-091",
-    "lemma": "школьный",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Принадлежность и назначение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-092",
-    "lemma": "кухонный",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Принадлежность и назначение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-093",
-    "lemma": "первый",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Количество и сравнение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-094",
-    "lemma": "последний",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Количество и сравнение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-095",
-    "lemma": "другой",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Количество и сравнение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-096",
-    "lemma": "одинаковый",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Количество и сравнение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 1,
-      "by_type": {
-        "antonym": 1
-      },
-      "verified": 1,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-097",
-    "lemma": "разный",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Количество и сравнение"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 1,
-      "by_type": {
-        "antonym": 1
-      },
-      "verified": 1,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-098",
-    "lemma": "быстрый",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Свойства"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 2,
-      "by_type": {
-        "antonym": 1,
-        "same_root": 1
-      },
-      "verified": 2,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-099",
-    "lemma": "медленный",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Свойства"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 2,
-      "by_type": {
-        "antonym": 1,
-        "same_root": 1
-      },
-      "verified": 2,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-100",
-    "lemma": "громкий",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Свойства"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 2,
-      "by_type": {
-        "same_root": 1,
-        "antonym": 1
-      },
-      "verified": 2,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-101",
-    "lemma": "аккуратный",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Свойства"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 2,
-      "by_type": {
-        "antonym": 1,
-        "same_root": 1
-      },
-      "verified": 2,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-102",
-    "lemma": "осторожный",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Свойства"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 1,
-      "by_type": {
-        "same_root": 1
-      },
-      "verified": 1,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-103",
-    "lemma": "сильный",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Свойства"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 2,
-      "by_type": {
-        "antonym": 1,
-        "same_root": 1
-      },
-      "verified": 2,
-      "suggested": 0
-    },
-    "semantic_review_proposals": 0,
-    "illustrations": 0
-  },
-  {
-    "id": "ru-attr-20261109-104",
-    "lemma": "слабый",
-    "weight": 0,
-    "kind": "word",
-    "pos": "adjective",
-    "categories": [
-      "Признаки/Свойства"
-    ],
-    "phonetic": {
-      "status": "pending",
-      "stored_tokens": false,
-      "review_proposal": false,
-      "draft_status": null,
-      "draft_tokens": false
-    },
-    "morphology": {
-      "status": "editorial_draft",
-      "stored_candidate_forms": false,
-      "draft_status": null
-    },
-    "metadata_status": {
-      "speech": "pending",
-      "forms": "editorial_draft",
-      "lexical": "editorial_draft"
-    },
-    "syllable_type": null,
-    "relation_counts": {
-      "total": 2,
-      "by_type": {
-        "antonym": 1,
-        "same_root": 1
-      },
-      "verified": 2,
       "suggested": 0
     },
     "semantic_review_proposals": 0,

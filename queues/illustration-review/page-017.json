@@ -1,120 +1,5 @@
 [
   {
-    "id": "ru-plant-20261104-d0bcd0b0d181d0bbd191d0bdd0bed0ba",
-    "lemma": "маслёнок",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d0bdd0b5d0b7d0b0d0b1d183d0b4d0bad0b0",
-    "lemma": "незабудка",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d0bdd0b5d0bad182d0b0d180d0b8d0bd",
-    "lemma": "нектарин",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d0bed0b1d0bbd0b5d0bfd0b8d185d0b0",
-    "lemma": "облепиха",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d0bed180d185d0b8d0b4d0b5d18f",
-    "lemma": "орхидея",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d0bed181d0b8d0bdd0b0",
-    "lemma": "осина",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d0bfd0bed0b1d0b5d0b3",
-    "lemma": "побег",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d180d0b5d0b4d18cd0bad0b0",
-    "lemma": "редька",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d181d0b5d0bbd18cd0b4d0b5d180d0b5d0b9",
-    "lemma": "сельдерей",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d182d180d183d182d0bed0b2d0b8d0ba",
-    "lemma": "трутовик",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d184d0b8d0bad183d181",
-    "lemma": "фикус",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d184d0b8d0bdd0b8d0ba",
-    "lemma": "финик",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d185d180d0b8d0b7d0b0d0bdd182d0b5d0bcd0b0",
-    "lemma": "хризантема",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d188d0bfd0b8d0bdd0b0d182",
-    "lemma": "шпинат",
-    "weight": 30
-  },
-  {
-    "id": "ru-r-005",
-    "lemma": "брусника",
-    "weight": 30
-  },
-  {
-    "id": "ru-r-072",
-    "lemma": "рыжик",
-    "weight": 30
-  },
-  {
-    "id": "ru-r-096",
-    "lemma": "шнурок",
-    "weight": 30
-  },
-  {
-    "id": "ru-r-add-d0b2d0b5d0bdd0b5d180d0b0",
-    "lemma": "венера",
-    "weight": 30
-  },
-  {
-    "id": "ru-r-add-d0b2d0b5d182d0b5d180",
-    "lemma": "ветер",
-    "weight": 30
-  },
-  {
-    "id": "ru-r-add-d0b2d180d0b0d182d0b0d180d18c",
-    "lemma": "вратарь",
-    "weight": 30
-  },
-  {
-    "id": "ru-r-add-d0b2d18bd0b4d180d0b0",
-    "lemma": "выдра",
-    "weight": 30
-  },
-  {
-    "id": "ru-r-add-d0b3d180d0b0d0b4",
-    "lemma": "град",
-    "weight": 30
-  },
-  {
-    "id": "ru-r-add-d0b3d180d0b0d0b4d183d181d0bdd0b8d0ba",
-    "lemma": "градусник",
-    "weight": 30
-  },
-  {
     "id": "ru-r-add-d0b4d180d0b0d0bad0b0",
     "lemma": "драка",
     "weight": 30
@@ -195,8 +80,123 @@
     "weight": 30
   },
   {
-    "id": "ru-r-add-d0bfd0bed0b6d0b0d180",
-    "lemma": "пожар",
+    "id": "ru-r-add-d0bfd180d183d0b6d0b8d0bdd0b0",
+    "lemma": "пружина",
     "weight": 30
+  },
+  {
+    "id": "ru-r-add-d180d0bed189d0b0",
+    "lemma": "роща",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d180d183d0b6d18cd191",
+    "lemma": "ружьё",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d180d183d0bbd0bed0bd",
+    "lemma": "рулон",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d181d0b0d182d183d180d0bd",
+    "lemma": "сатурн",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d182d0b0d180d0b0d0bad0b0d0bd",
+    "lemma": "таракан",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d182d0b5d180d0bcd0bed0bcd0b5d182d180",
+    "lemma": "термометр",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d183d180d0b0d0b3d0b0d0bd",
+    "lemma": "ураган",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d184d0b0d180d0b0",
+    "lemma": "фара",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d184d0b0d180d182d183d0ba",
+    "lemma": "фартук",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d184d0bed182d0bed0b3d180d0b0d184d0b8d18f",
+    "lemma": "фотография",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d185d180d0b0d0bf",
+    "lemma": "храп",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d18dd181d0bad0b0d0bbd0b0d182d0bed180",
+    "lemma": "эскалатор",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d18ed0bfd0b8d182d0b5d180",
+    "lemma": "юпитер",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-009",
+    "lemma": "корыто",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-013",
+    "lemma": "двор",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-017",
+    "lemma": "груз",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-019",
+    "lemma": "трос",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-021",
+    "lemma": "морж",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-023",
+    "lemma": "ров",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-024",
+    "lemma": "рукав",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b0d0b8d181d182d191d0bdd0bed0ba",
+    "lemma": "аистёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b0d0bbd0bbd0b8d0b3d0b0d182d0bed180",
+    "lemma": "аллигатор",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b0d180d185d0b5d0bed0bbd0bed0b3",
+    "lemma": "археолог",
+    "weight": 20
   }
 ]

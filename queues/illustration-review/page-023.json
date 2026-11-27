@@ -1,140 +1,5 @@
 [
   {
-    "id": "ru-home-20261105-a170b5b0",
-    "lemma": "бра",
-    "weight": 20
-  },
-  {
-    "id": "ru-home-20261105-a715553a",
-    "lemma": "подоконник",
-    "weight": 20
-  },
-  {
-    "id": "ru-home-20261105-d63a138e",
-    "lemma": "подъезд",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0012",
-    "lemma": "кора",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0014",
-    "lemma": "крона",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0020",
-    "lemma": "бурундук",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0026",
-    "lemma": "морс",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0028",
-    "lemma": "крупа",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0049",
-    "lemma": "размер",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0056",
-    "lemma": "поворот",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0066",
-    "lemma": "доктор",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0068",
-    "lemma": "родина",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0069",
-    "lemma": "герб",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0071",
-    "lemma": "герой",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0074",
-    "lemma": "портал",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0091",
-    "lemma": "многоугольник",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0095",
-    "lemma": "призма",
-    "weight": 20
-  },
-  {
-    "id": "ru-noun-20261109-0051",
-    "lemma": "саксофон",
-    "weight": 20
-  },
-  {
-    "id": "ru-noun-extra-20261109-005",
-    "lemma": "кофе",
-    "weight": 20
-  },
-  {
-    "id": "ru-plant-20261104-d0b0d0b9d0b2d0b0",
-    "lemma": "айва",
-    "weight": 20
-  },
-  {
-    "id": "ru-plant-20261104-d0b1d0b0d0bed0b1d0b0d0b1",
-    "lemma": "баобаб",
-    "weight": 20
-  },
-  {
-    "id": "ru-plant-20261104-d0b1d0b0d182d0b0d182",
-    "lemma": "батат",
-    "weight": 20
-  },
-  {
-    "id": "ru-plant-20261104-d0b1d0b5d0b3d0bed0bdd0b8d18f",
-    "lemma": "бегония",
-    "weight": 20
-  },
-  {
-    "id": "ru-plant-20261104-d0b3d180d183d0b7d0b4d18c",
-    "lemma": "груздь",
-    "weight": 20
-  },
-  {
-    "id": "ru-plant-20261104-d0bad180d0bed0bad183d181",
-    "lemma": "крокус",
-    "weight": 20
-  },
-  {
-    "id": "ru-plant-20261104-d0bcd0bed0bdd181d182d0b5d180d0b0",
-    "lemma": "монстера",
-    "weight": 20
-  },
-  {
-    "id": "ru-plant-20261104-d0bfd0b0d0bfd0b0d0b9d18f",
-    "lemma": "папайя",
-    "weight": 20
-  },
-  {
     "id": "ru-plant-20261104-d0bfd0b0d0bfd0bed180d0bed182d0bdd0b8d0ba",
     "lemma": "папоротник",
     "weight": 20
@@ -198,5 +63,140 @@
     "id": "ru-r-029",
     "lemma": "кобра",
     "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b2d0b0d0bcd0bfd0b8d180",
+    "lemma": "вампир",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b3d180d0b0d0bcd0bed182d0b0",
+    "lemma": "грамота",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b3d180d0bed0bc",
+    "lemma": "гром",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b4d180d0bed0b7d0b4",
+    "lemma": "дрозд",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b7d0b0d0b2d182d180d0b0d0ba",
+    "lemma": "завтрак",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b7d0b0d180d0bed181d0bbd0b8",
+    "lemma": "заросли",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bad0bbd0b0d180d0bdd0b5d182",
+    "lemma": "кларнет",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bad0bbd0b5d0b2d0b5d180",
+    "lemma": "клевер",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bad180d0bed0b2d18c",
+    "lemma": "кровь",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bcd0bed180d0bed0b7",
+    "lemma": "мороз",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bed185d180d0b0d0bdd0bdd0b8d0ba",
+    "lemma": "охранник",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bfd0bed180d182",
+    "lemma": "порт",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bfd180d0bed0bfd0b8d181d18c",
+    "lemma": "пропись",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d181d0b0d185d0b0d180d0bdd0b8d186d0b0",
+    "lemma": "сахарница",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d181d182d180d183d0bdd0b0",
+    "lemma": "струна",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d182d0b8d180",
+    "lemma": "тир",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d182d180d183d0b1d0b0d187",
+    "lemma": "трубач",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d185d0bed180",
+    "lemma": "хор",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d185d0bed180d0bed0b2d0bed0b4",
+    "lemma": "хоровод",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d188d182d0bed180d0bc",
+    "lemma": "шторм",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d0b5d180d0b5d0b1d0b5d186",
+    "lemma": "жеребец",
+    "weight": 10
+  },
+  {
+    "id": "ru-home-20261105-2518ba59",
+    "lemma": "фундамент",
+    "weight": 10
+  },
+  {
+    "id": "ru-home-20261105-b23cae5f",
+    "lemma": "терраса",
+    "weight": 10
+  },
+  {
+    "id": "ru-home-20261105-b3ea3835",
+    "lemma": "веранда",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d0b4d180d0b0d186d0b5d0bdd0b0",
+    "lemma": "драцена",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0b0d0bbd0b0d0bdd185d0bed18d",
+    "lemma": "каланхоэ",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b8d187d0b8",
+    "lemma": "личи",
+    "weight": 10
   }
 ]

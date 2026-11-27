@@ -3,9 +3,9 @@
   "source": {
     "master": {
       "path": "generated V2 from modules",
-      "sha256": "263fd4ead1851194d248644a1dad7cc2c8baec7729099ac550cd93f3102446bd",
-      "git_blob": "4536508560dcb64c1cc82865f000f4c056b33ace",
-      "bytes": 18482315,
+      "sha256": "e5bd329b33f37240bfb3948dde24f6086a25b46a95ec328b2108b0fb1c702569",
+      "git_blob": "b1d8242c9e2f5b4d0a1b223a246fb12ce404faab",
+      "bytes": 18573399,
       "mode": "modules"
     },
     "syllables": {
@@ -16,9 +16,9 @@
     },
     "runtime": {
       "path": "library.json",
-      "sha256": "f1226ca54fc86c6e1dfdcb6633873c8f083e1fa0b4ab9c1e0de140885097359f",
-      "git_blob": "f3c04f9f630bbcbc52e5d0a4f2fb14f5c1008e78",
-      "bytes": 4304291
+      "sha256": "5aa55ee46af7a9e4b13b616362ac6ef93a3bbf11a6da34f292782c2c72b8b5dc",
+      "git_blob": "116128cd3ce9ec85f4a4de4c0323b717bb8e6fc8",
+      "bytes": 4337988
     },
     "tasks": {
       "path": "editorial/library-tasks.json",
@@ -27,7 +27,7 @@
       "bytes": 5054
     }
   },
-  "entries": 1993,
+  "entries": 2021,
   "categories": 234,
   "relations": 1540,
   "page_size": 40,
@@ -324,102 +324,102 @@
       "weight": 0,
       "count": 40,
       "first_id": "image-pack-20261120-de5275ef5c64",
-      "last_id": "ru-action-20261109-0038"
+      "last_id": "ru-action-20261109-0010"
     },
     {
       "file": "weight-0/page-003.json",
       "weight": 0,
       "count": 40,
-      "first_id": "ru-action-20261109-0039",
-      "last_id": "ru-action-20261109-0078"
+      "first_id": "ru-action-20261109-0011",
+      "last_id": "ru-action-20261109-0050"
     },
     {
       "file": "weight-0/page-004.json",
       "weight": 0,
       "count": 40,
-      "first_id": "ru-action-20261109-0079",
-      "last_id": "ru-action-20261109-0118"
+      "first_id": "ru-action-20261109-0051",
+      "last_id": "ru-action-20261109-0090"
     },
     {
       "file": "weight-0/page-005.json",
       "weight": 0,
       "count": 40,
-      "first_id": "ru-action-20261109-0119",
-      "last_id": "ru-action-20261109-0158"
+      "first_id": "ru-action-20261109-0091",
+      "last_id": "ru-action-20261109-0130"
     },
     {
       "file": "weight-0/page-006.json",
       "weight": 0,
       "count": 40,
-      "first_id": "ru-action-20261109-0159",
-      "last_id": "ru-action-20261109-0198"
+      "first_id": "ru-action-20261109-0131",
+      "last_id": "ru-action-20261109-0170"
     },
     {
       "file": "weight-0/page-007.json",
       "weight": 0,
       "count": 40,
-      "first_id": "ru-action-20261109-0199",
-      "last_id": "ru-action-20261109-0238"
+      "first_id": "ru-action-20261109-0171",
+      "last_id": "ru-action-20261109-0210"
     },
     {
       "file": "weight-0/page-008.json",
       "weight": 0,
       "count": 40,
-      "first_id": "ru-action-20261109-0239",
-      "last_id": "ru-attr-20261109-024"
+      "first_id": "ru-action-20261109-0211",
+      "last_id": "ru-action-20261109-0250"
     },
     {
       "file": "weight-0/page-009.json",
       "weight": 0,
       "count": 40,
-      "first_id": "ru-attr-20261109-025",
-      "last_id": "ru-attr-20261109-064"
+      "first_id": "ru-action-20261109-0251",
+      "last_id": "ru-attr-20261109-036"
     },
     {
       "file": "weight-0/page-010.json",
       "weight": 0,
       "count": 40,
-      "first_id": "ru-attr-20261109-065",
-      "last_id": "ru-attr-20261109-104"
+      "first_id": "ru-attr-20261109-037",
+      "last_id": "ru-attr-20261109-076"
     },
     {
       "file": "weight-0/page-011.json",
       "weight": 0,
       "count": 40,
-      "first_id": "ru-attr-20261109-105",
-      "last_id": "ru-attr-20261109-144"
+      "first_id": "ru-attr-20261109-077",
+      "last_id": "ru-attr-20261109-116"
     },
     {
       "file": "weight-0/page-012.json",
       "weight": 0,
       "count": 40,
-      "first_id": "ru-attr-20261109-145",
-      "last_id": "ru-new-20261102-0079"
+      "first_id": "ru-attr-20261109-117",
+      "last_id": "ru-attr-20261109-156"
     },
     {
       "file": "weight-0/page-013.json",
       "weight": 0,
       "count": 40,
-      "first_id": "ru-new-20261102-0080",
-      "last_id": "ru-sem-20261105-62942200"
+      "first_id": "ru-attr-20261109-157",
+      "last_id": "ru-new-20261102-0103"
     },
     {
       "file": "weight-0/page-014.json",
       "weight": 0,
       "count": 40,
-      "first_id": "ru-sem-20261105-6862df09",
-      "last_id": "ru-sem-20261105-d4c7f832"
+      "first_id": "ru-new-20261102-0104",
+      "last_id": "ru-sem-20261105-87f58e97"
     },
     {
       "file": "weight-0/page-015.json",
       "weight": 0,
-      "count": 10,
-      "first_id": "ru-sem-20261105-d5613d0a",
+      "count": 38,
+      "first_id": "ru-sem-20261105-8c7cc097",
       "last_id": "ru-sem-20261105-f84f7551"
     }
   ],
   "weights": {
-    "0": 570,
+    "0": 598,
     "10": 13,
     "20": 253,
     "30": 247,
@@ -431,7 +431,7 @@
     "automatic_candidate_needs_review": 1218,
     "filled_with_explicit_extended_cases": 259,
     "pending": 263,
-    "pending_automatic_analysis": 253
+    "pending_automatic_analysis": 281
   },
   "morphology_status": {
     "automatic_candidate_needs_review": 1363,
@@ -439,76 +439,76 @@
     "filled_with_explicit_extended_cases": 259,
     "machine_checked_forms_subset": 22,
     "pending": 97,
-    "pending_automatic_analysis": 71
+    "pending_automatic_analysis": 99
   },
   "fields": {
     "id": {
-      "entries": 1993,
-      "value_bytes": 58375
+      "entries": 2021,
+      "value_bytes": 59467
     },
     "lemma": {
-      "entries": 1993,
-      "value_bytes": 30902
+      "entries": 2021,
+      "value_bytes": 31335
     },
     "language": {
-      "entries": 1993,
-      "value_bytes": 7972
+      "entries": 2021,
+      "value_bytes": 8084
     },
     "meaning": {
-      "entries": 1993,
-      "value_bytes": 13886
+      "entries": 2021,
+      "value_bytes": 14475
     },
     "kind": {
-      "entries": 1993,
-      "value_bytes": 12034
+      "entries": 2021,
+      "value_bytes": 12202
     },
     "selection": {
-      "entries": 1993,
-      "value_bytes": 168852
+      "entries": 2021,
+      "value_bytes": 170840
     },
     "categories": {
-      "entries": 1993,
-      "value_bytes": 215985
+      "entries": 2021,
+      "value_bytes": 218947
     },
     "phonetic_tags": {
-      "entries": 1993,
-      "value_bytes": 1000140
+      "entries": 2021,
+      "value_bytes": 1001512
     },
     "morphology": {
-      "entries": 1993,
-      "value_bytes": 2690629
+      "entries": 2021,
+      "value_bytes": 2692001
     },
     "illustrations": {
-      "entries": 1993,
-      "value_bytes": 363499
+      "entries": 2021,
+      "value_bytes": 401606
     },
     "metadata_completion": {
       "entries": 1946,
       "value_bytes": 238908
     },
     "legacy_source": {
-      "entries": 1932,
-      "value_bytes": 1865494
+      "entries": 1960,
+      "value_bytes": 1865606
     },
     "editorial": {
-      "entries": 1993,
-      "value_bytes": 305450
+      "entries": 2021,
+      "value_bytes": 311330
     },
     "generalization": {
       "entries": 24,
       "value_bytes": 5771
     },
     "part_of_speech": {
-      "entries": 739,
-      "value_bytes": 5311
+      "entries": 767,
+      "value_bytes": 5479
     },
     "machine_analysis": {
       "entries": 1434,
       "value_bytes": 2771729
     },
     "lexical_eligible_by_default": {
-      "entries": 732,
-      "value_bytes": 3470
+      "entries": 760,
+      "value_bytes": 3610
     },
     "usage_modes": {
       "entries": 10,
@@ -531,9 +531,9 @@
   "draft_source_verified": false,
   "queues": {
     "phonetic-gaps": {
-      "count": 491,
+      "count": 519,
       "by_weight": {
-        "0": 289,
+        "0": 317,
         "10": 6,
         "20": 31,
         "30": 36,
@@ -592,7 +592,7 @@
         },
         {
           "file": "queues/phonetic-gaps/page-013.json",
-          "count": 11
+          "count": 39
         }
       ]
     },
@@ -735,8 +735,9 @@
       ]
     },
     "morphology-gaps": {
-      "count": 39,
+      "count": 67,
       "by_weight": {
+        "0": 28,
         "20": 4,
         "30": 10,
         "50": 10,
@@ -746,7 +747,11 @@
       "pages": [
         {
           "file": "queues/morphology-gaps/page-001.json",
-          "count": 39
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-gaps/page-002.json",
+          "count": 27
         }
       ]
     },
@@ -934,14 +939,14 @@
       ]
     },
     "illustration-review": {
-      "count": 1472,
+      "count": 1444,
       "by_weight": {
         "0": 518,
         "10": 13,
-        "20": 239,
-        "30": 201,
-        "50": 233,
-        "70": 182,
+        "20": 236,
+        "30": 198,
+        "50": 225,
+        "70": 168,
         "100": 86
       },
       "pages": [
@@ -1091,7 +1096,7 @@
         },
         {
           "file": "queues/illustration-review/page-037.json",
-          "count": 32
+          "count": 4
         }
       ]
     },

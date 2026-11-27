@@ -1,62 +1,7 @@
 [
   {
-    "id": "ru-new-20261102-0086",
-    "lemma": "прямоугольник",
-    "weight": 70
-  },
-  {
-    "id": "ru-new-20261102-0087",
-    "lemma": "овал",
-    "weight": 70
-  },
-  {
-    "id": "ru-new-20261102-0092",
-    "lemma": "куб",
-    "weight": 70
-  },
-  {
-    "id": "ru-new-20261102-0096",
-    "lemma": "шар",
-    "weight": 70
-  },
-  {
-    "id": "ru-noun-20261109-0002",
-    "lemma": "юбка",
-    "weight": 70
-  },
-  {
-    "id": "ru-noun-20261109-0004",
-    "lemma": "джинсы",
-    "weight": 70
-  },
-  {
-    "id": "ru-noun-20261109-0014",
-    "lemma": "пижама",
-    "weight": 70
-  },
-  {
-    "id": "ru-noun-20261109-0018",
-    "lemma": "туфля",
-    "weight": 70
-  },
-  {
-    "id": "ru-noun-20261109-0019",
-    "lemma": "тапочка",
-    "weight": 70
-  },
-  {
-    "id": "ru-noun-20261109-0022",
-    "lemma": "кеды",
-    "weight": 70
-  },
-  {
     "id": "ru-noun-20261109-0033",
     "lemma": "пирамидка",
-    "weight": 70
-  },
-  {
-    "id": "ru-noun-20261109-0034",
-    "lemma": "погремушка",
     "weight": 70
   },
   {
@@ -110,11 +55,6 @@
     "weight": 70
   },
   {
-    "id": "ru-noun-20261109-0073",
-    "lemma": "такси",
-    "weight": 70
-  },
-  {
     "id": "ru-noun-20261109-0080",
     "lemma": "мост",
     "weight": 70
@@ -137,16 +77,6 @@
   {
     "id": "ru-noun-20261109-0092",
     "lemma": "поле",
-    "weight": 70
-  },
-  {
-    "id": "ru-noun-extra-20261109-001",
-    "lemma": "пельмени",
-    "weight": 70
-  },
-  {
-    "id": "ru-noun-extra-20261109-003",
-    "lemma": "блин",
     "weight": 70
   },
   {
@@ -197,6 +127,76 @@
   {
     "id": "ru-noun-extra-20261109-035",
     "lemma": "лёд",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-037",
+    "lemma": "сосулька",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-043",
+    "lemma": "альбом",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-045",
+    "lemma": "мел",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-046",
+    "lemma": "клей",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0b5d0bbd18bd0b920d0b3d180d0b8d0b1",
+    "lemma": "белый гриб",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b2d0b5d182d0bad0b0",
+    "lemma": "ветка",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0bed180d0b5d0bdd18c",
+    "lemma": "корень",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b5d0bfd0b5d181d182d0bed0ba",
+    "lemma": "лепесток",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b5d180d0b5d1863ad181d0bbd0b0d0b4d0bad0b8d0b920d0bed0b2d0bed189d0bdd0bed0b920d0bfd0b5d180d0b5d186",
+    "lemma": "перец",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0bbd0bed0b4",
+    "lemma": "плод",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0bed0b4d181d0bdd0b5d0b6d0bdd0b8d0ba",
+    "lemma": "подснежник",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d180d18fd0b1d0b8d0bdd0b03ad0b4d0b5d180d0b5d0b2d0be20d180d18fd0b1d0b8d0bdd0b0",
+    "lemma": "рябина",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d181d0b5d0bcd0b5d187d0bad0be",
+    "lemma": "семечко",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d181d0bed181d0bdd0b0",
+    "lemma": "сосна",
     "weight": 70
   }
 ]

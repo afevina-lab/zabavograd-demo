@@ -65,11 +65,6 @@
     "weight": 70
   },
   {
-    "id": "lex-v2-d0bcd0b0d0bcd0b0",
-    "lemma": "мама",
-    "weight": 70
-  },
-  {
     "id": "lex-v2-d0bcd0b5d0b4d183d0b7d0b0",
     "lemma": "медуза",
     "weight": 70
@@ -110,23 +105,8 @@
     "weight": 70
   },
   {
-    "id": "lex-v2-d0bfd0b0d0bfd0b0",
-    "lemma": "папа",
-    "weight": 70
-  },
-  {
     "id": "lex-v2-d0bfd0b0d183d0ba",
     "lemma": "паук",
-    "weight": 70
-  },
-  {
-    "id": "lex-v2-d0bfd0b8d0bdd0b3d0b2d0b8d0bd",
-    "lemma": "пингвин",
-    "weight": 70
-  },
-  {
-    "id": "lex-v2-d0bfd0bed0bbd0b8d186d0b5d0b9d181d0bad0b8d0b9",
-    "lemma": "полицейский",
     "weight": 70
   },
   {
@@ -190,13 +170,33 @@
     "weight": 70
   },
   {
-    "id": "lex-v2-d181d18bd0bd",
-    "lemma": "сын",
+    "id": "lex-v2-d182d0b5d0bbd0be",
+    "lemma": "тело",
     "weight": 70
   },
   {
-    "id": "lex-v2-d182d0b5d0bbd0be",
-    "lemma": "тело",
+    "id": "lex-v2-d183d0b4d0b8d0b2d0bbd0b5d0bdd0b8d0b5",
+    "lemma": "удивление",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d0bbd0b8d182d0bad0b0",
+    "lemma": "улитка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d0bbd18bd0b1d0bad0b0",
+    "lemma": "улыбка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d185d0be",
+    "lemma": "ухо",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d187d0b8d182d0b5d0bbd18c",
+    "lemma": "учитель",
     "weight": 70
   }
 ]
