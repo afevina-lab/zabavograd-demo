@@ -59,5 +59,8 @@
 {"id":"ru-noun-extra-20261109-041","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["п'","и","н","а","л"],"stress_syllable":2,"stressed_vowel":"а","syllable_count":2,"markova_type_candidate":4,"automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"пена+л","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}},
 {"id":"ru-attr-20261109-002","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"ru-attr-20261109-013","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
-{"id":"ru-noun-import-20261115-kaplya","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}}
+{"id":"ru-noun-import-20261115-kaplya","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
+{"id":"modular-noun-efe094204f5a7b63b314e870","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}},
+{"id":"modular-noun-291eac6ba46795f48f09be40","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}},
+{"id":"modular-noun-666de362fdee772ce3c6ed41","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
 ]

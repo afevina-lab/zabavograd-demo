@@ -60,5 +60,6 @@
 {"id":"image-pack-20261114-8d30681c5417","fields":{"morphology":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261123-f20acaf756df","fields":{"morphology":{"status":"pending","data":{}}}},
 {"id":"ru-editorial-gap-20261123-5c3fa7dc418a782c","fields":{"morphology":{"status":"machine_checked_forms_subset","data":{"review_status":"suggested","approved_form_subset":{"revision":"safe-local-morphology-20261123-v1","status":"machine_checked","usable_for_generation":true,"source":"pymorphy3_2.0.6_exact_lemma","review_method":"exact_pymorphy3_paradigm_matching","human_reviewed":false,"automatic_counting_allowed":false,"forms":{"present_1sg":"храню","present_1pl":"храним","present_2sg":"хранишь","present_2pl":"храните","present_3sg":"хранит","present_3pl":"хранят","past_masc":"хранил","past_femn":"хранила","past_neut":"хранило","past_plur":"хранили","imperative_2sg":"храни","imperative_2pl":"храните"}}}}}},
-{"id":"ru-pack77-20261125-pismo","fields":{"morphology":{"status":"pending","data":{}}}}
+{"id":"ru-pack77-20261125-pismo","fields":{"morphology":{"status":"pending","data":{}}}},
+{"id":"modular-noun-b5983479bff1dbf2d6c397fc","fields":{"morphology":{"status":"pending_automatic_analysis","data":{}}}}
 ]

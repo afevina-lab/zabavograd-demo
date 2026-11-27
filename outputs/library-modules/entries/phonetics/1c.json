@@ -57,5 +57,8 @@
 {"id":"ru-new-20261108-0bf35cb8f9","fields":{"phonetic_tags":{"status":"pending","data":null}}},
 {"id":"image-pack-20261114-398c2abb61a2","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261114-d7b1de1ecf68","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
-{"id":"image-pack-20261120-307d9c06abbf","fields":{"phonetic_tags":{"status":"pending","data":{}}}}
+{"id":"image-pack-20261120-307d9c06abbf","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
+{"id":"modular-noun-d94e5d30943ddc81fc29dcd2","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}},
+{"id":"modular-noun-f4e1d8491b1bc73552417446","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}},
+{"id":"modular-noun-d7583047bdb49ed8c6c0226a","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
 ]

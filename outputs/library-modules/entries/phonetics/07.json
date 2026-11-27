@@ -60,5 +60,6 @@
 {"id":"image-pack-20261114-8d30681c5417","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261123-f20acaf756df","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"ru-editorial-gap-20261123-5c3fa7dc418a782c","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
-{"id":"ru-pack77-20261125-pismo","fields":{"phonetic_tags":{"status":"pending","data":null}}}
+{"id":"ru-pack77-20261125-pismo","fields":{"phonetic_tags":{"status":"pending","data":null}}},
+{"id":"modular-noun-b5983479bff1dbf2d6c397fc","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
 ]

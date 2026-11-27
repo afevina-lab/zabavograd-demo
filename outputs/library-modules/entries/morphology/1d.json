@@ -45,5 +45,6 @@
 {"id":"ru-new-20261108-d34a9acbe5","fields":{"morphology":{"status":"pending","data":null}}},
 {"id":"image-pack-20261120-750cd2044ccd","fields":{"morphology":{"status":"pending","data":{}}}},
 {"id":"ru-editorial-gap-20261123-fccbd49255fd8455","fields":{"morphology":{"status":"machine_checked_forms_subset","data":{"review_status":"suggested","approved_form_subset":{"revision":"safe-local-morphology-20261123-v1","status":"machine_checked","usable_for_generation":true,"source":"pymorphy3_2.0.6_exact_lemma","review_method":"exact_pymorphy3_paradigm_matching","human_reviewed":false,"automatic_counting_allowed":false,"forms":{"nomn_sing":"свинарник","gent_sing":"свинарника","datv_sing":"свинарнику","accs_sing":"свинарник","ablt_sing":"свинарником","loct_sing":"свинарнике","nomn_plur":"свинарники","gent_plur":"свинарников","datv_plur":"свинарникам","accs_plur":"свинарники","ablt_plur":"свинарниками","loct_plur":"свинарниках"}}}}}},
-{"id":"ru-noun-import-20261115-meshok","fields":{"morphology":{"status":"pending","data":{}}}}
+{"id":"ru-noun-import-20261115-meshok","fields":{"morphology":{"status":"pending","data":{}}}},
+{"id":"modular-noun-5beff62d4df9d36b7ff011f0","fields":{"morphology":{"status":"pending_automatic_analysis","data":{}}}}
 ]

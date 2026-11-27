@@ -67,7 +67,7 @@
 {"id":"ru-noun-20261109-0045","fields":{"illustrations":{"policy":null,"planned_variants":null,"art_status":"not_assigned","senses":[]}}},
 {"id":"ru-noun-20261109-0059","fields":{"illustrations":{"policy":null,"planned_variants":null,"art_status":"not_assigned","senses":[]}}},
 {"id":"ru-noun-20261109-0060","fields":{"illustrations":{"policy":null,"planned_variants":null,"art_status":"not_assigned","senses":[]}}},
-{"id":"ru-noun-20261109-0073","fields":{"illustrations":{"policy":null,"planned_variants":null,"art_status":"not_assigned","senses":[]}}},
+{"id":"ru-noun-20261109-0073","fields":{"illustrations":{"policy":null,"planned_variants":1,"art_status":"assigned","senses":[{"id":"ru-noun-20261109-0073-pack60-sense","word_id":"ru-noun-20261109-0073","label":"такси","meaning":"автомобиль для перевозки пассажиров по заказу","topic":null,"subcategory":null,"variants":[{"id":"approved-pack60-taksi","src":"/assets/words/taksi-20261127.webp","label":"такси","sha256":"be5ef803dfebf83405716d3d070a3f0ca2e3576e2d3604d75ce28220c7ae3ed8","width":960,"height":640,"format":"webp","source":"approved_pack60_20261127","review_note":"Авторский пакет; визуально проверено значение, прозрачность сохранена."}]}]}}},
 {"id":"ru-noun-20261109-0085","fields":{"illustrations":{"policy":null,"planned_variants":null,"art_status":"not_assigned","senses":[]}}},
 {"id":"ru-noun-20261109-0092","fields":{"illustrations":{"policy":null,"planned_variants":null,"art_status":"not_assigned","senses":[]}}},
 {"id":"ru-noun-extra-20261109-006","fields":{"illustrations":{"policy":null,"planned_variants":null,"art_status":"not_assigned","senses":[]}}},

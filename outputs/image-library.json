@@ -2532,6 +2532,17 @@
           "sha256": "e2b71e36bbf4556d85c24ab229186f2607c6b814ec80590164a09f672e97e13a",
           "format": "webp",
           "review_note": null
+        },
+        {
+          "id": "approved-pack60-roll",
+          "src": "/assets/words/roll-20261127.webp",
+          "label": "ролл",
+          "sha256": "27105415377adeda7ca120d879a530773b09a630c5cdd9a36bddb856dba8119c",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
         }
       ]
     },
@@ -3277,6 +3288,17 @@
           "sha256": "ec37559b6edfd85802fa8e647a6c659d2f5edf0d31b0ceb4560bacc345d9c0a2",
           "format": "webp",
           "review_note": null
+        },
+        {
+          "id": "approved-pack60-lisa",
+          "src": "/assets/words/lisa-20261127.webp",
+          "label": "лиса",
+          "sha256": "a0e3f75e986a2007aabf6db4e202929771ebb9cc47cf58701216f54e21d0a035",
+          "width": 877,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
         }
       ]
     },
@@ -8265,6 +8287,17 @@
           "format": "webp",
           "source": "approved_import_20261115",
           "git_blob_sha": "ec29c367bd3455fdc429e688407c180a59869cce"
+        },
+        {
+          "id": "approved-pack60-kuvshin",
+          "src": "/assets/words/kuvshin-20261127.webp",
+          "label": "кувшин",
+          "sha256": "d6d12aa7fe2a925fe4cad75e3987db68d3169862ee6ac004eaa531735ac30eee",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
         }
       ]
     },
@@ -9117,6 +9150,1193 @@
           "source": "approved_pack77_20261125",
           "git_blob_sha": "c57df3b66697987647fa7ee275b047a10d11c00b",
           "sha256": "951869176713bafc02f515200181fb8af5ece31e3011445595b0ce2fff567f00"
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-efe094204f5a7b63b314e870-pack60-sense",
+      "word_id": "modular-noun-efe094204f5a7b63b314e870",
+      "label": "акробат",
+      "meaning": "акробат",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-akrobat",
+          "src": "/assets/words/akrobat-20261127.webp",
+          "label": "акробат",
+          "sha256": "b3de9f0caf0605f450040130c48cdbef750d5ed60c189bb046ec4d88c018687a",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b0d0bad182d191d180-pack60-sense",
+      "word_id": "lex-v2-d0b0d0bad182d191d180",
+      "label": "актёр",
+      "meaning": "актёр",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-aktyor",
+          "src": "/assets/words/aktyor-20261127.webp",
+          "label": "актёр",
+          "sha256": "819bdbb129730492729792879905ed32622cfd9767c4a342189d2012dc75b4a9",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-5beff62d4df9d36b7ff011f0-pack60-sense",
+      "word_id": "modular-noun-5beff62d4df9d36b7ff011f0",
+      "label": "бензовоз",
+      "meaning": "бензовоз",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-benzovoz",
+          "src": "/assets/words/benzovoz-20261127.webp",
+          "label": "бензовоз",
+          "sha256": "1afe2bafd90a384c1ccbdc5a3ca7ceb600ceb9166f7a0fb650df8cbb479c67f2",
+          "width": 960,
+          "height": 640,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-003-pack60-sense",
+      "word_id": "ru-noun-extra-20261109-003",
+      "label": "блин",
+      "meaning": "блин",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-blin",
+          "src": "/assets/words/blin-20261127.webp",
+          "label": "блин",
+          "sha256": "72f11a91e5aef74aadaad635eec55a9e4b62c52bfdbe415a462464d3416d1ab5",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        },
+        {
+          "id": "approved-pack60-bliny",
+          "src": "/assets/words/bliny-20261127.webp",
+          "label": "блины",
+          "sha256": "30fde977c59e494fbc7d0aa0895317d6a32e2d62b65d8b5067522a7c8914e7b5",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "ru-editorial-gap-20261123-4aa311850100a8de-pack60-sense",
+      "word_id": "ru-editorial-gap-20261123-4aa311850100a8de",
+      "label": "будка",
+      "meaning": "будка для собаки",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-budka",
+          "src": "/assets/words/budka-20261127.webp",
+          "label": "будка",
+          "sha256": "f39a180db62e1436232d41fd39b3da7b969930c3a6001a9c3129da9873e0687d",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-4dc0aff8b16799538d5887ab-pack60-sense",
+      "word_id": "modular-noun-4dc0aff8b16799538d5887ab",
+      "label": "ведьма",
+      "meaning": "ведьма",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-vedma",
+          "src": "/assets/words/vedma-20261127.webp",
+          "label": "ведьма",
+          "sha256": "f1f971802a20e168fa544618636b60f49b56ef15415b231e25857b1741f2c034",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-d8ae1283edd65027f404d1be-pack60-sense",
+      "word_id": "modular-noun-d8ae1283edd65027f404d1be",
+      "label": "ведьмочка",
+      "meaning": "ведьмочка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-vedmochka",
+          "src": "/assets/words/vedmochka-20261127.webp",
+          "label": "ведьмочка",
+          "sha256": "33b8ef92f01b391542484eda4ef8af8d1ab247f4a3b9098a1989db5c1c1e31af",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-b5983479bff1dbf2d6c397fc-pack60-sense",
+      "word_id": "modular-noun-b5983479bff1dbf2d6c397fc",
+      "label": "вокзал",
+      "meaning": "вокзал",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-vokzal",
+          "src": "/assets/words/vokzal-20261127.webp",
+          "label": "вокзал",
+          "sha256": "b1e575b12b4d64b500b6a3aa7457658212fae4a80d3c1586d0841f1d02a4a6d4",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b2d0bed0bbd188d0b5d0b1d0bdd0b8d0ba-pack60-sense",
+      "word_id": "lex-v2-d0b2d0bed0bbd188d0b5d0b1d0bdd0b8d0ba",
+      "label": "волшебник",
+      "meaning": "волшебник",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-volshebnik",
+          "src": "/assets/words/volshebnik-20261127.webp",
+          "label": "волшебник",
+          "sha256": "76fe6fbe4d9957c54ee9f5ca4ec76372b966cc58acc33f195b124653d5a89446",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-291eac6ba46795f48f09be40-pack60-sense",
+      "word_id": "modular-noun-291eac6ba46795f48f09be40",
+      "label": "гонщик",
+      "meaning": "гонщик",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-gonshchik",
+          "src": "/assets/words/gonshchik-20261127.webp",
+          "label": "гонщик",
+          "sha256": "5831ba75e5fb83f9fad18d50dd4f8ee3b41e558d084e07ff7197ce739cb89a6a",
+          "width": 830,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b4d0b2d0bed180d0bdd0b8d0ba-pack60-sense",
+      "word_id": "lex-v2-d0b4d0b2d0bed180d0bdd0b8d0ba",
+      "label": "дворник",
+      "meaning": "дворник",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-dvornik",
+          "src": "/assets/words/dvornik-20261127.webp",
+          "label": "дворник",
+          "sha256": "cbd03a89f756d33918e29ee14a35d722e2e36f48ed208f39ffd153159a16922c",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-d94e5d30943ddc81fc29dcd2-pack60-sense",
+      "word_id": "modular-noun-d94e5d30943ddc81fc29dcd2",
+      "label": "джип",
+      "meaning": "джип",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-dzhip",
+          "src": "/assets/words/dzhip-20261127.webp",
+          "label": "джип",
+          "sha256": "e3ef432b0fd5115a27d1455320d80411ee2fbb620d4bfffe72267c9bc41eb4c8",
+          "width": 960,
+          "height": 640,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-f4e1d8491b1bc73552417446-pack60-sense",
+      "word_id": "modular-noun-f4e1d8491b1bc73552417446",
+      "label": "дрессировщик",
+      "meaning": "дрессировщик",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-dressirovshchik",
+          "src": "/assets/words/dressirovshchik-20261127.webp",
+          "label": "дрессировщик",
+          "sha256": "a7921eff1c03fcbcf7aa1b8ddf752d9caf7509ef46f95dea9a730b28ea6b4bcf",
+          "width": 768,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0b6d0b5d0bdd0b8d185-pack60-sense",
+      "word_id": "lex-v2-d0b6d0b5d0bdd0b8d185",
+      "label": "жених",
+      "meaning": "жених",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-zhenikh",
+          "src": "/assets/words/zhenikh-20261127.webp",
+          "label": "жених",
+          "sha256": "f7e059ac8c8a6e7f280532c879093231cd3744c4f2926d2e01c306a57081391a",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-6b818be3eec8a27cf52a5b02-pack60-sense",
+      "word_id": "modular-noun-6b818be3eec8a27cf52a5b02",
+      "label": "жонглёр",
+      "meaning": "жонглёр",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-zhonglyor",
+          "src": "/assets/words/zhonglyor-20261127.webp",
+          "label": "жонглёр",
+          "sha256": "3a5b3cb99b1a55a473cc1c7028c41b23dba4e574318876c985dfe268dbaa5e3d",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-ccf302483fd6e2d057da79a3-pack60-sense",
+      "word_id": "modular-noun-ccf302483fd6e2d057da79a3",
+      "label": "йог",
+      "meaning": "йог",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-yog",
+          "src": "/assets/words/yog-20261127.webp",
+          "label": "йог",
+          "sha256": "46eaaa77de2c7826e6012562359c3504ce739f8a1b822bf8b8044eb9b9fd8726",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bad0bbd0bed183d0bd-pack60-sense",
+      "word_id": "lex-v2-d0bad0bbd0bed183d0bd",
+      "label": "клоун",
+      "meaning": "клоун",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-kloun",
+          "src": "/assets/words/kloun-20261127.webp",
+          "label": "клоун",
+          "sha256": "847b59389eb7aff3d26c7274612400d94678208e055b7b5cdca21239194e8e0d",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "ru-editorial-gap-20261123-d84927bcdfaf8b76-pack60-sense",
+      "word_id": "ru-editorial-gap-20261123-d84927bcdfaf8b76",
+      "label": "коровник",
+      "meaning": "помещение для содержания коров",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-korovnik",
+          "src": "/assets/words/korovnik-20261127.webp",
+          "label": "коровник",
+          "sha256": "fc78966fb0c6c91db456c15e0f5fac0841dbfdb95c245d30a6dd6c5bb88a822b",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "ru-editorial-gap-20261123-c12cd41bb4f37ba3-pack60-sense",
+      "word_id": "ru-editorial-gap-20261123-c12cd41bb4f37ba3",
+      "label": "курятник",
+      "meaning": "помещение для содержания кур",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-kuryatnik",
+          "src": "/assets/words/kuryatnik-20261127.webp",
+          "label": "курятник",
+          "sha256": "f2f2c6729ded87f28f8b48d650823105512682a9b4b70cf22b8473edb0a5fb4c",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bcd0b0d0bcd0b0-pack60-sense",
+      "word_id": "lex-v2-d0bcd0b0d0bcd0b0",
+      "label": "мама",
+      "meaning": "мама",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-mama",
+          "src": "/assets/words/mama-20261127.webp",
+          "label": "мама",
+          "sha256": "0b55faf5a8b5bf5a0c761189cac8566a762381927638cfc5a58088940f9bd37b",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-b68fadf0c8c07aa55866a9d4-pack60-sense",
+      "word_id": "modular-noun-b68fadf0c8c07aa55866a9d4",
+      "label": "модель",
+      "meaning": "человек, демонстрирующий одежду",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-model",
+          "src": "/assets/words/model-20261127.webp",
+          "label": "модель",
+          "sha256": "b42f7e4d9dee9183d9dab2ea23fb3a3e72bb6b36a6c3f4b26901f406a3647977",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-088178cdc9131aa81552a9ee-pack60-sense",
+      "word_id": "modular-noun-088178cdc9131aa81552a9ee",
+      "label": "огонь",
+      "meaning": "огонь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-ogon",
+          "src": "/assets/words/ogon-20261127.webp",
+          "label": "огонь",
+          "sha256": "3f53a11086ce564a0e681dfcaf226886f5bd7c31a5d16dce18a850a83fe7d3b9",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bed184d0b8d186d0b8d0b0d0bdd182-pack60-sense",
+      "word_id": "lex-v2-d0bed184d0b8d186d0b8d0b0d0bdd182",
+      "label": "официант",
+      "meaning": "официант",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-ofitsiant",
+          "src": "/assets/words/ofitsiant-20261127.webp",
+          "label": "официант",
+          "sha256": "e8113684063b4b358248604505c2629286655c80f9b64cd0c14cbc8808170aa7",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bfd0b0d0bfd0b0-pack60-sense",
+      "word_id": "lex-v2-d0bfd0b0d0bfd0b0",
+      "label": "папа",
+      "meaning": "папа",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-papa",
+          "src": "/assets/words/papa-20261127.webp",
+          "label": "папа",
+          "sha256": "1cc5aecab956287124cfdd68984af5a7931ec4732b03266c9a3fc5e370b313c4",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-f61cb05ad4697854db65f335-pack60-sense",
+      "word_id": "modular-noun-f61cb05ad4697854db65f335",
+      "label": "парашют",
+      "meaning": "парашют",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-parashyut",
+          "src": "/assets/words/parashyut-20261127.webp",
+          "label": "парашют",
+          "sha256": "1a5e1a86b44cb9184503dc038eef8aba4bceab9a7956b84021662517093ea153",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-0da8b87565a754bf5838a057-pack60-sense",
+      "word_id": "modular-noun-0da8b87565a754bf5838a057",
+      "label": "паутина",
+      "meaning": "паутина паука",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-pautina",
+          "src": "/assets/words/pautina-20261127.webp",
+          "label": "паутина",
+          "sha256": "2a5ffb31bc1f874a0a805abe85e096cc578de7fd1966d1a1caa79aa7364d1996",
+          "width": 960,
+          "height": 640,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-001-pack60-sense",
+      "word_id": "ru-noun-extra-20261109-001",
+      "label": "пельмени",
+      "meaning": "пельмени",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-pelmeni",
+          "src": "/assets/words/pelmeni-20261127.webp",
+          "label": "пельмени",
+          "sha256": "fa0072b053697e9d7fe99e8732b9d96869c41e0bbf98cad7eed7dc6baa733b56",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bfd0b5d181d0b5d186-pack60-sense",
+      "word_id": "lex-v2-d0bfd0b5d181d0b5d186",
+      "label": "песец",
+      "meaning": "песец",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-pesets",
+          "src": "/assets/words/pesets-20261127.webp",
+          "label": "песец",
+          "sha256": "e54a51efef44c0fa1e67e65ad0a923462f904a9905f415e4fc05fa53d1e1e5f7",
+          "width": 960,
+          "height": 640,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bfd0b8d0bdd0b3d0b2d0b8d0bd-pack60-sense",
+      "word_id": "lex-v2-d0bfd0b8d0bdd0b3d0b2d0b8d0bd",
+      "label": "пингвин",
+      "meaning": "пингвин",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-pingvin",
+          "src": "/assets/words/pingvin-20261127.webp",
+          "label": "пингвин",
+          "sha256": "4334d10c73fa2377b2c0ffa96868314df69b50add7c61e9faa9895dda7c1fcb9",
+          "width": 877,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-e8bdb5d5683af2a4b1e6e45a-pack60-sense",
+      "word_id": "modular-noun-e8bdb5d5683af2a4b1e6e45a",
+      "label": "пингвинёнок",
+      "meaning": "пингвинёнок",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-pingvinyonok",
+          "src": "/assets/words/pingvinyonok-20261127.webp",
+          "label": "пингвинёнок",
+          "sha256": "87e558b81e156095641c1d75b40860814d76821508701e9394f10b5b2f623a15",
+          "width": 877,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0034-pack60-sense",
+      "word_id": "ru-noun-20261109-0034",
+      "label": "погремушка",
+      "meaning": "погремушка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-pogremushka",
+          "src": "/assets/words/pogremushka-20261127.webp",
+          "label": "погремушка",
+          "sha256": "bacc6e17e1862ffb0cc095c6d56a9282779c1cfbc33e1047ebb5379495814b78",
+          "width": 960,
+          "height": 640,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d0bfd0bed0b6d0b0d180-pack60-sense",
+      "word_id": "ru-r-add-d0bfd0bed0b6d0b0d180",
+      "label": "пожар",
+      "meaning": "пожар",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-pozhar",
+          "src": "/assets/words/pozhar-20261127.webp",
+          "label": "пожар",
+          "sha256": "2bfd075a441d9f66a60beee2710b261f6ac44e133eceb1a50d3aeaaf44cf8b72",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-d7583047bdb49ed8c6c0226a-pack60-sense",
+      "word_id": "modular-noun-d7583047bdb49ed8c6c0226a",
+      "label": "пожарный шланг",
+      "meaning": "пожарный шланг",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-pozharnyy-shlang",
+          "src": "/assets/words/pozharnyy-shlang-20261127.webp",
+          "label": "пожарный шланг",
+          "sha256": "94800bd0aa1459dedfc53889ad432e847fb41eefdee9bb232b730bbd4671632a",
+          "width": 960,
+          "height": 640,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bfd0bed0bbd0b8d186d0b5d0b9d181d0bad0b8d0b9-pack60-sense",
+      "word_id": "lex-v2-d0bfd0bed0bbd0b8d186d0b5d0b9d181d0bad0b8d0b9",
+      "label": "полицейский",
+      "meaning": "полицейский",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-politseyskiy",
+          "src": "/assets/words/politseyskiy-20261127.webp",
+          "label": "полицейский",
+          "sha256": "d09c6d4ad5e46e4f19036fa6fffca292a9e2982654dfbbc3d0e1616b760313eb",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d0bfd180d0b8d0bdd186d0b5d181d181d0b0-pack60-sense",
+      "word_id": "lex-v2-d0bfd180d0b8d0bdd186d0b5d181d181d0b0",
+      "label": "принцесса",
+      "meaning": "принцесса",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-printsessa",
+          "src": "/assets/words/printsessa-20261127.webp",
+          "label": "принцесса",
+          "sha256": "b69c694b27fb95928bd68a393ded1d703f23cbcc06faae9589471ff9a961e8ee",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-f8734651-pack60-sense",
+      "word_id": "ru-home-20261105-f8734651",
+      "label": "прищепка",
+      "meaning": "прищепка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-prishchepka",
+          "src": "/assets/words/prishchepka-20261127.webp",
+          "label": "прищепка",
+          "sha256": "a2acb71c63e15154d105d98c868bb6927f51bea0634bcf0ae93f1bf5c86ad8c6",
+          "width": 960,
+          "height": 640,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "ru-noun-extra-20261109-012-pack60-sense",
+      "word_id": "ru-noun-extra-20261109-012",
+      "label": "пряник",
+      "meaning": "пряник",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-pryanik",
+          "src": "/assets/words/pryanik-20261127.webp",
+          "label": "пряник",
+          "sha256": "284da424f63a95c0b444df0086b3a6b047b3dba693d0c009f9ed68f760c699cd",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-641eef361c1514d9b6c83401-pack60-sense",
+      "word_id": "modular-noun-641eef361c1514d9b6c83401",
+      "label": "пузырь",
+      "meaning": "мыльный пузырь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-puzyr",
+          "src": "/assets/words/puzyr-20261127.webp",
+          "label": "пузырь",
+          "sha256": "c45bdd003585f112301e7a3bde27cf3453a5fbdfc994e932809ec619fb61baf2",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-102309a120364fe596a14ad5-pack60-sense",
+      "word_id": "modular-noun-102309a120364fe596a14ad5",
+      "label": "пустышка",
+      "meaning": "пустышка",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-pustyshka",
+          "src": "/assets/words/pustyshka-20261127.webp",
+          "label": "пустышка",
+          "sha256": "22773bb8625a1e45ab54cb244873923365a5bd1b18466f0a02cec01b1e78ced0",
+          "width": 960,
+          "height": 640,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-6ae9ca619966cf72d428a9eb-pack60-sense",
+      "word_id": "modular-noun-6ae9ca619966cf72d428a9eb",
+      "label": "пчеловод",
+      "meaning": "пчеловод",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-pchelovod",
+          "src": "/assets/words/pchelovod-20261127.webp",
+          "label": "пчеловод",
+          "sha256": "606d35fa40403eae822f0cc92c6a1bae9aaef1b40aafd2e4e7e7894a8fff7fde",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "ru-editorial-gap-20261123-fccbd49255fd8455-pack60-sense",
+      "word_id": "ru-editorial-gap-20261123-fccbd49255fd8455",
+      "label": "свинарник",
+      "meaning": "помещение для содержания свиней",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-svinarnik",
+          "src": "/assets/words/svinarnik-20261127.webp",
+          "label": "свинарник",
+          "sha256": "548e3e46b0a20f1dde6f1c2c2be2b771b680081c2b09ecb39fc90e3e42ffcd46",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-b9e83f6976d030f7ab32cdbe-pack60-sense",
+      "word_id": "modular-noun-b9e83f6976d030f7ab32cdbe",
+      "label": "сирень",
+      "meaning": "куст сирени",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-siren",
+          "src": "/assets/words/siren-20261127.webp",
+          "label": "сирень",
+          "sha256": "f1e30b70bb164017c36d73c5c5301b0a3dc90fe310303dc828b806ffd8de195d",
+          "width": 920,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-be808f824181ae48d99339cf-pack60-sense",
+      "word_id": "modular-noun-be808f824181ae48d99339cf",
+      "label": "станция",
+      "meaning": "железнодорожная станция",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-stantsiya",
+          "src": "/assets/words/stantsiya-20261127.webp",
+          "label": "станция",
+          "sha256": "d402223d3ff85feab498f22ca8402d0bce65763db20e9e7e9d3eb22d0fe5b2b7",
+          "width": 960,
+          "height": 640,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-de1ccfdbf43938cf20d7b819-pack60-sense",
+      "word_id": "modular-noun-de1ccfdbf43938cf20d7b819",
+      "label": "стетоскоп",
+      "meaning": "стетоскоп",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-stetoskop",
+          "src": "/assets/words/stetoskop-20261127.webp",
+          "label": "стетоскоп",
+          "sha256": "710f9418fd8e119da595e7637f2cff67b393268c3c1d3f8bf05b33d36e5899ef",
+          "width": 960,
+          "height": 877,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-dfc25bef5ff331ece09de482-pack60-sense",
+      "word_id": "modular-noun-dfc25bef5ff331ece09de482",
+      "label": "судья",
+      "meaning": "судья в суде",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-sudya",
+          "src": "/assets/words/sudya-20261127.webp",
+          "label": "судья",
+          "sha256": "4cefedc9ba32c3554152ef068b82a051c14a3befbe748f321003c3817f860d4e",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-0a35bff80ff4ba057e7fbc9e-pack60-sense",
+      "word_id": "modular-noun-0a35bff80ff4ba057e7fbc9e",
+      "label": "суши",
+      "meaning": "суши",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-sushi",
+          "src": "/assets/words/sushi-20261127.webp",
+          "label": "суши",
+          "sha256": "7d09922034abf895341e32efb1fae79089726d9e91de17fdaab86bb6db1109b6",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d181d18bd0bd-pack60-sense",
+      "word_id": "lex-v2-d181d18bd0bd",
+      "label": "сын",
+      "meaning": "сын",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-syn",
+          "src": "/assets/words/syn-20261127.webp",
+          "label": "сын",
+          "sha256": "8d44713ae62c8cc852a0fa98eab62c324194a949f36a01b610b918dd2077321b",
+          "width": 768,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-3437d18792c14db9d259b7d7-pack60-sense",
+      "word_id": "modular-noun-3437d18792c14db9d259b7d7",
+      "label": "сыщик",
+      "meaning": "сыщик",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-syshchik",
+          "src": "/assets/words/syshchik-20261127.webp",
+          "label": "сыщик",
+          "sha256": "96b166f587b8764fb453d0a9e387c181a01c5ddd5e5ace8977473829c6e42542",
+          "width": 640,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "ru-noun-20261109-0073-pack60-sense",
+      "word_id": "ru-noun-20261109-0073",
+      "label": "такси",
+      "meaning": "автомобиль для перевозки пассажиров по заказу",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-taksi",
+          "src": "/assets/words/taksi-20261127.webp",
+          "label": "такси",
+          "sha256": "be5ef803dfebf83405716d3d070a3f0ca2e3576e2d3604d75ce28220c7ae3ed8",
+          "width": 960,
+          "height": 640,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-b1646280f6609ff0963aad1e-pack60-sense",
+      "word_id": "modular-noun-b1646280f6609ff0963aad1e",
+      "label": "укол",
+      "meaning": "медицинская инъекция",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-ukol",
+          "src": "/assets/words/ukol-20261127.webp",
+          "label": "укол",
+          "sha256": "bd8d505bfdddf4805fb923be670e6c4135adc5e5aae8b074d5f07d690c09f6d2",
+          "width": 960,
+          "height": 640,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-f4ec40292a1f0ff78dc3aaa5-pack60-sense",
+      "word_id": "modular-noun-f4ec40292a1f0ff78dc3aaa5",
+      "label": "царь",
+      "meaning": "царь",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-tsar",
+          "src": "/assets/words/tsar-20261127.webp",
+          "label": "царь",
+          "sha256": "cb874e4f780b8c3f82255cadfca1c0566537cf3ce5fa01dfc816e5219f468642",
+          "width": 768,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d188d0b0d185d182d191d180-pack60-sense",
+      "word_id": "ru-r-add-d188d0b0d185d182d191d180",
+      "label": "шахтёр",
+      "meaning": "шахтёр",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-shakhtyor",
+          "src": "/assets/words/shakhtyor-20261127.webp",
+          "label": "шахтёр",
+          "sha256": "d2d5bb4c3f26aedc7bb378b7910ec657015ceb2123883c4b6a17a6b24f371218",
+          "width": 720,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "ru-home-20261105-624f6b16-pack60-sense",
+      "word_id": "ru-home-20261105-624f6b16",
+      "label": "швейная машина",
+      "meaning": "швейная машина",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-shveynaya-mashinka",
+          "src": "/assets/words/shveynaya-mashinka-20261127.webp",
+          "label": "швейная машинка",
+          "sha256": "29934a67804ad2503d152b8e36d1daa60727eb884272632982e1b660bd12236b",
+          "width": 960,
+          "height": 640,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "lex-v2-d188d0b8d0bdd188d0b8d0bbd0bbd0b0-pack60-sense",
+      "word_id": "lex-v2-d188d0b8d0bdd188d0b8d0bbd0bbd0b0",
+      "label": "шиншилла",
+      "meaning": "шиншилла",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-shinshilla",
+          "src": "/assets/words/shinshilla-20261127.webp",
+          "label": "шиншилла",
+          "sha256": "7d4a2ae94f66539d9ada0ad891c1165536abfee6e618619f751ecfdf0588e1a5",
+          "width": 960,
+          "height": 640,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "modular-noun-666de362fdee772ce3c6ed41-pack60-sense",
+      "word_id": "modular-noun-666de362fdee772ce3c6ed41",
+      "label": "шланг",
+      "meaning": "шланг",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-shlang",
+          "src": "/assets/words/shlang-20261127.webp",
+          "label": "шланг",
+          "sha256": "c450fb8567feb630982ab2837b362f3df030afdced3f88133176aad6ea00883d",
+          "width": 960,
+          "height": 640,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
+        }
+      ]
+    },
+    {
+      "id": "ru-r-add-d18dd0bad181d0bad0b0d0b2d0b0d182d0bed180-pack60-sense",
+      "word_id": "ru-r-add-d18dd0bad181d0bad0b0d0b2d0b0d182d0bed180",
+      "label": "экскаватор",
+      "meaning": "экскаватор",
+      "topic": null,
+      "subcategory": null,
+      "variants": [
+        {
+          "id": "approved-pack60-ekskavator",
+          "src": "/assets/words/ekskavator-20261127.webp",
+          "label": "экскаватор",
+          "sha256": "48b68ccf9b6ac9427a4ebc1c16160b9d873daccfe603c1b3327a395deeb2d1d0",
+          "width": 960,
+          "height": 960,
+          "format": "webp",
+          "source": "approved_pack60_20261127",
+          "review_note": "Авторский пакет; визуально проверено значение, прозрачность сохранена."
         }
       ]
     }

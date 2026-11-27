@@ -45,5 +45,6 @@
 {"id":"ru-new-20261108-d34a9acbe5","fields":{"phonetic_tags":{"status":"pending","data":null}}},
 {"id":"image-pack-20261120-750cd2044ccd","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"ru-editorial-gap-20261123-fccbd49255fd8455","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
-{"id":"ru-noun-import-20261115-meshok","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}}
+{"id":"ru-noun-import-20261115-meshok","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
+{"id":"modular-noun-5beff62d4df9d36b7ff011f0","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
 ]

@@ -59,5 +59,6 @@
 {"id":"image-pack-20261120-8bc8d5171df6","fields":{"morphology":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261120-d523dfc5bedb","fields":{"morphology":{"status":"pending","data":{}}}},
 {"id":"ru-noun-import-20261115-lapa","fields":{"morphology":{"status":"pending","data":{}}}},
-{"id":"ru-noun-import-20261115-panda","fields":{"morphology":{"status":"pending","data":{}}}}
+{"id":"ru-noun-import-20261115-panda","fields":{"morphology":{"status":"pending","data":{}}}},
+{"id":"modular-noun-de1ccfdbf43938cf20d7b819","fields":{"morphology":{"status":"pending_automatic_analysis","data":{}}}}
 ]

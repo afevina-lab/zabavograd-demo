@@ -82,5 +82,6 @@
 {"id":"image-pack-20261114-f7ad8c5b63c0","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261114-2c43ed76f86c","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261123-c5fa0717ea6d","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
-{"id":"ru-editorial-gap-20261123-2ba91fdab4a76ca8","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}}
+{"id":"ru-editorial-gap-20261123-2ba91fdab4a76ca8","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
+{"id":"modular-noun-ccf302483fd6e2d057da79a3","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
 ]

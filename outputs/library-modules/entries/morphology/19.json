@@ -48,5 +48,6 @@
 {"id":"ru-new-20261108-0ca50229c2","fields":{"morphology":{"status":"pending","data":null}}},
 {"id":"useful-20261113-d18dd185d0be","fields":{"morphology":{"status":"pending","data":null}}},
 {"id":"image-pack-20261123-1b7d9df0e6b5","fields":{"morphology":{"status":"pending","data":{}}}},
-{"id":"ru-noun-import-20261115-snegovik","fields":{"morphology":{"status":"pending","data":{}}}}
+{"id":"ru-noun-import-20261115-snegovik","fields":{"morphology":{"status":"pending","data":{}}}},
+{"id":"modular-noun-e8bdb5d5683af2a4b1e6e45a","fields":{"morphology":{"status":"pending_automatic_analysis","data":{}}}}
 ]

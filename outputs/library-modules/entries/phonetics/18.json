@@ -66,5 +66,7 @@
 {"id":"ru-attr-20261109-164","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"ru-editorial-gap-20261123-7ac5f106aab9ccda","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
 {"id":"ru-editorial-gap-20261123-e77ad0485e6c6c5c","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
-{"id":"ru-noun-import-20261115-tsennik","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}}
+{"id":"ru-noun-import-20261115-tsennik","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
+{"id":"modular-noun-b9e83f6976d030f7ab32cdbe","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}},
+{"id":"modular-noun-dfc25bef5ff331ece09de482","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
 ]

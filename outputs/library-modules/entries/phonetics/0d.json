@@ -68,5 +68,6 @@
 {"id":"ru-attr-20261109-049","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"ru-attr-20261109-107","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"useful-20261113-d0b1d183d181d18b","fields":{"phonetic_tags":{"status":"pending","data":null}}},
-{"id":"ru-editorial-gap-20261123-1b794ffe762af4ac","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}}
+{"id":"ru-editorial-gap-20261123-1b794ffe762af4ac","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
+{"id":"modular-noun-6b818be3eec8a27cf52a5b02","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
 ]

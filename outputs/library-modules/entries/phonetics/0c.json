@@ -70,5 +70,6 @@
 {"id":"useful-20261113-d0b2d0b0d182d0b0","fields":{"phonetic_tags":{"status":"pending","data":null}}},
 {"id":"image-pack-20261120-144dd4e65cc5","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"ru-editorial-gap-20261123-e443e93fdf99178f","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
-{"id":"ru-editorial-gap-20261123-2d7a9783377d7d54","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}}
+{"id":"ru-editorial-gap-20261123-2d7a9783377d7d54","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
+{"id":"modular-noun-4dc0aff8b16799538d5887ab","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
 ]

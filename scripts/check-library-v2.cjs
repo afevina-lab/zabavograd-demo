@@ -240,7 +240,7 @@ if(v.provenance.noun_expansion_20261109?.revision==='nouns-20261109-v1'){
   assert(!prior.some(p=>p.lemma===e.lemma),'New noun duplicates existing lemma '+e.lemma);
   assert(e.categories.length>0 && e.categories.every(c=>categoryPaths.has(c.path)),'New noun uncategorized '+e.lemma);
   assert(e.selection.base_weight>0 && permitted.has(e.selection.base_weight),'Invalid noun weight '+e.lemma);
-  const furnitureAssigned=e.illustrations.senses.some(s=>s.variants?.some(v=>v.id.startsWith('approved-20261123-')||v.id.startsWith('approved-import-20261115-')||v.id.startsWith('approved-pack77-')));
+  const furnitureAssigned=e.illustrations.senses.some(s=>s.variants?.some(v=>v.id.startsWith('approved-20261123-')||v.id.startsWith('approved-import-20261115-')||v.id.startsWith('approved-pack77-')||v.id.startsWith('approved-pack60-')));
   assert.equal(e.illustrations.art_status,furnitureAssigned?'assigned':'not_assigned');
  }
  console.log('PASS noun expansion:',newNouns.length,'new nouns');

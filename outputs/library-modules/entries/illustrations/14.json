@@ -36,7 +36,7 @@
 {"id":"ru-sem-20261105-31a5b050","fields":{"illustrations":{"policy":null,"planned_variants":null,"art_status":"not_assigned","senses":[]}}},
 {"id":"ru-sem-20261105-ab4c872f","fields":{"illustrations":{"policy":null,"planned_variants":null,"art_status":"not_assigned","senses":[]}}},
 {"id":"ru-home-20261105-89ad3e8","fields":{"illustrations":{"policy":null,"planned_variants":null,"art_status":"not_assigned","senses":[]}}},
-{"id":"ru-home-20261105-624f6b16","fields":{"illustrations":{"policy":null,"planned_variants":null,"art_status":"not_assigned","senses":[]}}},
+{"id":"ru-home-20261105-624f6b16","fields":{"illustrations":{"policy":null,"planned_variants":1,"art_status":"assigned","senses":[{"id":"ru-home-20261105-624f6b16-pack60-sense","word_id":"ru-home-20261105-624f6b16","label":"швейная машина","meaning":"швейная машина","topic":null,"subcategory":null,"variants":[{"id":"approved-pack60-shveynaya-mashinka","src":"/assets/words/shveynaya-mashinka-20261127.webp","label":"швейная машинка","sha256":"29934a67804ad2503d152b8e36d1daa60727eb884272632982e1b660bd12236b","width":960,"height":640,"format":"webp","source":"approved_pack60_20261127","review_note":"Авторский пакет; визуально проверено значение, прозрачность сохранена."}]}]}}},
 {"id":"ru-action-20261109-0014","fields":{"illustrations":{"policy":null,"planned_variants":null,"art_status":"not_assigned","senses":[]}}},
 {"id":"ru-action-20261109-0067","fields":{"illustrations":{"policy":null,"planned_variants":null,"art_status":"not_assigned","senses":[]}}},
 {"id":"ru-action-20261109-0088","fields":{"illustrations":{"policy":null,"planned_variants":null,"art_status":"not_assigned","senses":[]}}},

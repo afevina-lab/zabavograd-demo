@@ -62,5 +62,7 @@
 {"id":"ru-attr-20261109-067","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"ru-attr-20261109-083","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"ru-attr-20261109-139","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
-{"id":"ru-attr-20261109-156","fields":{"phonetic_tags":{"status":"pending","data":{}}}}
+{"id":"ru-attr-20261109-156","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
+{"id":"modular-noun-641eef361c1514d9b6c83401","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}},
+{"id":"modular-noun-6ae9ca619966cf72d428a9eb","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
 ]

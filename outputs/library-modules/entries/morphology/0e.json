@@ -60,5 +60,6 @@
 {"id":"ru-attr-20261109-109","fields":{"morphology":{"status":"editorial_draft","data":{"lemma":"хороший","part_of_speech":"ADJF","grammemes":"ADJF masc,sing,nomn","agreement":{"gender":["masculine","feminine","neuter"],"number":["singular","plural"],"case":["nominative","genitive","dative","accusative","instrumental","prepositional"]},"nominative_forms":{"masculine":"хороший","feminine":"хорошая","neuter":"хорошее","plural":"хорошие"},"review_status":"editorial_draft","full_inflection":"requires_pymorphy3_and_exception_review","usable_for_generation":false}}}},
 {"id":"useful-20261113-d0bfd183d185","fields":{"morphology":{"status":"pending","data":null}}},
 {"id":"image-pack-20261120-3deecb9cef23","fields":{"morphology":{"status":"pending","data":{}}}},
-{"id":"image-pack-20261123-58f5ba4e43f3","fields":{"morphology":{"status":"pending","data":{}}}}
+{"id":"image-pack-20261123-58f5ba4e43f3","fields":{"morphology":{"status":"pending","data":{}}}},
+{"id":"modular-noun-088178cdc9131aa81552a9ee","fields":{"morphology":{"status":"pending_automatic_analysis","data":{}}}}
 ]
