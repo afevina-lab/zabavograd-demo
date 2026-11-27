@@ -27,6 +27,58 @@ async function hydrate() {
   return hydrated;
 }
 
+async function storeResources(resources) {
+  const db=await database();
+  try {
+    await new Promise((resolve,reject)=>{
+      const tx=db.transaction('assets','readwrite');
+      for(const resource of resources) tx.objectStore('assets').put(resource);
+      tx.oncomplete=resolve;
+      tx.onerror=()=>reject(tx.error);
+      tx.onabort=()=>reject(tx.error||Error('Не удалось сохранить рисунки в браузере.'));
+    });
+  } finally {db.close();}
+  for(const resource of resources) {
+    assetURLs.set(resource.path,resource.dataURL);
+    const existing=importedAssets.findIndex(a=>a.path===resource.path);
+    if(existing<0) importedAssets.push(resource); else importedAssets[existing]=resource;
+  }
+}
+
+export async function uploadImage(file) {
+  if(file.size>20*1024*1024)throw Error('Рисунок «'+file.name+'» больше 20 МБ. Уменьшите его перед загрузкой.');
+  const header=new Uint8Array(await file.slice(0,12).arrayBuffer());
+  const webp=String.fromCharCode(...header.slice(0,4))==='RIFF' && String.fromCharCode(...header.slice(8,12))==='WEBP';
+  const png=header[0]===137 && header[1]===80 && header[2]===78 && header[3]===71;
+  const jpeg=header[0]===255 && header[1]===216 && header[2]===255;
+  if(!webp&&!png&&!jpeg)throw Error('Поддерживаются PNG, JPG и WebP. Файл «'+file.name+'» не является таким рисунком.');
+  let bitmap;
+  try {bitmap=await createImageBitmap(file);}
+  catch {throw Error('Не удалось открыть рисунок «'+file.name+'». Возможно, файл повреждён.');}
+  try {
+    const {width,height}=bitmap;
+    if(!width||!height||width>8192||height>8192||width*height>24_000_000)throw Error('Рисунок слишком большой. Максимум — 8192 по стороне и 24 миллиона пикселей.');
+    const canvas=document.createElement('canvas');canvas.width=width;canvas.height=height;
+    const context=canvas.getContext('2d',{willReadFrequently:true});context.drawImage(bitmap,0,0);
+    const rgba=context.getImageData(0,0,width,height).data;
+    let left=width,top=height,right=-1,bottom=-1,alpha=false;
+    for(let y=0;y<height;y++)for(let x=0;x<width;x++){
+      const a=rgba[(y*width+x)*4+3];
+      if(a<255)alpha=true;
+      if(a){left=Math.min(left,x);right=Math.max(right,x);top=Math.min(top,y);bottom=Math.max(bottom,y);}
+    }
+    const blob=webp?file:await new Promise(resolve=>canvas.toBlob(resolve,'image/webp',.95));
+    if(!blob)throw Error('Браузер не смог преобразовать рисунок в WebP.');
+    if(!webp&&blob.type!=='image/webp')throw Error('Этот браузер не поддерживает преобразование в WebP. Загрузите готовый WebP.');
+    if(blob.size>20*1024*1024)throw Error('После преобразования рисунок больше 20 МБ. Уменьшите его размеры.');
+    const bytes=await blob.arrayBuffer(),checksum=await sha256(bytes);
+    const dataURL=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(reader.error);reader.readAsDataURL(new Blob([bytes],{type:'image/webp'}));});
+    const resource={id:'uploaded-'+checksum.slice(0,16),name:file.name.replace(/\.[^.]+$/,'').slice(0,100)||'Мой рисунок',path:`assets/imported/${checksum}.webp`,width,height,alpha,sha256:checksum,version:1,contentBounds:right<0?{x:0,y:0,width:0,height:0}:{x:left,y:top,width:right-left+1,height:bottom-top+1},contentBoundsStatus:'alpha-measured',sockets:{},dataURL};
+    await storeResources([resource]);
+    return resource;
+  } finally {bitmap.close();}
+}
+
 export async function installDocument(document) {
   if(document.format!=='zabavograd-scene-document'||document.documentVersion!==1)throw Error('Неизвестный формат документа сцены.');
   const scene=clone(document.scene);
@@ -34,7 +86,7 @@ export async function installDocument(document) {
   const resources=[];
   const remap=new Map();
   for(const resource of document.resources||[]){
-    if(!/^data:image\/webp;base64,[a-zA-Z0-9+/=]+$/.test(resource.dataURL)||resource.dataURL.length>16_000_000)throw Error('Неверный формат рисунка.');
+    if(!/^data:image\/webp;base64,[a-zA-Z0-9+/=]+$/.test(resource.dataURL)||resource.dataURL.length>28_000_000)throw Error('Неверный формат рисунка или рисунок больше 20 МБ.');
     const bytes=await fetch(resource.dataURL).then(r=>r.arrayBuffer());
     if(await sha256(bytes)!==resource.sha256)throw Error('Контрольная сумма рисунка не совпала: '+resource.path);
     const path=`assets/imported/${resource.sha256}.webp`;
@@ -43,10 +95,7 @@ export async function installDocument(document) {
   }
   for(const node of scene.nodes)if(node.asset){if(!remap.has(node.asset))throw Error('В документе нет рисунка '+node.asset);node.asset=remap.get(node.asset);}
   for(const variant of scene.variants||[])for(const node of Object.values(variant.nodes||{}))if(node.asset){if(!remap.has(node.asset))throw Error('В документе нет рисунка варианта');node.asset=remap.get(node.asset);}
-  const db=await database();
-  try{await new Promise((resolve,reject)=>{const tx=db.transaction('assets','readwrite');for(const resource of resources)tx.objectStore('assets').put(resource);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});}
-  finally{db.close();}
-  for(const resource of resources){assetURLs.set(resource.path,resource.dataURL);if(!importedAssets.some(a=>a.path===resource.path))importedAssets.push(resource);}
+  await storeResources(resources);
   return {scene,resources};
 }
 
@@ -142,10 +191,12 @@ export async function makeDocument(scene, assets) {
     const dataURL = await new Promise(resolve=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.readAsDataURL(new Blob([bytes],{type:'image/webp'}));});
     resources.push({...assets.find(a=>a.path===path),path,sha256:await sha256(bytes),dataURL});
   }
-  return {
+  const result = {
     format:'zabavograd-scene-document',documentVersion:1,engineVersion:1,
     title:scene.name,createdAt:new Date().toISOString(),
     instructions:'Для Codex: проверь SHA-256 ресурсов, извлеки WebP по указанным путям, вставь scene в публичный реестр локаций и подключи общий scene-engine. Не меняй тему интерфейса и правила игр. Показать сцену на контрольных размерах до выпуска. Этот документ сам по себе не публикует сцену.',
     scene:clone(scene),resources,checks,
   };
+  if(new Blob([JSON.stringify(result,null,2)]).size>60*1024*1024)throw Error('Документ больше 60 МБ. Уменьшите размеры загруженных рисунков перед передачей.');
+  return result;
 }

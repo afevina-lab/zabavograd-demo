@@ -1,4 +1,4 @@
-import {mountScene} from './render.mjs';
+import {mountScene} from './render.mjs?v=20261127-4';
 /** opt-in bridge: existing game rules and old scene renderer are untouched. */
 export function attachGameScene(element,scene,{themeId,compatibility,time=0,assetURL,reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches}={}) {
  if(compatibility&&!compatibility[scene.id]?.includes(themeId))throw Error('Тема не совместима с локацией');
