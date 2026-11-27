@@ -1,5 +1,45 @@
 [
   {
+    "id": "ru-action-20261109-0107",
+    "lemma": "носить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0108",
+    "lemma": "нравиться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0109",
+    "lemma": "нюхать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0110",
+    "lemma": "обижаться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0111",
+    "lemma": "обнимать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0112",
+    "lemma": "обуваться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0113",
+    "lemma": "объяснять",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0114",
+    "lemma": "одеваться",
+    "weight": 0
+  },
+  {
     "id": "ru-action-20261109-0116",
     "lemma": "отвечать",
     "weight": 0
@@ -157,46 +197,6 @@
   {
     "id": "ru-action-20261109-0161",
     "lemma": "просыпаться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0163",
-    "lemma": "прощаться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0164",
-    "lemma": "прятать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0165",
-    "lemma": "прятаться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0166",
-    "lemma": "пугаться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0167",
-    "lemma": "пытаться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0168",
-    "lemma": "работать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0169",
-    "lemma": "радоваться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0170",
-    "lemma": "разбиваться",
     "weight": 0
   }
 ]

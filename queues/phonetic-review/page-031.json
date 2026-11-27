@@ -1,5 +1,45 @@
 [
   {
+    "id": "ru-sem-20261105-c03ddb3d",
+    "lemma": "новый",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-c3103cb9",
+    "lemma": "хрустальный",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-c390b4f",
+    "lemma": "полный",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-c69e55b9",
+    "lemma": "электрический",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-c8a085d",
+    "lemma": "пластиковый",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-cb126bcb",
+    "lemma": "шершавый",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-cc451013",
+    "lemma": "красить",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-cd915596",
+    "lemma": "чистый",
+    "weight": 0
+  },
+  {
     "id": "ru-sem-20261105-d3666f04",
     "lemma": "пилить",
     "weight": 0

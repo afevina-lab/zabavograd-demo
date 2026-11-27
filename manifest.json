@@ -3,16 +3,10 @@
   "source": {
     "master": {
       "path": "generated V2 from modules",
-      "sha256": "2342765ab2aae827ab89a2b9bbdcde08b9fbb14ccc5ba35a16879a12d51c5526",
-      "git_blob": "c2e3bfb7594a5ea1bc969b1f09757be90f02930c",
-      "bytes": 13166082,
+      "sha256": "263fd4ead1851194d248644a1dad7cc2c8baec7729099ac550cd93f3102446bd",
+      "git_blob": "4536508560dcb64c1cc82865f000f4c056b33ace",
+      "bytes": 18482315,
       "mode": "modules"
-    },
-    "draft": {
-      "path": "outputs/library-v2-auto-analysis.json",
-      "sha256": "ef4f3c7056436c055c611e3dc7164849f83aa0ef646e8a0c09ed2afd54f151c1",
-      "git_blob": "20fb9ee0076d379c8b8269434d086c4627f7ad09",
-      "bytes": 5874967
     },
     "syllables": {
       "path": "outputs/library-syllable-structure.json",
@@ -434,10 +428,10 @@
     "100": 206
   },
   "phonetic_status": {
-    "automatic_candidate_needs_review": 1210,
+    "automatic_candidate_needs_review": 1218,
     "filled_with_explicit_extended_cases": 259,
     "pending": 263,
-    "pending_automatic_analysis": 261
+    "pending_automatic_analysis": 253
   },
   "morphology_status": {
     "automatic_candidate_needs_review": 1363,
@@ -478,7 +472,7 @@
     },
     "phonetic_tags": {
       "entries": 1993,
-      "value_bytes": 1000092
+      "value_bytes": 1000140
     },
     "morphology": {
       "entries": 1993,
@@ -490,7 +484,7 @@
     },
     "metadata_completion": {
       "entries": 1946,
-      "value_bytes": 238860
+      "value_bytes": 238908
     },
     "legacy_source": {
       "entries": 1932,
@@ -509,8 +503,8 @@
       "value_bytes": 5311
     },
     "machine_analysis": {
-      "entries": 118,
-      "value_bytes": 112164
+      "entries": 1434,
+      "value_bytes": 2771729
     },
     "lexical_eligible_by_default": {
       "entries": 732,
@@ -537,11 +531,11 @@
   "draft_source_verified": false,
   "queues": {
     "phonetic-gaps": {
-      "count": 492,
+      "count": 491,
       "by_weight": {
         "0": 289,
         "10": 6,
-        "20": 32,
+        "20": 31,
         "30": 36,
         "50": 52,
         "70": 47,
@@ -598,18 +592,18 @@
         },
         {
           "file": "queues/phonetic-gaps/page-013.json",
-          "count": 12
+          "count": 11
         }
       ]
     },
     "phonetic-review": {
-      "count": 1210,
+      "count": 1218,
       "by_weight": {
         "0": 268,
         "10": 7,
-        "20": 194,
-        "30": 135,
-        "50": 231,
+        "20": 195,
+        "30": 141,
+        "50": 232,
         "70": 241,
         "100": 134
       },
@@ -736,7 +730,7 @@
         },
         {
           "file": "queues/phonetic-review/page-031.json",
-          "count": 10
+          "count": 18
         }
       ]
     },

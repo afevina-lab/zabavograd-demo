@@ -1,5 +1,45 @@
 [
   {
+    "id": "ru-action-20261109-0014",
+    "lemma": "входить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0015",
+    "lemma": "выбирать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0016",
+    "lemma": "выздоравливать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0018",
+    "lemma": "вырезать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0019",
+    "lemma": "высыхать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0020",
+    "lemma": "вытираться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0021",
+    "lemma": "выходить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0022",
+    "lemma": "вязать",
+    "weight": 0
+  },
+  {
     "id": "ru-action-20261109-0024",
     "lemma": "говорить",
     "weight": 0
@@ -157,46 +197,6 @@
   {
     "id": "ru-action-20261109-0061",
     "lemma": "идти",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0063",
-    "lemma": "искать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0064",
-    "lemma": "катать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0065",
-    "lemma": "кататься",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0066",
-    "lemma": "катить",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0067",
-    "lemma": "качаться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0068",
-    "lemma": "квакать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0069",
-    "lemma": "кидать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0071",
-    "lemma": "клевать",
     "weight": 0
   }
 ]

@@ -931,8 +931,8 @@
       "Природа и окружающий мир/География/Страны"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": "candidate_needs_review",
       "draft_tokens": true
@@ -943,7 +943,7 @@
       "draft_status": "candidate_needs_review"
     },
     "metadata_status": {
-      "speech": "pending_automatic_analysis",
+      "speech": "automatic_candidate_needs_review",
       "lexical": "editorial_draft",
       "forms": "pending_automatic_analysis",
       "prepositions": "pending",

@@ -1,5 +1,40 @@
 [
   {
+    "id": "lex-v2-d0bed181d0bbd191d0bdd0bed0ba",
+    "lemma": "ослёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bed181d191d182d180",
+    "lemma": "осётр",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bed182d0b2d180d0b0d189d0b5d0bdd0b8d0b5",
+    "lemma": "отвращение",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bed185d0bed182d0bdd0b8d0ba",
+    "lemma": "охотник",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bfd0b0d181d181d0b0d0b6d0b8d180",
+    "lemma": "пассажир",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bfd0b8d180d0b0d0bdd18cd18f",
+    "lemma": "пиранья",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bfd0b8d182d0bed0bd",
+    "lemma": "питон",
+    "weight": 20
+  },
+  {
     "id": "lex-v2-d0bfd0b8d18fd0b2d0bad0b0",
     "lemma": "пиявка",
     "weight": 20
@@ -162,41 +197,6 @@
   {
     "id": "lex-v2-d182d180d0b5d0bdd0b5d180",
     "lemma": "тренер",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d182d180d18fd181d0bed0b3d183d0b7d0bad0b0",
-    "lemma": "трясогузка",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d183d0b3d0bed180d18c",
-    "lemma": "угорь",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d183d0b4d0b0d0b2",
-    "lemma": "удав",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d183d181d182d180d0b8d186d0b0",
-    "lemma": "устрица",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d183d187d191d0bdd18bd0b9",
-    "lemma": "учёный",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d184d0b0d0b7d0b0d0bd",
-    "lemma": "фазан",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d185d0bed0b7d18fd0b8d0bd",
-    "lemma": "хозяин",
     "weight": 20
   }
 ]

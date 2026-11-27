@@ -1,5 +1,10 @@
 [
   {
+    "id": "ru-plant-20261104-d184d0b8d0b0d0bbd0bad0b0",
+    "lemma": "фиалка",
+    "weight": 50
+  },
+  {
     "id": "ru-sense-20261105-uroven-tool",
     "lemma": "уровень",
     "weight": 50
@@ -192,11 +197,6 @@
   {
     "id": "lex-v2-d181d0bed0bad0bed0bb",
     "lemma": "сокол",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d181d0bed180d0bed0bad0bed0bdd0bed0b6d0bad0b0",
-    "lemma": "сороконожка",
     "weight": 30
   }
 ]

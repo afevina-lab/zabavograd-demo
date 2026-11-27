@@ -1,5 +1,45 @@
 [
   {
+    "id": "ru-action-20261109-0163",
+    "lemma": "прощаться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0164",
+    "lemma": "прятать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0165",
+    "lemma": "прятаться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0166",
+    "lemma": "пугаться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0167",
+    "lemma": "пытаться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0168",
+    "lemma": "работать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0169",
+    "lemma": "радоваться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0170",
+    "lemma": "разбиваться",
+    "weight": 0
+  },
+  {
     "id": "ru-action-20261109-0171",
     "lemma": "разбирать",
     "weight": 0
@@ -157,46 +197,6 @@
   {
     "id": "ru-action-20261109-0210",
     "lemma": "спрашивать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0211",
-    "lemma": "спускаться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0213",
-    "lemma": "становиться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0214",
-    "lemma": "стоять",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0215",
-    "lemma": "стучать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0216",
-    "lemma": "считать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0218",
-    "lemma": "таять",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0219",
-    "lemma": "терять",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0220",
-    "lemma": "течь",
     "weight": 0
   }
 ]

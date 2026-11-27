@@ -1,10 +1,5 @@
 [
   {
-    "id": "ru-plant-20261104-d181d0bfd0b0d182d0b8d184d0b8d0bbd0bbd183d0bc",
-    "lemma": "спатифиллум",
-    "weight": 10
-  },
-  {
     "id": "ru-plant-20261104-d182d0bed0bbd181d182d18fd0bdd0bad0b0",
     "lemma": "толстянка",
     "weight": 10
@@ -197,6 +192,11 @@
   {
     "id": "image-pack-20261120-ac746bb25fd4",
     "lemma": "художница",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261120-d2c46b77a8b0",
+    "lemma": "бублик",
     "weight": 0
   }
 ]

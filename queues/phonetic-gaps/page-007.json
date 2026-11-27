@@ -1,10 +1,5 @@
 [
   {
-    "id": "image-pack-20261120-d2c46b77a8b0",
-    "lemma": "бублик",
-    "weight": 0
-  },
-  {
     "id": "image-pack-20261120-d523dfc5bedb",
     "lemma": "мармелад",
     "weight": 0
@@ -197,6 +192,11 @@
   {
     "id": "ru-action-20261109-0177",
     "lemma": "раскладывать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0178",
+    "lemma": "раскрашивать",
     "weight": 0
   }
 ]

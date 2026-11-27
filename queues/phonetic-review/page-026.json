@@ -1,5 +1,45 @@
 [
   {
+    "id": "ru-action-20261109-0063",
+    "lemma": "искать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0064",
+    "lemma": "катать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0065",
+    "lemma": "кататься",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0066",
+    "lemma": "катить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0067",
+    "lemma": "качаться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0068",
+    "lemma": "квакать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0069",
+    "lemma": "кидать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0071",
+    "lemma": "клевать",
+    "weight": 0
+  },
+  {
     "id": "ru-action-20261109-0072",
     "lemma": "клеить",
     "weight": 0
@@ -157,46 +197,6 @@
   {
     "id": "ru-action-20261109-0106",
     "lemma": "нести",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0107",
-    "lemma": "носить",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0108",
-    "lemma": "нравиться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0109",
-    "lemma": "нюхать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0110",
-    "lemma": "обижаться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0111",
-    "lemma": "обнимать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0112",
-    "lemma": "обуваться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0113",
-    "lemma": "объяснять",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0114",
-    "lemma": "одеваться",
     "weight": 0
   }
 ]

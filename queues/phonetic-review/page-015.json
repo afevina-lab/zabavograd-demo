@@ -1,5 +1,10 @@
 [
   {
+    "id": "ru-noun-extra-20261109-013",
+    "lemma": "вафля",
+    "weight": 50
+  },
+  {
     "id": "ru-noun-extra-20261109-014",
     "lemma": "кекс",
     "weight": 50
@@ -192,11 +197,6 @@
   {
     "id": "ru-plant-20261104-d184d0b0d181d0bed0bbd18c",
     "lemma": "фасоль",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d184d0b8d0b0d0bbd0bad0b0",
-    "lemma": "фиалка",
     "weight": 50
   }
 ]

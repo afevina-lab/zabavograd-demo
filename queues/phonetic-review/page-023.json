@@ -1,5 +1,40 @@
 [
   {
+    "id": "lex-v2-d182d180d18fd181d0bed0b3d183d0b7d0bad0b0",
+    "lemma": "трясогузка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d183d0b3d0bed180d18c",
+    "lemma": "угорь",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d183d0b4d0b0d0b2",
+    "lemma": "удав",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d183d181d182d180d0b8d186d0b0",
+    "lemma": "устрица",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d183d187d191d0bdd18bd0b9",
+    "lemma": "учёный",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d184d0b0d0b7d0b0d0bd",
+    "lemma": "фазан",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d185d0bed0b7d18fd0b8d0bd",
+    "lemma": "хозяин",
+    "weight": 20
+  },
+  {
     "id": "lex-v2-d185d0bed180d191d0ba",
     "lemma": "хорёк",
     "weight": 20
@@ -162,41 +197,6 @@
   {
     "id": "ru-new-20261102-0069",
     "lemma": "герб",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0071",
-    "lemma": "герой",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0074",
-    "lemma": "портал",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0091",
-    "lemma": "многоугольник",
-    "weight": 20
-  },
-  {
-    "id": "ru-new-20261102-0095",
-    "lemma": "призма",
-    "weight": 20
-  },
-  {
-    "id": "ru-noun-20261109-0051",
-    "lemma": "саксофон",
-    "weight": 20
-  },
-  {
-    "id": "ru-noun-extra-20261109-005",
-    "lemma": "кофе",
-    "weight": 20
-  },
-  {
-    "id": "ru-plant-20261104-d0b0d0b9d0b2d0b0",
-    "lemma": "айва",
     "weight": 20
   }
 ]
