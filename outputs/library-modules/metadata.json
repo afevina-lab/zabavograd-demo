@@ -2872,5 +2872,43 @@
         "grammar_approved": false
       }
     }
-  ]
+  ],
+  "historical_machine_draft": {
+    "status": "historical_unapproved_residual_not_for_generation",
+    "source_commit": "9dc237f81fd1cf6b239ccfb1f158424872e9ac56",
+    "source_path": "outputs/library-v2-auto-analysis.json",
+    "source_sha256": "ef4f3c7056436c055c611e3dc7164849f83aa0ef646e8a0c09ed2afd54f151c1",
+    "header": {
+      "schema_version": 1,
+      "generated_at": "2026-11-09T17:51:34+00:00",
+      "source": "outputs/library-v2.json",
+      "status": "DRAFT_ONLY_NOT_APPROVED",
+      "tools": {
+        "morphology": "pymorphy3",
+        "phonetics": "nsu-ai/russian_g2p"
+      },
+      "note": "Draft morphology needs review; draft G2P is used in automatic tasks only for unambiguously letter-aligned target phonemes, by author decision. V2 source is unchanged.",
+      "stats": {
+        "total_words": 1693,
+        "pending_entries": 1434,
+        "phonetics": {
+          "candidate_needs_review": 1213,
+          "needs_review": 221
+        },
+        "morphology": {
+          "candidate_needs_review": 1416,
+          "needs_review": 18
+        },
+        "g2p_loaded": true,
+        "orthography": {
+          "letter_sound_mismatches": 1338,
+          "before_soft_consonant": 354,
+          "ambiguous_alignment": 448,
+          "matches_allowed_for_automatic_practice": 5501
+        }
+      }
+    },
+    "rows": 1434,
+    "policy": "Exact matches omitted; full original is immutable in Git. Conflicting and novel values retained, not approval."
+  }
 }
