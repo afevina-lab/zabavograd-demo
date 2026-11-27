@@ -1,0 +1,1494 @@
+[
+  {
+    "id": "ru-noun-20261109-0045",
+    "lemma": "конёк",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Спортивный инвентарь"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0046",
+    "lemma": "шлем",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Спортивный инвентарь",
+      "Человек/Одежда, обувь и аксессуары/Аксессуары"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0049",
+    "lemma": "скрипка",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Музыкальные инструменты/Струнные"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "part_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0050",
+    "lemma": "флейта",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Музыкальные инструменты/Духовые"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0052",
+    "lemma": "бубен",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Музыкальные инструменты/Ударные"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0060",
+    "lemma": "какао",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Напитки"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0064",
+    "lemma": "омлет",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Готовые блюда"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "made_from": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0074",
+    "lemma": "самосвал",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Грузовой транспорт"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0081",
+    "lemma": "площадь",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Общество и окружающая среда/Город и село/Улицы и общественные пространства"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0083",
+    "lemma": "перекрёсток",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Общество и окружающая среда/Город и село/Улицы и общественные пространства"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0088",
+    "lemma": "библиотека",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Общество и окружающая среда/Город и село/Здания и учреждения"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0090",
+    "lemma": "ферма",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Общество и окружающая среда/Город и село/Сельская местность"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0093",
+    "lemma": "луг",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Природа и окружающий мир/Природные объекты"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0098",
+    "lemma": "водопад",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Природа и окружающий мир/Природные объекты"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "same_root": 2
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-extra-20261109-002",
+    "lemma": "запеканка",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Готовые блюда"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-extra-20261109-006",
+    "lemma": "кисель",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Напитки"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-extra-20261109-007",
+    "lemma": "лимонад",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Напитки"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-extra-20261109-010",
+    "lemma": "батон",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Выпечка"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-extra-20261109-012",
+    "lemma": "пряник",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Выпечка"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-extra-20261109-013",
+    "lemma": "вафля",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Выпечка"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-extra-20261109-014",
+    "lemma": "кекс",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Выпечка"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-extra-20261109-018",
+    "lemma": "лото",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Настольные игры"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-extra-20261109-019",
+    "lemma": "домино",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Настольные игры"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-extra-20261109-024",
+    "lemma": "дождевик",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "same_root": 2
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-extra-20261109-027",
+    "lemma": "музей",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Общество и окружающая среда/Город и село"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-extra-20261109-028",
+    "lemma": "фонтан",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Общество и окружающая среда/Город и село"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-extra-20261109-036",
+    "lemma": "молния",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Природа и окружающий мир/Погодные явления"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-extra-20261109-039",
+    "lemma": "океан",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Природа и окружающий мир/Природные объекты"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-import-20261115-meshok",
+    "lemma": "мешок",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Дом и быт/Предметы домашнего обихода/Хранение вещей"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "lexical": "editorial_draft",
+      "forms": "pending",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-import-20261115-zavod",
+    "lemma": "завод",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Общество и окружающая среда/Город и село/Здания и учреждения"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "lexical": "editorial_draft",
+      "forms": "pending",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-pack77-20261125-pismo",
+    "lemma": "письмо",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Дом и быт/Предметы домашнего обихода/Прочие бытовые предметы"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "pending",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-pack77-20261125-posylka",
+    "lemma": "посылка",
+    "weight": 50,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Дом и быт/Предметы домашнего обихода/Прочие бытовые предметы"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "pending",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-plant-20261104-d0b0d181d182d180d0b0",
+    "lemma": "астра",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Растительный мир и грибы/Цветы"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0b0d0bad0bbd0b0d0b6d0b0d0bd",
+    "lemma": "баклажан",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Растительный мир и грибы/Овощи",
+      "Еда и напитки/Овощи"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "typically_has_property": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0bbd0b5d0b4d0bdd0b0d18f20d0bfd0bed0b3d0b0d0bdd0bad0b0",
+    "lemma": "бледная поганка",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Растительный мир и грибы/Грибы"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d183d182d0bed0bd",
+    "lemma": "бутон",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Растительный мир и грибы/Вспомогательные/Части растений"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "part_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-plant-20261104-d0b2d0b0d181d0b8d0bbd191d0ba",
+    "lemma": "василёк",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Растительный мир и грибы/Цветы"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-plant-20261104-d0b3d0b2d0bed0b7d0b4d0b8d0bad0b0",
+    "lemma": "гвоздика",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Растительный мир и грибы/Цветы"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-plant-20261104-d0b3d0bed0bbd183d0b1d0b8d0bad0b0",
+    "lemma": "голубика",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Растительный мир и грибы/Ягоды/Лесные",
+      "Еда и напитки/Ягоды"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-plant-20261104-d0b5d0b6d0b5d0b2d0b8d0bad0b0",
+    "lemma": "ежевика",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Растительный мир и грибы/Ягоды/Лесные",
+      "Еда и напитки/Ягоды"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  }
+]

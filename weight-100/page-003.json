@@ -1,0 +1,1609 @@
+[
+  {
+    "id": "ru-home-20261105-f7cfdfb1",
+    "lemma": "ящик",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Предметы домашнего обихода/Хранение вещей"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "part_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-home-20261105-fab42c9f",
+    "lemma": "бутылка",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Посуда и кухонные принадлежности/Ёмкости для хранения"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "typically_contains": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-images-20261105-158_lampa",
+    "lemma": "лампа",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Предметы домашнего обихода/Освещение и электричество/Осветительные приборы"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261102-0001",
+    "lemma": "вечер",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Время и календарь/Части суток"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "contrasts_with": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261102-0008",
+    "lemma": "прогулка",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Человек/Повседневная жизнь/Отдых"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0031",
+    "lemma": "игрушка",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Обобщающие понятия"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 3,
+      "by_type": {
+        "same_root": 3
+      },
+      "verified": 3,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0032",
+    "lemma": "зеркало",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Интерьер и украшения"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "used_for": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261102-0035",
+    "lemma": "розетка",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Предметы домашнего обихода/Освещение и электричество/Электрические принадлежности"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "part_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0038",
+    "lemma": "кроссовки",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Обувь"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261102-0041",
+    "lemma": "квадрат",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Математические представления/Геометрические фигуры/Плоские фигуры"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0044",
+    "lemma": "фломастер",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "used_for": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261102-0050",
+    "lemma": "вертолёт",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Воздушный транспорт"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 4,
+      "by_type": {
+        "is_a": 1,
+        "same_root": 3
+      },
+      "verified": 3,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261102-0320",
+    "lemma": "кран",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Ванная комната и гигиена/Сантехника"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261102-0321",
+    "lemma": "мышь",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Животный мир/Дикие животные/Лесные"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "dwells_in": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261102-0322",
+    "lemma": "мышь",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Бытовая техника и электроника/Электроника"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261108-0ca50229c2",
+    "lemma": "платье",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "lexical": "published_category",
+      "forms": "pending",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261108-2bac6d3523",
+    "lemma": "кукла",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Игрушки"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "lexical": "published_category",
+      "forms": "pending",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261108-53796f6d09",
+    "lemma": "штаны",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "lexical": "published_category",
+      "forms": "pending",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261108-6ce7e80f4f",
+    "lemma": "футболка",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "lexical": "published_category",
+      "forms": "pending",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261108-70c372449f",
+    "lemma": "шапка",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "lexical": "published_category",
+      "forms": "pending",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261108-84653d88d9",
+    "lemma": "мяч",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Спортивный инвентарь"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "lexical": "published_category",
+      "forms": "pending",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261108-97b71638c2",
+    "lemma": "облако",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Природа и окружающий мир/Погодные явления"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "lexical": "published_category",
+      "forms": "pending",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261108-a88df7da50",
+    "lemma": "яйцо",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Прочие продукты"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "lexical": "published_category",
+      "forms": "pending",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 5,
+      "by_type": {
+        "produces": 3,
+        "made_from": 2
+      },
+      "verified": 5,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-new-20261108-b8f6c0f802",
+    "lemma": "молоко",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Молочные продукты"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "lexical": "published_category",
+      "forms": "pending",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0001",
+    "lemma": "платье",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "part_of": 1,
+        "made_of": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0003",
+    "lemma": "брюки",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "part_of": 1,
+        "made_of": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0005",
+    "lemma": "футболка",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "made_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0007",
+    "lemma": "кофта",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "made_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0011",
+    "lemma": "шапка",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0016",
+    "lemma": "ботинок",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Обувь"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "part_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0017",
+    "lemma": "сапог",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Обувь"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0023",
+    "lemma": "варежка",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Аксессуары"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0029",
+    "lemma": "носок",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Аксессуары",
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0030",
+    "lemma": "кукла",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Игрушки"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0031",
+    "lemma": "мяч",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Игрушки",
+      "Игры, творчество и увлечения/Спортивный инвентарь"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "typically_has_property": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0032",
+    "lemma": "кубик",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Игрушки"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0055",
+    "lemma": "вода",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Напитки"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 6,
+      "by_type": {
+        "typically_contains": 4,
+        "same_root": 2
+      },
+      "verified": 6,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0056",
+    "lemma": "молоко",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Напитки"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 8,
+      "by_type": {
+        "made_from": 4,
+        "produces": 2,
+        "typically_contains": 1,
+        "typically_has_property": 1
+      },
+      "verified": 8,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0057",
+    "lemma": "сок",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Напитки"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "same_root": 1,
+        "made_from": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0061",
+    "lemma": "суп",
+    "weight": 100,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Еда и напитки/Готовые блюда"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "typically_contains": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  }
+]

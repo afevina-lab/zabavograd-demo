@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lex-v2-d18dd0bad181d0bad0b0d0b2d0b0d182d0bed180d189d0b8d0ba",
+    "lemma": "экскаваторщик",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d18fd0b3d0bdd191d0bdd0bed0ba",
+    "lemma": "ягнёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d18fd0b3d183d0b0d180",
+    "lemma": "ягуар",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d191d180d188",
+    "lemma": "ёрш",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-345c3e46",
+    "lemma": "хлебопечка",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-4addc343",
+    "lemma": "жалюзи",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-52f9ab6e",
+    "lemma": "ступка",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-5465d78d",
+    "lemma": "хижина",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-558058ce",
+    "lemma": "фляга",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-5b6fba6a",
+    "lemma": "вышивка",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-626ecbec",
+    "lemma": "вафельница",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-725a8734",
+    "lemma": "ночник",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-75db3c5b",
+    "lemma": "карниз",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-7df5f2c8",
+    "lemma": "отбеливатель",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-8b40485f",
+    "lemma": "гобелен",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-93866eb7",
+    "lemma": "особняк",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-9ab6ec11",
+    "lemma": "изолента",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-9e01d521",
+    "lemma": "креманка",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-a170b5b0",
+    "lemma": "бра",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-a715553a",
+    "lemma": "подоконник",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-c3f14a3b",
+    "lemma": "стеллаж",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-d63a138e",
+    "lemma": "подъезд",
+    "weight": 20
+  },
+  {
+    "id": "ru-images-20261105-156_lama",
+    "lemma": "лама",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0012",
+    "lemma": "кора",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0014",
+    "lemma": "крона",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0020",
+    "lemma": "бурундук",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0026",
+    "lemma": "морс",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0028",
+    "lemma": "крупа",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0049",
+    "lemma": "размер",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0056",
+    "lemma": "поворот",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0066",
+    "lemma": "доктор",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0068",
+    "lemma": "родина",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0069",
+    "lemma": "герб",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0071",
+    "lemma": "герой",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0074",
+    "lemma": "портал",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0091",
+    "lemma": "многоугольник",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0095",
+    "lemma": "призма",
+    "weight": 20
+  },
+  {
+    "id": "ru-noun-20261109-0051",
+    "lemma": "саксофон",
+    "weight": 20
+  },
+  {
+    "id": "ru-noun-extra-20261109-005",
+    "lemma": "кофе",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0b0d0b9d0b2d0b0",
+    "lemma": "айва",
+    "weight": 20
+  }
+]

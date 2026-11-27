@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-r-add-d0bfd180d183d0b6d0b8d0bdd0b0",
+    "lemma": "пружина",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d180d0bed189d0b0",
+    "lemma": "роща",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d180d183d0b6d18cd191",
+    "lemma": "ружьё",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d180d183d0bbd0bed0bd",
+    "lemma": "рулон",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d181d0b0d182d183d180d0bd",
+    "lemma": "сатурн",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d182d0b0d180d0b0d0bad0b0d0bd",
+    "lemma": "таракан",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d182d0b5d180d0bcd0bed0bcd0b5d182d180",
+    "lemma": "термометр",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d183d180d0b0d0b3d0b0d0bd",
+    "lemma": "ураган",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d184d0b0d180d0b0",
+    "lemma": "фара",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d184d0b0d180d182d183d0ba",
+    "lemma": "фартук",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d184d0bed182d0bed0b3d180d0b0d184d0b8d18f",
+    "lemma": "фотография",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d185d180d0b0d0bf",
+    "lemma": "храп",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d18dd0bad181d0bad0b0d0b2d0b0d182d0bed180",
+    "lemma": "экскаватор",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d18dd181d0bad0b0d0bbd0b0d182d0bed180",
+    "lemma": "эскалатор",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d18ed0bfd0b8d182d0b5d180",
+    "lemma": "юпитер",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-009",
+    "lemma": "корыто",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-013",
+    "lemma": "двор",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-017",
+    "lemma": "груз",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-019",
+    "lemma": "трос",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-021",
+    "lemma": "морж",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-023",
+    "lemma": "ров",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-024",
+    "lemma": "рукав",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b0d0b8d181d182d191d0bdd0bed0ba",
+    "lemma": "аистёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b0d0bbd0bbd0b8d0b3d0b0d182d0bed180",
+    "lemma": "аллигатор",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b0d180d185d0b5d0bed0bbd0bed0b3",
+    "lemma": "археолог",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d0b0d0bad0bbd0b0d0bd",
+    "lemma": "баклан",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d0b5d0b4d180d0be",
+    "lemma": "бедро",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d0b5d0bbd18cd187d0bed0bdd0bed0ba",
+    "lemma": "бельчонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d0b8d0b1d0bbd0b8d0bed182d0b5d0bad0b0d180d18c",
+    "lemma": "библиотекарь",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d0bbd0b0d0b3d0bed0b4d0b0d180d0bdd0bed181d182d18c",
+    "lemma": "благодарность",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d0bbd0b8d0b7d0bdd0b5d186d18b",
+    "lemma": "близнецы",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d0bed0b1d180d191d0bdd0bed0ba",
+    "lemma": "бобрёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d180d0bed0bdd0b5d0bdd0bed181d0b5d186",
+    "lemma": "броненосец",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0b5d0bad0be",
+    "lemma": "веко",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0b5d0bbd0b8d0bad0b0d0bd",
+    "lemma": "великан",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0b5d180d0b1d0bbd18ed0b6d0bed0bdd0bed0ba",
+    "lemma": "верблюжонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0b5d181d0bdd183d188d0bad0b8",
+    "lemma": "веснушки",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0bdd183d0bad0b8",
+    "lemma": "внуки",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0bed0b5d0bdd0bdd18bd0b9",
+    "lemma": "военный",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0bed0bbd0bdd0b5d0bdd0b8d0b5",
+    "lemma": "волнение",
+    "weight": 20
+  }
+]

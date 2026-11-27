@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-noun-extra-20261109-014",
+    "lemma": "кекс",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-018",
+    "lemma": "лото",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-019",
+    "lemma": "домино",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-024",
+    "lemma": "дождевик",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-027",
+    "lemma": "музей",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-028",
+    "lemma": "фонтан",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-036",
+    "lemma": "молния",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-039",
+    "lemma": "океан",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0b0d181d182d180d0b0",
+    "lemma": "астра",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0b0d0bad0bbd0b0d0b6d0b0d0bd",
+    "lemma": "баклажан",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d183d182d0bed0bd",
+    "lemma": "бутон",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0b2d0b0d181d0b8d0bbd191d0ba",
+    "lemma": "василёк",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0b3d0b2d0bed0b7d0b4d0b8d0bad0b0",
+    "lemma": "гвоздика",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0b3d0bed0bbd183d0b1d0b8d0bad0b0",
+    "lemma": "голубика",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0b5d0b6d0b5d0b2d0b8d0bad0b0",
+    "lemma": "ежевика",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0b8d0b3d0bed0bbd0bad0b03ad0b8d0b3d0bed0bbd0bad0b020d185d0b2d0bed0b9d0bdd0bed0b3d0be20d180d0b0d181d182d0b5d0bdd0b8d18f",
+    "lemma": "иголка",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0b0d0bad182d183d181",
+    "lemma": "кактус",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0b0d188d182d0b0d0bd",
+    "lemma": "каштан",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0bbd18ed0bad0b2d0b0",
+    "lemma": "клюква",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0bed0b6d183d180d0b0",
+    "lemma": "кожура",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0bed0bad0bed181",
+    "lemma": "кокос",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0bed0bbd0bed0bad0bed0bbd18cd187d0b8d0ba",
+    "lemma": "колокольчик",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0bed0bbd0bed181",
+    "lemma": "колос",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0bed181d182d0bed187d0bad0b03ad0bad0bed181d182d0bed187d0bad0b020d0bfd0bbd0bed0b4d0b0",
+    "lemma": "косточка",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b0d0bdd0b4d18bd188",
+    "lemma": "ландыш",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b8d0bbd0b8d18f",
+    "lemma": "лилия",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b8d0bfd0b0",
+    "lemma": "липа",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd183d0bad0bed0b2d0b8d186d0b0",
+    "lemma": "луковица",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bcd0b0d0ba",
+    "lemma": "мак",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bdd0b0d180d186d0b8d181d181",
+    "lemma": "нарцисс",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bed0bfd191d0bdd0bed0ba",
+    "lemma": "опёнок",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b8d0bed0bd",
+    "lemma": "пион",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0bed0b4d0b1d0b5d180d191d0b7d0bed0b2d0b8d0ba",
+    "lemma": "подберёзовик",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0bed0b4d0bed181d0b8d0bdd0bed0b2d0b8d0ba",
+    "lemma": "подосиновик",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0bed0b4d181d0bed0bbd0bdd183d185",
+    "lemma": "подсолнух",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0bed187d0bad0b03ad0bfd0bed187d0bad0b020d180d0b0d181d182d0b5d0bdd0b8d18f",
+    "lemma": "почка",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d180d0b5d0b4d0b8d181",
+    "lemma": "редис",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d180d0b5d0bfd0b0",
+    "lemma": "репа",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d180d0bed181d182d0bed0ba",
+    "lemma": "росток",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d181d0b5d0bcd18f",
+    "lemma": "семя",
+    "weight": 50
+  }
+]

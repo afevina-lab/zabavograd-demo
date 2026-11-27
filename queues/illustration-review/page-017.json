@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-plant-20261104-d0bcd0b0d181d0bbd191d0bdd0bed0ba",
+    "lemma": "маслёнок",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bdd0b5d0b7d0b0d0b1d183d0b4d0bad0b0",
+    "lemma": "незабудка",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bdd0b5d0bad182d0b0d180d0b8d0bd",
+    "lemma": "нектарин",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bed0b1d0bbd0b5d0bfd0b8d185d0b0",
+    "lemma": "облепиха",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bed180d185d0b8d0b4d0b5d18f",
+    "lemma": "орхидея",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bed181d0b8d0bdd0b0",
+    "lemma": "осина",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0bed0b1d0b5d0b3",
+    "lemma": "побег",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d180d0b5d0b4d18cd0bad0b0",
+    "lemma": "редька",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d181d0b5d0bbd18cd0b4d0b5d180d0b5d0b9",
+    "lemma": "сельдерей",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d182d180d183d182d0bed0b2d0b8d0ba",
+    "lemma": "трутовик",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d184d0b8d0bad183d181",
+    "lemma": "фикус",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d184d0b8d0bdd0b8d0ba",
+    "lemma": "финик",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d185d180d0b8d0b7d0b0d0bdd182d0b5d0bcd0b0",
+    "lemma": "хризантема",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d188d0bfd0b8d0bdd0b0d182",
+    "lemma": "шпинат",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-005",
+    "lemma": "брусника",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-072",
+    "lemma": "рыжик",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-096",
+    "lemma": "шнурок",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0b2d0b5d0bdd0b5d180d0b0",
+    "lemma": "венера",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0b2d0b5d182d0b5d180",
+    "lemma": "ветер",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0b2d180d0b0d182d0b0d180d18c",
+    "lemma": "вратарь",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0b2d18bd0b4d180d0b0",
+    "lemma": "выдра",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0b3d180d0b0d0b4",
+    "lemma": "град",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0b3d180d0b0d0b4d183d181d0bdd0b8d0ba",
+    "lemma": "градусник",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0b4d180d0b0d0bad0b0",
+    "lemma": "драка",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0b4d18bd180d0b0",
+    "lemma": "дыра",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0b6d0b0d0b2d0bed180d0bed0bdd0bed0ba",
+    "lemma": "жаворонок",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0b7d0b5d180d0bdd0be",
+    "lemma": "зерно",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bad0b0d0bbd18cd0bcd0b0d180",
+    "lemma": "кальмар",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bad0b0d180d0b0d0bcd0b5d0bbd18c",
+    "lemma": "карамель",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bad0b0d180d182d0bed0bd",
+    "lemma": "картон",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bad0b5d184d0b8d180",
+    "lemma": "кефир",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bad0b8d180d0bfd0b8d187",
+    "lemma": "кирпич",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bad0bed180d0bc",
+    "lemma": "корм",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bad180d0b0d182d0b5d180",
+    "lemma": "кратер",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bad180d18bd0b6d0bed0b2d0bdd0b8d0ba",
+    "lemma": "крыжовник",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bcd0b0d180d181",
+    "lemma": "марс",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bcd0b0d180d182d18bd188d0bad0b0",
+    "lemma": "мартышка",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bcd0b5d180d0bad183d180d0b8d0b9",
+    "lemma": "меркурий",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bfd0b8d180d0b0d0bcd0b8d0b4d0b0",
+    "lemma": "пирамида",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bfd0bed0b6d0b0d180",
+    "lemma": "пожар",
+    "weight": 30
+  }
+]

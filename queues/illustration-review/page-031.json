@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-action-20261109-0247",
+    "lemma": "чувствовать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0248",
+    "lemma": "шагать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0249",
+    "lemma": "шептать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0250",
+    "lemma": "шить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0251",
+    "lemma": "шуметь",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0252",
+    "lemma": "щипать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0253",
+    "lemma": "щупать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-gladit-stroke",
+    "lemma": "гладить",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-001",
+    "lemma": "белый",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-002",
+    "lemma": "чёрный",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-003",
+    "lemma": "синий",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-004",
+    "lemma": "голубой",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-005",
+    "lemma": "зелёный",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-006",
+    "lemma": "жёлтый",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-007",
+    "lemma": "фиолетовый",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-008",
+    "lemma": "коричневый",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-009",
+    "lemma": "серый",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-010",
+    "lemma": "бежевый",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-011",
+    "lemma": "золотистый",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-012",
+    "lemma": "серебристый",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-013",
+    "lemma": "разноцветный",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-014",
+    "lemma": "светлый",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-015",
+    "lemma": "тёмный",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-016",
+    "lemma": "большой",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-017",
+    "lemma": "маленький",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-018",
+    "lemma": "огромный",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-019",
+    "lemma": "крошечный",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-020",
+    "lemma": "высокий",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-021",
+    "lemma": "низкий",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-022",
+    "lemma": "длинный",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-023",
+    "lemma": "короткий",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-024",
+    "lemma": "широкий",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-025",
+    "lemma": "узкий",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-026",
+    "lemma": "толстый",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-027",
+    "lemma": "тонкий",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-028",
+    "lemma": "крупный",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-029",
+    "lemma": "мелкий",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-030",
+    "lemma": "круглый",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-031",
+    "lemma": "квадратный",
+    "weight": 0
+  },
+  {
+    "id": "ru-attr-20261109-032",
+    "lemma": "треугольный",
+    "weight": 0
+  }
+]

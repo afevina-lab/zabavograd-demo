@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lex-v2-d181d0bbd0b8d0b7d0b5d0bdd18c",
+    "lemma": "слизень",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bed0b2d191d0bdd0bed0ba",
+    "lemma": "совёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bed0bad0bed0bb",
+    "lemma": "сокол",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bed0bbd0bed0b2d0b5d0b9",
+    "lemma": "соловей",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bed180d0bed0bad0bed0bdd0bed0b6d0bad0b0",
+    "lemma": "сороконожка",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d182d180d0b8d0b6",
+    "lemma": "стриж",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d182d183d0bfd0bdd18f",
+    "lemma": "ступня",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d182d0b5d0bbd191d0bdd0bed0ba",
+    "lemma": "телёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d182d18ed0bbd0b5d0bdd18c",
+    "lemma": "тюлень",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d183d0b6",
+    "lemma": "уж",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d183d182d191d0bdd0bed0ba",
+    "lemma": "утёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d184d0b8d0bbd0b8d0bd",
+    "lemma": "филин",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d184d0bbd0b0d0bcd0b8d0bdd0b3d0be",
+    "lemma": "фламинго",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d184d0bed180d0b5d0bbd18c",
+    "lemma": "форель",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d185d0b0d0bcd0b5d0bbd0b5d0bed0bd",
+    "lemma": "хамелеон",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d188d0b8d0bcd0bfd0b0d0bdd0b7d0b5",
+    "lemma": "шимпанзе",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d18fd181d182d180d0b5d0b1",
+    "lemma": "ястреб",
+    "weight": 30
+  },
+  {
+    "id": "ru-gen-20261104-flower-organ",
+    "lemma": "цветок",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-124dae33",
+    "lemma": "вилы",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-1a3b29f",
+    "lemma": "лопатка",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-1bed09e9",
+    "lemma": "чехол",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-23ebaf4b",
+    "lemma": "проектор",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-309a5298",
+    "lemma": "мыльница",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-4c24628c",
+    "lemma": "футляр",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-4c8c0c22",
+    "lemma": "перила",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-5577c95e",
+    "lemma": "тюль",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-5b1f8d61",
+    "lemma": "казан",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-5bd96790",
+    "lemma": "подсвечник",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-6e18c351",
+    "lemma": "соусник",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-6eb84d4e",
+    "lemma": "шпатель",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-723ab1af",
+    "lemma": "пуф",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-7406ced9",
+    "lemma": "флешка",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-76b58058",
+    "lemma": "торшер",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-87a50edd",
+    "lemma": "венок",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-93e6b725",
+    "lemma": "вытяжка",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-9fee620d",
+    "lemma": "сотейник",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-b663f83",
+    "lemma": "овощечистка",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-be632bf2",
+    "lemma": "щипцы",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-c0df24fa",
+    "lemma": "кабинет",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-c4c47b60",
+    "lemma": "столовая",
+    "weight": 30
+  }
+]

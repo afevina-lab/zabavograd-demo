@@ -1,0 +1,280 @@
+[
+  {
+    "id": "ru-r-extra-009",
+    "lemma": "корыто",
+    "weight": 30,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-extra-013",
+    "lemma": "двор",
+    "weight": 30,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-extra-017",
+    "lemma": "груз",
+    "weight": 30,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-extra-019",
+    "lemma": "трос",
+    "weight": 30,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "part_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-extra-021",
+    "lemma": "морж",
+    "weight": 30,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Животный мир/Дикие животные/Севера",
+      "Животный мир/Морские обитатели"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-extra-023",
+    "lemma": "ров",
+    "weight": 30,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-extra-024",
+    "lemma": "рукав",
+    "weight": 30,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 6,
+      "by_type": {
+        "part_of": 3,
+        "same_root": 3
+      },
+      "verified": 6,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  }
+]

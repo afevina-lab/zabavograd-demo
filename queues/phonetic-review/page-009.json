@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-noun-extra-20261109-001",
+    "lemma": "пельмени",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-003",
+    "lemma": "блин",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-009",
+    "lemma": "булочка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-011",
+    "lemma": "печенье",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-015",
+    "lemma": "шоколад",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-017",
+    "lemma": "варенье",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-020",
+    "lemma": "санки",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-021",
+    "lemma": "лыжи",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-022",
+    "lemma": "коньки",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-031",
+    "lemma": "туман",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-032",
+    "lemma": "лужа",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-033",
+    "lemma": "метель",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-034",
+    "lemma": "туча",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-035",
+    "lemma": "лёд",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-037",
+    "lemma": "сосулька",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-038",
+    "lemma": "снежинка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-043",
+    "lemma": "альбом",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-045",
+    "lemma": "мел",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-046",
+    "lemma": "клей",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b0d0b1d180d0b8d0bad0bed181",
+    "lemma": "абрикос",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b0d0bdd0b0d0bdd0b0d181",
+    "lemma": "ананас",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0b5d180d191d0b7d0b0",
+    "lemma": "берёза",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b2d0b5d182d0bad0b0",
+    "lemma": "ветка",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b4d183d0b1",
+    "lemma": "дуб",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b4d18bd0bdd18f",
+    "lemma": "дыня",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b5d0bbd18c",
+    "lemma": "ель",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b7d0b5d0bcd0bbd18fd0bdd0b8d0bad0b0",
+    "lemma": "земляника",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b8d0b2d0b0",
+    "lemma": "ива",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0b0d0b1d0b0d187d0bed0ba",
+    "lemma": "кабачок",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0bbd191d0bd",
+    "lemma": "клён",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0bed180d0b5d0bdd18c",
+    "lemma": "корень",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b5d0bfd0b5d181d182d0bed0ba",
+    "lemma": "лепесток",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b8d181d0b8d187d0bad0b0",
+    "lemma": "лисичка",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b8d181d1823ad0bbd0b8d181d18220d180d0b0d181d182d0b5d0bdd0b8d18f",
+    "lemma": "лист",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bed0b4d183d0b2d0b0d0bdd187d0b8d0ba",
+    "lemma": "одуванчик",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b0d0bbd18cd0bcd0b0",
+    "lemma": "пальма",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b5d180d0b5d1863ad181d0bbd0b0d0b4d0bad0b8d0b920d0bed0b2d0bed189d0bdd0bed0b920d0bfd0b5d180d0b5d186",
+    "lemma": "перец",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0bbd0bed0b4",
+    "lemma": "плод",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0bed0b4d181d0bdd0b5d0b6d0bdd0b8d0ba",
+    "lemma": "подснежник",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d180d18fd0b1d0b8d0bdd0b03ad0b4d0b5d180d0b5d0b2d0be20d180d18fd0b1d0b8d0bdd0b0",
+    "lemma": "рябина",
+    "weight": 70
+  }
+]

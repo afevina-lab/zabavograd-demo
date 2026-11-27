@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0bed0b920d0bad0bed0bdd191d0ba",
+    "lemma": "морской конёк",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0bed0b920d0bad0bed182d0b8d0ba",
+    "lemma": "морской котик",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0bed0b920d191d0b6",
+    "lemma": "морской ёж",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed182d18bd0bbd191d0ba",
+    "lemma": "мотылёк",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bed0bad183d0bdd18c",
+    "lemma": "окунь",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bed180d0bbd191d0bdd0bed0ba",
+    "lemma": "орлёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bfd0b0d0bdd182d0b5d180d0b0",
+    "lemma": "пантера",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bfd0b5d0bbd0b8d0bad0b0d0bd",
+    "lemma": "пеликан",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bfd0b5d181d0b5d186",
+    "lemma": "песец",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bfd18fd182d0bad0b0",
+    "lemma": "пятка",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d180d18bd0b1d0b02dd0bad0bbd0bed183d0bd",
+    "lemma": "рыба-клоун",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0b2d0b5d180d187d0bed0ba",
+    "lemma": "сверчок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0b2d0b5d182d0bbd18fd187d0bed0ba",
+    "lemma": "светлячок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0b2d0b8d180d0b8d181d182d0b5d0bbd18c",
+    "lemma": "свиристель",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bad0b0d182",
+    "lemma": "скат",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bad0bed180d0bfd0b8d0bed0bd",
+    "lemma": "скорпион",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bbd0b8d0b7d0b5d0bdd18c",
+    "lemma": "слизень",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bed0b2d191d0bdd0bed0ba",
+    "lemma": "совёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bed0bad0bed0bb",
+    "lemma": "сокол",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bed0bbd0bed0b2d0b5d0b9",
+    "lemma": "соловей",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bed180d0bed0bad0bed0bdd0bed0b6d0bad0b0",
+    "lemma": "сороконожка",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d182d180d0b8d0b6",
+    "lemma": "стриж",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d182d183d0bfd0bdd18f",
+    "lemma": "ступня",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d182d18ed0bbd0b5d0bdd18c",
+    "lemma": "тюлень",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d183d0b6",
+    "lemma": "уж",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d184d0b8d0bbd0b8d0bd",
+    "lemma": "филин",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d184d0bbd0b0d0bcd0b8d0bdd0b3d0be",
+    "lemma": "фламинго",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d184d0bed180d0b5d0bbd18c",
+    "lemma": "форель",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d185d0b0d0bcd0b5d0bbd0b5d0bed0bd",
+    "lemma": "хамелеон",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d188d0b8d0bcd0bfd0b0d0bdd0b7d0b5",
+    "lemma": "шимпанзе",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d18fd181d182d180d0b5d0b1",
+    "lemma": "ястреб",
+    "weight": 30
+  },
+  {
+    "id": "ru-editorial-gap-20261123-1b794ffe762af4ac",
+    "lemma": "сервант",
+    "weight": 30
+  },
+  {
+    "id": "ru-editorial-gap-20261123-2ba91fdab4a76ca8",
+    "lemma": "дверца",
+    "weight": 30
+  },
+  {
+    "id": "ru-editorial-gap-20261123-435ddffa8137120a",
+    "lemma": "спинка",
+    "weight": 30
+  },
+  {
+    "id": "ru-editorial-gap-20261123-f544370d096c311e",
+    "lemma": "ножка",
+    "weight": 30
+  },
+  {
+    "id": "ru-editorial-gap-20261123-f64e065e73be6f67",
+    "lemma": "буфет",
+    "weight": 30
+  },
+  {
+    "id": "ru-gen-20261104-flower-organ",
+    "lemma": "цветок",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-124dae33",
+    "lemma": "вилы",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-1a3b29f",
+    "lemma": "лопатка",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-1bed09e9",
+    "lemma": "чехол",
+    "weight": 30
+  }
+]

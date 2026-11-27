@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-plant-20261104-d0b4d0b5d180d0b5d0b2d0be",
+    "lemma": "дерево",
+    "weight": 100
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0b0d0bfd183d181d182d0b0",
+    "lemma": "капуста",
+    "weight": 100
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0bbd183d0b1d0bdd0b8d0bad0b0",
+    "lemma": "клубника",
+    "weight": 100
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b8d0bcd0bed0bd",
+    "lemma": "лимон",
+    "weight": 100
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd183d0ba3ad180d0b5d0bfd187d0b0d182d18bd0b920d0bbd183d0ba2028d0bed0b2d0bed18929",
+    "lemma": "лук",
+    "weight": 100
+  },
+  {
+    "id": "ru-plant-20261104-d0bcd0b0d0bbd0b8d0bdd0b0",
+    "lemma": "малина",
+    "weight": 100
+  },
+  {
+    "id": "ru-plant-20261104-d0bcd0b0d0bdd0b4d0b0d180d0b8d0bd",
+    "lemma": "мандарин",
+    "weight": 100
+  },
+  {
+    "id": "ru-plant-20261104-d0bed0b2d0bed189",
+    "lemma": "овощ",
+    "weight": 100
+  },
+  {
+    "id": "ru-plant-20261104-d0bed0b3d183d180d0b5d186",
+    "lemma": "огурец",
+    "weight": 100
+  },
+  {
+    "id": "ru-plant-20261104-d180d0b0d181d182d0b5d0bdd0b8d0b5",
+    "lemma": "растение",
+    "weight": 100
+  },
+  {
+    "id": "ru-plant-20261104-d186d0b2d0b5d182d0bed0ba",
+    "lemma": "цветок",
+    "weight": 100
+  },
+  {
+    "id": "ru-plant-20261104-d18fd0b1d0bbd0bed0bad0be",
+    "lemma": "яблоко",
+    "weight": 100
+  },
+  {
+    "id": "ru-plant-20261104-d18fd0b3d0bed0b4d0b0",
+    "lemma": "ягода",
+    "weight": 100
+  },
+  {
+    "id": "ru-sense-20261105-kist-tool",
+    "lemma": "кисть",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0b0d0b8d181d182",
+    "lemma": "аист",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b0d0bad183d0bbd0b0",
+    "lemma": "акула",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b1d0b0d0b1d0bed187d0bad0b0",
+    "lemma": "бабочка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b1d0b0d0b1d183d188d0bad0b0",
+    "lemma": "бабушка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b1d0b5d0b3d0b5d0bcd0bed182",
+    "lemma": "бегемот",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b1d0bed0b1d180",
+    "lemma": "бобр",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b2d0b5d180d0b1d0bbd18ed0b4",
+    "lemma": "верблюд",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b2d0bed0b4d0b8d182d0b5d0bbd18c",
+    "lemma": "водитель",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b2d0bed0bbd0bed181d18b",
+    "lemma": "волосы",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b2d0bed181d0bfd0b8d182d0b0d182d0b5d0bbd18c",
+    "lemma": "воспитатель",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b3d0bbd0b0d0b7",
+    "lemma": "глаз",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b3d0bed0bbd0bed0b2d0b0",
+    "lemma": "голова",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b3d0bed0bbd183d0b1d18c",
+    "lemma": "голубь",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b3d180d183d181d182d18c",
+    "lemma": "грусть",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b3d183d181d18c",
+    "lemma": "гусь",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b4d0b5d0b2d0bed187d0bad0b0",
+    "lemma": "девочка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b4d0b5d0b4d183d188d0bad0b0",
+    "lemma": "дедушка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b4d0b5d0bbd18cd184d0b8d0bd",
+    "lemma": "дельфин",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b4d0bed187d18c",
+    "lemma": "дочь",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b4d18fd182d0b5d0bb",
+    "lemma": "дятел",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b6d0b0d0b1d0b0",
+    "lemma": "жаба",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b6d0b5d0bdd189d0b8d0bdd0b0",
+    "lemma": "женщина",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b6d0b8d0b2d0bed182",
+    "lemma": "живот",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b6d183d0ba",
+    "lemma": "жук",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b7d0bbd0bed181d182d18c",
+    "lemma": "злость",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b7d183d0b1",
+    "lemma": "зуб",
+    "weight": 70
+  }
+]

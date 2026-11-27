@@ -1,0 +1,1516 @@
+[
+  {
+    "id": "ru-sem-20261105-6862df09",
+    "lemma": "прочный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Свойства"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-6b120a83",
+    "lemma": "закручивать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Ремонт"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 5,
+      "by_type": {
+        "is_a": 1,
+        "antonym": 1,
+        "used_for": 3
+      },
+      "verified": 4,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-6e1604f",
+    "lemma": "разогревать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Приготовление пищи"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-6f50ffc2",
+    "lemma": "прозрачный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Свойства"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-6fb63dd2",
+    "lemma": "грязный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Состояние"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-7039f75c",
+    "lemma": "класть",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Повседневные действия/Действия с предметами"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 3,
+      "by_type": {
+        "is_a": 1,
+        "same_root": 2
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-7d0cd70c",
+    "lemma": "наливать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Приготовление пищи",
+      "Действия/Повседневные действия/Еда и питьё"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-817300b3",
+    "lemma": "деревянный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Материал"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-821ed302",
+    "lemma": "подметать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Уборка"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 3,
+      "by_type": {
+        "is_a": 1,
+        "used_for": 2
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-8678262e",
+    "lemma": "гладить",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Стирка и уход за одеждой"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "used_for": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-86d3d4dc",
+    "lemma": "закрывать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Повседневные действия/Действия с предметами"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-87f58e97",
+    "lemma": "действие",
+    "weight": 0,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Действия"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 44,
+      "by_type": {
+        "is_a": 44
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-8c7cc097",
+    "lemma": "керамический",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Материал"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-8e48d4c",
+    "lemma": "резать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Приготовление пищи"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 5,
+      "by_type": {
+        "is_a": 1,
+        "used_for": 2,
+        "same_root": 2
+      },
+      "verified": 4,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-9514e2",
+    "lemma": "перемешивать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Приготовление пищи"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-9953098d",
+    "lemma": "сверлить",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Ремонт"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "used_for": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-997e605c",
+    "lemma": "сушить",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Стирка и уход за одеждой"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-9c5ea90d",
+    "lemma": "твёрдый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Свойства"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 3,
+      "by_type": {
+        "is_a": 1,
+        "antonym": 1,
+        "typically_has_property": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-ab4c872f",
+    "lemma": "тупой",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Свойства"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-aca36a39",
+    "lemma": "стирать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Стирка и уход за одеждой"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 4,
+      "by_type": {
+        "is_a": 1,
+        "used_for": 1,
+        "same_root": 2
+      },
+      "verified": 3,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-b08d82f1",
+    "lemma": "запекать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Приготовление пищи"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 4,
+      "by_type": {
+        "is_a": 1,
+        "same_root": 3
+      },
+      "verified": 3,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-b0dfa4bb",
+    "lemma": "складывать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Стирка и уход за одеждой",
+      "Действия/Повседневные действия/Действия с предметами"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 4,
+      "by_type": {
+        "is_a": 1,
+        "antonym": 1,
+        "same_root": 2
+      },
+      "verified": 3,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-b7724eeb",
+    "lemma": "упаковывать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Повседневные действия/Действия с предметами"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-b80cd8a9",
+    "lemma": "ломать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Ремонт"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 3,
+      "by_type": {
+        "is_a": 1,
+        "contrasts_with": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-ba58b1c2",
+    "lemma": "мокрый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Состояние"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-bbfb4ec2",
+    "lemma": "ржавый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Состояние"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-c012eb6b",
+    "lemma": "бумажный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Материал"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-c02aa5dd",
+    "lemma": "выключать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Повседневные действия/Действия с предметами"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-c03ddb3d",
+    "lemma": "новый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Состояние"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-c3103cb9",
+    "lemma": "хрустальный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Материал"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-c390b4f",
+    "lemma": "полный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Состояние"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-c69e55b9",
+    "lemma": "электрический",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Свойства"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-c8a085d",
+    "lemma": "пластиковый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Материал"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-cb126bcb",
+    "lemma": "шершавый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Свойства"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-cc0abd",
+    "lemma": "доставать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Повседневные действия/Действия с предметами"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-cc451013",
+    "lemma": "красить",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Ремонт"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 4,
+      "by_type": {
+        "is_a": 1,
+        "same_root": 3
+      },
+      "verified": 3,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-cd915596",
+    "lemma": "чистый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Состояние"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 3,
+      "by_type": {
+        "is_a": 1,
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-d27a67ec",
+    "lemma": "забивать",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Ремонт"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "used_for": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-d3666f04",
+    "lemma": "пилить",
+    "weight": 0,
+    "kind": "word",
+    "pos": "verb",
+    "categories": [
+      "Действия/Ремонт"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 3,
+      "by_type": {
+        "is_a": 1,
+        "used_for": 2
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-sem-20261105-d4c7f832",
+    "lemma": "тканевый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Материал"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  }
+]

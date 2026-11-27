@@ -1,0 +1,1603 @@
+[
+  {
+    "id": "ru-new-20261102-0133",
+    "lemma": "Австралия",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0140",
+    "lemma": "Беларусь",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0148",
+    "lemma": "Бразилия",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0156",
+    "lemma": "Канада",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0160",
+    "lemma": "Китай",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0176",
+    "lemma": "Египет",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0185",
+    "lemma": "Франция",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0188",
+    "lemma": "Грузия",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0189",
+    "lemma": "Германия",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0191",
+    "lemma": "Греция",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0201",
+    "lemma": "Индия",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0207",
+    "lemma": "Италия",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0209",
+    "lemma": "Япония",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0211",
+    "lemma": "Казахстан",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0234",
+    "lemma": "Мексика",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0287",
+    "lemma": "Испания",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0302",
+    "lemma": "Турция",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0306",
+    "lemma": "Украина",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0308",
+    "lemma": "Великобритания",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261102-0309",
+    "lemma": "Соединённые Штаты Америки",
+    "weight": 30,
+    "kind": "country",
+    "pos": null,
+    "categories": [
+      "Природа и окружающий мир/География/Страны"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending_automatic_analysis",
+      "stored_candidate_forms": false,
+      "draft_status": "needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "lexical": "editorial_draft",
+      "forms": "pending_automatic_analysis",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-new-20261108-0bf35cb8f9",
+    "lemma": "котёл",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Дом и быт/Посуда и кухонные принадлежности/Посуда для приготовления пищи"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "lexical": "published_category",
+      "forms": "pending",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0009",
+    "lemma": "плащ",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0010",
+    "lemma": "жилет",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-20261109-0021",
+    "lemma": "валенок",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Обувь"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0026",
+    "lemma": "кошелёк",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Аксессуары"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0027",
+    "lemma": "галстук",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Аксессуары"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0037",
+    "lemma": "неваляшка",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Игрушки"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0041",
+    "lemma": "волчок",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Игрушки"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0047",
+    "lemma": "клюшка",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Спортивный инвентарь"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0053",
+    "lemma": "гармошка",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Музыкальные инструменты/Клавишные"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0054",
+    "lemma": "балалайка",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Музыкальные инструменты/Струнные"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "part_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0075",
+    "lemma": "бульдозер",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Строительная техника"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0076",
+    "lemma": "бетономешалка",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Строительная техника"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0097",
+    "lemma": "холм",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Природа и окружающий мир/Природные объекты"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-20261109-0099",
+    "lemma": "болото",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Природа и окружающий мир/Природные объекты"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft",
+      "forms": "automatic_candidate_needs_review",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-noun-extra-20261109-023",
+    "lemma": "гантель",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Спортивный инвентарь"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-import-20261115-kryuchok",
+    "lemma": "крючок",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Игры, творчество и увлечения/Рыбалка и принадлежности"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "lexical": "editorial_draft",
+      "forms": "pending",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-noun-import-20261115-tsennik",
+    "lemma": "ценник",
+    "weight": 30,
+    "kind": "word",
+    "pos": "noun",
+    "categories": [
+      "Общество и окружающая среда/Торговля и покупки"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "pending",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "lexical": "editorial_draft",
+      "forms": "pending",
+      "prepositions": "pending",
+      "descriptions": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-plant-20261104-d0b0d0b2d0bed0bad0b0d0b4d0be",
+    "lemma": "авокадо",
+    "weight": 30,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Растительный мир и грибы/Фрукты",
+      "Еда и напитки/Фрукты"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-plant-20261104-d0b0d0bbd0bed18d",
+    "lemma": "алоэ",
+    "weight": 30,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Растительный мир и грибы/Комнатные растения"
+    ],
+    "phonetic": {
+      "status": "pending_automatic_analysis",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": "needs_review",
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "pending_automatic_analysis",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  }
+]

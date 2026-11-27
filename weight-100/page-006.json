@@ -1,0 +1,251 @@
+[
+  {
+    "id": "ru-r-add-d0b3d180d183d0b7d0bed0b2d0b8d0ba",
+    "lemma": "грузовик",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Грузовой транспорт"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0bad0b2d0b0d180d182d0b8d180d0b0",
+    "lemma": "квартира",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Жилище/Виды жилища"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-add-d0bad180d0bed0b2d0b0d182d18c",
+    "lemma": "кровать",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Мебель"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 3,
+      "by_type": {
+        "is_a": 1,
+        "part_of": 1,
+        "used_for": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d188d0bed180d182d18b",
+    "lemma": "шорты",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Человек/Одежда, обувь и аксессуары/Одежда"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-extra-027",
+    "lemma": "крыша",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Жилище/Части дома"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "part_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-sense-20261105-kist-tool",
+    "lemma": "кисть",
+    "weight": 100,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Инструменты/Малярные и измерительные инструменты",
+      "Игры, творчество и увлечения/Инструменты/Малярные и измерительные инструменты"
+    ],
+    "phonetic": {
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": "candidate_needs_review",
+      "draft_tokens": true
+    },
+    "morphology": {
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
+      "draft_status": "candidate_needs_review"
+    },
+    "metadata_status": {
+      "speech": "automatic_candidate_needs_review",
+      "forms": "automatic_candidate_needs_review"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "used_for": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  }
+]

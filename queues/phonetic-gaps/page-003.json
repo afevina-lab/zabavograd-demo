@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lex-v2-d0b7d0bed0bbd0bed182d0b0d18f20d180d18bd0b1d0bad0b0",
+    "lemma": "золотая рыбка",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0bed0bdd0b8",
+    "lemma": "пони",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d187d0b0d0b9d0bad0b0",
+    "lemma": "чайка",
+    "weight": 50
+  },
+  {
+    "id": "ru-editorial-gap-20261123-50b5335ce0f9d9dd",
+    "lemma": "крольчатник",
+    "weight": 50
+  },
+  {
+    "id": "ru-editorial-gap-20261123-edf837b9e99a588d",
+    "lemma": "сиденье",
+    "weight": 50
+  },
+  {
+    "id": "ru-editorial-gap-20261123-fccbd49255fd8455",
+    "lemma": "свинарник",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-27b31a5e",
+    "lemma": "половник",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-298c610",
+    "lemma": "органайзер",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-3bc32fc",
+    "lemma": "средство для мытья посуды",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-3ed60a01",
+    "lemma": "мультиварка",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-72329e61",
+    "lemma": "шуруповёрт",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-81603ef3",
+    "lemma": "колонка",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-931350d1",
+    "lemma": "фоторамка",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-a0e6fb39",
+    "lemma": "гладильная доска",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-b6233cd5",
+    "lemma": "посудомоечная машина",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-ce7981",
+    "lemma": "системный блок",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-d44bce60",
+    "lemma": "сушилка для белья",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-d5ab07eb",
+    "lemma": "гель для душа",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261102-0058",
+    "lemma": "транспорт",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261102-0059",
+    "lemma": "парковка",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261102-0077",
+    "lemma": "правило",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261108-0a17165966",
+    "lemma": "доска",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261108-114d668efa",
+    "lemma": "куст",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261108-42569368f9",
+    "lemma": "водолазка",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261108-4f67adafc5",
+    "lemma": "шуба",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261108-63afd2043f",
+    "lemma": "колготки",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261108-70a763e9e7",
+    "lemma": "планета",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261108-abd179e79d",
+    "lemma": "тапок",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261108-c17d585bac",
+    "lemma": "сапог",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261108-c7f4dd595f",
+    "lemma": "лодка",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0052",
+    "lemma": "бубен",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-018",
+    "lemma": "лото",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-019",
+    "lemma": "домино",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-import-20261115-meshok",
+    "lemma": "мешок",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-import-20261115-zavod",
+    "lemma": "завод",
+    "weight": 50
+  },
+  {
+    "id": "ru-pack77-20261125-pismo",
+    "lemma": "письмо",
+    "weight": 50
+  },
+  {
+    "id": "ru-pack77-20261125-posylka",
+    "lemma": "посылка",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0bbd0b5d0b4d0bdd0b0d18f20d0bfd0bed0b3d0b0d0bdd0bad0b0",
+    "lemma": "бледная поганка",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0b3d0b2d0bed0b7d0b4d0b8d0bad0b0",
+    "lemma": "гвоздика",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0bdd0b0d180d186d0b8d181d181",
+    "lemma": "нарцисс",
+    "weight": 50
+  }
+]

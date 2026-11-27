@@ -1,0 +1,1616 @@
+[
+  {
+    "id": "ru-r-037",
+    "lemma": "костёр",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-050",
+    "lemma": "огород",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-056",
+    "lemma": "портфель",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "typically_contains": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-057",
+    "lemma": "радио",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Бытовая техника и электроника/Электроника"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "used_for": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-063",
+    "lemma": "ранец",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Общество и окружающая среда/Учёба и образование/Школьные принадлежности"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-073",
+    "lemma": "рысь",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Животный мир/Дикие животные/Лесные"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-074",
+    "lemma": "самовар",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Посуда и кухонные принадлежности/Чайная посуда"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-087",
+    "lemma": "трон",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Мебель"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-088",
+    "lemma": "тропинка",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-089",
+    "lemma": "трость",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-090",
+    "lemma": "труба",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Игры, творчество и увлечения/Музыкальные инструменты/Духовые"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-091",
+    "lemma": "узор",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-092",
+    "lemma": "червяк",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-093",
+    "lemma": "черника",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Растительный мир и грибы/Ягоды/Лесные",
+      "Еда и напитки/Ягоды"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0b1d0b0d180d181d183d0ba",
+    "lemma": "барсук",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Животный мир/Дикие животные/Лесные"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "dwells_in": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 2
+  },
+  {
+    "id": "ru-r-add-d0b1d0bed180d0bed0b4d0b0",
+    "lemma": "борода",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Человек/Части тела/Лицо"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "part_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0b1d180d0b0d181d0bbd0b5d182",
+    "lemma": "браслет",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0b1d180d0bed0b2d18c",
+    "lemma": "бровь",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Человек/Части тела/Лицо"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "part_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-add-d0b2d0bed0b4d0bed180d0bed181d0bbd0b8",
+    "lemma": "водоросли",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "same_root": 2
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0b4d180d0bed0b2d0b0",
+    "lemma": "дрова",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0b6d183d180d0bdd0b0d0bb",
+    "lemma": "журнал",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "made_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0b8d0b3d180d0b0",
+    "lemma": "игра",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Обобщающие понятия"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 3,
+      "by_type": {
+        "same_root": 3
+      },
+      "verified": 3,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0bad0bed180d0b0d0b1d0bbd18c",
+    "lemma": "корабль",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Водный транспорт"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0bad180d18bd0bbd18cd186d0be",
+    "lemma": "крыльцо",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Жилище/Части дома"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "part_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0bcd0b0d180d182",
+    "lemma": "март",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Время и календарь/Месяцы"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-add-d0bcd0b5d182d180d0be",
+    "lemma": "метро",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Общество и окружающая среда/Транспорт и специальная техника/Общественный транспорт"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0bcd0bed0bdd181d182d180",
+    "lemma": "монстр",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0bfd0b0d180",
+    "lemma": "пар",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "same_root": 2
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0bfd0b5d189d0b5d180d0b0",
+    "lemma": "пещера",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0bfd0b8d180d0b0d182",
+    "lemma": "пират",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Человек/Люди"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0bfd0b8d180d0bed0b6d0bdd0bed0b5",
+    "lemma": "пирожное",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Еда и напитки/Сладости"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0bfd0b8d180d0bed0b6d0bed0ba",
+    "lemma": "пирожок",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Еда и напитки/Выпечка"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0bfd180d0bed0b4d183d0bad182d18b",
+    "lemma": "продукты",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Обобщающие понятия"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 27,
+      "by_type": {
+        "is_a": 27
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0bfd180d0bed180d183d0b1d18c",
+    "lemma": "прорубь",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d180d0b0d0bad0b5d182d0bad0b0",
+    "lemma": "ракетка",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Игры, творчество и увлечения/Спортивный инвентарь"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d180d0b0d186d0b8d18f",
+    "lemma": "рация",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d180d0bed0b3d0b0d0bbd0b8d0ba",
+    "lemma": "рогалик",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Еда и напитки/Выпечка"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d180d0bed0b3d0b0d182d0bad0b0",
+    "lemma": "рогатка",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d180d0bed0bbd0bb",
+    "lemma": "ролл",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Еда и напитки/Готовые блюда"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d180d0bed0bcd0b1",
+    "lemma": "ромб",
+    "weight": 50,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Математические представления/Геометрические фигуры/Плоские фигуры"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  }
+]

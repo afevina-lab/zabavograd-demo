@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-noun-extra-20261109-038",
+    "lemma": "снежинка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-043",
+    "lemma": "альбом",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-045",
+    "lemma": "мел",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-046",
+    "lemma": "клей",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b0d0b1d180d0b8d0bad0bed181",
+    "lemma": "абрикос",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b0d0bdd0b0d0bdd0b0d181",
+    "lemma": "ананас",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0b5d180d191d0b7d0b0",
+    "lemma": "берёза",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b2d0b5d182d0bad0b0",
+    "lemma": "ветка",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b4d183d0b1",
+    "lemma": "дуб",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b4d18bd0bdd18f",
+    "lemma": "дыня",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b5d0bbd18c",
+    "lemma": "ель",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b7d0b5d0bcd0bbd18fd0bdd0b8d0bad0b0",
+    "lemma": "земляника",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b8d0b2d0b0",
+    "lemma": "ива",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0b0d0b1d0b0d187d0bed0ba",
+    "lemma": "кабачок",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0b8d0b2d0b8",
+    "lemma": "киви",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0bbd191d0bd",
+    "lemma": "клён",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0bed180d0b5d0bdd18c",
+    "lemma": "корень",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b5d0bfd0b5d181d182d0bed0ba",
+    "lemma": "лепесток",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b8d181d0b8d187d0bad0b0",
+    "lemma": "лисичка",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b8d181d1823ad0bbd0b8d181d18220d180d0b0d181d182d0b5d0bdd0b8d18f",
+    "lemma": "лист",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bed0b4d183d0b2d0b0d0bdd187d0b8d0ba",
+    "lemma": "одуванчик",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b0d0bbd18cd0bcd0b0",
+    "lemma": "пальма",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b5d180d0b5d1863ad181d0bbd0b0d0b4d0bad0b8d0b920d0bed0b2d0bed189d0bdd0bed0b920d0bfd0b5d180d0b5d186",
+    "lemma": "перец",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0bbd0bed0b4",
+    "lemma": "плод",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0bed0b4d181d0bdd0b5d0b6d0bdd0b8d0ba",
+    "lemma": "подснежник",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d180d18fd0b1d0b8d0bdd0b03ad0b4d0b5d180d0b5d0b2d0be20d180d18fd0b1d0b8d0bdd0b0",
+    "lemma": "рябина",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d181d0b2d191d0bad0bbd0b0",
+    "lemma": "свёкла",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d181d0b5d0bcd0b5d187d0bad0be",
+    "lemma": "семечко",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d181d0bbd0b8d0b2d0b0",
+    "lemma": "слива",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d181d0bcd0bed180d0bed0b4d0b8d0bdd0b0",
+    "lemma": "смородина",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d181d0bed181d0bdd0b0",
+    "lemma": "сосна",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d181d182d0b2d0bed0bb3ad181d182d0b2d0bed0bb20d0b4d0b5d180d0b5d0b2d0b0",
+    "lemma": "ствол",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d181d182d0b5d0b1d0b5d0bbd18c",
+    "lemma": "стебель",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d182d18bd0bad0b2d0b0",
+    "lemma": "тыква",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d182d18ed0bbd18cd0bfd0b0d0bd",
+    "lemma": "тюльпан",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d187d0b5d180d0b5d188d0bdd18f",
+    "lemma": "черешня",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d187d0b5d181d0bdd0bed0ba",
+    "lemma": "чеснок",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d188d0b0d0bcd0bfd0b8d0bdd18cd0bed0bd",
+    "lemma": "шампиньон",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d188d0b8d188d0bad0b0",
+    "lemma": "шишка",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d18fd0b1d0bbd0bed0bdd18f",
+    "lemma": "яблоня",
+    "weight": 70
+  }
+]

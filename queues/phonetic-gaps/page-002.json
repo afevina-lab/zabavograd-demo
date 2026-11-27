@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-editorial-gap-20261123-4b2dab1fc64f76df",
+    "lemma": "улей",
+    "weight": 70
+  },
+  {
+    "id": "ru-editorial-gap-20261123-540ace8499d262d2",
+    "lemma": "скворечник",
+    "weight": 70
+  },
+  {
+    "id": "ru-editorial-gap-20261123-7ac5f106aab9ccda",
+    "lemma": "бельё",
+    "weight": 70
+  },
+  {
+    "id": "ru-editorial-gap-20261123-7d873ad573e2697f",
+    "lemma": "муравейник",
+    "weight": 70
+  },
+  {
+    "id": "ru-editorial-gap-20261123-c12cd41bb4f37ba3",
+    "lemma": "курятник",
+    "weight": 70
+  },
+  {
+    "id": "ru-editorial-gap-20261123-d84927bcdfaf8b76",
+    "lemma": "коровник",
+    "weight": 70
+  },
+  {
+    "id": "ru-editorial-gap-20261123-e443e93fdf99178f",
+    "lemma": "мёд",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-314a1d69",
+    "lemma": "ноутбук",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-48a3ab48",
+    "lemma": "совок",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-5a7d5589",
+    "lemma": "гаечный ключ",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-5b28f6e6",
+    "lemma": "чайная ложка",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-624f6b16",
+    "lemma": "швейная машина",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-8330865d",
+    "lemma": "полка",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-a9b0740",
+    "lemma": "принтер",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-b00c041",
+    "lemma": "зарядное устройство",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-bcf016f0",
+    "lemma": "блендер",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-c980618f",
+    "lemma": "микроволновая печь",
+    "weight": 70
+  },
+  {
+    "id": "ru-new-20261102-0023",
+    "lemma": "крыло",
+    "weight": 70
+  },
+  {
+    "id": "ru-new-20261102-0037",
+    "lemma": "перчатка",
+    "weight": 70
+  },
+  {
+    "id": "ru-new-20261108-04e7f5b890",
+    "lemma": "майка",
+    "weight": 70
+  },
+  {
+    "id": "ru-new-20261108-370345bb3c",
+    "lemma": "носок",
+    "weight": 70
+  },
+  {
+    "id": "ru-new-20261108-7f2d7d1d30",
+    "lemma": "ботинок",
+    "weight": 70
+  },
+  {
+    "id": "ru-new-20261108-d34a9acbe5",
+    "lemma": "варежка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0004",
+    "lemma": "джинсы",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0019",
+    "lemma": "тапочка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0048",
+    "lemma": "пианино",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0065",
+    "lemma": "пюре",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0092",
+    "lemma": "поле",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-import-20261115-kalendar",
+    "lemma": "календарь",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-import-20261115-kaplya",
+    "lemma": "капля",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-import-20261115-lapa",
+    "lemma": "лапа",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-import-20261115-panda",
+    "lemma": "панда",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-import-20261115-snegovik",
+    "lemma": "снеговик",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-import-20261115-udochka",
+    "lemma": "удочка",
+    "weight": 70
+  },
+  {
+    "id": "ru-pack77-20261125-roliki",
+    "lemma": "ролики",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0b5d0bbd18bd0b920d0b3d180d0b8d0b1",
+    "lemma": "белый гриб",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0b8d0b2d0b8",
+    "lemma": "киви",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b2d0bdd183d187d0bad0b0",
+    "lemma": "внучка",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0b3d183d0b1d18b",
+    "lemma": "губы",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0b4d0bed0b6d0b4d0b5d0b2d0bed0b920d187d0b5d180d0b2d18c",
+    "lemma": "дождевой червь",
+    "weight": 50
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-plant-20261104-d0b1d0b0d0bed0b1d0b0d0b1",
+    "lemma": "баобаб",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0b0d182d0b0d182",
+    "lemma": "батат",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0b5d0b3d0bed0bdd0b8d18f",
+    "lemma": "бегония",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0b3d180d183d0b7d0b4d18c",
+    "lemma": "груздь",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0b8d0bfd0b0d180d0b8d181",
+    "lemma": "кипарис",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bad180d0bed0bad183d181",
+    "lemma": "крокус",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bcd0bed0bdd181d182d0b5d180d0b0",
+    "lemma": "монстера",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b0d0bfd0b0d0b9d18f",
+    "lemma": "папайя",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b0d0bfd0bed180d0bed182d0bdd0b8d0ba",
+    "lemma": "папоротник",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b0d182d0b8d181d181d0bed0bd",
+    "lemma": "патиссон",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b5d182d183d0bdd0b8d18f",
+    "lemma": "петуния",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b8d185d182d0b0",
+    "lemma": "пихта",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd18bd0bbd18cd186d0b0",
+    "lemma": "пыльца",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d181d0bcd0bed180d187d0bed0ba",
+    "lemma": "сморчок",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d181d0bfd0b0d180d0b6d0b0",
+    "lemma": "спаржа",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d185d0b2d0bed18f",
+    "lemma": "хвоя",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d185d180d0b5d0bd",
+    "lemma": "хрен",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d18fd181d0b5d0bdd18c",
+    "lemma": "ясень",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d0b5d180d0b5d0b1d0b5d186",
+    "lemma": "жеребец",
+    "weight": 10
+  },
+  {
+    "id": "ru-home-20261105-2518ba59",
+    "lemma": "фундамент",
+    "weight": 10
+  },
+  {
+    "id": "ru-home-20261105-b23cae5f",
+    "lemma": "терраса",
+    "weight": 10
+  },
+  {
+    "id": "ru-home-20261105-b3ea3835",
+    "lemma": "веранда",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d0b4d180d0b0d186d0b5d0bdd0b0",
+    "lemma": "драцена",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0b0d0bbd0b0d0bdd185d0bed18d",
+    "lemma": "каланхоэ",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b8d187d0b8",
+    "lemma": "личи",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d181d0b0d0bdd181d0b5d0b2d0b8d0b5d180d0b8d18f",
+    "lemma": "сансевиерия",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d181d0b5d0bad0b2d0bed0b9d18f",
+    "lemma": "секвойя",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d181d0bfd0b0d182d0b8d184d0b8d0bbd0bbd183d0bc",
+    "lemma": "спатифиллум",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d182d0bed0bbd181d182d18fd0bdd0bad0b0",
+    "lemma": "толстянка",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d182d180d18ed184d0b5d0bbd18c",
+    "lemma": "трюфель",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d185d0bbd0bed180d0bed184d0b8d182d183d0bc",
+    "lemma": "хлорофитум",
+    "weight": 10
+  },
+  {
+    "id": "ru-action-20261109-0001",
+    "lemma": "бегать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0002",
+    "lemma": "бежать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0003",
+    "lemma": "благодарить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0004",
+    "lemma": "болеть",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0005",
+    "lemma": "бояться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0006",
+    "lemma": "брать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0007",
+    "lemma": "бросать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0008",
+    "lemma": "взять",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0009",
+    "lemma": "видеть",
+    "weight": 0
+  }
+]

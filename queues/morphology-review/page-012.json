@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lex-v2-d0bfd0b5d0bad0b0d180d18c",
+    "lemma": "пекарь",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0b5d188d0b5d185d0bed0b4",
+    "lemma": "пешеход",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0b8d0bbd0bed182",
+    "lemma": "пилот",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0bbd0b5d187d0be",
+    "lemma": "плечо",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0bed0b4d0b1d0bed180d0bed0b4d0bed0ba",
+    "lemma": "подбородок",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0bed0b4d180d0bed181d182d0bed0ba",
+    "lemma": "подросток",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0bed0bdd0b8",
+    "lemma": "пони",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0bed187d182d0b0d0bbd18cd0bed0bd",
+    "lemma": "почтальон",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd180d0b8d0bdd186",
+    "lemma": "принц",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd180d0b8d0bdd186d0b5d181d181d0b0",
+    "lemma": "принцесса",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd182d0b5d0bdd0b5d186",
+    "lemma": "птенец",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d180d0b5d181d0bdd0b8d186d18b",
+    "lemma": "ресницы",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0b0d0b4d0bed0b2d0bdd0b8d0ba",
+    "lemma": "садовник",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bad0b5d0bbd0b5d182",
+    "lemma": "скелет",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bad183d0bad0b0",
+    "lemma": "скука",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bbd0b5d0b7d0b0",
+    "lemma": "слеза",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bed0bbd0b4d0b0d182",
+    "lemma": "солдат",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bed0bc",
+    "lemma": "сом",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bfd0b0d181d0b0d182d0b5d0bbd18c",
+    "lemma": "спасатель",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bfd0bed0bad0bed0b9d181d182d0b2d0b8d0b5",
+    "lemma": "спокойствие",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bfd0bed180d182d181d0bcd0b5d0bd",
+    "lemma": "спортсмен",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d182d0b0d180d0b8d0ba",
+    "lemma": "старик",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d182d0b0d180d183d188d0bad0b0",
+    "lemma": "старушка",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d182d0bed0bcd0b0d182d0bed0bbd0bed0b3",
+    "lemma": "стоматолог",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d187d0b0d181d182d18cd0b5",
+    "lemma": "счастье",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d182d0b0d0bdd186d0bed180",
+    "lemma": "танцор",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d182d191d182d18f",
+    "lemma": "тётя",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d183d0b1d0bed180d189d0b8d0ba",
+    "lemma": "уборщик",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d183d181d182d0b0d0bbd0bed181d182d18c",
+    "lemma": "усталость",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d183d181d18b",
+    "lemma": "усы",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d184d0bed182d0bed0b3d180d0b0d184",
+    "lemma": "фотограф",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d184d183d182d0b1d0bed0bbd0b8d181d182",
+    "lemma": "футболист",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d185d183d0b4d0bed0b6d0bdd0b8d0ba",
+    "lemma": "художник",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d186d0b0d0bfd0bbd18f",
+    "lemma": "цапля",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d186d18bd0bfd0bbd191d0bdd0bed0ba",
+    "lemma": "цыплёнок",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d187d0b0d0b9d0bad0b0",
+    "lemma": "чайка",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d188d0b2d0b5d18f",
+    "lemma": "швея",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d188d0bcd0b5d0bbd18c",
+    "lemma": "шмель",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d189d0b5d0bad0b0",
+    "lemma": "щека",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d189d0b5d0bdd0bed0ba",
+    "lemma": "щенок",
+    "weight": 50
+  }
+]

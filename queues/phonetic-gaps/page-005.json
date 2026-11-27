@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-plant-20261104-d0b0d0bbd0bed18d",
+    "lemma": "алоэ",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d180d0bed0bad0bad0bed0bbd0b8",
+    "lemma": "брокколи",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0b2d0b5d188d0b5d0bdd0bad0b0",
+    "lemma": "вешенка",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0b8d180d0b8d181",
+    "lemma": "ирис",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bcd0b0d0bdd0b3d0be",
+    "lemma": "манго",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b2d0bed180d0bed0b1d18cd0b8d0bdd18bd0b920d181d18bd187",
+    "lemma": "воробьиный сыч",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0bed180d0bed0bd",
+    "lemma": "ворон",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d0bed0bbd183d0b1d0bad0b0",
+    "lemma": "голубка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d183d0bfd0bfd0b8",
+    "lemma": "гуппи",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d183d0ba2dd0bdd0bed181d0bed180d0bed0b3",
+    "lemma": "жук-носорог",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d183d0ba2dd0bed0bbd0b5d0bdd18c",
+    "lemma": "жук-олень",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad0b0d0b1d0b0d0bdd0b8d185d0b0",
+    "lemma": "кабаниха",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad0bed0bbd0bed180d0b0d0b4d181d0bad0b8d0b920d0b6d183d0ba",
+    "lemma": "колорадский жук",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad183d0bad183d188d0bed0bdd0bed0ba",
+    "lemma": "кукушонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0b0d18f20d181d0b2d0b8d0bdd0bad0b0",
+    "lemma": "морская свинка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bed0bbd0b5d0bdd0b8d185d0b0",
+    "lemma": "олениха",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bfd0b5d180d0b5d0bfd191d0bbd0bad0b0",
+    "lemma": "перепёлка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d180d18bd0b1d0b02dd0bcd0b5d187",
+    "lemma": "рыба-меч",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d0bad0b0d0bbd18fd180d0b8d18f",
+    "lemma": "скалярия",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d182d180d0b8d0b6d0bed0bdd0bed0ba",
+    "lemma": "стрижонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d183d180d0b8d0bad0b0d182",
+    "lemma": "сурикат",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d180d0b5d181d0bad0b0",
+    "lemma": "треска",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d180d0b8d182d0bed0bd",
+    "lemma": "тритон",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d183d0bad0b0d0bd",
+    "lemma": "тукан",
+    "weight": 20
+  },
+  {
+    "id": "ru-editorial-gap-20261123-ca0f1043a4221ecf",
+    "lemma": "подлокотник",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-345c3e46",
+    "lemma": "хлебопечка",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-4addc343",
+    "lemma": "жалюзи",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-7df5f2c8",
+    "lemma": "отбеливатель",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-9ab6ec11",
+    "lemma": "изолента",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-9e01d521",
+    "lemma": "креманка",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0028",
+    "lemma": "крупа",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261108-47a03e0704",
+    "lemma": "гном",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261108-9e891397bc",
+    "lemma": "кость",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0b0d0bed0b1d0b0d0b1",
+    "lemma": "баобаб",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bcd0bed0bdd181d182d0b5d180d0b0",
+    "lemma": "монстера",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b5d0bad0b8d0bdd181d0bad0b0d18f20d0bad0b0d0bfd183d181d182d0b0",
+    "lemma": "пекинская капуста",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d185d0b2d0bed18f",
+    "lemma": "хвоя",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0b0d0bbd0b0d0bdd185d0bed18d",
+    "lemma": "каланхоэ",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b8d187d0b8",
+    "lemma": "личи",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d181d0b0d0bdd181d0b5d0b2d0b8d0b5d180d0b8d18f",
+    "lemma": "сансевиерия",
+    "weight": 10
+  }
+]

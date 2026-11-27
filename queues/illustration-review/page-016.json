@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-new-20261102-0036",
+    "lemma": "порошок",
+    "weight": 30
+  },
+  {
+    "id": "ru-new-20261102-0043",
+    "lemma": "урок",
+    "weight": 30
+  },
+  {
+    "id": "ru-new-20261102-0053",
+    "lemma": "мотор",
+    "weight": 30
+  },
+  {
+    "id": "ru-new-20261102-0057",
+    "lemma": "тротуар",
+    "weight": 30
+  },
+  {
+    "id": "ru-new-20261102-0067",
+    "lemma": "страна",
+    "weight": 30
+  },
+  {
+    "id": "ru-new-20261102-0073",
+    "lemma": "тролль",
+    "weight": 30
+  },
+  {
+    "id": "ru-new-20261102-0088",
+    "lemma": "трапеция",
+    "weight": 30
+  },
+  {
+    "id": "ru-new-20261102-0089",
+    "lemma": "пятиугольник",
+    "weight": 30
+  },
+  {
+    "id": "ru-new-20261102-0090",
+    "lemma": "шестиугольник",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0009",
+    "lemma": "плащ",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0021",
+    "lemma": "валенок",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0026",
+    "lemma": "кошелёк",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0027",
+    "lemma": "галстук",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0037",
+    "lemma": "неваляшка",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0041",
+    "lemma": "волчок",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0047",
+    "lemma": "клюшка",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0053",
+    "lemma": "гармошка",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0054",
+    "lemma": "балалайка",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0075",
+    "lemma": "бульдозер",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0076",
+    "lemma": "бетономешалка",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0097",
+    "lemma": "холм",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0099",
+    "lemma": "болото",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0b0d0b2d0bed0bad0b0d0b4d0be",
+    "lemma": "авокадо",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0b0d0bbd0bed18d",
+    "lemma": "алоэ",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0b0d180d185d0b0d182d186d18b",
+    "lemma": "бархатцы",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d180d0bed0bad0bad0bed0bbd0b8",
+    "lemma": "брокколи",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0b2d0b5d182d0b2d18c",
+    "lemma": "ветвь",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0b2d0b5d188d0b5d0bdd0bad0b0",
+    "lemma": "вешенка",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0b3d0b5d0bed180d0b3d0b8d0bd",
+    "lemma": "георгин",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0b3d0b5d180d0b0d0bdd18c",
+    "lemma": "герань",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0b3d0bbd0b0d0b4d0b8d0bed0bbd183d181",
+    "lemma": "гладиолус",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0b3d180d0b5d0b9d0bfd184d180d183d182",
+    "lemma": "грейпфрут",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0b8d180d0b8d181",
+    "lemma": "ирис",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0b0d0bbd0b8d0bdd0b0",
+    "lemma": "калина",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0b5d0b4d180",
+    "lemma": "кедр",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0bbd183d0b1d0b5d0bdd18c",
+    "lemma": "клубень",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b0d0b2d0b0d0bdd0b4d0b0",
+    "lemma": "лаванда",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b0d0b9d0bc",
+    "lemma": "лайм",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b8d181d182d0b2d0b5d0bdd0bdd0b8d186d0b0",
+    "lemma": "лиственница",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bcd0b0d0bdd0b3d0be",
+    "lemma": "манго",
+    "weight": 30
+  }
+]

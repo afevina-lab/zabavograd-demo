@@ -1,0 +1,1531 @@
+[
+  {
+    "id": "ru-attr-20261109-105",
+    "lemma": "трудный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Свойства"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-106",
+    "lemma": "ловкий",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Свойства"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-107",
+    "lemma": "правильный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Свойства"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-108",
+    "lemma": "неправильный",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Свойства"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-109",
+    "lemma": "хороший",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Свойства"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-110",
+    "lemma": "плохой",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Свойства"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-111",
+    "lemma": "долгий",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Свойства"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-112",
+    "lemma": "красивый",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adjective",
+    "categories": [
+      "Признаки/Свойства"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-113",
+    "lemma": "быстро",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-114",
+    "lemma": "медленно",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-115",
+    "lemma": "громко",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-116",
+    "lemma": "тихо",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-117",
+    "lemma": "аккуратно",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-118",
+    "lemma": "небрежно",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-119",
+    "lemma": "осторожно",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-120",
+    "lemma": "смело",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-121",
+    "lemma": "весело",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-122",
+    "lemma": "грустно",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-123",
+    "lemma": "спокойно",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-124",
+    "lemma": "дружно",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-125",
+    "lemma": "ловко",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-126",
+    "lemma": "правильно",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-127",
+    "lemma": "неправильно",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-128",
+    "lemma": "хорошо",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-129",
+    "lemma": "плохо",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-130",
+    "lemma": "вместе",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-131",
+    "lemma": "отдельно",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-132",
+    "lemma": "легко",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-133",
+    "lemma": "трудно",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "antonym": 1,
+        "same_root": 1
+      },
+      "verified": 2,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-134",
+    "lemma": "старательно",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-135",
+    "lemma": "красиво",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Образ действия"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-136",
+    "lemma": "вверху",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Место и направление"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-137",
+    "lemma": "внизу",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Место и направление"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-138",
+    "lemma": "слева",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Место и направление"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-139",
+    "lemma": "справа",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Место и направление"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-140",
+    "lemma": "впереди",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Место и направление"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-141",
+    "lemma": "сзади",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Место и направление"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-142",
+    "lemma": "рядом",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Место и направление"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-143",
+    "lemma": "далеко",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Место и направление"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-attr-20261109-144",
+    "lemma": "близко",
+    "weight": 0,
+    "kind": "word",
+    "pos": "adverb",
+    "categories": [
+      "Наречия/Место и направление"
+    ],
+    "phonetic": {
+      "status": "pending",
+      "stored_tokens": false,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "editorial_draft",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "pending",
+      "forms": "editorial_draft",
+      "lexical": "editorial_draft"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "antonym": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  }
+]

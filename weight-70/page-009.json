@@ -1,0 +1,626 @@
+[
+  {
+    "id": "ru-r-add-d0bcd0b8d0bad181d0b5d180",
+    "lemma": "миксер",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Бытовая техника и электроника/Кухонная техника"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-add-d0bfd0b8d180d0bed0b3",
+    "lemma": "пирог",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Еда и напитки/Выпечка"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "made_from": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d0bfd180d0bed0b2d0bed0b4",
+    "lemma": "провод",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Предметы домашнего обихода/Освещение и электричество/Электрические принадлежности"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-add-d0bfd180d0bed181d182d18bd0bdd18f",
+    "lemma": "простыня",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Предметы домашнего обихода/Постельные принадлежности"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "made_of": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-add-d180d0bed0bcd0b0d188d0bad0b0",
+    "lemma": "ромашка",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Растительный мир и грибы/Цветы"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d181d0b5d181d182d180d0b0",
+    "lemma": "сестра",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Человек/Люди/Семья"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-add-d182d191d180d0bad0b0",
+    "lemma": "тёрка",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Посуда и кухонные принадлежности/Кухонные инструменты"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-add-d188d183d180d183d0bf",
+    "lemma": "шуруп",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Инструменты/Крепёжные и вспомогательные материалы",
+      "Игры, творчество и увлечения/Инструменты/Крепёжные и вспомогательные материалы"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-extra-001",
+    "lemma": "мухомор",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Растительный мир и грибы/Грибы"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-extra-003",
+    "lemma": "крот",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Животный мир/Дикие животные/Лесные"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 1,
+        "dwells_in": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-extra-006",
+    "lemma": "ворона",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Животный мир/Птицы/Зимующие и оседлые"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 2
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-extra-007",
+    "lemma": "сорока",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Животный мир/Птицы/Зимующие и оседлые"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 2,
+      "by_type": {
+        "is_a": 2
+      },
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 0
+  },
+  {
+    "id": "ru-r-extra-008",
+    "lemma": "воробей",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Животный мир/Вспомогательные/Самки",
+      "Животный мир/Птицы/Зимующие и оседлые"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 4,
+      "by_type": {
+        "animal_family": 1,
+        "is_a": 2,
+        "same_root": 1
+      },
+      "verified": 1,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-extra-014",
+    "lemma": "ковёр",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Дом и быт/Предметы домашнего обихода/Домашний текстиль"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 0,
+      "by_type": {},
+      "verified": 0,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 1
+  },
+  {
+    "id": "ru-r-extra-025",
+    "lemma": "рот",
+    "weight": 70,
+    "kind": "word",
+    "pos": null,
+    "categories": [
+      "Человек/Части тела/Лицо"
+    ],
+    "phonetic": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_tokens": true,
+      "review_proposal": false,
+      "draft_status": null,
+      "draft_tokens": false
+    },
+    "morphology": {
+      "status": "filled_with_explicit_extended_cases",
+      "stored_candidate_forms": false,
+      "draft_status": null
+    },
+    "metadata_status": {
+      "speech": "filled_with_explicit_extended_cases",
+      "lexical": "project_taxonomy",
+      "forms": "editorial_draft_with_explicit_gaps",
+      "prepositions": "pending",
+      "riddles": "pending",
+      "descriptions": "pending",
+      "antonym_attributes": "pending"
+    },
+    "syllable_type": null,
+    "relation_counts": {
+      "total": 4,
+      "by_type": {
+        "part_of": 4
+      },
+      "verified": 4,
+      "suggested": 0
+    },
+    "semantic_review_proposals": 0,
+    "illustrations": 2
+  }
+]

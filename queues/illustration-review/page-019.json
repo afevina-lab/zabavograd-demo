@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lex-v2-d0b2d0bed0bbd187d0b8d186d0b0",
+    "lemma": "волчица",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0bed0bbd187d0bed0bdd0bed0ba",
+    "lemma": "волчонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0bed0bbd188d0b5d0b1d0bdd0b8d186d0b0",
+    "lemma": "волшебница",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0bed180d0bed0b1d18cd0b8d0bdd18bd0b920d181d18bd187",
+    "lemma": "воробьиный сыч",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0bed180d0bed0b1d18cd191d0bdd0bed0ba",
+    "lemma": "воробьёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0bed180d0bed0bd",
+    "lemma": "ворон",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0bed180d0bed0bdd191d0bdd0bed0ba",
+    "lemma": "воронёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d0b0d0b3d0b0d180d0b0",
+    "lemma": "гагара",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d0b0d0b4d18ed0bad0b0",
+    "lemma": "гадюка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d0b0d0b7d0b5d0bbd18c",
+    "lemma": "газель",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d0b5d0bed0bbd0bed0b3",
+    "lemma": "геолог",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d0b8d0b5d0bdd0b0",
+    "lemma": "гиена",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d0bed0bbd0b5d0bdd18c",
+    "lemma": "голень",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d0bed0bbd0bed0b2d0b0d181d182d0b8d0ba",
+    "lemma": "головастик",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d0bed0bbd183d0b1d0bad0b0",
+    "lemma": "голубка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d0bed0bbd183d0b1d191d0bdd0bed0ba",
+    "lemma": "голубёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d0bed180d0b4d0bed181d182d18c",
+    "lemma": "гордость",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d180d0b0d187d0bed0bdd0bed0ba",
+    "lemma": "грачонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d180d0b8d184",
+    "lemma": "гриф",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d183d0bfd0bfd0b8",
+    "lemma": "гуппи",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d183d181d18bd0bdd18f",
+    "lemma": "гусыня",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b5d0b6d0bed0bdd0bed0ba",
+    "lemma": "ежонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d0b0d0bbd0bed181d182d18c",
+    "lemma": "жалость",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d0b5d0bbd183d0b4d0bed0ba",
+    "lemma": "желудок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d0b5d0bdd0b0",
+    "lemma": "жена",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d0b5d0bdd0b8d185",
+    "lemma": "жених",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d183d0ba2dd0bdd0bed181d0bed180d0bed0b3",
+    "lemma": "жук-носорог",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d183d0ba2dd0bed0bbd0b5d0bdd18c",
+    "lemma": "жук-олень",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d183d180d0b0d0b2d0bbd191d0bdd0bed0ba",
+    "lemma": "журавлёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d0b0d0b2d0b8d181d182d18c",
+    "lemma": "зависть",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d0b0d0b9d187d0b8d185d0b0",
+    "lemma": "зайчиха",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d0b0d0bfd18fd181d182d18cd0b5",
+    "lemma": "запястье",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d180d0b0d187d0bed0ba",
+    "lemma": "зрачок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d180d0b8d182d0b5d0bbd18c",
+    "lemma": "зритель",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0b2d0bed0bbd0b3d0b0",
+    "lemma": "иволга",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0b3d183d0b0d0bdd0b0",
+    "lemma": "игуана",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0bdd0b4d0b5d0b9d0bad0b0",
+    "lemma": "индейка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0bdd0b4d18ed188d0bed0bdd0bed0ba",
+    "lemma": "индюшонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0bdd0b6d0b5d0bdd0b5d180",
+    "lemma": "инженер",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad0b0d0b1d0b0d0bdd0b8d185d0b0",
+    "lemma": "кабаниха",
+    "weight": 20
+  }
+]

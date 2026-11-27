@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lex-v2-d181d18bd0bd",
+    "lemma": "сын",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d182d0b5d0bbd0be",
+    "lemma": "тело",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d0b4d0b8d0b2d0bbd0b5d0bdd0b8d0b5",
+    "lemma": "удивление",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d0bbd0b8d182d0bad0b0",
+    "lemma": "улитка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d0bbd18bd0b1d0bad0b0",
+    "lemma": "улыбка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d185d0be",
+    "lemma": "ухо",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d187d0b8d182d0b5d0bbd18c",
+    "lemma": "учитель",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d185d0bed0bcd18fd0ba",
+    "lemma": "хомяк",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d187d0b5d0bbd0bed0b2d0b5d0ba",
+    "lemma": "человек",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d188d0b5d18f",
+    "lemma": "шея",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d18fd0b7d18bd0ba",
+    "lemma": "язык",
+    "weight": 70
+  },
+  {
+    "id": "ru-gen-20261104-clothes",
+    "lemma": "одежда",
+    "weight": 70
+  },
+  {
+    "id": "ru-gen-20261104-footwear",
+    "lemma": "обувь",
+    "weight": 70
+  },
+  {
+    "id": "ru-gen-20261104-insect",
+    "lemma": "насекомое",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-14f98f50",
+    "lemma": "губка",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-1703889",
+    "lemma": "тряпка",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-20b3798c",
+    "lemma": "ваза",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-2de40894",
+    "lemma": "комната",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-2de93e3e",
+    "lemma": "лейка",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-30af5954",
+    "lemma": "матрас",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-316192a1",
+    "lemma": "зонт",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-3f180428",
+    "lemma": "ванная",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-442b0155",
+    "lemma": "вешалка",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-4f96162",
+    "lemma": "блюдце",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-524ccbc8",
+    "lemma": "чайник",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-55ee0672",
+    "lemma": "пуговица",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-57e70cf5",
+    "lemma": "будильник",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-5834e39c",
+    "lemma": "таз",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-589c7243",
+    "lemma": "потолок",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-5cb9b062",
+    "lemma": "противень",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-614f581c",
+    "lemma": "дуршлаг",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-6a956b2a",
+    "lemma": "миска",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-6e538a00",
+    "lemma": "туалет",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-6f93de3a",
+    "lemma": "салфетка",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-7074370",
+    "lemma": "кресло",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-86363d1",
+    "lemma": "пакет",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-89d8c778",
+    "lemma": "швабра",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-8a46549",
+    "lemma": "кувшин",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-90406b80",
+    "lemma": "спальня",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-91ca6828",
+    "lemma": "балкон",
+    "weight": 70
+  }
+]

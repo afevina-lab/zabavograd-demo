@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lex-v2-d0b1d0b5d0bbd0bad0b0",
+    "lemma": "белка",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0b2d0bed0bbd0ba",
+    "lemma": "волк",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0b7d0b0d18fd186",
+    "lemma": "заяц",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0b7d0bcd0b5d18f",
+    "lemma": "змея",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0bad0b8d181d182d18c",
+    "lemma": "кисть",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0bad0bed182",
+    "lemma": "кот",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0bad0bed188d0bad0b0",
+    "lemma": "кошка",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0bbd0b5d0b2",
+    "lemma": "лев",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0bbd0b8d181d0b0",
+    "lemma": "лиса",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0bbd0bed188d0b0d0b4d18c",
+    "lemma": "лошадь",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0bbd18fd0b3d183d188d0bad0b0",
+    "lemma": "лягушка",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0bcd0b5d0b4d0b2d0b5d0b4d18c",
+    "lemma": "медведь",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0bed0b1d0b5d0b7d18cd18fd0bdd0b0",
+    "lemma": "обезьяна",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d181d0b2d0b8d0bdd18cd18f",
+    "lemma": "свинья",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d181d0bbd0bed0bd",
+    "lemma": "слон",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d181d0bed0b1d0b0d0bad0b0",
+    "lemma": "собака",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d187d0b5d180d0b5d0bfd0b0d185d0b0",
+    "lemma": "черепаха",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d191d0b6",
+    "lemma": "ёж",
+    "weight": 100
+  },
+  {
+    "id": "ru-gen-20261104-animal",
+    "lemma": "животное",
+    "weight": 100
+  },
+  {
+    "id": "ru-gen-20261104-bird",
+    "lemma": "птица",
+    "weight": 100
+  },
+  {
+    "id": "ru-gen-20261104-dishes",
+    "lemma": "посуда",
+    "weight": 100
+  },
+  {
+    "id": "ru-gen-20261104-furniture",
+    "lemma": "мебель",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-1166080b",
+    "lemma": "веник",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-1e2c3905",
+    "lemma": "стакан",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-21314a78",
+    "lemma": "молоток",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-239dbff9",
+    "lemma": "плита",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-259cc695",
+    "lemma": "тарелка",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-298f060d",
+    "lemma": "пылесос",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-31574f40",
+    "lemma": "нитка",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-35ae72a6",
+    "lemma": "окно",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-383c63b3",
+    "lemma": "мыло",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-3cc18977",
+    "lemma": "холодильник",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-3dd17450",
+    "lemma": "отвёртка",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-444ca938",
+    "lemma": "чайник",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-5423908",
+    "lemma": "ложка",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-57fec3cd",
+    "lemma": "ванна",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-5a54a27c",
+    "lemma": "выключатель",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-5db28abf",
+    "lemma": "банка",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-5eb96006",
+    "lemma": "вилка",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-62ced432",
+    "lemma": "ножницы",
+    "weight": 100
+  }
+]

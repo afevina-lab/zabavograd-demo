@@ -1,0 +1,202 @@
+[
+  {
+    "id": "image-pack-20261123-1b7d9df0e6b5",
+    "lemma": "скамейка",
+    "weight": 100
+  },
+  {
+    "id": "image-pack-20261123-30fa6e611a11",
+    "lemma": "арка",
+    "weight": 100
+  },
+  {
+    "id": "image-pack-20261123-58f5ba4e43f3",
+    "lemma": "книжный шкаф",
+    "weight": 100
+  },
+  {
+    "id": "image-pack-20261123-c5fa0717ea6d",
+    "lemma": "письменный стол",
+    "weight": 100
+  },
+  {
+    "id": "image-pack-20261123-f20acaf756df",
+    "lemma": "статуя",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0b1d0b5d0bbd0bad0b0",
+    "lemma": "белка",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0b7d0bcd0b5d18f",
+    "lemma": "змея",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0bbd0b8d181d0b0",
+    "lemma": "лиса",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-4a814f4",
+    "lemma": "зубная паста",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-5423908",
+    "lemma": "ложка",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-5e049672",
+    "lemma": "стиральная машина",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-5eb96006",
+    "lemma": "вилка",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-691e73d6",
+    "lemma": "разделочная доска",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-92d7e826",
+    "lemma": "зубная щётка",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-accfb2b4",
+    "lemma": "стена",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-dfa4b2aa",
+    "lemma": "замок",
+    "weight": 100
+  },
+  {
+    "id": "ru-new-20261102-0035",
+    "lemma": "розетка",
+    "weight": 100
+  },
+  {
+    "id": "ru-new-20261102-0038",
+    "lemma": "кроссовки",
+    "weight": 100
+  },
+  {
+    "id": "ru-new-20261108-0ca50229c2",
+    "lemma": "платье",
+    "weight": 100
+  },
+  {
+    "id": "ru-new-20261108-2bac6d3523",
+    "lemma": "кукла",
+    "weight": 100
+  },
+  {
+    "id": "ru-new-20261108-53796f6d09",
+    "lemma": "штаны",
+    "weight": 100
+  },
+  {
+    "id": "ru-new-20261108-6ce7e80f4f",
+    "lemma": "футболка",
+    "weight": 100
+  },
+  {
+    "id": "ru-new-20261108-70c372449f",
+    "lemma": "шапка",
+    "weight": 100
+  },
+  {
+    "id": "ru-new-20261108-84653d88d9",
+    "lemma": "мяч",
+    "weight": 100
+  },
+  {
+    "id": "ru-new-20261108-97b71638c2",
+    "lemma": "облако",
+    "weight": 100
+  },
+  {
+    "id": "ru-new-20261108-a88df7da50",
+    "lemma": "яйцо",
+    "weight": 100
+  },
+  {
+    "id": "ru-new-20261108-b8f6c0f802",
+    "lemma": "молоко",
+    "weight": 100
+  },
+  {
+    "id": "ru-noun-20261109-0029",
+    "lemma": "носок",
+    "weight": 100
+  },
+  {
+    "id": "ru-noun-20261109-0055",
+    "lemma": "вода",
+    "weight": 100
+  },
+  {
+    "id": "ru-noun-extra-20261109-026",
+    "lemma": "детский сад",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0b1d0b5d0bbd18bd0b920d0bcd0b5d0b4d0b2d0b5d0b4d18c",
+    "lemma": "белый медведь",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b1d0bed0b6d18cd18f20d0bad0bed180d0bed0b2d0bad0b0",
+    "lemma": "божья коровка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0b0d18f20d0b7d0b2d0b5d0b7d0b4d0b0",
+    "lemma": "морская звезда",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d0b5d0b2d0b5d180d0bdd18bd0b920d0bed0bbd0b5d0bdd18c",
+    "lemma": "северный олень",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d0bfd0b8d0bdd0b0",
+    "lemma": "спина",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d182d0bad0b0",
+    "lemma": "утка",
+    "weight": 70
+  },
+  {
+    "id": "ru-editorial-gap-20261123-0b20e47d49172509",
+    "lemma": "конюшня",
+    "weight": 70
+  },
+  {
+    "id": "ru-editorial-gap-20261123-13649451c9948c3f",
+    "lemma": "яичница",
+    "weight": 70
+  },
+  {
+    "id": "ru-editorial-gap-20261123-2d7a9783377d7d54",
+    "lemma": "шерсть",
+    "weight": 70
+  },
+  {
+    "id": "ru-editorial-gap-20261123-4aa311850100a8de",
+    "lemma": "будка",
+    "weight": 70
+  }
+]

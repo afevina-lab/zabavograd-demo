@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-noun-20261109-0034",
+    "lemma": "погремушка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0038",
+    "lemma": "ведёрко",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0039",
+    "lemma": "матрёшка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0040",
+    "lemma": "пазл",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0042",
+    "lemma": "скакалка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0043",
+    "lemma": "обруч",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0044",
+    "lemma": "лыжа",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0048",
+    "lemma": "пианино",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0058",
+    "lemma": "чай",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0059",
+    "lemma": "компот",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0063",
+    "lemma": "салат",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0065",
+    "lemma": "пюре",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0066",
+    "lemma": "котлета",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0071",
+    "lemma": "самокат",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0072",
+    "lemma": "мотоцикл",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0073",
+    "lemma": "такси",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0077",
+    "lemma": "лодка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0078",
+    "lemma": "вагон",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0080",
+    "lemma": "мост",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0082",
+    "lemma": "остановка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0084",
+    "lemma": "парк",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0086",
+    "lemma": "аптека",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0087",
+    "lemma": "больница",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0089",
+    "lemma": "деревня",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0092",
+    "lemma": "поле",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-001",
+    "lemma": "пельмени",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-003",
+    "lemma": "блин",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-009",
+    "lemma": "булочка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-011",
+    "lemma": "печенье",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-015",
+    "lemma": "шоколад",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-017",
+    "lemma": "варенье",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-020",
+    "lemma": "санки",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-021",
+    "lemma": "лыжи",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-022",
+    "lemma": "коньки",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-031",
+    "lemma": "туман",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-032",
+    "lemma": "лужа",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-033",
+    "lemma": "метель",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-034",
+    "lemma": "туча",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-035",
+    "lemma": "лёд",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-037",
+    "lemma": "сосулька",
+    "weight": 70
+  }
+]

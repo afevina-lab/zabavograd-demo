@@ -1,0 +1,197 @@
+[
+  {
+    "id": "ru-home-20261105-4a814f4",
+    "lemma": "зубная паста",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-5e049672",
+    "lemma": "стиральная машина",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-691e73d6",
+    "lemma": "разделочная доска",
+    "weight": 100
+  },
+  {
+    "id": "ru-home-20261105-92d7e826",
+    "lemma": "зубная щётка",
+    "weight": 100
+  },
+  {
+    "id": "ru-noun-extra-20261109-026",
+    "lemma": "детский сад",
+    "weight": 100
+  },
+  {
+    "id": "lex-v2-d0b1d0b5d0bbd18bd0b920d0bcd0b5d0b4d0b2d0b5d0b4d18c",
+    "lemma": "белый медведь",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b1d0bed0b6d18cd18f20d0bad0bed180d0bed0b2d0bad0b0",
+    "lemma": "божья коровка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0b0d18f20d0b7d0b2d0b5d0b7d0b4d0b0",
+    "lemma": "морская звезда",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d0b5d0b2d0b5d180d0bdd18bd0b920d0bed0bbd0b5d0bdd18c",
+    "lemma": "северный олень",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-5a7d5589",
+    "lemma": "гаечный ключ",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-5b28f6e6",
+    "lemma": "чайная ложка",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-624f6b16",
+    "lemma": "швейная машина",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-b00c041",
+    "lemma": "зарядное устройство",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-c980618f",
+    "lemma": "микроволновая печь",
+    "weight": 70
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0b5d0bbd18bd0b920d0b3d180d0b8d0b1",
+    "lemma": "белый гриб",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0b4d0bed0b6d0b4d0b5d0b2d0bed0b920d187d0b5d180d0b2d18c",
+    "lemma": "дождевой червь",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0b7d0bed0bbd0bed182d0b0d18f20d180d18bd0b1d0bad0b0",
+    "lemma": "золотая рыбка",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-3bc32fc",
+    "lemma": "средство для мытья посуды",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-a0e6fb39",
+    "lemma": "гладильная доска",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-b6233cd5",
+    "lemma": "посудомоечная машина",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-ce7981",
+    "lemma": "системный блок",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-d44bce60",
+    "lemma": "сушилка для белья",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-d5ab07eb",
+    "lemma": "гель для душа",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0bbd0b5d0b4d0bdd0b0d18f20d0bfd0bed0b3d0b0d0bdd0bad0b0",
+    "lemma": "бледная поганка",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d186d0b2d0b5d182d0bdd0b0d18f20d0bad0b0d0bfd183d181d182d0b0",
+    "lemma": "цветная капуста",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bcd0b0d0b9d181d0bad0b8d0b920d0b6d183d0ba",
+    "lemma": "майский жук",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0b0d18f20d187d0b5d180d0b5d0bfd0b0d185d0b0",
+    "lemma": "морская черепаха",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0bed0b920d0bad0bed0bdd191d0ba",
+    "lemma": "морской конёк",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0bed0b920d0bad0bed182d0b8d0ba",
+    "lemma": "морской котик",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0bed0b920d191d0b6",
+    "lemma": "морской ёж",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-42e89bf4",
+    "lemma": "дверной звонок",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-4766e3b0",
+    "lemma": "дверная ручка",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-59295c6c",
+    "lemma": "кухонные весы",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-c69c01e1",
+    "lemma": "игровая приставка",
+    "weight": 30
+  },
+  {
+    "id": "ru-home-20261105-f5cb09d3",
+    "lemma": "стиральный порошок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b2d0bed180d0bed0b1d18cd0b8d0bdd18bd0b920d181d18bd187",
+    "lemma": "воробьиный сыч",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad0bed0bbd0bed180d0b0d0b4d181d0bad0b8d0b920d0b6d183d0ba",
+    "lemma": "колорадский жук",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0b0d18f20d181d0b2d0b8d0bdd0bad0b0",
+    "lemma": "морская свинка",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b5d0bad0b8d0bdd181d0bad0b0d18f20d0bad0b0d0bfd183d181d182d0b0",
+    "lemma": "пекинская капуста",
+    "weight": 20
+  }
+]

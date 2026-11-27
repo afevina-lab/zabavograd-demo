@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-home-20261105-a170b5b0",
+    "lemma": "бра",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-a715553a",
+    "lemma": "подоконник",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-d63a138e",
+    "lemma": "подъезд",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0012",
+    "lemma": "кора",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0014",
+    "lemma": "крона",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0020",
+    "lemma": "бурундук",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0026",
+    "lemma": "морс",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0028",
+    "lemma": "крупа",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0049",
+    "lemma": "размер",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0056",
+    "lemma": "поворот",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0066",
+    "lemma": "доктор",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0068",
+    "lemma": "родина",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0069",
+    "lemma": "герб",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0071",
+    "lemma": "герой",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0074",
+    "lemma": "портал",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0091",
+    "lemma": "многоугольник",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0095",
+    "lemma": "призма",
+    "weight": 20
+  },
+  {
+    "id": "ru-noun-20261109-0051",
+    "lemma": "саксофон",
+    "weight": 20
+  },
+  {
+    "id": "ru-noun-extra-20261109-005",
+    "lemma": "кофе",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0b0d0b9d0b2d0b0",
+    "lemma": "айва",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0b0d0bed0b1d0b0d0b1",
+    "lemma": "баобаб",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0b0d182d0b0d182",
+    "lemma": "батат",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0b1d0b5d0b3d0bed0bdd0b8d18f",
+    "lemma": "бегония",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0b3d180d183d0b7d0b4d18c",
+    "lemma": "груздь",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bad180d0bed0bad183d181",
+    "lemma": "крокус",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bcd0bed0bdd181d182d0b5d180d0b0",
+    "lemma": "монстера",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b0d0bfd0b0d0b9d18f",
+    "lemma": "папайя",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b0d0bfd0bed180d0bed182d0bdd0b8d0ba",
+    "lemma": "папоротник",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b0d182d0b8d181d181d0bed0bd",
+    "lemma": "патиссон",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b5d0bad0b8d0bdd181d0bad0b0d18f20d0bad0b0d0bfd183d181d182d0b0",
+    "lemma": "пекинская капуста",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b5d182d183d0bdd0b8d18f",
+    "lemma": "петуния",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0b8d185d182d0b0",
+    "lemma": "пихта",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd18bd0bbd18cd186d0b0",
+    "lemma": "пыльца",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d181d0bcd0bed180d187d0bed0ba",
+    "lemma": "сморчок",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d181d0bfd0b0d180d0b6d0b0",
+    "lemma": "спаржа",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d185d0b2d0bed18f",
+    "lemma": "хвоя",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d185d180d0b5d0bd",
+    "lemma": "хрен",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d18fd181d0b5d0bdd18c",
+    "lemma": "ясень",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-023",
+    "lemma": "зубр",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-029",
+    "lemma": "кобра",
+    "weight": 20
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-r-add-d186d0b8d184d180d0b0",
+    "lemma": "цифра",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-extra-004",
+    "lemma": "рама",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-extra-005",
+    "lemma": "нора",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-extra-010",
+    "lemma": "парус",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-extra-016",
+    "lemma": "ворота",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-extra-020",
+    "lemma": "пруд",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-extra-028",
+    "lemma": "ручей",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-extra-029",
+    "lemma": "рубин",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-extra-030",
+    "lemma": "горшок",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-extra-031",
+    "lemma": "дракон",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-extra-032",
+    "lemma": "карусель",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-extra-033",
+    "lemma": "перо",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-026",
+    "lemma": "карман",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-096",
+    "lemma": "шнурок",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0b3d180d0b0d0b4d183d181d0bdd0b8d0ba",
+    "lemma": "градусник",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0b4d180d0b0d0bad0b0",
+    "lemma": "драка",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0b4d18bd180d0b0",
+    "lemma": "дыра",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bad0b0d180d182d0bed0bd",
+    "lemma": "картон",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bad0b8d180d0bfd0b8d187",
+    "lemma": "кирпич",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bad0bed180d0bc",
+    "lemma": "корм",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bfd0bed0b6d0b0d180",
+    "lemma": "пожар",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0bfd180d183d0b6d0b8d0bdd0b0",
+    "lemma": "пружина",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d180d0bed189d0b0",
+    "lemma": "роща",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d180d183d0b6d18cd191",
+    "lemma": "ружьё",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d180d183d0bbd0bed0bd",
+    "lemma": "рулон",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d180d183d0bcd18fd0bdd0b0",
+    "lemma": "румяна",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d182d0b5d180d0bcd0bed0bcd0b5d182d180",
+    "lemma": "термометр",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d184d0b0d180d0b0",
+    "lemma": "фара",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d184d0bed182d0bed0b3d180d0b0d184d0b8d18f",
+    "lemma": "фотография",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d185d180d0b0d0bf",
+    "lemma": "храп",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d18dd181d0bad0b0d0bbd0b0d182d0bed180",
+    "lemma": "эскалатор",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-009",
+    "lemma": "корыто",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-013",
+    "lemma": "двор",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-017",
+    "lemma": "груз",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-019",
+    "lemma": "трос",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-023",
+    "lemma": "ров",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-024",
+    "lemma": "рукав",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-add-d0b2d0b0d0bcd0bfd0b8d180",
+    "lemma": "вампир",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b3d180d0b0d0bcd0bed182d0b0",
+    "lemma": "грамота",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b7d0b0d0b2d182d180d0b0d0ba",
+    "lemma": "завтрак",
+    "weight": 20
+  }
+]

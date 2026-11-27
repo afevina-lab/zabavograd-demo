@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lex-v2-d0bbd18ed0b1d0bed0b2d18c",
+    "lemma": "любовь",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bcd0b5d0b4d181d0b5d181d182d180d0b0",
+    "lemma": "медсестра",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bcd0bbd0b0d0b4d0b5d0bdd0b5d186",
+    "lemma": "младенец",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d18fd0ba",
+    "lemma": "моряк",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bcd183d0b7d18bd0bad0b0d0bdd182",
+    "lemma": "музыкант",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bdd0bed0b3d0bed182d18c",
+    "lemma": "ноготь",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bed0b1d0b8d0b4d0b0",
+    "lemma": "обида",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bed181d0b0",
+    "lemma": "оса",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bed181d191d0bb",
+    "lemma": "осёл",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bed184d0b8d186d0b8d0b0d0bdd182",
+    "lemma": "официант",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0b0d180d0b8d0bad0bcd0b0d185d0b5d180",
+    "lemma": "парикмахер",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0b5d0b2d0b5d186",
+    "lemma": "певец",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0b5d0bad0b0d180d18c",
+    "lemma": "пекарь",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0b5d188d0b5d185d0bed0b4",
+    "lemma": "пешеход",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0b8d0bbd0bed182",
+    "lemma": "пилот",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0bbd0b5d187d0be",
+    "lemma": "плечо",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0bed0b4d0b1d0bed180d0bed0b4d0bed0ba",
+    "lemma": "подбородок",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0bed0b4d180d0bed181d182d0bed0ba",
+    "lemma": "подросток",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0bed187d182d0b0d0bbd18cd0bed0bd",
+    "lemma": "почтальон",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd180d0b8d0bdd186",
+    "lemma": "принц",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd180d0b8d0bdd186d0b5d181d181d0b0",
+    "lemma": "принцесса",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd182d0b5d0bdd0b5d186",
+    "lemma": "птенец",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d180d0b5d181d0bdd0b8d186d18b",
+    "lemma": "ресницы",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0b0d0b4d0bed0b2d0bdd0b8d0ba",
+    "lemma": "садовник",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bad0b5d0bbd0b5d182",
+    "lemma": "скелет",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bad183d0bad0b0",
+    "lemma": "скука",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bbd0b5d0b7d0b0",
+    "lemma": "слеза",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bed0bbd0b4d0b0d182",
+    "lemma": "солдат",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bed0bc",
+    "lemma": "сом",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bfd0b0d181d0b0d182d0b5d0bbd18c",
+    "lemma": "спасатель",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bfd0bed0bad0bed0b9d181d182d0b2d0b8d0b5",
+    "lemma": "спокойствие",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bfd0bed180d182d181d0bcd0b5d0bd",
+    "lemma": "спортсмен",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d182d0b0d180d0b8d0ba",
+    "lemma": "старик",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d182d0b0d180d183d188d0bad0b0",
+    "lemma": "старушка",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d182d0bed0bcd0b0d182d0bed0bbd0bed0b3",
+    "lemma": "стоматолог",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d187d0b0d181d182d18cd0b5",
+    "lemma": "счастье",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d182d0b0d0bdd186d0bed180",
+    "lemma": "танцор",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d182d191d182d18f",
+    "lemma": "тётя",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d183d0b1d0bed180d189d0b8d0ba",
+    "lemma": "уборщик",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d183d181d182d0b0d0bbd0bed181d182d18c",
+    "lemma": "усталость",
+    "weight": 50
+  }
+]

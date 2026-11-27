@@ -1,0 +1,1122 @@
+{
+  "schema_version": 1,
+  "source": {
+    "master": {
+      "path": "generated V2 from modules",
+      "sha256": "2342765ab2aae827ab89a2b9bbdcde08b9fbb14ccc5ba35a16879a12d51c5526",
+      "git_blob": "c2e3bfb7594a5ea1bc969b1f09757be90f02930c",
+      "bytes": 13166082,
+      "mode": "modules"
+    },
+    "draft": {
+      "path": "outputs/library-v2-auto-analysis.json",
+      "sha256": "ef4f3c7056436c055c611e3dc7164849f83aa0ef646e8a0c09ed2afd54f151c1",
+      "git_blob": "20fb9ee0076d379c8b8269434d086c4627f7ad09",
+      "bytes": 5874967
+    },
+    "syllables": {
+      "path": "outputs/library-syllable-structure.json",
+      "sha256": "235b89336fa9f4a14b13ac0318a7b7e8c634e09c86b38b6b79a4bc17d875be9b",
+      "git_blob": "d3856a975f658061d255ec190741a461e4a48368",
+      "bytes": 101944
+    },
+    "runtime": {
+      "path": "library.json",
+      "sha256": "f1226ca54fc86c6e1dfdcb6633873c8f083e1fa0b4ab9c1e0de140885097359f",
+      "git_blob": "f3c04f9f630bbcbc52e5d0a4f2fb14f5c1008e78",
+      "bytes": 4304291
+    },
+    "tasks": {
+      "path": "editorial/library-tasks.json",
+      "sha256": "ee830dc7a0d299383deb54f6f3de8a75f80e2b93371c926377c53468a477da63",
+      "git_blob": "589a4a5571c43cd9f83cd9569d08c04350f2e726",
+      "bytes": 5054
+    }
+  },
+  "entries": 1993,
+  "categories": 234,
+  "relations": 1540,
+  "page_size": 40,
+  "pages": [
+    {
+      "file": "weight-100/page-001.json",
+      "weight": 100,
+      "count": 40,
+      "first_id": "image-pack-20261123-1b7d9df0e6b5",
+      "last_id": "ru-home-20261105-4a814f4"
+    },
+    {
+      "file": "weight-100/page-002.json",
+      "weight": 100,
+      "count": 40,
+      "first_id": "ru-home-20261105-5423908",
+      "last_id": "ru-home-20261105-f31fd446"
+    },
+    {
+      "file": "weight-100/page-003.json",
+      "weight": 100,
+      "count": 40,
+      "first_id": "ru-home-20261105-f7cfdfb1",
+      "last_id": "ru-noun-20261109-0061"
+    },
+    {
+      "file": "weight-100/page-004.json",
+      "weight": 100,
+      "count": 40,
+      "first_id": "ru-noun-20261109-0062",
+      "last_id": "ru-plant-20261104-d180d0b0d181d182d0b5d0bdd0b8d0b5"
+    },
+    {
+      "file": "weight-100/page-005.json",
+      "weight": 100,
+      "count": 40,
+      "first_id": "ru-plant-20261104-d186d0b2d0b5d182d0bed0ba",
+      "last_id": "ru-r-094"
+    },
+    {
+      "file": "weight-100/page-006.json",
+      "weight": 100,
+      "count": 6,
+      "first_id": "ru-r-add-d0b3d180d183d0b7d0bed0b2d0b8d0ba",
+      "last_id": "ru-sense-20261105-kist-tool"
+    },
+    {
+      "file": "weight-70/page-001.json",
+      "weight": 70,
+      "count": 40,
+      "first_id": "lex-v2-d0b0d0b8d181d182",
+      "last_id": "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba"
+    },
+    {
+      "file": "weight-70/page-002.json",
+      "weight": 70,
+      "count": 40,
+      "first_id": "lex-v2-d0bcd0b0d0bcd0b0",
+      "last_id": "lex-v2-d185d0bed0bcd18fd0ba"
+    },
+    {
+      "file": "weight-70/page-003.json",
+      "weight": 70,
+      "count": 40,
+      "first_id": "lex-v2-d187d0b5d0bbd0bed0b2d0b5d0ba",
+      "last_id": "ru-home-20261105-6a956b2a"
+    },
+    {
+      "file": "weight-70/page-004.json",
+      "weight": 70,
+      "count": 40,
+      "first_id": "ru-home-20261105-6e538a00",
+      "last_id": "ru-new-20261102-0006"
+    },
+    {
+      "file": "weight-70/page-005.json",
+      "weight": 70,
+      "count": 40,
+      "first_id": "ru-new-20261102-0007",
+      "last_id": "ru-noun-20261109-0034"
+    },
+    {
+      "file": "weight-70/page-006.json",
+      "weight": 70,
+      "count": 40,
+      "first_id": "ru-noun-20261109-0038",
+      "last_id": "ru-noun-extra-20261109-038"
+    },
+    {
+      "file": "weight-70/page-007.json",
+      "weight": 70,
+      "count": 40,
+      "first_id": "ru-noun-extra-20261109-043",
+      "last_id": "ru-plant-20261104-d181d182d0b5d0b1d0b5d0bbd18c"
+    },
+    {
+      "file": "weight-70/page-008.json",
+      "weight": 70,
+      "count": 40,
+      "first_id": "ru-plant-20261104-d182d18bd0bad0b2d0b0",
+      "last_id": "ru-r-add-d0bad0b0d180d182d0b8d0bdd0b0"
+    },
+    {
+      "file": "weight-70/page-009.json",
+      "weight": 70,
+      "count": 15,
+      "first_id": "ru-r-add-d0bcd0b8d0bad181d0b5d180",
+      "last_id": "ru-r-extra-025"
+    },
+    {
+      "file": "weight-50/page-001.json",
+      "weight": 50,
+      "count": 40,
+      "first_id": "lex-v2-d0b0d0bad182d191d180",
+      "last_id": "lex-v2-d0bfd0b0d180d0b8d0bad0bcd0b0d185d0b5d180"
+    },
+    {
+      "file": "weight-50/page-002.json",
+      "weight": 50,
+      "count": 40,
+      "first_id": "lex-v2-d0bfd0b5d0b2d0b5d186",
+      "last_id": "lex-v2-d189d0b5d0bad0b0"
+    },
+    {
+      "file": "weight-50/page-003.json",
+      "weight": 50,
+      "count": 40,
+      "first_id": "lex-v2-d189d0b5d0bdd0bed0ba",
+      "last_id": "ru-home-20261105-94e8e871"
+    },
+    {
+      "file": "weight-50/page-004.json",
+      "weight": 50,
+      "count": 40,
+      "first_id": "ru-home-20261105-9a48ab09",
+      "last_id": "ru-new-20261102-0075"
+    },
+    {
+      "file": "weight-50/page-005.json",
+      "weight": 50,
+      "count": 40,
+      "first_id": "ru-new-20261102-0076",
+      "last_id": "ru-noun-20261109-0036"
+    },
+    {
+      "file": "weight-50/page-006.json",
+      "weight": 50,
+      "count": 40,
+      "first_id": "ru-noun-20261109-0045",
+      "last_id": "ru-plant-20261104-d0b5d0b6d0b5d0b2d0b8d0bad0b0"
+    },
+    {
+      "file": "weight-50/page-007.json",
+      "weight": 50,
+      "count": 40,
+      "first_id": "ru-plant-20261104-d0b8d0b3d0bed0bbd0bad0b03ad0b8d0b3d0bed0bbd0bad0b020d185d0b2d0bed0b9d0bdd0bed0b3d0be20d180d0b0d181d182d0b5d0bdd0b8d18f",
+      "last_id": "ru-r-035"
+    },
+    {
+      "file": "weight-50/page-008.json",
+      "weight": 50,
+      "count": 40,
+      "first_id": "ru-r-037",
+      "last_id": "ru-r-add-d180d0bed0bcd0b1"
+    },
+    {
+      "file": "weight-50/page-009.json",
+      "weight": 50,
+      "count": 40,
+      "first_id": "ru-r-add-d180d0bed181d0b0",
+      "last_id": "useful-20261113-d0b4d18bd0bc"
+    },
+    {
+      "file": "weight-50/page-010.json",
+      "weight": 50,
+      "count": 9,
+      "first_id": "useful-20261113-d0b7d0b0d0bb",
+      "last_id": "useful-20261113-d18fd0bcd0b0"
+    },
+    {
+      "file": "weight-30/page-001.json",
+      "weight": 30,
+      "count": 40,
+      "first_id": "lex-v2-d0b0d0bdd182d0b8d0bbd0bed0bfd0b0",
+      "last_id": "lex-v2-d181d0bbd0b8d0b7d0b5d0bdd18c"
+    },
+    {
+      "file": "weight-30/page-002.json",
+      "weight": 30,
+      "count": 40,
+      "first_id": "lex-v2-d181d0bed0b2d191d0bdd0bed0ba",
+      "last_id": "ru-home-20261105-76b58058"
+    },
+    {
+      "file": "weight-30/page-003.json",
+      "weight": 30,
+      "count": 40,
+      "first_id": "ru-home-20261105-87a50edd",
+      "last_id": "ru-new-20261102-0132"
+    },
+    {
+      "file": "weight-30/page-004.json",
+      "weight": 30,
+      "count": 40,
+      "first_id": "ru-new-20261102-0133",
+      "last_id": "ru-plant-20261104-d0b0d0bbd0bed18d"
+    },
+    {
+      "file": "weight-30/page-005.json",
+      "weight": 30,
+      "count": 40,
+      "first_id": "ru-plant-20261104-d0b1d0b0d180d185d0b0d182d186d18b",
+      "last_id": "ru-r-add-d0b2d0b5d182d0b5d180"
+    },
+    {
+      "file": "weight-30/page-006.json",
+      "weight": 30,
+      "count": 40,
+      "first_id": "ru-r-add-d0b2d180d0b0d182d0b0d180d18c",
+      "last_id": "ru-r-add-d18ed0bfd0b8d182d0b5d180"
+    },
+    {
+      "file": "weight-30/page-007.json",
+      "weight": 30,
+      "count": 7,
+      "first_id": "ru-r-extra-009",
+      "last_id": "ru-r-extra-024"
+    },
+    {
+      "file": "weight-20/page-001.json",
+      "weight": 20,
+      "count": 40,
+      "first_id": "lex-v2-d0b0d0b8d181d182d191d0bdd0bed0ba",
+      "last_id": "lex-v2-d0b3d183d181d191d0bdd0bed0ba"
+    },
+    {
+      "file": "weight-20/page-002.json",
+      "weight": 20,
+      "count": 40,
+      "first_id": "lex-v2-d0b5d0b6d0bed0bdd0bed0ba",
+      "last_id": "lex-v2-d0bbd0bed181d0b8d185d0b0"
+    },
+    {
+      "file": "weight-20/page-003.json",
+      "weight": 20,
+      "count": 40,
+      "first_id": "lex-v2-d0bbd0bed181d191d0bdd0bed0ba",
+      "last_id": "lex-v2-d0bfd183d0bfd0bed0ba"
+    },
+    {
+      "file": "weight-20/page-004.json",
+      "weight": 20,
+      "count": 40,
+      "first_id": "lex-v2-d180d0b5d0b2d0bdd0bed181d182d18c",
+      "last_id": "lex-v2-d185d180d18fd0ba"
+    },
+    {
+      "file": "weight-20/page-005.json",
+      "weight": 20,
+      "count": 40,
+      "first_id": "lex-v2-d187d0b0d181d0bed0b2d189d0b8d0ba",
+      "last_id": "ru-new-20261102-0074"
+    },
+    {
+      "file": "weight-20/page-006.json",
+      "weight": 20,
+      "count": 40,
+      "first_id": "ru-new-20261102-0091",
+      "last_id": "ru-r-add-d0bcd0b0d182d180d0bed181"
+    },
+    {
+      "file": "weight-20/page-007.json",
+      "weight": 20,
+      "count": 13,
+      "first_id": "ru-r-add-d0bcd0bed180d0bed0b7",
+      "last_id": "ru-r-add-d188d182d0bed180d0bc"
+    },
+    {
+      "file": "weight-10/page-001.json",
+      "weight": 10,
+      "count": 13,
+      "first_id": "lex-v2-d0b6d0b5d180d0b5d0b1d0b5d186",
+      "last_id": "ru-plant-20261104-d185d0bbd0bed180d0bed184d0b8d182d183d0bc"
+    },
+    {
+      "file": "weight-0/page-001.json",
+      "weight": 0,
+      "count": 40,
+      "first_id": "image-pack-20261114-021e2551c399",
+      "last_id": "image-pack-20261120-dcb486fa89bb"
+    },
+    {
+      "file": "weight-0/page-002.json",
+      "weight": 0,
+      "count": 40,
+      "first_id": "image-pack-20261120-de5275ef5c64",
+      "last_id": "ru-action-20261109-0038"
+    },
+    {
+      "file": "weight-0/page-003.json",
+      "weight": 0,
+      "count": 40,
+      "first_id": "ru-action-20261109-0039",
+      "last_id": "ru-action-20261109-0078"
+    },
+    {
+      "file": "weight-0/page-004.json",
+      "weight": 0,
+      "count": 40,
+      "first_id": "ru-action-20261109-0079",
+      "last_id": "ru-action-20261109-0118"
+    },
+    {
+      "file": "weight-0/page-005.json",
+      "weight": 0,
+      "count": 40,
+      "first_id": "ru-action-20261109-0119",
+      "last_id": "ru-action-20261109-0158"
+    },
+    {
+      "file": "weight-0/page-006.json",
+      "weight": 0,
+      "count": 40,
+      "first_id": "ru-action-20261109-0159",
+      "last_id": "ru-action-20261109-0198"
+    },
+    {
+      "file": "weight-0/page-007.json",
+      "weight": 0,
+      "count": 40,
+      "first_id": "ru-action-20261109-0199",
+      "last_id": "ru-action-20261109-0238"
+    },
+    {
+      "file": "weight-0/page-008.json",
+      "weight": 0,
+      "count": 40,
+      "first_id": "ru-action-20261109-0239",
+      "last_id": "ru-attr-20261109-024"
+    },
+    {
+      "file": "weight-0/page-009.json",
+      "weight": 0,
+      "count": 40,
+      "first_id": "ru-attr-20261109-025",
+      "last_id": "ru-attr-20261109-064"
+    },
+    {
+      "file": "weight-0/page-010.json",
+      "weight": 0,
+      "count": 40,
+      "first_id": "ru-attr-20261109-065",
+      "last_id": "ru-attr-20261109-104"
+    },
+    {
+      "file": "weight-0/page-011.json",
+      "weight": 0,
+      "count": 40,
+      "first_id": "ru-attr-20261109-105",
+      "last_id": "ru-attr-20261109-144"
+    },
+    {
+      "file": "weight-0/page-012.json",
+      "weight": 0,
+      "count": 40,
+      "first_id": "ru-attr-20261109-145",
+      "last_id": "ru-new-20261102-0079"
+    },
+    {
+      "file": "weight-0/page-013.json",
+      "weight": 0,
+      "count": 40,
+      "first_id": "ru-new-20261102-0080",
+      "last_id": "ru-sem-20261105-62942200"
+    },
+    {
+      "file": "weight-0/page-014.json",
+      "weight": 0,
+      "count": 40,
+      "first_id": "ru-sem-20261105-6862df09",
+      "last_id": "ru-sem-20261105-d4c7f832"
+    },
+    {
+      "file": "weight-0/page-015.json",
+      "weight": 0,
+      "count": 10,
+      "first_id": "ru-sem-20261105-d5613d0a",
+      "last_id": "ru-sem-20261105-f84f7551"
+    }
+  ],
+  "weights": {
+    "0": 570,
+    "10": 13,
+    "20": 253,
+    "30": 247,
+    "50": 369,
+    "70": 335,
+    "100": 206
+  },
+  "phonetic_status": {
+    "automatic_candidate_needs_review": 1210,
+    "filled_with_explicit_extended_cases": 259,
+    "pending": 263,
+    "pending_automatic_analysis": 261
+  },
+  "morphology_status": {
+    "automatic_candidate_needs_review": 1363,
+    "editorial_draft": 181,
+    "filled_with_explicit_extended_cases": 259,
+    "machine_checked_forms_subset": 22,
+    "pending": 97,
+    "pending_automatic_analysis": 71
+  },
+  "fields": {
+    "id": {
+      "entries": 1993,
+      "value_bytes": 58375
+    },
+    "lemma": {
+      "entries": 1993,
+      "value_bytes": 30902
+    },
+    "language": {
+      "entries": 1993,
+      "value_bytes": 7972
+    },
+    "meaning": {
+      "entries": 1993,
+      "value_bytes": 13886
+    },
+    "kind": {
+      "entries": 1993,
+      "value_bytes": 12034
+    },
+    "selection": {
+      "entries": 1993,
+      "value_bytes": 168852
+    },
+    "categories": {
+      "entries": 1993,
+      "value_bytes": 215985
+    },
+    "phonetic_tags": {
+      "entries": 1993,
+      "value_bytes": 1000092
+    },
+    "morphology": {
+      "entries": 1993,
+      "value_bytes": 2690629
+    },
+    "illustrations": {
+      "entries": 1993,
+      "value_bytes": 363499
+    },
+    "metadata_completion": {
+      "entries": 1946,
+      "value_bytes": 238860
+    },
+    "legacy_source": {
+      "entries": 1932,
+      "value_bytes": 1865494
+    },
+    "editorial": {
+      "entries": 1993,
+      "value_bytes": 305450
+    },
+    "generalization": {
+      "entries": 24,
+      "value_bytes": 5771
+    },
+    "part_of_speech": {
+      "entries": 739,
+      "value_bytes": 5311
+    },
+    "machine_analysis": {
+      "entries": 118,
+      "value_bytes": 112164
+    },
+    "lexical_eligible_by_default": {
+      "entries": 732,
+      "value_bytes": 3470
+    },
+    "usage_modes": {
+      "entries": 10,
+      "value_bytes": 300
+    },
+    "lexical_tasks": {
+      "entries": 10,
+      "value_bytes": 450
+    },
+    "public_release_snapshot": {
+      "entries": 25,
+      "value_bytes": 16215
+    },
+    "same_lexical_meaning_as": {
+      "entries": 12,
+      "value_bytes": 276
+    }
+  },
+  "syllable_index_fresh": false,
+  "draft_source_verified": false,
+  "queues": {
+    "phonetic-gaps": {
+      "count": 492,
+      "by_weight": {
+        "0": 289,
+        "10": 6,
+        "20": 32,
+        "30": 36,
+        "50": 52,
+        "70": 47,
+        "100": 30
+      },
+      "pages": [
+        {
+          "file": "queues/phonetic-gaps/page-001.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-gaps/page-002.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-gaps/page-003.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-gaps/page-004.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-gaps/page-005.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-gaps/page-006.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-gaps/page-007.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-gaps/page-008.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-gaps/page-009.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-gaps/page-010.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-gaps/page-011.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-gaps/page-012.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-gaps/page-013.json",
+          "count": 12
+        }
+      ]
+    },
+    "phonetic-review": {
+      "count": 1210,
+      "by_weight": {
+        "0": 268,
+        "10": 7,
+        "20": 194,
+        "30": 135,
+        "50": 231,
+        "70": 241,
+        "100": 134
+      },
+      "pages": [
+        {
+          "file": "queues/phonetic-review/page-001.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-002.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-003.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-004.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-005.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-006.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-007.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-008.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-009.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-010.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-011.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-012.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-013.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-014.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-015.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-016.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-017.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-018.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-019.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-020.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-021.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-022.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-023.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-024.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-025.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-026.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-027.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-028.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-029.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-030.json",
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-031.json",
+          "count": 10
+        }
+      ]
+    },
+    "morphology-gaps": {
+      "count": 39,
+      "by_weight": {
+        "20": 4,
+        "30": 10,
+        "50": 10,
+        "70": 10,
+        "100": 5
+      },
+      "pages": [
+        {
+          "file": "queues/morphology-gaps/page-001.json",
+          "count": 39
+        }
+      ]
+    },
+    "morphology-review": {
+      "count": 1363,
+      "by_weight": {
+        "0": 332,
+        "10": 13,
+        "20": 219,
+        "30": 153,
+        "50": 245,
+        "70": 256,
+        "100": 145
+      },
+      "pages": [
+        {
+          "file": "queues/morphology-review/page-001.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-002.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-003.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-004.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-005.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-006.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-007.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-008.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-009.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-010.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-011.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-012.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-013.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-014.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-015.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-016.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-017.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-018.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-019.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-020.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-021.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-022.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-023.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-024.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-025.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-026.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-027.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-028.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-029.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-030.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-031.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-032.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-033.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-034.json",
+          "count": 40
+        },
+        {
+          "file": "queues/morphology-review/page-035.json",
+          "count": 3
+        }
+      ]
+    },
+    "category-review": {
+      "count": 129,
+      "by_weight": {
+        "0": 42,
+        "20": 10,
+        "30": 25,
+        "50": 39,
+        "70": 4,
+        "100": 9
+      },
+      "pages": [
+        {
+          "file": "queues/category-review/page-001.json",
+          "count": 40
+        },
+        {
+          "file": "queues/category-review/page-002.json",
+          "count": 40
+        },
+        {
+          "file": "queues/category-review/page-003.json",
+          "count": 40
+        },
+        {
+          "file": "queues/category-review/page-004.json",
+          "count": 9
+        }
+      ]
+    },
+    "illustration-review": {
+      "count": 1472,
+      "by_weight": {
+        "0": 518,
+        "10": 13,
+        "20": 239,
+        "30": 201,
+        "50": 233,
+        "70": 182,
+        "100": 86
+      },
+      "pages": [
+        {
+          "file": "queues/illustration-review/page-001.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-002.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-003.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-004.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-005.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-006.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-007.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-008.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-009.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-010.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-011.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-012.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-013.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-014.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-015.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-016.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-017.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-018.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-019.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-020.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-021.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-022.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-023.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-024.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-025.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-026.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-027.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-028.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-029.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-030.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-031.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-032.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-033.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-034.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-035.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-036.json",
+          "count": 40
+        },
+        {
+          "file": "queues/illustration-review/page-037.json",
+          "count": 32
+        }
+      ]
+    },
+    "semantic-proposals": {
+      "count": 0,
+      "by_weight": {},
+      "pages": []
+    },
+    "phonetic-proposals": {
+      "count": 0,
+      "by_weight": {},
+      "pages": []
+    }
+  },
+  "notes": [
+    "Raw statuses are not review decisions.",
+    "A missing illustration or relation is a review candidate, not a mandatory gap.",
+    "Draft data is not proof of current or approved analysis.",
+    "Syllable groups are omitted unless both recorded source blobs match.",
+    "Translations in other branches are outside this main-source index."
+  ]
+}

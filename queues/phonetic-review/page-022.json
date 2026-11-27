@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lex-v2-d0bfd0b8d18fd0b2d0bad0b0",
+    "lemma": "пиявка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bfd0bbd0b5d0bcd18fd0bdd0bdd0b8d0ba",
+    "lemma": "племянник",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bfd0bbd0b5d0bcd18fd0bdd0bdd0b8d186d0b0",
+    "lemma": "племянница",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bfd0bbd0bed182d0b2d0b0",
+    "lemma": "плотва",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bfd0bed0bad183d0bfd0b0d182d0b5d0bbd18c",
+    "lemma": "покупатель",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bfd0bed0bfd0bed0bbd0b7d0b5d0bdd18c",
+    "lemma": "поползень",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bfd0bed180d182d0bdd0bed0b9",
+    "lemma": "портной",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bfd180d0bed0b3d180d0b0d0bcd0bcd0b8d181d182",
+    "lemma": "программист",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bfd183d0bfd0bed0ba",
+    "lemma": "пупок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d180d0b5d0b2d0bdd0bed181d182d18c",
+    "lemma": "ревность",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d180d0bed0b4d181d182d0b2d0b5d0bdd0bdd0b8d0ba",
+    "lemma": "родственник",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d0b0d0bbd0b0d0bcd0b0d0bdd0b4d180d0b0",
+    "lemma": "саламандра",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d0b0d180d0b0d0bdd187d0b0",
+    "lemma": "саранча",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d0b5d0bbd0b5d0b7d0b5d0bdd18c",
+    "lemma": "селезень",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d0b5d0bbd18cd0b4d18c",
+    "lemma": "сельдь",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d0bad0b2d0bed180d187d0bed0bdd0bed0ba",
+    "lemma": "скворчонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d0bbd0bed0bdd0b8d185d0b0",
+    "lemma": "слониха",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d0bbd0bed0bdd191d0bdd0bed0ba",
+    "lemma": "слонёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d0bed0b9d0bad0b0",
+    "lemma": "сойка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d0bed0bad0bed0bbd191d0bdd0bed0ba",
+    "lemma": "соколёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d0bed181d0b5d0b4",
+    "lemma": "сосед",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d0bed181d0b5d0b4d0bad0b0",
+    "lemma": "соседка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d182d180d0b0d183d181d191d0bdd0bed0ba",
+    "lemma": "страусёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d182d18bd0b4",
+    "lemma": "стыд",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d181d183d181d0bbd0b8d0ba",
+    "lemma": "суслик",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d0b0d180d0b0d0bdd182d183d0bb",
+    "lemma": "тарантул",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d0b5d180d0bcd0b8d182",
+    "lemma": "термит",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d0b8d0b3d180d0b8d186d0b0",
+    "lemma": "тигрица",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d0b8d0b3d180d191d0bdd0bed0ba",
+    "lemma": "тигрёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d0bbd18f",
+    "lemma": "тля",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d180d0b0d0bad182d0bed180d0b8d181d182",
+    "lemma": "тракторист",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d180d0b5d0b2d0bed0b3d0b0",
+    "lemma": "тревога",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d180d0b5d0bdd0b5d180",
+    "lemma": "тренер",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d180d18fd181d0bed0b3d183d0b7d0bad0b0",
+    "lemma": "трясогузка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d183d0b3d0bed180d18c",
+    "lemma": "угорь",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d183d0b4d0b0d0b2",
+    "lemma": "удав",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d183d181d182d180d0b8d186d0b0",
+    "lemma": "устрица",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d183d187d191d0bdd18bd0b9",
+    "lemma": "учёный",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d184d0b0d0b7d0b0d0bd",
+    "lemma": "фазан",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d185d0bed0b7d18fd0b8d0bd",
+    "lemma": "хозяин",
+    "weight": 20
+  }
+]

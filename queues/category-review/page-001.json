@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-r-014",
+    "lemma": "горка",
+    "weight": 100
+  },
+  {
+    "id": "ru-r-017",
+    "lemma": "дорога",
+    "weight": 100
+  },
+  {
+    "id": "ru-r-020",
+    "lemma": "забор",
+    "weight": 100
+  },
+  {
+    "id": "ru-r-036",
+    "lemma": "корона",
+    "weight": 100
+  },
+  {
+    "id": "ru-r-054",
+    "lemma": "подарок",
+    "weight": 100
+  },
+  {
+    "id": "ru-r-058",
+    "lemma": "радуга",
+    "weight": 100
+  },
+  {
+    "id": "ru-r-065",
+    "lemma": "робот",
+    "weight": 100
+  },
+  {
+    "id": "ru-r-075",
+    "lemma": "светофор",
+    "weight": 100
+  },
+  {
+    "id": "ru-r-084",
+    "lemma": "трава",
+    "weight": 100
+  },
+  {
+    "id": "ru-r-013",
+    "lemma": "гора",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-051",
+    "lemma": "озеро",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-062",
+    "lemma": "ракушка",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-069",
+    "lemma": "руль",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-007",
+    "lemma": "веер",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-018",
+    "lemma": "единорог",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-037",
+    "lemma": "костёр",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-050",
+    "lemma": "огород",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-088",
+    "lemma": "тропинка",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-089",
+    "lemma": "трость",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-091",
+    "lemma": "узор",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-092",
+    "lemma": "червяк",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d0b1d180d0b0d181d0bbd0b5d182",
+    "lemma": "браслет",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d0b2d0bed0b4d0bed180d0bed181d0bbd0b8",
+    "lemma": "водоросли",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d0b4d180d0bed0b2d0b0",
+    "lemma": "дрова",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d0b6d183d180d0bdd0b0d0bb",
+    "lemma": "журнал",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d0bcd0bed0bdd181d182d180",
+    "lemma": "монстр",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d0bfd0b0d180",
+    "lemma": "пар",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d0bfd0b5d189d0b5d180d0b0",
+    "lemma": "пещера",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d0bfd180d0bed180d183d0b1d18c",
+    "lemma": "прорубь",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d180d0b0d186d0b8d18f",
+    "lemma": "рация",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d180d0bed0b3d0b0d182d0bad0b0",
+    "lemma": "рогатка",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d180d183d181d0b0d0bbd0bad0b0",
+    "lemma": "русалка",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d180d18bd0bdd0bed0ba",
+    "lemma": "рынок",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d181d182d0b0d180d182",
+    "lemma": "старт",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d181d182d180d0bed0b9d0bad0b0",
+    "lemma": "стройка",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d182d0b5d0b0d182d180",
+    "lemma": "театр",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d185d180d0b0d0bc",
+    "lemma": "храм",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d185d180d183d181d182",
+    "lemma": "хруст",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d186d0b5d180d0bad0bed0b2d18c",
+    "lemma": "церковь",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d186d0b8d180d0ba",
+    "lemma": "цирк",
+    "weight": 50
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-plant-20261104-d0bad0b5d0b4d180",
+    "lemma": "кедр",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0bbd183d0b1d0b5d0bdd18c",
+    "lemma": "клубень",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b0d0b2d0b0d0bdd0b4d0b0",
+    "lemma": "лаванда",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b0d0b9d0bc",
+    "lemma": "лайм",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b8d181d182d0b2d0b5d0bdd0bdd0b8d186d0b0",
+    "lemma": "лиственница",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bcd0b0d181d0bbd191d0bdd0bed0ba",
+    "lemma": "маслёнок",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bdd0b5d0b7d0b0d0b1d183d0b4d0bad0b0",
+    "lemma": "незабудка",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bdd0b5d0bad182d0b0d180d0b8d0bd",
+    "lemma": "нектарин",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bed0b1d0bbd0b5d0bfd0b8d185d0b0",
+    "lemma": "облепиха",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bed180d185d0b8d0b4d0b5d18f",
+    "lemma": "орхидея",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bed181d0b8d0bdd0b0",
+    "lemma": "осина",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d0bfd0bed0b1d0b5d0b3",
+    "lemma": "побег",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d180d0b5d0b4d18cd0bad0b0",
+    "lemma": "редька",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d180d18fd0b1d0b8d0bdd0b03ad0bfd0bbd0bed0b4d18b20d180d18fd0b1d0b8d0bdd18b",
+    "lemma": "рябина",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d181d0b5d0bbd18cd0b4d0b5d180d0b5d0b9",
+    "lemma": "сельдерей",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d182d180d183d182d0bed0b2d0b8d0ba",
+    "lemma": "трутовик",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d184d0b8d0bad183d181",
+    "lemma": "фикус",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d184d0b8d0bdd0b8d0ba",
+    "lemma": "финик",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d185d180d0b8d0b7d0b0d0bdd182d0b5d0bcd0b0",
+    "lemma": "хризантема",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d185d183d180d0bcd0b0",
+    "lemma": "хурма",
+    "weight": 30
+  },
+  {
+    "id": "ru-plant-20261104-d188d0bfd0b8d0bdd0b0d182",
+    "lemma": "шпинат",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b0d0b8d181d182d191d0bdd0bed0ba",
+    "lemma": "аистёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b0d0bbd0bbd0b8d0b3d0b0d182d0bed180",
+    "lemma": "аллигатор",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b0d180d185d0b5d0bed0bbd0bed0b3",
+    "lemma": "археолог",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d0b0d0bad0bbd0b0d0bd",
+    "lemma": "баклан",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d0b5d0b4d180d0be",
+    "lemma": "бедро",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d0b5d0bbd18cd187d0bed0bdd0bed0ba",
+    "lemma": "бельчонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d0b8d0b1d0bbd0b8d0bed182d0b5d0bad0b0d180d18c",
+    "lemma": "библиотекарь",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d0bbd0b0d0b3d0bed0b4d0b0d180d0bdd0bed181d182d18c",
+    "lemma": "благодарность",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d0bbd0b8d0b7d0bdd0b5d186d18b",
+    "lemma": "близнецы",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d0bed0b1d180d191d0bdd0bed0ba",
+    "lemma": "бобрёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b1d180d0bed0bdd0b5d0bdd0bed181d0b5d186",
+    "lemma": "броненосец",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0b5d0bad0be",
+    "lemma": "веко",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0b5d0bbd0b8d0bad0b0d0bd",
+    "lemma": "великан",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0b5d180d0b1d0bbd18ed0b6d0bed0bdd0bed0ba",
+    "lemma": "верблюжонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0b5d181d0bdd183d188d0bad0b8",
+    "lemma": "веснушки",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0bdd183d0bad0b8",
+    "lemma": "внуки",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0bed0b5d0bdd0bdd18bd0b9",
+    "lemma": "военный",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0bed0bbd0bdd0b5d0bdd0b8d0b5",
+    "lemma": "волнение",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b2d0bed0bbd187d0b8d186d0b0",
+    "lemma": "волчица",
+    "weight": 20
+  }
+]

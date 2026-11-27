@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lex-v2-d0bfd0bed0bfd183d0b3d0b0d0b9",
+    "lemma": "попугай",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bfd187d0b5d0bbd0b0",
+    "lemma": "пчела",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d180d0b0d0b4d0bed181d182d18c",
+    "lemma": "радость",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d180d0b5d0b1d191d0bdd0bed0ba",
+    "lemma": "ребёнок",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d0b5d0bcd18cd18f",
+    "lemma": "семья",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d0b8d0bdd0b8d186d0b0",
+    "lemma": "синица",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d0bad0b2d0bed180d0b5d186",
+    "lemma": "скворец",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d0bdd0b5d0b3d0b8d180d18c",
+    "lemma": "снегирь",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d0bed0b2d0b0",
+    "lemma": "сова",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d0bfd0b8d0bdd0b0",
+    "lemma": "спина",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d182d180d0b0d185",
+    "lemma": "страх",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d182d180d0b5d0bad0bed0b7d0b0",
+    "lemma": "стрекоза",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d18bd0bd",
+    "lemma": "сын",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d182d0b5d0bbd0be",
+    "lemma": "тело",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d0b4d0b8d0b2d0bbd0b5d0bdd0b8d0b5",
+    "lemma": "удивление",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d0bbd0b8d182d0bad0b0",
+    "lemma": "улитка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d0bbd18bd0b1d0bad0b0",
+    "lemma": "улыбка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d182d0bad0b0",
+    "lemma": "утка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d185d0be",
+    "lemma": "ухо",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d183d187d0b8d182d0b5d0bbd18c",
+    "lemma": "учитель",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d185d0bed0bcd18fd0ba",
+    "lemma": "хомяк",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d187d0b5d0bbd0bed0b2d0b5d0ba",
+    "lemma": "человек",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d188d0b5d18f",
+    "lemma": "шея",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d18fd0b7d18bd0ba",
+    "lemma": "язык",
+    "weight": 70
+  },
+  {
+    "id": "ru-gen-20261104-clothes",
+    "lemma": "одежда",
+    "weight": 70
+  },
+  {
+    "id": "ru-gen-20261104-footwear",
+    "lemma": "обувь",
+    "weight": 70
+  },
+  {
+    "id": "ru-gen-20261104-insect",
+    "lemma": "насекомое",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-14f98f50",
+    "lemma": "губка",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-1703889",
+    "lemma": "тряпка",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-20b3798c",
+    "lemma": "ваза",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-2de40894",
+    "lemma": "комната",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-2de93e3e",
+    "lemma": "лейка",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-30af5954",
+    "lemma": "матрас",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-314a1d69",
+    "lemma": "ноутбук",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-316192a1",
+    "lemma": "зонт",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-3f180428",
+    "lemma": "ванная",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-442b0155",
+    "lemma": "вешалка",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-48a3ab48",
+    "lemma": "совок",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-4f96162",
+    "lemma": "блюдце",
+    "weight": 70
+  },
+  {
+    "id": "ru-home-20261105-524ccbc8",
+    "lemma": "чайник",
+    "weight": 70
+  }
+]

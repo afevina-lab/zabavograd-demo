@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lex-v2-d0bad0b8d182",
+    "lemma": "кит",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bad0bed0b7d0b0",
+    "lemma": "коза",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bad0bed181d0bcd0bed0bdd0b0d0b2d182",
+    "lemma": "космонавт",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bad183d0b7d0bdd0b5d187d0b8d0ba",
+    "lemma": "кузнечик",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bad183d0bad183d188d0bad0b0",
+    "lemma": "кукушка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bad183d180d0b8d186d0b0",
+    "lemma": "курица",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bbd0b0d181d182d0bed187d0bad0b0",
+    "lemma": "ласточка",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bbd0b5d0b1d0b5d0b4d18c",
+    "lemma": "лебедь",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bbd0b8d186d0be",
+    "lemma": "лицо",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bbd0bed181d18c",
+    "lemma": "лось",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bcd0b0d0bbd18bd188",
+    "lemma": "малыш",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bcd0b0d0bbd18cd187d0b8d0ba",
+    "lemma": "мальчик",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bcd0b0d0bcd0b0",
+    "lemma": "мама",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bcd0b5d0b4d183d0b7d0b0",
+    "lemma": "медуза",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bcd183d0b6d187d0b8d0bdd0b0",
+    "lemma": "мужчина",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bcd183d185d0b0",
+    "lemma": "муха",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bdd0bed0b3d0b0",
+    "lemma": "нога",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bdd0bed181",
+    "lemma": "нос",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bed0b2d186d0b0",
+    "lemma": "овца",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bed0bbd0b5d0bdd18c",
+    "lemma": "олень",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bed180d191d0bb",
+    "lemma": "орёл",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bed181d18cd0bcd0b8d0bdd0bed0b3",
+    "lemma": "осьминог",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bfd0b0d0b2d0bbd0b8d0bd",
+    "lemma": "павлин",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bfd0b0d0bbd0b5d186",
+    "lemma": "палец",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bfd0b0d0bfd0b0",
+    "lemma": "папа",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bfd0b0d183d0ba",
+    "lemma": "паук",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bfd0b5d182d183d185",
+    "lemma": "петух",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bfd0b8d0bdd0b3d0b2d0b8d0bd",
+    "lemma": "пингвин",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bfd0bed0bbd0b8d186d0b5d0b9d181d0bad0b8d0b9",
+    "lemma": "полицейский",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bfd0bed0bfd183d0b3d0b0d0b9",
+    "lemma": "попугай",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d0bfd187d0b5d0bbd0b0",
+    "lemma": "пчела",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d180d0b0d0b4d0bed181d182d18c",
+    "lemma": "радость",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d180d0b5d0b1d191d0bdd0bed0ba",
+    "lemma": "ребёнок",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d0b5d0bcd18cd18f",
+    "lemma": "семья",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d0b8d0bdd0b8d186d0b0",
+    "lemma": "синица",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d0bad0b2d0bed180d0b5d186",
+    "lemma": "скворец",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d0bdd0b5d0b3d0b8d180d18c",
+    "lemma": "снегирь",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d0bed0b2d0b0",
+    "lemma": "сова",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d182d180d0b0d185",
+    "lemma": "страх",
+    "weight": 70
+  },
+  {
+    "id": "lex-v2-d181d182d180d0b5d0bad0bed0b7d0b0",
+    "lemma": "стрекоза",
+    "weight": 70
+  }
+]

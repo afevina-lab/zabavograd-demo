@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lex-v2-d0b6d0b5d0bbd183d0b4d0bed0ba",
+    "lemma": "желудок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d0b5d0bdd0b0",
+    "lemma": "жена",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d0b5d0bdd0b8d185",
+    "lemma": "жених",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d183d0ba2dd0bdd0bed181d0bed180d0bed0b3",
+    "lemma": "жук-носорог",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d183d0ba2dd0bed0bbd0b5d0bdd18c",
+    "lemma": "жук-олень",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d183d180d0b0d0b2d0bbd191d0bdd0bed0ba",
+    "lemma": "журавлёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d0b0d0b2d0b8d181d182d18c",
+    "lemma": "зависть",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d0b0d0b9d187d0b8d185d0b0",
+    "lemma": "зайчиха",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d0b0d0bfd18fd181d182d18cd0b5",
+    "lemma": "запястье",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d180d0b0d187d0bed0ba",
+    "lemma": "зрачок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d180d0b8d182d0b5d0bbd18c",
+    "lemma": "зритель",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0b2d0bed0bbd0b3d0b0",
+    "lemma": "иволга",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0b3d183d0b0d0bdd0b0",
+    "lemma": "игуана",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0bdd0b4d0b5d0b9d0bad0b0",
+    "lemma": "индейка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0bdd0b4d18ed188d0bed0bdd0bed0ba",
+    "lemma": "индюшонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0bdd0b6d0b5d0bdd0b5d180",
+    "lemma": "инженер",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad0b0d0b1d0b0d0bdd0b8d185d0b0",
+    "lemma": "кабаниха",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad0b0d0bcd0b1d0b0d0bbd0b0",
+    "lemma": "камбала",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad0b0d180d0bbd0b8d0ba",
+    "lemma": "карлик",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad0bbd0bed0bf",
+    "lemma": "клоп",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad0bbd191d181d182",
+    "lemma": "клёст",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad0bed0b0d0bbd0b0",
+    "lemma": "коала",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad0bed0b1d18bd0bbd0b0",
+    "lemma": "кобыла",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad0bed0b7d191d0bb",
+    "lemma": "козёл",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad180d0bed0bbd18cd187d0b8d185d0b0",
+    "lemma": "крольчиха",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad180d0bed0bbd18cd187d0bed0bdd0bed0ba",
+    "lemma": "крольчонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad183d0b4d180d0b8",
+    "lemma": "кудри",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad183d0bad183d188d0bed0bdd0bed0ba",
+    "lemma": "кукушонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad183d0bdd0b8d186d0b0",
+    "lemma": "куница",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad183d180d0bed0bfd0b0d182d0bad0b0",
+    "lemma": "куропатка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bad183d180d18cd0b5d180",
+    "lemma": "курьер",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bbd0b5d0b1d0b5d0b4d191d0bdd0bed0ba",
+    "lemma": "лебедёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bbd0b5d0bcd183d180",
+    "lemma": "лемур",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bbd0b5d0bdd0b8d0b2d0b5d186",
+    "lemma": "ленивец",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bbd0b5d189",
+    "lemma": "лещ",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bbd0b8d181d0b8d186d0b0",
+    "lemma": "лисица",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bbd0bed181d0b8d185d0b0",
+    "lemma": "лосиха",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bbd0bed181d191d0bdd0bed0ba",
+    "lemma": "лосёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bbd18cd0b2d0b8d186d0b0",
+    "lemma": "львица",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0bbd191d0b3d0bad0b8d0b5",
+    "lemma": "лёгкие",
+    "weight": 20
+  }
+]

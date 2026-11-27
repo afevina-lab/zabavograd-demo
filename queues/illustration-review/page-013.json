@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-plant-20261104-d184d0b0d181d0bed0bbd18c",
+    "lemma": "фасоль",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d186d0b2d0b5d182d0bdd0b0d18f20d0bad0b0d0bfd183d181d182d0b0",
+    "lemma": "цветная капуста",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-004",
+    "lemma": "баран",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d0b1d180d0bed0b2d18c",
+    "lemma": "бровь",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d0bcd0b0d180d182",
+    "lemma": "март",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d184d0b5d180d0bcd0b5d180",
+    "lemma": "фермер",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d184d180d183d0bad182",
+    "lemma": "фрукт",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d185d180d183d181d182",
+    "lemma": "хруст",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-add-d186d0b8d184d180d0b0",
+    "lemma": "цифра",
+    "weight": 50
+  },
+  {
+    "id": "ru-sense-20261105-uroven-tool",
+    "lemma": "уровень",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0b1d183d181d18b",
+    "lemma": "бусы",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0b2d0b0d182d0b0",
+    "lemma": "вата",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0b7d0b0d0bb",
+    "lemma": "зал",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0bcd0bed185",
+    "lemma": "мох",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0bcd183d0bad0b0",
+    "lemma": "мука",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0bfd0b5d0bdd0b0",
+    "lemma": "пена",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0bfd183d185",
+    "lemma": "пух",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d181d0b5d0bdd0be",
+    "lemma": "сено",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d188d183d0bc",
+    "lemma": "шум",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d18dd185d0be",
+    "lemma": "эхо",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d18fd0bcd0b0",
+    "lemma": "яма",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0b0d0bdd182d0b8d0bbd0bed0bfd0b0",
+    "lemma": "антилопа",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b1d0bed0b3d0bed0bcd0bed0bb",
+    "lemma": "богомол",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b3d0b0d0bbd0bad0b0",
+    "lemma": "галка",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b3d0bed180d0b8d0bbd0bbd0b0",
+    "lemma": "горилла",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b3d180d183d0b4d18c",
+    "lemma": "грудь",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b7d0b0d0b9d187d0bed0bdd0bed0ba",
+    "lemma": "зайчонок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad0b0d180d0b0d181d18c",
+    "lemma": "карась",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad0b0d180d0bf",
+    "lemma": "карп",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad0bbd0b5d189",
+    "lemma": "клещ",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad0bed0bbd0b8d0b1d180d0b8",
+    "lemma": "колибри",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad0bed181d0b0d182d0bad0b0",
+    "lemma": "косатка",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad180d18bd181d0b0",
+    "lemma": "крыса",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bbd0b8d181d191d0bdd0bed0ba",
+    "lemma": "лисёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bbd0bed181d0bed181d18c",
+    "lemma": "лосось",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bbd18cd0b2d191d0bdd0bed0ba",
+    "lemma": "львёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0b0d0b9d181d0bad0b8d0b920d0b6d183d0ba",
+    "lemma": "майский жук",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0b5d0b4d0b2d0b5d0b6d0bed0bdd0bed0ba",
+    "lemma": "медвежонок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed0bbd18c",
+    "lemma": "моль",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0b0d18f20d187d0b5d180d0b5d0bfd0b0d185d0b0",
+    "lemma": "морская черепаха",
+    "weight": 30
+  }
+]

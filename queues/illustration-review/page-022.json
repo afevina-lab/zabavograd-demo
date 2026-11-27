@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lex-v2-d182d0b0d180d0b0d0bdd182d183d0bb",
+    "lemma": "тарантул",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d0b5d180d0bcd0b8d182",
+    "lemma": "термит",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d0b8d0b3d180d0b8d186d0b0",
+    "lemma": "тигрица",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d0b8d0b3d180d191d0bdd0bed0ba",
+    "lemma": "тигрёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d0bbd18f",
+    "lemma": "тля",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d180d0b0d0bad182d0bed180d0b8d181d182",
+    "lemma": "тракторист",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d180d0b5d0b2d0bed0b3d0b0",
+    "lemma": "тревога",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d180d0b5d181d0bad0b0",
+    "lemma": "треска",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d180d0b8d182d0bed0bd",
+    "lemma": "тритон",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d180d18fd181d0bed0b3d183d0b7d0bad0b0",
+    "lemma": "трясогузка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d182d183d0bad0b0d0bd",
+    "lemma": "тукан",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d183d0b3d0bed180d18c",
+    "lemma": "угорь",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d183d0b4d0b0d0b2",
+    "lemma": "удав",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d183d181d182d180d0b8d186d0b0",
+    "lemma": "устрица",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d184d0b0d0b7d0b0d0bd",
+    "lemma": "фазан",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d185d0bed0b7d18fd0b8d0bd",
+    "lemma": "хозяин",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d185d0bed180d191d0ba",
+    "lemma": "хорёк",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d185d180d18fd0ba",
+    "lemma": "хряк",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d187d0b0d181d0bed0b2d189d0b8d0ba",
+    "lemma": "часовщик",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d187d191d0bbd0bad0b0",
+    "lemma": "чёлка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d188d0b8d0bdd188d0b8d0bbd0bbd0b0",
+    "lemma": "шиншилла",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d188d0bed184d191d180",
+    "lemma": "шофёр",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d18dd0bad181d0bad0b0d0b2d0b0d182d0bed180d189d0b8d0ba",
+    "lemma": "экскаваторщик",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d18fd0b3d183d0b0d180",
+    "lemma": "ягуар",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d191d180d188",
+    "lemma": "ёрш",
+    "weight": 20
+  },
+  {
+    "id": "ru-editorial-gap-20261123-ca0f1043a4221ecf",
+    "lemma": "подлокотник",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-345c3e46",
+    "lemma": "хлебопечка",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-4addc343",
+    "lemma": "жалюзи",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-52f9ab6e",
+    "lemma": "ступка",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-5465d78d",
+    "lemma": "хижина",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-558058ce",
+    "lemma": "фляга",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-5b6fba6a",
+    "lemma": "вышивка",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-626ecbec",
+    "lemma": "вафельница",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-725a8734",
+    "lemma": "ночник",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-75db3c5b",
+    "lemma": "карниз",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-7df5f2c8",
+    "lemma": "отбеливатель",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-8b40485f",
+    "lemma": "гобелен",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-93866eb7",
+    "lemma": "особняк",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-9ab6ec11",
+    "lemma": "изолента",
+    "weight": 20
+  },
+  {
+    "id": "ru-home-20261105-9e01d521",
+    "lemma": "креманка",
+    "weight": 20
+  }
+]

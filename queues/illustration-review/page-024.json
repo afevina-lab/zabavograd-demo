@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-r-add-d0b2d0b0d0bcd0bfd0b8d180",
+    "lemma": "вампир",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b3d180d0b0d0bcd0bed182d0b0",
+    "lemma": "грамота",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b3d180d0bed0bc",
+    "lemma": "гром",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b4d180d0bed0b7d0b4",
+    "lemma": "дрозд",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b7d0b0d0b2d182d180d0b0d0ba",
+    "lemma": "завтрак",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b7d0b0d180d0bed181d0bbd0b8",
+    "lemma": "заросли",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bad0bbd0b0d180d0bdd0b5d182",
+    "lemma": "кларнет",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bad0bbd0b5d0b2d0b5d180",
+    "lemma": "клевер",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bad180d0bed0b2d18c",
+    "lemma": "кровь",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bcd0bed180d0bed0b7",
+    "lemma": "мороз",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bed185d180d0b0d0bdd0bdd0b8d0ba",
+    "lemma": "охранник",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bfd0bed180d182",
+    "lemma": "порт",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bfd180d0bed0bfd0b8d181d18c",
+    "lemma": "пропись",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d181d0b0d185d0b0d180d0bdd0b8d186d0b0",
+    "lemma": "сахарница",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d181d182d180d183d0bdd0b0",
+    "lemma": "струна",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d182d0b8d180",
+    "lemma": "тир",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d182d180d183d0b1d0b0d187",
+    "lemma": "трубач",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d185d0bed180",
+    "lemma": "хор",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d185d0bed180d0bed0b2d0bed0b4",
+    "lemma": "хоровод",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d188d0b0d185d182d191d180",
+    "lemma": "шахтёр",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d188d182d0bed180d0bc",
+    "lemma": "шторм",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d0b5d180d0b5d0b1d0b5d186",
+    "lemma": "жеребец",
+    "weight": 10
+  },
+  {
+    "id": "ru-home-20261105-2518ba59",
+    "lemma": "фундамент",
+    "weight": 10
+  },
+  {
+    "id": "ru-home-20261105-b23cae5f",
+    "lemma": "терраса",
+    "weight": 10
+  },
+  {
+    "id": "ru-home-20261105-b3ea3835",
+    "lemma": "веранда",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d0b4d180d0b0d186d0b5d0bdd0b0",
+    "lemma": "драцена",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d0bad0b0d0bbd0b0d0bdd185d0bed18d",
+    "lemma": "каланхоэ",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d0bbd0b8d187d0b8",
+    "lemma": "личи",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d181d0b0d0bdd181d0b5d0b2d0b8d0b5d180d0b8d18f",
+    "lemma": "сансевиерия",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d181d0b5d0bad0b2d0bed0b9d18f",
+    "lemma": "секвойя",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d181d0bfd0b0d182d0b8d184d0b8d0bbd0bbd183d0bc",
+    "lemma": "спатифиллум",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d182d0bed0bbd181d182d18fd0bdd0bad0b0",
+    "lemma": "толстянка",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d182d180d18ed184d0b5d0bbd18c",
+    "lemma": "трюфель",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d185d0bbd0bed180d0bed184d0b8d182d183d0bc",
+    "lemma": "хлорофитум",
+    "weight": 10
+  },
+  {
+    "id": "ru-action-20261109-0001",
+    "lemma": "бегать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0002",
+    "lemma": "бежать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0003",
+    "lemma": "благодарить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0004",
+    "lemma": "болеть",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0005",
+    "lemma": "бояться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0006",
+    "lemma": "брать",
+    "weight": 0
+  }
+]

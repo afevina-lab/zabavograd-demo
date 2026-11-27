@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-action-20261109-0250",
+    "lemma": "шить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0251",
+    "lemma": "шуметь",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0252",
+    "lemma": "щипать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0253",
+    "lemma": "щупать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-gladit-stroke",
+    "lemma": "гладить",
+    "weight": 0
+  },
+  {
+    "id": "ru-new-20261102-0079",
+    "lemma": "рычать",
+    "weight": 0
+  },
+  {
+    "id": "ru-new-20261102-0080",
+    "lemma": "строить",
+    "weight": 0
+  },
+  {
+    "id": "ru-new-20261102-0081",
+    "lemma": "прыгать",
+    "weight": 0
+  },
+  {
+    "id": "ru-new-20261102-0082",
+    "lemma": "кормить",
+    "weight": 0
+  },
+  {
+    "id": "ru-new-20261102-0083",
+    "lemma": "собирать",
+    "weight": 0
+  },
+  {
+    "id": "ru-new-20261102-0084",
+    "lemma": "убирать",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-11add953",
+    "lemma": "тушить",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-138dd54",
+    "lemma": "лёгкий",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-1b1f492e",
+    "lemma": "хрупкий",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-2fc0c409",
+    "lemma": "вытирать",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-31a5b050",
+    "lemma": "признак",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-32bf7ba6",
+    "lemma": "пустой",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-3565ef12",
+    "lemma": "чинить",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-35cde643",
+    "lemma": "металлический",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-452a390c",
+    "lemma": "фарфоровый",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-45f4b504",
+    "lemma": "чистить",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-47c70515",
+    "lemma": "гладкий",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-48aed37d",
+    "lemma": "тяжёлый",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-4d408d13",
+    "lemma": "готовить",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-50d9efe5",
+    "lemma": "старый",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-516202fc",
+    "lemma": "пылесосить",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-542dbd6e",
+    "lemma": "сломанный",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-57222209",
+    "lemma": "мыть",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-5786fd54",
+    "lemma": "взбивать",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-5c588971",
+    "lemma": "открывать",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-5f63bebb",
+    "lemma": "ставить",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-61d8ff8a",
+    "lemma": "измельчать",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-62942200",
+    "lemma": "целый",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-6862df09",
+    "lemma": "прочный",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-6b120a83",
+    "lemma": "закручивать",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-6e1604f",
+    "lemma": "разогревать",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-6f50ffc2",
+    "lemma": "прозрачный",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-6fb63dd2",
+    "lemma": "грязный",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-7039f75c",
+    "lemma": "класть",
+    "weight": 0
+  },
+  {
+    "id": "ru-sem-20261105-7d0cd70c",
+    "lemma": "наливать",
+    "weight": 0
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-plant-20261104-d181d18bd180d0bed0b5d0b6d0bad0b0",
+    "lemma": "сыроежка",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d182d0bed0bfd0bed0bbd18c",
+    "lemma": "тополь",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d184d0b0d181d0bed0bbd18c",
+    "lemma": "фасоль",
+    "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d184d0b8d0b0d0bbd0bad0b0",
+    "lemma": "фиалка",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-011-sense",
+    "lemma": "бургер",
+    "weight": 50
+  },
+  {
+    "id": "ru-sense-20261105-uroven-tool",
+    "lemma": "уровень",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0b0d0bdd182d0b8d0bbd0bed0bfd0b0",
+    "lemma": "антилопа",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b1d0bed0b3d0bed0bcd0bed0bb",
+    "lemma": "богомол",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b3d0b0d0bbd0bad0b0",
+    "lemma": "галка",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b3d0bed180d0b8d0bbd0bbd0b0",
+    "lemma": "горилла",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b3d180d183d0b4d18c",
+    "lemma": "грудь",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b6d0b5d180d0b5d0b1d191d0bdd0bed0ba",
+    "lemma": "жеребёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b7d0b0d0b9d187d0bed0bdd0bed0ba",
+    "lemma": "зайчонок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0b8d0bdd0b4d18ed0ba",
+    "lemma": "индюк",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad0b0d180d0b0d181d18c",
+    "lemma": "карась",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad0b0d180d0bf",
+    "lemma": "карп",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad0bbd0b5d189",
+    "lemma": "клещ",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad0bed0b7d0bbd191d0bdd0bed0ba",
+    "lemma": "козлёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad0bed0bbd0b8d0b1d180d0b8",
+    "lemma": "колибри",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad0bed181d0b0d182d0bad0b0",
+    "lemma": "косатка",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad180d0b5d0b2d0b5d182d0bad0b0",
+    "lemma": "креветка",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad180d18bd181d0b0",
+    "lemma": "крыса",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bbd0b8d181d191d0bdd0bed0ba",
+    "lemma": "лисёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bbd0bed181d0bed181d18c",
+    "lemma": "лосось",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bbd18cd0b2d191d0bdd0bed0ba",
+    "lemma": "львёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0b5d0b4d0b2d0b5d0b6d0bed0bdd0bed0ba",
+    "lemma": "медвежонок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed0bbd18c",
+    "lemma": "моль",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed182d18bd0bbd191d0ba",
+    "lemma": "мотылёк",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bed0bad183d0bdd18c",
+    "lemma": "окунь",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bed180d0bbd191d0bdd0bed0ba",
+    "lemma": "орлёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bfd0b0d0bdd182d0b5d180d0b0",
+    "lemma": "пантера",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bfd0b5d0bbd0b8d0bad0b0d0bd",
+    "lemma": "пеликан",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bfd0b5d181d0b5d186",
+    "lemma": "песец",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bfd18fd182d0bad0b0",
+    "lemma": "пятка",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d180d18bd0b1d0b02dd0bad0bbd0bed183d0bd",
+    "lemma": "рыба-клоун",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0b2d0b5d180d187d0bed0ba",
+    "lemma": "сверчок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0b2d0b5d182d0bbd18fd187d0bed0ba",
+    "lemma": "светлячок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0b2d0b8d180d0b8d181d182d0b5d0bbd18c",
+    "lemma": "свиристель",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bad0b0d182",
+    "lemma": "скат",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bad0bed180d0bfd0b8d0bed0bd",
+    "lemma": "скорпион",
+    "weight": 30
+  }
+]
