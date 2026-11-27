@@ -179,18 +179,21 @@ export async function sha256(bytes) {
 }
 
 /** Self-contained handoff document: scene code + exact WebP bytes, no credentials or editor history. */
-export async function makeDocument(scene, assets) {
+export async function makeDocument(scene, assets, {onProgress=()=>{}}={}) {
   const checks = checked(scene);
   const paths = new Set(scene.nodes.map(n=>n.asset).filter(Boolean));
   for (const variant of scene.variants || []) for (const node of Object.values(variant.nodes || {})) if (node.asset) paths.add(node.asset);
-  const resources = [];
-  for (const path of paths) {
-    const response = await fetch(assetURL(path));
+  let completed=0;
+  const resources = await Promise.all([...paths].map(async path => {
+    const response = await fetch(assetURL(path),{cache:'force-cache',signal:AbortSignal.timeout(20000)});
     if (!response.ok) throw Error('Не удалось включить ресурс '+path);
     const bytes = await response.arrayBuffer();
     const dataURL = await new Promise(resolve=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.readAsDataURL(new Blob([bytes],{type:'image/webp'}));});
-    resources.push({...assets.find(a=>a.path===path),path,sha256:await sha256(bytes),dataURL});
-  }
+    assetURLs.set(path,dataURL);
+    const resource={...assets.find(a=>a.path===path),path,sha256:await sha256(bytes),dataURL};
+    onProgress(++completed,paths.size);
+    return resource;
+  }));
   const result = {
     format:'zabavograd-scene-document',documentVersion:1,engineVersion:1,
     title:scene.name,createdAt:new Date().toISOString(),
