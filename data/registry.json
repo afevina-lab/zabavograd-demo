@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "locations": [
+    {
+      "id": "forest",
+      "name": "Лесная поляна · пилот"
+    },
+    {
+      "id": "neutral",
+      "name": "Акварельная бумага"
+    }
+  ],
+  "themes": {
+    "neutral": {
+      "name": "Нейтральная",
+      "card": "#fffaf0",
+      "border": "#9bb8d0"
+    },
+    "forest": {
+      "name": "Лесная",
+      "card": "#f4f6e9",
+      "border": "#729c5a"
+    },
+    "space": {
+      "name": "Космическая",
+      "card": "#eee9ff",
+      "border": "#9380bb"
+    }
+  },
+  "compatibility": {
+    "forest": [
+      "neutral",
+      "forest",
+      "space"
+    ],
+    "neutral": [
+      "neutral",
+      "forest",
+      "space"
+    ]
+  },
+  "migration": {
+    "forest": "pilot-unapproved",
+    "neutral": "pilot-unapproved",
+    "space": "pending",
+    "children-room": "pending"
+  }
+}
