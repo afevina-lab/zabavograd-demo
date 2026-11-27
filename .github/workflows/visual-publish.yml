@@ -50,7 +50,7 @@ jobs:
           else
             # Compare with the actual published tree, not just the previous push.
             if git fetch --no-tags --depth=1 origin refs/heads/gh-pages; then
-              base=$(git show FETCH_HEAD:index.html | node -e 'let s="";process.stdin.on("data",c=>s+=c);process.stdin.on("end",()=>process.stdout.write(s.match(/<meta name="zabavograd-ui-release" content="([a-f0-9]{40})"/)?.[1]||""))')
+              base=$(git show FETCH_HEAD:index.html | node -e 'let s="";process.stdin.on("data",c=>s+=c);process.stdin.on("end",()=>process.stdout.write(s.match(/<meta name="zabavograd-ui-release" content="([a-f0-9]{40})"/)?.[1]||""))') || base=""
             fi
           fi
           printf 'null\n' > "$RUNNER_TEMP/changed.json"
