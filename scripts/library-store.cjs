@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
-const {split,restore}=require('./library-storage-audit.cjs');
-const {pack,unpack}=require('./library-storage-optimize.cjs');
+const {split,restore,pack,unpack}=require('./library-storage-codec.cjs');
 const {patches}=require('./library-toolkit.cjs');
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 const snapshot=db=>JSON.stringify(db,null,2)+'\n';

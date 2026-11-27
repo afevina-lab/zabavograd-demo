@@ -31,3 +31,11 @@ test('active change splits archive content instead of changing history',()=>{
  assert.deepEqual(r.db.entries[0].phonetic_tags.data.tokens,['л','у']);
  assert.doesNotThrow(()=>build(r.db));
 });
+
+test('canonical generation can be rebuilt byte for byte without migration',()=>{
+ const dir=path.resolve('outputs/library-modules');
+ const current=load(dir),rebuilt=build(current.db);
+ assert.deepEqual(rebuilt.manifest,current.manifest);
+ assert.equal(rebuilt.files.size,Object.keys(current.manifest.files).length);
+ for(const [file,content] of rebuilt.files)assert.equal(content,fs.readFileSync(path.join(dir,file),'utf8'),'Changed canonical shard '+file);
+});
