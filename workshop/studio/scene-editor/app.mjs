@@ -1,7 +1,7 @@
 import {clone,validate,resolveVariant,inverse,point,merge,compile} from '../../src/scene-engine/engine.mjs';
 import {renderSVG,escape} from '../../src/scene-engine/render.mjs?v=20261127-4';
 import {attachGameScene} from '../../src/scene-engine/game-adapter.mjs?v=20261127-4';
-import {request,browserMode,assetURL,assetURLs,makeDocument,installDocument,uploadImage} from './storage.mjs?v=20261127-4b';
+import {request,browserMode,assetURL,assetURLs,makeDocument,installDocument,uploadImage} from './storage.mjs?v=20261127-4c';
 import {reorderedLayers,socketPosition,nextSocket,socketUsers,parseSceneCode} from './editing.mjs?v=20261127-4';
 const $=id=>document.getElementById(id);
 let scene,etag,saved='',history=[],future=[],selected=[],variant='auto',layout,assets=[],registry,playing=false,time=0,pan={x:0,y:0},space=false,gameAdapter;

@@ -1,7 +1,7 @@
 import {clone,validate,compile} from '../../src/scene-engine/engine.mjs';
 
 const key = id => `zabavograd.studio.v2.${id}`;
-const dataURL = name => new URL(`../../data/${name}`, import.meta.url);
+const dataURL = name => {const url=new URL(`../../data/${name}`, import.meta.url);url.searchParams.set('v','20261127-4c');return url;};
 const read = id => JSON.parse(localStorage.getItem(key(id)) || 'null');
 const write = (id, value) => localStorage.setItem(key(id), JSON.stringify(value));
 export const browserMode = document.querySelector('meta[name="studio-storage"]')?.content === 'browser' && new URLSearchParams(location.search).get('storage') !== 'files';
@@ -130,7 +130,7 @@ export async function request(url, body) {
     }
     return registry;
   }
-  if (url === '/api/assets') {await hydrate();return [...await packaged('assets.json'),...importedAssets];}
+  if (url === '/api/assets') {await hydrate();const catalog=await packaged('assets.json');for(const asset of catalog)if(asset.dataURL)assetURLs.set(asset.path,asset.dataURL);return [...catalog,...importedAssets];}
   if (url === '/api/scenes/create') {
     checked(body.scene);
     const registry = await request('/api/scenes');
