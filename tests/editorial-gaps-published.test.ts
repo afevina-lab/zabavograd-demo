@@ -1,8 +1,10 @@
+import {createRequire as createCanonicalRequire} from 'node:module';
+const canonicalLibrary=()=>createCanonicalRequire(import.meta.url)('../scripts/library-source.cjs').readSource().db;
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const read=(p:string)=>JSON.parse(fs.readFileSync(p,'utf8'));
-const db=read('outputs/library-v2.json');
+const db=canonicalLibrary();
 const runtime=read('public/library.json');
 const report=read('outputs/EDITORIAL_GAPS_20261123.json');
 const active=read('outputs/ACTIVE_FORMS_20261123.json');

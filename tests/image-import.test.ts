@@ -1,10 +1,12 @@
+import {createRequire as createCanonicalRequire} from 'node:module';
+const canonicalLibrary=()=>createCanonicalRequire(import.meta.url)('../scripts/library-source.cjs').readSource().db;
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 const read=(path:string)=>JSON.parse(readFileSync(new URL('../'+path,import.meta.url),'utf8'));
 test('63 supplied WebP assets retain exact owners, hashes and runtime links',()=>{
- const report=read('docs/image-import-20261114.json'),db=read('outputs/library-v2.json'),runtime=read('public/library.json');
+ const report=read('docs/image-import-20261114.json'),db=canonicalLibrary(),runtime=read('public/library.json');
  assert.equal(report.images.length,63);
  assert.equal(new Set(report.images.map((r:any)=>r.file)).size,63);
  for(const row of report.images){

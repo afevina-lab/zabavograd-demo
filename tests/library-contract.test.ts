@@ -1,10 +1,12 @@
+import {createRequire as createCanonicalRequire} from 'node:module';
+const canonicalLibrary=()=>createCanonicalRequire(import.meta.url)('../scripts/library-source.cjs').readSource().db;
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
 import {readFileSync} from 'node:fs';
 const require=createRequire(import.meta.url);
 const {validateLibrary}=require('../scripts/validate-library-contract.cjs');
-const load=()=>JSON.parse(readFileSync(new URL('../outputs/library-v2.json',import.meta.url),'utf8'));
+const load=()=>canonicalLibrary();
 test('canonical library satisfies schema and retains unknown editorial metadata',()=>{
  const db=load();db.entries[0].future_editorial_field={keep:true};
  const before=JSON.stringify(db);

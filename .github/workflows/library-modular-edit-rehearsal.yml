@@ -1,0 +1,83 @@
+name: Library modular edit rehearsal
+on:
+  push:
+    branches: ['library-edit-request/**', 'library-media-request/**']
+    paths: ['editorial/requests/library-edit.json', 'editorial/requests/library-media.json', 'editorial/requests/media/**']
+permissions:
+  contents: read
+concurrency:
+  group: library-edit-request-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  edit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Read request as data and reconstruct immutable base
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "$GITHUB_REF_NAME" in
+            library-edit-request/*) kind=edit; slug="${GITHUB_REF_NAME#library-edit-request/}" ;;
+            library-media-request/*) kind=media; slug="${GITHUB_REF_NAME#library-media-request/}" ;;
+            *) exit 1 ;;
+          esac
+          echo "REQUEST_KIND=$kind" >> "$GITHUB_ENV"
+          [[ "$slug" =~ ^[a-z0-9][a-z0-9-]{0,47}$ ]]
+          git fetch --no-tags --depth=1 origin "$GITHUB_SHA"
+          if [ "$kind" = edit ]; then git show "$GITHUB_SHA:editorial/requests/library-edit.json" > "$RUNNER_TEMP/request.json"; fi
+          echo "REQUEST_KEY=$slug-${GITHUB_SHA:0:12}" >> "$GITHUB_ENV"
+          echo "SOURCE_COMMIT=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          node scripts/library-request-source.cjs prepare "$RUNNER_TEMP/modules" > "$RUNNER_TEMP/source.json"
+          echo "MODULES_DIR=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).directory' "$RUNNER_TEMP/source.json")" >> "$GITHUB_ENV"
+      - uses: actions/setup-python@v5
+        if: env.REQUEST_KIND == 'media'
+        with:
+          python-version: '3.12'
+      - name: Install decoder for media requests only
+        if: env.REQUEST_KIND == 'media'
+        run: python3 -m pip install --disable-pip-version-check pillow
+      - name: Prepare preview or fully validated isolated candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "$REQUEST_KIND" = media ]; then
+            node scripts/library-media-request.cjs "$MODULES_DIR" "$GITHUB_SHA" "$RUNNER_TEMP/edit-output"
+          else
+            node scripts/library-modular-request.cjs "$MODULES_DIR" "$RUNNER_TEMP/request.json" "$RUNNER_TEMP/edit-output"
+          fi
+          node -e 'const fs=require("fs"),f=process.argv[1],r=JSON.parse(fs.readFileSync(f));r.source_commit=process.env.SOURCE_COMMIT;r.request_commit=process.env.GITHUB_SHA;r.scope="canonical_main_snapshot";fs.writeFileSync(f,JSON.stringify(r,null,2)+"\n")' "$RUNNER_TEMP/edit-output/result.json"
+          git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        with:
+          name: library-edit-result
+          path: ${{ runner.temp }}/edit-output
+          retention-days: 14
+      - name: Store only report and changed module bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch --no-tags --depth=1 origin main
+          [ "$(git rev-parse FETCH_HEAD)" = "$SOURCE_COMMIT" ] || { echo 'Integration source moved; repeat query'; exit 1; }
+          out="refs/heads/library-$REQUEST_KIND-result/$REQUEST_KEY"
+          [ -z "$(git ls-remote origin "$out")" ] || { echo 'Result exists'; exit 1; }
+          export GIT_DIR="$(git rev-parse --absolute-git-dir)"
+          export GIT_INDEX_FILE="$RUNNER_TEMP/edit-result-index"
+          export GIT_WORK_TREE="$RUNNER_TEMP/edit-output"
+          cd "$GIT_WORK_TREE"
+          git read-tree --empty
+          git add --all -- .
+          tree=$(git write-tree)
+          commit=$(printf 'Modular editorial rehearsal %s on %s\n' "$GITHUB_SHA" "$SOURCE_COMMIT" | git commit-tree "$tree")
+          git push origin "$commit:$out"

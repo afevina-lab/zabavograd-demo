@@ -1,8 +1,11 @@
 import {createRequire} from 'node:module';
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 const require=createRequire(import.meta.url);
-const {parseDelimited,constructiconProposals,framebankProposals,wikidataProposals,dedupe}=require('../scripts/linguistic-sources.cjs');
+const {parseDelimited,constructiconProposals,framebankProposals,wikidataProposals,dedupe,collect}=require('../scripts/linguistic-sources.cjs');
 
 test('CSV multiline quoted fields are parsed without shifted columns',()=>{
  const rows=parseDelimited('ID Number,Anchor words,Name\n42,"делать, знать","тест, пример"\n43,"играть","строка\nдва"\n');
@@ -33,4 +36,32 @@ test('Wikidata only matches explicitly reviewed unique QIDs',()=>{
 test('Duplicate proposals collapse deterministically',()=>{
  const a={source:'framebank',source_record_id:'1',entry_id:'x'};
  assert.equal(dedupe([a,{...a}]).length,1);
+});
+
+test('cached linguistic proposals use canonical module source without a monolith',async()=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'linguistic-source-'));
+ const store=require('../scripts/library-store.cjs');
+ const db={schema_version:2,entries:[{id:'v1',lemma:'играть',kind:'word'}],categories:[],relations:[]};
+ const master=path.join(root,'outputs/library-v2.json'),modules=path.join(root,'outputs/library-modules');
+ try{
+  fs.mkdirSync(path.dirname(master),{recursive:true});
+  fs.mkdirSync(path.join(root,'editorial'));
+  fs.mkdirSync(path.join(root,'.cache/linguistic-sources'),{recursive:true});
+  fs.writeFileSync(path.join(root,'.cache/linguistic-sources/constructicon-database.csv'),'ID Number,Anchor words\n1,играть\n');
+  fs.writeFileSync(master,store.snapshot(db));
+  const legacy=await collect({source:'constructicon',root});
+  assert.equal(legacy.library_source.mode,'legacy');
+  store.create(modules,db);
+  fs.writeFileSync(path.join(root,'editorial/library-source-mode.json'),JSON.stringify({version:1,mode:'modules',directory:'outputs/library-modules'}));
+  await assert.rejects(()=>collect({source:'constructicon',root}),/Two potential/);
+  fs.unlinkSync(master);
+  const modular=await collect({source:'constructicon',root});
+  assert.equal(modular.library_source.mode,'modules');
+  assert.equal(modular.library_source.sha256,legacy.library_source.sha256);
+  assert.deepEqual(modular.records,legacy.records);
+  assert.equal(modular.records[0].entry_id,'v1');
+  assert.equal(modular.records[0].usable_for_generation,false);
+  assert.equal(store.load(modules).source_sha256,modular.library_source.sha256);
+  assert(!fs.existsSync(master));
+ }finally{fs.rmSync(root,{recursive:true,force:true});}
 });

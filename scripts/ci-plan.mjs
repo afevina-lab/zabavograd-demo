@@ -15,7 +15,7 @@ export function planChecks(paths,requested='AUTO'){
   if(match){const game={main:'memory',model:'memory'}[match[1]]||match[1].toLowerCase();raise('TARGETED','Game dependency: '+p,[game]);continue;}
   const theme=p.match(/^public\/assets\/(?:themes\/)?(neutral|forest|space)\//);
   if(theme){raise('TARGETED','Theme asset: '+p);skins.add(theme[1]);continue;}
-  if(/^src\//.test(p)||/^public\/assets\/(words|icons-new|rewards)\//.test(p)||/^outputs\/(library-v2|image-library)\.json$/.test(p)){raise('TARGETED','Shared consumer dependency: '+p);themes.forEach(t=>skins.add(t));continue;}
+  if(/^src\//.test(p)||/^public\/assets\/(words|icons-new|rewards)\//.test(p)||(/^outputs\/(library-v2|image-library)\.json$/.test(p)||p.startsWith('outputs/library-modules/'))){raise('TARGETED','Shared consumer dependency: '+p);themes.forEach(t=>skins.add(t));continue;}
   raise('FULL','Unclassified path: '+p);
  }
  if(requested!=='AUTO'&&rank[requested]>rank[mode]){mode=requested;reasons.push('Manual escalation: '+requested);}

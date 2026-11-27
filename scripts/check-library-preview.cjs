@@ -4,12 +4,10 @@
 const fs=require('node:fs');
 const crypto=require('node:crypto');
 const assert=require('node:assert/strict');
-const source=fs.readFileSync('outputs/library-v2.json');
-const db=JSON.parse(source.toString('utf8'));
+const {db,sha256:fingerprint}=require('./library-source.cjs').readSource();
 const html=fs.readFileSync('outputs/Библиотека.html','utf8');
-const fingerprint=crypto.createHash('sha256').update(source).digest('hex');
 assert(html.includes('<meta name="library-source-sha256" content="'+fingerprint+'">'),
- 'Preview is stale relative to outputs/library-v2.json — regenerate it');
+ 'Preview is stale relative to canonical library — regenerate it');
 const m=html.match(/<script id="library-data" type="application\/json">([\s\S]*?)<\/script>/);
 assert(m,'No embedded preview data');
 const snapshot=JSON.parse(m[1]);

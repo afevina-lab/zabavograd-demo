@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "entries": 409,
+  "sha256": "24e4a6ad62ffc8d6de9e5f2f4ce928238c15500335a7446c2319fab355e11d8b",
+  "source_git_blob": "c2e3bfb7594a5ea1bc969b1f09757be90f02930c",
+  "source_commit": "6ddc01703be09341eba83d8a7bd7c13a89cae9e4",
+  "verified_run": 45741102745,
+  "encoding": "UTF-8 JSON.stringify of [{id,archive:legacy_source}], sorted by ID; only entries with legacy_source.raw"
+}

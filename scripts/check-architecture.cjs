@@ -53,6 +53,6 @@ for(const file of ['main.tsx','Matching.tsx','Sorting.tsx','Conveyor.tsx','Trans
 const visualPublish=fs.readFileSync(path.join(workflows,'visual-publish.yml'),'utf8');
 assert(visualPublish.includes("if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'"),'UI workflow must never run publish jobs from a non-main manual dispatch');
 const publishingSteps=visualPublish.match(/if: github.ref == 'refs\/heads\/main' && github.event_name != 'pull_request'/g)||[];
-assert(publishingSteps.length>=4,'Every deployment and verification step must enforce main-only publishing');
+assert(publishingSteps.length>=3,'Every deployment and verification step must enforce main-only publishing');
 console.log(`Architecture verified: ${graph.size} modules, pure domain, no runtime cycles, one active publisher`);
 

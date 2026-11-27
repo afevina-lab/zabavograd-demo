@@ -6,7 +6,9 @@
  */
 const fs=require('node:fs');
 const {soundIndex}=require('./sound-index.cjs');
-const source='outputs/library-v2-auto-analysis.json';
+const source=process.argv[2]||'outputs/library-v2-auto-analysis.json';
+if(process.argv.length>3)throw Error('Usage: annotate-analysis.cjs [draft.json]');
+if(require('./library-source.cjs').resolveSource().mode==='modules'&&(!process.argv[2]||require('node:path').resolve(source)===require('node:path').resolve('outputs/library-v2-auto-analysis.json')))throw Error('Specify a separate draft file in modular mode');
 const doc=JSON.parse(fs.readFileSync(source,'utf8'));
 let mismatches=0,unclear=0,beforeSoft=0,matched=0;
 for(const row of doc.entries){

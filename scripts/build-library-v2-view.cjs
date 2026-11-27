@@ -1,12 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 const fs=require('node:fs');
-const crypto=require('node:crypto');
-// The JSON catalogue on main is the ONLY editorial source. This HTML is a
-// generated, read-only snapshot for authenticated GitHub editors to inspect.
-const source=fs.readFileSync('outputs/library-v2.json');
-const sourceHash=crypto.createHash('sha256').update(source).digest('hex');
-const db=JSON.parse(source.toString('utf8'));
+// Generated read-only view of the selected canonical source.
+const {db,sha256:sourceHash}=require('./library-source.cjs').readSource();
 const genera=db.relations.filter(r=>r.type==='is_a'&&r.child&&r.parent);
 const semantic=db.relations.filter(r=>r.subject&&r.object);
 const rows=db.entries.map(e=>({
@@ -58,7 +54,7 @@ const html=[
 '<h1>Библиотека слов</h1>',
 '<p class="sub">Единый редакторский черновик: все слова, значения и темы. Здесь предпросмотр — изменения вносите в исходный JSON через GitHub.</p>',
 '<p><a href="Проверка-смысловых-связей.html">Проверка и утверждение смысловых связей</a> (отдельный редактор для локальных JSON)</p>',
-'<p><a href="https://github.dev/afevina-lab/zabavograd-demo/blob/main/outputs/library-v2.json" target="_blank" rel="noopener noreferrer">Открыть библиотеку для редактирования на GitHub</a> · <a href="https://github.com/afevina-lab/zabavograd-demo/tree/main/outputs" target="_blank" rel="noopener noreferrer">Папка outputs</a></p>',
+'<p><a href="https://afevina-lab.github.io/zabavograd-demo/editor/" target="_blank" rel="noopener noreferrer">Открыть редактор библиотеки</a> · <a href="https://github.com/afevina-lab/zabavograd-demo/tree/main/outputs" target="_blank" rel="noopener noreferrer">Папка outputs</a></p>',
 '<div class="banner"><strong>Черновой предпросмотр.</strong> После сохранения изменений в основном JSON GitHub Actions обновляет этот HTML. Перенос черновика в публичную игру — отдельное решение, не действие этого предпросмотра. Веса: <strong>100 / 70 / 50 / 30 / 20 / 10</strong>; ноль исключает из автоматической выдачи. Предложенные веса требуют редакторского просмотра.</div>',
 '<div class="stats" id="stats"></div>',
 '<div class="controls"><input id="q" placeholder="Поиск слова, значения, категории или примечания" aria-label="Поиск">',
@@ -70,7 +66,7 @@ const html=[
 '<div class="tablewrap"><table><thead><tr><th><button class="sort" data-sort="lemma">Слово ↕</button></th><th>Значение</th><th><button class="sort" data-sort="weight">Вес ↕</button></th><th>Категории</th><th>Родовые понятия</th><th><button class="sort" data-sort="imageCount">Изображения ↕</button></th><th><button class="sort" data-sort="phonetic_status">Разметка ↕</button></th><th>Источник</th></tr></thead><tbody id="body"></tbody></table></div>',
 '<p class="small">Нажмите на строку для полной карточки, фонетических тегов, утверждённых связей и черновых моделей действий. Черновые модели пока не используются играми. CSV выгружает текущую выборку. Список категорий включает исторические подразделы, пока не утверждённые для переноса в единую таксономию.</p>',
 '<dialog id="dialog"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h2 id="detailTitle"></h2><button id="close">Закрыть</button></div><div id="detail"></div></dialog>',
-'<footer>Источник: outputs/library-v2.json · Снимок SHA-256 '+sourceHash.slice(0,12)+' · Локальная страница обновляется из JSON. Скачанный HTML — снимок, а не редактор. После изменений на GitHub дождитесь Actions и скачайте его заново.</footer>',
+'<footer>Источник: каноническая библиотека · Снимок SHA-256 '+sourceHash.slice(0,12)+' · Локальная страница обновляется из канонического источника. Скачанный HTML — снимок, а не редактор. После изменений на GitHub дождитесь Actions и скачайте его заново.</footer>',
 '<script id="library-data" type="application/json">'+data+'</script>',
 '<script>',
 '(()=>{const db=JSON.parse(document.getElementById("library-data").textContent),all=db.rows;',
