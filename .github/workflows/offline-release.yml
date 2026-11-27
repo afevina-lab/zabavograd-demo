@@ -1,7 +1,7 @@
 name: Verify autonomous public game
 on:
   push:
-    branches: [main, gh-pages]
+    branches: [gh-pages]
   workflow_dispatch:
 permissions:
   contents: read

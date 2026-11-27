@@ -6,14 +6,19 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [FULL, AUTO]
+        default: FULL
 
 permissions:
   contents: write
 
 concurrency:
   # PR smoke runs must not cancel or block a production release.
-  group: public-ui-${{ github.event_name == 'pull_request' && 'pr-checks' || 'main-release' }}
-  cancel-in-progress: ${{ github.event_name == 'push' }}
+  group: public-ui-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'main-release' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   verify-and-publish:
@@ -21,6 +26,8 @@ jobs:
     # must always be built from the unique canonical main source.
     if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    env:
+      UI_BASE_PATH: /zabavograd-demo/
     steps:
       - name: Checkout public visual source
         uses: actions/checkout@v4
@@ -28,34 +35,80 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Plan checks against the correct source snapshot
+        id: plan
+        env:
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          EVENT_NAME: ${{ github.event_name }}
+          REQUESTED_MODE: ${{ inputs.mode || 'AUTO' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          base=""
+          if [[ "$EVENT_NAME" == pull_request ]]; then
+            base="$PR_BASE"
+          else
+            # Compare with the actual published tree, not just the previous push.
+            if git fetch --no-tags --depth=1 origin refs/heads/gh-pages; then
+              base=$(git show FETCH_HEAD:index.html | node -e 'let s="";process.stdin.on("data",c=>s+=c);process.stdin.on("end",()=>process.stdout.write(s.match(/<meta name="zabavograd-ui-release" content="([a-f0-9]{40})"/)?.[1]||""))') || base=""
+            fi
+          fi
+          printf 'null\n' > "$RUNNER_TEMP/changed.json"
+          if [[ "$base" =~ ^[a-f0-9]{40}$ ]] && git fetch --no-tags --depth=1 origin "$base"; then
+            git diff --no-renames --name-only -z "$base" HEAD > "$RUNNER_TEMP/changed-paths"
+            node -e 'const fs=require("fs");fs.writeFileSync(process.argv[2],JSON.stringify(fs.readFileSync(process.argv[1],"utf8").split("\\0").filter(Boolean)))' "$RUNNER_TEMP/changed-paths" "$RUNNER_TEMP/changed.json"
+          fi
+          node scripts/ci-plan.mjs "$RUNNER_TEMP/changed.json" "$REQUESTED_MODE" > ci-plan.json
+          node --test tests/ci-plan.test.mjs
+          echo "mode=$(node -p 'require("./ci-plan.json").mode')" >> "$GITHUB_OUTPUT"
+          echo "base=$base" >> "$GITHUB_OUTPUT"
+          cat ci-plan.json >> "$GITHUB_STEP_SUMMARY"
+          if [[ "$(node -p 'require("./ci-plan.json").mode')" == DOCS ]]; then
+            git diff --check "$base" HEAD
+          fi
       - name: Python for transparent card contours
+        if: steps.plan.outputs.mode != 'DOCS'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Install tools
+        if: steps.plan.outputs.mode != 'DOCS'
         run: |
           npm install --no-package-lock --ignore-scripts
           python -m pip install --disable-pip-version-check pillow
-      - name: Validate canonical library and regenerate runtime
+      - name: Validate canonical library and regenerate runtime once
+        if: steps.plan.outputs.mode != 'DOCS'
         run: |
           npm run check:library
-          npm run library:refresh
+          node scripts/sync-runtime.cjs
+          node scripts/build-library-v2-view.cjs
           node scripts/check-library-preview.cjs
           node scripts/verify-consolidated-library.cjs
-      - name: Test gameplay and theme registry
+      - name: Test gameplay and theme registry once
+        if: steps.plan.outputs.mode != 'DOCS'
         run: |
           npm run check:architecture
-          npm test
-          node --test editor-service/modular-read-cache.test.mjs
+          node --experimental-strip-types --test tests/*.test.ts tests/*.test.mjs
+          npm run test:library-editor
+          ./node_modules/.bin/tsc --noEmit
           python -m py_compile scripts/library_source.py scripts/analyze-pending-words.py scripts/extend-morphology-20261123.py
           npm run check:design-system
-      - name: Build local-base UI and check image alpha
+      - name: Build the exact public release once
+        if: steps.plan.outputs.mode != 'DOCS'
         run: |
-          npm run build
+          python scripts/check-changed-word-images.py ci-plan.json
+          ./node_modules/.bin/vite build --base /zabavograd-demo/
           python scripts/prepare-card-skins.py dist
-      - name: Check autonomous release
-        run: node scripts/check-offline-release.cjs dist
-      - name: Browser smoke test across games, themes, sizes
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('dist/index.html')
+          html=p.read_text()
+          html=html.replace('</head>','<meta name="zabavograd-ui-release" content="${{ github.sha }}"></head>')
+          p.write_text(html)
+          PY
+          node scripts/check-offline-release.cjs dist
+      - name: Full browser regression
+        if: steps.plan.outputs.mode == 'FULL'
         run: |
           GEOMETRY_ONLY=1 node scripts/verify-dialogs-browser.mjs
           UI_DIST_ROOT=dist UI_THEME=neutral node scripts/verify-compact-toolbar.mjs
@@ -66,8 +119,26 @@ jobs:
             UI_THEME="$theme" node scripts/verify-settings-browser.mjs
             UI_THEME="$theme" node scripts/verify-dialogs-browser.mjs
           done
+      - name: Scoped browser regression
+        if: steps.plan.outputs.mode != 'FULL' && steps.plan.outputs.mode != 'DOCS'
+        run: |
+          set -euo pipefail
+          mode=$(node -p 'require("./ci-plan.json").mode')
+          for theme in $(node -p 'require("./ci-plan.json").themes.join(" ")'); do
+            UI_THEME="$theme" node scripts/verify-critical-browser.mjs
+            if [[ "$mode" == GAME || "$mode" == THEME ]]; then
+              UI_THEME="$theme" CI_PLAN_FILE=ci-plan.json node scripts/verify-settings-browser.mjs
+            fi
+            if [[ "$mode" == THEME ]]; then
+              UI_THEME="$theme" node scripts/verify-dialogs-browser.mjs
+            fi
+          done
+          if [[ "$mode" == LIBRARY ]]; then
+            node scripts/verify-task-search-browser.mjs
+            node scripts/verify-material-flow-browser.mjs
+          fi
       - name: Browser screenshots and report
-        if: always()
+        if: always() && steps.plan.outputs.mode != 'DOCS'
         uses: actions/upload-artifact@v4
         with:
           name: public-ui-visual-smoke
@@ -76,28 +147,22 @@ jobs:
           retention-days: 14
 
       - name: Checkout published gh-pages separately
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.plan.outputs.mode != 'DOCS'
         uses: actions/checkout@v4
         with:
           ref: gh-pages
           path: _published
-      - name: Build public-base UI from this very same source
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        run: |
-          ./node_modules/.bin/vite build --base /zabavograd-demo/
-          python scripts/prepare-card-skins.py dist
-          python - <<'PY'
-          from pathlib import Path
-          p=Path('dist/index.html')
-          html=p.read_text()
-          html=html.replace('</head>','<meta name="zabavograd-ui-release" content="${{ github.sha }}"></head>')
-          p.write_text(html)
-          PY
       - name: Replace only generated public UI and delete obsolete patches
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        id: publish
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.plan.outputs.mode != 'DOCS'
         shell: bash
         run: |
           set -euo pipefail
+          echo "released=false" >> "$GITHUB_OUTPUT"
+          if [[ "$(git ls-remote origin refs/heads/main | cut -f1)" != "$GITHUB_SHA" ]]; then
+            echo "Superseded by newer main; next run compares against last published source."
+            exit 0
+          fi
           find _published/assets -maxdepth 1 -type f \( -name 'index-*.js' -o -name 'index-*.css' \) -delete
           rm -f _published/assets/match-camera-20261111.js
           rm -f _published/assets/neutral-polish-20261111.css
@@ -120,6 +185,7 @@ jobs:
           test -s _published/home.html
           test -f _published/assets/themes/forest/front.webp
           test -f _published/assets/neutral/approved-paper-4k.webp
+          node scripts/check-offline-release.cjs _published
           git -C _published config user.name 'github-actions[bot]'
           git -C _published config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git -C _published add -A
@@ -127,8 +193,9 @@ jobs:
             git -C _published commit -m "Publish public visual source ${{ github.sha }}"
             git -C _published push origin HEAD:gh-pages
           fi
+          echo "released=true" >> "$GITHUB_OUTPUT"
       - name: Verify real published site version
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.publish.outputs.released == 'true'
         shell: bash
         run: |
           for attempt in $(seq 1 20); do
@@ -137,3 +204,8 @@ jobs:
           done
           echo 'Published site did not reach the expected source commit'
           exit 1
+      - name: Documentation-only main — confirm existing release without rebuilding
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.plan.outputs.mode == 'DOCS'
+        env:
+          PUBLISHED_SOURCE: ${{ steps.plan.outputs.base }}
+        run: node scripts/verify-deployed-version.mjs https://afevina-lab.github.io/zabavograd-demo/index.html "$PUBLISHED_SOURCE"

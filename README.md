@@ -26,7 +26,7 @@ npm run build
 npm run library:refresh
 ```
 
-HTML-просмотр библиотеки генерируется из канонического источника локально (`node scripts/build-library-v2-view.cjs`), не хранится в `main`. Проверенный HTML доступен в [library-index/preview](https://github.com/afevina-lab/zabavograd-demo/tree/library-index/preview) и артефакте `library-index` после успешного запуска. Для актуальности сверять SHA источника. Остальные локальные редакторские HTML не удалены. `scripts/export-library.cjs` формирует игровой JSON. Публикация `gh-pages` собирается из проверенного `main`.
+HTML-просмотр библиотеки генерируется из канонического источника локально (`node scripts/build-library-v2-view.cjs`), не хранится в `main`. Проверенный HTML доступен в [library-index/preview](https://github.com/afevina-lab/zabavograd-demo/tree/library-index/preview) и артефакте `library-index` после успешного запуска. Для актуальности сверять SHA источника. Остальные локальные редакторские HTML не удалены. `scripts/export-library.cjs` формирует игровой JSON. Публикация `gh-pages` собирается из проверенного `main`. Область автоматических проверок определяется [CI_POLICY.md](docs/CI_POLICY.md); документация не требует сборки, принудительный FULL доступен вручную.
 
 ## Архитектура и визуальные решения
 

@@ -1,3 +1,4 @@
+import {inspectSettingsLayout} from './settings-layout-contract.mjs';
 import {createGameSetup} from './browser-game-setup.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync,writeFileSync} from 'node:fs';
@@ -6,22 +7,27 @@ const plan=JSON.parse(readFileSync('ci-plan.json','utf8'));
 const theme=process.env.UI_THEME||'neutral';
 assert(plan.themes.includes(theme),'Theme outside selected plan');
 const report=[];
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 await runBrowserProbe({theme,outputDirectory:`ui-smoke/critical/${theme}`},async({cmd,evaluate,until,screenshot,origin,themeIndex})=>{
  const setup=createGameSetup({cmd,evaluate,until,origin,themeIndex});
  for(const [width,height] of plan.sizes){
   await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
   for(const game of plan.games){
    await cmd('Page.navigate',{url:origin+'?game='+game});
-   await until("!!document.querySelector('.unified-settings-content')");
-   await evaluate(`document.querySelectorAll('.themes button')[${themeIndex}]?.click()`);
+   await until("!!document.querySelector(':is(.v-settings-scroll,.unified-settings-content)')");
+   await evaluate(`document.querySelectorAll(':is(.v-theme-choice,.themes) button')[${themeIndex}]?.click()`);
+   await until("document.fonts.status==='loaded' && document.querySelector('.app')?.dataset.theme==="+JSON.stringify(theme));
+   await sleep(800);
    await until("[...document.images].filter(e=>e.getBoundingClientRect().width>0).every(e=>e.complete&&e.naturalWidth>0)");
-   assert(await evaluate("(()=>{const e=document.querySelector('.unified-settings-content');return e.clientWidth>0&&e.scrollWidth<=e.clientWidth+2&&document.documentElement.scrollWidth<=innerWidth+2})()"),'Settings overflow: '+game+' '+width);
-   assert(await evaluate("!![...document.querySelectorAll('.setup-footer button')].find(e=>e.textContent.includes('Начать'))"),'Missing launch control: '+game);
-   await screenshot(`${game}-${width}x${height}`);
+   const layout=await evaluate('('+inspectSettingsLayout.toString()+')()');
+   await screenshot(game+'-'+width+'x'+height);
+   assert(Object.values(layout).every(Boolean),'Settings layout: '+game+' '+width+' '+JSON.stringify(layout));
+   assert(await evaluate("!![...document.querySelectorAll(':is(.v-settings-footer,.setup-footer) button')].find(e=>e.textContent.includes('Начать'))"),'Missing launch control: '+game);
    await setup(game);
    await until("!!document.querySelector('button[aria-label=Пауза]')");
    await evaluate("document.querySelector('button[aria-label=Пауза]').click()");
    await until("!!document.querySelector('.overlay button[aria-label=Продолжить]')");
+   await sleep(350);
    assert(await evaluate("(()=>{const r=document.querySelector('.overlay>div').getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1&&r.top>=0&&r.bottom<=innerHeight+1})()"),'Pause overflow: '+game);
    await evaluate("document.querySelector('.overlay button[aria-label=Продолжить]').click()");
    await until("!document.querySelector('.overlay')&&!!document.querySelector('.app.game-active')");
