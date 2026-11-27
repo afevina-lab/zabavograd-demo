@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: refactor/library-modular-integration-20261126
+          ref: main
           fetch-depth: 1
       - uses: actions/setup-node@v4
         with:
@@ -55,7 +55,7 @@ jobs:
           else
             node scripts/library-modular-request.cjs "$MODULES_DIR" "$RUNNER_TEMP/request.json" "$RUNNER_TEMP/edit-output"
           fi
-          node -e 'const fs=require("fs"),f=process.argv[1],r=JSON.parse(fs.readFileSync(f));r.source_commit=process.env.SOURCE_COMMIT;r.request_commit=process.env.GITHUB_SHA;r.scope="integration_snapshot_not_live_main";fs.writeFileSync(f,JSON.stringify(r,null,2)+"\n")' "$RUNNER_TEMP/edit-output/result.json"
+          node -e 'const fs=require("fs"),f=process.argv[1],r=JSON.parse(fs.readFileSync(f));r.source_commit=process.env.SOURCE_COMMIT;r.request_commit=process.env.GITHUB_SHA;r.scope="canonical_main_snapshot";fs.writeFileSync(f,JSON.stringify(r,null,2)+"\n")' "$RUNNER_TEMP/edit-output/result.json"
           git diff --exit-code
       - uses: actions/upload-artifact@v4
         with:
@@ -68,7 +68,7 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git fetch --no-tags --depth=1 origin refactor/library-modular-integration-20261126
+          git fetch --no-tags --depth=1 origin main
           [ "$(git rev-parse FETCH_HEAD)" = "$SOURCE_COMMIT" ] || { echo 'Integration source moved; repeat query'; exit 1; }
           out="refs/heads/library-$REQUEST_KIND-result/$REQUEST_KEY"
           [ -z "$(git ls-remote origin "$out")" ] || { echo 'Result exists'; exit 1; }

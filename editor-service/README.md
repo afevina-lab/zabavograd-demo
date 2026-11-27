@@ -1,3 +1,7 @@
+# Редактор канонической библиотеки
+
+Источник — `main:outputs/library-modules/`. Модульный редактор доступен по `/editor/`, подключение собственного HTTPS-сервера и GitHub OAuth обязательно. Переменные SERVICE_URL, GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, EDITOR_ORIGIN, EDITOR_URL. Сервер читает канонический снимок с проверкой SHA, SQLite — временный индекс. Изменения отправляются через предварительный просмотр и проверенный кандидат. Для принятия используется `scripts/library-commit-package.cjs` в чистом checkout. Старые /api/library и /api/save удалены. Реальное развёртывание и проверка OAuth не подтверждены.
+
 # Веб-редактор библиотеки
 
 Страница: https://afevina-lab.github.io/zabavograd-demo/editor/

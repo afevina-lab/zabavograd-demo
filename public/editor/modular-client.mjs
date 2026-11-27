@@ -2,7 +2,7 @@
 // No DOM dependency, no full library download, no implicit requests or writes.
 const hash=/^[a-f0-9]{64}$/;
 const commit=/^[a-f0-9]{40}$/;
-const scope='integration_snapshot_not_live_main';
+const scope='canonical_main_snapshot';
 const commands=new Set(['sqlite','find','inspect','select','gaps','inventory']);
 const clone=x=>structuredClone(x);
 const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b);

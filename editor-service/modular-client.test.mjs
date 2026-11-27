@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 import {createModularClient} from '../public/editor/modular-client.mjs';
 const source='a'.repeat(64),other='b'.repeat(64),sha='c'.repeat(64),target='d'.repeat(64),commit='e'.repeat(40);
-const scope='integration_snapshot_not_live_main';
+const scope='canonical_main_snapshot';
 const row={id:'a',lemma:'кот',weight:100,fields:{'/selection/base_weight':{exists:true,value:100}}};
 function fixture(){
  const calls=[],jobs=new Map();let n=0,ready=false,mutate=r=>r;

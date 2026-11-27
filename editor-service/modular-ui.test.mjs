@@ -67,7 +67,7 @@ test('import validates all old weights on pinned source without sending any edit
  const api=async(route,body)=>{
   assert.equal(route,'/api/modular/read');calls.push(body.command);
   if(body.source_sha256!==current)throw Object.assign(Error('Stale source'),{status:409});
-  return {status:'cached_result',report:{scope:'integration_snapshot_not_live_main',source_commit:'b'.repeat(40),source_sha256:current,mode:'query',command:body.command,request_sha256:crypto.createHash('sha256').update(JSON.stringify(body,null,2)+'\n').digest('hex'),rows:body.command==='inspect'?[{id:'a',fields:{'/selection/base_weight':{exists:true,value:weight}}}]:[]}};
+  return {status:'cached_result',report:{scope:'canonical_main_snapshot',source_commit:'b'.repeat(40),source_sha256:current,mode:'query',command:body.command,request_sha256:crypto.createHash('sha256').update(JSON.stringify(body,null,2)+'\n').digest('hex'),rows:body.command==='inspect'?[{id:'a',fields:{'/selection/base_weight':{exists:true,value:weight}}}]:[]}};
  };
  const p=await prepareImportedDraft(JSON.stringify(d),api);
  assert.equal(p.waiting,null);assert.deepEqual(calls,['inventory','inspect']);assert.equal(p.client.state().source_sha256,source);

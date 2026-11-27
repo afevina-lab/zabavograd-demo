@@ -1,10 +1,9 @@
 import http from 'node:http';
 import crypto from 'node:crypto';
 import {spawn} from 'node:child_process';
-import {validate,diff} from '../public/editor/model.mjs';
 import {makeBridge} from './modular-bridge.mjs';
 import {makeReadCache} from './modular-read-cache.mjs';
-const modularRehearsal=process.env.EDITOR_MODULAR_REHEARSAL==='1';
+const modularRehearsal=true;
 const repo='afevina-lab/zabavograd-demo',sessions=new Map(),states=new Map();
 const readCache=modularRehearsal?makeReadCache({repo}):null;
 if(readCache)process.on('exit',()=>readCache.close());
@@ -14,7 +13,6 @@ const url=process.env.SERVICE_URL,client=process.env.GITHUB_CLIENT_ID,secret=pro
 const rand=()=>crypto.randomBytes(32).toString('base64url');
 function err(msg,code=400){throw Object.assign(Error(msg),{status:code})}
 async function github(token,path,body,method){const r=await fetch('https://api.github.com'+path,{method:method||(body?'POST':'GET'),headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','Content-Type':'application/json','User-Agent':'Zabavograd-Library-Editor'},...(body?{body:JSON.stringify(body)}:{})});const d=await r.json();if(!r.ok)err(d.message||'Ошибка GitHub',r.status);return d}
-async function library(token){const commit=await github(token,`/repos/${repo}/commits/main`);const r=await fetch(`https://raw.githubusercontent.com/${repo}/${commit.sha}/outputs/library-v2.json`);if(!r.ok)err('Не удалось прочитать источник',502);return {data:await r.json(),head:commit.sha,tree:commit.commit.tree.sha}}
 function analyze(entries){return new Promise((resolve,reject)=>{const p=spawn(process.env.PYTHON||'python3',[new URL('./morphology.py',import.meta.url).pathname.replace(/^\/([A-Za-z]:)/,'$1')],{stdio:['pipe','pipe','pipe']});let out='';const timer=setTimeout(()=>{p.kill();reject(Error('Время анализа истекло'))},60000);p.stdout.on('data',c=>{out+=c;if(out.length>2000000)p.kill()});p.stderr.resume();p.on('error',reject);p.on('close',code=>{clearTimeout(timer);try{if(code)throw Error('Анализатор недоступен. Проверьте установку pymorphy3.');resolve(JSON.parse(out))}catch(e){reject(e)}});p.stdin.end(JSON.stringify(entries))})}
 http.createServer(async(req,res)=>{res.setHeader('Cache-Control','no-store');res.setHeader('Content-Type','application/json; charset=utf-8');res.setHeader('Referrer-Policy','no-referrer');if(req.headers.origin===origin){res.setHeader('Access-Control-Allow-Origin',origin);res.setHeader('Vary','Origin');res.setHeader('Access-Control-Allow-Headers','Authorization, Content-Type');res.setHeader('Access-Control-Allow-Methods','GET, POST, OPTIONS')}
 const send=d=>res.end(JSON.stringify(d));const redirect=to=>{res.writeHead(302,{Location:to});res.end()};
@@ -39,12 +37,7 @@ if(u.pathname.startsWith('/api/modular/')){
   const result=await bridge.submit(kind,body);res.statusCode=202;return send(result);
  }finally{session.busy=false}
 }
-if(modularRehearsal&&['/api/library','/api/save'].includes(u.pathname))err('Старое чтение и сохранение отключены в экспериментальном модульном режиме',409);
-if(u.pathname==='/api/library'&&req.method==='GET')return send(await library(session.token));
-if(req.method!=='POST')err('Неизвестный адрес',404);let raw='';for await(const c of req){raw+=c;if(Buffer.byteLength(raw)>30000000)err('Слишком большой запрос',413)}const body=JSON.parse(raw);
-if(u.pathname==='/api/analyze'){if(!Array.isArray(body.entries)||body.entries.length>50||body.entries.some(e=>typeof e.lemma!=='string'||e.lemma.length>100||typeof e.id!=='string'))err('За один раз можно проверить до 50 слов');return send(await analyze(body.entries))}
-if(u.pathname!=='/api/save')err('Неизвестный адрес',404);if(session.busy)err('Сохранение уже выполняется',409);session.busy=true;try{validate(body.data);const old=await library(session.token);if(old.head!==body.head)err('Основная ветка изменилась. Скачайте черновик и сверьте изменения с новой версией.',409);
-const nextIds=new Set(body.data.entries.map(e=>e.id));if(old.data.entries.some(e=>!nextIds.has(e.id)))err('Удаление существующих слов через редактор запрещено');const branch='editor/library-'+Date.now()+'-'+crypto.randomBytes(4).toString('hex');await github(session.token,`/repos/${repo}/git/refs`,{ref:'refs/heads/'+branch,sha:old.head});
-const blob=await github(session.token,`/repos/${repo}/git/blobs`,{content:JSON.stringify(body.data,null,2)+'\n',encoding:'utf-8'});const tree=await github(session.token,`/repos/${repo}/git/trees`,{base_tree:old.tree,tree:[{path:'outputs/library-v2.json',mode:'100644',type:'blob',sha:blob.sha}]});const commit=await github(session.token,`/repos/${repo}/git/commits`,{message:String(body.message||'Обновление библиотеки').slice(0,200),tree:tree.sha,parents:[old.head]});const update=await fetch(`https://api.github.com/repos/${repo}/git/refs/heads/${branch}`,{method:'PATCH',headers:{Authorization:'Bearer '+session.token,'Content-Type':'application/json','User-Agent':'Zabavograd-Editor'},body:JSON.stringify({sha:commit.sha,force:false})});if(!update.ok)err('Ветка создана, но запись коммита не подтверждена. Проверьте GitHub перед повтором.',502);const pr=await github(session.token,`/repos/${repo}/pulls`,{title:String(body.message||'Обновление библиотеки').slice(0,200),head:branch,base:'main',body:`Изменения из визуального редактора. Изменено слов: ${diff(old.data,body.data).length}. Автоматические кандидаты требуют редакторской проверки.`});send({url:pr.html_url,branch})}finally{session.busy=false}
+if(u.pathname==='/api/analyze'&&req.method==='POST'){let raw='';for await(const chunk of req){raw+=chunk;if(Buffer.byteLength(raw)>65536)err('Слишком большой запрос',413)}const body=JSON.parse(raw);if(!Array.isArray(body.entries)||body.entries.length>50||body.entries.some(e=>typeof e.lemma!=='string'||e.lemma.length>100||typeof e.id!=='string'))err('За один раз можно проверить до 50 слов');return send(await analyze(body.entries))}
+err('Неизвестный адрес',404);
 }catch(e){res.statusCode=e.status||500;send({error:e.message})}}).listen(Number(process.env.PORT||4181),'0.0.0.0');
 setInterval(()=>{for(const [k,v] of sessions)if(v.until<Date.now())sessions.delete(k);for(const [k,v] of states)if(v.until<Date.now())states.delete(k)},60000).unref();

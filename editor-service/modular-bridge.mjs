@@ -1,5 +1,5 @@
 import crypto from 'node:crypto';
-export const SOURCE_REF='refactor/library-modular-integration-20261126';
+export const SOURCE_REF='main';
 const kinds={query:{request:'library-sqlite-request',result:'library-sqlite-result',file:'editorial/requests/library-request.json'},edit:{request:'library-edit-request',result:'library-edit-result',file:'editorial/requests/library-edit.json'}};
 const commands=new Set(['sqlite','find','inspect','select','gaps','inventory']);
 const hash=/^[a-f0-9]{64}$/;
@@ -37,7 +37,7 @@ export function makeBridge({request,repo,random=()=>crypto.randomBytes(12).toStr
  async function info(){
   const c=await request(api+'/commits/'+encodeURIComponent(SOURCE_REF));
   check(commitHash.test(c.sha)&&commitHash.test(c.commit?.tree?.sha),'Некорректная версия GitHub',502);
-  return {scope:'integration_snapshot_not_live_main',source_ref:SOURCE_REF,source_commit:c.sha,tree:c.commit.tree.sha};
+  return {scope:'canonical_main_snapshot',source_ref:SOURCE_REF,source_commit:c.sha,tree:c.commit.tree.sha};
  }
  async function submit(kind,body){
   validateEnvelope(kind,body);
@@ -65,7 +65,7 @@ export function makeBridge({request,repo,random=()=>crypto.randomBytes(12).toStr
   check(raw.length===file.size,'Размер отчёта не совпадает',502);
   let report;try{report=JSON.parse(raw.toString('utf8'));}catch{fail('Некорректный JSON отчёта',502);}
   check(obj(report),'Некорректный отчёт',502);
-  check(report.scope==='integration_snapshot_not_live_main'&&commitHash.test(report.source_commit)&&commitHash.test(report.request_commit)&&report.request_commit.startsWith(m[2].slice(-12)),'Отчёт не соответствует запросу',502);
+  check(report.scope==='canonical_main_snapshot'&&commitHash.test(report.source_commit)&&commitHash.test(report.request_commit)&&report.request_commit.startsWith(m[2].slice(-12)),'Отчёт не соответствует запросу',502);
   return {status:'result_available',ticket,report,result_branch:branch};
  }
  return {info,submit,result};

@@ -8,7 +8,7 @@ import store from '../scripts/library-store.cjs';
 import toolkit from '../scripts/library-toolkit.cjs';
 import remote from '../scripts/library-request.cjs';
 import {SOURCE_REF,validateEnvelope} from './modular-bridge.mjs';
-const scope='integration_snapshot_not_live_main',commitHash=/^[a-f0-9]{40}$/;
+const scope='canonical_main_snapshot',commitHash=/^[a-f0-9]{40}$/;
 const MAX=32*1024*1024;
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 const gitBlob=x=>crypto.createHash('sha1').update('blob '+x.length+'\0').update(x).digest('hex');
@@ -123,7 +123,7 @@ export function makeReadCache({repo,loadSnapshot=makePinnedLoader(),clock=Date.n
    require(!closed,'Cache closed',503);
    if(cached?.sha===fingerprint){cached.commit=c.sha;cached.checked=clock();return cached;}
    const file=path.join(dir,c.sha+'.sqlite');
-   try{sqlite.build(db,file,{source_sha256:fingerprint,source_mode:'cached_integration_snapshot'});}
+   try{sqlite.build(db,file,{source_sha256:fingerprint,source_mode:'cached_canonical_snapshot'});}
    catch(e){fs.rmSync(file,{force:true});throw e;}
    const old=cached;cached={db,file,sha:fingerprint,commit:c.sha,checked:clock()};
    if(old)fs.rmSync(old.file,{force:true});

@@ -31,7 +31,7 @@ test('result unavailable is not a success; exact request binding checked',async(
  const missing=makeBridge({repo:'owner/repo',request:async()=>{throw Object.assign(Error('404'),{status:404})}});
  assert.equal((await missing.result(ticket)).status,'result_not_available');
  await assert.rejects(()=>missing.result('edit/../../main'));
- const report={source_commit:h,request_commit:c,scope:'integration_snapshot_not_live_main',status:'validated_candidate_not_approved'};
+ const report={source_commit:h,request_commit:c,scope:'canonical_main_snapshot',status:'validated_candidate_not_approved'};
  const raw=Buffer.from(JSON.stringify(report));
  const bridge=makeBridge({repo:'owner/repo',request:async()=>({type:'file',encoding:'base64',size:raw.length,content:raw.toString('base64')})});
  assert.deepEqual((await bridge.result(ticket)).report,report);
