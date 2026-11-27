@@ -153,6 +153,7 @@ async function importSceneCode(text){
       const installed=await installDocument(document);incoming=installed.scene;
       for(const asset of installed.resources)if(!assets.some(a=>a.path===asset.path))assets.push(asset);
     }
+    incoming={...incoming,name:incoming.name||incoming.id,camera:{mode:'width',cropX:.5,cropY:.5,...incoming.camera},variants:incoming.variants??[]};
     const errors=validate(incoming);if(errors.length)throw Error(errors.join('; '));
     const resources=new Set(incoming.nodes.map(n=>n.asset).filter(Boolean));for(const v of incoming.variants||[])for(const p of Object.values(v.nodes||{}))if(p.asset)resources.add(p.asset);
     for(const path of resources)if(!assets.some(a=>a.path===path))throw Error('В коде указан отсутствующий рисунок '+path+'. Откройте полный документ-код с рисунками.');
