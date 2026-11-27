@@ -1,3 +1,4 @@
+import {probePath,probeOrigin} from './browser-base-path.mjs';
 import {withReadyFonts} from './visual-html-bootstrap.mjs';
 import {captureStableFrame} from './settle-visual-frame.mjs';
 import assert from 'node:assert/strict';
@@ -16,14 +17,15 @@ const output=resolve(outputDirectory);
 mkdirSync(output,{recursive:true});
 const contentTypes={'.html':'text/html','.js':'text/javascript','.css':'text/css','.webp':'image/webp','.png':'image/png','.svg':'image/svg+xml','.json':'application/json'};
 const server=createServer((req,res)=>{
-  const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
+  const pathname=probePath(req.url);
+  if(pathname===null){res.writeHead(404).end('Outside public base');return;}
   const file=resolve(root,'.'+pathname);
   if(file!==root&&!file.startsWith(root+sep)){res.writeHead(403).end();return;}
   const path=pathname==='/'?join(root,'index.html'):file;
   try{let content=readFileSync(path);if(warmFontsBeforeBoot&&extname(path)==='.html')content=Buffer.from(withReadyFonts(content.toString('utf8')));res.writeHead(200,{'Content-Type':contentTypes[extname(path)]||'application/octet-stream','Cache-Control':'no-store'}).end(content)}catch{res.writeHead(404).end('Not found')}
 });
 await new Promise(r=>server.listen(0,'127.0.0.1',r));
-const origin=`http://127.0.0.1:${server.address().port}/`;
+const origin=probeOrigin(server.address().port);
 const chrome=process.env.CHROME_BIN||['/usr/bin/google-chrome','/usr/bin/chromium','/usr/bin/chromium-browser'].find(existsSync);
 if(!chrome)throw Error('Chrome/Chromium not available');
 const profile=mkdtempSync(join(tmpdir(),'zabavograd-ui-'));

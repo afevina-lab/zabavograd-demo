@@ -12,11 +12,11 @@ await runBrowserProbe({theme,outputDirectory:`ui-smoke/critical/${theme}`},async
   await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<600});
   for(const game of plan.games){
    await cmd('Page.navigate',{url:origin+'?game='+game});
-   await until("!!document.querySelector('.unified-settings-content')");
-   await evaluate(`document.querySelectorAll('.themes button')[${themeIndex}]?.click()`);
+   await until("!!document.querySelector(':is(.v-settings-scroll,.unified-settings-content)')");
+   await evaluate(`document.querySelectorAll(':is(.v-theme-choice,.themes) button')[${themeIndex}]?.click()`);
    await until("[...document.images].filter(e=>e.getBoundingClientRect().width>0).every(e=>e.complete&&e.naturalWidth>0)");
-   assert(await evaluate("(()=>{const e=document.querySelector('.unified-settings-content');return e.clientWidth>0&&e.scrollWidth<=e.clientWidth+2&&document.documentElement.scrollWidth<=innerWidth+2})()"),'Settings overflow: '+game+' '+width);
-   assert(await evaluate("!![...document.querySelectorAll('.setup-footer button')].find(e=>e.textContent.includes('Начать'))"),'Missing launch control: '+game);
+   assert(await evaluate("(()=>{const e=document.querySelector(':is(.v-settings-scroll,.unified-settings-content)');return e.clientWidth>0&&e.scrollWidth<=e.clientWidth+2&&document.documentElement.scrollWidth<=innerWidth+2})()"),'Settings overflow: '+game+' '+width);
+   assert(await evaluate("!![...document.querySelectorAll(':is(.v-settings-footer,.setup-footer) button')].find(e=>e.textContent.includes('Начать'))"),'Missing launch control: '+game);
    await screenshot(`${game}-${width}x${height}`);
    await setup(game);
    await until("!!document.querySelector('button[aria-label=Пауза]')");
