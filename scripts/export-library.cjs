@@ -10,11 +10,6 @@ const fs=require('node:fs');
 const assert=require('node:assert/strict');
 const {soundIndex,letterMap}=require('./sound-index.cjs');
 const db=require('./library-source.cjs').readSource().db;
-let pending=null;
-try{
- pending=JSON.parse(fs.readFileSync('outputs/library-v2-auto-analysis.json','utf8'));
-}catch(e){if(e.code!=='ENOENT')throw e;}
-const suggestions=new Map((pending?.entries||[]).map(row=>[row.id,row]));
 const genericParents=new Map();
 for(const r of db.relations||[]){
  if(r.type!=='is_a'||r.approval?.status==='verified_research_only')continue;
@@ -49,16 +44,13 @@ function category(e){
 }
 const entries=db.entries.map(e=>{
  const editorial=e.phonetic_tags?.data||null;
- const draft=suggestions.get(e.id)?.phonetic||null;
  const fromEditorial=e.phonetic_tags?.status==='filled_with_explicit_extended_cases'&&
   Array.isArray(editorial?.sound_tokens)&&editorial.sound_tokens.length>0;
  const stored=e.phonetic_tags?.status==='automatic_candidate_needs_review'?
   (e.machine_analysis?.phonetic?.sound_tokens||editorial?.sound_tokens):null;
  const storedCandidate=!fromEditorial&&Array.isArray(stored)&&stored.length>0;
- const draftCandidate=!fromEditorial&&!storedCandidate&&
-  draft?.status==='candidate_needs_review'&&Array.isArray(draft.sound_tokens);
- const candidate=storedCandidate||draftCandidate;
- const tokens=fromEditorial?editorial.sound_tokens:storedCandidate?stored:draftCandidate?draft.sound_tokens:[];
+ const candidate=storedCandidate;
+ const tokens=fromEditorial?editorial.sound_tokens:storedCandidate?stored:[];
  assert(!tokens.includes('V'),'Old placeholder V present: '+e.lemma);
  const phoneticStatus=fromEditorial?'legacy_editorial':candidate?'candidate_needs_review':'pending';
  const rawSounds=tokens.length?soundIndex(e.lemma,tokens,{approved:fromEditorial||candidate}):{};
@@ -82,7 +74,7 @@ const entries=db.entries.map(e=>{
   categories:e.categories.filter(c=>(c.default_selection||e.lexical_eligible_by_default===false)&&!c.path.includes('/Вспомогательные')).map(c=>c.path),
   phonemes:tokens.length?tokens.map(t=>t==='й'?"й'":t):null,
   ...cat,position:editorial?.selection_position||'',
-  type:editorial?.markova_type??(candidate?(draft?.markova_type_proposal??editorial?.markova_type_candidate??e.machine_analysis?.phonetic?.markova_type_candidate??null):null),
+  type:editorial?.markova_type??(candidate?(editorial?.markova_type_candidate??e.machine_analysis?.phonetic?.markova_type_candidate??null):null),
   opposition:editorial?.opposition_sounds_for_r||[],
   // Source IDs of duplicate public meanings remain addressable, but cannot
   // be drawn again as a second copy of the same meaning in an exercise.

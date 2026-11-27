@@ -7,7 +7,7 @@ const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 const snapshot=db=>JSON.stringify(db,null,2)+'\n';
 const fingerprint=db=>sha(snapshot(db));
 const groups=['core','phonetics','morphology','semantics','syllables','translations','illustrations','machine','archive','shared'];
-const counts=Object.freeze(Object.fromEntries([...groups.map(g=>['entries/'+g,32]),['relations',32]]));
+const counts=Object.freeze(Object.fromEntries([...groups.map(g=>['entries/'+g,g==='machine'?64:32]),['relations',32]]));
 const ENCODING='immutable-shared-values-v1';
 function build(db){
  const packed=pack(db),base=split(packed.db,fingerprint(db),counts);
