@@ -17,6 +17,7 @@ jobs:
       - name: Capture original runtime
         run: |
           mkdir -p "$RUNNER_TEMP/old-runtime"
+          git fetch --no-tags --depth=1 origin 9dc237f81fd1cf6b239ccfb1f158424872e9ac56
           git show 9dc237f81fd1cf6b239ccfb1f158424872e9ac56:scripts/export-library.cjs > scripts/export-library-before-audit.cjs
           node scripts/export-library-before-audit.cjs
           rm scripts/export-library-before-audit.cjs
