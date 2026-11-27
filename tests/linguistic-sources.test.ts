@@ -49,16 +49,14 @@ test('cached linguistic proposals use canonical module source without a monolith
   fs.mkdirSync(path.join(root,'.cache/linguistic-sources'),{recursive:true});
   fs.writeFileSync(path.join(root,'.cache/linguistic-sources/constructicon-database.csv'),'ID Number,Anchor words\n1,играть\n');
   fs.writeFileSync(master,store.snapshot(db));
-  const legacy=await collect({source:'constructicon',root});
-  assert.equal(legacy.library_source.mode,'legacy');
+  await assert.rejects(()=>collect({source:'constructicon',root}),/Canonical source policy required/);
   store.create(modules,db);
   fs.writeFileSync(path.join(root,'editorial/library-source-mode.json'),JSON.stringify({version:1,mode:'modules',directory:'outputs/library-modules'}));
   await assert.rejects(()=>collect({source:'constructicon',root}),/Two potential/);
   fs.unlinkSync(master);
   const modular=await collect({source:'constructicon',root});
   assert.equal(modular.library_source.mode,'modules');
-  assert.equal(modular.library_source.sha256,legacy.library_source.sha256);
-  assert.deepEqual(modular.records,legacy.records);
+
   assert.equal(modular.records[0].entry_id,'v1');
   assert.equal(modular.records[0].usable_for_generation,false);
   assert.equal(store.load(modules).source_sha256,modular.library_source.sha256);

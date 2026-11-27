@@ -53,11 +53,7 @@ export function makePinnedLoader({fetchImpl=fetch}={}){
   require(!editorial||editorial.type==='tree','Invalid editorial tree');
   const policy=editorial?(await tree(editorial.sha)).find(x=>x.path==='library-source-mode.json'):undefined;
   const legacy=out.find(x=>x.path==='library-v2.json'),modules=out.find(x=>x.path==='library-modules');
-  if(!policy){
-   require(!modules,'Unmarked module generation; refuse fallback');
-   require(legacy,'Missing legacy catalogue');
-   const raw=await blob(legacy,'outputs/library-v2.json');previous=new Map();return raw;
-  }
+  require(policy,'Canonical source policy required; legacy catalogue prohibited');
   require(!legacy&&modules?.type==='tree','Two potential canonical sources or missing modules');
   require(policy.size<=4096,'Oversized source policy');
   const p=JSON.parse((await blob(policy,'editorial/library-source-mode.json')).toString('utf8'));

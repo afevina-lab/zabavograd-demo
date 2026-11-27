@@ -26,13 +26,10 @@ test('cache reuses index, binds exact source, refreshes only after TTL and fails
   await assert.rejects(()=>cache.query(request,{version:1,mode:'query',command:'inspect',options:{id:'a',full:true}}),/Full cards/);
  }finally{cache.close()}
 });
-test('immutable source bytes must match Git tree blob',async()=>{
+test('unmarked legacy catalogue is rejected before downloading any data',async()=>{
  const raw=source(100),blob=crypto.createHash('sha1').update('blob '+raw.length+'\0').update(raw).digest('hex');
  const request=async p=>({tree:p.endsWith(tree)?[{path:'outputs',type:'tree',sha:c2}]:[{path:'library-v2.json',type:'blob',mode:'100644',sha:blob,size:raw.length}]});
- const args={repo:'owner/repo',request,source:{source_commit:c1,tree},fetchImpl:async url=>{assert(url.includes(c1));return new Response(raw)}};
- assert.deepEqual(await fetchPinnedSnapshot(args),raw);
- const bad=Buffer.from(raw);bad[bad.length-1]=32;
- await assert.rejects(()=>fetchPinnedSnapshot({...args,fetchImpl:async()=>new Response(bad)}),/fingerprint mismatch/);
+ await assert.rejects(()=>fetchPinnedSnapshot({repo:'owner/repo',request,source:{source_commit:c1,tree},fetchImpl:async()=>{throw Error('Unexpected download')}}),/Canonical source policy required/);
 });
 
 function remoteModules(rawFiles){

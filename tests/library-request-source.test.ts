@@ -17,11 +17,11 @@ test('remote requests read only marked canonical modules and never stage a legac
   const policy=path.join(root,'editorial/library-source-mode.json');
   const db={entries:[{id:'a',lemma:'кот'}],relations:[],categories:[]};
   fs.writeFileSync(legacy,JSON.stringify(db));
-  assert.throws(()=>prepare(dest,root,{}),/Canonical modular source required/);
+  assert.throws(()=>prepare(dest,root,{}),/Canonical source policy required/);
   assert(!fs.existsSync(dest));
   fs.unlinkSync(legacy);
   create(directory,db);
-  assert.throws(()=>prepare(dest,root,{}),/Unmarked modular source/);
+  assert.throws(()=>prepare(dest,root,{}),/Canonical source policy required/);
   fs.writeFileSync(policy,JSON.stringify({version:1,mode:'modules',directory:'outputs/library-modules'}));
   assert.deepEqual(prepare(dest,root,{}),{directory,mode:'canonical_modules',source_sha256:load(directory).source_sha256});
   assert(!fs.existsSync(dest));
