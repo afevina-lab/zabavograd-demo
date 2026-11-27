@@ -1,25 +1,45 @@
-# Работа с библиотекой из чата через GitHub (этап 3)
+# Работа с библиотекой через GitHub
 
-После слияния в main: создать ветку от свежего main с именем library-request/<уникальный-slug> (латиница, цифры, дефис, 1–48 знаков), добавить **один** файл editorial/requests/library-request.json. Push запускает Library remote requests. Это запрос от редактора с правом записи в репозиторий, не публичный API и не обработчик issues. Runner берёт код инструмента из main, из рабочей ветки читает только JSON. Не передавать персональные данные и секреты — репозиторий публичный.
+Актуальный протокол после 27.11.2026. Единственный источник — `outputs/library-modules/` в `main`. Workflow берёт инструменты из main, из ветки запроса читает только данные. Запросы создаёт доверенный редактор с правом записи; сами workflow запускаются из ветки запроса, это не публичный API. Не передавать персональные данные и секреты.
 
-## Запрос (не меняет данные)
+## Чтение (без изменений)
+
+Создать ветку от свежего main `library-sqlite-request/<slug>` (1–48 символов: строчные латинские буквы, цифры, дефисы; первый символ — буква или цифра), добавить только `editorial/requests/library-request.json`.
+
 ```json
 {"version":1,"mode":"query","command":"select","options":{"weight":100,"limit":10,"fields":["/phonetic_tags/status","/morphology/status"]}}
 ```
-Команды find/inspect/select/gaps/inventory. Поля — массив JSON Pointer. Ответ содержит source_sha256, ID, значения и признак exists. Лимит 40 строк, по умолчанию 20, до 12 полей, результат не более 96 KiB. Для больших выборок использовать компактный индекс, offset и точные поля. 
 
-## Предпросмотр / кандидат
+Команды: find, inspect, select, gaps, inventory, sqlite. Для обычных запросов поля — JSON Pointer, максимум 12; до 40 строк (по умолчанию 20); ответ до 96 KiB. Для SQLite пример:
+
 ```json
-{"version":1,"mode":"preview","source_sha256":"<64 hex from query>","operations":[{"id":"<actual ID>","path":"/example","expect":{"exists":false},"value":"example"}]}
+{"version":1,"mode":"query","command":"sqlite","options":{"weight":100,"sounds":["к"],"exclude_sounds":["р","р'"],"has_image":true,"limit":10}}
 ```
-Пример условный, поле и ID брать из реального запроса. До 30 операций, исходный SHA-256 обязателен, все прежние значения сверяются, никакой автоматической смены статусов проверки. После просмотра результата создать новый запрос с mode candidate и тем же пакетом; если исходник изменился, сделать свежий запрос и пересмотреть пакет. Candidate выполняет существующий полный валидатор; если он отклоняет правку, исходник не публикуется. 
 
-Результат доступен в ветке library-result/<slug>-<первые 12 символов SHA коммита запроса>, файл result.json; также артефакт workflow. Если фактически изменились поля, создаётся ветка library-candidate/<тот же ключ> от проверенного main; отчёт и кандидат отправляются атомарно. Никакого изменения main или gh-pages, автоматического слияния и публикации. Затем агент открывает обычный PR из candidate в main, сверяет diff и обязательные проверки, объединяет по штатной процедуре. При сдвиге main между запуском и отправкой кандидата запрос отклоняется. Повторная запись уже созданной ветки запрещена.
+SQLite строит временный индекс из единственного источника, использует параметризованные фильтры, проверяет SHA и удаляет индекс. Произвольный SQL запрещён. Для постраничной выдачи передавать offset и source_sha256 предыдущего ответа.
 
-Ограничения: обработчик предназначен для существующих записей; создание слов, связи, изображения, категории и удаление требуют отдельных операций. Ветка запроса должна содержать workflow из актуального main. GitHub Actions должен иметь разрешение contents:write; возможные ограничения защиты веток и разрешения GITHUB_TOKEN проверяются на реальном запуске. Обычный чат не исполняет shell. Режим candidate не является редакторским утверждением, не снимает требования к лингвистическим данным. Все запросы и отчёты публичны. 
+Результат: ветка `library-sqlite-result/<slug>-<12 символов SHA запроса>`, файл result.json и артефакт. Ответ содержит source_commit, source_ref=main, scope=canonical_main_snapshot и source_sha256. Если main изменился, это снимок прежнего состояния; для правок получить свежий ответ.
 
-## SQLite query (experimental integration branch)
+## Предпросмотр и кандидат (изменение)
 
-Request example: `{"version":1,"mode":"query","command":"sqlite","options":{"weight":100,"sounds":["к"],"exclude_sounds":["р","р'"],"has_image":true,"limit":10}}`. The existing bounded request runner builds a disposable index from the selected source, uses parameterized filters, verifies source SHA before and after and returns a compact result. Pagination can supply `source_sha256` from the previous page; a changed source is rejected. No arbitrary SQL or source writes. The temporary SQLite database is deleted. Ordinary read-only toolkit queries are also supported against modules; monolithic candidate/preview writes remain blocked in modular mode.
+Ветка `library-edit-request/<slug>`, файл `editorial/requests/library-edit.json`. Пример формы запроса, не готовый пакет:
 
-For a real GitHub rehearsal, create `library-sqlite-request/<slug>` from the integration branch and commit ONLY `editorial/requests/library-request.json`. The separate workflow checks out the integration branch (not main), reads the request as data, builds modules in runner temp, and writes only result.json to `library-sqlite-result/<slug>-<12 request SHA>`. Result records exact source commit, source SHA, and explicit integration_snapshot_not_live_main scope. This is NOT the current live catalogue if main has changed. Trusted repository writers only: GitHub push workflows themselves are loaded from the request branch, so this is not an untrusted public API. No change to main, gh-pages, or visual branches. Production remote workflow remains untouched until migration.
+```json
+{"version":1,"mode":"preview","source_sha256":"<точный SHA из чтения>","operations":[{"id":"<фактический ID>","path":"/selection/base_weight","expect":{"exists":true,"value":100},"value":70}]}
+```
+
+Всего 1–30 операций, ожидаемые значения сверяются. Поддерживаемые поля и отдельные типы операций определены валидаторами `library-modular-request.cjs`, `library-import.cjs`, `library-editorial-decisions.cjs`, `library-semantic-proposals.cjs`; произвольные поля, смена ID и автоматическое утверждение непроверенных данных запрещены. Для импорта или редакторских решений нужен отдельный пакет по контракту.
+
+После проверки preview создать новый запрос с mode=candidate, теми же операциями и исходным source_sha256, добавить точный preview_sha256 из отчёта. Изменившийся исходник или несовпадение preview отклоняются. Кандидат проверяется, исходник не меняется.
+
+Результат: `library-edit-result/<slug>-<12 символов SHA запроса>`, result.json и, если кандидат изменяет данные, пакет delta/ с изменёнными модулями и manifest. Не считать этот результат PR или утверждением.
+
+## Медиа
+
+Ветка `library-media-request/<slug>`, JSON `editorial/requests/library-media.json`, файлы в `editorial/requests/media/`. Контракт `library-media-request.cjs`: envelope version=1, request с отдельными import_operations, для candidate также media_preview_sha256. Использовать только проверенные WebP, точный ID/значение и SHA изображения. Результат в `library-media-result/<slug>-<12 символов SHA запроса>`. Не смешивать импорт с обычными операциями.
+
+## Применение и выпуск
+
+Проверенный пакет воспроизводится через `library-apply-bundle.cjs` / `library-commit-package.cjs` с точным исходным коммитом и отпечатками предпросмотра. Проверить повторное применение, полный diff, валидаторы и обычный PR в main. Автоматического слияния или публикации по запросу нет. Если источник сдвинулся, повторить запрос. Ветка результата не перезаписывается.
+
+Старый протокол монолитных запросов и интеграционных снимков снят с эксплуатации; историческое описание остаётся в Git и журнале миграции. Каноническая директория используется напрямую; повторно создавать временную копию модулей нельзя.
