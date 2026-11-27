@@ -4,7 +4,6 @@ const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypt
 const {spawnSync}=require('node:child_process');
 const os=require('node:os');
 const ROOT=path.resolve(__dirname,'..');
-const SOURCE=path.join(ROOT,'outputs/library-v2.json');
 const own=(x,k)=>Object.hasOwn(x,k);
 const isObject=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
@@ -41,11 +40,7 @@ function validate(r){
   if(r.command!=='inventory'&&!own(o,'limit'))args.push('--limit','20');
   return {args};
  }
- if(!['preview','candidate'].includes(r.mode)||own(r,'command')||own(r,'options'))throw Error('Invalid mode');
- if(typeof r.source_sha256!=='string'||!/^[a-f0-9]{64}$/.test(r.source_sha256))throw Error('Exact source_sha256 from a fresh query is required');
- if(!Array.isArray(r.operations)||!r.operations.length||r.operations.length>30)throw Error('Remote patch requires 1..30 operations');
- for(const op of r.operations)keys(op,['id','path','expect','value']);
- return {packet:{version:1,operations:r.operations}};
+ throw Error('Read-only request; use library-modular-request.cjs for edits');
 }
 function invoke(args){
  const r=spawnSync(process.execPath,[path.join(ROOT,'scripts/library-toolkit.cjs'),...args],{cwd:ROOT,encoding:'utf8',maxBuffer:2*1024*1024});
@@ -70,7 +65,7 @@ function sqliteQuery(options,expected){
   return {...result,rows:result.rows.map(({metadata_json,normalized,...row})=>row)};
  }finally{fs.rmSync(tmp,{recursive:true,force:true});}
 }
-function run(requestFile,resultFile,allowCandidate=false){
+function run(requestFile,resultFile){
  if(fs.existsSync(resultFile))throw Error('Result already exists');
  const raw=fs.readFileSync(requestFile);
  if(raw.length>64*1024)throw Error('Request exceeds 64 KiB');
@@ -82,28 +77,11 @@ function run(requestFile,resultFile,allowCandidate=false){
   if(result.source_sha256!==before||source.readSource().sha256!==before)throw Error('Source changed during query');
   write(resultFile,{request_sha256:sha(raw),mode:r.mode,command:r.command,source_mode:s.mode,...result});return;
  }
- // Existing remote publisher still writes only monolithic candidates.
- source.requireLegacyWrite();
- if(r.source_sha256!==before)throw Error('Stale source_sha256; make a fresh query and recheck expected values');
- if(r.mode==='candidate'&&!allowCandidate)throw Error('Candidate mode is disabled in this environment');
- // Request and output live in RUNNER_TEMP, never in the editable source tree.
- const packet=resultFile+'.packet.json';
- fs.writeFileSync(packet,JSON.stringify(v.packet),{flag:'wx'});
- try{
-  const preview=invoke(['patch','--file',packet]);
-  // Bound the report before any mutation. Full existing validation on apply.
-  const base={request_sha256:sha(raw),source_sha256:before,mode:r.mode,changed:preview.changed,preview:preview.preview};
-  if(Buffer.byteLength(JSON.stringify(base,null,2))>90*1024)throw Error('Preview too large; split the packet');
-  if(r.mode==='candidate'&&preview.changed){
-   const applied=invoke(['patch','--file',packet,'--apply']);
-   if(applied.changed!==preview.changed)throw Error('Preview/application mismatch');
-  }
-  write(resultFile,{...base,result_source_sha256:sha(fs.readFileSync(SOURCE))});
- }finally{fs.unlinkSync(packet);}
+ throw Error('Read-only request');
 }
 module.exports={validate,run};
 if(require.main===module)try{
- const [request,result,flag,...extra]=process.argv.slice(2);
- if(!request||!result||extra.length||(flag&&flag!=='--allow-candidate'))throw Error('Usage: node scripts/library-request.cjs REQUEST RESULT [--allow-candidate]');
- run(request,result,flag==='--allow-candidate');
+ const [request,result,...extra]=process.argv.slice(2);
+ if(!request||!result||extra.length)throw Error('Usage: node scripts/library-request.cjs REQUEST RESULT');
+ run(request,result);
 }catch(e){console.error(e.message);process.exitCode=1;}

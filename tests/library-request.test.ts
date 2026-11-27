@@ -14,7 +14,7 @@ test('patch requires exact source fingerprint and bounded operations',()=>{
  const op={id:'a',path:'/field',expect:{exists:false},value:'x'};
  assert.throws(()=>validate({version:1,mode:'candidate',operations:[op]}));
  assert.throws(()=>validate({version:1,mode:'preview',source_sha256:'a'.repeat(64),operations:Array(31).fill(op)}));
- assert.deepEqual(validate({version:1,mode:'candidate',source_sha256:'a'.repeat(64),operations:[op]}).packet,{version:1,operations:[op]});
+ assert.throws(()=>validate({version:1,mode:'candidate',source_sha256:'a'.repeat(64),operations:[op]}),/Read-only request/);
 });
 
 test('SQLite request permits bounded filters and optional pagination fingerprint, rejects write or arbitrary SQL',()=>{

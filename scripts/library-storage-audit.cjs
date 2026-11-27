@@ -3,7 +3,6 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
 const {spawnSync}=require('node:child_process');
 const ROOT=path.resolve(__dirname,'..');
-const MASTER=path.join(ROOT,'outputs/library-v2.json');
 const DRAFT=path.join(ROOT,'outputs/library-v2-auto-analysis.json');
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 const bytes=x=>Buffer.byteLength(JSON.stringify(x));
@@ -113,27 +112,11 @@ function audit(db,draft,sourceBytes){
  }
  return {source_bytes:sourceBytes,entries:db.entries.length,relations:db.relations.length,categories:db.categories.length,archive,overlap,fields:obj([...field].sort((a,b)=>b[1].value_bytes-a[1].value_bytes)),notes:['Exact value overlap is diagnostic only, not a deletion candidate.','Value bytes exclude keys, indentation and enclosing arrays.','Unknown fields remain in core.','No semantic equivalence inferred.']};
 }
-function verifyRuntime(db,original){
- const files=['public/library.json','public/semantic-graph.json','public/grammar-frames.json'];
- const saved=new Map(files.map(f=>{const p=path.join(ROOT,f);return [p,fs.existsSync(p)?fs.readFileSync(p):null];}));
- const exec=()=>{const p=spawnSync(process.execPath,[path.join(ROOT,'scripts/export-library.cjs')],{cwd:ROOT,encoding:'utf8',maxBuffer:8*1024*1024});if(p.error||p.status!==0)throw Error('Runtime export failed '+(p.error||p.stderr||p.stdout));return obj(files.map(f=>[f,hash(fs.readFileSync(path.join(ROOT,f)))]));};
- try{
-  const before=exec();
-  fs.writeFileSync(MASTER,JSON.stringify(db,null,2)+'\n');
-  const after=exec();assert.deepStrictEqual(after,before,'Runtime output changed');
-  return before;
- }finally{
-  fs.writeFileSync(MASTER,original);
-  for(const [p,raw] of saved)if(raw===null){if(fs.existsSync(p))fs.unlinkSync(p);}else fs.writeFileSync(p,raw);
- }
-}
 function main(){
- const [dest,flag,...extra]=process.argv.slice(2);
- if(!dest||extra.length||(flag&&flag!=='--verify-runtime'))throw Error('Usage: node scripts/library-storage-audit.cjs NEW_OUTPUT_DIR [--verify-runtime]');
- // Runtime verification temporarily writes source in a disposable checkout only.
- if(flag&&process.env.GITHUB_ACTIONS!=='true')throw Error('--verify-runtime only in disposable Actions checkout');
+ const [dest,...extra]=process.argv.slice(2);
+ if(!dest||extra.length)throw Error('Usage: node scripts/library-storage-audit.cjs NEW_OUTPUT_DIR');
  const output=path.resolve(dest);assert(!fs.existsSync(output),'Output directory must not exist');
- const raw=fs.readFileSync(MASTER),db=JSON.parse(raw),draft=JSON.parse(fs.readFileSync(DRAFT));
+ const {raw:text,db}=require('./library-source.cjs').readSource(),raw=Buffer.from(text),draft=JSON.parse(fs.readFileSync(DRAFT));
  const {manifest,files}=split(db,hash(raw));
  fs.mkdirSync(output,{recursive:true});
  const layout=path.join(output,'layout');
@@ -144,9 +127,8 @@ function main(){
  const report=audit(db,draft,raw.length);
  report.source_sha256=hash(raw);
  report.layout={files:files.size+1,total_bytes:[...files.values()].reduce((n,s)=>n+Buffer.byteLength(s),0)+fs.statSync(path.join(layout,'manifest.json')).size,max_file_bytes:Math.max(...[...files.values()].map(s=>Buffer.byteLength(s)),fs.statSync(path.join(layout,'manifest.json')).size),roundtrip:'exact JSON values and key/array order'};
- if(flag)report.runtime_sha256=verifyRuntime(restored,raw);
  fs.writeFileSync(path.join(output,'audit.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({entries:report.entries,relations:report.relations,categories:report.categories,source_bytes:report.source_bytes,archive:report.archive,overlap:report.overlap,largest_fields:Object.entries(report.fields).slice(0,10),layout:report.layout,runtime_sha256:report.runtime_sha256},null,2));
 }
-module.exports={split,restore,audit,bucket,verifyRuntime};
+module.exports={split,restore,audit,bucket};
 if(require.main===module)try{main();}catch(e){console.error(e.stack);process.exitCode=1;}

@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
-const {spawnSync}=require('node:child_process');
 const ROOT=path.resolve(__dirname,'..');
-const SOURCE=path.join(ROOT,'outputs/library-v2.json');
 const own=(o,k)=>o!==null&&typeof o==='object'&&Object.hasOwn(o,k);
 const clone=x=>JSON.parse(JSON.stringify(x));
 const digest=s=>crypto.createHash('sha256').update(s).digest('hex');
@@ -96,29 +94,8 @@ function patches(db,packet){
  return {db:result,changes};
 }
 function read(){return require('./library-source.cjs').readSource();}
-function writeAtomic(raw){
- const tmp=SOURCE+'.tmp-'+process.pid;
- try{fs.writeFileSync(tmp,raw,{flag:'wx'});fs.renameSync(tmp,SOURCE);}finally{if(fs.existsSync(tmp))fs.unlinkSync(tmp);}
-}
-function apply(raw,db,changes){
- require('./library-source.cjs').requireLegacyWrite();
- if(!changes.length)return;
- // Lock cooperating CLI writers; stale lock after a hard interruption is
- // deliberately not cleared automatically. Do not edit the file concurrently.
- const lock=SOURCE+'.edit-lock';const fd=fs.openSync(lock,'wx');
- try{
-  if(digest(fs.readFileSync(SOURCE))!==digest(raw))throw Error('Source changed since read');
-  require('./validate-library-contract.cjs').validateLibrary(db);
-  const candidate=JSON.stringify(db,null,2)+'\n';
-  writeAtomic(candidate);
-  try{
-   const r=spawnSync(process.execPath,[path.join(ROOT,'scripts/check-library-v2.cjs')],{cwd:ROOT,encoding:'utf8',maxBuffer:8*1024*1024});
-   if(r.error||r.status!==0)throw Error('Full library validation failed: '+(r.error||r.stderr||r.stdout));
-  }catch(e){if(digest(fs.readFileSync(SOURCE))===digest(candidate))writeAtomic(raw);else throw Error('Validation failed and file changed concurrently; inspect git diff before rollback');throw e;}
- }finally{fs.closeSync(fd);fs.unlinkSync(lock);}
-}
 function args(xs){
- const out={};const booleans=new Set(['full','apply']);
+ const out={};const booleans=new Set(['full']);
  for(let i=0;i<xs.length;i++){const k=xs[i];if(!k.startsWith('--'))throw Error('Unknown argument '+k);
   const name=k.slice(2);if(own(out,name)||blocked.has(name))throw Error('Duplicate/unsafe option '+k);
   if(booleans.has(name))out[name]=true;
@@ -128,14 +105,13 @@ function args(xs){
 function main(){
  const [cmd,...rest]=process.argv.slice(2);
  if(!['find','inspect','select','gaps','inventory','patch'].includes(cmd))throw Error('Commands: find, inspect, select, gaps, inventory, patch. See docs/LIBRARY_TOOLKIT.md');
- const a=args(rest),allowed=cmd==='patch'?['file','apply']:cmd==='inventory'?['fields']:['id','lemma','weight','category','field','equals','fields','limit','offset','full'];
+ const a=args(rest),allowed=cmd==='patch'?['file']:cmd==='inventory'?['fields']:['id','lemma','weight','category','field','equals','fields','limit','offset','full'];
  for(const k of Object.keys(a))if(!allowed.includes(k))throw Error('Unknown option --'+k);
  const {raw,db,sha256}=read();let out;
  if(cmd==='patch'){
   if(!a.file)throw Error('Provide --file packet.json');
   const result=patches(db,JSON.parse(fs.readFileSync(a.file,'utf8')));
-  if(a.apply)apply(raw,result.db,result.changes);
-  out={mode:a.apply?'applied':'dry-run',source_sha256:sha256,changed:result.changes.length,preview:result.changes.slice(0,30),remaining:Math.max(0,result.changes.length-30)};
+  out={mode:'dry-run',source_sha256:sha256,changed:result.changes.length,preview:result.changes.slice(0,30),remaining:Math.max(0,result.changes.length-30)};
  }else if(cmd==='inventory')out={source_sha256:sha256,...inventory(db,a.fields?.split(',')||[])};
  else{
   if(cmd==='find'&&!a.lemma&&!a.id)throw Error('Provide --lemma or --id');

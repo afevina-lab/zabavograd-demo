@@ -9,7 +9,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 import pymorphy3
-from library_source import read_snapshot
+from library_source import read_snapshot, _modular_requested
 
 ROOT=Path(__file__).resolve().parent.parent
 SOURCE=ROOT/"outputs/library-v2.json"
@@ -232,10 +232,10 @@ def run():
  parser.add_argument('--initial-only', action='store_true', help='Only fields still pending initial analysis')
  args=parser.parse_args()
  if args.limit is not None and args.limit<1: parser.error('limit must be positive')
- if 'ZABAVOGRAD_LIBRARY_MODULES' in os.environ and (not args.output or not args.report): parser.error('modular mode requires explicit draft and report output paths')
+ if _modular_requested() and (not args.output or not args.report): parser.error('modular mode requires explicit draft and report output paths')
  output=args.output or OUTPUT
  report=args.report or REPORT
- if 'ZABAVOGRAD_LIBRARY_MODULES' in os.environ and (output.resolve()==OUTPUT.resolve() or report.resolve()==REPORT.resolve()): parser.error('modular mode must not overwrite existing draft/report')
+ if _modular_requested() and (output.resolve()==OUTPUT.resolve() or report.resolve()==REPORT.resolve()): parser.error('modular mode must not overwrite existing draft/report')
  data,source=read_snapshot()
  accentor,transcriber=(None,None) if args.morphology_only else g2p_components()
  proposals=[]

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
-const {split,restore,verifyRuntime}=require('./library-storage-audit.cjs');
-const ROOT=path.resolve(__dirname,'..'),MASTER=path.join(ROOT,'outputs/library-v2.json');
+const {split,restore}=require('./library-storage-audit.cjs');
+const ROOT=path.resolve(__dirname,'..');
 const H=v=>crypto.createHash('sha256').update(v).digest('hex');
 const own=(o,k)=>Object.hasOwn(o,k);
 const reserved='__storage_shared_values',marker='__storage_ref';
@@ -85,7 +85,7 @@ function experiment(db,raw){
 function main(){
  const [dest,...extra]=process.argv.slice(2);if(!dest||extra.length)throw Error('Usage: library-storage-optimize.cjs NEW_OUTPUT_DIR');
  const output=path.resolve(dest);assert(!fs.existsSync(output),'Output exists');
- const raw=fs.readFileSync(MASTER),db=JSON.parse(raw),x=experiment(db,raw);
+ const {raw:text,db}=require('./library-source.cjs').readSource(),raw=Buffer.from(text),x=experiment(db,raw);
  fs.mkdirSync(output,{recursive:true});
  const report={source_sha256:H(raw),entries:db.entries.length,shared:x.shared,selected:x.selected,results:x.results};
  if(x.selected){
@@ -94,7 +94,6 @@ function main(){
   fs.writeFileSync(path.join(dir,'manifest.json'),JSON.stringify({...layout.manifest,encoding:'immutable-shared-values-v1'},null,2)+'\n');
   const rebuilt=unpack(restore(JSON.parse(fs.readFileSync(path.join(dir,'manifest.json'))),f=>fs.readFileSync(path.join(dir,f),'utf8')));
   assert.deepStrictEqual(rebuilt,db);assert.equal(JSON.stringify(rebuilt),JSON.stringify(db));
-  if(process.env.GITHUB_ACTIONS==='true')report.runtime_sha256=verifyRuntime(rebuilt,raw);
  }
  fs.writeFileSync(path.join(output,'optimization.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({entries:report.entries,shared:x.shared,selected:x.selected,layouts:Object.fromEntries(Object.entries(x.results).map(([k,r])=>[k,{files:r.files,total_bytes:r.total_bytes,max_editable_shard_bytes:Math.max(...Object.entries(r.groups).filter(([g])=>g!=='metadata').map(([,s])=>s.max_bytes)),max_data_file_bytes:r.max_data_file_bytes,manifest_bytes:r.manifest_bytes}])),runtime_sha256:report.runtime_sha256},null,2));

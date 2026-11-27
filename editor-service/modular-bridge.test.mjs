@@ -24,7 +24,8 @@ test('submits only request file to isolated branch; no main or PR changes',async
  assert.equal(calls[1].b.tree[0].path,'editorial/requests/library-request.json');
  assert.equal(calls[3].b.ref,'refs/heads/library-sqlite-request/'+slug);
  assert.equal(calls[4].m,'PATCH');assert.equal(calls[4].b.force,false);
- assert(!calls.some(x=>x.p.includes('/pulls')||x.p.endsWith('/main')));
+ assert(!calls.some(x=>x.p.includes('/pulls')||x.p.includes('/git/refs/heads/main')||x.b?.ref==='refs/heads/main'));
+ assert.equal(calls[0].b,undefined,'Reading main must not send a mutation body');
 });
 test('result unavailable is not a success; exact request binding checked',async()=>{
  const ticket='edit/'+slug+'-'+c.slice(0,12);
