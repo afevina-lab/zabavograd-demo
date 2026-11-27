@@ -45,6 +45,6 @@ jobs:
           rm migrate-machine-draft-once.cjs .github/workflows/one-time-machine-draft-migration.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A -- outputs/library-modules outputs/library-v2-auto-analysis.json migrate-machine-draft-once.cjs .github/workflows/one-time-machine-draft-migration.yml
+          git add -A -- scripts/library-store.cjs outputs/library-modules outputs/library-v2-auto-analysis.json migrate-machine-draft-once.cjs .github/workflows/one-time-machine-draft-migration.yml
           git commit -m "Retire historical machine draft after exact runtime verification"
           git push origin HEAD:refs/heads/migration/retire-machine-draft-20261127

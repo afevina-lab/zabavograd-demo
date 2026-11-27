@@ -58,7 +58,17 @@ for(const r of entries){
 assert.equal(counts.runtime_migrated,8);assert.equal(counts.rows,1434);
 require('./scripts/library-archive-guard.cjs').verifyArchive(db,require('./editorial/library-archive-baseline.json'));
 require('./scripts/validate-library-contract.cjs').validateLibrary(db);
-const dest=process.env.RUNNER_TEMP+'/new-modules',m=store.create(dest,db);
+// Keep the original reader until its logical snapshot has been verified.
+const storePath=require.resolve('./scripts/library-store.cjs');
+const storeText=fs.readFileSync(storePath,'utf8'),oldCounts="const counts=Object.freeze(Object.fromEntries([...groups.map(g=>['entries/'+g,32]),['relations',32]]));";
+assert(storeText.includes(oldCounts),'Unexpected store layout contract');
+fs.writeFileSync(storePath,storeText.replace(oldCounts,"const counts=Object.freeze(Object.fromEntries([...groups.map(g=>['entries/'+g,g==='machine'?64:32]),['relations',32]]));"));
+delete require.cache[storePath];
+const newStore=require(storePath),dest=process.env.RUNNER_TEMP+'/new-modules',m=newStore.create(dest,db);
+assert.equal(newStore.load(dest).source_sha256,m.source_sha256);
+for(const [f,v] of Object.entries(current.manifest.files)){
+ if(/^(entries\/(?!machine\/|phonetics\/|core\/)|relations\/|categories\.json$)/.test(f))assert.deepEqual(m.files[f],v,'Unrelated shard changed '+f);
+}
 cp.execFileSync(process.execPath,['scripts/check-library-v2.cjs','--candidate-dir',dest],{stdio:'inherit'});
 const beforeBytes=Object.values(current.manifest.files).reduce((n,f)=>n+f.bytes,0)+fs.statSync(dir+'/manifest.json').size+raw.length;
 const afterBytes=Object.values(m.files).reduce((n,f)=>n+f.bytes,0)+fs.statSync(dest+'/manifest.json').size;
