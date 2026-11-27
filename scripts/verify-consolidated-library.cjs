@@ -2,7 +2,7 @@
 'use strict';
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
-const db=read('outputs/library-v2.json');
+const db=require('./library-source.cjs').readSource().db;
 const runtime=read('library.json');
 const graph=read('semantic-graph.json');
 const registry=read('outputs/image-library.json');

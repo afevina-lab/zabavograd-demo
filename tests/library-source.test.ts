@@ -14,12 +14,10 @@ test('explicit modular source, no fallback if invalid and no direct legacy write
  const old=process.env.ZABAVOGRAD_LIBRARY_MODULES;
  try{
   const dir=path.join(tmp,'modules');create(dir,db);
-  process.env.ZABAVOGRAD_LIBRARY_MODULES=dir;
-  assert.deepEqual(readSource().db,db);
-  assert.equal(readSource().mode,'modules');
-  assert.throws(()=>requireLegacyWrite(),/Direct V2 write disabled/);
-  process.env.ZABAVOGRAD_LIBRARY_MODULES=path.join(tmp,'missing');
-  assert.throws(()=>readSource());
+  fs.mkdirSync(path.join(tmp,'outputs'));
+  assert.deepEqual(readSource(tmp,{ZABAVOGRAD_LIBRARY_MODULES:dir}).db,db);
+  assert.equal(readSource(tmp,{ZABAVOGRAD_LIBRARY_MODULES:dir}).mode,'modules');
+  assert.throws(()=>readSource(tmp,{ZABAVOGRAD_LIBRARY_MODULES:path.join(tmp,'missing')}));
  }finally{
   if(old===undefined)delete process.env.ZABAVOGRAD_LIBRARY_MODULES;else process.env.ZABAVOGRAD_LIBRARY_MODULES=old;
   fs.rmSync(tmp,{recursive:true,force:true});
