@@ -1,0 +1,45 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);
+const s=require('../scripts/library-semantic-proposals.cjs'),d=require('../scripts/library-editorial-decisions.cjs');
+const {validateExport}=require('../scripts/semantic-review.cjs');
+const {build,fingerprint}=require('../scripts/library-store.cjs');
+const {prepare}=require('../scripts/library-modular-request.cjs');
+const db={entries:[{id:'a',lemma:'колесо',kind:'word',meaning:null},{id:'b',lemma:'машина',kind:'word',meaning:'автомобиль'}],relations:[],categories:[]};
+const initial=s.plan(db,[{type:'part_of',subject:s.reference(db.entries[0]),object:s.reference(db.entries[1]),reason:'Часть автомобиля'}]).db;
+const p=initial.entries[0].semantic_review_proposals[0];
+const accept={domain:'semantic',entry_id:'a',proposal_id:p.id,proposal_sha256:d.digest(p),action:'accept',reason:'Проверены оба значения',sense_checked:true,typical_for_children:true,independently_authored:true};
+const reject={domain:'semantic',entry_id:'a',proposal_id:p.id,proposal_sha256:d.digest(p),action:'reject',reason:'Не включать связь'};
+test('accept adds one audited relation, reject adds none; proposal removed only in candidate',()=>{
+ const a=d.plan(initial,[accept]).db,b=d.plan(initial,[reject]).db;
+ assert.equal(a.relations.length,1);assert.equal(validateExport(a).relations.length,1);
+ assert.equal(a.editorial_decision_history.length,1);assert.equal(s.counts(a).size,0);
+ assert.equal(b.relations.length,0);assert.equal(b.editorial_decision_history[0].decision.action,'reject');
+ assert.equal(initial.relations.length,0);assert.equal(s.counts(initial).size,2);
+ assert.throws(()=>d.plan(a,[accept]),/missing|No semantic/);
+ const tampered=structuredClone(a);tampered.editorial_decision_history[0].proposal.reason='Изменено';
+ assert.throws(()=>validateExport(tampered),/Non-cleared/);
+});
+test('stale, unconfirmed and duplicate decisions rejected; preview bound',()=>{
+ assert.throws(()=>d.plan(initial,[{...accept,proposal_sha256:'0'.repeat(64)}]),/Proposal changed/);
+ assert.throws(()=>d.plan(initial,[{...accept,sense_checked:false}]),/confirmations/);
+ assert.throws(()=>d.plan(initial,[reject,reject]),/missing|No semantic/);
+ const current={db:initial,manifest:build(initial).manifest,source_sha256:fingerprint(initial)};
+ const r={version:1,mode:'preview',source_sha256:current.source_sha256,operations:[],review_decisions:[accept]};
+ const a=prepare(current,r);
+ assert.equal(a.preview.review_decisions.length,1);assert.equal(a.planned.db.relations.length,1);
+ assert.equal(prepare(current,{...r,mode:'candidate',preview_sha256:a.preview_sha256}).preview_sha256,a.preview_sha256);
+});
+test('phonetic rejection preserves active analysis and exact proposal in audit',()=>{
+ const x=structuredClone(db);x.entries[0].lemma='кот';
+ const base={status:'filled_with_explicit_extended_cases',sound_tokens:['к','о','т']};
+ const proposal={source:'editorial_review',status:'suggested',usable_for_generation:false,base,sound_tokens:['к','о','т'],stress_syllable:1,syllable_count:1,stressed_vowel:'о',reason:'Проверка произношения'};
+ x.entries[0].phonetic_tags={status:base.status,data:{sound_tokens:base.sound_tokens},review_proposal:proposal};
+ const r={domain:'phonetic',entry_id:'a',proposal_sha256:d.digest(proposal),action:'reject',reason:'Не менять разбор'};
+ const y=d.plan(x,[r]).db;
+ assert.deepEqual(y.entries[0].phonetic_tags.data,x.entries[0].phonetic_tags.data);
+ assert.deepEqual(y.editorial_decision_history[0].proposal,proposal);
+ assert(!Object.hasOwn(y.entries[0].phonetic_tags,'review_proposal'));
+ assert.throws(()=>d.plan(x,[{...r,action:'accept'}]),/deferred/);
+});

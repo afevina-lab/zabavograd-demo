@@ -1,6 +1,9 @@
 """Build-only RuWordNet adapter unit tests: no external database is needed."""
 import importlib.util
 import unittest
+import tempfile
+import json
+import hashlib
 from pathlib import Path
 
 path = Path(__file__).resolve().parents[1] / "scripts" / "ruwordnet-suggestions.py"
@@ -37,6 +40,16 @@ class TestRuWordNet(unittest.TestCase):
         self.assertEqual(out["records"][0]["relation_type"],"is_a")
         self.assertFalse(out["records"][0]["usable_for_generation"])
         self.assertEqual(out["records"][0]["subject_id"],"apple")
+    def test_explicit_offline_snapshot_is_fingerprinted(self):
+        with tempfile.TemporaryDirectory() as d:
+            p = Path(d) / "snapshot.json"
+            raw = json.dumps({"entries": self.words}).encode("utf-8")
+            p.write_bytes(raw)
+            db, source = module.read_input(p)
+            self.assertEqual(db["entries"], self.words)
+            self.assertEqual(source["mode"], "explicit_offline_snapshot")
+            self.assertEqual(source["sha256"], hashlib.sha256(raw).hexdigest())
+            self.assertEqual(p.read_bytes(), raw)
     def test_no_guess_without_mapping(self):
         self.assertEqual(module.produce(self.wn,[],self.words,"hash")["records"],[])
     def test_reject_ambiguous_local_mapping(self):

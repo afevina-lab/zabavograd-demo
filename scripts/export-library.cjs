@@ -9,7 +9,7 @@
 const fs=require('node:fs');
 const assert=require('node:assert/strict');
 const {soundIndex,letterMap}=require('./sound-index.cjs');
-const db=JSON.parse(fs.readFileSync('outputs/library-v2.json','utf8'));
+const db=require('./library-source.cjs').readSource().db;
 let pending=null;
 try{
  pending=JSON.parse(fs.readFileSync('outputs/library-v2-auto-analysis.json','utf8'));

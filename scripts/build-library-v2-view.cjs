@@ -1,12 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 const fs=require('node:fs');
-const crypto=require('node:crypto');
-// The JSON catalogue on main is the ONLY editorial source. This HTML is a
-// generated, read-only snapshot for authenticated GitHub editors to inspect.
-const source=fs.readFileSync('outputs/library-v2.json');
-const sourceHash=crypto.createHash('sha256').update(source).digest('hex');
-const db=JSON.parse(source.toString('utf8'));
+// Generated read-only view of the selected canonical source.
+const {db,sha256:sourceHash}=require('./library-source.cjs').readSource();
 const genera=db.relations.filter(r=>r.type==='is_a'&&r.child&&r.parent);
 const semantic=db.relations.filter(r=>r.subject&&r.object);
 const rows=db.entries.map(e=>({

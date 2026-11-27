@@ -3,6 +3,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 const crypto=require('node:crypto');
 const https=require('node:https');
+const {readSource}=require('./library-source.cjs');
 const SOURCES={
  constructicon:{name:'Russian Constructicon (data only)',license:'CC BY 4.0',commit:'7806b7d74c56192b97150b06f755be4d37ad5b3c',files:['database.csv'],root:'https://raw.githubusercontent.com/constructicon/russian-data/'},
  framebank:{name:'Russian FrameBank offline dictionary',license:'GPL-3.0',commit:'e60da2a38f645db21c55aa0e7ff9730e92e7e2ca',files:['framebank_dict_cx.txt','framebank_dict_cx_items.txt'],root:'https://raw.githubusercontent.com/olesar/framebank/'},
@@ -68,12 +69,13 @@ function wikidataProposals(entityJson,mappings){
 function dedupe(items){const seen=new Set();return items.filter(x=>{const key=x.source+'|'+x.source_record_id+'|'+(x.entry_id||x.anchor_lemma||x.subject_id+'|'+x.object_id);if(seen.has(key))return false;seen.add(key);return true;});}
 function download(url,remaining=3){return new Promise((resolve,reject)=>{const req=https.get(url,{headers:{'User-Agent':'zabavograd-linguistics-import/1.0','Accept':'text/plain,application/json'}},r=>{if([301,302,303,307,308].includes(r.statusCode)&&r.headers.location&&remaining){r.resume();return resolve(download(new URL(r.headers.location,url).href,remaining-1));}if(r.statusCode!==200){r.resume();return reject(Error('HTTP '+r.statusCode+' '+url));}const chunks=[];let bytes=0;r.on('data',chunk=>{bytes+=chunk.length;if(bytes>40*1024*1024){req.destroy(Error('Source too large'));return;}chunks.push(chunk);});r.on('end',()=>resolve(Buffer.concat(chunks).toString('utf8')));r.on('error',reject);});req.setTimeout(30000,()=>req.destroy(Error('Source request timeout')));req.on('error',reject);});}
 async function collect({source,fetchRemote=false,root=process.cwd(),mappingFile=null}){
- const db=JSON.parse(fs.readFileSync(path.join(root,'outputs/library-v2.json'),'utf8'));
- const entries=db.entries||[];let suggestions=[],inputs=[];
+ const snapshot=readSource(root);
+ const entries=snapshot.db.entries||[];let suggestions=[],inputs=[];
  const dir=path.join(root,'.cache','linguistic-sources');fs.mkdirSync(dir,{recursive:true});
  if(source==='wikidata'){
   if(!mappingFile)throw Error('Wikidata requires explicit reviewed QID mappings (--mapping FILE)');
   const mappings=JSON.parse(fs.readFileSync(mappingFile,'utf8'));if(!Array.isArray(mappings)||!mappings.length)throw Error('Mapping must be a non-empty array');
+  if(mappings.some(m=>!m||typeof m.qid!=='string'||!/^Q[1-9]\d*$/.test(m.qid)||typeof m.entry_id!=='string'||!m.entry_id))throw Error('Invalid Wikidata mapping');
   if(new Set(mappings.map(m=>m.entry_id)).size!==mappings.length)throw Error('Duplicate local entry IDs in QID mapping');
   const ids=new Set(entries.map(e=>e.id));if(mappings.some(m=>!ids.has(m.entry_id)))throw Error('Unknown local entry ID in QID mapping');
   const payload={entities:{}};for(const qid of [...new Set(mappings.map(m=>m.qid))]){const file=path.join(dir,'wikidata-'+qid+'.json');if(fetchRemote)fs.writeFileSync(file,await download(SOURCES.wikidata.endpoint+qid+'.json'));if(!fs.existsSync(file))throw Error('Missing cached Wikidata entity '+qid+' (use --fetch)');const data=JSON.parse(fs.readFileSync(file,'utf8'));Object.assign(payload.entities,data.entities||{});inputs.push({file:path.relative(root,file),sha256:crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')});}
@@ -84,7 +86,7 @@ async function collect({source,fetchRemote=false,root=process.cwd(),mappingFile=
   suggestions=source==='constructicon'?constructiconProposals(texts[0],entries):framebankProposals(texts[0],texts[1],entries);
  }else throw Error('Unknown source '+source);
  return {schema:'linguistic_suggestions_v1',source,license:SOURCES[source].license,source_revision:SOURCES[source].commit||'per-QID snapshot',created_at:new Date().toISOString(),inputs,
-   purpose:'review_only',automatic_changes_to_master:false,records:dedupe(suggestions)};
+   library_source:{mode:snapshot.mode,sha256:snapshot.sha256},purpose:'review_only',automatic_changes_to_master:false,records:dedupe(suggestions)};
 }
 async function main(argv=process.argv.slice(2)){
  const option=n=>argv.indexOf(n)>=0?argv[argv.indexOf(n)+1]:null;

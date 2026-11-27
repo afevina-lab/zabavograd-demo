@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """Produce unapproved morphological and phonetic proposals for pending V2 words."""
 import json
+import argparse
+import os
 import re
 import sys
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 import pymorphy3
+from library_source import read_snapshot
 
 ROOT=Path(__file__).resolve().parent.parent
 SOURCE=ROOT/"outputs/library-v2.json"
@@ -220,12 +223,30 @@ def g2p_proposal(lemma,accentor,transcriber):
   return {"status":"needs_review","reason":"g2p_error","detail":str(exc)[:140]}
 
 def run():
- data=json.loads(SOURCE.read_text(encoding="utf-8"))
- accentor,transcriber=g2p_components()
+ parser=argparse.ArgumentParser()
+ parser.add_argument('--output', type=Path)
+ parser.add_argument('--report', type=Path)
+ parser.add_argument('--limit', type=int)
+ parser.add_argument('--weight', type=int, choices=[0,10,20,30,50,70,100])
+ parser.add_argument('--morphology-only', action='store_true')
+ parser.add_argument('--initial-only', action='store_true', help='Only fields still pending initial analysis')
+ args=parser.parse_args()
+ if args.limit is not None and args.limit<1: parser.error('limit must be positive')
+ if 'ZABAVOGRAD_LIBRARY_MODULES' in os.environ and (not args.output or not args.report): parser.error('modular mode requires explicit draft and report output paths')
+ output=args.output or OUTPUT
+ report=args.report or REPORT
+ if 'ZABAVOGRAD_LIBRARY_MODULES' in os.environ and (output.resolve()==OUTPUT.resolve() or report.resolve()==REPORT.resolve()): parser.error('modular mode must not overwrite existing draft/report')
+ data,source=read_snapshot()
+ accentor,transcriber=(None,None) if args.morphology_only else g2p_components()
  proposals=[]
- for entry in data["entries"]:
-  pending_ph=(entry.get("phonetic_tags") or {}).get("status") in ("pending_automatic_analysis","automatic_candidate_needs_review")
-  pending_mo=(entry.get("morphology") or {}).get("status") in ("pending_automatic_analysis","automatic_candidate_needs_review")
+ entries=sorted(data["entries"],key=lambda e:(-(e.get("selection") or {}).get("base_weight",0),e["id"])) if args.limit is not None or args.weight is not None else data["entries"]
+ for entry in entries:
+  if args.weight is not None and (entry.get("selection") or {}).get("base_weight")!=args.weight: continue
+  if args.limit is not None and len(proposals)>=args.limit: break
+  pending_statuses=("pending_automatic_analysis",) if args.initial_only else ("pending_automatic_analysis","automatic_candidate_needs_review")
+  pending_ph=(entry.get("phonetic_tags") or {}).get("status") in pending_statuses
+  pending_mo=(entry.get("morphology") or {}).get("status") in pending_statuses
+  if args.morphology_only: pending_ph=False
   if not(pending_ph or pending_mo):
    continue
   word=entry["lemma"]
@@ -243,12 +264,13 @@ def run():
  }
  out={
   "schema_version":1,"generated_at":datetime.now(timezone.utc).isoformat(timespec="seconds"),
-  "source":"outputs/library-v2.json","status":"DRAFT_ONLY_NOT_APPROVED",
+  "source":source,"status":"DRAFT_ONLY_NOT_APPROVED",
+  "scope":{"weight":args.weight,"limit":args.limit,"morphology_only":args.morphology_only,"initial_only":args.initial_only},
   "tools":{"morphology":"pymorphy3","phonetics":"nsu-ai/russian_g2p"},
   "note":"Draft morphology needs review; draft G2P is used in automatic tasks only for unambiguously letter-aligned target phonemes, by author decision. V2 source is unchanged.",
   "stats":counts,"entries":proposals,
  }
- OUTPUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+ output.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
  lines=[
   "# Автоматический анализ слов — черновик для проверки",
   "","Результаты НЕ перенесены в утверждённые фонетические и морфологические поля.",
@@ -268,7 +290,7 @@ def run():
  for row in proposals:
   if row["lemma"] in {"бабушка","кошка","морж","заяц","дом","цифра","коза","кролик","яблоко","слон"}:
    lines.append("- "+row["lemma"]+": "+json.dumps({"phonetic":row["phonetic"],"morphology":row["morphology"]},ensure_ascii=False))
- REPORT.write_text("\n".join(lines)+"\n",encoding="utf-8")
+ report.write_text("\n".join(lines)+"\n",encoding="utf-8")
  print(json.dumps(counts,ensure_ascii=False,indent=2))
 
 if __name__=="__main__":

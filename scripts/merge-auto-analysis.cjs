@@ -10,6 +10,12 @@
 const fs=require('node:fs');
 const assert=require('node:assert/strict');
 
+if(process.env.ZABAVOGRAD_LIBRARY_MODULES!==undefined){
+ const [draft,dest,...rest]=process.argv.slice(2);
+ if(!draft||!dest||rest.length)throw Error('Modular mode: merge-auto-analysis.cjs DRAFT_JSON NEW_DIR');
+ console.log(JSON.stringify(require('./library-initial-analysis.cjs').stage(process.env.ZABAVOGRAD_LIBRARY_MODULES,JSON.parse(fs.readFileSync(draft,'utf8')),dest),null,2));
+ process.exit(0);
+}
 const LIB='outputs/library-v2.json';
 const PROPOSALS='outputs/library-v2-auto-analysis.json';
 const REPORT='outputs/METADATA_ENRICHMENT.md';

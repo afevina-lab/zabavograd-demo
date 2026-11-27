@@ -90,26 +90,52 @@ def discover(wn, entries):
     return {"schema": "ruwordnet_mapping_candidates_v1",
             "purpose": "manual_sense_matching_only", "entries": result}
 
+def read_input(snapshot_path=None):
+    # Explicit offline snapshots remain supported for research, never silently
+    # preferred over the canonical source or used for an active write.
+    if snapshot_path is not None:
+        raw = Path(snapshot_path).read_bytes()
+        return json.loads(raw), {
+            "mode": "explicit_offline_snapshot",
+            "sha256": hashlib.sha256(raw).hexdigest(),
+        }
+    from library_source import read_snapshot
+    db, source = read_snapshot()
+    return db, {
+        "mode": "modules" if source["path"] == "generated V2 from modules" else "legacy",
+        "sha256": source["sha256"],
+    }
+
 def main():
     parser = argparse.ArgumentParser(description="Generate non-publishable RuWordNet sense-relation proposals")
     parser.add_argument("--mapping", help="JSON list: synset_id, entry_id (required unless --discover)")
-    parser.add_argument("--library", default="outputs/library-v2.json")
+    parser.add_argument("--library", help="Explicit offline JSON snapshot for research; default: current canonical source")
     parser.add_argument("--output", help="JSON output file")
     parser.add_argument("--database", help="Authorized local RuWordNet SQLite file")
     parser.add_argument("--discover", action="store_true", help="Only prepare possible synset matches for manual review")
     args = parser.parse_args()
     from ruwordnet import RuWordNet
     wn = RuWordNet(filename_or_session=args.database) if args.database else RuWordNet()
-    lib_data = Path(args.library).read_bytes()
-    entries = json.loads(lib_data)["entries"]
+    lib, source = read_input(args.library)
+    entries = lib["entries"]
     if args.discover:
         result = discover(wn, entries)
     else:
         if not args.mapping:
             parser.error("--mapping is required unless --discover is used")
         mapping = json.loads(Path(args.mapping).read_text(encoding="utf-8"))
-        result = produce(wn, mapping, entries, hashlib.sha256(lib_data).hexdigest())
+        result = produce(wn, mapping, entries, source["sha256"])
+    result["library_source"] = source
     dest = Path(args.output or ('.local/linguistic-sources/ruwordnet-mapping-candidates.json' if args.discover else '.local/linguistic-sources/ruwordnet-suggestions.json'))
+    # Research output is allowed in .local or outside the repository, never
+    # in canonical modules, runtime assets, Git metadata or source files.
+    root = Path(__file__).resolve().parents[1]
+    target = dest.resolve()
+    local = (root / ".local").resolve()
+    if target == root or (root in target.parents and local not in target.parents):
+        parser.error("Research output must be in .local or outside the repository")
+    if args.library and target == Path(args.library).resolve():
+        parser.error("Research output must not overwrite the input snapshot")
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     count = len(result["entries"]) if args.discover else len(result["records"])
