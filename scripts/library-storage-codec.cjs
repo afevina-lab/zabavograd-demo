@@ -1,11 +1,7 @@
-#!/usr/bin/env node
 'use strict';
-const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
-const {spawnSync}=require('node:child_process');
-const ROOT=path.resolve(__dirname,'..');
-const DRAFT=path.join(ROOT,'outputs/library-v2-auto-analysis.json');
+// Canonical lossless library encoding: sharding, key order and immutable shared content.
+const crypto=require('node:crypto'),assert=require('node:assert/strict');
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
-const bytes=x=>Buffer.byteLength(JSON.stringify(x));
 const own=(x,k)=>Object.hasOwn(x,k);
 const obj=xs=>Object.fromEntries(xs);
 const bucket=(id,count=256)=>{assert([16,32,64,128,256].includes(count),'Unsupported shard count');return (parseInt(hash(id).slice(0,2),16)%count).toString(16).padStart(2,'0');};
@@ -94,41 +90,52 @@ function restore(manifest,read){
  assert.equal(entries.length,manifest.entries);assert.equal(rels.length,manifest.relations);assert.equal(top.get('categories').length,manifest.categories);
  return obj(manifest.top_keys.map(k=>{assert(top.has(k),'Missing top key '+k);return [k,top.get(k)];}));
 }
-function audit(db,draft,sourceBytes){
- const field=new Map(),archive={entries:0,raw_entries:0,value_bytes:0},overlap={};
- const check=(name,a,b)=>{if(a===undefined||b===undefined)return;const c=overlap[name]??={compared:0,equal:0,equal_value_bytes:0,different:0};c.compared++;try{assert.deepStrictEqual(a,b);c.equal++;c.equal_value_bytes+=bytes(b);}catch{c.different++;}};
- const draftMap=ids(draft.entries||[],'draft');
- for(const e of db.entries){
-  for(const [k,v] of Object.entries(e)){if(!field.has(k))field.set(k,{entries:0,value_bytes:0,group:domain.get(k)||'core'});const s=field.get(k);s.entries++;s.value_bytes+=bytes(v);}
-  if(e.legacy_source!==undefined&&e.legacy_source!==null){archive.entries++;archive.value_bytes+=bytes(e.legacy_source);if(e.legacy_source.raw!==undefined)archive.raw_entries++;}
-  const legacy=e.legacy_source?.raw;
-  check('legacy.speech vs phonetic_tags.data',legacy?.speech,e.phonetic_tags?.data);
-  check('legacy.grammar vs morphology.data',legacy?.grammar,e.morphology?.data);
-  const d=draftMap.get(e.id);
-  if(d?.lemma!==e.lemma)continue;
-  check('draft.phonetic.sound_tokens vs stored editor tokens',d.phonetic?.sound_tokens,e.phonetic_tags?.data?.sound_tokens);
-  check('draft.phonetic.sound_tokens vs stored machine tokens',d.phonetic?.sound_tokens,e.machine_analysis?.phonetic?.sound_tokens);
-  check('draft.morphology.forms vs stored machine forms',d.morphology?.forms,e.machine_analysis?.morphology?.forms);
+const reserved='__storage_shared_values',marker='__storage_ref';
+const pairs=[['speech','phonetic_tags'],['grammar','morphology']];
+function same(a,b){return JSON.stringify(a)===JSON.stringify(b);}
+function pack(db){
+ const out=structuredClone(db);
+ let pairsShared=0,bytesShared=0;
+ for(const e of out.entries){
+  assert(!own(e,reserved),'Reserved field in source '+e.id);
+  const raw=e.legacy_source?.raw,shared={};
+  for(const [oldKey,newKey] of pairs){
+   const active=e[newKey];
+   if(!raw||!active||!own(raw,oldKey)||!own(active,'data'))continue;
+   const a=raw[oldKey],b=active.data;
+   if(!same(a,b))continue; // includes key order; do not collapse similar but different values
+   const serialized=JSON.stringify(a),digest=hash(serialized);
+   if(own(shared,digest))assert(same(shared[digest],a));
+   else shared[digest]=a;
+   raw[oldKey]={[marker]:digest};active.data={[marker]:digest};
+   pairsShared++;bytesShared+=Buffer.byteLength(serialized);
+  }
+  if(Object.keys(shared).length)e[reserved]=shared;
  }
- return {source_bytes:sourceBytes,entries:db.entries.length,relations:db.relations.length,categories:db.categories.length,archive,overlap,fields:obj([...field].sort((a,b)=>b[1].value_bytes-a[1].value_bytes)),notes:['Exact value overlap is diagnostic only, not a deletion candidate.','Value bytes exclude keys, indentation and enclosing arrays.','Unknown fields remain in core.','No semantic equivalence inferred.']};
+ return {db:out,pairsShared,bytesShared};
 }
-function main(){
- const [dest,...extra]=process.argv.slice(2);
- if(!dest||extra.length)throw Error('Usage: node scripts/library-storage-audit.cjs NEW_OUTPUT_DIR');
- const output=path.resolve(dest);assert(!fs.existsSync(output),'Output directory must not exist');
- const {raw:text,db}=require('./library-source.cjs').readSource(),raw=Buffer.from(text),draft=JSON.parse(fs.readFileSync(DRAFT));
- const {manifest,files}=split(db,hash(raw));
- fs.mkdirSync(output,{recursive:true});
- const layout=path.join(output,'layout');
- for(const [f,s] of files){const p=path.join(layout,f);fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,s);}
- fs.writeFileSync(path.join(layout,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');
- const restored=restore(JSON.parse(fs.readFileSync(path.join(layout,'manifest.json'))),f=>fs.readFileSync(path.join(layout,f)));
- assert.deepStrictEqual(restored,db);assert.equal(JSON.stringify(restored),JSON.stringify(db),'Key/array order changed');
- const report=audit(db,draft,raw.length);
- report.source_sha256=hash(raw);
- report.layout={files:files.size+1,total_bytes:[...files.values()].reduce((n,s)=>n+Buffer.byteLength(s),0)+fs.statSync(path.join(layout,'manifest.json')).size,max_file_bytes:Math.max(...[...files.values()].map(s=>Buffer.byteLength(s)),fs.statSync(path.join(layout,'manifest.json')).size),roundtrip:'exact JSON values and key/array order'};
- fs.writeFileSync(path.join(output,'audit.json'),JSON.stringify(report,null,2)+'\n');
- console.log(JSON.stringify({entries:report.entries,relations:report.relations,categories:report.categories,source_bytes:report.source_bytes,archive:report.archive,overlap:report.overlap,largest_fields:Object.entries(report.fields).slice(0,10),layout:report.layout,runtime_sha256:report.runtime_sha256},null,2));
+function unpack(db){
+ const out=structuredClone(db);
+ for(const e of out.entries){
+  if(!own(e,reserved))continue;
+  const pool=e[reserved],used=new Set();
+  assert(pool&&typeof pool==='object'&&!Array.isArray(pool),'Invalid shared pool '+e.id);
+  for(const [oldKey,newKey] of pairs){
+   const raw=e.legacy_source?.raw,active=e[newKey];
+   if(!raw||!active)continue;
+   for(const [holder,key] of [[raw,oldKey],[active,'data']]){
+    const v=holder[key];
+    if(!v||typeof v!=='object'||!own(v,marker))continue;
+    const digest=v[marker];
+    assert.equal(Object.keys(v).length,1,'Malformed reference '+e.id);
+    assert(typeof digest==='string'&&/^[a-f0-9]{64}$/.test(digest)&&own(pool,digest),'Missing content '+e.id);
+    assert.equal(hash(JSON.stringify(pool[digest])),digest,'Shared content hash mismatch '+e.id);
+    holder[key]=structuredClone(pool[digest]);used.add(digest);
+   }
+  }
+  assert.equal(used.size,Object.keys(pool).length,'Unused content '+e.id);
+  delete e[reserved];
+ }
+ return out;
 }
-module.exports={split,restore,audit,bucket};
-if(require.main===module)try{main();}catch(e){console.error(e.stack);process.exitCode=1;}
+module.exports={split,restore,bucket,pack,unpack};
