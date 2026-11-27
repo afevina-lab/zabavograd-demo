@@ -8,10 +8,7 @@ const remote=require('./library-request.cjs');
 const ROOT=path.resolve(__dirname,'..');
 function canonical(root=ROOT,env=process.env){
  assert(env.ZABAVOGRAD_LIBRARY_MODULES===undefined,'Unexpected source override in remote workflow');
- const selected=resolveSource(root,env);
- assert.equal(selected.mode,'modules','Canonical modular source required');
- assert(fs.existsSync(path.join(root,'editorial/library-source-mode.json')),'Canonical source policy required');
- return selected.path;
+ return resolveSource(root,env).path;
 }
 function prepare(dest,root=ROOT,env=process.env){
  const directory=canonical(root,env);

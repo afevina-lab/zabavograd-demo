@@ -46,6 +46,8 @@ jobs:
         run: |
           npm run check:architecture
           npm test
+          node --test editor-service/modular-read-cache.test.mjs
+          python -m py_compile scripts/library_source.py scripts/analyze-pending-words.py scripts/extend-morphology-20261123.py
           npm run check:design-system
       - name: Build local-base UI and check image alpha
         run: |

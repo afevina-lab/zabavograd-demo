@@ -181,35 +181,19 @@ def admit_safe_subset(db, morph, ids):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--library', default='outputs/library-v2.json')
     parser.add_argument('--report', default='outputs/GRAMMAR_FORMS_REVIEW_20261123.json')
-    parser.add_argument('--write', action='store_true', help='Extend unapproved existing suggestions (legacy only)')
     parser.add_argument('--candidate-dir', help='Create a validated modular candidate, never overwrite the source')
     parser.add_argument('--safe-entry', action='append', default=[], help='Explicit ID for exact machine-checked subset; repeat up to 30 times')
     args = parser.parse_args()
     import pymorphy3
-    import os
     import subprocess
     import tempfile
-    from library_source import read_snapshot, require_legacy_write, ROOT
-    source = Path(args.library)
-    modules = os.environ.get("ZABAVOGRAD_LIBRARY_MODULES")
-    if (ROOT / "editorial/library-source-mode.json").exists():
-        if modules is not None:
-            parser.error("Canonical source override is prohibited")
-        modules = str(ROOT / "outputs/library-modules")
-    if args.safe_entry and (not modules or not args.candidate_dir or args.write):
-        parser.error("--safe-entry requires a modular candidate directory, never --write")
-    expected = None
-    if modules is not None:
-        if args.write or args.library != 'outputs/library-v2.json':
-            parser.error("Modular mode disallows --write and alternate monolithic files")
-        original, info = read_snapshot()
-        expected = info["sha256"]
-    else:
-        if args.candidate_dir:
-            parser.error("--candidate-dir requires ZABAVOGRAD_LIBRARY_MODULES")
-        original = json.loads(source.read_text(encoding='utf-8'))
+    from library_source import read_snapshot, ROOT
+    modules = str(ROOT / "outputs/library-modules")
+    if args.safe_entry and not args.candidate_dir:
+        parser.error("--safe-entry requires a modular candidate directory")
+    original, info = read_snapshot()
+    expected = info["sha256"]
     morph = pymorphy3.MorphAnalyzer()
     if args.safe_entry:
         if pymorphy3.__version__ != '2.0.6':
@@ -229,10 +213,7 @@ def main():
             if args.safe_entry:
                 cmd += ["--safe-subset", *args.safe_entry]
             subprocess.run(cmd, cwd=ROOT, check=True)
-    if args.write:
-        require_legacy_write()
-        source.write_text(json.dumps(db, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print(json.dumps({'write': args.write, 'review': str(dest), **report['statistics']}, ensure_ascii=False))
+    print(json.dumps({'write': False, 'review': str(dest), **report['statistics']}, ensure_ascii=False))
 
 
 if __name__ == '__main__':

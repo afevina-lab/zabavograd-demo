@@ -9,10 +9,9 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 import pymorphy3
-from library_source import read_snapshot, _modular_requested
+from library_source import read_snapshot
 
 ROOT=Path(__file__).resolve().parent.parent
-SOURCE=ROOT/"outputs/library-v2.json"
 OUTPUT=ROOT/"outputs/library-v2-auto-analysis.json"
 REPORT=ROOT/"outputs/LIBRARY_V2_AUTO_ANALYSIS.md"
 CYR=re.compile(r"^[а-яё]+(?:-[а-яё]+)*$", re.I)
@@ -224,18 +223,17 @@ def g2p_proposal(lemma,accentor,transcriber):
 
 def run():
  parser=argparse.ArgumentParser()
- parser.add_argument('--output', type=Path)
- parser.add_argument('--report', type=Path)
+ parser.add_argument('--output', type=Path, required=True)
+ parser.add_argument('--report', type=Path, required=True)
  parser.add_argument('--limit', type=int)
  parser.add_argument('--weight', type=int, choices=[0,10,20,30,50,70,100])
  parser.add_argument('--morphology-only', action='store_true')
  parser.add_argument('--initial-only', action='store_true', help='Only fields still pending initial analysis')
  args=parser.parse_args()
  if args.limit is not None and args.limit<1: parser.error('limit must be positive')
- if _modular_requested() and (not args.output or not args.report): parser.error('modular mode requires explicit draft and report output paths')
- output=args.output or OUTPUT
- report=args.report or REPORT
- if _modular_requested() and (output.resolve()==OUTPUT.resolve() or report.resolve()==REPORT.resolve()): parser.error('modular mode must not overwrite existing draft/report')
+ output=args.output
+ report=args.report
+ if output.resolve()==OUTPUT.resolve() or report.resolve()==REPORT.resolve(): parser.error('Must not overwrite existing draft/report')
  data,source=read_snapshot()
  accentor,transcriber=(None,None) if args.morphology_only else g2p_components()
  proposals=[]
@@ -284,7 +282,7 @@ def run():
   "","Нужна проверка ударения, омографов, исчисляемости, грамматических вариантов и реальных звуков.",
   "Одно слово без контекста может разбираться несколькими способами.",
   "По решению автора G2P-разборы используются для автоматизации только при совпадении звука с исходной буквой; автоматическая разметка может содержать ошибки.",
-  "","Машинный результат: outputs/library-v2-auto-analysis.json.",
+  "","Машинный результат: "+str(output)+".",
   "","## Примеры","",
  ]
  for row in proposals:

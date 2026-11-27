@@ -1,39 +1,21 @@
 'use strict';
-const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const fs=require('node:fs'),path=require('node:path');
 const ROOT=path.resolve(__dirname,'..');
-const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const POLICY='editorial/library-source-mode.json';
 function resolveSource(root=ROOT,env=process.env){
  const policy=path.join(root,POLICY),legacy=path.join(root,'outputs/library-v2.json');
- let config;
- if(fs.existsSync(policy)){
-  config=JSON.parse(fs.readFileSync(policy,'utf8'));
-  if(config?.version!==1||config.mode!=='modules'||config.directory!=='outputs/library-modules'||Object.keys(config).length!==3)throw Error('Invalid canonical library source policy');
-  if(fs.existsSync(legacy))throw Error('Two potential canonical sources; remove legacy master before switching');
-  if(env.ZABAVOGRAD_LIBRARY_MODULES!==undefined)throw Error('Explicit source override prohibited after canonical switch');
-  return {mode:'modules',path:path.join(root,config.directory)};
- }
- if(fs.existsSync(path.join(root,'outputs/library-modules')))throw Error('Unmarked modular source; refuse legacy fallback');
- const requested=env.ZABAVOGRAD_LIBRARY_MODULES;
- if(requested!==undefined){
-  if(typeof requested!=='string'||!requested.trim())throw Error('Empty modular source path');
-  return {mode:'modules',path:path.resolve(requested)};
- }
- return {mode:'legacy',path:legacy};
+ if(!fs.existsSync(policy))throw Error('Canonical source policy required; unmarked or legacy source prohibited');
+ const config=JSON.parse(fs.readFileSync(policy,'utf8'));
+ if(config?.version!==1||config.mode!=='modules'||config.directory!=='outputs/library-modules'||Object.keys(config).length!==3)throw Error('Invalid canonical library source policy');
+ if(fs.existsSync(legacy))throw Error('Two potential canonical sources; remove legacy master');
+ if(env.ZABAVOGRAD_LIBRARY_MODULES!==undefined)throw Error('Explicit source override prohibited');
+ return {mode:'modules',path:path.join(root,config.directory)};
 }
 function readSource(root=ROOT,env=process.env){
- const selected=resolveSource(root,env);
- if(selected.mode==='modules'){
-  const store=require('./library-store.cjs'),r=store.load(selected.path);
-  return {db:r.db,raw:store.snapshot(r.db),sha256:r.source_sha256,...selected};
- }
- const raw=fs.readFileSync(selected.path,'utf8');
- return {db:JSON.parse(raw),raw,sha256:sha(raw),...selected};
+ const selected=resolveSource(root,env),store=require('./library-store.cjs'),r=store.load(selected.path);
+ return {db:r.db,raw:store.snapshot(r.db),sha256:r.source_sha256,...selected};
 }
-function requireLegacyWrite(){
- if(resolveSource().mode==='modules')throw Error('Direct V2 write disabled in modular mode; use library-store patch to create a candidate');
-}
-module.exports={readSource,requireLegacyWrite,resolveSource};
+module.exports={readSource,resolveSource};
 if(require.main===module){
  const [cmd,...rest]=process.argv.slice(2);
  if(rest.length||!['export','info','mode'].includes(cmd))throw Error('Usage: library-source.cjs export|info|mode');
