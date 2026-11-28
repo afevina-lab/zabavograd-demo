@@ -20,6 +20,7 @@ for(const row of snapshot.rows){
  assert.equal(row.lemma,sourceRow.lemma,'Mismatched preview word '+row.id);
  assert.equal(row.weight,sourceRow.selection.base_weight,'Outdated preview weight '+row.id);
  assert.deepEqual(row.categories,sourceRow.categories,'Outdated preview categories '+row.id);
+ assert.equal(row.external_review?.length||0,sourceRow.external_linguistic_proposals?.length||0,'Lost manual review proposals '+row.id);
 }
 const families=db.relations.filter(r=>r.type!=='is_a'&&!r.subject&&!r.object);
 const genera=db.relations.filter(r=>r.type==='is_a'&&r.child&&r.parent);

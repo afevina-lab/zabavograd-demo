@@ -4,8 +4,15 @@ on:
   pull_request:
     branches: [main]
   push:
-    branches: [main]
+    branches: [main, 'library-publish-request/**']
   workflow_dispatch:
+    inputs:
+      library_only:
+        type: boolean
+        default: false
+      library_source_sha256:
+        type: string
+        required: false
 
 permissions:
   contents: write
@@ -13,13 +20,13 @@ permissions:
 concurrency:
   # PR smoke runs must not cancel or block a production release.
   group: public-ui-${{ github.event_name == 'pull_request' && 'pr-checks' || 'main-release' }}
-  cancel-in-progress: ${{ github.event_name == 'push' }}
+  cancel-in-progress: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
 
 jobs:
   verify-and-publish:
     # Only pull requests may preview an alternate branch. Published assets
     # must always be built from the unique canonical main source.
-    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
+    if: github.event_name == 'pull_request' || (github.ref == 'refs/heads/main' && !inputs.library_only)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout public visual source
@@ -137,3 +144,78 @@ jobs:
           done
           echo 'Published site did not reach the expected source commit'
           exit 1
+
+  library-data-only:
+    if: (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.library_only) || (github.event_name == 'push' && startsWith(github.ref, 'refs/heads/library-publish-request/'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: _published
+      - name: Validate requested library and published UI compatibility
+        env:
+          INPUT_SHA: ${{ inputs.library_source_sha256 }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$GITHUB_EVENT_NAME" = push ]]; then
+            [[ "$GITHUB_REF_NAME" =~ ^library-publish-request/[a-z0-9][a-z0-9-]{0,47}$ ]]
+            git fetch --no-tags --depth=1 origin "$GITHUB_SHA"
+            git show "$GITHUB_SHA:editorial/requests/library-publish.json" > "$RUNNER_TEMP/publish.json"
+            test "$(wc -c < "$RUNNER_TEMP/publish.json")" -le 1024
+            expected=$(node -e 'const a=require("node:assert/strict"),r=require(process.argv[1]);a.deepEqual(Object.keys(r).sort(),["source_sha256","version"]);a.equal(r.version,1);console.log(r.source_sha256)' "$RUNNER_TEMP/publish.json")
+          else expected="$INPUT_SHA"; fi
+          [[ "$expected" =~ ^[a-f0-9]{64}$ ]]
+          actual=$(node -p 'require("./scripts/library-source.cjs").readSource().sha256')
+          test "$actual" = "$expected"
+          old=$(node -e 'const s=require("fs").readFileSync("_published/index.html","utf8");const m=s.match(/<meta name="zabavograd-ui-release" content="([a-f0-9]{40})">/);if(!m)process.exit(1);console.log(m[1])')
+          git fetch --no-tags --depth=1 origin "$old"
+          git diff --name-only "$old" HEAD > "$RUNNER_TEMP/changes.txt"
+          node -e 'const fs=require("fs"),a=require("node:assert/strict");const changed=fs.readFileSync(process.argv[1],"utf8").trim().split("\n").filter(Boolean);const allowed=/^(outputs\/library-modules\/|docs\/LIBRARY_|scripts\/(library-|ruwordnet-|semantic-review\.cjs$|validate-library-contract\.cjs$|build-library-(index|v2-view)\.cjs$|check-library-preview\.cjs$)|tests\/(library-|semantic-review)|\.github\/workflows\/(library-|visual-publish\.yml$))/;a(changed.every(p=>allowed.test(p)),"UI/assets changed: full publication required: "+changed.filter(p=>!allowed.test(p)).join(", "))' "$RUNNER_TEMP/changes.txt"
+          node scripts/check-library-v2.cjs
+          node scripts/sync-runtime.cjs
+          node scripts/verify-consolidated-library.cjs
+          node scripts/check-library-data-publish.cjs _published
+      - name: Publish only three game data files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --no-tags --depth=1 origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse FETCH_HEAD)"
+          for f in library.json semantic-graph.json grammar-frames.json; do cp "public/$f" "_published/$f"; done
+          git -C _published add -- library.json semantic-graph.json grammar-frames.json
+          git -C _published config user.name 'github-actions[bot]'
+          git -C _published config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if ! git -C _published diff --cached --quiet; then
+            git -C _published commit -m "Publish verified library data from $(git rev-parse HEAD)"
+            git -C _published push origin HEAD:gh-pages
+          fi
+      - name: Refresh existing editorial index
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run library-index.yml --ref main
+      - name: Verify public data hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 12); do
+            ok=1
+            for f in library.json semantic-graph.json grammar-frames.json; do
+              if ! curl -fsSL --max-time 12 "https://afevina-lab.github.io/zabavograd-demo/$f?library=$(git rev-parse HEAD)&attempt=$attempt" -o "$RUNNER_TEMP/deployed-$f" || ! cmp -s "public/$f" "$RUNNER_TEMP/deployed-$f"; then ok=0; fi
+            done
+            if [ "$ok" = 1 ]; then echo 'PASS public game data hashes'; exit 0; fi
+            sleep 5
+          done
+          echo 'Public data not yet verified'; exit 1
