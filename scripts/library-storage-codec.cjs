@@ -8,7 +8,7 @@ const bucket=(id,count=256)=>{assert([16,32,64,128,256].includes(count),'Unsuppo
 const domains={
  phonetics:['phonetic_tags','phonetics'],
  morphology:['morphology','grammar','word_forms','forms','word_formation','derivation'],
- semantics:['semantic_review_proposals','semantic_tags','semantics','semantic_properties','semantic_roles','grammar_frames','speech_frames'],
+ semantics:['external_linguistic_proposals','semantic_review_proposals','semantic_tags','semantics','semantic_properties','semantic_roles','grammar_frames','speech_frames'],
  syllables:['syllable_structure','syllable_tags'],
  translations:['translations','multilingual','foreign_languages'],
  illustrations:['illustrations'],

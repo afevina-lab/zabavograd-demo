@@ -25,6 +25,7 @@ function validateLibrary(db,{assetDir}={}){
   for(const sense of entry.illustrations.senses||[]){assert.equal(sense.word_id,entry.id,`Sense owner ${sense.id}`);for(const image of sense.variants){assert(image.src.startsWith('/assets/')&&!image.src.includes('..'),`Unsafe image ${image.src}`);const publicDir=require('./library-import.cjs').assetRoot(image.src,path.join(root,'public'),assetDir);assert(fs.existsSync(path.join(publicDir,image.src)),`Missing image ${image.src}`);}}
  }
  for(const relation of db.relations)for(const [key,value]of Object.entries(relation))if(value&&typeof value==='object'&&!Array.isArray(value)&&typeof value.id==='string')assert(ids.has(value.id),`Dangling relation ${relation.id}.${key}: ${value.id}`);
+ require('./library-external-proposals.cjs').validate(db);
  return {entries:ids.size,categories:categories.size,relations:db.relations.length};
 }
 if(require.main===module)console.log(validateLibrary(require('./library-source.cjs').readSource().db));

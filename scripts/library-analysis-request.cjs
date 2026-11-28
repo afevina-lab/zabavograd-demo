@@ -31,30 +31,34 @@ function processRequest(requestFile,out,work){
  assert(!fs.existsSync(out)&&!fs.existsSync(work),'Output already exists');
  fs.mkdirSync(out);
  const report={version:1,mode:r.mode,request:r,source_sha256:current.source_sha256};
- if(r.mode==='ruwordnet'){
-   run('python',['scripts/ruwordnet-coverage.py',path.join(out,'coverage.json')]);
-   const coverage=JSON.parse(fs.readFileSync(path.join(out,'coverage.json'),'utf8'));
-   assert.equal(coverage.source_sha256,current.source_sha256);
-   Object.assign(report,{status:'external_coverage_only',records:coverage.matched_entries,source_license:'RuWordNet official site: CC BY-SA 4.0 and non-commercial distribution; details not redistributed'});
- }else if(['constructicon','framebank'].includes(r.mode)){
-   const args=['scripts/linguistic-sources.cjs','--source',r.mode,'--fetch'];
-   if(r.mode==='framebank')args.push('--accept-gpl-review-only');
-   run(process.execPath,args);
-   const f=path.join(root,'.local/linguistic-sources/'+r.mode+'-suggestions.json'),data=JSON.parse(fs.readFileSync(f,'utf8'));
-   assert.equal(data.library_source.sha256,current.source_sha256);
-   if(r.mode==='framebank'){
-     // Separate GPL-licensed review dataset. Never put it in canonical modules or game output.
-     const dir=path.join(out,'framebank-gpl');fs.mkdirSync(dir);
-     fs.copyFileSync(f,path.join(dir,'suggestions.json'));
+ let next,stats;
+ if(r.mode==='ruwordnet'||r.mode==='framebank'){
+   fs.mkdirSync(work);
+   let data;
+   if(r.mode==='ruwordnet'){
+     const file=path.join(work,'source-candidates.json');
+     run('python',['scripts/ruwordnet-relations.py',file]);
+     data=JSON.parse(fs.readFileSync(file,'utf8'));
+     Object.assign(report,{source_license:'CC-BY-SA-4.0',source_url:'https://www.ruwordnet.ru/ru/',attribution:'N. Loukachevitch, G. Lashevich, A. Gerasimova, V. Ivanov, B. Dobrov (2016); RuWordNet 2.0 (2021)',publication_note:'Non-commercial data use; official source also specifies non-commercial XML access. Candidate edges only, not raw database or active relations.'});
+   }else{
+     run(process.execPath,['scripts/linguistic-sources.cjs','--source','framebank','--fetch','--accept-gpl-review-only']);
+     data=JSON.parse(fs.readFileSync(path.join(root,'.local/linguistic-sources/framebank-suggestions.json'),'utf8'));
      const rev=require('./linguistic-sources.cjs').SOURCES.framebank.commit;
-     run('curl',['--fail','--silent','--show-error','--location','https://raw.githubusercontent.com/olesar/framebank/'+rev+'/LICENSE','--output',path.join(dir,'LICENSE')]);
-     fs.writeFileSync(path.join(dir,'NOTICE.txt'),'Russian FrameBank v1.1, Olga Lyashevskaya, Egor Kashkin and contributors. GPL-3.0. Modified: filtered and matched dictionary constructions to Zabavograd entry IDs; review only. Upstream source, complete contributors and original dictionary files: https://github.com/olesar/framebank/tree/'+rev+'\nTransformation source: scripts/linguistic-sources.cjs in the source commit recorded in result.json.\nThe contents of this directory are distributed under GPL-3.0; not part of the game runtime.\n');
-   }else fs.copyFileSync(f,path.join(out,'suggestions.json'));
+     run('curl',['--fail','--silent','--show-error','--location','https://raw.githubusercontent.com/olesar/framebank/'+rev+'/LICENSE','--output',path.join(out,'FRAMEBANK-LICENSE.txt')]);
+     Object.assign(report,{source_license:'GPL-3.0',source_url:'https://github.com/olesar/framebank/tree/'+rev,attribution:'Olga Lyashevskaya and Egor Kashkin (2015), FrameBank: a database of Russian lexical constructions; contributors listed upstream',publication_note:'FrameBank-derived slots are GPL-3.0 review data only; transformation source in this commit.'});
+   }
+   assert.equal(data.library_source.sha256,current.source_sha256);
+   const result=require('./library-external-proposals.cjs').plan(current.db,data);
+   next=result.db;stats=result.stats;
+ }else if(r.mode==='constructicon'){
+   run(process.execPath,['scripts/linguistic-sources.cjs','--source','constructicon','--fetch']);
+   const f=path.join(root,'.local/linguistic-sources/constructicon-suggestions.json'),data=JSON.parse(fs.readFileSync(f,'utf8'));
+   assert.equal(data.library_source.sha256,current.source_sha256);
+   fs.copyFileSync(f,path.join(out,'suggestions.json'));
    Object.assign(report,{status:'external_suggestions_review_only',source_license:data.license,records:data.records.length});
  }else{
    run('python',['scripts/library-analysis-request.py',requestFile,work]);
    const raw=path.join(work,'analysis.json'),doc=JSON.parse(fs.readFileSync(raw,'utf8'));
-   let next,stats;
    if(r.mode==='initial'){
      run(process.execPath,['scripts/annotate-analysis.cjs',raw]);
      const result=initial.plan(current.db,JSON.parse(fs.readFileSync(raw,'utf8')),current.source_sha256);
@@ -62,6 +66,8 @@ function processRequest(requestFile,out,work){
      fs.copyFileSync(raw,path.join(out,'analysis.json'));
    }else{next=doc;stats=writer.verifyExtension(current.db,next);}
    fs.copyFileSync(path.join(work,'report.json'),path.join(out,'analysis-report.json'));
+ }
+ if(stats){
    Object.assign(report,{stats,status:'no_changes'});
    if(stats.changed){
      const candidate=path.join(work,'candidate');
