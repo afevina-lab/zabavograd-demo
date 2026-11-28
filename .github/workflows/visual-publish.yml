@@ -183,7 +183,7 @@ jobs:
           old=$(node -e 'const s=require("fs").readFileSync("_published/index.html","utf8");const m=s.match(/<meta name="zabavograd-ui-release" content="([a-f0-9]{40})">/);if(!m)process.exit(1);console.log(m[1])')
           git fetch --no-tags --depth=1 origin "$old"
           git diff --name-only "$old" HEAD > "$RUNNER_TEMP/changes.txt"
-          node -e 'const fs=require("fs"),a=require("node:assert/strict");const changed=fs.readFileSync(process.argv[1],"utf8").trim().split("\n").filter(Boolean);const allowed=/^(outputs\/library-modules\/|docs\/LIBRARY_|scripts\/(library-|ruwordnet-|semantic-review\.cjs$|validate-library-contract\.cjs$|build-library-(index|v2-view)\.cjs$|check-library-preview\.cjs$)|tests\/(library-|semantic-review)|\.github\/workflows\/(library-|visual-publish\.yml$))/;a(changed.every(p=>allowed.test(p)),"UI/assets changed: full publication required: "+changed.filter(p=>!allowed.test(p)).join(", "))' "$RUNNER_TEMP/changes.txt"
+          node -e 'const fs=require("fs"),a=require("node:assert/strict");const changed=fs.readFileSync(process.argv[1],"utf8").trim().split("\n").filter(Boolean);const allowed=/^(outputs\/library-modules\/|docs\/LIBRARY_|scripts\/(library-|ruwordnet-|semantic-review\.cjs$|validate-library-contract\.cjs$|build-library-(index|v2-view)\.cjs$|check-library-(preview|data-publish)\.cjs$)|tests\/(library-|semantic-review)|\.github\/workflows\/(library-|visual-publish\.yml$))/;a(changed.every(p=>allowed.test(p)),"UI/assets changed: full publication required: "+changed.filter(p=>!allowed.test(p)).join(", "))' "$RUNNER_TEMP/changes.txt"
           node scripts/check-library-v2.cjs
           node scripts/sync-runtime.cjs
           node scripts/verify-consolidated-library.cjs
