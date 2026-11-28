@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "source_sha256": "e5bd329b33f37240bfb3948dde24f6086a25b46a95ec328b2108b0fb1c702569",
+  "mode": "initial",
+  "domain": "both",
+  "limit": 500,
+  "validate_candidate": false
+}
