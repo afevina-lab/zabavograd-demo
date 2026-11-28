@@ -4,6 +4,7 @@ const assert=require('node:assert/strict'),crypto=require('node:crypto');
 const FIELD='external_linguistic_proposals';
 const stable=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex').slice(0,24);
 const licenses={framebank:'GPL-3.0',ruwordnet:'CC-BY-SA-4.0',constructicon:'CC-BY-4.0'};
+const attribution={framebank:{source_url:'https://github.com/olesar/framebank',attribution:'Russian FrameBank; Lyashevskaya & Kashkin (2015) and contributors'},ruwordnet:{source_url:'https://www.ruwordnet.ru/ru/',attribution:'RuWordNet; Loukachevitch, Lashevich, Gerasimova, Ivanov & Dobrov (2016)'},constructicon:{source_url:'https://github.com/constructicon/russian-data',attribution:'Russian Constructicon contributors'}};
 const types=new Set(['synonym','antonym','is_a','part_of','has_part','instance_of']);
 const word=e=>e?.kind==='word'&&e.language==='ru'&&!e.same_lexical_meaning_as;
 function validate(db){
@@ -14,7 +15,7 @@ function validate(db){
   for(const p of e[FIELD]){
    assert(p.id==='external-'+stable([p.source,p.source_record_id,e.id,p.object_id??null])&&!ids.has(p.id),'Invalid/duplicate external proposal');ids.add(p.id);
    assert.equal(p.status,'suggested');assert.equal(p.usable_for_generation,false);
-   assert.equal(p.license,licenses[p.source]);assert.equal(p.entry_id,e.id);
+   assert.equal(p.license,licenses[p.source]);assert.equal(p.source_url,attribution[p.source].source_url);assert.equal(p.attribution,attribution[p.source].attribution);assert.equal(p.entry_id,e.id);
    assert(typeof p.source_revision==='string'&&p.source_revision.length>0);
    assert(typeof p.source_record_id==='string'&&p.source_record_id.length>0);
    if(p.source==='ruwordnet'){
@@ -52,7 +53,7 @@ function plan(db,bundle){
   const e=by.get(r.entry_id??r.subject_id);
   if(!word(e)){skipped++;continue;}
   const common={source:bundle.source,source_revision:String(bundle.source_revision),source_record_id:String(r.source_record_id),
-   license:licenses[bundle.source],entry_id:e.id,status:'suggested',usable_for_generation:false};
+   license:licenses[bundle.source],...attribution[bundle.source],entry_id:e.id,status:'suggested',usable_for_generation:false};
   let p;
   if(bundle.source==='ruwordnet'){
    if(!word(by.get(r.object_id))||e.id===r.object_id||!types.has(r.relation_type)||active.has(JSON.stringify([r.relation_type,e.id,r.object_id]))){skipped++;continue;}

@@ -22,7 +22,7 @@ def propose(wn, entries):
         if len(group) != 1:
             continue
         e = group[0]
-        pos = e.get("part_of_speech") or (e.get("legacy_source", {}).get("raw") or {}).get("part_of_speech")
+        pos = e.get("part_of_speech") or ((e.get("legacy_source") or {}).get("raw") or {}).get("part_of_speech")
         if pos not in pos_suffix:
             continue
         matches = {str(s.synset.id): s.synset for s in wn.get_senses(e["lemma"]) or []

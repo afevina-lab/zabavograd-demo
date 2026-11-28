@@ -50,7 +50,7 @@ jobs:
         if: steps.request.outputs.mode == 'ruwordnet'
         with:
           python-version: '3.11'
-      - name: Download RuWordNet for transient non-commercial coverage research
+      - name: Download RuWordNet for transient non-commercial lexical analysis
         if: steps.request.outputs.mode == 'ruwordnet'
         run: |
           python -m pip install --disable-pip-version-check ruwordnet==0.0.6 'SQLAlchemy<2'
