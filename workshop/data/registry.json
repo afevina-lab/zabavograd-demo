@@ -8,6 +8,10 @@
     {
       "id": "neutral",
       "name": "Акварельная бумага"
+    },
+    {
+      "id": "children-room",
+      "name": "Детская комната"
     }
   ],
   "themes": {
@@ -25,6 +29,11 @@
       "name": "Космическая",
       "card": "#eee9ff",
       "border": "#9380bb"
+    },
+    "children-room": {
+      "name": "Детская комната",
+      "card": "#fffaf0",
+      "border": "#ad8556"
     }
   },
   "compatibility": {
@@ -37,12 +46,18 @@
       "neutral",
       "forest",
       "space"
+    ],
+    "children-room": [
+      "neutral",
+      "forest",
+      "space",
+      "children-room"
     ]
   },
   "migration": {
     "forest": "pilot-unapproved",
     "neutral": "pilot-unapproved",
     "space": "pending",
-    "children-room": "pending"
+    "children-room": "integrated"
   }
 }

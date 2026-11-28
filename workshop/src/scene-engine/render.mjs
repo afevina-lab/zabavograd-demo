@@ -1,4 +1,4 @@
-import {compile} from './engine.mjs';
+import {compile} from './engine.mjs?v=20261128-animation';
 export const escape = s => String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 const matrix = m => `matrix(${m.join(' ')})`;
 /** Same renderer for Studio, game adapter and deterministic SVG snapshots. */
