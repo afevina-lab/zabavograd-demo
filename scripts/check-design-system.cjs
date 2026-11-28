@@ -14,7 +14,7 @@ async function run(){
   assert(!/border-image-slice:\s*72|\/assets\/ui\/square\.png/.test(source),'Obsolete sprite or slicing in '+file);
  }
  assert(!/saturate\s*\(/.test(css),'Interaction feedback must preserve artwork colors');
- assert(animation.includes('v-pigment-bloom'),'Watercolor match feedback missing');
+ assert(animation.includes('v-pollen')&&!animation.includes('v-pigment-bloom')&&!animation.includes('v-match-glow'),'Match must use fine pollen without the retired bloom');
  assert(animation.includes('v-camera-zoom'),'Shared scene camera motion missing');
  assert(animation.includes('prefers-reduced-motion'),'Reduced motion support missing');
  assert(animation.includes('var(--zg-match-duration)'),'Registry motion timing missing');
