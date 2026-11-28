@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "mode": "framebank",
+  "request": {
+    "version": 1,
+    "source_sha256": "e5bd329b33f37240bfb3948dde24f6086a25b46a95ec328b2108b0fb1c702569",
+    "mode": "framebank"
+  },
+  "source_sha256": "e5bd329b33f37240bfb3948dde24f6086a25b46a95ec328b2108b0fb1c702569",
+  "source_license": "GPL-3.0",
+  "source_url": "https://github.com/olesar/framebank/tree/e60da2a38f645db21c55aa0e7ff9730e92e7e2ca",
+  "attribution": "Olga Lyashevskaya and Egor Kashkin (2015), FrameBank: a database of Russian lexical constructions; contributors listed upstream",
+  "publication_note": "FrameBank-derived slots are GPL-3.0 review data only; transformation source in this commit.",
+  "stats": {
+    "changed": 225,
+    "added_proposals": 4561,
+    "skipped": 861,
+    "source": "framebank"
+  },
+  "status": "candidate_requires_full_validation",
+  "result_source_sha256": "22c54cf543e9772ead604497c3b339e84daa34b6c63b89b6bc8e4972c15f47bd",
+  "delta": {
+    "added": [
+      "entries/semantics/00.json",
+      "entries/semantics/01.json",
+      "entries/semantics/02.json",
+      "entries/semantics/03.json",
+      "entries/semantics/04.json",
+      "entries/semantics/05.json",
+      "entries/semantics/06.json",
+      "entries/semantics/07.json",
+      "entries/semantics/08.json",
+      "entries/semantics/09.json",
+      "entries/semantics/0a.json",
+      "entries/semantics/0b.json",
+      "entries/semantics/0c.json",
+      "entries/semantics/0d.json",
+      "entries/semantics/0e.json",
+      "entries/semantics/0f.json",
+      "entries/semantics/10.json",
+      "entries/semantics/11.json",
+      "entries/semantics/12.json",
+      "entries/semantics/13.json",
+      "entries/semantics/14.json",
+      "entries/semantics/15.json",
+      "entries/semantics/16.json",
+      "entries/semantics/17.json",
+      "entries/semantics/18.json",
+      "entries/semantics/19.json",
+      "entries/semantics/1a.json",
+      "entries/semantics/1b.json",
+      "entries/semantics/1c.json",
+      "entries/semantics/1d.json",
+      "entries/semantics/1e.json",
+      "entries/semantics/1f.json"
+    ],
+    "removed": [],
+    "modified": [
+      "entry-order.json"
+    ]
+  },
+  "source_commit": "f50aae413b7f97eb91abaf1e2553c105b391d5b6",
+  "request_commit": "34da7b503870bd79c229a6452f508ae39f5236a0"
+}
