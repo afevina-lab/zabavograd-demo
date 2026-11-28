@@ -84,7 +84,7 @@ function App(){
  useEffect(()=>{if(round?.phase!=='won'||roundPlan.isLast)return;const timer=setTimeout(nextRound,MOTION.matchMs);return()=>clearTimeout(timer)},[round?.phase,roundPlan.index]);
  const matchedKey=round?.matched.join('|')??'';
  // Zoom the entire illustrated stage toward the two newly found cards.
- // The cards themselves only glow and dissolve; their own transforms never zoom.
+ // Desktop cards collapse in place; phones bring the pair to the field centre.
  useLayoutEffect(()=>{
   const camera=cameraRef.current;
   if(!camera)return;
@@ -101,17 +101,28 @@ function App(){
    .filter(card=>keys.has(card.dataset.cardKey||''));
   const stage=stageRef.current;
   if(cards.length!==2||!stage)return;
-  const bounds=stage.getBoundingClientRect();
-  const pairX=cards.reduce((sum,card)=>{const r=card.getBoundingClientRect();return sum+r.left+r.width/2},0)/2;
-  const pairY=cards.reduce((sum,card)=>{const r=card.getBoundingClientRect();return sum+r.top+r.height/2},0)/2;
-  // The pair's midpoint is the camera focal point. Scale around it without
-  // translation: the artwork continues to cover every edge of the viewport.
-  camera.style.setProperty('--zg-camera-origin-x',(pairX-bounds.left).toFixed(1)+'px');
-  camera.style.setProperty('--zg-camera-origin-y',(pairY-bounds.top).toFixed(1)+'px');
+  camera.dataset.zooming='false';
+  const bounds=stage.getBoundingClientRect(),phone=Math.min(innerWidth,innerHeight)<=600;
+  // Pause card transforms while measuring their actual positions across nested grids.
+  const boxes=cards.map(c=>{const previous=c.style.animation;c.style.animation='none';const r=c.getBoundingClientRect();c.style.animation=previous;return {x:r.left-bounds.left,y:r.top-bounds.top,w:r.width,h:r.height}});
+  const left=Math.min(...boxes.map(r=>r.x)),right=Math.max(...boxes.map(r=>r.x+r.w));
+  const top=Math.min(...boxes.map(r=>r.y)),bottom=Math.max(...boxes.map(r=>r.y+r.h));
+  const x=(left+right)/2,y=(top+bottom)/2;
+  const hw=(right-left)/2+Math.max(...boxes.map(r=>r.w))*.06;
+  const hh=(bottom-top)/2+Math.max(...boxes.map(r=>r.h))*.06;
+  const scale=phone?1:Math.max(1,Math.min(1.28,(x-12)/hw,(bounds.width-x-12)/hw,(y-12)/hh,(bounds.height-y-12)/hh));
+  camera.style.transformOrigin=x+'px '+y+'px';
+  camera.style.setProperty('--zg-camera-scale',String(scale));
+  cards.forEach((card,i)=>{const r=boxes[i];
+   card.style.setProperty('--zg-match-x',phone?bounds.width/2-r.x-r.w/2+'px':'0px');
+   card.style.setProperty('--zg-match-y',phone?bounds.height/2-r.y-r.h/2+'px':'0px');
+   card.style.setProperty('--zg-match-scale',String(phone?Math.min(2.3,Math.min(bounds.width,bounds.height)*.64/r.w):1));
+   card.dataset.matchDevice=phone?'phone':'desktop';
+  });
   // Re-arm the same animation on every pair, not just the first.
   camera.classList.remove('zg-camera-zoom');camera.dataset.zooming='false';
   void camera.offsetWidth;
-  camera.classList.add('zg-camera-zoom');camera.dataset.zooming='true';
+  camera.dataset.zooming=phone?'false':'true';
  },[matchedKey,round?.deck]);
 
  const undo=useRef<number|null>(null);const pausedRef=useRef(paused);pausedRef.current=paused;
