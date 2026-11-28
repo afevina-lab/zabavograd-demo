@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-noun-20261109-0082",
+    "lemma": "остановка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-033",
+    "lemma": "метель",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-034",
+    "lemma": "туча",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-038",
+    "lemma": "снежинка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-extra-20261109-043",
+    "lemma": "альбом",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-import-20261115-kaplya",
+    "lemma": "капля",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-import-20261115-lapa",
+    "lemma": "лапа",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-008",
+    "lemma": "виноград",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-013",
+    "lemma": "гора",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-015",
+    "lemma": "горох",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-032",
+    "lemma": "корзина",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-044",
+    "lemma": "кукуруза",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-062",
+    "lemma": "ракушка",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-066",
+    "lemma": "роза",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-067",
+    "lemma": "рубашка",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-086",
+    "lemma": "трамвай",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-add-d0bad0b0d180d182d0b8d0bdd0b0",
+    "lemma": "картина",
+    "weight": 70
+  },
+  {
+    "id": "ru-r-add-d180d0bed0bcd0b0d188d0bad0b0",
+    "lemma": "ромашка",
+    "weight": 70
+  },
+  {
+    "id": "ru-new-20261102-0029",
+    "lemma": "икра",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261102-0045",
+    "lemma": "маркер",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261102-0055",
+    "lemma": "маршрут",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261102-0058",
+    "lemma": "транспорт",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261102-0070",
+    "lemma": "король",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261102-0075",
+    "lemma": "уровень",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261102-0120",
+    "lemma": "среда",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261108-42569368f9",
+    "lemma": "водолазка",
+    "weight": 50
+  },
+  {
+    "id": "ru-new-20261108-4f67adafc5",
+    "lemma": "шуба",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0020",
+    "lemma": "сандалия",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0035",
+    "lemma": "юла",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0036",
+    "lemma": "мозаика",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0060",
+    "lemma": "какао",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0064",
+    "lemma": "омлет",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0098",
+    "lemma": "водопад",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-018",
+    "lemma": "лото",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-024",
+    "lemma": "дождевик",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-036",
+    "lemma": "молния",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-import-20261115-zavod",
+    "lemma": "завод",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-011",
+    "lemma": "гамбургер",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-088",
+    "lemma": "тропинка",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-090",
+    "lemma": "труба",
+    "weight": 50
+  }
+]

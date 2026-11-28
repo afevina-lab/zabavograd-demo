@@ -1,5 +1,100 @@
 [
   {
+    "id": "lex-v2-d0b3d180d0b8d184",
+    "lemma": "гриф",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d183d181d18bd0bdd18f",
+    "lemma": "гусыня",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b3d183d181d191d0bdd0bed0ba",
+    "lemma": "гусёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b5d0b6d0bed0bdd0bed0ba",
+    "lemma": "ежонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d0b0d0bbd0bed181d182d18c",
+    "lemma": "жалость",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d0b5d0bbd183d0b4d0bed0ba",
+    "lemma": "желудок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d0b5d0bdd0b0",
+    "lemma": "жена",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d0b5d0bdd0b8d185",
+    "lemma": "жених",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d183d180d0b0d0b2d0bbd191d0bdd0bed0ba",
+    "lemma": "журавлёнок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d0b0d0b2d0b8d181d182d18c",
+    "lemma": "зависть",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d0b0d0b9d187d0b8d185d0b0",
+    "lemma": "зайчиха",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d0b0d0bfd18fd181d182d18cd0b5",
+    "lemma": "запястье",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d180d0b0d187d0bed0ba",
+    "lemma": "зрачок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b7d180d0b8d182d0b5d0bbd18c",
+    "lemma": "зритель",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0b2d0bed0bbd0b3d0b0",
+    "lemma": "иволга",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0b3d183d0b0d0bdd0b0",
+    "lemma": "игуана",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0bdd0b4d0b5d0b9d0bad0b0",
+    "lemma": "индейка",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0bdd0b4d18ed188d0bed0bdd0bed0ba",
+    "lemma": "индюшонок",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b8d0bdd0b6d0b5d0bdd0b5d180",
+    "lemma": "инженер",
+    "weight": 20
+  },
+  {
     "id": "lex-v2-d0bad0b0d0bcd0b1d0b0d0bbd0b0",
     "lemma": "камбала",
     "weight": 20
@@ -102,101 +197,6 @@
   {
     "id": "lex-v2-d0bbd18cd0b2d0b8d186d0b0",
     "lemma": "львица",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bbd191d0b3d0bad0b8d0b5",
-    "lemma": "лёгкие",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bcd0b0d188d0b8d0bdd0b8d181d182",
-    "lemma": "машинист",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bcd0b5d0b4d0b2d0b5d0b4d0b8d186d0b0",
-    "lemma": "медведица",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bcd0b8d0b4d0b8d18f",
-    "lemma": "мидия",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bcd0bdd0bed0b3d0bed0bdd0bed0b6d0bad0b0",
-    "lemma": "многоножка",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bcd0bed0b7d0b3",
-    "lemma": "мозг",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bcd0bed0bad180d0b8d186d0b0",
-    "lemma": "мокрица",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bcd183d0b6",
-    "lemma": "муж",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bcd183d180d0b0d0b2d18cd0b5d0b4",
-    "lemma": "муравьед",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bcd18bd188d186d0b0",
-    "lemma": "мышца",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bdd0b0d180d0b2d0b0d0bb",
-    "lemma": "нарвал",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bdd0b5d0b2d0b5d181d182d0b0",
-    "lemma": "невеста",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bdd0b5d0b6d0bdd0bed181d182d18c",
-    "lemma": "нежность",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bdd0b5d0b7d0bdd0b0d0bad0bed0bcd0b5d186",
-    "lemma": "незнакомец",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bdd0bed0b7d0b4d180d18f",
-    "lemma": "ноздря",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bed0bbd0b5d0bdd191d0bdd0bed0ba",
-    "lemma": "оленёнок",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bed0bcd0b0d180",
-    "lemma": "омар",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bed180d0bbd0b8d186d0b0",
-    "lemma": "орлица",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bed181d0bbd0b8d186d0b0",
-    "lemma": "ослица",
     "weight": 20
   }
 ]

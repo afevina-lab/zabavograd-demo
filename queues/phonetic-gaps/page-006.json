@@ -1,105 +1,5 @@
 [
   {
-    "id": "ru-plant-20261104-d182d0bed0bbd181d182d18fd0bdd0bad0b0",
-    "lemma": "толстянка",
-    "weight": 10
-  },
-  {
-    "id": "ru-plant-20261104-d185d0bbd0bed180d0bed184d0b8d182d183d0bc",
-    "lemma": "хлорофитум",
-    "weight": 10
-  },
-  {
-    "id": "image-pack-20261114-021e2551c399",
-    "lemma": "штанга",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-08f02b56866a",
-    "lemma": "сладкая вата",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-0c3576422b7d",
-    "lemma": "вулкан",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-0fde8ad57f8c",
-    "lemma": "жемчужина",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-11d2188a1b8f",
-    "lemma": "динозавр",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-128a960b0fb1",
-    "lemma": "бочка",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-28b5e1833f5c",
-    "lemma": "кувшинка",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-2c43ed76f86c",
-    "lemma": "карета",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-398c2abb61a2",
-    "lemma": "кольцо",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-489bdafad7ab",
-    "lemma": "бант",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-48e041871e4e",
-    "lemma": "желе",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-504adad504c0",
-    "lemma": "учительница",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-52f08014edee",
-    "lemma": "бассейн",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-6be00f4c0878",
-    "lemma": "букет",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-7bacd0e90471",
-    "lemma": "маляр",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-89d0807e2016",
-    "lemma": "шалаш",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-8d30681c5417",
-    "lemma": "след медведя",
-    "weight": 0
-  },
-  {
-    "id": "image-pack-20261114-b0e3e8a40c2c",
-    "lemma": "пиджак",
-    "weight": 0
-  },
-  {
     "id": "image-pack-20261114-b11c136a808b",
     "lemma": "булка",
     "weight": 0
@@ -197,6 +97,106 @@
   {
     "id": "image-pack-20261120-d2c46b77a8b0",
     "lemma": "бублик",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261120-d523dfc5bedb",
+    "lemma": "мармелад",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261120-dcb486fa89bb",
+    "lemma": "пробирка",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261120-de5275ef5c64",
+    "lemma": "дорожный знак",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261120-f13b9379ecf4",
+    "lemma": "помада",
+    "weight": 0
+  },
+  {
+    "id": "modular-noun-0a35bff80ff4ba057e7fbc9e",
+    "lemma": "суши",
+    "weight": 0
+  },
+  {
+    "id": "modular-noun-d7583047bdb49ed8c6c0226a",
+    "lemma": "пожарный шланг",
+    "weight": 0
+  },
+  {
+    "id": "modular-noun-d8ae1283edd65027f404d1be",
+    "lemma": "ведьмочка",
+    "weight": 0
+  },
+  {
+    "id": "modular-noun-d94e5d30943ddc81fc29dcd2",
+    "lemma": "джип",
+    "weight": 0
+  },
+  {
+    "id": "modular-noun-e8bdb5d5683af2a4b1e6e45a",
+    "lemma": "пингвинёнок",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0003",
+    "lemma": "благодарить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0010",
+    "lemma": "вкручивать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0013",
+    "lemma": "встречать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0017",
+    "lemma": "выращивать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0023",
+    "lemma": "глотать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0048",
+    "lemma": "завязывать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0049",
+    "lemma": "заканчивать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0052",
+    "lemma": "запоминать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0053",
+    "lemma": "застёгивать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0055",
+    "lemma": "зашивать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0056",
+    "lemma": "защищать",
     "weight": 0
   }
 ]

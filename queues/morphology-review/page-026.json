@@ -155,48 +155,48 @@
     "weight": 10
   },
   {
-    "id": "ru-action-20261109-0001",
-    "lemma": "бегать",
+    "id": "modular-noun-088178cdc9131aa81552a9ee",
+    "lemma": "огонь",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0002",
-    "lemma": "бежать",
+    "id": "modular-noun-0a35bff80ff4ba057e7fbc9e",
+    "lemma": "суши",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0003",
-    "lemma": "благодарить",
+    "id": "modular-noun-0da8b87565a754bf5838a057",
+    "lemma": "паутина",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0004",
-    "lemma": "болеть",
+    "id": "modular-noun-102309a120364fe596a14ad5",
+    "lemma": "пустышка",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0005",
-    "lemma": "бояться",
+    "id": "modular-noun-291eac6ba46795f48f09be40",
+    "lemma": "гонщик",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0006",
-    "lemma": "брать",
+    "id": "modular-noun-3437d18792c14db9d259b7d7",
+    "lemma": "сыщик",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0007",
-    "lemma": "бросать",
+    "id": "modular-noun-4dc0aff8b16799538d5887ab",
+    "lemma": "ведьма",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0008",
-    "lemma": "взять",
+    "id": "modular-noun-5beff62d4df9d36b7ff011f0",
+    "lemma": "бензовоз",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0009",
-    "lemma": "видеть",
+    "id": "modular-noun-641eef361c1514d9b6c83401",
+    "lemma": "пузырь",
     "weight": 0
   }
 ]

@@ -1,5 +1,60 @@
 [
   {
+    "id": "ru-noun-20261109-0071",
+    "lemma": "самокат",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0072",
+    "lemma": "мотоцикл",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0073",
+    "lemma": "такси",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0077",
+    "lemma": "лодка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0078",
+    "lemma": "вагон",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0080",
+    "lemma": "мост",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0082",
+    "lemma": "остановка",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0084",
+    "lemma": "парк",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0086",
+    "lemma": "аптека",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0087",
+    "lemma": "больница",
+    "weight": 70
+  },
+  {
+    "id": "ru-noun-20261109-0089",
+    "lemma": "деревня",
+    "weight": 70
+  },
+  {
     "id": "ru-noun-extra-20261109-001",
     "lemma": "пельмени",
     "weight": 70
@@ -142,61 +197,6 @@
   {
     "id": "ru-plant-20261104-d0bad0b0d0b1d0b0d187d0bed0ba",
     "lemma": "кабачок",
-    "weight": 70
-  },
-  {
-    "id": "ru-plant-20261104-d0bad0bbd191d0bd",
-    "lemma": "клён",
-    "weight": 70
-  },
-  {
-    "id": "ru-plant-20261104-d0bad0bed180d0b5d0bdd18c",
-    "lemma": "корень",
-    "weight": 70
-  },
-  {
-    "id": "ru-plant-20261104-d0bbd0b5d0bfd0b5d181d182d0bed0ba",
-    "lemma": "лепесток",
-    "weight": 70
-  },
-  {
-    "id": "ru-plant-20261104-d0bbd0b8d181d0b8d187d0bad0b0",
-    "lemma": "лисичка",
-    "weight": 70
-  },
-  {
-    "id": "ru-plant-20261104-d0bbd0b8d181d1823ad0bbd0b8d181d18220d180d0b0d181d182d0b5d0bdd0b8d18f",
-    "lemma": "лист",
-    "weight": 70
-  },
-  {
-    "id": "ru-plant-20261104-d0bed0b4d183d0b2d0b0d0bdd187d0b8d0ba",
-    "lemma": "одуванчик",
-    "weight": 70
-  },
-  {
-    "id": "ru-plant-20261104-d0bfd0b0d0bbd18cd0bcd0b0",
-    "lemma": "пальма",
-    "weight": 70
-  },
-  {
-    "id": "ru-plant-20261104-d0bfd0b5d180d0b5d1863ad181d0bbd0b0d0b4d0bad0b8d0b920d0bed0b2d0bed189d0bdd0bed0b920d0bfd0b5d180d0b5d186",
-    "lemma": "перец",
-    "weight": 70
-  },
-  {
-    "id": "ru-plant-20261104-d0bfd0bbd0bed0b4",
-    "lemma": "плод",
-    "weight": 70
-  },
-  {
-    "id": "ru-plant-20261104-d0bfd0bed0b4d181d0bdd0b5d0b6d0bdd0b8d0ba",
-    "lemma": "подснежник",
-    "weight": 70
-  },
-  {
-    "id": "ru-plant-20261104-d180d18fd0b1d0b8d0bdd0b03ad0b4d0b5d180d0b5d0b2d0be20d180d18fd0b1d0b8d0bdd0b0",
-    "lemma": "рябина",
     "weight": 70
   }
 ]

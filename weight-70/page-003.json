@@ -35,6 +35,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -72,6 +74,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -109,6 +113,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -121,8 +127,8 @@
       "Животный мир/Вспомогательные/Места содержания животных"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
@@ -133,7 +139,7 @@
       "draft_status": null
     },
     "metadata_status": {
-      "speech": "pending_automatic_analysis",
+      "speech": "automatic_candidate_needs_review",
       "forms": "pending_automatic_analysis",
       "lexical": "editorially_selected",
       "prepositions": "pending"
@@ -148,6 +154,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -160,8 +168,8 @@
       "Еда и напитки/Готовые блюда"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
@@ -172,7 +180,7 @@
       "draft_status": null
     },
     "metadata_status": {
-      "speech": "pending_automatic_analysis",
+      "speech": "automatic_candidate_needs_review",
       "forms": "pending_automatic_analysis",
       "lexical": "editorially_selected",
       "prepositions": "pending"
@@ -187,6 +195,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -199,8 +209,8 @@
       "Животный мир/Вспомогательные/Продукты животного происхождения"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
@@ -211,7 +221,7 @@
       "draft_status": null
     },
     "metadata_status": {
-      "speech": "pending_automatic_analysis",
+      "speech": "automatic_candidate_needs_review",
       "forms": "pending_automatic_analysis",
       "lexical": "editorially_selected",
       "prepositions": "pending"
@@ -226,6 +236,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -238,8 +250,8 @@
       "Животный мир/Вспомогательные/Места содержания животных"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
@@ -250,7 +262,7 @@
       "draft_status": null
     },
     "metadata_status": {
-      "speech": "pending_automatic_analysis",
+      "speech": "automatic_candidate_needs_review",
       "forms": "pending_automatic_analysis",
       "lexical": "editorially_selected",
       "prepositions": "pending"
@@ -265,6 +277,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -277,8 +291,8 @@
       "Животный мир/Вспомогательные/Места содержания животных"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
@@ -289,7 +303,7 @@
       "draft_status": null
     },
     "metadata_status": {
-      "speech": "pending_automatic_analysis",
+      "speech": "automatic_candidate_needs_review",
       "forms": "pending_automatic_analysis",
       "lexical": "editorially_selected",
       "prepositions": "pending"
@@ -304,6 +318,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -316,8 +332,8 @@
       "Животный мир/Вспомогательные/Места содержания животных"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
@@ -328,7 +344,7 @@
       "draft_status": null
     },
     "metadata_status": {
-      "speech": "pending_automatic_analysis",
+      "speech": "automatic_candidate_needs_review",
       "forms": "pending_automatic_analysis",
       "lexical": "editorially_selected",
       "prepositions": "pending"
@@ -343,6 +359,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -355,8 +373,8 @@
       "Дом и быт/Предметы домашнего обихода"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
@@ -367,7 +385,7 @@
       "draft_status": null
     },
     "metadata_status": {
-      "speech": "pending_automatic_analysis",
+      "speech": "automatic_candidate_needs_review",
       "forms": "pending_automatic_analysis",
       "lexical": "editorially_selected",
       "prepositions": "pending"
@@ -382,6 +400,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -394,8 +414,8 @@
       "Животный мир/Вспомогательные/Места содержания животных"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
@@ -406,7 +426,7 @@
       "draft_status": null
     },
     "metadata_status": {
-      "speech": "pending_automatic_analysis",
+      "speech": "automatic_candidate_needs_review",
       "forms": "pending_automatic_analysis",
       "lexical": "editorially_selected",
       "prepositions": "pending"
@@ -421,6 +441,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -433,8 +455,8 @@
       "Животный мир/Вспомогательные/Места содержания животных"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
@@ -445,7 +467,7 @@
       "draft_status": null
     },
     "metadata_status": {
-      "speech": "pending_automatic_analysis",
+      "speech": "automatic_candidate_needs_review",
       "forms": "pending_automatic_analysis",
       "lexical": "editorially_selected",
       "prepositions": "pending"
@@ -460,6 +482,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -472,8 +496,8 @@
       "Животный мир/Вспомогательные/Места содержания животных"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
@@ -484,7 +508,7 @@
       "draft_status": null
     },
     "metadata_status": {
-      "speech": "pending_automatic_analysis",
+      "speech": "automatic_candidate_needs_review",
       "forms": "pending_automatic_analysis",
       "lexical": "editorially_selected",
       "prepositions": "pending"
@@ -499,6 +523,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -512,8 +538,8 @@
       "Животный мир/Вспомогательные/Продукты животного происхождения"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
@@ -524,7 +550,7 @@
       "draft_status": null
     },
     "metadata_status": {
-      "speech": "pending_automatic_analysis",
+      "speech": "automatic_candidate_needs_review",
       "forms": "pending_automatic_analysis",
       "lexical": "editorially_selected",
       "prepositions": "pending"
@@ -539,6 +565,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -577,6 +605,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -614,6 +644,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -651,6 +683,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -688,6 +722,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -725,6 +761,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -762,6 +800,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -799,6 +839,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -837,6 +879,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -874,6 +918,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -909,6 +955,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -944,6 +992,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -979,6 +1029,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1014,6 +1066,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -1049,6 +1103,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1084,6 +1140,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1122,6 +1180,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1159,6 +1219,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -1194,6 +1256,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1229,6 +1293,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1266,6 +1332,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1303,6 +1371,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1337,6 +1407,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1372,6 +1444,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1407,6 +1481,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1444,6 +1520,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -1479,6 +1557,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   }
 ]

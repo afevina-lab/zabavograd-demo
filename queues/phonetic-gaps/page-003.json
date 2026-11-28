@@ -1,75 +1,5 @@
 [
   {
-    "id": "lex-v2-d0b7d0bed0bbd0bed182d0b0d18f20d180d18bd0b1d0bad0b0",
-    "lemma": "золотая рыбка",
-    "weight": 50
-  },
-  {
-    "id": "lex-v2-d0bfd0bed0bdd0b8",
-    "lemma": "пони",
-    "weight": 50
-  },
-  {
-    "id": "lex-v2-d187d0b0d0b9d0bad0b0",
-    "lemma": "чайка",
-    "weight": 50
-  },
-  {
-    "id": "ru-editorial-gap-20261123-50b5335ce0f9d9dd",
-    "lemma": "крольчатник",
-    "weight": 50
-  },
-  {
-    "id": "ru-editorial-gap-20261123-edf837b9e99a588d",
-    "lemma": "сиденье",
-    "weight": 50
-  },
-  {
-    "id": "ru-editorial-gap-20261123-fccbd49255fd8455",
-    "lemma": "свинарник",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-27b31a5e",
-    "lemma": "половник",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-298c610",
-    "lemma": "органайзер",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-3bc32fc",
-    "lemma": "средство для мытья посуды",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-3ed60a01",
-    "lemma": "мультиварка",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-72329e61",
-    "lemma": "шуруповёрт",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-81603ef3",
-    "lemma": "колонка",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-931350d1",
-    "lemma": "фоторамка",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-a0e6fb39",
-    "lemma": "гладильная доска",
-    "weight": 50
-  },
-  {
     "id": "ru-home-20261105-b6233cd5",
     "lemma": "посудомоечная машина",
     "weight": 50
@@ -198,5 +128,75 @@
     "id": "ru-plant-20261104-d0bdd0b0d180d186d0b8d181d181",
     "lemma": "нарцисс",
     "weight": 50
+  },
+  {
+    "id": "ru-plant-20261104-d186d0b2d0b5d182d0bdd0b0d18f20d0bad0b0d0bfd183d181d182d0b0",
+    "lemma": "цветная капуста",
+    "weight": 50
+  },
+  {
+    "id": "ru-r-011-sense",
+    "lemma": "бургер",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0b1d183d181d18b",
+    "lemma": "бусы",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0b2d0b0d182d0b0",
+    "lemma": "вата",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0bcd183d0bad0b0",
+    "lemma": "мука",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d0bfd0b5d0bdd0b0",
+    "lemma": "пена",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d181d0b5d0bdd0be",
+    "lemma": "сено",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d18dd185d0be",
+    "lemma": "эхо",
+    "weight": 50
+  },
+  {
+    "id": "useful-20261113-d18fd0bcd0b0",
+    "lemma": "яма",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bad0bed0bbd0b8d0b1d180d0b8",
+    "lemma": "колибри",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bad0bed181d0b0d182d0bad0b0",
+    "lemma": "косатка",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0b0d0b9d181d0bad0b8d0b920d0b6d183d0ba",
+    "lemma": "майский жук",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0b0d18f20d187d0b5d180d0b5d0bfd0b0d185d0b0",
+    "lemma": "морская черепаха",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bcd0bed180d181d0bad0bed0b920d0bad0bed0bdd191d0ba",
+    "lemma": "морской конёк",
+    "weight": 30
   }
 ]

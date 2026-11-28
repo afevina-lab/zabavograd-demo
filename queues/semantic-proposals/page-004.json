@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ru-r-add-d18ed0bfd0b8d182d0b5d180",
+    "lemma": "юпитер",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-013",
+    "lemma": "двор",
+    "weight": 30
+  },
+  {
+    "id": "ru-r-extra-024",
+    "lemma": "рукав",
+    "weight": 30
+  },
+  {
+    "id": "ru-editorial-gap-20261123-ca0f1043a4221ecf",
+    "lemma": "подлокотник",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0049",
+    "lemma": "размер",
+    "weight": 20
+  },
+  {
+    "id": "ru-new-20261102-0068",
+    "lemma": "родина",
+    "weight": 20
+  },
+  {
+    "id": "ru-noun-extra-20261109-005",
+    "lemma": "кофе",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b3d180d0bed0bc",
+    "lemma": "гром",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0b4d180d0b0d0b6d0b5",
+    "lemma": "драже",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d0bfd180d0bed0bfd0b8d181d18c",
+    "lemma": "пропись",
+    "weight": 20
+  },
+  {
+    "id": "ru-r-add-d188d182d0bed180d0bc",
+    "lemma": "шторм",
+    "weight": 20
+  },
+  {
+    "id": "modular-noun-666de362fdee772ce3c6ed41",
+    "lemma": "шланг",
+    "weight": 0
+  },
+  {
+    "id": "modular-noun-b5983479bff1dbf2d6c397fc",
+    "lemma": "вокзал",
+    "weight": 0
+  },
+  {
+    "id": "modular-noun-d94e5d30943ddc81fc29dcd2",
+    "lemma": "джип",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0001",
+    "lemma": "бегать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0002",
+    "lemma": "бежать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0003",
+    "lemma": "благодарить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0004",
+    "lemma": "болеть",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0005",
+    "lemma": "бояться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0006",
+    "lemma": "брать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0007",
+    "lemma": "бросать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0008",
+    "lemma": "взять",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0009",
+    "lemma": "видеть",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0011",
+    "lemma": "волноваться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0012",
+    "lemma": "вставать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0013",
+    "lemma": "встречать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0014",
+    "lemma": "входить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0015",
+    "lemma": "выбирать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0017",
+    "lemma": "выращивать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0018",
+    "lemma": "вырезать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0019",
+    "lemma": "высыхать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0020",
+    "lemma": "вытираться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0021",
+    "lemma": "выходить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0022",
+    "lemma": "вязать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0023",
+    "lemma": "глотать",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0024",
+    "lemma": "говорить",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0025",
+    "lemma": "гореть",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0026",
+    "lemma": "готовиться",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0027",
+    "lemma": "гулять",
+    "weight": 0
+  },
+  {
+    "id": "ru-action-20261109-0028",
+    "lemma": "давать",
+    "weight": 0
+  }
+]

@@ -1,60 +1,5 @@
 [
   {
-    "id": "ru-editorial-gap-20261123-4b2dab1fc64f76df",
-    "lemma": "улей",
-    "weight": 70
-  },
-  {
-    "id": "ru-editorial-gap-20261123-540ace8499d262d2",
-    "lemma": "скворечник",
-    "weight": 70
-  },
-  {
-    "id": "ru-editorial-gap-20261123-7ac5f106aab9ccda",
-    "lemma": "бельё",
-    "weight": 70
-  },
-  {
-    "id": "ru-editorial-gap-20261123-7d873ad573e2697f",
-    "lemma": "муравейник",
-    "weight": 70
-  },
-  {
-    "id": "ru-editorial-gap-20261123-c12cd41bb4f37ba3",
-    "lemma": "курятник",
-    "weight": 70
-  },
-  {
-    "id": "ru-editorial-gap-20261123-d84927bcdfaf8b76",
-    "lemma": "коровник",
-    "weight": 70
-  },
-  {
-    "id": "ru-editorial-gap-20261123-e443e93fdf99178f",
-    "lemma": "мёд",
-    "weight": 70
-  },
-  {
-    "id": "ru-home-20261105-314a1d69",
-    "lemma": "ноутбук",
-    "weight": 70
-  },
-  {
-    "id": "ru-home-20261105-48a3ab48",
-    "lemma": "совок",
-    "weight": 70
-  },
-  {
-    "id": "ru-home-20261105-5a7d5589",
-    "lemma": "гаечный ключ",
-    "weight": 70
-  },
-  {
-    "id": "ru-home-20261105-5b28f6e6",
-    "lemma": "чайная ложка",
-    "weight": 70
-  },
-  {
     "id": "ru-home-20261105-624f6b16",
     "lemma": "швейная машина",
     "weight": 70
@@ -197,6 +142,61 @@
   {
     "id": "lex-v2-d0b4d0bed0b6d0b4d0b5d0b2d0bed0b920d187d0b5d180d0b2d18c",
     "lemma": "дождевой червь",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0b7d0bed0bbd0bed182d0b0d18f20d180d18bd0b1d0bad0b0",
+    "lemma": "золотая рыбка",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bfd0bed0bdd0b8",
+    "lemma": "пони",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d187d0b0d0b9d0bad0b0",
+    "lemma": "чайка",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-27b31a5e",
+    "lemma": "половник",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-298c610",
+    "lemma": "органайзер",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-3bc32fc",
+    "lemma": "средство для мытья посуды",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-3ed60a01",
+    "lemma": "мультиварка",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-72329e61",
+    "lemma": "шуруповёрт",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-81603ef3",
+    "lemma": "колонка",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-931350d1",
+    "lemma": "фоторамка",
+    "weight": 50
+  },
+  {
+    "id": "ru-home-20261105-a0e6fb39",
+    "lemma": "гладильная доска",
     "weight": 50
   }
 ]

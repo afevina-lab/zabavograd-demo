@@ -1,202 +1,202 @@
 [
   {
-    "id": "ru-action-20261109-0014",
-    "lemma": "входить",
+    "id": "ru-plant-20261104-d181d0bfd0b0d180d0b6d0b0",
+    "lemma": "спаржа",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d185d180d0b5d0bd",
+    "lemma": "хрен",
+    "weight": 20
+  },
+  {
+    "id": "ru-plant-20261104-d18fd181d0b5d0bdd18c",
+    "lemma": "ясень",
+    "weight": 20
+  },
+  {
+    "id": "lex-v2-d0b6d0b5d180d0b5d0b1d0b5d186",
+    "lemma": "жеребец",
+    "weight": 10
+  },
+  {
+    "id": "ru-home-20261105-2518ba59",
+    "lemma": "фундамент",
+    "weight": 10
+  },
+  {
+    "id": "ru-home-20261105-b23cae5f",
+    "lemma": "терраса",
+    "weight": 10
+  },
+  {
+    "id": "ru-home-20261105-b3ea3835",
+    "lemma": "веранда",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d0b4d180d0b0d186d0b5d0bdd0b0",
+    "lemma": "драцена",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d181d0b5d0bad0b2d0bed0b9d18f",
+    "lemma": "секвойя",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d182d180d18ed184d0b5d0bbd18c",
+    "lemma": "трюфель",
+    "weight": 10
+  },
+  {
+    "id": "modular-noun-088178cdc9131aa81552a9ee",
+    "lemma": "огонь",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0015",
-    "lemma": "выбирать",
+    "id": "modular-noun-0da8b87565a754bf5838a057",
+    "lemma": "паутина",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0016",
-    "lemma": "выздоравливать",
+    "id": "modular-noun-102309a120364fe596a14ad5",
+    "lemma": "пустышка",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0018",
-    "lemma": "вырезать",
+    "id": "modular-noun-291eac6ba46795f48f09be40",
+    "lemma": "гонщик",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0019",
-    "lemma": "высыхать",
+    "id": "modular-noun-3437d18792c14db9d259b7d7",
+    "lemma": "сыщик",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0020",
-    "lemma": "вытираться",
+    "id": "modular-noun-4dc0aff8b16799538d5887ab",
+    "lemma": "ведьма",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0021",
-    "lemma": "выходить",
+    "id": "modular-noun-5beff62d4df9d36b7ff011f0",
+    "lemma": "бензовоз",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0022",
-    "lemma": "вязать",
+    "id": "modular-noun-641eef361c1514d9b6c83401",
+    "lemma": "пузырь",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0024",
-    "lemma": "говорить",
+    "id": "modular-noun-666de362fdee772ce3c6ed41",
+    "lemma": "шланг",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0025",
-    "lemma": "гореть",
+    "id": "modular-noun-6ae9ca619966cf72d428a9eb",
+    "lemma": "пчеловод",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0026",
-    "lemma": "готовиться",
+    "id": "modular-noun-6b818be3eec8a27cf52a5b02",
+    "lemma": "жонглёр",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0027",
-    "lemma": "гулять",
+    "id": "modular-noun-b1646280f6609ff0963aad1e",
+    "lemma": "укол",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0028",
-    "lemma": "давать",
+    "id": "modular-noun-b5983479bff1dbf2d6c397fc",
+    "lemma": "вокзал",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0029",
-    "lemma": "дарить",
+    "id": "modular-noun-b68fadf0c8c07aa55866a9d4",
+    "lemma": "модель",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0030",
-    "lemma": "двигать",
+    "id": "modular-noun-b9e83f6976d030f7ab32cdbe",
+    "lemma": "сирень",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0031",
-    "lemma": "делать",
+    "id": "modular-noun-be808f824181ae48d99339cf",
+    "lemma": "станция",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0032",
-    "lemma": "делиться",
+    "id": "modular-noun-ccf302483fd6e2d057da79a3",
+    "lemma": "йог",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0033",
-    "lemma": "держать",
+    "id": "modular-noun-de1ccfdbf43938cf20d7b819",
+    "lemma": "стетоскоп",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0034",
-    "lemma": "добавлять",
+    "id": "modular-noun-dfc25bef5ff331ece09de482",
+    "lemma": "судья",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0035",
-    "lemma": "догонять",
+    "id": "modular-noun-efe094204f5a7b63b314e870",
+    "lemma": "акробат",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0036",
-    "lemma": "дремать",
+    "id": "modular-noun-f4e1d8491b1bc73552417446",
+    "lemma": "дрессировщик",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0037",
-    "lemma": "дружить",
+    "id": "modular-noun-f4ec40292a1f0ff78dc3aaa5",
+    "lemma": "царь",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0038",
-    "lemma": "думать",
+    "id": "modular-noun-f61cb05ad4697854db65f335",
+    "lemma": "парашют",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0039",
-    "lemma": "дуть",
+    "id": "ru-action-20261109-0001",
+    "lemma": "бегать",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0040",
-    "lemma": "ездить",
+    "id": "ru-action-20261109-0002",
+    "lemma": "бежать",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0041",
-    "lemma": "есть",
+    "id": "ru-action-20261109-0004",
+    "lemma": "болеть",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0042",
-    "lemma": "ехать",
+    "id": "ru-action-20261109-0005",
+    "lemma": "бояться",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0043",
-    "lemma": "жалеть",
+    "id": "ru-action-20261109-0006",
+    "lemma": "брать",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0044",
-    "lemma": "ждать",
+    "id": "ru-action-20261109-0007",
+    "lemma": "бросать",
     "weight": 0
   },
   {
-    "id": "ru-action-20261109-0045",
-    "lemma": "жевать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0046",
-    "lemma": "заботиться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0047",
-    "lemma": "забывать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0050",
-    "lemma": "замерзать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0051",
-    "lemma": "замечать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0054",
-    "lemma": "засыпать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0057",
-    "lemma": "звать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0058",
-    "lemma": "здороваться",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0059",
-    "lemma": "знать",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0060",
-    "lemma": "играть",
-    "weight": 0
-  },
-  {
-    "id": "ru-action-20261109-0061",
-    "lemma": "идти",
+    "id": "ru-action-20261109-0008",
+    "lemma": "взять",
     "weight": 0
   }
 ]

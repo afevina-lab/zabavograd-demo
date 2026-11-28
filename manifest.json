@@ -3,9 +3,9 @@
   "source": {
     "master": {
       "path": "generated V2 from modules",
-      "sha256": "e5bd329b33f37240bfb3948dde24f6086a25b46a95ec328b2108b0fb1c702569",
-      "git_blob": "b1d8242c9e2f5b4d0a1b223a246fb12ce404faab",
-      "bytes": 18573399,
+      "sha256": "e3fa1d1e1b6d174764d6e8304e7716e32a7cbd27fbcb3e0f935bd4b3ac352198",
+      "git_blob": "252c6e3a3bc80a3c9f11ca075b689856486a78e2",
+      "bytes": 23893775,
       "mode": "modules"
     },
     "syllables": {
@@ -29,7 +29,7 @@
   },
   "entries": 2021,
   "categories": 234,
-  "relations": 1540,
+  "relations": 1554,
   "page_size": 40,
   "pages": [
     {
@@ -428,18 +428,18 @@
     "100": 206
   },
   "phonetic_status": {
-    "automatic_candidate_needs_review": 1218,
+    "automatic_candidate_needs_review": 1263,
     "filled_with_explicit_extended_cases": 259,
     "pending": 263,
-    "pending_automatic_analysis": 281
+    "pending_automatic_analysis": 236
   },
   "morphology_status": {
-    "automatic_candidate_needs_review": 1363,
+    "automatic_candidate_needs_review": 1390,
     "editorial_draft": 181,
     "filled_with_explicit_extended_cases": 259,
     "machine_checked_forms_subset": 22,
     "pending": 97,
-    "pending_automatic_analysis": 99
+    "pending_automatic_analysis": 72
   },
   "fields": {
     "id": {
@@ -472,19 +472,19 @@
     },
     "phonetic_tags": {
       "entries": 2021,
-      "value_bytes": 1001512
+      "value_bytes": 1016962
     },
     "morphology": {
       "entries": 2021,
-      "value_bytes": 2692001
+      "value_bytes": 2722009
     },
     "illustrations": {
       "entries": 2021,
       "value_bytes": 401606
     },
     "metadata_completion": {
-      "entries": 1946,
-      "value_bytes": 238908
+      "entries": 1973,
+      "value_bytes": 241240
     },
     "legacy_source": {
       "entries": 1960,
@@ -493,6 +493,10 @@
     "editorial": {
       "entries": 2021,
       "value_bytes": 311330
+    },
+    "external_linguistic_proposals": {
+      "entries": 452,
+      "value_bytes": 3630810
     },
     "generalization": {
       "entries": 24,
@@ -531,14 +535,14 @@
   "draft_source_verified": false,
   "queues": {
     "phonetic-gaps": {
-      "count": 519,
+      "count": 474,
       "by_weight": {
-        "0": 317,
+        "0": 292,
         "10": 6,
-        "20": 31,
-        "30": 36,
-        "50": 52,
-        "70": 47,
+        "20": 30,
+        "30": 31,
+        "50": 49,
+        "70": 36,
         "100": 30
       },
       "pages": [
@@ -588,23 +592,19 @@
         },
         {
           "file": "queues/phonetic-gaps/page-012.json",
-          "count": 40
-        },
-        {
-          "file": "queues/phonetic-gaps/page-013.json",
-          "count": 39
+          "count": 34
         }
       ]
     },
     "phonetic-review": {
-      "count": 1218,
+      "count": 1263,
       "by_weight": {
-        "0": 268,
+        "0": 293,
         "10": 7,
-        "20": 195,
-        "30": 141,
-        "50": 232,
-        "70": 241,
+        "20": 196,
+        "30": 146,
+        "50": 235,
+        "70": 252,
         "100": 134
       },
       "pages": [
@@ -730,14 +730,18 @@
         },
         {
           "file": "queues/phonetic-review/page-031.json",
-          "count": 18
+          "count": 40
+        },
+        {
+          "file": "queues/phonetic-review/page-032.json",
+          "count": 23
         }
       ]
     },
     "morphology-gaps": {
-      "count": 67,
+      "count": 40,
       "by_weight": {
-        "0": 28,
+        "0": 1,
         "20": 4,
         "30": 10,
         "50": 10,
@@ -748,17 +752,13 @@
         {
           "file": "queues/morphology-gaps/page-001.json",
           "count": 40
-        },
-        {
-          "file": "queues/morphology-gaps/page-002.json",
-          "count": 27
         }
       ]
     },
     "morphology-review": {
-      "count": 1363,
+      "count": 1390,
       "by_weight": {
-        "0": 332,
+        "0": 359,
         "10": 13,
         "20": 219,
         "30": 153,
@@ -905,7 +905,7 @@
         },
         {
           "file": "queues/morphology-review/page-035.json",
-          "count": 3
+          "count": 30
         }
       ]
     },
@@ -1101,9 +1101,65 @@
       ]
     },
     "semantic-proposals": {
-      "count": 0,
-      "by_weight": {},
-      "pages": []
+      "count": 452,
+      "by_weight": {
+        "0": 321,
+        "20": 8,
+        "30": 24,
+        "50": 41,
+        "70": 32,
+        "100": 26
+      },
+      "pages": [
+        {
+          "file": "queues/semantic-proposals/page-001.json",
+          "count": 40
+        },
+        {
+          "file": "queues/semantic-proposals/page-002.json",
+          "count": 40
+        },
+        {
+          "file": "queues/semantic-proposals/page-003.json",
+          "count": 40
+        },
+        {
+          "file": "queues/semantic-proposals/page-004.json",
+          "count": 40
+        },
+        {
+          "file": "queues/semantic-proposals/page-005.json",
+          "count": 40
+        },
+        {
+          "file": "queues/semantic-proposals/page-006.json",
+          "count": 40
+        },
+        {
+          "file": "queues/semantic-proposals/page-007.json",
+          "count": 40
+        },
+        {
+          "file": "queues/semantic-proposals/page-008.json",
+          "count": 40
+        },
+        {
+          "file": "queues/semantic-proposals/page-009.json",
+          "count": 40
+        },
+        {
+          "file": "queues/semantic-proposals/page-010.json",
+          "count": 40
+        },
+        {
+          "file": "queues/semantic-proposals/page-011.json",
+          "count": 40
+        },
+        {
+          "file": "queues/semantic-proposals/page-012.json",
+          "count": 12
+        }
+      ]
     },
     "phonetic-proposals": {
       "count": 0,

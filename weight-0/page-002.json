@@ -27,6 +27,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -57,6 +59,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -69,18 +73,21 @@
       "Природа и окружающий мир/Явления"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -89,6 +96,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -108,11 +117,13 @@
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -121,6 +132,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -133,18 +146,21 @@
       "Животный мир/Вспомогательные/Жилища животных"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -153,6 +169,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -165,18 +183,21 @@
       "Дом и быт/Предметы домашнего обихода/Прочие бытовые предметы"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -185,6 +206,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -197,18 +220,21 @@
       "Человек/Профессии"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -217,6 +243,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -229,18 +257,21 @@
       "Человек/Профессии"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -249,6 +280,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -261,18 +294,21 @@
       "Человек/Люди"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -281,6 +317,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -293,18 +331,21 @@
       "Общество и окружающая среда/Транспорт и специальная техника/Грузовой транспорт"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -313,6 +354,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -325,18 +368,21 @@
       "Природа и окружающий мир/Явления"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -345,6 +391,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -357,18 +405,21 @@
       "Дом и быт/Инструменты/Садовые инструменты"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -377,6 +428,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 1,
+    "ambiguous_external_proposals": 1,
     "illustrations": 1
   },
   {
@@ -389,18 +442,21 @@
       "Человек/Профессии"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -409,6 +465,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -421,18 +479,21 @@
       "Человек/Профессии"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -441,6 +502,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -453,18 +516,21 @@
       "Дом и быт/Предметы домашнего обихода/Прочие бытовые предметы"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -473,6 +539,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -485,18 +553,21 @@
       "Общество и окружающая среда/Город и село/Здания и учреждения"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -505,6 +576,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 1,
+    "ambiguous_external_proposals": 1,
     "illustrations": 1
   },
   {
@@ -517,18 +590,21 @@
       "Человек/Профессии"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -537,6 +613,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -549,18 +627,21 @@
       "Растительный мир и грибы/Деревья"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -569,6 +650,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -581,18 +664,21 @@
       "Общество и окружающая среда/Город и село/Здания и учреждения"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -601,6 +687,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -613,18 +701,21 @@
       "Человек/Люди"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -633,6 +724,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -665,6 +758,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -684,11 +779,13 @@
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -697,6 +794,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -716,19 +815,25 @@
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
-      "total": 0,
-      "by_type": {},
-      "verified": 0,
+      "total": 1,
+      "by_type": {
+        "is_a": 1
+      },
+      "verified": 1,
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 1,
+    "ambiguous_external_proposals": 1,
     "illustrations": 1
   },
   {
@@ -741,18 +846,21 @@
       "Дом и быт/Предметы домашнего обихода/Прочие бытовые предметы"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -761,6 +869,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -773,18 +883,21 @@
       "Человек/Профессии"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -793,6 +906,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -812,11 +927,13 @@
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -825,6 +942,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -837,18 +956,21 @@
       "Человек/Профессии"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -857,6 +979,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -869,18 +993,21 @@
       "Человек/Профессии"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -889,6 +1016,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -901,18 +1030,21 @@
       "Человек/Люди"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -921,6 +1053,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -933,18 +1067,21 @@
       "Игры, творчество и увлечения/Спортивный инвентарь"
     ],
     "phonetic": {
-      "status": "pending_automatic_analysis",
-      "stored_tokens": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_tokens": true,
       "review_proposal": false,
       "draft_status": null,
       "draft_tokens": false
     },
     "morphology": {
-      "status": "pending_automatic_analysis",
-      "stored_candidate_forms": false,
+      "status": "automatic_candidate_needs_review",
+      "stored_candidate_forms": true,
       "draft_status": null
     },
-    "metadata_status": null,
+    "metadata_status": {
+      "forms": "automatic_candidate_needs_review",
+      "speech": "automatic_candidate_needs_review"
+    },
     "syllable_type": null,
     "relation_counts": {
       "total": 0,
@@ -953,6 +1090,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 1
   },
   {
@@ -991,6 +1130,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 20,
+    "ambiguous_external_proposals": 3,
     "illustrations": 0
   },
   {
@@ -1029,6 +1170,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 57,
+    "ambiguous_external_proposals": 3,
     "illustrations": 0
   },
   {
@@ -1065,6 +1208,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 11,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1101,6 +1246,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 1,
+    "ambiguous_external_proposals": 1,
     "illustrations": 0
   },
   {
@@ -1137,6 +1284,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 14,
+    "ambiguous_external_proposals": 2,
     "illustrations": 0
   },
   {
@@ -1175,6 +1324,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 120,
+    "ambiguous_external_proposals": 3,
     "illustrations": 0
   },
   {
@@ -1211,6 +1362,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 42,
+    "ambiguous_external_proposals": 3,
     "illustrations": 0
   },
   {
@@ -1247,6 +1400,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 139,
+    "ambiguous_external_proposals": 2,
     "illustrations": 0
   },
   {
@@ -1283,6 +1438,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 45,
+    "ambiguous_external_proposals": 4,
     "illustrations": 0
   },
   {
@@ -1319,6 +1476,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   }
 ]

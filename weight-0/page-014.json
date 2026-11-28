@@ -37,6 +37,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -77,6 +79,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -117,6 +121,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -159,6 +165,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -201,6 +209,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -241,6 +251,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 1,
+    "ambiguous_external_proposals": 1,
     "illustrations": 0
   },
   {
@@ -278,6 +290,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 3,
+    "ambiguous_external_proposals": 1,
     "illustrations": 0
   },
   {
@@ -317,6 +331,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -355,6 +371,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 1,
+    "ambiguous_external_proposals": 1,
     "illustrations": 0
   },
   {
@@ -393,6 +411,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 9,
+    "ambiguous_external_proposals": 1,
     "illustrations": 0
   },
   {
@@ -430,6 +450,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -468,6 +490,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -507,6 +531,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 5,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -544,6 +570,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -581,6 +609,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 1,
+    "ambiguous_external_proposals": 1,
     "illustrations": 0
   },
   {
@@ -622,6 +652,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 12,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -660,6 +692,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 1,
+    "ambiguous_external_proposals": 1,
     "illustrations": 0
   },
   {
@@ -698,6 +732,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -735,6 +771,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 20,
+    "ambiguous_external_proposals": 2,
     "illustrations": 0
   },
   {
@@ -773,6 +811,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 2,
+    "ambiguous_external_proposals": 2,
     "illustrations": 0
   },
   {
@@ -811,6 +851,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 1,
+    "ambiguous_external_proposals": 1,
     "illustrations": 0
   },
   {
@@ -849,6 +891,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -889,6 +933,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 11,
+    "ambiguous_external_proposals": 1,
     "illustrations": 0
   },
   {
@@ -926,6 +972,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -964,6 +1012,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 42,
+    "ambiguous_external_proposals": 4,
     "illustrations": 0
   },
   {
@@ -1001,6 +1051,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 81,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1038,6 +1090,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1076,6 +1130,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1114,6 +1170,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1153,6 +1211,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 1,
+    "ambiguous_external_proposals": 1,
     "illustrations": 0
   },
   {
@@ -1190,6 +1250,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 1,
+    "ambiguous_external_proposals": 1,
     "illustrations": 0
   },
   {
@@ -1227,6 +1289,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1265,6 +1329,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1303,6 +1369,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 28,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1341,6 +1409,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 16,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1378,6 +1448,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1416,6 +1488,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   },
   {
@@ -1454,6 +1528,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 17,
+    "ambiguous_external_proposals": 17,
     "illustrations": 0
   },
   {
@@ -1492,6 +1568,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 26,
+    "ambiguous_external_proposals": 2,
     "illustrations": 0
   },
   {
@@ -1529,6 +1607,8 @@
       "suggested": 0
     },
     "semantic_review_proposals": 0,
+    "external_review_proposals": 0,
+    "ambiguous_external_proposals": 0,
     "illustrations": 0
   }
 ]

@@ -1,5 +1,60 @@
 [
   {
+    "id": "lex-v2-d0bad0bbd0bed183d0bd",
+    "lemma": "клоун",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bad0bed0b6d0b0",
+    "lemma": "кожа",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bad0bed0bbd0b5d0bdd0be",
+    "lemma": "колено",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bad0bed0bdd0b4d0b8d182d0b5d180",
+    "lemma": "кондитер",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bad0bed181d0b8d187d0bad0b0",
+    "lemma": "косичка",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bad0bed181d182d18c",
+    "lemma": "кость",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bad0bed182d191d0bdd0bed0ba",
+    "lemma": "котёнок",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bad183d0bbd0b0d0ba",
+    "lemma": "кулак",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bbd0b0d0b4d0bed0bdd18c",
+    "lemma": "ладонь",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bbd0bed0b1",
+    "lemma": "лоб",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d0bbd0bed0bad0bed182d18c",
+    "lemma": "локоть",
+    "weight": 50
+  },
+  {
     "id": "lex-v2-d0bbd18ed0b1d0bed0b2d18c",
     "lemma": "любовь",
     "weight": 50
@@ -142,61 +197,6 @@
   {
     "id": "lex-v2-d181d0bed0bc",
     "lemma": "сом",
-    "weight": 50
-  },
-  {
-    "id": "lex-v2-d181d0bfd0b0d181d0b0d182d0b5d0bbd18c",
-    "lemma": "спасатель",
-    "weight": 50
-  },
-  {
-    "id": "lex-v2-d181d0bfd0bed0bad0bed0b9d181d182d0b2d0b8d0b5",
-    "lemma": "спокойствие",
-    "weight": 50
-  },
-  {
-    "id": "lex-v2-d181d0bfd0bed180d182d181d0bcd0b5d0bd",
-    "lemma": "спортсмен",
-    "weight": 50
-  },
-  {
-    "id": "lex-v2-d181d182d0b0d180d0b8d0ba",
-    "lemma": "старик",
-    "weight": 50
-  },
-  {
-    "id": "lex-v2-d181d182d0b0d180d183d188d0bad0b0",
-    "lemma": "старушка",
-    "weight": 50
-  },
-  {
-    "id": "lex-v2-d181d182d0bed0bcd0b0d182d0bed0bbd0bed0b3",
-    "lemma": "стоматолог",
-    "weight": 50
-  },
-  {
-    "id": "lex-v2-d181d187d0b0d181d182d18cd0b5",
-    "lemma": "счастье",
-    "weight": 50
-  },
-  {
-    "id": "lex-v2-d182d0b0d0bdd186d0bed180",
-    "lemma": "танцор",
-    "weight": 50
-  },
-  {
-    "id": "lex-v2-d182d191d182d18f",
-    "lemma": "тётя",
-    "weight": 50
-  },
-  {
-    "id": "lex-v2-d183d0b1d0bed180d189d0b8d0ba",
-    "lemma": "уборщик",
-    "weight": 50
-  },
-  {
-    "id": "lex-v2-d183d181d182d0b0d0bbd0bed181d182d18c",
-    "lemma": "усталость",
     "weight": 50
   }
 ]

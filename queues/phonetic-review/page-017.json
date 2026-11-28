@@ -1,5 +1,75 @@
 [
   {
+    "id": "lex-v2-d0bcd0bed182d18bd0bbd191d0ba",
+    "lemma": "мотылёк",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bed0bad183d0bdd18c",
+    "lemma": "окунь",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bed180d0bbd191d0bdd0bed0ba",
+    "lemma": "орлёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bfd0b0d0bdd182d0b5d180d0b0",
+    "lemma": "пантера",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bfd0b5d0bbd0b8d0bad0b0d0bd",
+    "lemma": "пеликан",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d0bfd0b5d181d0b5d186",
+    "lemma": "песец",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0b2d0b5d180d187d0bed0ba",
+    "lemma": "сверчок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0b2d0b5d182d0bbd18fd187d0bed0ba",
+    "lemma": "светлячок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0b2d0b8d180d0b8d181d182d0b5d0bbd18c",
+    "lemma": "свиристель",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bad0b0d182",
+    "lemma": "скат",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bad0bed180d0bfd0b8d0bed0bd",
+    "lemma": "скорпион",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bbd0b8d0b7d0b5d0bdd18c",
+    "lemma": "слизень",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bed0b2d191d0bdd0bed0ba",
+    "lemma": "совёнок",
+    "weight": 30
+  },
+  {
+    "id": "lex-v2-d181d0bed0bad0bed0bb",
+    "lemma": "сокол",
+    "weight": 30
+  },
+  {
     "id": "lex-v2-d181d0bed180d0bed0bad0bed0bdd0bed0b6d0bad0b0",
     "lemma": "сороконожка",
     "weight": 30
@@ -55,6 +125,31 @@
     "weight": 30
   },
   {
+    "id": "ru-editorial-gap-20261123-1b794ffe762af4ac",
+    "lemma": "сервант",
+    "weight": 30
+  },
+  {
+    "id": "ru-editorial-gap-20261123-2ba91fdab4a76ca8",
+    "lemma": "дверца",
+    "weight": 30
+  },
+  {
+    "id": "ru-editorial-gap-20261123-435ddffa8137120a",
+    "lemma": "спинка",
+    "weight": 30
+  },
+  {
+    "id": "ru-editorial-gap-20261123-f544370d096c311e",
+    "lemma": "ножка",
+    "weight": 30
+  },
+  {
+    "id": "ru-editorial-gap-20261123-f64e065e73be6f67",
+    "lemma": "буфет",
+    "weight": 30
+  },
+  {
     "id": "ru-gen-20261104-flower-organ",
     "lemma": "цветок",
     "weight": 30
@@ -102,101 +197,6 @@
   {
     "id": "ru-home-20261105-5bd96790",
     "lemma": "подсвечник",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-6e18c351",
-    "lemma": "соусник",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-6eb84d4e",
-    "lemma": "шпатель",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-723ab1af",
-    "lemma": "пуф",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-76b58058",
-    "lemma": "торшер",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-87a50edd",
-    "lemma": "венок",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-93e6b725",
-    "lemma": "вытяжка",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-9fee620d",
-    "lemma": "сотейник",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-be632bf2",
-    "lemma": "щипцы",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-c0df24fa",
-    "lemma": "кабинет",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-c4c47b60",
-    "lemma": "столовая",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-e1c07d48",
-    "lemma": "кладовка",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-e263753",
-    "lemma": "шайба",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-ee6142ae",
-    "lemma": "ножовка",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-f993539f",
-    "lemma": "изба",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-fe09e4c3",
-    "lemma": "бидон",
-    "weight": 30
-  },
-  {
-    "id": "ru-home-20261105-ff475f8e",
-    "lemma": "соковыжималка",
-    "weight": 30
-  },
-  {
-    "id": "ru-images-20261105-152_truba_vodoprovodnaya",
-    "lemma": "труба",
-    "weight": 30
-  },
-  {
-    "id": "ru-images-20261105-181_shatyor",
-    "lemma": "шатёр",
-    "weight": 30
-  },
-  {
-    "id": "ru-new-20261102-0009",
-    "lemma": "гроза",
     "weight": 30
   }
 ]

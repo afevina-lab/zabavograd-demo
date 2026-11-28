@@ -1,5 +1,60 @@
 [
   {
+    "id": "lex-v2-d181d0bfd0b0d181d0b0d182d0b5d0bbd18c",
+    "lemma": "спасатель",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bfd0bed0bad0bed0b9d181d182d0b2d0b8d0b5",
+    "lemma": "спокойствие",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d0bfd0bed180d182d181d0bcd0b5d0bd",
+    "lemma": "спортсмен",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d182d0b0d180d0b8d0ba",
+    "lemma": "старик",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d182d0b0d180d183d188d0bad0b0",
+    "lemma": "старушка",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d182d0bed0bcd0b0d182d0bed0bbd0bed0b3",
+    "lemma": "стоматолог",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d181d187d0b0d181d182d18cd0b5",
+    "lemma": "счастье",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d182d0b0d0bdd186d0bed180",
+    "lemma": "танцор",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d182d191d182d18f",
+    "lemma": "тётя",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d183d0b1d0bed180d189d0b8d0ba",
+    "lemma": "уборщик",
+    "weight": 50
+  },
+  {
+    "id": "lex-v2-d183d181d182d0b0d0bbd0bed181d182d18c",
+    "lemma": "усталость",
+    "weight": 50
+  },
+  {
     "id": "lex-v2-d183d181d18b",
     "lemma": "усы",
     "weight": 50
@@ -57,6 +112,21 @@
   {
     "id": "lex-v2-d18fd189d0b5d180d0b8d186d0b0",
     "lemma": "ящерица",
+    "weight": 50
+  },
+  {
+    "id": "ru-editorial-gap-20261123-50b5335ce0f9d9dd",
+    "lemma": "крольчатник",
+    "weight": 50
+  },
+  {
+    "id": "ru-editorial-gap-20261123-edf837b9e99a588d",
+    "lemma": "сиденье",
+    "weight": 50
+  },
+  {
+    "id": "ru-editorial-gap-20261123-fccbd49255fd8455",
+    "lemma": "свинарник",
     "weight": 50
   },
   {
@@ -127,76 +197,6 @@
   {
     "id": "ru-home-20261105-4c3aa948",
     "lemma": "наволочка",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-515322e7",
-    "lemma": "коридор",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-51f11e67",
-    "lemma": "пряжа",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-5a10ab0e",
-    "lemma": "ткань",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-5c29513b",
-    "lemma": "скалка",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-5eb2d99",
-    "lemma": "подвал",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-6329bf55",
-    "lemma": "метла",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-703041d7",
-    "lemma": "верёвка",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-769360c2",
-    "lemma": "детская",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-797f50d6",
-    "lemma": "плед",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-821917f1",
-    "lemma": "мясорубка",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-856de104",
-    "lemma": "бритва",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-91419d28",
-    "lemma": "статуэтка",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-94e8e871",
-    "lemma": "секатор",
-    "weight": 50
-  },
-  {
-    "id": "ru-home-20261105-9a48ab09",
-    "lemma": "гайка",
     "weight": 50
   }
 ]

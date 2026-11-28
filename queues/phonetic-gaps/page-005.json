@@ -1,100 +1,5 @@
 [
   {
-    "id": "ru-plant-20261104-d0b0d0bbd0bed18d",
-    "lemma": "алоэ",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d0b1d180d0bed0bad0bad0bed0bbd0b8",
-    "lemma": "брокколи",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d0b2d0b5d188d0b5d0bdd0bad0b0",
-    "lemma": "вешенка",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d0b8d180d0b8d181",
-    "lemma": "ирис",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d0bcd0b0d0bdd0b3d0be",
-    "lemma": "манго",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d0b2d0bed180d0bed0b1d18cd0b8d0bdd18bd0b920d181d18bd187",
-    "lemma": "воробьиный сыч",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b2d0bed180d0bed0bd",
-    "lemma": "ворон",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b3d0bed0bbd183d0b1d0bad0b0",
-    "lemma": "голубка",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b3d183d0bfd0bfd0b8",
-    "lemma": "гуппи",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b6d183d0ba2dd0bdd0bed181d0bed180d0bed0b3",
-    "lemma": "жук-носорог",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b6d183d0ba2dd0bed0bbd0b5d0bdd18c",
-    "lemma": "жук-олень",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bad0b0d0b1d0b0d0bdd0b8d185d0b0",
-    "lemma": "кабаниха",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bad0bed0bbd0bed180d0b0d0b4d181d0bad0b8d0b920d0b6d183d0ba",
-    "lemma": "колорадский жук",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bad183d0bad183d188d0bed0bdd0bed0ba",
-    "lemma": "кукушонок",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bcd0bed180d181d0bad0b0d18f20d181d0b2d0b8d0bdd0bad0b0",
-    "lemma": "морская свинка",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bed0bbd0b5d0bdd0b8d185d0b0",
-    "lemma": "олениха",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0bfd0b5d180d0b5d0bfd191d0bbd0bad0b0",
-    "lemma": "перепёлка",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d180d18bd0b1d0b02dd0bcd0b5d187",
-    "lemma": "рыба-меч",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d181d0bad0b0d0bbd18fd180d0b8d18f",
-    "lemma": "скалярия",
-    "weight": 20
-  },
-  {
     "id": "lex-v2-d181d182d180d0b8d0b6d0bed0bdd0bed0ba",
     "lemma": "стрижонок",
     "weight": 20
@@ -117,11 +22,6 @@
   {
     "id": "lex-v2-d182d183d0bad0b0d0bd",
     "lemma": "тукан",
-    "weight": 20
-  },
-  {
-    "id": "ru-editorial-gap-20261123-ca0f1043a4221ecf",
-    "lemma": "подлокотник",
     "weight": 20
   },
   {
@@ -198,5 +98,105 @@
     "id": "ru-plant-20261104-d181d0bfd0b0d182d0b8d184d0b8d0bbd0bbd183d0bc",
     "lemma": "спатифиллум",
     "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d182d0bed0bbd181d182d18fd0bdd0bad0b0",
+    "lemma": "толстянка",
+    "weight": 10
+  },
+  {
+    "id": "ru-plant-20261104-d185d0bbd0bed180d0bed184d0b8d182d183d0bc",
+    "lemma": "хлорофитум",
+    "weight": 10
+  },
+  {
+    "id": "image-pack-20261114-021e2551c399",
+    "lemma": "штанга",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-08f02b56866a",
+    "lemma": "сладкая вата",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-0c3576422b7d",
+    "lemma": "вулкан",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-0fde8ad57f8c",
+    "lemma": "жемчужина",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-11d2188a1b8f",
+    "lemma": "динозавр",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-128a960b0fb1",
+    "lemma": "бочка",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-28b5e1833f5c",
+    "lemma": "кувшинка",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-2c43ed76f86c",
+    "lemma": "карета",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-398c2abb61a2",
+    "lemma": "кольцо",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-489bdafad7ab",
+    "lemma": "бант",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-48e041871e4e",
+    "lemma": "желе",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-504adad504c0",
+    "lemma": "учительница",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-52f08014edee",
+    "lemma": "бассейн",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-6be00f4c0878",
+    "lemma": "букет",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-7bacd0e90471",
+    "lemma": "маляр",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-89d0807e2016",
+    "lemma": "шалаш",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-8d30681c5417",
+    "lemma": "след медведя",
+    "weight": 0
+  },
+  {
+    "id": "image-pack-20261114-b0e3e8a40c2c",
+    "lemma": "пиджак",
+    "weight": 0
   }
 ]

@@ -1,5 +1,75 @@
 [
   {
+    "id": "ru-noun-20261109-0060",
+    "lemma": "какао",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0064",
+    "lemma": "омлет",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0074",
+    "lemma": "самосвал",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0081",
+    "lemma": "площадь",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0083",
+    "lemma": "перекрёсток",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0088",
+    "lemma": "библиотека",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0090",
+    "lemma": "ферма",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0093",
+    "lemma": "луг",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-20261109-0098",
+    "lemma": "водопад",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-002",
+    "lemma": "запеканка",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-006",
+    "lemma": "кисель",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-007",
+    "lemma": "лимонад",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-010",
+    "lemma": "батон",
+    "weight": 50
+  },
+  {
+    "id": "ru-noun-extra-20261109-012",
+    "lemma": "пряник",
+    "weight": 50
+  },
+  {
     "id": "ru-noun-extra-20261109-013",
     "lemma": "вафля",
     "weight": 50
@@ -127,76 +197,6 @@
   {
     "id": "ru-plant-20261104-d0bbd183d0bad0bed0b2d0b8d186d0b0",
     "lemma": "луковица",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d0bcd0b0d0ba",
-    "lemma": "мак",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d0bed0bfd191d0bdd0bed0ba",
-    "lemma": "опёнок",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d0bfd0b8d0bed0bd",
-    "lemma": "пион",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d0bfd0bed0b4d0b1d0b5d180d191d0b7d0bed0b2d0b8d0ba",
-    "lemma": "подберёзовик",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d0bfd0bed0b4d0bed181d0b8d0bdd0bed0b2d0b8d0ba",
-    "lemma": "подосиновик",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d0bfd0bed0b4d181d0bed0bbd0bdd183d185",
-    "lemma": "подсолнух",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d0bfd0bed187d0bad0b03ad0bfd0bed187d0bad0b020d180d0b0d181d182d0b5d0bdd0b8d18f",
-    "lemma": "почка",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d180d0b5d0b4d0b8d181",
-    "lemma": "редис",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d180d0b5d0bfd0b0",
-    "lemma": "репа",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d180d0bed181d182d0bed0ba",
-    "lemma": "росток",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d181d0b5d0bcd18f",
-    "lemma": "семя",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d181d18bd180d0bed0b5d0b6d0bad0b0",
-    "lemma": "сыроежка",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d182d0bed0bfd0bed0bbd18c",
-    "lemma": "тополь",
-    "weight": 50
-  },
-  {
-    "id": "ru-plant-20261104-d184d0b0d181d0bed0bbd18c",
-    "lemma": "фасоль",
     "weight": 50
   }
 ]

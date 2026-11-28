@@ -1,5 +1,100 @@
 [
   {
+    "id": "ru-new-20261102-0191",
+    "lemma": "Греция",
+    "weight": 30
+  },
+  {
+    "id": "ru-new-20261102-0201",
+    "lemma": "Индия",
+    "weight": 30
+  },
+  {
+    "id": "ru-new-20261102-0207",
+    "lemma": "Италия",
+    "weight": 30
+  },
+  {
+    "id": "ru-new-20261102-0302",
+    "lemma": "Турция",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0009",
+    "lemma": "плащ",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0010",
+    "lemma": "жилет",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0021",
+    "lemma": "валенок",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0026",
+    "lemma": "кошелёк",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0027",
+    "lemma": "галстук",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0037",
+    "lemma": "неваляшка",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0041",
+    "lemma": "волчок",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0047",
+    "lemma": "клюшка",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0053",
+    "lemma": "гармошка",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0054",
+    "lemma": "балалайка",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0075",
+    "lemma": "бульдозер",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0076",
+    "lemma": "бетономешалка",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0097",
+    "lemma": "холм",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-20261109-0099",
+    "lemma": "болото",
+    "weight": 30
+  },
+  {
+    "id": "ru-noun-extra-20261109-023",
+    "lemma": "гантель",
+    "weight": 30
+  },
+  {
     "id": "ru-plant-20261104-d0b1d0b0d180d185d0b0d182d186d18b",
     "lemma": "бархатцы",
     "weight": 30
@@ -103,100 +198,5 @@
     "id": "ru-plant-20261104-d180d18fd0b1d0b8d0bdd0b03ad0bfd0bbd0bed0b4d18b20d180d18fd0b1d0b8d0bdd18b",
     "lemma": "рябина",
     "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d181d0b5d0bbd18cd0b4d0b5d180d0b5d0b9",
-    "lemma": "сельдерей",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d182d180d183d182d0bed0b2d0b8d0ba",
-    "lemma": "трутовик",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d184d0b8d0bad183d181",
-    "lemma": "фикус",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d184d0b8d0bdd0b8d0ba",
-    "lemma": "финик",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d185d180d0b8d0b7d0b0d0bdd182d0b5d0bcd0b0",
-    "lemma": "хризантема",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d185d183d180d0bcd0b0",
-    "lemma": "хурма",
-    "weight": 30
-  },
-  {
-    "id": "ru-plant-20261104-d188d0bfd0b8d0bdd0b0d182",
-    "lemma": "шпинат",
-    "weight": 30
-  },
-  {
-    "id": "lex-v2-d0b0d0b8d181d182d191d0bdd0bed0ba",
-    "lemma": "аистёнок",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b0d0bbd0bbd0b8d0b3d0b0d182d0bed180",
-    "lemma": "аллигатор",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b0d180d185d0b5d0bed0bbd0bed0b3",
-    "lemma": "археолог",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b1d0b0d0bad0bbd0b0d0bd",
-    "lemma": "баклан",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b1d0b5d0b4d180d0be",
-    "lemma": "бедро",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b1d0b5d0bbd18cd187d0bed0bdd0bed0ba",
-    "lemma": "бельчонок",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b1d0b8d0b1d0bbd0b8d0bed182d0b5d0bad0b0d180d18c",
-    "lemma": "библиотекарь",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b1d0bbd0b0d0b3d0bed0b4d0b0d180d0bdd0bed181d182d18c",
-    "lemma": "благодарность",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b1d0bbd0b8d0b7d0bdd0b5d186d18b",
-    "lemma": "близнецы",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b1d0bed0b1d180d191d0bdd0bed0ba",
-    "lemma": "бобрёнок",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b1d180d0bed0bdd0b5d0bdd0bed181d0b5d186",
-    "lemma": "броненосец",
-    "weight": 20
-  },
-  {
-    "id": "lex-v2-d0b2d0b5d0bad0be",
-    "lemma": "веко",
-    "weight": 20
   }
 ]

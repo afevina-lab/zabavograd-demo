@@ -1,202 +1,202 @@
 [
   {
-    "id": "ru-new-20261102-0081",
-    "lemma": "прыгать",
+    "id": "ru-action-20261109-0208",
+    "lemma": "спать",
     "weight": 0
   },
   {
-    "id": "ru-new-20261102-0083",
-    "lemma": "собирать",
+    "id": "ru-action-20261109-0209",
+    "lemma": "спорить",
     "weight": 0
   },
   {
-    "id": "ru-new-20261102-0084",
-    "lemma": "убирать",
+    "id": "ru-action-20261109-0210",
+    "lemma": "спрашивать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-11add953",
-    "lemma": "тушить",
+    "id": "ru-action-20261109-0211",
+    "lemma": "спускаться",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-138dd54",
-    "lemma": "лёгкий",
+    "id": "ru-action-20261109-0213",
+    "lemma": "становиться",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-1b1f492e",
-    "lemma": "хрупкий",
+    "id": "ru-action-20261109-0214",
+    "lemma": "стоять",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-31a5b050",
-    "lemma": "признак",
+    "id": "ru-action-20261109-0215",
+    "lemma": "стучать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-32bf7ba6",
-    "lemma": "пустой",
+    "id": "ru-action-20261109-0216",
+    "lemma": "считать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-3565ef12",
-    "lemma": "чинить",
+    "id": "ru-action-20261109-0218",
+    "lemma": "таять",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-35cde643",
-    "lemma": "металлический",
+    "id": "ru-action-20261109-0219",
+    "lemma": "терять",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-452a390c",
-    "lemma": "фарфоровый",
+    "id": "ru-action-20261109-0220",
+    "lemma": "течь",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-45f4b504",
-    "lemma": "чистить",
+    "id": "ru-action-20261109-0222",
+    "lemma": "топать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-47c70515",
-    "lemma": "гладкий",
+    "id": "ru-action-20261109-0223",
+    "lemma": "торопиться",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-48aed37d",
-    "lemma": "тяжёлый",
+    "id": "ru-action-20261109-0225",
+    "lemma": "тянуть",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-4d408d13",
-    "lemma": "готовить",
+    "id": "ru-action-20261109-0226",
+    "lemma": "тянуться",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-50d9efe5",
-    "lemma": "старый",
+    "id": "ru-action-20261109-0227",
+    "lemma": "убегать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-542dbd6e",
-    "lemma": "сломанный",
+    "id": "ru-action-20261109-0228",
+    "lemma": "угадывать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-57222209",
-    "lemma": "мыть",
+    "id": "ru-action-20261109-0230",
+    "lemma": "удивляться",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-5f63bebb",
-    "lemma": "ставить",
+    "id": "ru-action-20261109-0232",
+    "lemma": "улыбаться",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-61d8ff8a",
-    "lemma": "измельчать",
+    "id": "ru-action-20261109-0233",
+    "lemma": "умываться",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-62942200",
-    "lemma": "целый",
+    "id": "ru-action-20261109-0234",
+    "lemma": "уносить",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-6862df09",
-    "lemma": "прочный",
+    "id": "ru-action-20261109-0235",
+    "lemma": "успевать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-6f50ffc2",
-    "lemma": "прозрачный",
+    "id": "ru-action-20261109-0236",
+    "lemma": "ухаживать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-6fb63dd2",
-    "lemma": "грязный",
+    "id": "ru-action-20261109-0237",
+    "lemma": "уходить",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-7039f75c",
-    "lemma": "класть",
+    "id": "ru-action-20261109-0238",
+    "lemma": "учить",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-817300b3",
-    "lemma": "деревянный",
+    "id": "ru-action-20261109-0239",
+    "lemma": "учиться",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-821ed302",
-    "lemma": "подметать",
+    "id": "ru-action-20261109-0240",
+    "lemma": "ходить",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-8678262e",
-    "lemma": "гладить",
+    "id": "ru-action-20261109-0241",
+    "lemma": "хотеть",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-86d3d4dc",
-    "lemma": "закрывать",
+    "id": "ru-action-20261109-0242",
+    "lemma": "хрюкать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-87f58e97",
-    "lemma": "действие",
+    "id": "ru-action-20261109-0243",
+    "lemma": "цвести",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-8c7cc097",
-    "lemma": "керамический",
+    "id": "ru-action-20261109-0244",
+    "lemma": "целовать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-8e48d4c",
-    "lemma": "резать",
+    "id": "ru-action-20261109-0245",
+    "lemma": "чирикать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-9953098d",
-    "lemma": "сверлить",
+    "id": "ru-action-20261109-0246",
+    "lemma": "читать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-997e605c",
-    "lemma": "сушить",
+    "id": "ru-action-20261109-0247",
+    "lemma": "чувствовать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-9c5ea90d",
-    "lemma": "твёрдый",
+    "id": "ru-action-20261109-0248",
+    "lemma": "шагать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-ab4c872f",
-    "lemma": "тупой",
+    "id": "ru-action-20261109-0249",
+    "lemma": "шептать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-b80cd8a9",
-    "lemma": "ломать",
+    "id": "ru-action-20261109-0250",
+    "lemma": "шить",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-ba58b1c2",
-    "lemma": "мокрый",
+    "id": "ru-action-20261109-0251",
+    "lemma": "шуметь",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-bbfb4ec2",
-    "lemma": "ржавый",
+    "id": "ru-action-20261109-0252",
+    "lemma": "щипать",
     "weight": 0
   },
   {
-    "id": "ru-sem-20261105-c012eb6b",
-    "lemma": "бумажный",
+    "id": "ru-action-20261109-0253",
+    "lemma": "щупать",
     "weight": 0
   }
 ]
