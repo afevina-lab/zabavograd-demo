@@ -1,0 +1,3 @@
+Russian FrameBank v1.1, Olga Lyashevskaya, Egor Kashkin and contributors. GPL-3.0. Modified: filtered and matched dictionary constructions to Zabavograd entry IDs; review only. Upstream source, complete contributors and original dictionary files: https://github.com/olesar/framebank/tree/e60da2a38f645db21c55aa0e7ff9730e92e7e2ca
+Transformation source: scripts/linguistic-sources.cjs in the source commit recorded in result.json.
+The contents of this directory are distributed under GPL-3.0; not part of the game runtime.

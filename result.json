@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "mode": "framebank",
+  "request": {
+    "version": 1,
+    "source_sha256": "e5bd329b33f37240bfb3948dde24f6086a25b46a95ec328b2108b0fb1c702569",
+    "mode": "framebank"
+  },
+  "source_sha256": "e5bd329b33f37240bfb3948dde24f6086a25b46a95ec328b2108b0fb1c702569",
+  "status": "external_suggestions_review_only",
+  "source_license": "GPL-3.0",
+  "records": 5422,
+  "source_commit": "d23ccc34506bdb8f44e14c8d4ccfae604579f5f4",
+  "request_commit": "52763c55522c273c77e2ea2d7bdff619b2b596e2"
+}
