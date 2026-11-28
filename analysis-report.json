@@ -1,0 +1,13 @@
+{
+  "selected": 256,
+  "g2p_loaded": true,
+  "phonetics": {
+    "needs_review": 202,
+    "candidate_needs_review": 54
+  },
+  "morphology": {
+    "already_filled": 189,
+    "candidate_needs_review": 64,
+    "needs_review": 3
+  }
+}
