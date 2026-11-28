@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "mode": "ruwordnet",
+  "request": {
+    "version": 1,
+    "source_sha256": "e5bd329b33f37240bfb3948dde24f6086a25b46a95ec328b2108b0fb1c702569",
+    "mode": "ruwordnet"
+  },
+  "source_sha256": "e5bd329b33f37240bfb3948dde24f6086a25b46a95ec328b2108b0fb1c702569",
+  "source_license": "CC-BY-SA-4.0",
+  "source_url": "https://www.ruwordnet.ru/ru/",
+  "attribution": "N. Loukachevitch, G. Lashevich, A. Gerasimova, V. Ivanov, B. Dobrov (2016); RuWordNet 2.0 (2021)",
+  "publication_note": "Non-commercial data use; official source also specifies non-commercial XML access. Candidate edges only, not raw database or active relations.",
+  "stats": {
+    "changed": 31,
+    "added_proposals": 33,
+    "skipped": 3,
+    "source": "ruwordnet"
+  },
+  "status": "candidate_requires_full_validation",
+  "result_source_sha256": "cb1a640fdbd08eca50045861da88cad7f755826edf3a2208dab7a212c20fb4bf",
+  "delta": {
+    "added": [
+      "entries/semantics/00.json",
+      "entries/semantics/02.json",
+      "entries/semantics/03.json",
+      "entries/semantics/04.json",
+      "entries/semantics/05.json",
+      "entries/semantics/06.json",
+      "entries/semantics/07.json",
+      "entries/semantics/08.json",
+      "entries/semantics/0c.json",
+      "entries/semantics/0d.json",
+      "entries/semantics/0e.json",
+      "entries/semantics/0f.json",
+      "entries/semantics/10.json",
+      "entries/semantics/13.json",
+      "entries/semantics/16.json",
+      "entries/semantics/18.json",
+      "entries/semantics/1a.json",
+      "entries/semantics/1b.json",
+      "entries/semantics/1c.json",
+      "entries/semantics/1d.json",
+      "entries/semantics/1e.json"
+    ],
+    "removed": [],
+    "modified": [
+      "entry-order.json"
+    ]
+  },
+  "source_commit": "f50aae413b7f97eb91abaf1e2553c105b391d5b6",
+  "request_commit": "b97dbaf780cd46e17a22549bb725c8269e569aa0"
+}

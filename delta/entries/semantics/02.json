@@ -1,0 +1,3 @@
+[
+{"id":"ru-action-20261109-0223","fields":{"external_linguistic_proposals":[{"source":"ruwordnet","source_revision":"RuWordNet 2.0 (2021)","source_record_id":"117943-V:hypernyms:106714-V","license":"CC-BY-SA-4.0","source_url":"https://www.ruwordnet.ru/ru/","attribution":"RuWordNet; Loukachevitch, Lashevich, Gerasimova, Ivanov & Dobrov (2016)","entry_id":"ru-action-20261109-0223","status":"suggested","usable_for_generation":false,"relation_type":"is_a","object_id":"ru-action-20261109-0167","match_status":"unique_lemma_and_synset_requires_sense_review","id":"external-c50c2cf20e1fe7589cf4711d"}]}}
+]
