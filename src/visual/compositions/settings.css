@@ -1,8 +1,8 @@
 .v-settings-backdrop{position:fixed;z-index:var(--v-layer-dialog);inset:0;display:grid;place-items:center;padding:var(--v-viewport-gap);background:var(--zg-stage-fill);background-image:var(--zg-stage-image);background-size:cover;overflow:hidden}
-.v-settings{font-size:18px;display:flex;flex-direction:column;width:min(var(--v-settings-regular-width),calc(100vw - 2*var(--v-viewport-gap)));max-height:calc(100dvh - 2*var(--v-viewport-gap));min-width:0;min-height:0;overflow:hidden;padding:calc(var(--v-frame-inset) + var(--v-space-2))}
+.v-settings{display:flex;flex-direction:column;width:min(var(--v-settings-regular-width),calc(100vw - 2*var(--v-viewport-gap)));max-height:calc(100dvh - 2*var(--v-viewport-gap));min-width:0;min-height:0;overflow:hidden;padding:calc(var(--v-frame-inset) + var(--v-space-2))}
 .v-settings-heading{position:relative;z-index:var(--v-layer-popover);display:flex;align-items:center;justify-content:flex-start;gap:var(--v-space-3);padding:var(--v-space-2) var(--v-space-3) var(--v-space-4);flex:none;border-bottom:1px solid var(--ui-outline)}
 .v-settings-heading>div:first-child{min-width:0}.v-settings-heading h1{overflow-wrap:anywhere;font-family:var(--v-font-display);font-size:30px;line-height:1.1}
-.v-settings-subtitle{font-size:16px}
+.v-settings-subtitle{font-size:14px}
 .v-action-row{margin-inline-start:auto;display:flex;gap:var(--v-space-2);align-items:center}
 .v-settings-workspace{display:grid;grid-template-columns:minmax(0,1fr) var(--v-rail);gap:var(--v-space-3);flex:1 1 auto;min-width:0;min-height:0;overflow:hidden}
 .v-settings-scroll{display:contents}
@@ -32,7 +32,3 @@
 @media(max-width:360px){.v-settings-emblem{display:none}.v-settings-title>h2{font-size:20px;overflow-wrap:normal}}
 
 .v-settings-body>*{flex-shrink:0}
-
-/* Keep supporting settings copy readable alongside the 18px controls. */
-.v-settings :is(.v-field-description,.v-help-copy,.v-preview-label,.v-disclosure-copy>small,.v-picker-trigger-copy>small,.v-saved-set-row small,.v-task-suggestions>p,.v-theme-choice>button){font-size:16px}
-.v-settings .v-quantity>label{font-size:18px}
