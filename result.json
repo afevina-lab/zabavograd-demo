@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "mode": "ruwordnet",
+  "request": {
+    "version": 1,
+    "source_sha256": "e5bd329b33f37240bfb3948dde24f6086a25b46a95ec328b2108b0fb1c702569",
+    "mode": "ruwordnet"
+  },
+  "source_sha256": "e5bd329b33f37240bfb3948dde24f6086a25b46a95ec328b2108b0fb1c702569",
+  "status": "external_coverage_only",
+  "records": 1738,
+  "source_license": "RuWordNet official site: CC BY-SA 4.0 and non-commercial distribution; details not redistributed",
+  "source_commit": "d23ccc34506bdb8f44e14c8d4ccfae604579f5f4",
+  "request_commit": "0a6a3ccd23d33875aaa43d79d0e31e8c6dee5d0f"
+}
