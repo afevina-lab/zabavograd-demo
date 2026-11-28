@@ -1,0 +1,100 @@
+name: Library linguistic analysis
+on:
+  push:
+    branches: ['library-analysis-request/**']
+    paths: ['editorial/requests/library-analysis.json']
+permissions:
+  contents: read
+concurrency:
+  group: library-analysis-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      source_commit: ${{ steps.request.outputs.source_commit }}
+      request_key: ${{ steps.request.outputs.request_key }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Read immutable request as data
+        id: request
+        shell: bash
+        run: |
+          set -euo pipefail
+          slug="${GITHUB_REF_NAME#library-analysis-request/}"
+          [[ "$slug" =~ ^[a-z0-9][a-z0-9-]{0,47}$ ]]
+          git fetch --no-tags --depth=1 origin "$GITHUB_SHA"
+          git show "$GITHUB_SHA:editorial/requests/library-analysis.json" > "$RUNNER_TEMP/request.json"
+          node scripts/library-analysis-request.cjs inspect "$RUNNER_TEMP/request.json" > "$RUNNER_TEMP/request-info.json"
+          echo "source_commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          echo "request_key=$slug-${GITHUB_SHA:0:12}" >> "$GITHUB_OUTPUT"
+          node -e 'const r=require(process.argv[1]);console.log("mode="+r.mode);console.log("domain="+(r.domain||"both"))' "$RUNNER_TEMP/request-info.json" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-python@v5
+        if: steps.request.outputs.mode != 'constructicon'
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        if: steps.request.outputs.mode != 'constructicon'
+        with:
+          path: ~/.cache/pip
+          key: linguistic-pip-v1-${{ runner.os }}-py311
+      - name: Install pinned morphological tools
+        if: steps.request.outputs.mode != 'constructicon'
+        run: python -m pip install --disable-pip-version-check pymorphy3==2.0.6 pymorphy3-dicts-ru==2.4.417150.4580142 dawg-python==0.7.2 lxml==5.3.2
+      - name: Checkout pinned G2P and check initialization
+        if: steps.request.outputs.mode == 'initial' && steps.request.outputs.domain != 'morphology'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --no-checkout https://github.com/nsu-ai/russian_g2p.git "$RUNNER_TEMP/g2p"
+          git -C "$RUNNER_TEMP/g2p" checkout --detach 20305523bfe4ccb632c7538e9a5e925bde54b52e
+          echo "PYTHONPATH=$RUNNER_TEMP/g2p" >> "$GITHUB_ENV"
+      - name: Generate fresh data and isolated module delta
+        run: |
+          node scripts/library-analysis-request.cjs run "$RUNNER_TEMP/request.json" "$RUNNER_TEMP/result" "$RUNNER_TEMP/analysis-work"
+          git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linguistic-analysis-result
+          path: ${{ runner.temp }}/result
+          retention-days: 14
+  publish-result:
+    needs: analyze
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: linguistic-analysis-result
+          path: result
+      - name: Publish result only (never main or gh-pages)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_COMMIT: ${{ needs.analyze.outputs.source_commit }}
+          REQUEST_KEY: ${{ needs.analyze.outputs.request_key }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$REQUEST_KEY" =~ ^[a-z0-9][a-z0-9-]{0,47}-[a-f0-9]{12}$ ]]
+          [[ "$SOURCE_COMMIT" =~ ^[a-f0-9]{40}$ ]]
+          cd result
+          node -e 'const fs=require("fs");const r=JSON.parse(fs.readFileSync("result.json"));r.source_commit=process.env.SOURCE_COMMIT;r.request_commit=process.env.GITHUB_SHA;fs.writeFileSync("result.json",JSON.stringify(r,null,2)+"\n")'
+          git init -q
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all -- .
+          git commit -qm "Linguistic analysis result $REQUEST_KEY"
+          out="refs/heads/library-analysis-result/$REQUEST_KEY"
+          remote="https://x-access-token:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+          [ -z "$(git ls-remote "$remote" "$out")" ] || { echo 'Result exists'; exit 1; }
+          git push "$remote" "HEAD:$out"

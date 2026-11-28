@@ -34,9 +34,9 @@ function phonetics(p){
 }
 function fill(e,field,proposal){
  const h=e[field],isPh=field==='phonetic_tags',key=isPh?'phonetic':'morphology',metaKey=isPh?'speech':'forms';
- if(h?.status!==pending||!object(h.data)||!proposal)return false;
+ if(h?.status!==pending||!(h.data===null||object(h.data))||!proposal)return false;
  // No replacing existing candidates or curated values, even if a status is stale.
- if(own(h.data,'automatic_proposal')||own(h.data,'approved_form_subset')||e.machine_analysis?.[key]!==undefined)return false;
+ if(own(h.data??{},'automatic_proposal')||own(h.data??{},'approved_form_subset')||e.machine_analysis?.[key]!==undefined)return false;
  if(e.metadata_completion!=null&&!object(e.metadata_completion))return false;
  const prev=e.metadata_completion?.[metaKey];
  if(prev!=null&&prev!==pending&&prev!==candidate)return false;
@@ -45,9 +45,9 @@ function fill(e,field,proposal){
   (e.machine_analysis??={})[key]=proposal;
  }else if(isPh){
   const values={sound_tokens:proposal.sound_tokens,stress_syllable:proposal.stress_syllable,syllable_count:proposal.syllable_count,stressed_vowel:proposal.stressed_vowel,automatic_proposal:{source:proposal.source,status:'suggested',accented:proposal.accented,usable_for_automatic_target_selection:'only_letter_aligned_and_not_before_soft_consonant',not_methodically_verified:true}};
-  for(const [k,v] of Object.entries(values))if(own(h.data,k)&&h.data[k]!=null&&!(Array.isArray(h.data[k])&&!h.data[k].length)&&!same(h.data[k],v))return false;
-  Object.assign(h.data,values);
- }else h.data.automatic_proposal=proposal;
+  for(const [k,v] of Object.entries(values))if(own(h.data??{},k)&&h.data[k]!=null&&!(Array.isArray(h.data[k])&&!h.data[k].length)&&!same(h.data[k],v))return false;
+  Object.assign(h.data??={},values);
+ }else (h.data??={}).automatic_proposal=proposal;
  h.status=candidate;
  (e.metadata_completion??={})[metaKey]=candidate;
  return true;
