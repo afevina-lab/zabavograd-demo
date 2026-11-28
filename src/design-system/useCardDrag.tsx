@@ -16,7 +16,8 @@ export function useCardDrag(disabled:boolean){
    if(ev.pointerId!==event.pointerId||(!moved&&Math.hypot(ev.clientX-x,ev.clientY-y)<6))return;
    if(!moved){placeholder=document.createElement('div');placeholder.className=el.className;placeholder.style.cssText=previous;Object.assign(placeholder.style,{width:rect.width+'px',height:rect.height+'px',visibility:'hidden',pointerEvents:'none',boxSizing:'border-box'});placeholder.setAttribute('aria-hidden','true');placeholder.dataset.cardPlaceholder='true';el.before(placeholder);moved=true;frame=requestAnimationFrame(scroll);}
    pointerX=ev.clientX;pointerY=ev.clientY;el.dataset.cardDragging='true';
-   Object.assign(el.style,{position:'fixed',left:rect.left+ev.clientX-x+'px',top:rect.top+ev.clientY-y+'px',width:rect.width+'px',height:rect.height+'px',zIndex:'1000',pointerEvents:'none',margin:'0',gridArea:'auto',transform:'none',opacity:'1'});
+   el.getAnimations().forEach(animation=>animation.cancel());
+   Object.assign(el.style,{position:'fixed',left:rect.left+'px',top:rect.top+'px',width:rect.width+'px',height:rect.height+'px',zIndex:'1000',pointerEvents:'none',margin:'0',gridArea:'auto',transform:`translate3d(${ev.clientX-x}px,${ev.clientY-y}px,0)`,opacity:'1',animation:'none',transition:'none'});
   };
   const cleanup=()=>{
    if(ended)return;ended=true;
@@ -34,5 +35,5 @@ export function useCardDrag(disabled:boolean){
   active.current=cleanup;
   el.addEventListener('pointermove',move);el.addEventListener('pointerup',end);el.addEventListener('pointercancel',cancel);el.addEventListener('lostpointercapture',cancel);
  }
- return {begin,suppressClick:()=>performance.now()<suppressUntil.current};
+ return {begin,suppressClick:()=>active.current!==null||performance.now()<suppressUntil.current};
 }
