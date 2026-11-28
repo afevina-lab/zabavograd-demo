@@ -82,6 +82,6 @@
 {"id":"image-pack-20261114-f7ad8c5b63c0","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261114-2c43ed76f86c","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261123-c5fa0717ea6d","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
-{"id":"ru-editorial-gap-20261123-2ba91fdab4a76ca8","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
-{"id":"modular-noun-ccf302483fd6e2d057da79a3","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
+{"id":"ru-editorial-gap-20261123-2ba91fdab4a76ca8","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["д","в'","э","р","ц","а"],"stress_syllable":1,"syllable_count":2,"stressed_vowel":"э","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"две+рца","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}},
+{"id":"modular-noun-ccf302483fd6e2d057da79a3","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["й","о","к"],"stress_syllable":1,"syllable_count":1,"stressed_vowel":"о","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"йо+г","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}}
 ]

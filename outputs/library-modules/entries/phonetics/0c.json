@@ -69,7 +69,7 @@
 {"id":"ru-new-20261108-53796f6d09","fields":{"phonetic_tags":{"status":"pending","data":null}}},
 {"id":"useful-20261113-d0b2d0b0d182d0b0","fields":{"phonetic_tags":{"status":"pending","data":null}}},
 {"id":"image-pack-20261120-144dd4e65cc5","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
-{"id":"ru-editorial-gap-20261123-e443e93fdf99178f","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
-{"id":"ru-editorial-gap-20261123-2d7a9783377d7d54","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
-{"id":"modular-noun-4dc0aff8b16799538d5887ab","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
+{"id":"ru-editorial-gap-20261123-e443e93fdf99178f","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["м'","о","т"],"stress_syllable":1,"syllable_count":1,"stressed_vowel":"о","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"мё+д","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}},
+{"id":"ru-editorial-gap-20261123-2d7a9783377d7d54","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["ш","э","р","с'","т'"],"stress_syllable":1,"syllable_count":1,"stressed_vowel":"э","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"ше+рсть","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}},
+{"id":"modular-noun-4dc0aff8b16799538d5887ab","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["в'","э","д'","м","а"],"stress_syllable":1,"syllable_count":2,"stressed_vowel":"э","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"ве+дьма","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}}
 ]

@@ -61,5 +61,5 @@
 {"id":"useful-20261113-d0bfd183d185","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["п","у","х"],"syllable_count":1,"stress_syllable":1,"markova_type_candidate":3,"analysis_status":"editorial_proposal_requires_review"}}}},
 {"id":"image-pack-20261120-3deecb9cef23","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261123-58f5ba4e43f3","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
-{"id":"modular-noun-088178cdc9131aa81552a9ee","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
+{"id":"modular-noun-088178cdc9131aa81552a9ee","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["а","г","о","н'"],"stress_syllable":2,"syllable_count":2,"stressed_vowel":"о","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"ого+нь","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}}
 ]

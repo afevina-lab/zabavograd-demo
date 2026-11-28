@@ -68,6 +68,6 @@
 {"id":"ru-attr-20261109-049","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"ru-attr-20261109-107","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"useful-20261113-d0b1d183d181d18b","fields":{"phonetic_tags":{"status":"pending","data":null}}},
-{"id":"ru-editorial-gap-20261123-1b794ffe762af4ac","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
-{"id":"modular-noun-6b818be3eec8a27cf52a5b02","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
+{"id":"ru-editorial-gap-20261123-1b794ffe762af4ac","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["с'","и","р","в","а","н","т"],"stress_syllable":2,"syllable_count":2,"stressed_vowel":"а","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"серва+нт","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}},
+{"id":"modular-noun-6b818be3eec8a27cf52a5b02","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["ж","а","н","г","л'","о","р"],"stress_syllable":2,"syllable_count":2,"stressed_vowel":"о","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"жонглё+р","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}}
 ]

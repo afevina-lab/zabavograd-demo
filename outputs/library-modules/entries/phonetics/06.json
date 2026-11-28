@@ -66,5 +66,5 @@
 {"id":"ru-new-20261108-a88df7da50","fields":{"phonetic_tags":{"status":"pending","data":null}}},
 {"id":"useful-20261113-d0bcd0bed185","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["м","о","х"],"syllable_count":1,"stress_syllable":1,"markova_type_candidate":3,"analysis_status":"editorial_proposal_requires_review"}}}},
 {"id":"image-pack-20261114-6be00f4c0878","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
-{"id":"modular-noun-b1646280f6609ff0963aad1e","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
+{"id":"modular-noun-b1646280f6609ff0963aad1e","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["у","к","о","л"],"stress_syllable":2,"syllable_count":2,"stressed_vowel":"о","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"уко+л","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}}
 ]

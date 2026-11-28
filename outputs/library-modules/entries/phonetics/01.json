@@ -51,6 +51,6 @@
 {"id":"ru-attr-20261109-066","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"ru-attr-20261109-159","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"useful-20261113-d18fd0bcd0b0","fields":{"phonetic_tags":{"status":"pending","data":null}}},
-{"id":"ru-editorial-gap-20261123-435ddffa8137120a","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
-{"id":"ru-editorial-gap-20261123-f64e065e73be6f67","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}}
+{"id":"ru-editorial-gap-20261123-435ddffa8137120a","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["с","п'","и","н","к","а"],"stress_syllable":1,"syllable_count":2,"stressed_vowel":"и","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"спи+нка","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}},
+{"id":"ru-editorial-gap-20261123-f64e065e73be6f67","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["б","у","ф'","э","т"],"stress_syllable":2,"syllable_count":2,"stressed_vowel":"э","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"буфе+т","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}}
 ]

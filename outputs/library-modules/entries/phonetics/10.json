@@ -77,5 +77,5 @@
 {"id":"ru-attr-20261109-176","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261114-28b5e1833f5c","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261120-d2c46b77a8b0","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
-{"id":"ru-editorial-gap-20261123-540ace8499d262d2","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}}
+{"id":"ru-editorial-gap-20261123-540ace8499d262d2","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["с","к","в","а","р'","э","ч'","н'","и","к"],"stress_syllable":2,"syllable_count":3,"stressed_vowel":"э","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"скворе+чник","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}}
 ]

@@ -59,6 +59,6 @@
 {"id":"image-pack-20261114-d7b1de1ecf68","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261120-307d9c06abbf","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"modular-noun-d94e5d30943ddc81fc29dcd2","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}},
-{"id":"modular-noun-f4e1d8491b1bc73552417446","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}},
+{"id":"modular-noun-f4e1d8491b1bc73552417446","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["д","р'","и","с'","и","р","о","ф","щ'","и","к"],"stress_syllable":3,"syllable_count":4,"stressed_vowel":"о","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"дрессиро+вщик","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}},
 {"id":"modular-noun-d7583047bdb49ed8c6c0226a","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
 ]

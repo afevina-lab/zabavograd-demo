@@ -57,8 +57,8 @@
 {"id":"ru-attr-20261109-007","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"ru-attr-20261109-040","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261120-ac746bb25fd4","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
-{"id":"ru-editorial-gap-20261123-0b20e47d49172509","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
+{"id":"ru-editorial-gap-20261123-0b20e47d49172509","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["к","а","н'","у","ш","н'","а"],"stress_syllable":2,"syllable_count":3,"stressed_vowel":"у","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"коню+шня","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}},
 {"id":"ru-noun-import-20261115-zavod","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
-{"id":"modular-noun-0da8b87565a754bf5838a057","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}},
-{"id":"modular-noun-3437d18792c14db9d259b7d7","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
+{"id":"modular-noun-0da8b87565a754bf5838a057","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["п","а","у","т'","и","н","а"],"stress_syllable":3,"syllable_count":4,"stressed_vowel":"и","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"паути+на","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}},
+{"id":"modular-noun-3437d18792c14db9d259b7d7","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["с","ы","щ'","и","к"],"stress_syllable":1,"syllable_count":2,"stressed_vowel":"ы","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"сы+щик","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}}
 ]

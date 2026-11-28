@@ -60,5 +60,5 @@
 {"id":"image-pack-20261120-d523dfc5bedb","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"ru-noun-import-20261115-lapa","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
 {"id":"ru-noun-import-20261115-panda","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
-{"id":"modular-noun-de1ccfdbf43938cf20d7b819","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":{}}}}
+{"id":"modular-noun-de1ccfdbf43938cf20d7b819","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["с'","т'","и","т","а","с","к","о","п"],"stress_syllable":3,"syllable_count":3,"stressed_vowel":"о","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"стетоско+п","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}}
 ]

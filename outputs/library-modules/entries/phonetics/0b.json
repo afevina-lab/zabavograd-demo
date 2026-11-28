@@ -57,5 +57,5 @@
 {"id":"ru-attr-20261109-177","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261120-f13b9379ecf4","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261120-790c065a3241","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
-{"id":"ru-editorial-gap-20261123-4aa311850100a8de","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}}
+{"id":"ru-editorial-gap-20261123-4aa311850100a8de","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["б","у","т","к","а"],"stress_syllable":1,"syllable_count":2,"stressed_vowel":"у","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"бу+дка","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}}
 ]

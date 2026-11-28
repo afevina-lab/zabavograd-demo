@@ -67,5 +67,5 @@
 {"id":"image-pack-20261114-128a960b0fb1","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261114-021e2551c399","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261120-dcb486fa89bb","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
-{"id":"ru-editorial-gap-20261123-50b5335ce0f9d9dd","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}}
+{"id":"ru-editorial-gap-20261123-50b5335ce0f9d9dd","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["к","р","а","л'","ч'","а","т","н'","и","к"],"stress_syllable":2,"syllable_count":3,"stressed_vowel":"а","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"крольча+тник","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}}
 ]

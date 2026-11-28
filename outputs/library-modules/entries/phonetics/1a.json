@@ -66,6 +66,6 @@
 {"id":"ru-attr-20261109-132","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"ru-new-20261108-63afd2043f","fields":{"phonetic_tags":{"status":"pending","data":null}}},
 {"id":"image-pack-20261114-d74d8a2cf060","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
-{"id":"ru-editorial-gap-20261123-ca0f1043a4221ecf","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}},
-{"id":"ru-editorial-gap-20261123-d84927bcdfaf8b76","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}}
+{"id":"ru-editorial-gap-20261123-ca0f1043a4221ecf","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["п","а","д","л","а","к","о","т","н'","и","к"],"stress_syllable":3,"syllable_count":4,"stressed_vowel":"о","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"подлоко+тник","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}},
+{"id":"ru-editorial-gap-20261123-d84927bcdfaf8b76","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["к","а","р","о","в","н'","и","к"],"stress_syllable":2,"syllable_count":3,"stressed_vowel":"о","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"коро+вник","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}}
 ]

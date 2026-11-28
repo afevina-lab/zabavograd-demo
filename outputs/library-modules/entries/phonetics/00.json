@@ -55,5 +55,5 @@
 {"id":"image-pack-20261114-08f02b56866a","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261114-b11c136a808b","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
 {"id":"image-pack-20261120-33fa94f97034","fields":{"phonetic_tags":{"status":"pending","data":{}}}},
-{"id":"ru-editorial-gap-20261123-13649451c9948c3f","fields":{"phonetic_tags":{"status":"pending_automatic_analysis","data":null}}}
+{"id":"ru-editorial-gap-20261123-13649451c9948c3f","fields":{"phonetic_tags":{"status":"automatic_candidate_needs_review","data":{"sound_tokens":["й","и","ч'","н'","и","ц","а"],"stress_syllable":2,"syllable_count":3,"stressed_vowel":"и","automatic_proposal":{"source":"nsu-ai/russian_g2p","status":"suggested","accented":"яи+чница","usable_for_automatic_target_selection":"only_letter_aligned_and_not_before_soft_consonant","not_methodically_verified":true}}}}}
 ]
