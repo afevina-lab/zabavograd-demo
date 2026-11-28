@@ -1,0 +1,267 @@
+{
+  "version": 1,
+  "mode": "preview",
+  "source_sha256": "e5bd329b33f37240bfb3948dde24f6086a25b46a95ec328b2108b0fb1c702569",
+  "operations": [
+    {
+      "id": "lex-v2-d0b3d0bbd0b0d0b7",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "глаза"
+    },
+    {
+      "id": "ru-home-20261105-20b3798c",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "вазы"
+    },
+    {
+      "id": "ru-noun-20261109-0072",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "мотоциклы"
+    },
+    {
+      "id": "ru-noun-20261109-0100",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "камни"
+    },
+    {
+      "id": "lex-v2-d0b2d0bed181d0bfd0b8d182d0b0d182d0b5d0bbd18c",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "воспитатели"
+    },
+    {
+      "id": "lex-v2-d0bed0b1d0b5d0b7d18cd18fd0bdd0b0",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "обезьяны"
+    },
+    {
+      "id": "ru-plant-20261104-d0bfd0bed0b4d181d0bdd0b5d0b6d0bdd0b8d0ba",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "подснежники"
+    },
+    {
+      "id": "ru-plant-20261104-d181d0bbd0b8d0b2d0b0",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "сливы"
+    },
+    {
+      "id": "ru-home-20261105-fab42c9f",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "бутылки"
+    },
+    {
+      "id": "ru-home-20261105-8bcb0907",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "дома"
+    },
+    {
+      "id": "ru-home-20261105-9769581b",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "столы"
+    },
+    {
+      "id": "ru-noun-20261109-0042",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "скакалки"
+    },
+    {
+      "id": "ru-noun-extra-20261109-037",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "сосульки"
+    },
+    {
+      "id": "lex-v2-d0bad183d180d0b8d186d0b0",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "курицы"
+    },
+    {
+      "id": "lex-v2-d0bed180d191d0bb",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "орлы"
+    },
+    {
+      "id": "ru-home-20261105-1166080b",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "веники"
+    },
+    {
+      "id": "ru-home-20261105-5eb96006",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "вилки"
+    },
+    {
+      "id": "ru-noun-20261109-0031",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "мячи"
+    },
+    {
+      "id": "ru-noun-extra-20261109-042",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "ластики"
+    },
+    {
+      "id": "lex-v2-d191d0b6",
+      "path": "/morphology/data/plural_nominative",
+      "expect": {
+        "exists": false
+      },
+      "value": "ежи"
+    },
+    {
+      "id": "lex-v2-d0b3d0bbd0b0d0b7",
+      "path": "/morphology/data/diminutive",
+      "expect": {
+        "exists": false
+      },
+      "value": "глазик"
+    },
+    {
+      "id": "ru-home-20261105-8bcb0907",
+      "path": "/morphology/data/diminutive",
+      "expect": {
+        "exists": false
+      },
+      "value": "домик"
+    },
+    {
+      "id": "ru-home-20261105-9769581b",
+      "path": "/morphology/data/diminutive",
+      "expect": {
+        "exists": false
+      },
+      "value": "столик"
+    },
+    {
+      "id": "ru-noun-20261109-0031",
+      "path": "/morphology/data/diminutive",
+      "expect": {
+        "exists": false
+      },
+      "value": "мячик"
+    },
+    {
+      "id": "lex-v2-d0bdd0bed181",
+      "path": "/morphology/data/diminutive",
+      "expect": {
+        "exists": false
+      },
+      "value": "носик"
+    },
+    {
+      "id": "ru-editorial-gap-20261123-13649451c9948c3f",
+      "path": "/phonetic_tags/review_proposal",
+      "expect": {
+        "exists": false
+      },
+      "value": {
+        "source": "editorial_review",
+        "status": "suggested",
+        "usable_for_generation": false,
+        "base": {
+          "status": "pending_automatic_analysis",
+          "sound_tokens": []
+        },
+        "sound_tokens": [
+          "й",
+          "и",
+          "и",
+          "ш",
+          "н'",
+          "и",
+          "ц",
+          "а"
+        ],
+        "stress_syllable": 2,
+        "syllable_count": 4,
+        "stressed_vowel": "и",
+        "reason": "Яи́чница: нормативное произношение сочетания чн как шн, мягкий н перед и, четыре гласных слога."
+      }
+    }
+  ],
+  "semantic_operations": [
+    {
+      "type": "part_of",
+      "subject": {
+        "id": "ru-new-20261102-0022",
+        "lemma": "рог",
+        "meaning": null
+      },
+      "object": {
+        "id": "ru-r-004",
+        "lemma": "баран",
+        "meaning": null
+      },
+      "reason": "Рог — типичная часть тела барана, наглядная связь для заданий часть–целое."
+    },
+    {
+      "type": "part_of",
+      "subject": {
+        "id": "ru-new-20261102-0023",
+        "lemma": "крыло",
+        "meaning": null
+      },
+      "object": {
+        "id": "ru-r-extra-007",
+        "lemma": "сорока",
+        "meaning": null
+      },
+      "reason": "Крыло — характерная часть тела сороки; конкретная связь для предметных карточек."
+    }
+  ]
+}
