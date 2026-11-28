@@ -2,14 +2,14 @@ import type {CSSProperties} from 'react';
 import {MOTION} from './motion.ts';
 
 /** Themes are visual configuration, never game rules. */
-export const THEME_IDS=['neutral','forest','space'] as const;
+export const THEME_IDS=['neutral','forest','space','children-room'] as const;
 export type ThemeId=typeof THEME_IDS[number];
 type Palette={accent:string;deep:string;pale:string;outline:string;text:string;paper:string;page:string;stageText:string};
 export type SceneLayout={minimumAspect:number;minimumScale:number;scaleHeightRatio:number};
 export type SceneSprite={id:string;src:string;motion:'none'|'float'|'breathe'|'twinkle'|'sway'|'fall'|'cloud';width:string;left?:string;right?:string;top?:string;bottom?:string;opacity?:number;durationMs?:number;delayMs?:number;origin?:string;spinMs?:number;layer?:number};
 type ThemeConfig={
  label:string;palette:Palette;skin:'blue'|'sage'|'lavender';toolbarArt:string|null;
- scene:{background:string|null;fill:string;motion:'drift'|'static';layout?:SceneLayout;sprites:SceneSprite[];effects:{stars:number;comets:number}};
+ scene:{background:string|null;fill:string;motion:'drift'|'static';layout?:SceneLayout;location?:string;sprites:SceneSprite[];effects:{stars:number;comets:number}};
  cards:{kind:'watercolor'|'procedural';back:string|null;front:string|null};
  sounds:Partial<Record<'flip'|'match',string>>;
 };
@@ -64,6 +64,13 @@ export const THEMES:Record<ThemeId,ThemeConfig>={
  ],effects:{stars:30,comets:2}
 },
   cards:{kind:'watercolor',back:'assets/themes/space/back.webp',front:'assets/themes/space/front.webp'},sounds:{}
+ },
+ 'children-room':{
+ label:'Детская комната',
+ palette:{accent:'#cba776',deep:'#795735',pale:'#f7ead6',outline:'#b49b7e',text:'#453a30',paper:'#fffaf0',page:'#f3e5cf',stageText:'#453a30'},
+ skin:'blue',toolbarArt:null,
+ scene:{background:'assets/locations/children-room/room.webp',fill:'#f1d3a7',location:'children-room',motion:'static',sprites:[],effects:{stars:0,comets:0}},
+ cards:{kind:'watercolor',back:'assets/themes/neutral/back.webp',front:'assets/themes/neutral/front.webp'},sounds:{}
  }
 };
 export const asThemeId=(x:unknown):ThemeId=>typeof x==='string'&&(THEME_IDS as readonly string[]).includes(x)?x as ThemeId:'space';
@@ -83,6 +90,7 @@ const warmSurface={
  '--ui-highlight':'#efba3e','--ui-icon-surface':'#f3d6b0','--ui-setup-paper':'#f5e9cc','--ui-setup-field':'#fff5df'
 };
 const setupSurfaces:Record<ThemeId,typeof warmSurface>={
+ 'children-room':warmSurface,
  neutral:{...warmSurface,
  '--ui-control-face':'linear-gradient(180deg,#fffefb 0%,#faf6ec 45%,#eee6d6 100%)','--ui-control-bottom':'#c9bfaa','--ui-control-shadow':'#514b3e1a','--ui-control-ambient':'#514b3e12',
  '--ui-frame-base':'#c6bdad','--ui-frame-light':'#f7f1e5','--ui-frame-dark':'#9a9183','--ui-frame-texture':'none',
@@ -158,6 +166,7 @@ export function soundFile(id:ThemeId,event:string):string{
 
 /** Scene art and presentation stay outside the game rules. All layers share a canvas. */
 export const TRANSFORMATION_SCENES:Record<ThemeId,{kind:'flip'|'depth'|'rays';background?:string;back?:string;glass?:string;frame?:string}>={
+ 'children-room':{kind:'flip',back:'assets/themes/neutral/back.webp',frame:'assets/themes/neutral/front.webp'},
  neutral:{kind:'flip',back:'assets/themes/neutral/back.webp',frame:'assets/themes/neutral/front.webp'},
  forest:{kind:'depth',frame:'assets/flashcards/tree-hollow.webp'},
  space:{kind:'rays',background:'assets/flashcards/space-laboratory.webp',back:'assets/flashcards/camera-back.webp',glass:'assets/flashcards/camera-glass.webp',frame:'assets/flashcards/camera-frame.webp'}

@@ -1,0 +1,528 @@
+// Generated from scenes/children-room/draft.json; run node scripts/sync-room-scene.mjs.
+export default {
+  "schemaVersion": 1,
+  "id": "children-room",
+  "name": "Детская комната",
+  "width": 1920,
+  "height": 1080,
+  "fill": "#f1d3a7",
+  "camera": {
+    "mode": "cover",
+    "cropX": 0.5,
+    "cropY": 0.5
+  },
+  "nodes": [
+    {
+      "id": "object-8d68240e-7740-4e82-9bdf-ddd99b140335",
+      "name": "Кактус на шкафу",
+      "type": "image",
+      "asset": "assets/locations/children-room/cactus.webp",
+      "x": 946.1717890801594,
+      "y": 78.64864791926982,
+      "width": 196.84029754925453,
+      "height": 188.0952492559517,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 4,
+      "visible": true,
+      "anchor": {
+        "x": 0.48337775447224857,
+        "y": 0.9561983761668783,
+        "name": "Точка 1"
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sockets": {
+        "point-1": {
+          "x": 0.48337775447224857,
+          "y": 0.9561983761668783,
+          "name": "Точка 1"
+        }
+      },
+      "animations": [],
+      "adapt": {
+        "mode": "inherit"
+      },
+      "attachment": {
+        "target": "object-10fa0ee3-4254-4ba4-96a4-a3c952e1c2a2",
+        "socket": "cabinet-top",
+        "dx": 0,
+        "dy": 0
+      },
+      "mask": "room-frame"
+    },
+    {
+      "id": "object-dcae3e84-d515-4a86-9d99-3b8a134ddb87",
+      "name": "Облака за окном",
+      "type": "image",
+      "asset": "assets/locations/children-room/clouds.webp",
+      "x": 863.5059281736551,
+      "y": -5.247208225192992,
+      "width": 400,
+      "height": 133.33333333333334,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 1,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sockets": {},
+      "animations": [],
+      "adapt": {
+        "mode": "inherit"
+      },
+      "attachment": {
+        "target": "object-7696f094-87f7-43f2-936c-19c8ca5439ee",
+        "socket": "sky-clouds",
+        "dx": 0,
+        "dy": 0
+      },
+      "mask": "room-frame"
+    },
+    {
+      "id": "object-eb41919e-4930-487a-9c73-fbdd8e3a41d6",
+      "name": "Шторы на карнизе",
+      "type": "image",
+      "asset": "assets/locations/children-room/curtains.webp",
+      "x": 355.7150574501825,
+      "y": 233.32852984784654,
+      "width": 1015.0788864826415,
+      "height": 761.3091648619811,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 6,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.05
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.05
+      },
+      "sockets": {},
+      "animations": [
+        {
+          "type": "sway",
+          "amplitude": 0.45,
+          "period": 12
+        }
+      ],
+      "adapt": {
+        "mode": "inherit"
+      },
+      "attachment": {
+        "target": "object-10fa0ee3-4254-4ba4-96a4-a3c952e1c2a2",
+        "socket": "curtain-rail",
+        "dx": 0,
+        "dy": 0
+      },
+      "mask": "room-frame"
+    },
+    {
+      "id": "object-0b055aed-141c-455e-9b20-63de7d08f79b",
+      "name": "Плющ на подоконнике",
+      "type": "image",
+      "asset": "assets/locations/children-room/ivy.webp",
+      "x": 309,
+      "y": 406,
+      "width": 400,
+      "height": 266.6666666666667,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 5,
+      "visible": true,
+      "anchor": {
+        "x": 0.4091902565808898,
+        "y": 0.6599980407142075,
+        "name": "Точка 1"
+      },
+      "pivot": {
+        "x": 0.4091902565808898,
+        "y": 0.6599980407142075,
+        "name": "Точка 1"
+      },
+      "sockets": {
+        "point-1": {
+          "x": 0.4091902565808898,
+          "y": 0.6599980407142075,
+          "name": "Точка 1"
+        }
+      },
+      "animations": [
+        {
+          "type": "sway",
+          "amplitude": 1.2,
+          "period": 9
+        }
+      ],
+      "adapt": {
+        "mode": "inherit"
+      },
+      "attachment": {
+        "target": "object-10fa0ee3-4254-4ba4-96a4-a3c952e1c2a2",
+        "socket": "window-sill",
+        "dx": 0,
+        "dy": 0
+      },
+      "mask": "room-frame"
+    },
+    {
+      "id": "object-17016e91-bd6b-41a7-acc2-876c89fe5b62",
+      "name": "Лошадка на полу",
+      "type": "image",
+      "asset": "assets/locations/children-room/rocking-horse.webp",
+      "x": 1459.6520445068118,
+      "y": 819.1145860775573,
+      "width": 520,
+      "height": 390,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 7,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "sockets": {},
+      "animations": [
+        {
+          "type": "sway",
+          "amplitude": 1.5,
+          "period": 24,
+          "activeDuration": 4
+        }
+      ],
+      "adapt": {
+        "mode": "inherit"
+      },
+      "attachment": {
+        "target": "object-10fa0ee3-4254-4ba4-96a4-a3c952e1c2a2",
+        "socket": "floor-horse",
+        "dx": 0,
+        "dy": 0
+      },
+      "flipX": true,
+      "mask": "room-frame"
+    },
+    {
+      "id": "object-10fa0ee3-4254-4ba4-96a4-a3c952e1c2a2",
+      "name": "Комната",
+      "type": "image",
+      "asset": "assets/locations/children-room/room.webp",
+      "x": 960,
+      "y": 540,
+      "width": 1920,
+      "height": 1080,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 3,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sockets": {
+        "point-1": {
+          "x": 0.145405748890086,
+          "y": 0.4256211835054033,
+          "name": "Точка 1"
+        },
+        "window-view": {
+          "name": "Фон в оконном проёме",
+          "x": 0.19751079234003877,
+          "y": 0.1990494680139234
+        },
+        "curtain-rail": {
+          "name": "Карниз окна",
+          "x": 0.18601707314992397,
+          "y": -0.0928190699542513
+        },
+        "cabinet-top": {
+          "name": "Верх шкафа: кактус",
+          "x": 0.490147661675143,
+          "y": 0.185
+        },
+        "window-sill": {
+          "name": "Подоконник: плющ",
+          "x": 0.14300729831816844,
+          "y": 0.4206438896366237
+        },
+        "floor-horse": {
+          "name": "Пол: лошадка",
+          "x": 0.7577978879002486,
+          "y": 0.899615372504893
+        },
+        "floor-basket": {
+          "name": "Пол: корзина",
+          "x": 0.3697916666666667,
+          "y": 0.745
+        }
+      },
+      "animations": [],
+      "adapt": {
+        "mode": "inherit"
+      },
+      "mask": "room-frame"
+    },
+    {
+      "id": "object-0e5f1c01-1e15-472e-a700-354797f1b002",
+      "name": "Корзина на полу",
+      "type": "image",
+      "asset": "assets/locations/children-room/toy-basket.webp",
+      "x": 309.9832046851057,
+      "y": 665.3213364578569,
+      "width": 372.63370962620456,
+      "height": 303.6870837270436,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 8,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sockets": {},
+      "animations": [],
+      "adapt": {
+        "mode": "inherit"
+      },
+      "attachment": {
+        "target": "object-10fa0ee3-4254-4ba4-96a4-a3c952e1c2a2",
+        "socket": "floor-basket",
+        "dx": 0,
+        "dy": 0
+      },
+      "mask": "room-frame"
+    },
+    {
+      "id": "object-7696f094-87f7-43f2-936c-19c8ca5439ee",
+      "name": "Пейзаж за окном",
+      "type": "image",
+      "asset": "assets/locations/children-room/window-landscape.webp",
+      "x": 377.90597642732723,
+      "y": 207.8825577151693,
+      "width": 559.6234921064047,
+      "height": 559.6234921064047,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 0,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sockets": {
+        "sky-clouds": {
+          "name": "Облака за окном",
+          "x": 1.3677261741077833,
+          "y": 0.1191550766781631
+        },
+        "outdoor-tree": {
+          "name": "Дерево за окном",
+          "x": 0.16241920569536217,
+          "y": 0.5337617807802537
+        }
+      },
+      "animations": [],
+      "adapt": {
+        "mode": "inherit"
+      },
+      "attachment": {
+        "target": "object-10fa0ee3-4254-4ba4-96a4-a3c952e1c2a2",
+        "socket": "window-view",
+        "dx": 0,
+        "dy": 0
+      },
+      "mask": "room-frame"
+    },
+    {
+      "id": "object-ef827826-adc3-4595-a19d-b4062d3d8305",
+      "name": "Дерево справа",
+      "type": "image",
+      "asset": "assets/locations/children-room/outdoor-tree.webp",
+      "x": 188.9878334505119,
+      "y": 226.77644337514582,
+      "width": 695.1527193717759,
+      "height": 734.4687338280487,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 2,
+      "visible": true,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sockets": {},
+      "animations": [],
+      "adapt": {
+        "mode": "inherit"
+      },
+      "attachment": {
+        "target": "object-7696f094-87f7-43f2-936c-19c8ca5439ee",
+        "socket": "outdoor-tree",
+        "dx": 0,
+        "dy": 0
+      },
+      "mask": "room-frame"
+    },
+    {
+      "id": "room-frame",
+      "name": "Границы композиции комнаты",
+      "type": "mask",
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080,
+      "rotation": 0,
+      "opacity": 1,
+      "z": -100,
+      "anchor": {
+        "x": 0,
+        "y": 0
+      },
+      "visible": true,
+      "sockets": {}
+    }
+  ],
+  "variants": [
+    {
+      "id": "tablet",
+      "name": "Планшет — заполнение",
+      "range": {
+        "minAspect": 1,
+        "maxAspect": 1.7
+      },
+      "camera": {
+        "mode": "cover",
+        "cropX": 0.45,
+        "cropY": 0.5
+      },
+      "nodes": {
+        "object-17016e91-bd6b-41a7-acc2-876c89fe5b62": {
+          "scaleX": 0.85,
+          "scaleY": 0.85
+        },
+        "object-10fa0ee3-4254-4ba4-96a4-a3c952e1c2a2": {
+          "sockets": {
+            "floor-basket": {
+              "name": "Пол: корзина",
+              "x": 0.38229166666666664,
+              "y": 0.745
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "wide",
+      "name": "Широкий экран — заполнение",
+      "range": {
+        "minAspect": 1.9
+      },
+      "camera": {
+        "mode": "cover",
+        "cropX": 0.5,
+        "cropY": 0.5
+      },
+      "nodes": {
+        "object-17016e91-bd6b-41a7-acc2-876c89fe5b62": {
+          "scaleX": 0.85,
+          "scaleY": 0.85
+        }
+      }
+    },
+    {
+      "id": "portrait",
+      "name": "Узкий экран — кровать, корзина слева, лошадка справа",
+      "range": {
+        "maxAspect": 1,
+        "minWidth": 600
+      },
+      "camera": {
+        "mode": "cover",
+        "cropX": 0.85,
+        "cropY": 0.5
+      },
+      "nodes": {
+        "object-10fa0ee3-4254-4ba4-96a4-a3c952e1c2a2": {
+          "sockets": {
+            "floor-horse": {
+              "name": "Пол: лошадка",
+              "x": 0.8020833333333334,
+              "y": 0.96
+            },
+            "floor-basket": {
+              "name": "Пол: корзина",
+              "x": 0.6536458333333334,
+              "y": 0.755
+            }
+          }
+        },
+        "object-17016e91-bd6b-41a7-acc2-876c89fe5b62": {
+          "scaleX": 0.75,
+          "scaleY": 0.75
+        },
+        "object-0e5f1c01-1e15-472e-a700-354797f1b002": {
+          "scaleX": 0.67,
+          "scaleY": 0.67
+        },
+        "object-8d68240e-7740-4e82-9bdf-ddd99b140335": {
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    {
+      "id": "phone",
+      "name": "Телефон — кровать и лошадка",
+      "extends": "portrait",
+      "range": {
+        "maxAspect": 1,
+        "maxWidth": 600
+      },
+      "nodes": {
+        "object-0e5f1c01-1e15-472e-a700-354797f1b002": {
+          "visible": false
+        },
+        "object-10fa0ee3-4254-4ba4-96a4-a3c952e1c2a2": {
+          "sockets": {
+            "floor-horse": {
+              "name": "Пол: лошадка",
+              "x": 0.8020833333333334,
+              "y": 0.96
+            }
+          }
+        }
+      }
+    }
+  ]
+};

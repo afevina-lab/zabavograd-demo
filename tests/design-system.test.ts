@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {THEMES,THEME_IDS,assetUrl,asThemeId,themeAttributes,themeVars,soundFile} from '../src/design-system/themes.ts';
 import {MOTION} from '../src/design-system/motion.ts';
 test('Every theme has one complete, validated visual configuration',()=>{
- assert.deepEqual([...THEME_IDS],['neutral','forest','space']);
+ assert.deepEqual([...THEME_IDS],['neutral','forest','space','children-room']);
  assert.deepEqual(Object.keys(THEMES),[...THEME_IDS]);
  for(const id of THEME_IDS){
   const t=THEMES[id],a=themeAttributes(id),vars=themeVars(id,'/demo/');

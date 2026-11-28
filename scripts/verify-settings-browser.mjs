@@ -7,8 +7,8 @@ import {join,resolve,extname,sep} from 'node:path';
 import {createServer} from 'node:http';
 
 const selectedTheme=process.env.UI_THEME||'forest';
-assert(['neutral','forest','space'].includes(selectedTheme),'Unknown UI_THEME');
-const themeIndex=['neutral','forest','space'].indexOf(selectedTheme);
+assert(['neutral','forest','space','children-room'].includes(selectedTheme),'Unknown UI_THEME');
+const themeIndex=['neutral','forest','space','children-room'].indexOf(selectedTheme);
 const root=resolve(process.env.UI_DIST_ROOT||'dist');
 const output=resolve(selectedTheme==='forest'?'ui-smoke':'ui-smoke/'+selectedTheme);
 mkdirSync(output,{recursive:true});

@@ -62,7 +62,7 @@ jobs:
           node scripts/verify-viewport-fit.mjs
           node scripts/verify-task-search-browser.mjs
           node scripts/verify-material-flow-browser.mjs
-          for theme in neutral forest space; do
+          for theme in neutral forest space children-room; do
             UI_THEME="$theme" node scripts/verify-settings-browser.mjs
             UI_THEME="$theme" node scripts/verify-dialogs-browser.mjs
           done

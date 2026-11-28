@@ -7,8 +7,8 @@ import {join,resolve,extname,sep} from 'node:path';
 import {createServer} from 'node:http';
 
 const selectedTheme=process.env.UI_THEME||'forest';
-assert(['neutral','forest','space'].includes(selectedTheme),'Unknown UI_THEME');
-const themeIndex=['neutral','forest','space'].indexOf(selectedTheme);
+assert(['neutral','forest','space','children-room'].includes(selectedTheme),'Unknown UI_THEME');
+const themeIndex=['neutral','forest','space','children-room'].indexOf(selectedTheme);
 const root=resolve(process.env.UI_DIST_ROOT||'dist');
 const output=resolve(selectedTheme==='forest'?'ui-smoke/dialogs':'ui-smoke/'+selectedTheme+'/dialogs');
 mkdirSync(output,{recursive:true});
@@ -25,7 +25,7 @@ const origin=`http://127.0.0.1:${server.address().port}/`;
 const chrome=process.env.CHROME_BIN||['/usr/bin/google-chrome','/usr/bin/chromium','/usr/bin/chromium-browser'].find(existsSync);
 if(!chrome)throw Error('Chrome/Chromium not available');
 const profile=mkdtempSync(join(tmpdir(),'zabavograd-ui-'));
-const proc=spawn(chrome,['--headless=new','--no-sandbox','--disable-gpu','--disable-background-timer-throttling','--disable-renderer-backgrounding','--disable-backgrounding-occluded-windows','--disable-dev-shm-usage','--no-first-run','--no-proxy-server','--proxy-bypass-list=<-loopback>','--no-default-browser-check','--remote-allow-origins=*',`--user-data-dir=${profile}`,'--remote-debugging-port=0','--window-size=1440,900','about:blank'],{stdio:['ignore','pipe','pipe']});
+const proc=spawn(chrome,['--headless=new','--no-sandbox','--disable-gpu','--disable-background-timer-throttling','--disable-renderer-backgrounding','--disable-backgrounding-occluded-windows','--disable-dev-shm-usage','--no-first-run','--no-proxy-server','--proxy-bypass-list=<-loopback>','--no-default-browser-check','--remote-allow-origins=*',`--user-data-dir=${profile}`,'--remote-debugging-port=0','--window-size=1440,900','about:blank'],{windowsHide:true,stdio:['ignore','pipe','pipe']});
 let stderr='';proc.stderr.on('data',d=>stderr+=String(d).slice(-2000));
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 let ws=null;
@@ -68,6 +68,14 @@ for(const [width,height] of [[1440,900],[390,844],[844,390]]){
  await cmd('Emulation.setTouchEmulationEnabled',{enabled:width<=844,maxTouchPoints:1});
  for(const game of ['memory','sorting','matching','conveyor','transformations']){
  const menuSkin=await setup(game);
+ if(selectedTheme==='children-room'){
+ await until("!!document.querySelector('.v-scene-layers svg [data-node]')");
+ assert.equal(await evaluate("document.querySelector('.app').dataset.theme"),'children-room');
+ if(game==='memory'&&width===1440){
+ const transform=()=>evaluate("document.querySelector('.v-scene-layers [data-node=\"object-0b055aed-141c-455e-9b20-63de7d08f79b\"]').getAttribute('transform')");
+ const before=await transform();await sleep(500);assert.notEqual(await transform(),before,'Ivy animation must advance in the real game');
+ }
+ }
  if(width===1440&&game!=='memory'){
   const before=await evaluate("document.querySelector('[aria-label=\"Прошло времени\"]').textContent");
   await sleep(1200);
