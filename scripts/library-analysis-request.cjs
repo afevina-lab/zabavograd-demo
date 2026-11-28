@@ -12,14 +12,14 @@ function validate(r){
  const allowed=['version','source_sha256','mode','domain','weight','part_of_speech','category','limit','validate_candidate'];
  assert(Object.keys(r).every(k=>allowed.includes(k)),'Unexpected request key');
  assert.equal(r.version,1);assert(/^[a-f0-9]{64}$/.test(r.source_sha256||''),'Exact source fingerprint required');
- assert(['initial','extend','constructicon'].includes(r.mode),'Unknown analysis mode');
+ assert(['initial','extend','constructicon','framebank','ruwordnet'].includes(r.mode),'Unknown analysis mode');
  if(r.domain!==undefined)assert(r.mode==='initial'&&['both','morphology','phonetics'].includes(r.domain),'Invalid domain');
  if(r.weight!==undefined)assert([0,10,20,30,50,70,100].includes(r.weight),'Invalid weight');
  if(r.part_of_speech!==undefined)assert(['noun','verb','adjective'].includes(r.part_of_speech),'Invalid part of speech');
  if(r.category!==undefined)assert(typeof r.category==='string'&&r.category.trim()===r.category&&r.category.length>0&&r.category.length<=300,'Invalid category');
  if(r.limit!==undefined)assert(Number.isInteger(r.limit)&&r.limit>=1&&r.limit<=2500,'Invalid limit');
  if(r.validate_candidate!==undefined)assert(typeof r.validate_candidate==='boolean','Invalid validation option');
- if(r.mode==='constructicon')assert(Object.keys(r).every(k=>['version','source_sha256','mode'].includes(k)),'Constructicon uses full library');
+ if(['constructicon','framebank','ruwordnet'].includes(r.mode))assert(Object.keys(r).every(k=>['version','source_sha256','mode'].includes(k)),'External sources use full library');
  return r;
 }
 function readRequest(file){const b=fs.readFileSync(file);assert(b.length<=16384,'Request too large');return validate(JSON.parse(b));}
@@ -31,11 +31,25 @@ function processRequest(requestFile,out,work){
  assert(!fs.existsSync(out)&&!fs.existsSync(work),'Output already exists');
  fs.mkdirSync(out);
  const report={version:1,mode:r.mode,request:r,source_sha256:current.source_sha256};
- if(r.mode==='constructicon'){
-   run(process.execPath,['scripts/linguistic-sources.cjs','--source','constructicon','--fetch']);
-   const f=path.join(root,'.local/linguistic-sources/constructicon-suggestions.json'),data=JSON.parse(fs.readFileSync(f,'utf8'));
+ if(r.mode==='ruwordnet'){
+   run('python',['scripts/ruwordnet-coverage.py',path.join(out,'coverage.json')]);
+   const coverage=JSON.parse(fs.readFileSync(path.join(out,'coverage.json'),'utf8'));
+   assert.equal(coverage.source_sha256,current.source_sha256);
+   Object.assign(report,{status:'external_coverage_only',records:coverage.matched_entries,source_license:'RuWordNet official site: CC BY-SA 4.0 and non-commercial distribution; details not redistributed'});
+ }else if(['constructicon','framebank'].includes(r.mode)){
+   const args=['scripts/linguistic-sources.cjs','--source',r.mode,'--fetch'];
+   if(r.mode==='framebank')args.push('--accept-gpl-review-only');
+   run(process.execPath,args);
+   const f=path.join(root,'.local/linguistic-sources/'+r.mode+'-suggestions.json'),data=JSON.parse(fs.readFileSync(f,'utf8'));
    assert.equal(data.library_source.sha256,current.source_sha256);
-   fs.copyFileSync(f,path.join(out,'suggestions.json'));
+   if(r.mode==='framebank'){
+     // Separate GPL-licensed review dataset. Never put it in canonical modules or game output.
+     const dir=path.join(out,'framebank-gpl');fs.mkdirSync(dir);
+     fs.copyFileSync(f,path.join(dir,'suggestions.json'));
+     const rev=require('./linguistic-sources.cjs').SOURCES.framebank.commit;
+     run('curl',['--fail','--silent','--show-error','--location','https://raw.githubusercontent.com/olesar/framebank/'+rev+'/LICENSE','--output',path.join(dir,'LICENSE')]);
+     fs.writeFileSync(path.join(dir,'NOTICE.txt'),'Russian FrameBank v1.1, Olga Lyashevskaya, Egor Kashkin and contributors. GPL-3.0. Modified: filtered and matched dictionary constructions to Zabavograd entry IDs; review only. Upstream source, complete contributors and original dictionary files: https://github.com/olesar/framebank/tree/'+rev+'\nTransformation source: scripts/linguistic-sources.cjs in the source commit recorded in result.json.\nThe contents of this directory are distributed under GPL-3.0; not part of the game runtime.\n');
+   }else fs.copyFileSync(f,path.join(out,'suggestions.json'));
    Object.assign(report,{status:'external_suggestions_review_only',source_license:data.license,records:data.records.length});
  }else{
    run('python',['scripts/library-analysis-request.py',requestFile,work]);

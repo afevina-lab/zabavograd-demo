@@ -38,16 +38,25 @@ jobs:
           echo "request_key=$slug-${GITHUB_SHA:0:12}" >> "$GITHUB_OUTPUT"
           node -e 'const r=require(process.argv[1]);console.log("mode="+r.mode);console.log("domain="+(r.domain||"both"))' "$RUNNER_TEMP/request-info.json" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v5
-        if: steps.request.outputs.mode != 'constructicon'
+        if: steps.request.outputs.mode == 'initial' || steps.request.outputs.mode == 'extend'
         with:
           python-version: '3.11'
       - uses: actions/cache@v4
-        if: steps.request.outputs.mode != 'constructicon'
+        if: steps.request.outputs.mode == 'initial' || steps.request.outputs.mode == 'extend'
         with:
           path: ~/.cache/pip
           key: linguistic-pip-v1-${{ runner.os }}-py311
+      - uses: actions/setup-python@v5
+        if: steps.request.outputs.mode == 'ruwordnet'
+        with:
+          python-version: '3.11'
+      - name: Download RuWordNet for transient non-commercial coverage research
+        if: steps.request.outputs.mode == 'ruwordnet'
+        run: |
+          python -m pip install --disable-pip-version-check ruwordnet==0.0.6 'SQLAlchemy<2'
+          ruwordnet download
       - name: Install pinned morphological tools
-        if: steps.request.outputs.mode != 'constructicon'
+        if: steps.request.outputs.mode == 'initial' || steps.request.outputs.mode == 'extend'
         run: python -m pip install --disable-pip-version-check pymorphy3==2.0.6 pymorphy3-dicts-ru==2.4.417150.4580142 dawg-python==0.7.2 lxml==5.3.2
       - name: Checkout pinned G2P and check initialization
         if: steps.request.outputs.mode == 'initial' && steps.request.outputs.domain != 'morphology'

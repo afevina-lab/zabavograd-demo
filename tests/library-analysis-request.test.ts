@@ -17,3 +17,10 @@ test('null pending data is filled, existing proposals remain protected',()=>{
  assert.equal(db.entries[0].morphology.data,null);
  assert.equal(plan(next.db,draft,r.source_sha256).stats.changed,0);
 });
+
+test('external requests are narrowly scoped',()=>{
+ for(const mode of ['framebank','ruwordnet']){
+  const req={version:1,source_sha256:r.source_sha256,mode};assert.equal(validate(req),req);
+  assert.throws(()=>validate({...req,limit:10}));
+ }
+});
