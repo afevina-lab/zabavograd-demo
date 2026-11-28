@@ -16,21 +16,19 @@ def propose(wn, entries):
     for e in entries:
         if e.get("language") == "ru" and e.get("kind") == "word" and not e.get("same_lexical_meaning_as"):
             groups[key(e["lemma"])].append(e)
-    by_synset, synsets = defaultdict(list), {}
+    by_synset, synsets, sense_counts = defaultdict(list), {}, {}
     pos_suffix = {"noun": "-N", "verb": "-V", "adjective": "-A"}
     for group in groups.values():
-        if len(group) != 1:
-            continue
-        e = group[0]
-        pos = e.get("part_of_speech") or ((e.get("legacy_source") or {}).get("raw") or {}).get("part_of_speech")
-        if pos not in pos_suffix:
-            continue
-        matches = {str(s.synset.id): s.synset for s in wn.get_senses(e["lemma"]) or []
-                   if str(s.synset.id).endswith(pos_suffix[pos])}
-        if len(matches) == 1:
-            sid, synset = next(iter(matches.items()))
-            by_synset[sid].append(e["id"])
-            synsets[sid] = synset
+        for e in group:
+            pos = e.get("part_of_speech") or ((e.get("legacy_source") or {}).get("raw") or {}).get("part_of_speech")
+            if pos not in pos_suffix:
+                continue
+            matches = {str(s.synset.id): s.synset for s in wn.get_senses(e["lemma"]) or []
+                       if str(s.synset.id).endswith(pos_suffix[pos])}
+            sense_counts[e["id"]] = max(len(matches), len(group))
+            for sid, synset in matches.items():
+                by_synset[sid].append(e["id"])
+                synsets[sid] = synset
     result = {}
     def add(a, b, relation, record):
         if a == b:
@@ -40,7 +38,11 @@ def propose(wn, entries):
         if relation == "has_part":
             a, b, relation = b, a, "part_of"
         k = (relation,a,b)
-        result.setdefault(k, {"source_record_id":record,"subject_id":a,"object_id":b,"relation_type":relation})
+        ambiguous = sense_counts[a] != 1 or sense_counts[b] != 1
+        row = {"source_record_id":record,"subject_id":a,"object_id":b,"relation_type":relation,
+               "match_status":"ambiguous_sense_requires_manual_review" if ambiguous else "unique_lemma_and_synset_requires_sense_review"}
+        if k not in result or (result[k]["match_status"] != row["match_status"] and not ambiguous):
+            result[k] = row
     for sid, ids in sorted(by_synset.items()):
         for a in ids:
             for b in ids:

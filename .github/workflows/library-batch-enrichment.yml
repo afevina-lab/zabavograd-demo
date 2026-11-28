@@ -1,0 +1,94 @@
+name: Apply library enrichment (necessary checks)
+on:
+  push:
+    branches: ['library-apply-request/**']
+    paths: ['editorial/requests/library-batch.json']
+permissions:
+  contents: read
+concurrency:
+  group: library-canonical-enrichment
+  cancel-in-progress: false
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      source_commit: ${{ steps.request.outputs.source_commit }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Bind data-only request to canonical source
+        id: request
+        run: |
+          set -euo pipefail
+          [[ "$GITHUB_REF_NAME" =~ ^library-apply-request/[a-z0-9][a-z0-9-]{0,47}$ ]]
+          git fetch --no-tags --depth=1 origin "$GITHUB_SHA"
+          git show "$GITHUB_SHA:editorial/requests/library-batch.json" > "$RUNNER_TEMP/request.json"
+          test "$(wc -c < "$RUNNER_TEMP/request.json")" -le 4096
+          echo "source_commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: linguistic-pip-v1-${{ runner.os }}-py311
+      - name: Install pinned analyzers
+        run: |
+          python -m pip install --disable-pip-version-check pymorphy3==2.0.6 pymorphy3-dicts-ru==2.4.417150.4580142 dawg-python==0.7.2 lxml==5.3.2 ruwordnet==0.0.6 'SQLAlchemy<2'
+          ruwordnet download
+          git clone --no-checkout https://github.com/nsu-ai/russian_g2p.git "$RUNNER_TEMP/g2p"
+          git -C "$RUNNER_TEMP/g2p" checkout --detach 20305523bfe4ccb632c7538e9a5e925bde54b52e
+          echo "PYTHONPATH=$RUNNER_TEMP/g2p" >> "$GITHUB_ENV"
+      - name: Run focused contracts and analysis
+        run: |
+          node --experimental-strip-types --test tests/library-initial-analysis.test.ts tests/library-analysis-writer.test.ts tests/library-external-proposals.test.ts tests/semantic-review.test.ts
+          node scripts/library-batch-enrichment.cjs "$RUNNER_TEMP/request.json" "$RUNNER_TEMP/work" "$RUNNER_TEMP/result"
+          git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        with:
+          name: library-enrichment-delta
+          path: ${{ runner.temp }}/result
+          retention-days: 7
+  apply:
+    needs: analyze
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          name: library-enrichment-delta
+          path: ${{ runner.temp }}/result
+      - name: Apply exact validated delta and check game export
+        env:
+          SOURCE_COMMIT: ${{ needs.analyze.outputs.source_commit }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$SOURCE_COMMIT"
+          node scripts/library-apply-enrichment.cjs "$RUNNER_TEMP/result"
+          if git diff --quiet -- outputs/library-modules; then exit 0; fi
+          node scripts/check-library-v2.cjs
+          node scripts/sync-runtime.cjs
+          git add -A -- outputs/library-modules
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "Apply verified lexical enrichment $GITHUB_SHA [skip ci]"
+          git push origin HEAD:main
+          echo "Applied canonical source: $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
+          cat "$RUNNER_TEMP/result/result.json" >> "$GITHUB_STEP_SUMMARY"

@@ -91,7 +91,7 @@ function validateExport(db){
    const originalEditorial=r.provenance?.source==='zabavograd_editorial'&&
     r.provenance.authorship==='independent'&&['v2-obvious-relations-20261109-v1','v2-attribute-relations-20261109-v1','v2-obvious-relations-20261123-v1'].includes(r.provenance.revision)&&
     r.approval?.review_method==='independent_explicit_pair'&&r.approval?.typical_for_children===true;
-   if(!clearedExternal&&!originalEditorial&&!auditedModularEdge(db,r))throw Error('Non-cleared external relation');
+   if(!clearedExternal&&!originalEditorial&&!auditedModularEdge(db,r)&&!require('./library-standard-relations.cjs').verify(db,r))throw Error('Non-cleared external relation');
    relations.push({id:r.id,type:r.type,subject_id:r.subject.id,object_id:r.object.id,inverse_type:inverse[r.type],provenance:r.provenance});
   }else{
    for(const field of ['male','female','offspring'])if(r[field]?.id&&!entries.has(r[field].id))throw Error('Broken family reference');

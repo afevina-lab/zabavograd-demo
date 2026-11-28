@@ -1,0 +1,21 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const store=require('./library-store.cjs'),{readSource}=require('./library-source.cjs');
+const dir=process.argv[2],r=JSON.parse(fs.readFileSync(path.join(dir,'result.json'),'utf8')),s=readSource(),base=store.load(s.path);
+assert.equal(r.source_sha256,base.source_sha256,'Stale source');
+if(r.status==='no_changes')process.exit(0);
+assert.equal(r.status,'validated_candidate');
+const m=JSON.parse(fs.readFileSync(path.join(dir,'delta/manifest.json'),'utf8'));
+const d=store.delta(base.manifest,m);assert.deepEqual(d,r.delta);
+const names=['manifest.json',...Object.keys(m.files)];
+const change=new Set(['manifest.json',...d.added,...d.modified]);
+const read=f=>fs.readFileSync(path.join(change.has(f)?path.join(dir,'delta'):s.path,f),'utf8');
+const next=store.loadFiles(names,read);assert.equal(next.source_sha256,r.result_source_sha256);
+assert.deepEqual(base.db.entries.map(e=>[e.id,e.lemma,e.legacy_source,e.illustrations,e.categories,e.selection]),next.db.entries.map(e=>[e.id,e.lemma,e.legacy_source,e.illustrations,e.categories,e.selection]));
+assert.deepEqual(next.db.relations.slice(0,base.db.relations.length),base.db.relations);
+require('./library-archive-guard.cjs').verifyArchive(next.db,require('../editorial/library-archive-baseline.json'));
+require('./validate-library-contract.cjs').validateLibrary(next.db);
+require('./semantic-review.cjs').validateExport(next.db);
+for(const f of d.removed)fs.unlinkSync(path.join(s.path,f));
+for(const f of change){const target=path.join(s.path,f);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,read(f));}
+assert.equal(store.load(s.path).source_sha256,r.result_source_sha256);

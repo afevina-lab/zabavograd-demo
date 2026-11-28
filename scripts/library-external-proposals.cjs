@@ -20,9 +20,9 @@ function validate(db){
    assert(typeof p.source_record_id==='string'&&p.source_record_id.length>0);
    if(p.source==='ruwordnet'){
     assert(types.has(p.relation_type)&&word(by.get(p.object_id))&&p.object_id!==e.id);
-    assert.equal(p.match_status,'unique_lemma_and_synset_requires_sense_review');
+    assert(['unique_lemma_and_synset_requires_sense_review','ambiguous_sense_requires_manual_review'].includes(p.match_status));
    }else{
-    assert(p.match_status==='unique_lemma_requires_sense_review');
+    assert(['unique_lemma_requires_sense_review','ambiguous_sense_requires_manual_review'].includes(p.match_status));
     assert(e.part_of_speech==='verb'||e.legacy_source?.raw?.part_of_speech==='verb');
     assert(Array.isArray(p.slots)&&p.slots.length>0);
     for(const s of p.slots)assert(typeof s.form==='string'&&typeof s.role==='string'&&s.form.length<=200&&s.role.length<=200);
@@ -49,7 +49,8 @@ function plan(db,bundle){
   if(['synonym','antonym'].includes(p.type))active.add(JSON.stringify([p.type,p.object.id,p.subject.id]));
  }
  let added=0,skipped=0;
- for(const r of bundle.records){
+ const rows=bundle.source==='framebank'?bundle.records.flatMap(r=>r.entry_id?[r]:(r.entry_candidates||[]).map(c=>({...r,entry_id:c.id}))):bundle.records;
+ for(const r of rows){
   const e=by.get(r.entry_id??r.subject_id);
   if(!word(e)){skipped++;continue;}
   const common={source:bundle.source,source_revision:String(bundle.source_revision),source_record_id:String(r.source_record_id),
@@ -57,13 +58,15 @@ function plan(db,bundle){
   let p;
   if(bundle.source==='ruwordnet'){
    if(!word(by.get(r.object_id))||e.id===r.object_id||!types.has(r.relation_type)||active.has(JSON.stringify([r.relation_type,e.id,r.object_id]))){skipped++;continue;}
-   p={...common,relation_type:r.relation_type,object_id:r.object_id,match_status:'unique_lemma_and_synset_requires_sense_review'};
+   p={...common,relation_type:r.relation_type,object_id:r.object_id,match_status:r.match_status||'unique_lemma_and_synset_requires_sense_review'};
   }else{
-   if(r.entry_candidates?.length!==1||r.anchor_lemma!==e.lemma||!(e.part_of_speech==='verb'||e.legacy_source?.raw?.part_of_speech==='verb')){skipped++;continue;}
+   if(!r.entry_candidates?.some(c=>c.id===e.id)||r.anchor_lemma!==e.lemma||!(e.part_of_speech==='verb'||e.legacy_source?.raw?.part_of_speech==='verb')){skipped++;continue;}
    const slots=(r.slots||[]).filter(s=>typeof s.form==='string'&&s.form.length>0&&s.form.length<=200&&typeof s.role==='string'&&s.role.length>0&&s.role.length<=200).map(s=>({form:s.form,role:s.role}));
    if(!slots.length){skipped++;continue;}
-   p={...common,slots,match_status:'unique_lemma_requires_sense_review'};
+   p={...common,slots,match_status:r.entry_candidates.length===1?'unique_lemma_requires_sense_review':'ambiguous_sense_requires_manual_review'};
   }
+  p.review_required=true;
+  p.review_reason=p.match_status==='ambiguous_sense_requires_manual_review'?'Неоднозначное значение слова':'Проверить значение и применимость в детских заданиях';
   p.id='external-'+stable([p.source,p.source_record_id,e.id,p.object_id??null]);
   if(ids.has(p.id)){skipped++;continue;}
   ids.add(p.id);(e[FIELD]??=[]).push(p);changed.add(e.id);added++;

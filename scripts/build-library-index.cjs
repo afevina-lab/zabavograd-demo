@@ -53,7 +53,7 @@ function build(db,syll,meta,tasks){
    morphology:{status:status(e.morphology),stored_candidate_forms:Boolean(storedForms),draft_status:draftMatches?status(d.morphology):null},
    metadata_status:e.metadata_completion||null,
    syllable_type:syllFresh?(syllTypes.get(e.id)??null):null,
-   relation_counts:rel,semantic_review_proposals:semanticPending.get(e.id)||0,illustrations:(e.illustrations?.senses||[]).reduce((n,s)=>n+(s.variants||[]).length,0)
+   relation_counts:rel,semantic_review_proposals:semanticPending.get(e.id)||0,external_review_proposals:(e.external_linguistic_proposals||[]).length,ambiguous_external_proposals:(e.external_linguistic_proposals||[]).filter(p=>p.match_status==='ambiguous_sense_requires_manual_review').length,illustrations:(e.illustrations?.senses||[]).reduce((n,s)=>n+(s.variants||[]).length,0)
   };
  }).sort((a,b)=>(b.weight??-1)-(a.weight??-1)||cmp(a.id,b.id));
  const pages={},pageList=[],size=40;
@@ -71,7 +71,7 @@ function build(db,syll,meta,tasks){
  const filters={
   phonetics:r=>r.kind==='word'&&!r.phonetic.stored_tokens,
   phonetic_review:r=>r.phonetic.status==='automatic_candidate_needs_review',
-  semantic_proposals:r=>r.semantic_review_proposals>0,
+  semantic_proposals:r=>r.semantic_review_proposals>0||r.external_review_proposals>0,
   phonetic_proposals:r=>r.phonetic.review_proposal===true,
   morphology:r=>r.kind==='word'&&['pending_automatic_analysis',null].includes(r.morphology.status),
   morphology_review:r=>r.morphology.status==='automatic_candidate_needs_review',
